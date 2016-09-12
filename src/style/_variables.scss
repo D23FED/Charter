@@ -1,4 +1,5 @@
-$font-sans-default:
-$font-stack-gotham:
-$font-open-sans: "Open Sans Regular" + $font-sans-default ;
-$font-open-sans-xbold: 'open_sans_extrabold,' + $font-sans-default ;
+
+
+$font-sans-default: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-open-sans: "Open Sans" + $font-sans-default ;
+$font-open-sans-lt: "Open Sans Light" + $font-sans-default;

@@ -16,7 +16,6 @@ var
 		]
 	}),
 	browserSync = require('browser-sync').create(),
-	cssnano = require('cssnano'),
 	path = require('path'),
 	paths = {
 		source: 'src/',
@@ -57,10 +56,6 @@ var
 				paths.source + paths.sass
 			],
 			relative: paths.dist
-		}),
-		cssnano({
-			safe: true,
-			calc: false
 		})
 	],
 	sassIncludePaths = [
@@ -71,10 +66,7 @@ var
 // Compile style
 gulp.task('style', function() {
 	return gulp.src([
-		paths.source + globs.sass,
-		paths.source + globs.sass,
-		'!' + paths.source + globs.sassPartials,
-			'!node_modules/**/*',
+		paths.source + globs.sass
 		])
 		// Output names of files being processed
 		.pipe($.debug({
@@ -86,13 +78,9 @@ gulp.task('style', function() {
 		.pipe($.sass({
 			includePaths: sassIncludePaths,
 			outputStyle: 'expanded'
-		})).on('error', sass.logError)
+		})).on('error', $.sass.logError)
 		// CSS post-processing
 		.pipe($.postcss(postCssProcessors))
-		.pipe($.rename({
-			suffix: '.min'
-		}))
-		.pipe($.cssImageDimensions('../../' + paths.images))
 		.pipe($.sourcemaps.write('.'))
 		// Write CSS to disk
 		.pipe(gulp.dest(paths.dist))
@@ -219,10 +207,30 @@ gulp.task('img', function() {
 		}));
 });
 
+// Copy HTML to build folder
+gulp.task('html', function() {
+	return gulp.src(
+			[paths.source + globs.html]
+			)
+	.pipe($.changed(paths.dist))
+	.pipe(gulp.dest(paths.dist))
+})
+
+// Copy PHP to build folder
+gulp.task('php', function() {
+	return gulp.src(
+			[paths.source + globs.php])
+	.pipe($.changed(paths.dist))
+	.pipe(gulp.dest(paths.dist))
+	.pipe($.debug({
+		title: 'Output:'
+	}))
+})
+
 //Live reloading of changes
 gulp.task('browser-sync', function() {
 	browserSync.init({
-		proxy: 'mckittrick.local',
+		proxy: 'charter.local',
 		port: '8888'
 	});
 });
@@ -230,6 +238,10 @@ gulp.task('browser-sync', function() {
 // Default
 gulp.task('default',
 	gulp.parallel('style', 'js'));
+
+// Default
+gulp.task('markup',
+	gulp.parallel('php', 'html'));
 
 // File watcher
 gulp.task('watch', function() {

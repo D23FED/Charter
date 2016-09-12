@@ -4,7 +4,7 @@ $document = array(
 	'meta' => array(
 		'description' => '',
 		'keywords' => ''
-	),
+	)
 	'body' => array(
 		'id'    => '',
 		'class' => ''

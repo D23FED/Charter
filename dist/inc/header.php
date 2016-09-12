@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<?php include('functions.php');?>
-<?php include('constants.php');?>
+<?php
+require('constants.php');
+require('variables.php');
+require('functions.php');
+// Page-specific variables
+if (file_exists($site['files']['page_vars'])) {
+	include($site['files']['page_vars']);
+} else {
+	echo '<!-- No page vars loaded -->';
+}?>
 <!--[if IE 9 ]><html class="ie ie-9 no-js" lang="en"><![endif]-->
 <!--[if gt IE 9]><!-->
 <html class="no-js">
@@ -9,39 +17,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="<?php echo issetor($document['meta']['description']) ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php echo issetor($document['title'], 'Charter Sandbox'); ?></title>
+	<?php title_tag(); ?>
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<?php stylesheet($site['assets']['bootstrap_css']); ?>
+	<?php // Page-specific variables ?>
+	<?php stylesheet('/style/style.css'); ?>
+	<?php	// Custom page-specific <HEAD>
+	if (file_exists($site['files']['page_header'])) {
+		include($site['files']['page_header']);
+	} else {
+		html_comment($site['files']['page_header'] . 'not found');
+	}
 
-	<!-- Global Element & Page CSS -->
-	<?php
-
-		if ( isset($includeLiveCss) && ($includeLiveCss == true) ) {
-			include_once('live-style.php');
-		}
-	?>
-	<link rel="stylesheet" href="/style/style.css">
-	<?php
-		if ( (isset($componentName)) && ($componentName !='') ) { echo '<link rel="stylesheet" href="css/' . $componentName . '.css">'; }
-	  if (isset($page_dir) && $page_dir) {
-	  	stylesheet($page_dir.'css/page.css');
-	  }
-	  $stylesheets = array(
-	  	'page.css',
-	  	'style.css'
-  	);
-  	foreach ($stylesheets as $value) {
-  	  if ( file_exists($value) ) {
-  	  	stylesheet($value);
-  	  }
-  	}
-
-
-	  if (file_exists('includes/css.php')) { include('includes/css.php');}
 	?>
 
 </head>
 
-<body >
+<body id="<?php echo issetor($document['body']['id'])?>" class="<?php echo issetor($document['body']['class'])?>">
+<?php include_once('menus/header.php');?>
 
