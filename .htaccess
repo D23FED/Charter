@@ -1,0 +1,3 @@
+#php_value auto_prepend_file /home/dstockbr/public_html/charter/inc/header.php
+#php_value include_path ".:/path"
+
