@@ -20,6 +20,7 @@ if (file_exists($site['files']['page_vars'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php title_tag(); ?>
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<?php // Bootstrap CSS ?>
 	<?php stylesheet($site['assets']['bootstrap_css']); ?>
 	<?php // Page-specific variables ?>
 	<?php stylesheet('/style/style.css'); ?>
@@ -29,11 +30,11 @@ if (file_exists($site['files']['page_vars'])) {
 	} else {
 		html_comment($site['files']['page_header'] . 'not found');
 	}
-
 	?>
-
 </head>
 
 <body id="<?php echo issetor($document['body']['id'])?>" class="<?php echo issetor($document['body']['class'])?>">
-<?php include_once('menus/header.php');?>
-
+	<?php if ( isset($document['site_header']) && $document['site_header'] ) {
+		include_once('menus/header.php');
+	}
+	?>

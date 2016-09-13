@@ -1,5 +1,9 @@
 #Charter Front-end Dev Sandbox
 
+* Production site: [charter.d23.us/](http://charter.d23.us/)
+* Staging site: [staging.charter.d23.us/](http://staging.charter.d23.us/)
+* Development site: [dev.charter.d23.us/](http://dev.charter.d23.us/)
+
 ##Site structure
 
 Source files: `/src`

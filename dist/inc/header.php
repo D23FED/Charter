@@ -29,11 +29,11 @@ if (file_exists($site['files']['page_vars'])) {
 	} else {
 		html_comment($site['files']['page_header'] . 'not found');
 	}
-
 	?>
-
 </head>
 
 <body id="<?php echo issetor($document['body']['id'])?>" class="<?php echo issetor($document['body']['class'])?>">
-<?php include_once('menus/header.php');?>
-
+	<?php if ( isset($document['site_header']) && $document['site_header'] ) {
+		include_once('menus/header.php');
+	}
+	?>
