@@ -83,4 +83,8 @@
   src: url(/fonts/bootstrap-icons/glyphicons-halflings-regular.eot?iefix) format("eot"), url(/fonts/bootstrap-icons/glyphicons-halflings-regular.woff) format("woff"), url(/fonts/bootstrap-icons/glyphicons-halflings-regular.ttf) format("truetype"), url(/fonts/bootstrap-icons/glyphicons-halflings-regular.svg#webfont) format("svg");
 }
 
+.global-css-test {
+  color: blue;
+}
+
 /*# sourceMappingURL=style.css.map */
