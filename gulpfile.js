@@ -16,7 +16,7 @@ var
 		]
 	}),
 	//browserSync = require('browser-sync').create(),
-	path = require('path'),
+	// path = require('path'),
 	paths = {
 		source: 'src/',
 		scripts: 'js/app/',
@@ -93,11 +93,14 @@ gulp.task('style', function() {
 		});
 });
 
-// Concat JS
-gulp.task('js', function() {
+
+
+// Site-wide JS
+gulp.task('js-global', function() {
 	return gulp.src([
 			paths.source + paths.scriptLibs + globs.scripts,
 			paths.source + paths.scripts + globs.scripts,
+			'!node_modules/**/*'
 		])
 		.pipe($.debug({
 			title: 'Processing:'
@@ -111,6 +114,25 @@ gulp.task('js', function() {
 			suffix: '.min'
 		}))
 		.pipe($.sourcemaps.write('.'))
+		.pipe(gulp.dest(paths.dist))
+		.pipe($.debug({
+			title: 'Output:',
+			minimal: true
+		}));
+});
+
+// Individual Component/Sandbox project JS
+gulp.task('js-components', function() {
+	return gulp.src([
+			paths.source + paths.components + globs.scripts,
+			paths.source + paths.sandbox + globs.scripts,
+			'!'+paths.source + paths.scriptLibs + '*.js',
+			'!'+paths.source + paths.scripts + '*.js',
+			'!node_modules/**/*'
+		], {base: paths.dist})
+		.pipe($.debug({
+			title: 'Processing:'
+		}))
 		.pipe(gulp.dest(paths.dist))
 		.pipe($.debug({
 			title: 'Output:',
@@ -213,8 +235,8 @@ gulp.task('html', function() {
 			[paths.source + globs.html]
 			)
 	.pipe($.changed(paths.dist))
-	.pipe(gulp.dest(paths.dist))
-})
+	.pipe(gulp.dest(paths.dist));
+});
 
 // Copy PHP to build folder
 gulp.task('php', function() {
@@ -224,8 +246,8 @@ gulp.task('php', function() {
 	.pipe(gulp.dest(paths.dist))
 	.pipe($.debug({
 		title: 'Output:'
-	}))
-})
+	}));
+});
 
 //Live reloading of changes
 // gulp.task('browser-sync', function() {
@@ -235,11 +257,12 @@ gulp.task('php', function() {
 // 	});
 // });
 
-// Default
-gulp.task('default',
-	gulp.parallel('style', 'js'));
 
-// Default
+// All JS build tasks
+gulp.task('js',
+	gulp.parallel('js-global', 'js-components'));
+
+// PHP + HTML
 gulp.task('markup',
 	gulp.parallel('php', 'html'));
 
@@ -248,11 +271,15 @@ gulp.task('watch', function() {
 	gulp.watch([
 			paths.source + paths.scriptLibs + globs.scripts,
 			paths.source + paths.scripts + globs.scripts,
+
 		], gulp.parallel(['js']));
 	gulp.watch(paths.source + globs.sass, gulp.parallel(['style']));
 	gulp.watch(paths.source + paths.images + globs.img, gulp.parallel(['img']));
 });
 
+// Default
+gulp.task('default',
+	gulp.parallel('style', 'js'));
 // Todo
 /*
 Browsersync

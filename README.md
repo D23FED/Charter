@@ -15,11 +15,11 @@
 | ---               | ---          |
 | Source files      | `/src`       |
 | Build files       | `/dist`      |
-| Global includes   | `/inc`       |
-| Global style      | `/style`     |
-| Third-party style | `/style/lib` |
-| JS                | `/js/app`    |
-| Third-party JS    | `/js/lib`    |
+| Global includes   | `/src/inc`       |
+| Global style      | `/src/style`     |
+| Third-party style | `/src/style/lib` |
+| JS                | `/src/js/app`    |
+| Third-party JS    | `/src/js/lib`    |
 
 ###Sandbox Template structure
 Blank template located at `src/sandbox/_template`
@@ -30,10 +30,14 @@ Blank template located at `src/sandbox/_template`
 | `gulp`  |  Default task, compiles/concatenates CSS and JS |
 | `gulp watch`|  Begin folder watcher |
 | `gulp style` | Compile Sass to CSS |
-| `gulp js`| Concatenates and uglifies JS |
+| `gulp js`| Copies all JS to build folder, concatenates and uglifies global (non-component) JS |
+| `gulp js-global`| Concatenates and uglifies global (non-component) JS |
+| `gulp js-components`| Processes and copies JS for individual components and sandbox projects |
 | `gulp jsl` | Lint JS with [ESLint](http://eslint.org/) (set rules with personal [config file](http://eslint.org/docs/user-guide/configuring#using-configuration-files)) |
 | `gulp jsp` | Prettify JS |
 | `gulp img` | Minify images with [imagemin](https://github.com/imagemin/imagemin) |
+| `gulp markup` | Copy PHP and HTML to build folder |
+
 
 ##Breakpoints
 Prefer generic naming convention of "small, medium" etc over "tablet, desktop" to allow flexibility in adding/removing breakpoints in the future.

@@ -21,6 +21,8 @@ if (file_exists($site['files']['page_vars'])) {
 	stylesheet($site['assets']['bootstrap_css']);
 	// Site CSS
 	stylesheet($site['assets']['site_css']);	?>
+	<?php // Page-specific style ?>
+	<?php stylesheet('style/style.css'); ?>
 	<?php	// Template block: Page-specific <HEAD>
 	if (file_exists($site['files']['page_header'])) {
 		include($site['files']['page_header']);
@@ -28,8 +30,6 @@ if (file_exists($site['files']['page_vars'])) {
 		html_comment($site['files']['page_header'] . 'not found');
 	}
 	?>
-	<?php // Page-specific style ?>
-	<?php stylesheet('style/style.css'); ?>
 </head>
 
 <body id="<?php echo issetor($document['body']['id'])?>" class="<?php echo issetor($document['body']['class'])?>">
