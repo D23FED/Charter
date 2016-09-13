@@ -1,24 +1,28 @@
 #Charter Front-end Dev Sandbox
+| Server          | URL     |
+| ---             | ---          |
+| Production site | [charter.d23.us](http://charter.d23.us/) |
+| Staging site | [staging.charter.d23.us](http://staging.charter.d23.us/) |
+| Development site | [dev.charter.d23.us](http://dev.charter.d23.us/) |
 
-* Production site: [charter.d23.us/](http://charter.d23.us/)
-* Staging site: [staging.charter.d23.us/](http://staging.charter.d23.us/)
-* Development site: [dev.charter.d23.us/](http://dev.charter.d23.us/)
+##Installation
+
+1. `git clone https://github.com/D23FED/Charter.git`
+2. `npm install`
 
 ##Site structure
-
-* Source files: `/src`
-* Build files: `/dist`
-
-* Global includes: `/inc`
-
-* Global style: `/style`
-* Third-party style: `/style/lib`
-
-* JS: `/js/app`
-* Third-party JS: `/js/lib`
+| Content           | Location     |
+| ---               | ---          |
+| Source files      | `/src`       |
+| Build files       | `/dist`      |
+| Global includes   | `/inc`       |
+| Global style      | `/style`     |
+| Third-party style | `/style/lib` |
+| JS                | `/js/app`    |
+| Third-party JS    | `/js/lib`    |
 
 ###Sandbox Template structure
-Blank template located at
+Blank template located at `src/sandbox/_template`
 
 ##Running tasks with gulp
 | Task | Action  |
@@ -35,13 +39,13 @@ Blank template located at
 Prefer generic naming convention of "small, medium" etc over "tablet, desktop" to allow flexibility in adding/removing breakpoints in the future.
 (All media queries will be written in `em`s, approximate pixel values only listed for reference.)
 
-| Name  | Size  | Shorthand  |
-|---|---|---|
-| Extra Small  |  >0 | xs  |
-| Small  |  ≥34em (544px) | sm  |
-| Medium  |  ≥46em (768px) | md  |
-| Large  | ≥62em / (992px)  | lg  |
-| Extra Large  | ≥75em (1200px)  | xl  |
+| Name        | Size           | Shorthand |
+| ---         | ---            | ---       |
+| Extra Small | >0             | xs        |
+| Small       | ≥34em (544px)  | sm        |
+| Medium      | ≥46em (768px)  | md        |
+| Large       | ≥62em (992px)  | lg        |
+| Extra Large | ≥75em (1200px) | xl        |
 
 ###Usage in Sass
 #####Mobile-first media query mixin

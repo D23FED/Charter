@@ -1,0 +1,107 @@
+// Media Queries
+// Media of at least the minimum breakpoint width. (No query for the smallest breakpoint)
+// Usage example: @include breakpoint(sm) {}
+@mixin breakpoint($name, $bp: $breakpoints) {
+	$min: breakpoint-min($name, $bp);
+
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	}
+	@else {
+		@content;
+	}
+}
+
+// Media of at most the maximum breakpoint width, applies to the given breakpoint and narrower. (No query for the largest breakpoint)
+@mixin breakpoint-down($name, $bp: $breakpoints) {
+	$max: breakpoint-max($name, $bp);
+
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	}
+	@else {
+		@content;
+	}
+}
+
+// Media between the breakpoint's minimum and maximum widths, applies only to the given breakpoint. (No minimum for the smallest breakpoint, and no maximum for the largest one)
+@mixin breakpoint-only($name, $bp: $breakpoints) {
+	@include breakpoint($name, $bp) {
+		@include breakpoint-down($name, $bp) {
+			@content;
+		}
+	}
+}
+
+// Media that spans multiple breakpoint widths. @content applies between the min and max breakpoints
+@mixin breakpoint-between($lower, $upper, $bp: $breakpoints) {
+	@include breakpoint($lower, $bp) {
+		@include breakpoint-down($upper, $bp) {
+			@content;
+		}
+	}
+}
+
+// Positioning
+@mixin center-block($dis: block) {
+	display: $dis;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin horizontal-center($pos: absolute) {
+	position: $pos;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin vertical-center($pos: absolute) {
+	position: $pos;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin absolute-center($pos: absolute) {
+	position: $pos;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// Utilities
+// CSS image replacement
+@mixin text-hide {
+	font-size: 0;
+	line-height: 0;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin hover-focus {
+	&:focus,
+	&:hover {
+		@content;
+	}
+}
+
+// Using a pseudo element to contain an image
+@mixin pseudo-img($pos: absolute) {
+	content: '';
+	background-repeat: no-repeat;
+	display: block;
+	position: $pos;
+}

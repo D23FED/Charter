@@ -15,7 +15,7 @@ var
 			'css-*'
 		]
 	}),
-	browserSync = require('browser-sync').create(),
+	//browserSync = require('browser-sync').create(),
 	path = require('path'),
 	paths = {
 		source: 'src/',
@@ -228,12 +228,12 @@ gulp.task('php', function() {
 })
 
 //Live reloading of changes
-gulp.task('browser-sync', function() {
-	browserSync.init({
-		proxy: 'charter.local',
-		port: '8888'
-	});
-});
+// gulp.task('browser-sync', function() {
+// 	browserSync.init({
+// 		proxy: 'charter.local',
+// 		port: '8888'
+// 	});
+// });
 
 // Default
 gulp.task('default',
