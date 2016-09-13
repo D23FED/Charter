@@ -1,21 +1,21 @@
-<!-- Global vars loaded -->
-<?php // Global site variables
+<!-- Global vars loaded --><?php
+// Global site variables
 $site = array(
 	'title' => 'Charter Spectrum',
 	'assets' => array(
-		'bootstrap_js' => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js',
+		'bootstrap_js'  => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js',
 		'bootstrap_css' => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css',
-		'jquery' => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js',
-		'site_css' => '/style/style.css'
+		'jquery'        => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js',
+		'site_css'      => '/style/style.css'
 	),
 	'files' => array(
-		'site_header' => 'inc/header.php',
-		'site_footer' => 'inc/footer.php',
+		'site_header'      => 'header.php',
+		'site_footer'      => 'footer.php',
 		'site_header_menu' => 'menus/header.php',
 		'site_footer_menu' => 'menus/footer.php',
-		'page_vars' => 'inc/variables.php',
-		'page_header' => 'inc/page-header.php',
-		'page_footer' => 'inc/page-footer.php'
+		'page_vars'        => 'inc/variables.php',
+		'page_header'      => 'inc/page-header.php',
+		'page_footer'      => 'inc/page-footer.php'
 	)
 );
 

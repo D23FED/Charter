@@ -1,5 +1,5 @@
-<!-- Global vars loaded -->
-<?php // Global site variables
+<!-- Global vars loaded --><?php
+// Global site variables
 $site = array(
 	'title' => 'Charter Spectrum',
 	'assets' => array(
@@ -9,8 +9,8 @@ $site = array(
 		'site_css'      => '/style/style.css'
 	),
 	'files' => array(
-		'site_header'      => 'inc/header.php',
-		'site_footer'      => 'inc/footer.php',
+		'site_header'      => 'header.php',
+		'site_footer'      => 'footer.php',
 		'site_header_menu' => 'menus/header.php',
 		'site_footer_menu' => 'menus/footer.php',
 		'page_vars'        => 'inc/variables.php',
@@ -29,6 +29,10 @@ $document = array(
 	'body' => array(
 		'id'    => '',
 		'class' => ''
+	),
+	'component' => array(
+		'name' => '',
+		'lob' => ''
 	),
 	'site_header' => true,
 	'site_footer' => true,

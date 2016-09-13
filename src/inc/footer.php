@@ -23,7 +23,6 @@ if (file_exists('js/script.js')) {
 	echo "<script>\r\n";
 	include('js/script.js');
 	echo '</script>';
-}
-?>
+} ?>
 </html>
 

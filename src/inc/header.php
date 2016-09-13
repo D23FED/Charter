@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<?php
+<!DOCTYPE html><?php
 require('constants.php');
 require('variables.php');
 require('functions.php');
 // Page-specific variables
 if (file_exists($site['files']['page_vars'])) {
 	include($site['files']['page_vars']);
+	html_comment('Page-specific variables loaded');
 } else {
 	html_comment('No page vars loaded');
 }?>
-<!--[if IE 9 ]><html class="ie ie-9 no-js" lang="en"><![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
+<!--[if IE 9 ]><html class="ie ie-9 no-js" lang="en"><![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
