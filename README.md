@@ -6,15 +6,16 @@
 
 ##Site structure
 
-Source files: `/src`
-Build files: `/dist`
+* Source files: `/src`
+* Build files: `/dist`
 
-Global includes: `/inc`
-Global style: `/style`
+* Global includes: `/inc`
 
-Third-party style: `/style/lib`
-JS: `/js/app`
-Third-party JS: `/js/lib`
+* Global style: `/style`
+* Third-party style: `/style/lib`
+
+* JS: `/js/app`
+* Third-party JS: `/js/lib`
 
 ###Sandbox Template structure
 Blank template located at
@@ -32,13 +33,15 @@ Blank template located at
 
 ##Breakpoints
 Prefer generic naming convention of "small, medium" etc over "tablet, desktop" to allow flexibility in adding/removing breakpoints in the future.
-(All media queries will be written in `em` equivalents of the pixel sizes below.)
+(All media queries will be written in `em`s, approximate pixel values only listed for reference.)
 
 | Name  | Size  | Shorthand  |
 |---|---|---|
-| Extra Small  |  <0px | xs  |
-| Medium  |  ≥667px | md  |
-| Large  | ≥1040px  | lg  |
+| Extra Small  |  >0 | xs  |
+| Small  |  ≥34em (544px) | sm  |
+| Medium  |  ≥46em (768px) | md  |
+| Large  | ≥62em / (992px)  | lg  |
+| Extra Large  | ≥75em (1200px)  | xl  |
 
 ###Usage in Sass
 #####Mobile-first media query mixin
