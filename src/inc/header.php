@@ -20,23 +20,29 @@ if (file_exists($site['files']['page_vars'])) {
 	<?php // Bootstrap CSS
 	stylesheet($site['assets']['bootstrap_css']);
 	// Site CSS
-	stylesheet($site['assets']['site_css']);	?>
-	<?php // Page-specific style ?>
-	<?php stylesheet('style/style.css'); ?>
-	<?php	// Template block: Page-specific <HEAD>
+	html_comment('Global Style');
+	stylesheet($site['assets']['site_css']);
+	// Page-specific style
+	html_comment('Page-specific style');
+	stylesheet('style/style.css');
+	// JS libraries
+	script_tag($site['assets']['jquery'], 'defer');
+	script_tag($site['assets']['bootstrap_js'], 'defer');
+	// Global JS
+	script_tag($site['assets']['site_js'], 'defer');
+	// Template block: Page-specific <HEAD>
 	if (file_exists($site['files']['page_header'])) {
 		include($site['files']['page_header']);
 	} else {
 		html_comment($site['files']['page_header'] . 'not found');
-	}
-	?>
+	}	?>
 </head>
 
 <body id="<?php echo issetor($document['body']['id'])?>" class="<?php echo issetor($document['body']['class'])?>">
-	<div class="site-container site-container-<?php echo $document['site_container']?>">
+	<div class="site-container">
 		<?php if ( isset($document['site_header']) && $document['site_header'] ) : ?>
 			<header class="site-header">
-					<?php include_once($site['files']['site_header_menu']); ?>
+				<?php include_once($site['files']['site_header_menu']); ?>
 			</header>
 		<?php endif; ?>
-		<main>
+		<main class="container-<?php echo $document['site_container']?>">

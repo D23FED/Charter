@@ -6,7 +6,8 @@ $site = array(
 		'bootstrap_js'  => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js',
 		'bootstrap_css' => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css',
 		'jquery'        => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js',
-		'site_css'      => '/style/style.css'
+		'site_css'      => '/style/style.css',
+		'site_js'       => '/js/script.min.js'
 	),
 	'files' => array(
 		'site_header'      => 'header.php',
@@ -22,10 +23,6 @@ $site = array(
 // Per-document variables, defaults
 $document = array(
 	'title' => '',
-	'meta' => array(
-		'description' => '',
-		'keywords' => ''
-	),
 	'body' => array(
 		'id'    => '',
 		'class' => ''
@@ -34,9 +31,9 @@ $document = array(
 		'name' => '',
 		'lob' => ''
 	),
-	'site_header' => true,
-	'site_footer' => true,
-	'primary_nav' => true,
+	'site_header'    => true,
+	'site_footer'    => true,
+	'primary_nav'    => true,
 	'site_container' => 'fixed' // 'fixed' or 'full-width'
 );
 

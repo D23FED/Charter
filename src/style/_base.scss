@@ -1,3 +1,5 @@
-.global-css-test {
-	color: blue;
+// Fixed-width content section container
+.container-fixed {
+	max-width: 1200px;
+	@include center-block;
 }

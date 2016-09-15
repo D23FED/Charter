@@ -105,3 +105,20 @@
 	display: block;
 	position: $pos;
 }
+
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	padding-bottom: $height / $width * 100%;
+
+	img,
+	video,
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}

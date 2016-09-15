@@ -1,1 +1,2 @@
-<?php //Custom page <HEAD> content ?>
+<!-- Custom page <head> -->
+<?php // stylesheet('example.css');

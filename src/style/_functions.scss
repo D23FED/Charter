@@ -1,3 +1,4 @@
-@function em($pixels, $context: 16) {
-  @return ($pixels / $context) * 1em;
+// Convert pixels => ems
+@function em($pixels, $base: 16) {
+  @return ($pixels / $base) * 1em;
 }

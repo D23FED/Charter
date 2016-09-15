@@ -53,6 +53,7 @@ var
 			loadPaths: [
 				paths.dist + paths.images,
 				paths.source + paths.images,
+				paths.images,
 				paths.source + paths.sass
 			],
 			relative: paths.dist
@@ -66,7 +67,7 @@ var
 // Compile style
 gulp.task('style', function() {
 	return gulp.src([
-		paths.source + globs.sass
+			paths.source + globs.sass
 		])
 		// Output names of files being processed
 		.pipe($.debug({
@@ -93,8 +94,6 @@ gulp.task('style', function() {
 		});
 });
 
-
-
 // Site-wide JS
 gulp.task('js-global', function() {
 	return gulp.src([
@@ -107,14 +106,16 @@ gulp.task('js-global', function() {
 		}))
 		.pipe($.sourcemaps.init())
 		// Concat
-		.pipe($.concat('scripts.js', {newLine: ';\r\n'}))
+		.pipe($.concat('script.js', {
+			newLine: ';\r\n'
+		}))
 		// Uglify
 		.pipe($.uglify())
 		.pipe($.rename({
 			suffix: '.min'
 		}))
 		.pipe($.sourcemaps.write('.'))
-		.pipe(gulp.dest(paths.dist))
+		.pipe(gulp.dest(paths.dist + 'js/'))
 		.pipe($.debug({
 			title: 'Output:',
 			minimal: true
@@ -126,13 +127,12 @@ gulp.task('js-components', function() {
 	return gulp.src([
 			paths.source + paths.components + globs.scripts,
 			paths.source + paths.sandbox + globs.scripts,
-			'!'+paths.source + paths.scriptLibs + '*.js',
-			'!'+paths.source + paths.scripts + '*.js',
+			'!' + paths.source + paths.scriptLibs + globs.scripts,
+			'!' + paths.source + paths.scripts + globs.scripts,
 			'!node_modules/**/*'
-		], {base: paths.dist})
-		.pipe($.debug({
-			title: 'Processing:'
-		}))
+		], {
+			base: './' + paths.source
+		})
 		.pipe(gulp.dest(paths.dist))
 		.pipe($.debug({
 			title: 'Output:',
@@ -143,8 +143,9 @@ gulp.task('js-components', function() {
 // Lint  JS
 gulp.task('jsl', function() {
 	return gulp.src([
-		paths.source + paths.scripts + globs.scripts,
-		'!node_modules/**/*'])
+			paths.source + paths.scripts + globs.scripts,
+			'!node_modules/**/*'
+		])
 		.pipe($.debug({
 			title: 'Linting:'
 		}))
@@ -182,33 +183,34 @@ gulp.task('jsl', function() {
 // Prettify JS
 gulp.task('jsp', function() {
 	return gulp.src([
-		paths.source + paths.scripts + globs.scripts,
-		'!node_modules/**/*'])
+			paths.source + paths.scripts + globs.scripts,
+			'!node_modules/**/*'
+		])
 		.pipe($.debug({
 			title: 'Prettifying:'
 		}))
-	.pipe($.jsPrettify({
-		"indent_size": 1,
-		"indent_char": "	",
-		"eol": "\n",
-		"indent_level": 0,
-		"indent_with_tabs": true,
-		"preserve_newlines": true,
-		"max_preserve_newlines": 2,
-		"space_after_anon_function": false,
-		"brace_style": "collapse",
-		"keep_array_indentation": true,
-		"keep_function_indentation": false,
-		"space_before_conditional": true,
-		"break_chained_methods": false,
-		"eval_code": false,
-		"unescape_strings": false,
-		"wrap_line_length": 0,
-		"wrap_attributes": "auto",
-		"wrap_attributes_indent_size": 4,
-		"end_with_newline": true
-	}))
-	.pipe(gulp.dest(paths.source + paths.scripts));
+		.pipe($.jsPrettify({
+			"indent_size": 1,
+			"indent_char": "	",
+			"eol": "\n",
+			"indent_level": 0,
+			"indent_with_tabs": true,
+			"preserve_newlines": true,
+			"max_preserve_newlines": 2,
+			"space_after_anon_function": false,
+			"brace_style": "collapse",
+			"keep_array_indentation": true,
+			"keep_function_indentation": false,
+			"space_before_conditional": true,
+			"break_chained_methods": false,
+			"eval_code": false,
+			"unescape_strings": false,
+			"wrap_line_length": 0,
+			"wrap_attributes": "auto",
+			"wrap_attributes_indent_size": 4,
+			"end_with_newline": true
+		}))
+		.pipe(gulp.dest(paths.source + paths.scripts));
 });
 
 // Image compression and copying
@@ -233,20 +235,20 @@ gulp.task('img', function() {
 gulp.task('html', function() {
 	return gulp.src(
 			[paths.source + globs.html]
-			)
-	.pipe($.changed(paths.dist))
-	.pipe(gulp.dest(paths.dist));
+		)
+		.pipe($.changed(paths.dist))
+		.pipe(gulp.dest(paths.dist));
 });
 
 // Copy PHP to build folder
 gulp.task('php', function() {
 	return gulp.src(
 			[paths.source + globs.php])
-	.pipe($.changed(paths.dist))
-	.pipe(gulp.dest(paths.dist))
-	.pipe($.debug({
-		title: 'Output:'
-	}));
+		.pipe($.changed(paths.dist))
+		.pipe(gulp.dest(paths.dist))
+		.pipe($.debug({
+			title: 'Copied:'
+		}));
 });
 
 //Live reloading of changes
@@ -256,7 +258,6 @@ gulp.task('php', function() {
 // 		port: '8888'
 // 	});
 // });
-
 
 // All JS build tasks
 gulp.task('js',
@@ -269,18 +270,19 @@ gulp.task('markup',
 // File watcher
 gulp.task('watch', function() {
 	gulp.watch([
-			paths.source + paths.scriptLibs + globs.scripts,
-			paths.source + paths.scripts + globs.scripts,
-
-		], gulp.parallel(['js']));
+		paths.source + paths.scriptLibs + globs.scripts,
+		paths.source + paths.scripts + globs.scripts,
+		paths.source + paths.components + globs.scripts,
+		paths.source + paths.sandbox + globs.scripts
+	], gulp.parallel(['js']));
 	gulp.watch(paths.source + globs.sass, gulp.parallel(['style']));
 	gulp.watch(paths.source + paths.images + globs.img, gulp.parallel(['img']));
+	gulp.watch([
+		paths.source + globs.php,
+		paths.source + globs.html
+	], gulp.parallel(['markup']));
 });
 
 // Default
 gulp.task('default',
-	gulp.parallel('style', 'js'));
-// Todo
-/*
-Browsersync
-*/
+	gulp.parallel('style', 'js', 'markup'));
