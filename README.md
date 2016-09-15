@@ -28,12 +28,12 @@ Within this folder is the following structure:
 
 | Content           | Location     |
 | ---               | ---          |
-| Component includes      | `/inc`       |
-| Template block: Component page `<head>` content       | `/inc/page-header.php`      |
-| Template block: Component page footer content (appended before closing `<body>` tag)   | `/src/inc`       |
-| Component page variables      | `/inc/variables.php`     |
-| Component JS | `/js/script.js` |
-| Component style                | `/style/style.scss`    |
+| Component includes      | `inc/`       |
+| Template block: Component page `<head>` content       | `inc/page-header.php`      |
+| Template block: Component page footer content (appended before closing `<body>` tag)   | `inc/page-footer.php`       |
+| Component page variables      | `inc/variables.php`     |
+| Component JS | `js/script.js` |
+| Component style                | `style/style.scss`    |
 
 ###URL Naming Conventions
 Any folders that will be part of a URL should only contain lowercase letters, numbers, and hyphens. No spaces, underscores, or camelCasing. This makes URLs more predictable and consistent
