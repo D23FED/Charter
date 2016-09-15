@@ -1,9 +1,9 @@
-#Charter Front-end Dev Sandbox
-| Server          | URL     |
-| ---             | ---          |
-| Production site | [charter.d23.us](http://charter.d23.us/) |
-| Staging site | [staging.charter.d23.us](http://staging.charter.d23.us/) |
-| Development site | [dev.charter.d23.us](http://dev.charter.d23.us/) |
+#Charter Front-end Dev Sandbox and Component Prototyping
+| Server           | URL                                                      |
+| ---              | ---                                                      |
+| Production site  | [charter.d23.us](http://charter.d23.us/)                 |
+| Staging site     | [staging.charter.d23.us](http://staging.charter.d23.us/) |
+| Development site | [dev.charter.d23.us](http://dev.charter.d23.us/)         |
 
 ##Installation
 
@@ -11,18 +11,35 @@
 2. `npm install`
 
 ##Site structure
-| Content           | Location     |
-| ---               | ---          |
-| Source files      | `/src`       |
-| Build files       | `/dist`      |
+| Content           | Location         |
+| ---               | ---              |
+| Source files      | `/src`           |
+| Build files       | `/dist`          |
 | Global includes   | `/src/inc`       |
 | Global style      | `/src/style`     |
 | Third-party style | `/src/style/lib` |
 | JS                | `/src/js/app`    |
 | Third-party JS    | `/src/js/lib`    |
 
-###Sandbox Template structure
-Blank template located at `src/sandbox/_template`
+###Sandbox/Component Template structure
+Blank template folder located at `src/sandbox/_template`. 
+
+Within this folder is the following structure:
+
+| Content           | Location     |
+| ---               | ---          |
+| Component includes      | `/inc`       |
+| Template block: Component page `<head>` content       | `/inc/page-header.php`      |
+| Template block: Component page footer content (appended before closing `<body>` tag)   | `/src/inc`       |
+| Component page variables      | `/inc/variables.php`     |
+| Component JS | `/js/script.js` |
+| Component style                | `/style/style.scss`    |
+
+###URL Naming Conventions
+Any folders that will be part of a URL should only contain lowercase letters, numbers, and hyphens. No spaces, underscores, or camelCasing. This makes URLs more predictable and consistent
+
+* Bad: `/myAwesomeComponent/`, `/my_awesome_component/`
+* Good: `my-awesome-component`
 
 ##Running tasks with gulp
 | Task | Action  |
@@ -30,14 +47,13 @@ Blank template located at `src/sandbox/_template`
 | `gulp`  |  Default task, compiles/concatenates CSS and JS |
 | `gulp watch`|  Begin folder watcher |
 | `gulp style` | Compile Sass to CSS |
-| `gulp js`| Copies all JS to build folder, concatenates and uglifies global (non-component) JS |
-| `gulp js-global`| Concatenates and uglifies global (non-component) JS |
-| `gulp js-components`| Processes and copies JS for individual components and sandbox projects |
+| `gulp js`| Copies all JS to build folder, concatenates and uglifies global (non-component) JS (shorthand for running `js-global` and `js-components` in a single task) |
+| `gulp markup` | Copy PHP and HTML to build folder |
+| `gulp img` | Minify images with [imagemin](https://github.com/imagemin/imagemin) |
+| `gulp js-global`| Concatenates and uglifies only global (non-component) JS |
+| `gulp js-components`| Processes and copies JS only for components and sandbox projects |
 | `gulp jsl` | Lint JS with [ESLint](http://eslint.org/) (set rules with personal [config file](http://eslint.org/docs/user-guide/configuring#using-configuration-files)) |
 | `gulp jsp` | Prettify JS |
-| `gulp img` | Minify images with [imagemin](https://github.com/imagemin/imagemin) |
-| `gulp markup` | Copy PHP and HTML to build folder |
-
 
 ##Breakpoints
 Prefer generic naming convention of "small, medium" etc over "tablet, desktop" to allow flexibility in adding/removing breakpoints in the future.
