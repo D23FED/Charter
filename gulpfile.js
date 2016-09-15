@@ -5,6 +5,7 @@
 // Settings
 var
 	gulp = require('gulp'),
+	// Load plugins at runtime, instead of manually `require`-ing each one
 	$ = require('gulp-load-plugins')({
 		pattern: [
 			'gulp-*',
@@ -38,6 +39,7 @@ var
 		scripts: '**/*.js',
 		img: '**/*.{jpg,jpeg,gif,png,svg}'
 	},
+	// PostCSS plugins
 	postCssProcessors = [
 		$.autoprefixer({
 			browsers: 'last 3 versions'
@@ -61,10 +63,10 @@ var
 	],
 	sassIncludePaths = [
 		'src/style/',
-		'style/',
+		'style/'
 	];
 
-// Compile style
+// Sass => CSS
 gulp.task('style', function() {
 	return gulp.src([
 			paths.source + globs.sass
@@ -94,7 +96,7 @@ gulp.task('style', function() {
 		});
 });
 
-// Site-wide JS
+// Concatenate and Uglifiy Global JS
 gulp.task('js-global', function() {
 	return gulp.src([
 			paths.source + paths.scriptLibs + globs.scripts,
@@ -122,7 +124,7 @@ gulp.task('js-global', function() {
 		}));
 });
 
-// Individual Component/Sandbox project JS
+// Copy Individual Component/Sandbox project JS to build folder
 gulp.task('js-components', function() {
 	return gulp.src([
 			paths.source + paths.components + globs.scripts,
@@ -140,7 +142,7 @@ gulp.task('js-components', function() {
 		}));
 });
 
-// Lint  JS
+// Lint JS with ESLint
 gulp.task('jsl', function() {
 	return gulp.src([
 			paths.source + paths.scripts + globs.scripts,
@@ -213,10 +215,12 @@ gulp.task('jsp', function() {
 		.pipe(gulp.dest(paths.source + paths.scripts));
 });
 
-// Image compression and copying
+// Image compression and copying. Currently only works on images at root /images/ folder, need to expand to cover individual component images.
 gulp.task('img', function() {
 	return gulp.src(paths.source + paths.images + globs.img)
+		// Prevent errors from breaking `watch` task
 		.pipe($.plumber())
+		// Only process new images
 		.pipe($.changed(paths.dist + paths.images))
 		.pipe($.imagemin({
 			optimizationLevel: 3,
@@ -269,14 +273,18 @@ gulp.task('markup',
 
 // File watcher
 gulp.task('watch', function() {
+	// JS
 	gulp.watch([
 		paths.source + paths.scriptLibs + globs.scripts,
 		paths.source + paths.scripts + globs.scripts,
 		paths.source + paths.components + globs.scripts,
 		paths.source + paths.sandbox + globs.scripts
 	], gulp.parallel(['js']));
+	// Sass
 	gulp.watch(paths.source + globs.sass, gulp.parallel(['style']));
+	// Images
 	gulp.watch(paths.source + paths.images + globs.img, gulp.parallel(['img']));
+	// PHP & HTML
 	gulp.watch([
 		paths.source + globs.php,
 		paths.source + globs.html
