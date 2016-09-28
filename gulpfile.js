@@ -62,8 +62,11 @@ var
 		})
 	],
 	sassIncludePaths = [
-		'src/style/',
-		'style/'
+	'src/style/',
+	'src/style/res',
+	'src/style/bus',
+	'src/style/ent',
+	'style/'
 	];
 
 // Sass => CSS

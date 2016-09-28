@@ -9,6 +9,7 @@
 	G.$lobSwitchLabel = $('.lob-switch');
 	G.$lobStyle = $('.lob-name');
 
+	// Refactor so that a list of all LOBs is displayed
 	$('.lob-switch').click(function() {
 		if($('#lobStyle').attr("href") == "css/style1.css") {
 			$('#lobStyle').attr('href', 'css/style2.css');

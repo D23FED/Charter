@@ -8,8 +8,8 @@ function title_tag() {
 	echo $title_str;
 }
 
-function stylesheet($url) {
-	$style_str = "<link rel='stylesheet' href='$url'>";
+function stylesheet($url, $class = '') {
+	$style_str = "<link rel='stylesheet' href='$url' class='$class'>";
 	$style_str .= "\r\n";
 	echo $style_str;
 }
@@ -26,5 +26,9 @@ function html_comment($comment) {
 function issetor(&$var, $default = false) {
     return isset($var) ? $var : $default;
 }
-?>
-
+function lob_switch($lobs) { ?>
+	<div class="lob-switch" data-lob=''>
+		<p>You&rsquo;re currently viewing</p>
+		<a class="lob-name" href="#"></a>
+	</div>
+<?php }

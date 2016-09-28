@@ -22,6 +22,8 @@ if (file_exists($site['files']['page_vars'])) {
 	// Site CSS
 	html_comment('Global Style');
 	stylesheet($site['assets']['site_css']);
+	// LOB CSS
+	stylesheet('','lob-style');
 	// Page-specific style
 	html_comment('Page-specific style');
 	stylesheet('style/style.css');
