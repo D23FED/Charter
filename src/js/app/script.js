@@ -2,28 +2,22 @@
 (function() {
 	'use strict';
 	console.log('testing global app js');
+
+	var G;
+
+	G.$lobSwitchButton = $('.lob-switch');
+	G.$lobSwitchLabel = $('.lob-switch');
+	G.$lobStyle = $('.lob-name');
+
+	$('.lob-switch').click(function() {
+		if($('#lobStyle').attr("href") == "css/style1.css") {
+			$('#lobStyle').attr('href', 'css/style2.css');
+			$('#cssChange').text('Residential');
+		} else if($('#lobStyle').attr("href") == "css/style2.css") {
+			$('#lobStyle').attr('href', 'css/style1.css');
+			$('#cssChange').text('Business');
+		};
+		return false;
+	});
+
 })();
-
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-    var method;
-    var noop = function () {};
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
-
-    while (length--) {
-        method = methods[length];
-
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
-        }
-    }
-}());
-
