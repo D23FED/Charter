@@ -104,6 +104,14 @@ p {
 }
 ```
 
+## Tips for working with Bootstrap grids
+* `.container`s (static or `.container-fluid`) are not nestable
+* `.row`s **must** be placed within a `.container` (not required to be a direct parent, just an ancestor)
+* **Only** columns may be immediate children of `.row`s
+* Content should be placed within columns (`.col-*`)
+* Containers have horizontal padding to prevent content from butting right up to the edge of the viewport
+* Rows counteract the left padding of the first column and right padding of the last column to ensure text is completely aligned down the page
+
 ## JS Debouncing and Throttling
 Events such as resizing and scrolling should be debounced or throttled to avoid unnecessary performance losses ([more info](https://css-tricks.com/the-difference-between-throttling-and-debouncing/)). A custom build of lodash is included with the `_.debounce` and `_.throttle` functions.
 
