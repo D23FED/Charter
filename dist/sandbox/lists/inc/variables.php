@@ -7,7 +7,8 @@ $document = array(
 	),
 	'component' => array(
 		'name' => '',
-		'lob'  => ''
+		'lob'  => '',
+		'lob_switch' => true
 	),
 	'site_header'    => false,
 	'site_footer'    => false,
