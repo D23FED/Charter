@@ -1,0 +1,13 @@
+@import 'initialize'; // load base variables, functions, and mixins
+
+.list-style-disc {
+  list-style-type: disc;
+}
+
+.list-style-circle {
+  list-style-type: circle;
+}
+
+.list-style-square {
+  list-style-type: square;
+}
