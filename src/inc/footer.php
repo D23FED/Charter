@@ -16,8 +16,8 @@
 	}
 
 	// Add ability to switch line of business if enabled
-	if($document['component']['lob_switch']) {
-		lob_switch();
+	if( isset($document['component']['lob_switch']) && $document['component']['lob_switch'] ) {
+		echo count($document['component']);
 	}
 
 	// Page-specific JS

@@ -2,7 +2,7 @@
 (function() {
 	'use strict';
 	console.log('testing global app js');
-
+	$('html').removeClass('no-js');
 	var G;
 
 	G.$lobSwitchButton = $('.lob-switch');

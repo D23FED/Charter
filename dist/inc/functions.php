@@ -26,9 +26,9 @@ function html_comment($comment) {
 function issetor(&$var, $default = false) {
     return isset($var) ? $var : $default;
 }
-function lob_switch($lobs) { ?>
+function lob_switch($lobs = 'common') { ob_start(); ?>
 	<div class="lob-switch" data-lob=''>
 		<p>You&rsquo;re currently viewing</p>
 		<a class="lob-name" href="#"></a>
 	</div>
-<?php }
+<?php return ob_get_clean(); }
