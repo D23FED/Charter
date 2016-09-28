@@ -22,7 +22,7 @@
 | Third-party JS    | `/src/js/lib`    |
 
 ###Sandbox/Component Template structure
-Blank template folder located at `src/sandbox/_template`. 
+Blank template folder located at `src/sandbox/_template`.
 
 Within this folder is the following structure:
 
@@ -36,7 +36,7 @@ Within this folder is the following structure:
 | Component style                | `style/style.scss`    |
 
 ###URL Naming Conventions
-Any folders that will be part of a URL should only contain lowercase letters, numbers, and hyphens. No spaces, underscores, or camelCasing. This makes URLs more predictable and consistent
+Any folders that will be part of a URL should only contain lowercase letters, numbers, and hyphens. No spaces, underscores, or camelCasing. This makes URLs more predictable and consistent.
 
 * Bad: `/myAwesomeComponent/`, `/my_awesome_component/`
 * Good: `my-awesome-component`

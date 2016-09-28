@@ -1,0 +1,17 @@
+@import 'initialize';
+/* Assumes 16:9 video */
+.embed-responsive {
+	padding-bottom: percentage(9 / 16);
+}
+
+.video-container-21-9 {
+	padding-bottom: percentage(9 / 21);
+}
+
+.video-container-4-3 {
+	padding-bottom: percentage(3 / 4);
+}
+
+.video-container-1-1 {
+	padding-bottom: percentage(1 / 1);
+}
