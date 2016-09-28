@@ -15,6 +15,11 @@
 		html_comment($site['files']['page_footer'] . 'not found');
 	}
 
+	// Add ability to switch line of business if enabled
+	if($document['component']['lob_switch']) {
+		lob_switch();
+	}
+
 	// Page-specific JS
 	if (file_exists('js/script.js')) {
 		echo "<script>\r\n";
