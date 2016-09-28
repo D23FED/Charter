@@ -42,7 +42,7 @@ var
 	// PostCSS plugins
 	postCssProcessors = [
 		$.autoprefixer({
-			browsers: 'last 3 versions'
+			browsers: 'ie > 8, Chrome > 34,  Firefox > 34,  Safari > 5, ChromeAndroid > 17, iOS > 7, ExplorerMobile > 10'
 		}),
 		$.pixrem({
 			rootValue: 10,
