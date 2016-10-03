@@ -11,6 +11,7 @@ Row containing all tab content panes : .tab-content-container
 $border-radius-base                         : 2px;
 $line-height-base                           : 1;
 
+
 //=== Shared nav styles
 $nav-link-padding                           : 10px 15px;
 
@@ -24,12 +25,12 @@ $nav-tabs-border-color                      : #ddd;
 
 $nav-tabs-link-hover-border-color           : #666;
 
-$nav-tabs-active-link-hover-bg              : $body-bg;
-$nav-tabs-active-link-hover-color           : $gray;
+$nav-tabs-active-link-hover-bg              : #fff;
+$nav-tabs-active-link-hover-color           : #333;
 $nav-tabs-active-link-hover-border-color    : #ddd;
 
 $nav-tabs-justified-link-border-color       : #ddd;
-$nav-tabs-justified-active-link-border-color: $body-bg;
+$nav-tabs-justified-active-link-border-color: red;
 
 // From Bootstrap .nav
 @mixin bs-nav {
