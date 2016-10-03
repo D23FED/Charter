@@ -1,3 +1,4 @@
+@import 'initialize';
 /* Image Art Direction */
 
 /*
@@ -95,7 +96,7 @@ $focus-far-right: right;
 	}
 }
 
-@include respond-to('sm') {
+@include breakpoint('sm') {
 	.mob-image-focus-1 {
 		background-position: left center;
 

@@ -1,0 +1,136 @@
+/* Image Art Direction */
+/*
+Horizontal focus points
+1 = far left
+2 = left
+3 = center
+4 = right
+5 = far right
+*/
+[class*='image-focus-'] {
+  min-height: 200px;
+  min-height: 20rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.imageArtDirection a[class*='image-focus-'] {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.image-art-direction.twc-container {
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.image-focus-1 {
+  background-position: left center;
+}
+
+.image-focus-1.image-focus-top {
+  background-position: left top;
+}
+
+.image-focus-1.image-focus-bottom {
+  background-position: left bottom;
+}
+
+.image-focus-2 {
+  background-position: 25% center;
+}
+
+.image-focus-2 .image-focus-top {
+  background-position: 25% top;
+}
+
+.image-focus-2 .image-focus-bottom {
+  background-position: 25% bottom;
+}
+
+.image-focus-3 {
+  background-position: 50% center;
+}
+
+.image-focus-3.image-focus-top {
+  background-position: 50% top;
+}
+
+.image-focus-3.image-focus-bottom {
+  background-position: 50% bottom;
+}
+
+.image-focus-4 {
+  background-position: 75% center;
+}
+
+.image-focus-4.image-focus-top {
+  background-position: 75% top;
+}
+
+.image-focus-4.image-focus-bottom {
+  background-position: 75% bottom;
+}
+
+.image-focus-5 {
+  background-position: right center;
+}
+
+.image-focus-5.image-focus-top {
+  background-position: right top;
+}
+
+.image-focus-5.image-focus-bottom {
+  background-position: right bottom;
+}
+
+@media (min-width: breakpoint-min("sm", (xs: 0, sm: 34em*px, md: 48em*px, lg: 62em*px, xl: 75em*px))) {
+  .mob-image-focus-1 {
+    background-position: left center;
+  }
+  .mob-image-focus-1.mob-image-focus-top {
+    background-position: left top;
+  }
+  .mob-image-focus-1.mob-image-focus-bottom {
+    background-position: left bottom;
+  }
+  .mob-image-focus-2 {
+    background-position: 25% center;
+  }
+  .mob-image-focus-2.mob-image-focus-top {
+    background-position: 25% top;
+  }
+  .mob-image-focus-2.mob-image-focus-bottom {
+    background-position: 25% bottom;
+  }
+  .mob-image-focus-3 {
+    background-position: 50% center;
+  }
+  .mob-image-focus-3.mob-image-focus-top {
+    background-position: 50% top;
+  }
+  .mob-image-focus-3.mob-image-focus-bottom {
+    background-position: 50% bottom;
+  }
+  .mob-image-focus-4 {
+    background-position: 75% center;
+  }
+  .mob-image-focus-4.mob-image-focus-top {
+    background-position: 75% top;
+  }
+  .mob-image-focus-4.mob-image-focus-bottom {
+    background-position: 75% bottom;
+  }
+  .mob-image-focus-5 {
+    background-position: right center;
+  }
+  .mob-image-focus-5.mob-image-focus-top {
+    background-position: right top;
+  }
+  .mob-image-focus-5.mob-image-focus-bottom {
+    background-position: right bottom;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
