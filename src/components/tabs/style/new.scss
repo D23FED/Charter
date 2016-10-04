@@ -1,0 +1,257 @@
+@import 'initialize';
+
+/* Tabs */
+/*
+Component wrapper                    : .tabbedComponent or .tab-component
+Row containing all tabs              : .tab-row
+Individual tab wrapper (wraps LI > A): .tabbedLabel
+Individual tab wrapper wrapper       : .tabbedRow
+Active tab class                     : .js-active
+Row containing all tab content panes : .tab-content-container
+ */
+
+$border-radius-base: 4px;
+$line-height-base: 1;
+
+//=== Shared nav styles
+$nav-link-padding: 10px 15px;
+
+$nav-link-hover-bg: #666;
+
+$nav-disabled-link-color: #333;
+$nav-disabled-link-hover-color: #333;
+
+//== Tabs
+$nav-tabs-border-color: #ddd;
+
+$nav-tabs-link-hover-border-color: #666;
+
+$nav-tabs-active-link-hover-bg: #fff;
+$nav-tabs-active-link-hover-color: #333;
+$nav-tabs-active-link-hover-border-color: #ddd;
+
+$nav-tabs-justified-link-border-color: #ddd;
+$nav-tabs-justified-active-link-border-color: red;
+$nav-tabs-gutter-width: 0.2rem;
+
+// From Bootstrap .nav
+@mixin bs-nav {
+	margin-bottom: 0;
+	padding-left: 0;
+
+	// Override default ul/ol
+	list-style: none;
+
+	@include clearfix;
+
+	li {
+		position: relative;
+		display: block;
+
+		> a {
+			position: relative;
+			display: block;
+			padding: $nav-link-padding;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				background-color: $nav-link-hover-bg;
+			}
+		}
+
+		// Disabled state sets text to gray and nukes hover/tab effects
+		// &.disabled > a {
+		// 	color: $nav-disabled-link-color;
+
+		// 	&:hover,
+		// 	&:focus {
+		// 		color: $nav-disabled-link-hover-color;
+		// 		text-decoration: none;
+		// 		background-color: transparent;
+		// 		cursor: $cursor-disabled;
+		// 	}
+		// }
+
+	}
+
+	// Open dropdowns
+	// .open > a {
+	// 	&,
+	// 	&:hover,
+	// 	&:focus {
+	// 		background-color: $nav-link-hover-bg;
+	// 		border-color: $link-color;
+	// 	}
+	// }
+
+	// Nav dividers (deprecated with v3.0.1)
+	//
+	// This should have been removed in v3 with the dropping of `.nav-list`, but
+	// we missed it. We don't currently support this anywhere, but in the interest
+	// of maintaining backward compatibility in case you use it, it's deprecated.
+	// .nav-divider {
+	// 	@include nav-divider;
+	// }
+
+	// Prevent IE8 from misplacing imgs
+	//
+	// See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+	// > li > a > img {
+	// 	max-width: none;
+	// }
+}
+
+// From Bootstrap .nav-tabs
+@mixin bs-nav-tabs {
+	// Give the tabs something to sit on
+	border-bottom: 1px solid $nav-tabs-border-color;
+
+	li {
+		float: left;
+
+		// Make the list-items overlay the bottom border
+		margin-bottom: -1px;
+
+		// Actual tabs (as links)
+		> a {
+			margin-right: 2px;
+			line-height: $line-height-base;
+			border: 1px solid transparent;
+			border-radius: $border-radius-base $border-radius-base 0 0;
+
+			&:hover {
+				border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+			}
+		}
+
+		// Active state, and its :hover to override normal :hover
+		&.js-active > a {
+			&,
+			&:hover,
+			&:focus {
+				color: $nav-tabs-active-link-hover-color;
+				background-color: $nav-tabs-active-link-hover-bg;
+				border: 1px solid $nav-tabs-active-link-hover-border-color;
+				border-bottom-color: transparent;
+				cursor: default;
+			}
+		}
+	}
+
+	// pulling this in mainly for less shorthand
+	// &.nav-justified {
+	// 	@extend .nav-justified;
+	// 	@extend .nav-tabs-justified;
+	// }
+}
+
+// Component wrapper
+.tab-component {
+	// Row containing tabs
+	.tab-row {
+		display: block;
+		box-shadow: none;
+
+		// nav tabs list
+		> ul {
+			display: block;
+		}
+
+
+		// nav tabs list
+		ul {
+			// Extend bootstrap classes
+			/* Begin Bootstrap .nav class */
+			@include bs-nav;
+			/* End Bootstrap .nav class */
+			/* Begin Bootstrap .nav-tabs class */
+			@include bs-nav-tabs;
+			/* End Bootstrap .nav-tabs class */
+
+			// wraps tab LI
+			// Overwrite core styles
+			.tabbedLabel {
+				li {
+					padding: 0;
+					background-color: transparent;
+				}
+			}
+
+			// Actual tabs
+			li {
+				font-family: $font-open-sans;
+				font-weight: 400;
+				font-style: normal;
+				list-style: none;
+
+				// Tab link
+				> a {
+					color: $md-blue;
+					background-color: #ededed;
+					transition: all 150ms ease-out;
+					transition-property: color, background-color;
+					padding: 1rem 1.5rem;
+					border-color: #eee #eee #ddd;
+					text-decoration: none;
+
+					@include hover-focus {
+						color: $lt-blue;
+						background-color: #ededed;
+						border-color: #eee #eee #ddd;
+					}
+
+					// Active tab link
+					// .js-active & {
+					// 	color: #555;
+					// 	background-color: #fff;
+					// 	border: 0.1rem solid #ddd;
+					// 	border-bottom-color: transparent;
+					// 	@include hover-focus {
+					// 		background-color: inherit;
+					// 	}
+					// }
+				}
+			}
+		}
+
+		// Wraps .tabbedLabel (which wraps tab LI)
+		// First immediate child of tab UL
+		.tabbedRow {
+			display: block;
+
+			// Actual tab
+			li {
+				margin-left: $nav-tabs-gutter-width / 2;
+				margin-right: $nav-tabs-gutter-width / 2;
+				> a {
+					margin: 0;
+				}
+			}
+
+			// First tab wrapper
+			&:first-child {
+				li {
+					margin-left: 0;
+				}
+			}
+
+			// Last tab wrapper
+			&:last-child {
+				li {
+					margin-left: 0;
+				}
+			}
+		}
+
+	}
+
+	// Row containing all tab content panes
+	.tab-content-container {
+		border: 1px solid #ddd;
+		border-width: 0 .1rem .1rem .1rem;
+		box-shadow: none;
+	}
+}
+@import 'style-2';
+

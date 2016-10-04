@@ -1,0 +1,197 @@
+/* Tabs */
+/*
+Component wrapper                    : .tabbedComponent or .tab-component
+Row containing all tabs              : .tab-row
+Individual tab wrapper (wraps LI > A): .tabbedLabel
+Individual tab wrapper wrapper       : .tabbedRow
+Active tab class                     : .js-active
+Row containing all tab content panes : .tab-content-container
+ */
+.tab-component .tab-row {
+  display: block;
+  box-shadow: none;
+}
+
+.tab-component .tab-row > ul {
+  display: block;
+}
+
+.tab-component .tab-row ul {
+  /* Begin Bootstrap .nav class */
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  /* End Bootstrap .nav class */
+  /* Begin Bootstrap .nav-tabs class */
+  border-bottom: 1px solid #ddd;
+  /* End Bootstrap .nav-tabs class */
+}
+
+.tab-component .tab-row ul::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.tab-component .tab-row ul li {
+  position: relative;
+  display: block;
+}
+
+.tab-component .tab-row ul li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+.tab-component .tab-row ul li > a:hover, .tab-component .tab-row ul li > a:focus {
+  text-decoration: none;
+  background-color: #666;
+}
+
+.tab-component .tab-row ul li {
+  float: left;
+  margin-bottom: -1px;
+}
+
+.tab-component .tab-row ul li > a {
+  margin-right: 2px;
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab-component .tab-row ul li > a:hover {
+  border-color: #666 #666 #ddd;
+}
+
+.tab-component .tab-row ul li.js-active > a, .tab-component .tab-row ul li.js-active > a:hover, .tab-component .tab-row ul li.js-active > a:focus {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+.tab-component .tab-row ul .tabbedLabel li {
+  padding: 0;
+  background-color: transparent;
+}
+
+.tab-component .tab-row ul li {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style: none;
+}
+
+.tab-component .tab-row ul li > a {
+  color: #00629B;
+  background-color: #ededed;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  padding: 10px 15px;
+  padding: 1rem 1.5rem;
+  border-color: #eee #eee #ddd;
+  text-decoration: none;
+}
+
+.tab-component .tab-row ul li > a:focus, .tab-component .tab-row ul li > a:hover {
+  color: #0077BC;
+  background-color: #ededed;
+  border-color: #eee #eee #ddd;
+}
+
+.tab-component .tab-row .tabbedRow {
+  display: block;
+}
+
+.tab-component .tab-row .tabbedRow li {
+  margin-left: 1px;
+  margin-left: 0.1rem;
+  margin-right: 1px;
+  margin-right: 0.1rem;
+}
+
+.tab-component .tab-row .tabbedRow li > a {
+  margin: 0;
+}
+
+.tab-component .tab-row .tabbedRow:first-child li {
+  margin-left: 0;
+}
+
+.tab-component .tab-row .tabbedRow:last-child li {
+  margin-left: 0;
+}
+
+.tab-component .tab-content-container {
+  border: 1px solid #ddd;
+  border-width: 0 1px 1px 1px;
+  border-width: 0 .1rem .1rem .1rem;
+  box-shadow: none;
+}
+
+.tab-style-2 {
+  /* Just for testing	 */
+  margin-top: 100px;
+}
+
+.tab-style-2 .tab-component .tab-row {
+  display: block;
+  box-shadow: none;
+}
+
+.tab-style-2 .tab-component .tab-row > ul {
+  display: table;
+}
+
+.tab-style-2 .tab-component .tab-row ul {
+  border-bottom: none;
+}
+
+.tab-style-2 .tab-component .tab-row ul li {
+  margin-bottom: 0;
+}
+
+.tab-style-2 .tab-component .tab-row ul li > a {
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+  color: #0077BC;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  font-size: 1.7rem;
+  width: auto;
+}
+
+.tab-style-2 .tab-component .tab-row ul li > a:focus, .tab-style-2 .tab-component .tab-row ul li > a:hover {
+  color: #00629B;
+}
+
+.tab-style-2 .tab-component .tab-row ul li.js-active a,
+.tab-style-2 .tab-component .tab-row ul li.js-active a:hover,
+.tab-style-2 .tab-component .tab-row ul li.js-active a:focus {
+  color: #fff;
+  background-color: #0077BC;
+  border: 0;
+}
+
+.tab-style-2 .tab-component .tab-row .tabbedRow {
+  display: table-cell;
+}
+
+.tab-style-2 .tab-component .tab-row .tabbedRow li {
+  margin: 0;
+}
+
+.tab-style-2 .tab-component .tab-content-container {
+  border: none;
+  box-shadow: none;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=new.css.map */
