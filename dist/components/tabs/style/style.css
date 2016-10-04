@@ -144,10 +144,6 @@ Row containing all tab content panes : .tab-content-container
   box-shadow: none;
 }
 
-.tab-style-2 .tab-component .tab-row > ul {
-  display: table;
-}
-
 .tab-style-2 .tab-component .tab-row ul {
   border-bottom: none;
 }
@@ -178,10 +174,6 @@ Row containing all tab content panes : .tab-content-container
   color: #fff;
   background-color: #0077BC;
   border: 0;
-}
-
-.tab-style-2 .tab-component .tab-row .tabbedRow {
-  display: table-cell;
 }
 
 .tab-style-2 .tab-component .tab-row .tabbedRow li {
@@ -282,4 +274,4 @@ Row containing all tab content panes : .tab-content-container
   background-color: #fff;
 }
 
-/*# sourceMappingURL=new.css.map */
+/*# sourceMappingURL=style.css.map */

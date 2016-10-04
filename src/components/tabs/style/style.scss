@@ -34,6 +34,9 @@ $nav-tabs-justified-link-border-color: #ddd;
 $nav-tabs-justified-active-link-border-color: red;
 $nav-tabs-gutter-width: 0.2rem;
 
+$nav-tabs-enable-justify: false;
+$nav-tabs-2-enable-justify: false;
+$nav-tabs-3-enable-justify: false;
 // From Bootstrap .nav
 @mixin bs-nav {
 	margin-bottom: 0;
@@ -146,112 +149,7 @@ $nav-tabs-gutter-width: 0.2rem;
 	// }
 }
 
-// Component wrapper
-.tab-component {
-	// Row containing tabs
-	.tab-row {
-		display: block;
-		box-shadow: none;
-
-		// nav tabs list
-		> ul {
-			display: block;
-		}
-
-
-		// nav tabs list
-		ul {
-			// Extend bootstrap classes
-			/* Begin Bootstrap .nav class */
-			@include bs-nav;
-			/* End Bootstrap .nav class */
-			/* Begin Bootstrap .nav-tabs class */
-			@include bs-nav-tabs;
-			/* End Bootstrap .nav-tabs class */
-
-			// wraps tab LI
-			// Overwrite core styles
-			.tabbedLabel {
-				li {
-					padding: 0;
-					background-color: transparent;
-				}
-			}
-
-			// Actual tabs
-			li {
-				font-family: $font-open-sans;
-				font-weight: 400;
-				font-style: normal;
-				list-style: none;
-
-				// Tab link
-				> a {
-					color: $md-blue;
-					background-color: #ededed;
-					transition: all 150ms ease-out;
-					transition-property: color, background-color;
-					padding: 1rem 1.5rem;
-					border-color: #eee #eee #ddd;
-					text-decoration: none;
-
-					@include hover-focus {
-						color: $lt-blue;
-						background-color: #ededed;
-						border-color: #eee #eee #ddd;
-					}
-
-					// Active tab link
-					// .js-active & {
-					// 	color: #555;
-					// 	background-color: #fff;
-					// 	border: 0.1rem solid #ddd;
-					// 	border-bottom-color: transparent;
-					// 	@include hover-focus {
-					// 		background-color: inherit;
-					// 	}
-					// }
-				}
-			}
-		}
-
-		// Wraps .tabbedLabel (which wraps tab LI)
-		// First immediate child of tab UL
-		.tabbedRow {
-			display: block;
-
-			// Actual tab
-			li {
-				margin-left: $nav-tabs-gutter-width / 2;
-				margin-right: $nav-tabs-gutter-width / 2;
-				> a {
-					margin: 0;
-				}
-			}
-
-			// First tab wrapper
-			&:first-child {
-				li {
-					margin-left: 0;
-				}
-			}
-
-			// Last tab wrapper
-			&:last-child {
-				li {
-					margin-left: 0;
-				}
-			}
-		}
-
-	}
-
-	// Row containing all tab content panes
-	.tab-content-container {
-		border: 1px solid #ddd;
-		border-width: 0 .1rem .1rem .1rem;
-		box-shadow: none;
-	}
-}
+@import 'style-default';
 @import 'style-2';
+@import 'style-3';
 

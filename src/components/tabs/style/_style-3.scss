@@ -1,6 +1,6 @@
 @import 'initialize';
 
-.tab-style-2 {
+.tab-style-3 {
 	/* Just for testing	 */
 	margin-top: 100px;
 	// Component wrapper
@@ -12,9 +12,7 @@
 
 			// nav tabs list
 			> ul {
-				@if $nav-tabs-2-enable-justify == true {
-					display: table-row;
-				}
+				display: table;
 			}
 
 
@@ -41,10 +39,14 @@
 
 					// Tab link
 					> a {
-						background-color: #fff;
+						color: $lt-blue;
+						display: inline-block;
+						margin-top: .5rem;
+						padding: 2.5rem 1.25rem;
+
+						background-color: transparent;
 						border: 0;
 						border-radius: 0;
-						color: $lt-blue;
 						font-family:  $font-open-sans;
 						font-weight: 700;
 						font-size: 1.7rem;
@@ -54,7 +56,6 @@
 
 						@include hover-focus {
 							color: $md-blue;
-
 						}
 
 
@@ -64,31 +65,41 @@
 						a,
 						a:hover,
 						a:focus {
-							color: #fff;
-							background-color: $lt-blue;
-							border: 0;
+							border: 1px solid #FFF;
+							border-bottom: none;
+							box-shadow: 0 0 .5rem 0 #000000;
+							border-radius: .5rem .5rem 0 0;
+							background: #fff;
+							color: #00aeff;
+							padding: 2rem 1.2rem 3rem 1.2rem ;
+							margin-top: 1rem;
 						}
 					}
 				}
-			}
-
-			// Prev/Next Arrows
-			> li {
-				@if $nav-tabs-2-enable-justify == true {
+				// Prev/Next Arrows
+				> li {
 					display: table-cell;
+
+					&:first-child {
+						margin-left: 0;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
 				}
 			}
 
 			// Wraps .tabbedLabel (which wraps tab LI)
 			// First immediate child of tab UL
 			.tabbedRow {
-				@if $nav-tabs-2-enable-justify == true {
-					display: table-cell;
-				}
+				display: table-cell;
 
 				// Actual tab
 				li {
 					margin: 0;
+					margin-left: 2rem;
+					margin-right: 2rem;
+
 					> a {
 					}
 				}
