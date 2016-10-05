@@ -141,7 +141,12 @@ Row containing all tab content panes : .tab-content-container
 
 .tab-style-2 .tab-component .tab-row {
   display: block;
+  display: table;
   box-shadow: none;
+}
+
+.tab-style-2 .tab-component .tab-row > ul {
+  display: table-row;
 }
 
 .tab-style-2 .tab-component .tab-row ul {
@@ -150,6 +155,7 @@ Row containing all tab content panes : .tab-content-container
 
 .tab-style-2 .tab-component .tab-row ul li {
   margin-bottom: 0;
+  float: none;
 }
 
 .tab-style-2 .tab-component .tab-row ul li > a {
@@ -176,6 +182,14 @@ Row containing all tab content panes : .tab-content-container
   border: 0;
 }
 
+.tab-style-2 .tab-component .tab-row > li {
+  display: table-cell;
+}
+
+.tab-style-2 .tab-component .tab-row .tabbedRow {
+  display: table-cell;
+}
+
 .tab-style-2 .tab-component .tab-row .tabbedRow li {
   margin: 0;
 }
@@ -194,10 +208,12 @@ Row containing all tab content panes : .tab-content-container
 .tab-style-3 .tab-component .tab-row {
   display: block;
   box-shadow: none;
+  overflow: hidden;
+  display: table;
 }
 
 .tab-style-3 .tab-component .tab-row > ul {
-  display: table;
+  display: table-row;
 }
 
 .tab-style-3 .tab-component .tab-row ul {
@@ -206,6 +222,7 @@ Row containing all tab content panes : .tab-content-container
 
 .tab-style-3 .tab-component .tab-row ul li {
   margin-bottom: 0;
+  float: none;
 }
 
 .tab-style-3 .tab-component .tab-row ul li > a {
@@ -213,11 +230,12 @@ Row containing all tab content panes : .tab-content-container
   display: inline-block;
   margin-top: 5px;
   margin-top: .5rem;
+  margin-bottom: -1px;
+  margin-bottom: -.1rem;
   padding: 25px 12.5px;
   padding: 2.5rem 1.25rem;
   background-color: transparent;
-  border: 0;
-  border-radius: 0;
+  border: 1px solid transparent;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -238,8 +256,6 @@ Row containing all tab content panes : .tab-content-container
   border-radius: .5rem .5rem 0 0;
   background: #fff;
   color: #00aeff;
-  padding: 20px 12px 30px 12px;
-  padding: 2rem 1.2rem 3rem 1.2rem;
   margin-top: 10px;
   margin-top: 1rem;
 }
@@ -272,6 +288,117 @@ Row containing all tab content panes : .tab-content-container
   border: none;
   box-shadow: none;
   background-color: #fff;
+}
+
+.tab-style-4 {
+  /* Just for testing	 */
+  margin-top: 100px;
+  background-color: #003057;
+}
+
+.tab-style-4 .tab-component::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.tab-style-4 .tab-component .tab-row {
+  display: block;
+  box-shadow: none;
+  overflow: initial;
+  float: left;
+  width: 33.33333%;
+}
+
+.tab-style-4 .tab-component .tab-row ul {
+  border-bottom: none;
+}
+
+.tab-style-4 .tab-component .tab-row ul li {
+  margin-bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.tab-style-4 .tab-component .tab-row ul li > a {
+  color: #fff;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 21px 10px 21px 25px;
+  padding: 2.1rem 1rem 2.1rem 2.5rem;
+  background-color: transparent;
+  border: none;
+  border-left-width: 7px;
+  border-left-width: .7rem;
+  border-left-style: solid;
+  border-left-color: transparent;
+  border-radius: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  font-size: 2.2rem;
+  width: 100%;
+  text-decoration: underline;
+}
+
+.tab-style-4 .tab-component .tab-row ul li > a:focus, .tab-style-4 .tab-component .tab-row ul li > a:hover {
+  color: #00629B;
+}
+
+.tab-style-4 .tab-component .tab-row ul li.js-active a,
+.tab-style-4 .tab-component .tab-row ul li.js-active a:hover,
+.tab-style-4 .tab-component .tab-row ul li.js-active a:focus {
+  background-color: #0077BC;
+  border: none;
+  border-left-style: solid;
+  border-left-width: 7px;
+  border-left-width: .7rem;
+  border-left-color: #FAA41A;
+  box-shadow: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tab-style-4 .tab-component .tab-row ul li.js-active a::after,
+.tab-style-4 .tab-component .tab-row ul li.js-active a:hover::after,
+.tab-style-4 .tab-component .tab-row ul li.js-active a:focus::after {
+  border-bottom: 32px solid transparent;
+  border-bottom: 3.2rem solid transparent;
+  border-left: 25px solid #0077BC;
+  border-left: 2.5rem solid #0077BC;
+  border-top: 32px solid transparent;
+  border-top: 3.2rem solid transparent;
+  content: '';
+  height: 0;
+  position: absolute;
+  right: -25px;
+  right: -2.5rem;
+  top: 0;
+  width: 0;
+  z-index: 10;
+}
+
+.tab-style-4 .tab-component .tab-row .tabbedRow li {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tab-style-4 .tab-component .tab-content-container {
+  border-radius: 0;
+  background-color: #f2f2f2;
+  border: none;
+  box-shadow: none;
+  float: left;
+  width: 66.66667%;
+  padding-top: 5px;
+  padding-top: .5rem;
+  padding-left: 40px;
+  padding-left: 4rem;
+  padding-right: 40px;
+  padding-right: 4rem;
+  padding-bottom: 25px;
+  padding-bottom: 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

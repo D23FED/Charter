@@ -35,8 +35,8 @@ $nav-tabs-justified-active-link-border-color: red;
 $nav-tabs-gutter-width: 0.2rem;
 
 $nav-tabs-enable-justify: false;
-$nav-tabs-2-enable-justify: false;
-$nav-tabs-3-enable-justify: false;
+$nav-tabs-2-enable-justify: true;
+$nav-tabs-3-enable-justify: true;
 // From Bootstrap .nav
 @mixin bs-nav {
 	margin-bottom: 0;
@@ -152,4 +152,5 @@ $nav-tabs-3-enable-justify: false;
 @import 'style-default';
 @import 'style-2';
 @import 'style-3';
+@import 'style-4';
 

@@ -8,6 +8,9 @@
 		// Row containing tabs
 		.tab-row {
 			display: block;
+			@if $nav-tabs-2-enable-justify == true {
+				display: table;
+			}
 			box-shadow: none;
 
 			// nav tabs list
@@ -38,6 +41,9 @@
 				// Actual tabs
 				li {
 					margin-bottom: 0;
+					@if $nav-tabs-2-enable-justify == true {
+						float: none;
+					}
 
 					// Tab link
 					> a {

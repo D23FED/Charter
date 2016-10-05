@@ -9,10 +9,16 @@
 		.tab-row {
 			display: block;
 			box-shadow: none;
+			overflow: hidden;
+			@if $nav-tabs-3-enable-justify == true {
+				display: table;
+			}
 
 			// nav tabs list
 			> ul {
-				display: table;
+				@if $nav-tabs-3-enable-justify == true {
+					display: table-row;
+				}
 			}
 
 
@@ -36,17 +42,19 @@
 				// Actual tabs
 				li {
 					margin-bottom: 0;
-
+					@if $nav-tabs-3-enable-justify == true {
+						float: none;
+					}
 					// Tab link
 					> a {
 						color: $lt-blue;
 						display: inline-block;
 						margin-top: .5rem;
+						margin-bottom: -.1rem;
 						padding: 2.5rem 1.25rem;
 
 						background-color: transparent;
-						border: 0;
-						border-radius: 0;
+						border: 1px solid transparent;
 						font-family:  $font-open-sans;
 						font-weight: 700;
 						font-size: 1.7rem;
@@ -71,15 +79,16 @@
 							border-radius: .5rem .5rem 0 0;
 							background: #fff;
 							color: #00aeff;
-							padding: 2rem 1.2rem 3rem 1.2rem ;
+							// padding: 2rem 1.2rem 3rem 1.2rem ;
 							margin-top: 1rem;
 						}
 					}
 				}
 				// Prev/Next Arrows
 				> li {
-					display: table-cell;
-
+					@if $nav-tabs-3-enable-justify == true {
+						display: table-cell;
+					}
 					&:first-child {
 						margin-left: 0;
 					}
@@ -92,8 +101,9 @@
 			// Wraps .tabbedLabel (which wraps tab LI)
 			// First immediate child of tab UL
 			.tabbedRow {
-				display: table-cell;
-
+				@if $nav-tabs-3-enable-justify == true {
+					display: table-cell;
+				}
 				// Actual tab
 				li {
 					margin: 0;
