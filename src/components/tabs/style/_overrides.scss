@@ -1,0 +1,64 @@
+/* Rules strictly to override core CSS */
+.tab-component {
+	// Row containing tabs
+	.tab-row {
+		display: block;
+		box-shadow: none;
+		border-radius: 0;
+
+		// nav tabs list
+		> ul {
+			display: block;
+		}
+
+		// nav tabs list
+		ul.nav-tabs {
+			.tabbedLabel {
+				li {
+					padding: 0;
+					background-color: transparent;
+				}
+			}
+
+			// Actual tabs
+			li {
+				// Tab link
+				> a {
+					@include hover-focus {}
+				}
+
+				// Active Tab Link
+				&.js-active > a {
+					&,
+					&:hover,
+					&:focus {}
+				}
+			}
+		}
+
+		// Wraps .tabbedLabel (which wraps tab LI), First immediate child of tab UL
+		.tabbedRow {
+			display: block;
+
+			// Actual tab
+			li {
+				> a {}
+			}
+
+			// First tab wrapper
+			&:first-child {
+				li {}
+			}
+
+			// Last tab wrapper
+			&:last-child {
+				li {}
+			}
+		}
+	}
+
+	// Row containing all tab content panes
+	.tab-content-container {
+		box-shadow: none;
+	}
+}

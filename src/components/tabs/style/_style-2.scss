@@ -14,7 +14,7 @@
 			box-shadow: none;
 
 			// nav tabs list
-			> ul {
+			> ul.nav-tabs {
 				@if $nav-tabs-2-enable-justify == true {
 					display: table-row;
 				}
