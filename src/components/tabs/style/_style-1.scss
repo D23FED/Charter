@@ -8,7 +8,6 @@
 
 			// nav tabs list
 			ul.nav-tabs {
-
 				// Tabs
 				li {
 					margin-left: $nav-tabs-gutter-width / 2;
@@ -39,6 +38,7 @@
 							border-color: #eee #eee #ddd;
 						}
 					}
+
 					// Active tab link
 					&.js-active {
 						a,
@@ -50,14 +50,11 @@
 							border-bottom-color: transparent;
 						}
 					}
-
 				}
 			}
 		}
-/*
 
-		 */
-		 // Row containing all tab content panes
+		// Row containing all tab content panes
 		.tab-content-container {
 			border: 1px solid #ddd;
 			border-width: 0 .1rem .1rem .1rem;

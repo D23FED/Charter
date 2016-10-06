@@ -1,9 +1,9 @@
 @import 'initialize';
 
-// Width of arrow that gets appended to right side of vertical tabs
-$arrow-width: 2.5rem;
+// Width of triangle that gets appended to right side of vertical tabs
+$triangle-width: 2.5rem;
 // Padding for tab content pane
-$content-horiz-padding: $arrow-width + 1.5rem;
+$content-horiz-padding: $triangle-width + 1.5rem;
 .tab-style-4 {
 	/* Just for testing	 */
 	margin-top: 100px;
@@ -15,36 +15,22 @@ $content-horiz-padding: $arrow-width + 1.5rem;
 
 		// Row containing tabs
 		.tab-row {
-			display: block;
-			box-shadow: none;
 			overflow: initial;
 			float: left;
 			width: percentage(1 / 3);
 
-			// nav tabs list
-			> ul {
-
-			}
 
 			// nav tabs list
-			ul {
+			ul.nav-tabs {
 				border-bottom: none;
-
-				// wraps tab LI
-				// Overwrite core styles
-				.tabbedLabel {
-					li {}
-				}
-
-				// Overwrite core styles
-				.tabbedLabel li {}
 
 				// Actual tabs
 				li {
 					margin-bottom: 0;
 					width: 100%;
 					text-align: left;
-
+					margin-left: 0;
+					margin-right: 0;
 
 					// Tab link
 					> a {
@@ -52,14 +38,13 @@ $content-horiz-padding: $arrow-width + 1.5rem;
 						display: inline-block;
 						margin-top: 0;
 						margin-bottom: 0;
-						padding: 2.1rem 1.0rem 2.1rem $arrow-width;
+						padding: 2.1rem 1.0rem 2.1rem $triangle-width;
 						background-color: transparent;
 						border: none;
 						border-left-width: .7rem;
 						border-left-style: solid;
 						border-left-color: transparent;
 						border-radius: 0;
-						font-family: $font-open-sans;
 						font-weight: 700;
 						font-size: 2.2rem;
 						width: 100%;
@@ -84,15 +69,15 @@ $content-horiz-padding: $arrow-width + 1.5rem;
 							color: #fff;
 							text-decoration: none;
 
-
+							// CSS Triangle
 							&::after {
 								border-bottom: 3.2rem solid transparent;
-								border-left: $arrow-width solid $lt-blue;
+								border-left: $triangle-width solid $lt-blue;
 								border-top: 3.2rem solid transparent;
 								content: '';
 								height: 0;
 								position: absolute;
-								right: -$arrow-width;
+								right: -$triangle-width;
 								top: 0;
 								width: 0;
 								z-index: 10;
@@ -101,12 +86,6 @@ $content-horiz-padding: $arrow-width + 1.5rem;
 					}
 				}
 
-				// Prev/Next Arrows
-				> li {
-					&:first-child {}
-
-					&:last-child {}
-				}
 			}
 
 			// Wraps .tabbedLabel (which wraps tab LI)
@@ -114,9 +93,7 @@ $content-horiz-padding: $arrow-width + 1.5rem;
 			.tabbedRow {
 				// Actual tab
 				li {
-					margin-left: 0;
-					margin-right: 0;
-					> a {}
+
 				}
 
 				// First tab wrapper
@@ -136,7 +113,6 @@ $content-horiz-padding: $arrow-width + 1.5rem;
 		.tab-content-container {
 			border-radius: 0;
 			background-color: #f2f2f2;
-			border: none;
 			box-shadow: none;
 			float: left;
 			width: percentage(2 / 3);

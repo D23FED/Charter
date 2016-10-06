@@ -23,6 +23,7 @@
 				// Actual tabs
 				li {
 					margin-bottom: 0;
+					margin: 0;
 
 					@if $nav-tabs-2-enable-justify == true {
 						float: none;
@@ -51,34 +52,25 @@
 							border: 0;
 						}
 					}
+
+					// Prev/Next Arrows
+					&.arrow {
+						@if $nav-tabs-2-enable-justify == true {
+							display: table-cell;
+						}
+					}
 				}
 			}
 
-			// Prev/Next Arrows
-			> li {
-				@if $nav-tabs-2-enable-justify == true {
-					display: table-cell;
-				}
-			}
-
-			// Wraps .tabbedLabel (which wraps tab LI)
-			// First immediate child of tab UL
+			// Wraps .tabbedLabel (which wraps tab LI), First immediate child of tab UL
 			.tabbedRow {
 				@if $nav-tabs-2-enable-justify == true {
 					display: table-cell;
-				}
-
-				// Actual tab
-				li {
-					margin: 0;
 				}
 			}
 		}
 
 		// Row containing all tab content panes
-		.tab-content-container {
-			border: none;
-			background-color: #fff;
-		}
+		.tab-content-container {}
 	}
 }

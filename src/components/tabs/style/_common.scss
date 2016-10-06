@@ -57,9 +57,6 @@
 
 			// Actual tab
 			li {
-				margin-left: $nav-tabs-gutter-width / 2;
-				margin-right: $nav-tabs-gutter-width / 2;
-
 				> a {
 					margin: 0;
 				}
@@ -84,5 +81,7 @@
 	// Row containing all tab content panes
 	.tab-content-container {
 		border-radius: 0;
+		background-color: #fff;
+		border: none;
 	}
 }
