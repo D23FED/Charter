@@ -1,14 +1,13 @@
+/* Tabbed Component v1 | Oct 2016 */
 @import 'initialize';
 
-/* Tabs */
-/*
-Component wrapper                    : .tabbedComponent or .tab-component
-Row containing all tabs              : .tab-row
-Individual tab wrapper (wraps LI > A): .tabbedLabel
-Individual tab wrapper wrapper       : .tabbedRow
-Active tab class                     : .js-active
-Row containing all tab content panes : .tab-content-container
- */
+// Component wrapper                    : .tabbedComponent or .tab-component
+// Row containing all tabs              : .tab-row
+// Individual tab wrapper (wraps LI > A): .tabbedLabel
+// Individual tab wrapper wrapper       : .tabbedRow
+// Active tab class                     : .js-active
+// Row containing all tab content panes : .tab-content-container
+// Tab content pane when side accordion is on mobile: .tabbedContent
 
 $border-radius-base: 4px;
 $line-height-base: 1;

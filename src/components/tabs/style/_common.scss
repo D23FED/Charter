@@ -1,3 +1,4 @@
+/* Common Tab styles */
 // Component wrapper
 .tab-component {
 	// Row containing tabs
@@ -25,7 +26,7 @@
 					background-color: #fff;
 					display: block;
 					padding: $nav-link-padding;
-					margin-right: 2px;
+					margin-right: 0;
 					line-height: $line-height-base;
 					color: $md-blue;
 					text-decoration: none;
@@ -46,6 +47,17 @@
 						background-color: $nav-tabs-active-link-hover-bg;
 						cursor: default;
 					}
+				}
+
+				&.arrow {
+					&:first-of-type {
+						text-align: left;
+					}
+					&:last-of-type {
+						text-align: right;
+					}
+
+
 				}
 			}
 		}

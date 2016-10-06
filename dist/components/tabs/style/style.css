@@ -1,12 +1,4 @@
-/* Tabs */
-/*
-Component wrapper                    : .tabbedComponent or .tab-component
-Row containing all tabs              : .tab-row
-Individual tab wrapper (wraps LI > A): .tabbedLabel
-Individual tab wrapper wrapper       : .tabbedRow
-Active tab class                     : .js-active
-Row containing all tab content panes : .tab-content-container
- */
+/* Tabbed Component v1 | Oct 2016 */
 /* Rules strictly to override core CSS */
 .tab-component .tab-row {
   display: block;
@@ -27,6 +19,7 @@ Row containing all tab content panes : .tab-content-container
   box-shadow: none;
 }
 
+/* Common Tab styles */
 .tab-component .tab-row ul.nav-tabs::after {
   content: '';
   display: table;
@@ -51,7 +44,7 @@ Row containing all tab content panes : .tab-content-container
   display: block;
   padding: 10px 15px;
   padding: 1rem 1.5rem;
-  margin-right: 2px;
+  margin-right: 0;
   line-height: 1;
   color: #00629B;
   text-decoration: none;
@@ -69,6 +62,14 @@ Row containing all tab content panes : .tab-content-container
   color: #333;
   background-color: #fff;
   cursor: default;
+}
+
+.tab-component .tab-row ul.nav-tabs li.arrow:first-of-type {
+  text-align: left;
+}
+
+.tab-component .tab-row ul.nav-tabs li.arrow:last-of-type {
+  text-align: right;
 }
 
 .tab-component .tab-row .tabbedRow {
@@ -93,6 +94,7 @@ Row containing all tab content panes : .tab-content-container
   border: none;
 }
 
+/* Tab Style: Default */
 .tab-style-1 .tab-component .tab-row {
   display: block;
   box-shadow: none;
@@ -155,6 +157,7 @@ Row containing all tab content panes : .tab-content-container
   background: linear-gradient(to bottom, #ffffff 0%, #ffffff 60%, #eef1f3 100%);
 }
 
+/* Tab Style: Justified */
 .tab-style-2 {
   /* Just for testing	 */
   margin-top: 100px;
@@ -282,45 +285,89 @@ Row containing all tab content panes : .tab-content-container
   }
 }
 
+/* Tab Style: Promo */
 .tab-style-3 {
   /* Just for testing	 */
   margin-top: 100px;
+  background-color: #003057;
 }
 
 .tab-style-3 .tab-component .tab-row {
   overflow: hidden;
-  display: table;
+  /* Just for testing	 */
+  padding: 20px 0;
+  padding: 2rem 0;
+}
+
+@media (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row {
+    padding: 0;
+  }
+}
+
+@media (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row {
+    display: table;
+  }
 }
 
 .tab-style-3 .tab-component .tab-row ul.nav-tabs {
   border-bottom: none;
-  display: table-row;
+}
+
+@media (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row ul.nav-tabs {
+    display: table-row;
+  }
 }
 
 .tab-style-3 .tab-component .tab-row ul.nav-tabs li {
-  margin-bottom: 0;
   font-size: 17px;
   font-size: 1.7rem;
   margin: 0;
-  margin-left: 20px;
-  margin-left: 2rem;
-  margin-right: 20px;
-  margin-right: 2rem;
-  float: none;
+  margin-left: 8px;
+  margin-left: .8rem;
+  margin-right: 8px;
+  margin-right: .8rem;
+  margin-bottom: 5px;
+  margin-bottom: .5rem;
+}
+
+@media (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row ul.nav-tabs li {
+    margin-left: 20px;
+    margin-left: 2rem;
+    margin-right: 20px;
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row ul.nav-tabs li {
+    float: none;
+  }
 }
 
 .tab-style-3 .tab-component .tab-row ul.nav-tabs li > a {
+  color: #fff;
   font-weight: 700;
   border: 1px solid transparent;
-  color: #0077BC;
   display: inline-block;
-  margin-top: 5px;
-  margin-top: .5rem;
-  margin-bottom: -1px;
-  margin-bottom: -.1rem;
-  padding: 25px 12.5px;
-  padding: 2.5rem 1.25rem;
   background-color: transparent;
+  padding: 15px;
+  padding: 1.5rem;
+}
+
+@media (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row ul.nav-tabs li > a {
+    margin-top: 5px;
+    margin-top: .5rem;
+    margin-bottom: -1px;
+    margin-bottom: -.1rem;
+    padding: 25px 12.5px;
+    padding: 2.5rem 1.25rem;
+  }
 }
 
 .tab-style-3 .tab-component .tab-row ul.nav-tabs li > a:focus, .tab-style-3 .tab-component .tab-row ul.nav-tabs li > a:hover {
@@ -333,15 +380,35 @@ Row containing all tab content panes : .tab-content-container
   border: 1px solid #FFF;
   border-bottom: none;
   box-shadow: 0 0 .5rem 0 #000000;
-  border-radius: .5rem .5rem 0 0;
   background: #fff;
   color: #0077BC;
-  margin-top: 10px;
-  margin-top: 1rem;
+  border-radius: .5rem;
+}
+
+@media (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row ul.nav-tabs li.js-active a,
+  .tab-style-3 .tab-component .tab-row ul.nav-tabs li.js-active a:hover,
+  .tab-style-3 .tab-component .tab-row ul.nav-tabs li.js-active a:focus {
+    margin-top: 10px;
+    margin-top: 1rem;
+    border-radius: .5rem .5rem 0 0;
+  }
 }
 
 .tab-style-3 .tab-component .tab-row ul.nav-tabs li.arrow {
-  display: table-cell;
+  display: none;
+}
+
+@media (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row ul.nav-tabs li.arrow {
+    display: block;
+  }
+}
+
+@media (min-width: 75em) and (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row ul.nav-tabs li.arrow {
+    display: table-cell;
+  }
 }
 
 .tab-style-3 .tab-component .tab-row ul.nav-tabs li.arrow:first-child {
@@ -352,10 +419,19 @@ Row containing all tab content panes : .tab-content-container
   margin-right: 0;
 }
 
-.tab-style-3 .tab-component .tab-row .tabbedRow {
-  display: table-cell;
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li.arrow a {
+  background-color: #fff;
+  color: #0077BC;
+  border-radius: none;
 }
 
+@media (min-width: 75em) {
+  .tab-style-3 .tab-component .tab-row .tabbedRow {
+    display: table-cell;
+  }
+}
+
+/* Tab Style: Side */
 .tab-style-4 {
   /* Just for testing	 */
   margin-top: 100px;
@@ -370,8 +446,13 @@ Row containing all tab content panes : .tab-content-container
 
 .tab-style-4 .tab-component .tab-row {
   overflow: initial;
-  float: left;
-  width: 33.33333%;
+}
+
+@media (min-width: 62em) {
+  .tab-style-4 .tab-component .tab-row {
+    float: left;
+    width: 33.33333%;
+  }
 }
 
 .tab-style-4 .tab-component .tab-row ul.nav-tabs {
@@ -384,6 +465,7 @@ Row containing all tab content panes : .tab-content-container
   text-align: left;
   margin-left: 0;
   margin-right: 0;
+  z-index: 20;
 }
 
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li > a {
@@ -393,7 +475,6 @@ Row containing all tab content panes : .tab-content-container
   margin-bottom: 0;
   padding: 21px 10px 21px 25px;
   padding: 2.1rem 1rem 2.1rem 2.5rem;
-  background-color: transparent;
   border: none;
   border-left-width: 7px;
   border-left-width: .7rem;
@@ -404,7 +485,14 @@ Row containing all tab content panes : .tab-content-container
   font-size: 22px;
   font-size: 2.2rem;
   width: 100%;
-  text-decoration: underline;
+  background-color: #0077BC;
+}
+
+@media (min-width: 62em) {
+  .tab-style-4 .tab-component .tab-row ul.nav-tabs li > a {
+    background-color: transparent;
+    text-decoration: underline;
+  }
 }
 
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li > a:focus, .tab-style-4 .tab-component .tab-row ul.nav-tabs li > a:hover {
@@ -414,7 +502,6 @@ Row containing all tab content panes : .tab-content-container
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a,
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:hover,
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:focus {
-  background-color: #0077BC;
   border: none;
   border-left-style: solid;
   border-left-width: 7px;
@@ -423,41 +510,91 @@ Row containing all tab content panes : .tab-content-container
   box-shadow: none;
   color: #fff;
   text-decoration: none;
+  background-color: #00629B;
 }
 
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a::after,
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:hover::after,
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:focus::after {
-  border-bottom: 32px solid transparent;
-  border-bottom: 3.2rem solid transparent;
-  border-left: 25px solid #0077BC;
-  border-left: 2.5rem solid #0077BC;
-  border-top: 32px solid transparent;
-  border-top: 3.2rem solid transparent;
   content: '';
-  height: 0;
-  position: absolute;
-  right: -25px;
-  right: -2.5rem;
-  top: 0;
-  width: 0;
   z-index: 10;
+  position: absolute;
+  top: auto;
+  right: 72px;
+  right: 7.2rem;
+  bottom: -29px;
+  bottom: -2.9rem;
 }
 
-.tab-style-4 .tab-component .tab-content-container {
+@media (min-width: 62em) {
+  .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a::after,
+  .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:hover::after,
+  .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:focus::after {
+    border-top-width: 32px;
+    border-top-width: 3.2rem;
+    border-bottom-width: 32px;
+    border-bottom-width: 3.2rem;
+    border-left-width: 25px;
+    border-left-width: 2.5rem;
+    border-right-width: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #0077BC;
+    border-right-color: transparent;
+    border-style: solid;
+    height: 0;
+    width: 0;
+    top: 0;
+    right: -25px;
+    right: -2.5rem;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.tab-style-4 .tab-component .tab-content-container,
+.tab-style-4 .tab-component .tabbedContent {
   border-radius: 0;
   background-color: #f2f2f2;
   box-shadow: none;
   float: left;
-  width: 66.66667%;
-  padding-top: 5px;
-  padding-top: .5rem;
-  padding-left: 40px;
-  padding-left: 4rem;
-  padding-right: 40px;
-  padding-right: 4rem;
-  padding-bottom: 25px;
-  padding-bottom: 2.5rem;
+  width: 100%;
+  padding: 20px;
+  padding: 2rem;
+}
+
+@media (min-width: 48em) {
+  .tab-style-4 .tab-component .tab-content-container,
+  .tab-style-4 .tab-component .tabbedContent {
+    padding: 10px 40px 40px 40px;
+    padding: 1rem 4rem 4rem 4rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .tab-style-4 .tab-component .tab-content-container,
+  .tab-style-4 .tab-component .tabbedContent {
+    padding-top: 5px;
+    padding-top: .5rem;
+    padding-left: 40px;
+    padding-left: 4rem;
+    padding-right: 40px;
+    padding-right: 4rem;
+    padding-bottom: 25px;
+    padding-bottom: 2.5rem;
+    float: left;
+    width: 66.66667%;
+  }
+}
+
+.tab-style-4 .tab-component .tab-content-container {
+  display: none;
+}
+
+@media (min-width: 62em) {
+  .tab-style-4 .tab-component .tab-content-container {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

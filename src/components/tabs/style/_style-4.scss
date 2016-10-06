@@ -1,9 +1,40 @@
-@import 'initialize';
+/* Tab Style: Side */
 
-// Width of triangle that gets appended to right side of vertical tabs
-$triangle-width: 2.5rem;
+// Width of triangles that get appended to tabs
+$triangle-down-width: 5.8rem;
+$triangle-right-width: 2.5rem;
+
 // Padding for tab content pane
-$content-horiz-padding: $triangle-width + 1.5rem;
+$content-horiz-padding: $triangle-right-width + 1.5rem;
+
+@mixin triangle-down {
+	border-top-width: $triangle-down-width / 2;
+	border-bottom-width: 0;
+	border-left-width: 3rem;
+	border-right-width: 3rem;
+	border-top-color: $md-blue;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-style: solid;
+	border-bottom-style: none;
+	width: $triangle-down-width;
+}
+
+@mixin triangle-right {
+	border-top-width: 3.2rem;
+	border-bottom-width: 3.2rem;
+	border-left-width: $triangle-right-width;
+	border-right-width: 0;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: $lt-blue;
+	border-right-color: transparent;
+	border-style: solid;
+	height: 0;
+	width: 0;
+}
+
 .tab-style-4 {
 	/* Just for testing	 */
 	margin-top: 100px;
@@ -16,8 +47,11 @@ $content-horiz-padding: $triangle-width + 1.5rem;
 		// Row containing tabs
 		.tab-row {
 			overflow: initial;
-			float: left;
-			width: percentage(1 / 3);
+
+			@include breakpoint(md) {
+				float: left;
+				width: percentage(1 / 3);
+			}
 
 
 			// nav tabs list
@@ -31,6 +65,7 @@ $content-horiz-padding: $triangle-width + 1.5rem;
 					text-align: left;
 					margin-left: 0;
 					margin-right: 0;
+					z-index: 20;
 
 					// Tab link
 					> a {
@@ -38,8 +73,7 @@ $content-horiz-padding: $triangle-width + 1.5rem;
 						display: inline-block;
 						margin-top: 0;
 						margin-bottom: 0;
-						padding: 2.1rem 1.0rem 2.1rem $triangle-width;
-						background-color: transparent;
+						padding: 2.1rem 1rem 2.1rem $triangle-right-width;
 						border: none;
 						border-left-width: .7rem;
 						border-left-style: solid;
@@ -48,7 +82,13 @@ $content-horiz-padding: $triangle-width + 1.5rem;
 						font-weight: 700;
 						font-size: 2.2rem;
 						width: 100%;
-						text-decoration: underline;
+						background-color: $lt-blue;
+
+						@include breakpoint(md) {
+							background-color: transparent;
+							text-decoration: underline;
+						}
+
 
 						@include hover-focus {
 							color: $md-blue;
@@ -60,7 +100,6 @@ $content-horiz-padding: $triangle-width + 1.5rem;
 						a,
 						a:hover,
 						a:focus {
-							background-color: $lt-blue;
 							border: none;
 							border-left-style: solid;
 							border-left-width: .7rem;
@@ -68,58 +107,67 @@ $content-horiz-padding: $triangle-width + 1.5rem;
 							box-shadow: none;
 							color: #fff;
 							text-decoration: none;
+							background-color: $md-blue;
+
+							@include breakpoint(md) {}
+
 
 							// CSS Triangle
 							&::after {
-								border-bottom: 3.2rem solid transparent;
-								border-left: $triangle-width solid $lt-blue;
-								border-top: 3.2rem solid transparent;
 								content: '';
-								height: 0;
-								position: absolute;
-								right: -$triangle-width;
-								top: 0;
-								width: 0;
 								z-index: 10;
+								position: absolute;
+								top: auto;
+								right: 7.2rem;
+								bottom: -($triangle-down-width / 2);
+
+								@include breakpoint(md) {
+									@include triangle-right;
+
+									top: 0;
+									right: -$triangle-right-width;
+									bottom: auto;
+									left: auto;
+								}
 							}
 						}
 					}
-				}
-
-			}
-
-			// Wraps .tabbedLabel (which wraps tab LI)
-			// First immediate child of tab UL
-			.tabbedRow {
-				// Actual tab
-				li {
-
-				}
-
-				// First tab wrapper
-				&:first-child {
-					li {}
-				}
-
-				// Last tab wrapper
-				&:last-child {
-					li {}
 				}
 			}
 		}
 
 		// Row containing all tab content panes
 
-		.tab-content-container {
+		.tab-content-container,
+		.tabbedContent {
 			border-radius: 0;
 			background-color: #f2f2f2;
 			box-shadow: none;
 			float: left;
-			width: percentage(2 / 3);
-			padding-top: .5rem;
-			padding-left: $content-horiz-padding;
-			padding-right: $content-horiz-padding;
-			padding-bottom: 2.5rem;
+			width: 100%;
+			padding: 2rem;
+
+			@include breakpoint(sm) {
+				padding: 1rem 4rem 4rem 4rem;
+			}
+
+
+			@include breakpoint(md) {
+				padding-top: .5rem;
+				padding-left: $content-horiz-padding;
+				padding-right: $content-horiz-padding;
+				padding-bottom: 2.5rem;
+				float: left;
+				width: percentage(2 / 3);
+			}
+		}
+
+		.tab-content-container {
+			display: none;
+
+			@include breakpoint(md) {
+				display: block;
+			}
 		}
 	}
 }
