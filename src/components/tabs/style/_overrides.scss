@@ -6,12 +6,12 @@
 		box-shadow: none;
 		border-radius: 0;
 
-		// nav tabs list
+		// Nav tabs list
 		> ul {
 			display: block;
 		}
 
-		// nav tabs list
+		// Nav tabs list
 		ul.nav-tabs {
 			.tabbedLabel {
 				li {
@@ -20,40 +20,11 @@
 				}
 			}
 
-			// Actual tabs
-			li {
-				// Tab link
-				> a {
-					@include hover-focus {}
-				}
-
-				// Active Tab Link
-				&.js-active > a {
-					&,
-					&:hover,
-					&:focus {}
-				}
-			}
 		}
 
 		// Wraps .tabbedLabel (which wraps tab LI), First immediate child of tab UL
 		.tabbedRow {
 			display: block;
-
-			// Actual tab
-			li {
-				> a {}
-			}
-
-			// First tab wrapper
-			&:first-child {
-				li {}
-			}
-
-			// Last tab wrapper
-			&:last-child {
-				li {}
-			}
 		}
 	}
 
