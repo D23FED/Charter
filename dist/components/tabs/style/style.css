@@ -218,26 +218,30 @@ Row containing all tab content panes : .tab-content-container
 }
 
 .tab-style-3 .tab-component .tab-row {
-  display: block;
-  box-shadow: none;
   overflow: hidden;
   display: table;
 }
 
-.tab-style-3 .tab-component .tab-row > ul {
+.tab-style-3 .tab-component .tab-row ul.nav-tabs {
+  border-bottom: none;
   display: table-row;
 }
 
-.tab-style-3 .tab-component .tab-row ul {
-  border-bottom: none;
-}
-
-.tab-style-3 .tab-component .tab-row ul li {
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li {
   margin-bottom: 0;
+  font-size: 17px;
+  font-size: 1.7rem;
+  margin: 0;
+  margin-left: 20px;
+  margin-left: 2rem;
+  margin-right: 20px;
+  margin-right: 2rem;
   float: none;
 }
 
-.tab-style-3 .tab-component .tab-row ul li > a {
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li > a {
+  font-weight: 700;
+  border: 1px solid transparent;
   color: #0077BC;
   display: inline-block;
   margin-top: 5px;
@@ -247,40 +251,34 @@ Row containing all tab content panes : .tab-content-container
   padding: 25px 12.5px;
   padding: 2.5rem 1.25rem;
   background-color: transparent;
-  border: 1px solid transparent;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  font-size: 1.7rem;
-  width: auto;
 }
 
-.tab-style-3 .tab-component .tab-row ul li > a:focus, .tab-style-3 .tab-component .tab-row ul li > a:hover {
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li > a:focus, .tab-style-3 .tab-component .tab-row ul.nav-tabs li > a:hover {
   color: #00629B;
 }
 
-.tab-style-3 .tab-component .tab-row ul li.js-active a,
-.tab-style-3 .tab-component .tab-row ul li.js-active a:hover,
-.tab-style-3 .tab-component .tab-row ul li.js-active a:focus {
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li.js-active a,
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li.js-active a:hover,
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li.js-active a:focus {
   border: 1px solid #FFF;
   border-bottom: none;
   box-shadow: 0 0 .5rem 0 #000000;
   border-radius: .5rem .5rem 0 0;
   background: #fff;
-  color: #00aeff;
+  color: #0077BC;
   margin-top: 10px;
   margin-top: 1rem;
 }
 
-.tab-style-3 .tab-component .tab-row ul > li {
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li.arrow {
   display: table-cell;
 }
 
-.tab-style-3 .tab-component .tab-row ul > li:first-child {
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li.arrow:first-child {
   margin-left: 0;
 }
 
-.tab-style-3 .tab-component .tab-row ul > li:last-child {
+.tab-style-3 .tab-component .tab-row ul.nav-tabs li.arrow:last-child {
   margin-right: 0;
 }
 
@@ -288,17 +286,8 @@ Row containing all tab content panes : .tab-content-container
   display: table-cell;
 }
 
-.tab-style-3 .tab-component .tab-row .tabbedRow li {
-  margin: 0;
-  margin-left: 20px;
-  margin-left: 2rem;
-  margin-right: 20px;
-  margin-right: 2rem;
-}
-
 .tab-style-3 .tab-component .tab-content-container {
   border: none;
-  box-shadow: none;
   background-color: #fff;
 }
 

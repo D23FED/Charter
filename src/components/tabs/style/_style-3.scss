@@ -3,71 +3,53 @@
 .tab-style-3 {
 	/* Just for testing	 */
 	margin-top: 100px;
+
 	// Component wrapper
 	.tab-component {
 		// Row containing tabs
 		.tab-row {
-			display: block;
-			box-shadow: none;
 			overflow: hidden;
+
 			@if $nav-tabs-3-enable-justify == true {
 				display: table;
 			}
 
 			// nav tabs list
-			> ul {
-				@if $nav-tabs-3-enable-justify == true {
-					display: table-row;
-				}
-			}
-
-
-
-			// nav tabs list
-			ul {
+			ul.nav-tabs {
 				border-bottom: none;
 
-
-				// wraps tab LI
-				// Overwrite core styles
-				.tabbedLabel {
-					li {
-					}
-				}
-
-				// Overwrite core styles
-				.tabbedLabel li {
+				@if $nav-tabs-3-enable-justify == true {
+					display: table-row;
 				}
 
 				// Actual tabs
 				li {
 					margin-bottom: 0;
+					font-size: 1.7rem;
+					margin: 0;
+					margin-left: 2rem;
+					margin-right: 2rem;
+
 					@if $nav-tabs-3-enable-justify == true {
 						float: none;
 					}
+
 					// Tab link
 					> a {
+						font-weight: 700;
+						border: 1px solid transparent;
 						color: $lt-blue;
 						display: inline-block;
 						margin-top: .5rem;
 						margin-bottom: -.1rem;
 						padding: 2.5rem 1.25rem;
-
 						background-color: transparent;
-						border: 1px solid transparent;
-						font-family:  $font-open-sans;
-						font-weight: 700;
-						font-size: 1.7rem;
-						// margin: 0;
-						// padding: 0 1.7%;
-						width: auto;
 
 						@include hover-focus {
 							color: $md-blue;
 						}
-
-
 					}
+
 					// Active tab link
 					&.js-active {
 						a,
@@ -78,61 +60,38 @@
 							box-shadow: 0 0 .5rem 0 #000000;
 							border-radius: .5rem .5rem 0 0;
 							background: #fff;
-							color: #00aeff;
-							// padding: 2rem 1.2rem 3rem 1.2rem ;
+							color: $lt-blue;
 							margin-top: 1rem;
 						}
 					}
-				}
-				// Prev/Next Arrows
-				> li {
-					@if $nav-tabs-3-enable-justify == true {
-						display: table-cell;
-					}
-					&:first-child {
-						margin-left: 0;
-					}
-					&:last-child {
-						margin-right: 0;
+
+					&.arrow {
+						@if $nav-tabs-3-enable-justify == true {
+							display: table-cell;
+						}
+
+						&:first-child {
+							margin-left: 0;
+						}
+
+						&:last-child {
+							margin-right: 0;
+						}
 					}
 				}
 			}
 
-			// Wraps .tabbedLabel (which wraps tab LI)
-			// First immediate child of tab UL
+			// Wraps .tabbedLabel (which wraps tab LI), First immediate child of tab UL
 			.tabbedRow {
 				@if $nav-tabs-3-enable-justify == true {
 					display: table-cell;
 				}
-				// Actual tab
-				li {
-					margin: 0;
-					margin-left: 2rem;
-					margin-right: 2rem;
-
-					> a {
-					}
-				}
-
-				// First tab wrapper
-				&:first-child {
-					li {
-					}
-				}
-
-				// Last tab wrapper
-				&:last-child {
-					li {
-					}
-				}
 			}
-
 		}
 
 		// Row containing all tab content panes
 		.tab-content-container {
 			border: none;
-			box-shadow: none;
 			background-color: #fff;
 		}
 	}
