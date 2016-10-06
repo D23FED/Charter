@@ -12,6 +12,15 @@
 				li {
 					margin-left: $nav-tabs-gutter-width / 2;
 					margin-right: $nav-tabs-gutter-width / 2;
+					text-align: left;
+					width: 100%;
+
+					@include breakpoint(md) {
+						text-align: center;
+						width: auto;
+						color: #000;
+
+					}
 
 					// First tab
 					&:first-child {
@@ -58,6 +67,8 @@
 		.tab-content-container {
 			border: 1px solid #ddd;
 			border-width: 0 .1rem .1rem .1rem;
+			background: linear-gradient(to bottom, #ffffff 0%, #ffffff 60%, #eef1f3 100%);
+
 		}
 	}
 }

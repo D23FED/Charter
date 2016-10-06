@@ -85,7 +85,7 @@ Horizontal focus points
   background-position: right bottom;
 }
 
-@media (min-width: breakpoint-min("sm", (xs: 0, sm: 34em*px, md: 48em*px, lg: 62em*px, xl: 75em*px))) {
+@media (min-width: 48em) {
   .mob-image-focus-1 {
     background-position: left center;
   }
