@@ -28,10 +28,10 @@ if (file_exists($site['files']['page_vars'])) {
 	html_comment('Page-specific style');
 	stylesheet('style/style.css');
 	// JS libraries
-	script_tag($site['assets']['jquery'], 'defer');
-	script_tag($site['assets']['bootstrap_js'], 'defer');
+	script_tag($site['assets']['jquery']);
+	script_tag($site['assets']['bootstrap_js']);
 	// Global JS
-	script_tag($site['assets']['site_js'], 'defer');
+	script_tag($site['assets']['site_js']);
 	// Template block: Page-specific <HEAD>
 	if (file_exists($site['files']['page_header'])) {
 		include($site['files']['page_header']);

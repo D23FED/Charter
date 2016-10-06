@@ -1,12 +1,12 @@
 @import 'colors';
 $breakpoints: (
-	xs: 0,
-	sm: em(544px),
-	md: em(768px),
-	lg: em(992px),
-	xl: em(1200px)
+	xxs: 0,
+	xs: em(544),
+	sm: em(768),
+	md: em(992),
+	lg: em(1200)
 ) !default;
 
 $font-sans-default: "Helvetica Neue",Helvetica,Arial,sans-serif;
-$font-open-sans   : "Open Sans" + $font-sans-default ;
-$font-open-sans-lt: "Open Sans Light" + $font-sans-default;
+$font-open-sans   : "Open Sans", $font-sans-default ;
+$font-open-sans-lt: "Open Sans Light", $font-sans-default;

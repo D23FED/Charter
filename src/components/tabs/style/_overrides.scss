@@ -1,0 +1,34 @@
+/* Rules strictly to override core CSS */
+.tab-component {
+	// Row containing tabs
+	.tab-row {
+		display: block;
+		box-shadow: none;
+		border-radius: 0;
+
+		// Nav tabs list
+		> ul {
+			display: block;
+		}
+
+		// Nav tabs list
+		ul.nav-tabs {
+			.tabbedLabel {
+				li {
+					padding: 0;
+					background-color: transparent;
+				}
+			}
+		}
+
+		// Wraps .tabbedLabel (which wraps tab LI), First immediate child of tab UL
+		.tabbedRow {
+			display: block;
+		}
+	}
+
+	// Row containing all tab content panes
+	.tab-content-container {
+		box-shadow: none;
+	}
+}

@@ -1,0 +1,99 @@
+/* Common Tab styles */
+// Component wrapper
+.tab-component {
+	// Row containing tabs
+	.tab-row {
+		// nav tabs list
+		ul.nav-tabs {
+			@include clearfix;
+
+			// Actual tabs
+			li {
+				float: left;
+				font-family: $font-open-sans;
+				font-weight: 400;
+				font-style: normal;
+				list-style: none;
+				margin-bottom: -1px;
+				display: block;
+
+				// Tab link
+				> a {
+					font-family: $font-open-sans;
+
+					position: relative;
+					border: 1px solid transparent;
+					background-color: #fff;
+					display: block;
+					padding: $nav-link-padding;
+					margin-right: 0;
+					line-height: $line-height-base;
+					color: $md-blue;
+					text-decoration: none;
+					transition: all 150ms ease-out;
+					transition-property: color, background-color;
+
+					@include hover-focus {
+						color: $lt-blue;
+					}
+				}
+
+				// Active Tab Link
+				&.js-active > a {
+					&,
+					&:hover,
+					&:focus {
+						color: $nav-tabs-active-link-hover-color;
+						background-color: $nav-tabs-active-link-hover-bg;
+						cursor: default;
+					}
+				}
+
+				&.arrow {
+					&:first-of-type {
+						text-align: left;
+					}
+					&:last-of-type {
+						text-align: right;
+					}
+
+
+				}
+			}
+		}
+
+		// Wraps .tabbedLabel (which wraps tab LI)
+		// First immediate child of tab UL
+		.tabbedRow {
+			display: block;
+
+			// Actual tab
+			li {
+				> a {
+					margin: 0;
+				}
+			}
+
+			// First tab wrapper
+			&:first-child {
+				li {
+					margin-left: 0;
+				}
+			}
+
+			// Last tab wrapper
+			&:last-child {
+				li {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	// Row containing all tab content panes
+	.tab-content-container {
+		border-radius: 0;
+		background-color: #fff;
+		border: none;
+	}
+}
