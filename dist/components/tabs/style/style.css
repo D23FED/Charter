@@ -422,7 +422,7 @@
 .tab-style-3 .tab-component .tab-row ul.nav-tabs li.arrow a {
   background-color: #fff;
   color: #0077BC;
-  border-radius: none;
+  border-radius: 0;
 }
 
 @media (min-width: 75em) {
@@ -513,12 +513,35 @@
   background-color: #00629B;
 }
 
+@media (min-width: 62em) {
+  .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a,
+  .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:hover,
+  .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:focus {
+    background-color: #0077BC;
+  }
+}
+
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a::after,
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:hover::after,
 .tab-style-4 .tab-component .tab-row ul.nav-tabs li.js-active a:focus::after {
   content: '';
   z-index: 10;
   position: absolute;
+  border-top-width: 29px;
+  border-top-width: 2.9rem;
+  border-bottom-width: 0;
+  border-left-width: 30px;
+  border-left-width: 3rem;
+  border-right-width: 30px;
+  border-right-width: 3rem;
+  border-top-color: #00629B;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-style: solid;
+  border-bottom-style: none;
+  width: 58px;
+  width: 5.8rem;
   top: auto;
   right: 72px;
   right: 7.2rem;
@@ -594,6 +617,7 @@
 @media (min-width: 62em) {
   .tab-style-4 .tab-component .tab-content-container {
     display: block;
+    float: right;
   }
 }
 

@@ -109,7 +109,10 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 							text-decoration: none;
 							background-color: $md-blue;
 
-							@include breakpoint(md) {}
+							@include breakpoint(md) {
+								background-color: $lt-blue;
+
+							}
 
 
 							// CSS Triangle
@@ -117,6 +120,8 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 								content: '';
 								z-index: 10;
 								position: absolute;
+								@include triangle-down;
+
 								top: auto;
 								right: 7.2rem;
 								bottom: -($triangle-down-width / 2);
@@ -167,6 +172,7 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 
 			@include breakpoint(md) {
 				display: block;
+				float: right;
 			}
 		}
 	}
