@@ -1,75 +1,74 @@
 /* Tab Style: Default */
+$nav-tabs-gutter-width: 0.2rem;
+
+// Component wrapper
 .tab-style-1 {
-	// Component wrapper
-	.tab-component {
-		// Row containing tabs
-		.tab-row {
-			display: block;
-			box-shadow: none;
+	// Row containing tabs
+	.tab-row {
+		display: block;
+		box-shadow: none;
 
-			// nav tabs list
-			ul.nav-tabs {
-				// Tabs
-				li {
-					margin-left: $nav-tabs-gutter-width / 2;
-					margin-right: $nav-tabs-gutter-width / 2;
-					text-align: left;
-					width: 100%;
+		// nav tabs list
+		ul.nav-tabs {
+			// Tabs
+			li {
+				margin-left: $nav-tabs-gutter-width / 2;
+				margin-right: $nav-tabs-gutter-width / 2;
+				text-align: left;
+				width: 100%;
 
-					@include breakpoint(md) {
-						text-align: center;
-						width: auto;
-						color: #000;
+				@include breakpoint(md) {
+					text-align: center;
+					width: auto;
+					color: #000;
+				}
 
-					}
 
-					// First tab
-					&:first-child {
-						margin-left: 0;
-					}
+				// First tab
+				&:first-child {
+					margin-left: 0;
+				}
 
-					// Last tab
-					&:last-child {
-						margin-left: 0;
-					}
+				// Last tab
+				&:last-child {
+					margin-left: 0;
+				}
 
-					// Tab link
-					> a {
-						margin: 0;
-						color: $md-blue;
+				// Tab link
+				> a:not(.details-toggle) {
+					margin: 0;
+					color: $md-blue;
+					background-color: #ededed;
+					border: .1rem solid transparent;
+					border-color: #eee #eee #ddd;
+					border-radius: .4rem .4rem 0 0;
+
+					@include hover-focus {
+						color: $lt-blue;
 						background-color: #ededed;
-						border: 1px solid transparent;
 						border-color: #eee #eee #ddd;
-						border-radius: $border-radius-base $border-radius-base 0 0;
-
-						@include hover-focus {
-							color: $lt-blue;
-							background-color: #ededed;
-							border-color: #eee #eee #ddd;
-						}
 					}
+				}
 
-					// Active tab link
-					&.js-active {
-						a,
-						a:hover,
-						a:focus {
-							color: #333;
-							background-color: #fff;
-							border: 1px solid #ddd;
-							border-bottom-color: transparent;
-						}
+				// Active tab link
+				&.js-active {
+					a:not(.details-toggle),
+					a:not(.details-toggle):hover,
+					a:not(.details-toggle):focus {
+						color: #333;
+						background-color: #fff;
+						border: .1rem solid #ddd;
+						border-bottom-color: transparent;
 					}
 				}
 			}
 		}
+	}
 
-		// Row containing all tab content panes
-		.tab-content-container {
-			border: 1px solid #ddd;
-			border-width: 0 .1rem .1rem .1rem;
-			background: linear-gradient(to bottom, #ffffff 0%, #ffffff 60%, #eef1f3 100%);
-
-		}
+	// Row containing all tab content panes
+	.tab-content-container {
+		border: .1rem solid #ddd;
+		border-width: 0 .1rem .1rem .1rem;
+		background: linear-gradient(to bottom, #ffffff 0%, #ffffff 60%, #eef1f3 100%);
 	}
 }

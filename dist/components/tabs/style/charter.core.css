@@ -11,25 +11,23 @@
   background-clip: padding-box;
 }
 
-.tabbedComponent .tab-row li.active a, .tabbedComponent .tab-row li.js-active a, .tabbedComponent .tab-row li a {
+.tabbedComponent .tab-row li.active a,.tabbedComponent .tab-row li.js-active a,.tabbedComponent .tab-row li a {
   color: #333;
-  font-weight: normal;
+  font-weight: 400;
 }
 
-.tabbedComponent .tab-row > ul {
+.tabbedComponent .tab-row>ul {
   padding: 0;
   display: table-row;
 }
 
-.tabbedComponent .tab-row > ul > li {
+.tabbedComponent .tab-row>ul>li,.tabbedComponent .tab-row .tabbedRow {
   display: table-cell;
   text-align: center;
 }
 
 .tabbedComponent .tab-row .tabbedRow {
-  display: table-cell;
   position: relative;
-  text-align: center;
 }
 
 .tabbedComponent .tab-row .tabbedLabel li {
@@ -41,30 +39,23 @@
   display: inherit;
   list-style-type: none;
   text-align: center;
-  padding: 10px;
   padding: 1rem;
   vertical-align: middle;
   cursor: pointer;
 }
 
-.tabbedComponent .tab-row .tabbedLabel li.active, .tabbedComponent .tab-row .tabbedLabel li.js-active {
-  background: #fff;
-}
-
-.tabbedComponent .tab-row .tabbedLabel li.active, .tabbedComponent .tab-row .tabbedLabel li.js-active {
+.tabbedComponent .tab-row .tabbedLabel li.active,.tabbedComponent .tab-row .tabbedLabel li.js-active {
   background: #fff;
   -webkit-filter: none;
   filter: none;
 }
 
 .tabbedComponent .tab-row .tabbedContent {
-  padding: 10px;
   padding: 1rem;
 }
 
 .tabbedComponent .tab-content-container {
   background: #fff;
-  padding: 10px;
   padding: 1rem;
   border-radius: 0 0 3px 3px;
   background-clip: padding-box;
@@ -72,8 +63,8 @@
   box-shadow: 0 1px 2px 0 #888;
 }
 
-@media (max-width: 992px) {
-  .tabbedComponent .tab-row > ul > li {
+@media (max-width:992px) {
+  .tabbedComponent .tab-row>ul>li {
     display: none;
   }
   .tabbedComponent .tab-row .tabbedRow {
