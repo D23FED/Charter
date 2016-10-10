@@ -84,7 +84,7 @@ var
 			// Trims whitespace from/normalizes at-rule parameters
 			minifyParams: true,
 			// trims & normalizes selector strings
-			minifySelectors: true,
+			minifySelectors: false,
 			// Ensures that only a single @charset is present in the CSS file
 			normalizeCharset: true,
 			// In URLs, resolve unnecessary directory traversal & unquote the value

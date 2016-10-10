@@ -1,4 +1,4 @@
-/* Tab Style: Promo */
+/* Tab Style 3: Promo */
 // Component wrapper
 .tab-style-3 {
 	// Row containing tabs
@@ -21,8 +21,8 @@
 				}
 			}
 
-			// Actual tabs
-			li {
+			// Tabs and arrows (LI)
+			.tab, .arrow {
 				font-size: 1.7rem;
 				margin: 0;
 				margin-left: .8rem;

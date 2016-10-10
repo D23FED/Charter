@@ -1,4 +1,4 @@
-/* Tab Style: Side */
+/* Tab Style 4: Side Tabs */
 
 // Width of triangles that get appended to tabs
 $triangle-down-width: 4.4rem;
@@ -55,8 +55,8 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 		ul.nav-tabs {
 			border-bottom: none;
 
-			// Actual tabs, namespaced with wrapper class to prevent content from being styled on mobile
-			li {
+			// Actual tabs
+			.tab, .arrow {
 				margin-bottom: 0;
 				width: 100%;
 				text-align: left;
@@ -125,7 +125,7 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 						padding-right: .5rem;
 					}
 
-					@include breakpoint(lg) {
+					@include breakpoint(md) {
 						display: none;
 					}
 				}
@@ -218,23 +218,14 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 		}
 	}
 
-	// On mobile, the tab content list items inherit styles from the component that should not be inherited, overwrite those here
-	.tabbedContent {
+	// Content that had been appended to the tab itself. Used to turn side tabs into 'accordion' style on mobile
+	.tabbedRow .tabbedContent {
 		padding-top: $triangle-down-width / 2;
 
 		ul, ol {
 			li {
-				display: list-item;
 				list-style-position: inside;
 			}
-		}
-
-		ul li {
-			list-style-type: disc;
-		}
-
-		ol li {
-			list-style-type: decimal;
 		}
 	}
 }

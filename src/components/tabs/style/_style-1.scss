@@ -1,17 +1,15 @@
-/* Tab Style: Default */
+/* Tab Style 1: Default */
 $nav-tabs-gutter-width: 0.2rem;
 
 // Component wrapper
 .tab-style-1 {
 	// Row containing tabs
 	.tab-row {
-		display: block;
-		box-shadow: none;
-
 		// nav tabs list
 		ul.nav-tabs {
 			// Tabs
-			li {
+			.tab,
+			.arrow {
 				margin-left: $nav-tabs-gutter-width / 2;
 				margin-right: $nav-tabs-gutter-width / 2;
 				text-align: left;

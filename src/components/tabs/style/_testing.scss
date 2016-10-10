@@ -1,0 +1,25 @@
+/* Begin dev-only rules (Just for testing, remove from final CSS) */
+/* =================================== */
+[class*='tab-style-'] {
+	margin-bottom: 10rem;
+}
+
+.tab-style-4,
+.tab-style-3 {
+	background-color: $blue;
+}
+
+.tab-style-3 {
+	// Component wrapper
+	.tab-component {
+		// Row containing tabs
+		.tab-row {
+			padding: 2rem 0;
+
+			@include breakpoint(lg) {
+				padding: 0;
+			}
+		}
+	}
+}
+/* End dev-only rules ================ */
