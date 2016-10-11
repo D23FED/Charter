@@ -1,134 +1,135 @@
-/* Tab Style: Justified */
+/* Tab Style 2: Justified */
+// Component wrapper
 .tab-style-2 {
-	/* Just for testing	 */
-	margin-top: 100px;
+	// Row containing tabs
+	.tab-row {
+		@if $nav-tabs-2-enable-justify == true {
+			@include breakpoint(lg) {
+				display: table;
+			}
+		}
 
-	// Component wrapper
-	.tab-component {
-		// Row containing tabs
-		.tab-row {
+		// nav tabs list
+		ul.nav-tabs {
 			@if $nav-tabs-2-enable-justify == true {
 				@include breakpoint(lg) {
-					display: table;
+					display: table-row;
 				}
 			}
 
-			// nav tabs list
-			ul.nav-tabs {
+			border-bottom: none;
+
+			// Actual tabs
+			.tab, .arrow {
+				margin-bottom: 0;
+				margin: 0;
+				float: left;
+				width: percentage(1 / 2);
+
+				@include breakpoint(xs) {
+					width: percentage(1 / 3);
+				}
+
+
+				@include breakpoint(lg) {
+					width: 100%;
+				}
+
+
 				@if $nav-tabs-2-enable-justify == true {
 					@include breakpoint(lg) {
-						display: table-row;
+						float: none;
 					}
 				}
 
-				border-bottom: none;
+				// Tab link
+				> a:not(.details-toggle) {
+					background: $lt-blue;
+					border-radius: .5rem;
+					color: #fff;
+					margin: .2rem;
+					padding: 1rem;
+					text-decoration: none;
+					border: 0.2rem solid $lt-blue;
+					white-space: nowrap;
+					font-weight: 700;
+					font-size: 1.7rem;
 
-				// Actual tabs
-				li {
-					margin-bottom: 0;
-					margin: 0;
-					float: left;
-					width: percentage(1 / 2);
+					&::after {
+						font-awesome: angle-right;
+						background-repeat: no-repeat;
+						display: inline-block;
+						position: relative;
+						padding-left: .5rem;
+						font-size: 75%;
 
-					@include breakpoint(xs) {
-						width: percentage(1 / 3);
+						@include breakpoint(lg) {
+							display: none;
+						}
+					}
+
+					@include breakpoint(sm) {
+						font-size: 2.2rem;
+					}
+
+
+					@include breakpoint(md) {
+						font-size: 2.4rem;
 					}
 
 
 					@include breakpoint(lg) {
-						width: 100%;
+						background: #fff;
+						border: 0;
+						color: $lt-blue;
+						font-size: 1.7rem;
+						border-radius: 0;
+						margin: 0;
+						padding: $nav-link-padding;
 					}
 
 
+					@include hover-focus {
+						color: $md-blue;
+					}
+				}
+
+				// Active tab link
+				&.js-active {
+					a:not(.details-toggle),
+					a:not(.details-toggle):hover,
+					a:not(.details-toggle):focus {
+						color: $lt-blue;
+						background: #fff;
+
+						@include breakpoint(lg) {
+							color: #fff;
+							background-color: $lt-blue;
+							border: 0;
+						}
+					}
+				}
+
+				// Prev/Next Arrows
+				&.arrow {
 					@if $nav-tabs-2-enable-justify == true {
 						@include breakpoint(lg) {
-							float: none;
+							display: table-cell;
 						}
-					}
-
-					// Tab link
-					> a {
-						background: $lt-blue;
-						border-radius: .5rem;
-						color: #fff;
-						margin: .2rem;
-						padding: 1rem;
-						text-decoration: none;
-						border: 2px solid $lt-blue;
-						white-space: nowrap;
-						font-weight: 700;
-						font-size: 1.7rem;
-
-						&::after {
-							// font-awesome: chevron-right;
-						}
-
-						@include breakpoint(sm) {
-							font-size: 2.2rem;
-						}
-
-
-						@include breakpoint(md) {
-							font-size: 2.4rem;
-						}
-
-
-						@include breakpoint(lg) {
-							background: #fff;
-							border: 0;
-							color: $lt-blue;
-							font-size: 1.7rem;
-							border-radius: 0;
-							margin: 0;
-							padding: $nav-link-padding;
-						}
-
-
-						@include hover-focus {
-							color: $md-blue;
-						}
-					}
-
-					// Active tab link
-					&.js-active {
-						a,
-						a:hover,
-						a:focus {
-							color: $lt-blue;
-							background: #fff;
-
-							@include breakpoint(lg) {
-								color: #fff;
-								background-color: $lt-blue;
-								border: 0;
-							}
-						}
-					}
-
-					// Prev/Next Arrows
-					&.arrow {
-						@if $nav-tabs-2-enable-justify == true {
-							@include breakpoint(lg) {
-								display: table-cell;
-							}
-						}
-					}
-				}
-			}
-
-			// Wraps .tabbedLabel (which wraps tab LI), First immediate child of tab UL
-			.tabbedRow {
-				width: auto;
-
-				@if $nav-tabs-2-enable-justify == true {
-					@include breakpoint(lg) {
-						display: table-cell;
 					}
 				}
 			}
 		}
 
-		// Row containing all tab content panes
-		.tab-content-container {}
+		// Wraps .tabbedLabel (which wraps tab LI), First immediate child of tab UL
+		.tabbedRow {
+			width: auto;
+
+			@if $nav-tabs-2-enable-justify == true {
+				@include breakpoint(lg) {
+					display: table-cell;
+				}
+			}
+		}
 	}
 }

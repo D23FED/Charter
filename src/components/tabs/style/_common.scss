@@ -8,26 +8,26 @@
 			@include clearfix;
 
 			// Actual tabs
-			li {
+			.tab,
+			.arrow{
 				float: left;
 				font-family: $font-open-sans;
 				font-weight: 400;
 				font-style: normal;
 				list-style: none;
-				margin-bottom: -1px;
+				margin-bottom: -.1rem;
 				display: block;
 
 				// Tab link
-				> a {
+				> a:not(.details-toggle) {
 					font-family: $font-open-sans;
-
 					position: relative;
-					border: 1px solid transparent;
+					border: .1rem solid transparent;
 					background-color: #fff;
 					display: block;
 					padding: $nav-link-padding;
 					margin-right: 0;
-					line-height: $line-height-base;
+					line-height: 1;
 					color: $md-blue;
 					text-decoration: none;
 					transition: all 150ms ease-out;
@@ -38,13 +38,17 @@
 					}
 				}
 
+				.details-toggle {
+					display: none;
+				}
+
 				// Active Tab Link
-				&.js-active > a {
+				&.js-active > a:not(.details-toggle) {
 					&,
 					&:hover,
 					&:focus {
-						color: $nav-tabs-active-link-hover-color;
-						background-color: $nav-tabs-active-link-hover-bg;
+						color: #333;
+						background-color: #fff;
 						cursor: default;
 					}
 				}
@@ -53,11 +57,10 @@
 					&:first-of-type {
 						text-align: left;
 					}
+
 					&:last-of-type {
 						text-align: right;
 					}
-
-
 				}
 			}
 		}

@@ -7,14 +7,13 @@ Horizontal focus points
 4 = right
 5 = far right
 */
-[class*='image-focus-'] {
-  min-height: 200px;
+[class*=image-focus-] {
   min-height: 20rem;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.imageArtDirection a[class*='image-focus-'] {
+.imageArtDirection a[class*=image-focus-] {
   display: block;
   color: inherit;
   text-decoration: none;
@@ -85,7 +84,7 @@ Horizontal focus points
   background-position: right bottom;
 }
 
-@media (min-width: 48em) {
+@media (min-width:48em) {
   .mob-image-focus-1 {
     background-position: left center;
   }

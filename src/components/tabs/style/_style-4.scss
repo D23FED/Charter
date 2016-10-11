@@ -1,7 +1,7 @@
-/* Tab Style: Side */
+/* Tab Style 4: Side Tabs */
 
 // Width of triangles that get appended to tabs
-$triangle-down-width: 5.8rem;
+$triangle-down-width: 4.4rem;
 $triangle-right-width: 2.5rem;
 
 // Padding for tab content pane
@@ -10,8 +10,8 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 @mixin triangle-down {
 	border-top-width: $triangle-down-width / 2;
 	border-bottom-width: 0;
-	border-left-width: 3rem;
-	border-right-width: 3rem;
+	border-left-width: $triangle-down-width / 2;
+	border-right-width: $triangle-down-width / 2;
 	border-top-color: $md-blue;
 	border-bottom-color: transparent;
 	border-left-color: transparent;
@@ -36,143 +36,195 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 }
 
 .tab-style-4 {
-	/* Just for testing	 */
-	margin-top: 100px;
-	background-color: $blue;
-
 	// Component wrapper
 	.tab-component {
 		@include clearfix;
+	}
 
-		// Row containing tabs
-		.tab-row {
-			overflow: initial;
+	// Row containing tabs
+	.tab-row {
+		overflow: initial;
 
-			@include breakpoint(md) {
-				float: left;
-				width: percentage(1 / 3);
-			}
+		@include breakpoint(md) {
+			float: left;
+			width: percentage(1 / 3);
+		}
 
 
-			// nav tabs list
-			ul.nav-tabs {
-				border-bottom: none;
+		// nav tabs list
+		ul.nav-tabs {
+			border-bottom: none;
 
-				// Actual tabs
-				li {
+			// Actual tabs
+			.tab, .arrow {
+				margin-bottom: 0;
+				width: 100%;
+				text-align: left;
+				margin-left: 0;
+				margin-right: 0;
+				z-index: 20;
+
+				// Tab link
+				> a:not(.details-toggle) {
+					color: #fff;
+					display: inline-block;
+					margin-top: 0;
 					margin-bottom: 0;
+					padding: 2.1rem 1rem 2.1rem $triangle-right-width;
+					border: none;
+					border-left-width: .7rem;
+					border-left-style: solid;
+					border-left-color: transparent;
+					border-radius: 0;
+					font-weight: 700;
+					font-size: 2.2rem;
 					width: 100%;
-					text-align: left;
-					margin-left: 0;
-					margin-right: 0;
-					z-index: 20;
+					background-color: $lt-blue;
+					border-bottom: 0.1rem solid $md-blue;
 
-					// Tab link
-					> a {
-						color: #fff;
-						display: inline-block;
-						margin-top: 0;
-						margin-bottom: 0;
-						padding: 2.1rem 1rem 2.1rem $triangle-right-width;
-						border: none;
-						border-left-width: .7rem;
-						border-left-style: solid;
-						border-left-color: transparent;
-						border-radius: 0;
-						font-weight: 700;
-						font-size: 2.2rem;
-						width: 100%;
-						background-color: $lt-blue;
-
-						@include breakpoint(md) {
-							background-color: transparent;
-							text-decoration: underline;
-						}
+					@include breakpoint(md) {
+						background-color: transparent;
+						text-decoration: underline;
+						border-bottom-width: 0;
+					}
 
 
-						@include hover-focus {
-							color: $md-blue;
+					@include breakpoint(lg) {
+						span::after {
+							font-awesome: angle-double-right;
+							background-repeat: no-repeat;
+							display: inline-block;
+							position: relative;
+							padding-left: .5rem;
+							font-size: 75%;
 						}
 					}
 
-					// Active tab link
-					&.js-active {
-						a,
-						a:hover,
-						a:focus {
-							border: none;
-							border-left-style: solid;
-							border-left-width: .7rem;
-							border-left-color: $yellow;
-							box-shadow: none;
-							color: #fff;
-							text-decoration: none;
-							background-color: $md-blue;
+
+					@include hover-focus {
+						color: $md-blue;
+					}
+				}
+
+				// 'View/Hide Details' button
+				.details-toggle {
+					@include vertical-center;
+
+					display: inline-block;
+					right: 0;
+					text-align: right;
+					width: auto;
+					font-size: 1.8rem;
+					color: #fff;
+					text-decoration: none;
+					padding-right: 2rem;
+
+					&::before {
+						content: 'View ';
+						display: inline-block;
+						padding-right: .5rem;
+					}
+
+					@include breakpoint(md) {
+						display: none;
+					}
+				}
+
+				// Active tab link
+				&.js-active {
+					a:not(.details-toggle),
+					a:not(.details-toggle):hover,
+					a:not(.details-toggle):focus {
+						border: none;
+						border-left-style: solid;
+						border-left-width: .7rem;
+						border-left-color: $yellow;
+						border-bottom: .1rem solid transparent;
+						box-shadow: none;
+						color: #fff;
+						text-decoration: none;
+						background-color: $md-blue;
+
+						@include breakpoint(md) {
+							background-color: $lt-blue;
+						}
+
+
+						// CSS Triangle
+						&::after {
+							content: '';
+							z-index: 10;
+							position: absolute;
+
+							@include triangle-down;
+
+							top: auto;
+							right: 7.2rem;
+							bottom: -($triangle-down-width / 2);
 
 							@include breakpoint(md) {
-								background-color: $lt-blue;
+								@include triangle-right;
 
+								top: 0;
+								right: -$triangle-right-width;
+								bottom: auto;
+								left: auto;
 							}
+						}
+					}
 
-
-							// CSS Triangle
-							&::after {
-								content: '';
-								z-index: 10;
-								position: absolute;
-								@include triangle-down;
-
-								top: auto;
-								right: 7.2rem;
-								bottom: -($triangle-down-width / 2);
-
-								@include breakpoint(md) {
-									@include triangle-right;
-
-									top: 0;
-									right: -$triangle-right-width;
-									bottom: auto;
-									left: auto;
-								}
-							}
+					.details-toggle {
+						&::before {
+							content: 'Hide ';
 						}
 					}
 				}
 			}
 		}
+	}
 
-		// Row containing all tab content panes
+	// Row containing all tab content panes
 
-		.tab-content-container,
-		.tabbedContent {
-			border-radius: 0;
-			background-color: #f2f2f2;
-			box-shadow: none;
-			float: left;
-			width: 100%;
-			padding: 2rem;
+	.tab-content-container,
+	.tabbedContent {
+		border-radius: 0;
+		background-color: #f2f2f2;
+		box-shadow: none;
+		float: left;
+		width: 100%;
+		padding: 2rem;
 
-			@include breakpoint(sm) {
-				padding: 1rem 4rem 4rem 4rem;
-			}
-
-
-			@include breakpoint(md) {
-				padding-top: .5rem;
-				padding-left: $content-horiz-padding;
-				padding-right: $content-horiz-padding;
-				padding-bottom: 2.5rem;
-				float: left;
-				width: percentage(2 / 3);
-			}
+		@include breakpoint(sm) {
+			padding: 2rem 4rem 4rem 4rem;
 		}
 
-		.tab-content-container {
-			display: none;
 
-			@include breakpoint(md) {
-				display: block;
-				float: right;
+		@include breakpoint(md) {
+			padding-top: .5rem;
+			padding-left: $content-horiz-padding;
+			padding-right: $content-horiz-padding;
+			padding-bottom: 2.5rem;
+			float: left;
+		}
+	}
+
+	.tab-content-container {
+		display: none;
+
+		@include breakpoint(md) {
+			display: block;
+			float: right;
+			width: percentage(2 / 3);
+		}
+	}
+
+	// Content that had been appended to the tab itself. Used to turn side tabs into 'accordion' style on mobile
+	.tabbedRow .tabbedContent {
+		padding-top: $triangle-down-width / 2;
+
+		ul, ol {
+			li {
+				list-style-position: inside;
 			}
 		}
 	}
