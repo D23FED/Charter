@@ -33,7 +33,7 @@ $nav-tabs-gutter-width: 0.2rem;
 				}
 
 				// Tab link
-				> a:not(.details-toggle) {
+				> a {
 					margin: 0;
 					color: $md-blue;
 					background-color: #ededed;
@@ -50,9 +50,9 @@ $nav-tabs-gutter-width: 0.2rem;
 
 				// Active tab link
 				&.js-active {
-					a:not(.details-toggle),
-					a:not(.details-toggle):hover,
-					a:not(.details-toggle):focus {
+					a,
+					a:hover,
+					a:focus {
 						color: #333;
 						background-color: #fff;
 						border: .1rem solid #ddd;

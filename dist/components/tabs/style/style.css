@@ -1,26 +1,4 @@
 /* Tabbed Component v2 | Oct 2016 */
-/* Begin dev-only rules (Just for testing, remove from final CSS) */
-/* =================================== */
-[class*='tab-style-'] {
-  margin-bottom: 10rem;
-}
-
-.tab-style-4,
-.tab-style-3 {
-  background-color: #003057;
-}
-
-.tab-style-3 .tab-row {
-  padding: 2rem 0;
-}
-
-@media (min-width:75em) {
-  .tab-style-3 .tab-row {
-    padding: 0;
-  }
-}
-
-/* End dev-only rules ================ */
 /* Rules strictly to override core CSS */
 .tabbedComponent .tab-row {
   display: block;
@@ -41,6 +19,7 @@
   box-shadow: none;
 }
 
+/* End core.css overrides */
 /* Common Tab styles */
 .tabbedComponent .tab-row ul.nav-tabs::after {
   content: '';
@@ -59,8 +38,8 @@
   display: block;
 }
 
-.tabbedComponent .tab-row ul.nav-tabs .tab > a:not(.details-toggle),
-.tabbedComponent .tab-row ul.nav-tabs .arrow > a:not(.details-toggle) {
+.tabbedComponent .tab-row ul.nav-tabs .tab > a,
+.tabbedComponent .tab-row ul.nav-tabs .arrow > a {
   font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
   position: relative;
   border: .1rem solid transparent;
@@ -77,33 +56,27 @@
   transition-property: color,background-color;
 }
 
-.tabbedComponent .tab-row ul.nav-tabs .tab > a:not(.details-toggle):focus, .tabbedComponent .tab-row ul.nav-tabs .tab > a:not(.details-toggle):hover,
-.tabbedComponent .tab-row ul.nav-tabs .arrow > a:not(.details-toggle):focus,
-.tabbedComponent .tab-row ul.nav-tabs .arrow > a:not(.details-toggle):hover {
+.tabbedComponent .tab-row ul.nav-tabs .tab > a:focus, .tabbedComponent .tab-row ul.nav-tabs .tab > a:hover,
+.tabbedComponent .tab-row ul.nav-tabs .arrow > a:focus,
+.tabbedComponent .tab-row ul.nav-tabs .arrow > a:hover {
   color: #0077BC;
 }
 
-.tabbedComponent .tab-row ul.nav-tabs .tab .details-toggle,
-.tabbedComponent .tab-row ul.nav-tabs .arrow .details-toggle {
-  display: none;
-}
-
-.tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle), .tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):hover, .tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus,
-.tabbedComponent .tab-row ul.nav-tabs .arrow.js-active > a:not(.details-toggle),
-.tabbedComponent .tab-row ul.nav-tabs .arrow.js-active > a:not(.details-toggle):hover,
-.tabbedComponent .tab-row ul.nav-tabs .arrow.js-active > a:not(.details-toggle):focus {
+.tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a:focus {
   color: #333;
   background-color: #fff;
   cursor: default;
 }
 
-.tabbedComponent .tab-row ul.nav-tabs .tab.arrow:first-of-type,
-.tabbedComponent .tab-row ul.nav-tabs .arrow.arrow:first-of-type {
+.tabbedComponent .tab-row ul.nav-tabs .tab > a.details-toggle {
+  display: none;
+}
+
+.tabbedComponent .tab-row ul.nav-tabs .arrow:first-of-type {
   text-align: left;
 }
 
-.tabbedComponent .tab-row ul.nav-tabs .tab.arrow:last-of-type,
-.tabbedComponent .tab-row ul.nav-tabs .arrow.arrow:last-of-type {
+.tabbedComponent .tab-row ul.nav-tabs .arrow:last-of-type {
   text-align: right;
 }
 
@@ -150,8 +123,8 @@
   margin-left: 0;
 }
 
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:not(.details-toggle),
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle) {
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a {
   margin: 0;
   color: #00629B;
   background-color: #ededed;
@@ -160,20 +133,20 @@
   border-radius: .4rem .4rem 0 0;
 }
 
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):focus, .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):hover,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle):focus,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle):hover {
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:focus, .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:hover,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a:focus,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a:hover {
   color: #0077BC;
   background-color: #ededed;
   border-color: #eee #eee #ddd;
 }
 
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle),
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):hover,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):focus,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle),
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):hover,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):focus {
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active a,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active a:hover,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active a:focus,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow.js-active a,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow.js-active a:hover,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow.js-active a:focus {
   color: #333;
   background-color: #fff;
   border: .1rem solid #ddd;
@@ -205,7 +178,8 @@
   }
 }
 
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
   margin-bottom: 0;
   margin: 0;
   float: left;
@@ -213,19 +187,22 @@
 }
 
 @media (min-width:34em) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab,
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
     width: 33.33333%;
   }
 }
 
 @media (min-width:75em) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab,
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
     width: 100%;
     float: none;
   }
 }
 
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:not(.details-toggle), .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle) {
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
   background: #0077BC;
   border-radius: .5rem;
   color: #fff;
@@ -238,7 +215,8 @@
   font-size: 1.7rem;
 }
 
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:not(.details-toggle)::after, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle)::after {
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a::after,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a::after {
   font-family: FontAwesome;
   content: '\f105';
   background-repeat: no-repeat;
@@ -249,25 +227,29 @@
 }
 
 @media (min-width:75em) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:not(.details-toggle)::after, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle)::after {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a::after,
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a::after {
     display: none;
   }
 }
 
 @media (min-width:48em) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:not(.details-toggle), .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle) {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
     font-size: 2.2rem;
   }
 }
 
 @media (min-width:62em) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:not(.details-toggle), .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle) {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
     font-size: 2.4rem;
   }
 }
 
 @media (min-width:75em) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:not(.details-toggle), .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle) {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
     background: #fff;
     border: 0;
     color: #0077BC;
@@ -278,25 +260,19 @@
   }
 }
 
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):focus, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):hover, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle):focus, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle):hover {
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:focus, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:hover,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:focus,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:hover {
   color: #00629B;
 }
 
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle),
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):hover,
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):focus, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle),
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):hover,
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):focus {
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:focus {
   color: #0077BC;
   background: #fff;
 }
 
 @media (min-width:75em) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle),
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):hover,
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):focus, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle),
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):hover,
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):focus {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:focus {
     color: #fff;
     background-color: #0077BC;
     border: 0;
@@ -304,7 +280,7 @@
 }
 
 @media (min-width:75em) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.arrow, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow.arrow {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
     display: table-cell;
   }
 }
@@ -343,7 +319,8 @@
   }
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
   font-size: 1.7rem;
   margin: 0;
   margin-left: .8rem;
@@ -354,7 +331,8 @@
 }
 
 @media (min-width:75em) {
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab,
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 0;
@@ -362,7 +340,8 @@
   }
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:not(.details-toggle), .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle) {
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a {
   color: #fff;
   font-weight: 700;
   border: .1rem solid transparent;
@@ -372,22 +351,26 @@
 }
 
 @media (min-width:75em) {
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:not(.details-toggle), .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle) {
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a,
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a {
     margin-top: .5rem;
     margin-bottom: -.1rem;
     padding: 2.5rem 1.25rem;
   }
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):focus, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):hover, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle):focus, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a:not(.details-toggle):hover {
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:focus, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:hover,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a:focus,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a:hover {
   color: #00629B;
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle),
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):hover,
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):focus, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle),
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):hover,
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):focus {
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a.details-toggle,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a.details-toggle {
+  display: none;
+}
+
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:focus {
   border: .1rem solid #FFF;
   border-bottom: none;
   box-shadow: 0 0 .5rem 0 #000000;
@@ -397,41 +380,37 @@
 }
 
 @media (min-width:75em) {
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle),
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):hover,
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active a:not(.details-toggle):focus, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle),
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):hover,
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.js-active a:not(.details-toggle):focus {
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:focus {
     margin-top: 1rem;
     border-radius: .5rem .5rem 0 0;
   }
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.arrow, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.arrow {
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
   display: none;
 }
 
 @media (min-width:75em) {
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.arrow, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.arrow {
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
     display: block;
   }
 }
 
 @media (min-width:75em) and (min-width:75em) {
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.arrow, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.arrow {
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
     display: table-cell;
   }
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.arrow:first-child, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.arrow:first-child {
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow:first-child {
   margin-left: 0;
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.arrow:last-child, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.arrow:last-child {
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow:last-child {
   margin-right: 0;
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.arrow a, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow.arrow a {
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow a {
   background-color: #fff;
   color: #0077BC;
   border-radius: 0;
@@ -543,7 +522,10 @@
   font-size: 1.8rem;
   color: #fff;
   text-decoration: none;
+  padding: 0;
   padding-right: 2rem;
+  background-color: transparent;
+  border: none;
 }
 
 .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab .details-toggle::before, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .arrow .details-toggle::before {
@@ -632,8 +614,18 @@
   }
 }
 
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active .details-toggle, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .arrow.js-active .details-toggle {
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active .details-toggle::before, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .arrow.js-active .details-toggle::before {
   content: 'Hide ';
+}
+
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab {
+  position: relative;
 }
 
 .tabbedComponent.tab-style-4 .tab-content-container,

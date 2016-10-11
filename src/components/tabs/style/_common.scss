@@ -19,7 +19,7 @@
 				display: block;
 
 				// Tab link
-				> a:not(.details-toggle) {
+				> a {
 					font-family: $font-open-sans;
 					position: relative;
 					border: .1rem solid transparent;
@@ -37,13 +37,12 @@
 						color: $lt-blue;
 					}
 				}
+			}
 
-				.details-toggle {
-					display: none;
-				}
-
+			// Tabs (LI)
+			.tab {
 				// Active Tab Link
-				&.js-active > a:not(.details-toggle) {
+				&.js-active > a {
 					&,
 					&:hover,
 					&:focus {
@@ -53,14 +52,19 @@
 					}
 				}
 
-				&.arrow {
-					&:first-of-type {
-						text-align: left;
-					}
+				> a.details-toggle {
+					display: none;
+				}
+			}
 
-					&:last-of-type {
-						text-align: right;
-					}
+			// Prev/Next arrows (LI)
+			.arrow {
+				&:first-of-type {
+					text-align: left;
+				}
+
+				&:last-of-type {
+					text-align: right;
 				}
 			}
 		}

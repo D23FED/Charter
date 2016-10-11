@@ -24,7 +24,8 @@
 			}
 
 			// Tabs and arrows (LI)
-			.tab, .arrow {
+			.tab,
+			.arrow {
 				font-size: 1.7rem;
 				margin: 0;
 				margin-left: .8rem;
@@ -47,7 +48,7 @@
 				}
 
 				// Tab link
-				> a:not(.details-toggle) {
+				> a {
 					color: #fff;
 					font-weight: 700;
 					border: .1rem solid transparent;
@@ -65,13 +66,23 @@
 					@include hover-focus {
 						color: $md-blue;
 					}
-				}
 
+
+					&.details-toggle {
+						display: none;
+					}
+				}
+			}
+
+			//end .tab, .arrow
+
+			// Tabs
+			.tab {
 				// Active tab link
-				&.js-active {
-					a:not(.details-toggle),
-					a:not(.details-toggle):hover,
-					a:not(.details-toggle):focus {
+				&.js-active > a {
+					&,
+					&:hover,
+					&:focus {
 						border: .1rem solid #FFF;
 						border-bottom: none;
 						box-shadow: 0 0 .5rem 0 #000000;
@@ -85,34 +96,35 @@
 						}
 					}
 				}
+			}
 
-				&.arrow {
-					display: none;
+			// Prev/Next Arrow
+			.arrow {
+				display: none;
 
-					@include breakpoint(lg) {
-						display: block;
+				@include breakpoint(lg) {
+					display: block;
 
-						@if $nav-tabs-3-enable-justify == true {
-							@include breakpoint(lg) {
-								display: table-cell;
-							}
+					@if $nav-tabs-3-enable-justify == true {
+						@include breakpoint(lg) {
+							display: table-cell;
 						}
 					}
+				}
 
 
-					&:first-child {
-						margin-left: 0;
-					}
+				&:first-child {
+					margin-left: 0;
+				}
 
-					&:last-child {
-						margin-right: 0;
-					}
+				&:last-child {
+					margin-right: 0;
+				}
 
-					a {
-						background-color: #fff;
-						color: $lt-blue;
-						border-radius: 0;
-					}
+				a {
+					background-color: #fff;
+					color: $lt-blue;
+					border-radius: 0;
 				}
 			}
 		}

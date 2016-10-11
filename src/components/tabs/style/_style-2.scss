@@ -21,7 +21,8 @@
 			border-bottom: none;
 
 			// Actual tabs
-			.tab, .arrow {
+			.tab,
+			.arrow {
 				margin-bottom: 0;
 				margin: 0;
 				float: left;
@@ -44,7 +45,7 @@
 				}
 
 				// Tab link
-				> a:not(.details-toggle) {
+				> a {
 					background: $lt-blue;
 					border-radius: .5rem;
 					color: #fff;
@@ -94,12 +95,15 @@
 						color: $md-blue;
 					}
 				}
+			}
 
+			//end .tab.arrow
+			.tab {
 				// Active tab link
-				&.js-active {
-					a:not(.details-toggle),
-					a:not(.details-toggle):hover,
-					a:not(.details-toggle):focus {
+				&.js-active > a {
+					&,
+					&:hover,
+					&:focus {
 						color: $lt-blue;
 						background: #fff;
 
@@ -110,13 +114,13 @@
 						}
 					}
 				}
+			}
 
-				// Prev/Next Arrows
-				&.arrow {
-					@if $nav-tabs-2-enable-justify == true {
-						@include breakpoint(lg) {
-							display: table-cell;
-						}
+			// Prev/Next Arrows
+			.arrow {
+				@if $nav-tabs-2-enable-justify == true {
+					@include breakpoint(lg) {
+						display: table-cell;
 					}
 				}
 			}
