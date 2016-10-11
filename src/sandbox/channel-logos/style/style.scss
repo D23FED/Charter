@@ -1,0 +1,42 @@
+@import 'initialize'; // load base variables, functions, and mixins
+
+$logos: (
+	ae: e600,
+	max: e601,
+	cnn: e602,
+	epix: e604,
+	espn: e605,
+	hbo: e607,
+	hgtv: e608,
+	showtime: e609,
+	starz: e60a,
+	tmc: e60b,
+	mtv: e900,
+	disc: e901,
+	tlc: e902,
+	fox: e903,
+	hall: e904,
+	encore: e905,
+	nfl-vert: e906,
+	nfl-rz-hz: e907,
+	nfl-rz-vert: e908,
+	nfl-hz: e909
+);
+
+.channel-logo {
+	&::before {
+		font-family: "Channel Logos";
+		content: '';
+		display: inline-block;
+		font-size: 2rem;
+	}
+}
+
+@each $channel, $code in $logos {
+	$withslash: "\"\\#{$code}\"";
+	.logo-#{$channel}::before {
+		content: unquote($withslash);
+	}
+}
+
+
