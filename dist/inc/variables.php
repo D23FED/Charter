@@ -5,6 +5,7 @@ $site = array(
 	'assets' => array(
 		'bootstrap_js'  => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js',
 		'bootstrap_css' => 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css',
+		'fontawesome_css' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css',
 		'jquery'        => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js',
 		'site_css'      => '/style/style.css',
 		'site_js'       => '/js/script.min.js'
