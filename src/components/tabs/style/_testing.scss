@@ -11,15 +11,14 @@
 
 .tab-style-3 {
 	// Component wrapper
-	.tab-component {
-		// Row containing tabs
-		.tab-row {
-			padding: 2rem 0;
+	// Row containing tabs
+	.tab-row {
+		padding: 2rem 0;
 
-			@include breakpoint(lg) {
-				padding: 0;
-			}
+		@include breakpoint(lg) {
+			padding: 0;
 		}
 	}
 }
+
 /* End dev-only rules ================ */

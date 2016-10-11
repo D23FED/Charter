@@ -1,13 +1,32 @@
-/* Tabbed Component v1 | Oct 2016 */
+/* Tabbed Component v2 | Oct 2016 */
 @import 'initialize';
-// Component wrapper                    : .tabbedComponent or .tab-component
-// Row containing all tabs              : .tab-row
-// Individual tab wrapper (wraps LI > A): .tabbedLabel
-// Individual tab wrapper wrapper       : .tabbedRow
-// Active tab class                     : .js-active
-// Row containing all tab content panes : .tab-content-container
+// Classes:
+// ========
+// Component wrapper                                : .tabbedComponent
+// Row containing all tabs                          : .tab-row
+// Individual tab wrapper wrapper                   : .tabbedRow
+// Individual tab wrapper (wraps LI > A)            : .tabbedLabel
+// Tab LI                                           : .tab
+// Show/Hide details button                         : .details-toggle
+// Prev/Next arrows                                 : .arrow
+// Active tab class                                 : .js-active
+// Row containing all tab content panes             : .tab-content-container
 // Tab content pane when side accordion is on mobile: .tabbedContent
-
+//
+// Outline:
+// ========
+// div.tabbedComponent
+// 	div.tab-row
+// 		ul.nav.nav-tabs
+// 			li.arrow.arrow-prev
+// 			div.tabbedRow
+// 				div.tabbedLabel
+// 					li.tab
+// 						a>span (Tab title)
+// 						a.details-toggle
+// 			li.arrow.arrow-next
+// 	div.tab-content-container
+// 		div.tabbedContent
 
 //=== Shared nav styles
 $nav-link-padding: 1rem 1.5rem;

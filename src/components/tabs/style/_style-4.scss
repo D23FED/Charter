@@ -35,11 +35,8 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 	width: 0;
 }
 
-.tab-style-4 {
-	// Component wrapper
-	.tab-component {
-		@include clearfix;
-	}
+.tabbedComponent.tab-style-4 {
+	@include clearfix;
 
 	// Row containing tabs
 	.tab-row {

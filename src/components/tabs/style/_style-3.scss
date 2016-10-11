@@ -1,13 +1,15 @@
 /* Tab Style 3: Promo */
 // Component wrapper
-.tab-style-3 {
+.tabbedComponent.tab-style-3 {
 	// Row containing tabs
 	.tab-row {
 		overflow: hidden;
+		text-align: center;
 
 		@if $nav-tabs-3-enable-justify == true {
 			@include breakpoint(lg) {
 				display: table;
+				width: 100%;
 			}
 		}
 

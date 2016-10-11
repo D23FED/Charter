@@ -1,11 +1,12 @@
 /* Tab Style 2: Justified */
 // Component wrapper
-.tab-style-2 {
+.tabbedComponent.tab-style-2 {
 	// Row containing tabs
 	.tab-row {
 		@if $nav-tabs-2-enable-justify == true {
 			@include breakpoint(lg) {
 				display: table;
+				width: 100%;
 			}
 		}
 
@@ -124,6 +125,7 @@
 		// Wraps .tabbedLabel (which wraps tab LI), First immediate child of tab UL
 		.tabbedRow {
 			width: auto;
+			text-align: center;
 
 			@if $nav-tabs-2-enable-justify == true {
 				@include breakpoint(lg) {
