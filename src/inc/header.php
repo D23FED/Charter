@@ -19,6 +19,7 @@ if (file_exists($site['files']['page_vars'])) {
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 	<?php // Bootstrap CSS
 	stylesheet($site['assets']['bootstrap_css']);
+	stylesheet($site['assets']['fontawesome_css']);
 	// Site CSS
 	html_comment('Global Style');
 	stylesheet($site['assets']['site_css']);
