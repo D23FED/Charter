@@ -99,7 +99,7 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 					}
 
 
-					@include hover-focus {
+					&:focus {
 						color: $md-blue;
 					}
 				}
@@ -107,7 +107,7 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 				// Active tab link
 				&.js-active > a:not(.details-toggle) {
 					&,
-					&:hover,
+					// &:hover,
 					&:focus {
 						border: none;
 						border-left-style: solid;

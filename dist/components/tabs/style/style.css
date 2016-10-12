@@ -371,7 +371,6 @@
 
 .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:focus {
   border: .1rem solid #FFF;
-  border-bottom: none;
   box-shadow: 0 0 .5rem 0 #000000;
   background: #fff;
   color: #0077BC;
@@ -505,11 +504,11 @@
   }
 }
 
-.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):focus, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):hover {
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):focus {
   color: #00629B;
 }
 
-.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle), .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):hover, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus {
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle), .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus {
   border: none;
   border-left-style: solid;
   border-left-width: .7rem;
@@ -522,12 +521,12 @@
 }
 
 @media (min-width:62em) {
-  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle), .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):hover, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus {
+  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle), .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus {
     background-color: #0077BC;
   }
 }
 
-.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle)::after, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):hover::after, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus::after {
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle)::after, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus::after {
   content: '';
   z-index: 10;
   position: absolute;
@@ -548,7 +547,7 @@
 }
 
 @media (min-width:62em) {
-  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle)::after, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):hover::after, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus::after {
+  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle)::after, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus::after {
     border-top-width: 3.2rem;
     border-bottom-width: 3.2rem;
     border-left-width: 2.5rem;
