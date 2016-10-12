@@ -22,22 +22,13 @@ $nav-tabs-gutter-width: 0.2rem;
 				}
 
 
-				// First tab
-				&:first-child {
-					margin-left: 0;
-				}
-
-				// Last tab
-				&:last-child {
-					margin-left: 0;
-				}
-
 				// Tab link
 				> a {
 					margin: 0;
 					color: $md-blue;
 					background-color: #ededed;
-					border: .1rem solid transparent;
+					border-width: .1rem;
+					border-style: solid;
 					border-color: #eee #eee #ddd;
 					border-radius: .4rem .4rem 0 0;
 
@@ -47,17 +38,40 @@ $nav-tabs-gutter-width: 0.2rem;
 						border-color: #eee #eee #ddd;
 					}
 				}
+			}
 
+			.tab {
 				// Active tab link
-				&.js-active {
-					a,
-					a:hover,
-					a:focus {
+				&.js-active > a {
+					&,
+					&:hover,
+					&:focus {
 						color: #333;
 						background-color: #fff;
 						border: .1rem solid #ddd;
 						border-bottom-color: transparent;
 					}
+				}
+
+				// First tab
+				&:first-child {
+					margin-left: 0;
+				}
+
+				// Last tab
+				&:last-child {
+					margin-left: 0;
+				}
+			}
+
+			.arrow {
+				&:first-child {
+					margin-right: .1rem;
+				}
+
+				// Last tab
+				&:last-child {
+					margin-left: .1rem;
 				}
 			}
 		}
