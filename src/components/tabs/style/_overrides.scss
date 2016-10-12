@@ -1,5 +1,5 @@
-/* Rules strictly to override core CSS */
-.tab-component {
+/* Override core CSS */
+.tabbedComponent {
 	// Row containing tabs
 	.tab-row {
 		display: block;
@@ -32,3 +32,4 @@
 		box-shadow: none;
 	}
 }
+/* End core.css overrides */

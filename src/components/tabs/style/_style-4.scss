@@ -35,11 +35,8 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 	width: 0;
 }
 
-.tab-style-4 {
-	// Component wrapper
-	.tab-component {
-		@include clearfix;
-	}
+.tabbedComponent.tab-style-4 {
+	@include clearfix;
 
 	// Row containing tabs
 	.tab-row {
@@ -56,7 +53,8 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 			border-bottom: none;
 
 			// Actual tabs
-			.tab, .arrow {
+			.tab {
+				position: relative;
 				margin-bottom: 0;
 				width: 100%;
 				text-align: left;
@@ -101,40 +99,16 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 					}
 
 
-					@include hover-focus {
+					&:focus {
 						color: $md-blue;
 					}
 				}
 
-				// 'View/Hide Details' button
-				.details-toggle {
-					@include vertical-center;
-
-					display: inline-block;
-					right: 0;
-					text-align: right;
-					width: auto;
-					font-size: 1.8rem;
-					color: #fff;
-					text-decoration: none;
-					padding-right: 2rem;
-
-					&::before {
-						content: 'View ';
-						display: inline-block;
-						padding-right: .5rem;
-					}
-
-					@include breakpoint(md) {
-						display: none;
-					}
-				}
-
 				// Active tab link
-				&.js-active {
-					a:not(.details-toggle),
-					a:not(.details-toggle):hover,
-					a:not(.details-toggle):focus {
+				&.js-active > a:not(.details-toggle) {
+					&,
+					// &:hover,
+					&:focus {
 						border: none;
 						border-left-style: solid;
 						border-left-width: .7rem;
@@ -172,13 +146,53 @@ $content-horiz-padding: $triangle-right-width + 1.5rem;
 							}
 						}
 					}
+				}
 
-					.details-toggle {
+				&.js-active > a.details-toggle {
+					&,
+					&:hover,
+					&:focus {
+						color: #fff;
+						background-color: transparent;
+						cursor: pointer;
+
 						&::before {
 							content: 'Hide ';
 						}
 					}
 				}
+
+				// 'View/Hide Details' button
+				.details-toggle {
+					@include vertical-center;
+
+					display: inline-block;
+					background-color: transparent;
+					border: none;
+					color: #fff;
+					right: 0;
+					text-align: right;
+					width: auto;
+					font-size: 1.8rem;
+					text-decoration: none;
+					padding: 0;
+					padding-right: 2rem;
+
+					&::before {
+						content: 'View ';
+						display: inline-block;
+						padding-right: .5rem;
+					}
+
+					@include breakpoint(md) {
+						display: none;
+					}
+				}
+			}
+
+			// Arrows not supported on side tab
+			.arrow {
+				display: none;
 			}
 		}
 	}
