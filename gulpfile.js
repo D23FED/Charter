@@ -143,6 +143,7 @@ gulp.task('style', function() {
 		}))
 		// Begin recording sourcemaps
 		.pipe($.sourcemaps.init())
+		.pipe($.changed(paths.dist))
 		// Compile Sass
 		.pipe($.sass({
 			includePaths: sassIncludePaths,

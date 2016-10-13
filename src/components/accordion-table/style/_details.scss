@@ -1,0 +1,14 @@
+// Expansion
+.row-details {
+	@include bs-row;
+
+	#{$table} {
+
+		> li {
+			display: block;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			@include bs-column();
+		}
+	}
+}

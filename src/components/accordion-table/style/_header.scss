@@ -1,0 +1,164 @@
+@mixin cha-btn-primary {}
+
+.row-header {
+	background-size: 100% 4.0rem;
+	background-repeat: no-repeat;
+	background-position: 0 -2.0rem;
+	background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0, rgba(0, 0, 0, 0) 70%);
+	border-top: .1rem solid #c4c4c4;
+	padding: 1.5rem 0;
+	line-height: 1;
+
+	@include bs-row;
+
+	#{$table} {
+
+		@include breakpoint($accordion-switchpoint) {
+			display: table;
+			width: 100%;
+
+			@for $i from 1 through 5 {
+				&.column-#{$i} {
+
+					.at-column {
+						width: percentage(1 / $i);
+					}
+				}
+			}
+		}
+	}
+
+	img {
+		display: none;
+
+		@include breakpoint($accordion-switchpoint) {
+			display: block;
+		}
+	}
+
+	// #{$table} {
+
+	.at-column {
+		padding: $column-padding-v $column-padding-h;
+		display: block;
+		padding: 0;
+		vertical-align: middle;
+
+		> div {
+			@include bs-column('static');
+		}
+
+		&:first-of-type {
+			> div {
+				// padding-left: 0;
+
+			}
+		}
+
+		&:last-of-type {
+			> div {
+				// padding-right: 0;
+
+			}
+		}
+
+		@include breakpoint($accordion-switchpoint) {
+			display: table-cell;
+			padding-top: 0;
+			padding-bottom: 0;
+			width: 20%;
+		}
+	}
+
+	// }
+
+	.btn {
+		border-radius: 0;
+		font-size: 1.6rem;
+		padding: .7rem 4.0rem;
+		width: 100%;
+	}
+
+	// Choose Offer button
+	.linkComponent:not(.accordionTableExpander) {
+		.btn {
+			text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+			box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
+			position: relative;
+			margin-top: 1.5rem;
+			margin-bottom: .5rem;
+			text-transform: uppercase;
+			font-weight: bold;
+			width: 100%;
+
+			@include breakpoint($accordion-switchpoint) {
+				margin-top: 0;
+			}
+		}
+
+		.btn-primary {
+			background-color: $btn-color;
+			background-image: linear-gradient(to bottom, $btn-color 0, #ffa300 100%);
+			background-repeat: repeat-x;
+			border-color: #e69300;
+			color: #fff;
+		}
+	}
+
+	// See More Button
+	.linkComponent.accordionTableExpander {
+		margin-bottom: 2.0rem;
+
+		.btn {
+			padding: .7rem;
+			position: absolute;
+			top: 1.5rem;
+			right: $column-padding-h;
+			right: 0;
+			font-size: 1.4rem;
+			z-index: 2;
+			margin: 0;
+			color: $btn-choose-color;
+			border: 0.1rem solid $btn-choose-color;
+			font-weight: bold;
+			box-shadow: 0 .1rem .3rem #666;
+			width: auto;
+			transition: all 150ms ease-out;
+			transition-property: color;
+
+			@include breakpoint($accordion-switchpoint) {
+				position: relative;
+				top: auto;
+				right: auto;
+				width: 100%;
+			}
+
+
+			@include hover-focus {
+				background-color: #fff;
+				color: $lt-blue;
+			}
+
+
+			// Plus sign
+			&::after {
+				content: '\2b';
+				position: relative;
+				top: .1rem;
+				display: inline-block;
+				font-family: 'Glyphicons Halflings';
+				font-style: normal;
+				font-weight: 400;
+				line-height: 1;
+			}
+
+			.linkLabel {
+				display: none;
+
+				@include breakpoint($accordion-switchpoint) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
