@@ -1,4 +1,8 @@
 @import 'colors';
+// 544px  = 34em
+// 768px  = 48em
+// 992px  = 62em
+// 1200px = 75em
 $breakpoints: (
 	xxs: 0,
 	xs: em(544),

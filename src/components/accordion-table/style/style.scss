@@ -1,0 +1,188 @@
+@import 'initialize';
+
+// load base variables, functions, and mixins
+/* Accordion Table */
+$btn-color: #feb533;
+$accordion-switchpoint: 'md';
+$column-padding-h: 1rem;
+$column-padding-v: 0.5rem;
+
+@mixin cha-btn-primary {
+	background-color: $btn-color;
+	background-image: linear-gradient(to bottom, $btn-color 0, #ffa300 100%);
+	background-repeat: repeat-x;
+	text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+	box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
+}
+
+.accordionTableRow {
+	position: relative;
+
+	// Table base
+	ul.at-table {
+		display: block;
+		margin: 0;
+		padding: 0;
+
+		@include breakpoint($accordion-switchpoint) {
+			display: table;
+			width: 100%;
+		}
+
+		// Columns
+		.at-column {
+			padding: $column-padding-v $column-padding-h;
+			display: block;
+			padding: 0;
+			vertical-align: middle;
+
+			@include breakpoint($accordion-switchpoint) {
+				display: table-cell;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+
+			&:first-child {}
+
+			&:last-child {}
+		}
+	}
+
+	&:first-child {
+		margin-top: 7.5rem;
+	}
+
+	// Table row
+	.row-header {
+		background-size: 100% 4.0rem;
+		background-repeat: no-repeat;
+		background-position: 0 -2.0rem;
+		background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0, rgba(0, 0, 0, 0) 70%);
+		border-top: .1rem solid #c4c4c4;
+		padding: 1.5rem 0;
+		line-height: 1;
+
+		img {
+			display: none;
+
+			@include breakpoint($accordion-switchpoint) {
+				display: block;
+			}
+		}
+
+		h2 {
+			font-size: 2.4rem;
+		}
+
+		h3 {
+			font-size: 2.2rem;
+			font-weight: 500;
+			line-height: 1.1;
+			font-family: $font-open-sans-lt;
+			margin-bottom: .3rem;
+			margin-top: 0;
+
+			a {
+				color: $link-default;
+				text-decoration: none;
+
+				@include hover-focus {
+					text-decoration: underline;
+					color: $link-hover-default;
+				}
+			}
+		}
+		h4 {
+			font-size: 1.6rem;
+		}
+		.btn {
+			border-radius: 0;
+			font-size: 1.6rem;
+			padding: .7rem 4.0rem;
+
+		}
+		.linkComponent:not(.accordionTableExpander) {
+			.btn {
+				@include cha-btn-primary;
+
+				position: relative;
+				margin-top: 1.5rem;
+				margin-bottom: .5rem;
+				width: 100%;
+				text-transform: uppercase;
+				color: #fff;
+				border-color: #e69300;
+				font-weight: bold;
+				@include breakpoint($accordion-switchpoint) {
+					width: auto;
+				}
+
+			}
+		}
+
+		// See More Button
+		.linkComponent.accordionTableExpander {
+			.btn {
+				padding: .7rem;
+				position: absolute;
+				top: 1.5rem;
+				right: $column-padding-h;
+				font-size: 1.4rem;
+				z-index: 2;
+				margin: 0;
+				color: $blue;
+				border: 0.1rem solid $blue;
+				font-weight: bold;
+				box-shadow: 0 .1rem .3rem #666;
+
+				@include breakpoint($accordion-switchpoint) {
+					position: relative;
+					top: auto;
+					right: auto;
+				}
+
+				// Plus sign
+				&::after {
+					content: '\2b';
+					position: relative;
+					top: .1rem;
+					display: inline-block;
+					font-family: 'Glyphicons Halflings';
+					font-style: normal;
+					font-weight: 400;
+					line-height: 1;
+				}
+
+				.linkLabel {
+					display: none;
+
+					@include breakpoint($accordion-switchpoint) {
+						display: inline-block;
+					}
+				}
+
+			}
+		}
+
+
+	}
+
+	@include breakpoint($accordion-switchpoint) {}
+
+
+	// Expansion
+	.row-details {
+
+
+	}
+}
+
+.add-offers {
+	font-size: 3.0rem;
+	font-family: $font-open-sans;
+}
+
+.accordionTableExpander {
+	margin-bottom: 2.0rem;
+}
