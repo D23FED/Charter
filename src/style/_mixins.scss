@@ -1,6 +1,7 @@
 // Media Queries
 // Media of at least the minimum breakpoint width. (No query for the smallest breakpoint)
 // Usage example: @include breakpoint(sm) {}
+
 @mixin breakpoint($name, $bp: $breakpoints) {
 	$min: breakpoint-min($name, $bp);
 
@@ -9,6 +10,7 @@
 			@content;
 		}
 	}
+
 	@else {
 		@content;
 	}
@@ -23,6 +25,7 @@
 			@content;
 		}
 	}
+
 	@else {
 		@content;
 	}
@@ -121,4 +124,16 @@
 		right: 0;
 		bottom: 0;
 	}
+}
+
+@mixin bs-column($pos: relative) {
+	position: $pos;
+	min-height: .1rem;
+	padding-left: $grid-gutter-width / 2;
+	padding-right: $grid-gutter-width / 2;
+}
+
+@mixin bs-row {
+	margin-left: -$grid-gutter-width / 2;
+	margin-right: -$grid-gutter-width / 2;
 }

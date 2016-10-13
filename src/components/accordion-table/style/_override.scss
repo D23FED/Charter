@@ -1,0 +1,27 @@
+@import 'initialize';
+
+// load base variables, functions, and mixins
+/* Accordion Table */
+$btn-color: #feb533;
+$accordion-switchpoint: 'md';
+$column-padding-h: 1rem;
+$column-padding-v: 0.5rem;
+
+.accordionTableRow {
+	ul.at-table {
+		display: block;
+		width: 100%;
+
+		li {
+			display: list-item;
+			padding: 0;
+			vertical-align: baseline;
+		}
+	}
+	.row-details {
+		display: none;
+	}
+}
+.new {
+	display: 	none;
+}
