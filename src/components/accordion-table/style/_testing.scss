@@ -1,0 +1,11 @@
+@import 'initialize';
+
+.accordionTableRow {
+	&:first-child {
+		margin-top: 7.5rem;
+	}
+}
+
+.new {
+	display: none;
+}

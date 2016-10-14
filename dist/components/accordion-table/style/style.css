@@ -1,4 +1,8 @@
 /* Accordion Table */
+.accordionTableRow {
+  position: relative;
+}
+
 .accordionTableRow ul.at-table {
   display: block;
   width: 100%;
@@ -10,13 +14,8 @@
   vertical-align: baseline;
 }
 
-.accordionTableRow .row-details,.new {
+.accordionTableRow .row-details {
   display: none;
-}
-
-/* Accordion Table */
-.accordionTableRow {
-  position: relative;
 }
 
 .accordionTableRow ul.at-table {
@@ -27,6 +26,10 @@
 
 .accordionTableRow h1, .accordionTableRow h2, .accordionTableRow h3, .accordionTableRow h4, .accordionTableRow h5, .accordionTableRow h6 {
   margin-top: 0;
+}
+
+.accordionTableRow h1 {
+  font-size: 2.6rem;
 }
 
 .accordionTableRow h2 {
@@ -56,17 +59,13 @@
   font-size: 1.6rem;
 }
 
-.accordionTableRow:first-child {
-  margin-top: 7.5rem;
-}
-
 .accordionTableRow .row-header {
   background-size: 100% 4.0rem;
   background-repeat: no-repeat;
   background-position: 0 -2.0rem;
   background-image: -webkit-radial-gradient(center ellipse,rgba(0,0,0,0.15) 0,transparent 70%);
   background-image: radial-gradient(ellipse at center,rgba(0,0,0,0.15) 0,transparent 70%);
-  border-top: .1rem solid #c4c4c4;
+  border-top: .1rem solid #ccc;
   padding: 1.5rem 0;
   line-height: 1;
   margin-left: -1.5rem;
@@ -85,7 +84,7 @@
 }
 
 .accordionTableRow .row-header .at-column > div {
-  position: "static";
+  position: static;
   min-height: .1rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -99,7 +98,6 @@
 }
 
 .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn {
-  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.75);
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.33);
   position: relative;
   margin-top: 1.5rem;
@@ -110,6 +108,7 @@
 }
 
 .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn-primary {
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.75);
   background-color: #feb533;
   background-image: -webkit-linear-gradient(top,#feb533,#ffa300);
   background-image: linear-gradient(180deg,#feb533 0,#ffa300);
@@ -126,7 +125,6 @@
   padding: .7rem;
   position: absolute;
   top: 1.5rem;
-  right: 1rem;
   right: 0;
   font-size: 1.4rem;
   z-index: 2;
@@ -160,6 +158,10 @@
 
 .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn .linkLabel {
   display: none;
+}
+
+.accordionTableRow .js-active .row-header .linkComponent.accordionTableExpander .btn::after {
+  content: '\2212';
 }
 
 .accordionTableRow .row-details {
@@ -201,7 +203,6 @@
     display: table-cell;
     padding-top: 0;
     padding-bottom: 0;
-    width: 20%;
   }
   .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn {
     margin-top: 0;
