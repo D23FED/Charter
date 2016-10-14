@@ -1,69 +1,24 @@
+
+<?php require( $_SERVER[ 'DOCUMENT_ROOT']. '/inc/header.php'); //begin base template ?>
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'].'/TWC/core/includes/constants.php');
-
-// Get page name
-if ( isset($_GET['sandbox']) ) {
-	$page_type = 'sandbox';
-	$page = $_GET['sandbox'];
-} else if ( isset($_GET['component']) ) {
-	$page_type = 'component';
-	$page = $_GET['component'];
-} else if ( isset($_GET['p']) ) {
-	$page = $_GET['p'];
-}
-if ( isset($_GET['sandbox']) || isset($_GET['component']) || isset($_GET['p']) ) {
-	$lastchar = substr($page, -1);
-	$ext = substr($page, -4);
-}
-
-// Handle references to a directory
-if ($lastchar === '/') {
-	$page .= 'index.php';
-// Handle references to files that a missing ext
-} elseif ($ext !== '.php') {
-	$page .= '.php';
-}
-
-// Location of variables file
-$page_vars_file = 'variables.php';
-$page_inc_dir = 'inc/';
-$root_dir = '/';
-$page_dir = dirname($page) . '/';
-// Look for:
-//   "/inc/variables.php"
-$page_vars = $page_dir.$page_inc_dir.$page_vars_file;
-
-// Debug
-echo "\n" . '<!--' . "\n";
-echo $_GET['p'] . "\n";
-echo $page . "\n";
-echo substr($page, -1) . "\n";
-echo substr($page, -4) . "\n";
-echo '-->';
-
-// Assemble page
-if ( file_exists($page) ) {
-	// Check for location of vars file
-	if (file_exists($page_vars)) {
-		include_once($page_vars);
-	} elseif ( file_exists($page_vars_alt) ) {
-		include_once($page_vars_alt);
-	} else {
-		echo '<!-- No page variables found -->';
-	}
-	include_once(INC.'functions.php');
-	include_once(INC.'header.php');
-	// Image files relative to their project folder will break, search and replace img tags to make them relative to root
-	ob_start();
-	include($page);
-	$page_content = ob_get_clean();
-	$body = str_replace('"images/','"'.$page_dir.'images/',$page_content);
-	$body = str_replace('"img/','"'.$page_dir.'img/',$page_content);
-	echo $body;
-	// include_once($page);
-	include_once(INC.'footer.php');
-} else {
-	echo '<h1>Page not found</h1>';
-}
-
+$components = array(
+	'Accordion Table' => array(
+		'url' => 'accordion-table'
+	)
+)
 ?>
+<main class="container">
+<div class="row">
+	<div class="col-xs-12">
+	<h1>Components</h1>
+		<ul>
+			<li><a href="components/accordion-table/">accordion-table</a></li>
+			<li><a href="components/image-art-direction/">image-art-direction</a></li>
+			<li><a href="components/tabs/">tabs</a></li>
+			<li><a href="components/video-wrapper/">video-wrapper/</a></li>
+		</ul>
+	</div>
+</div>
+
+</main>
+<?php require($site[ 'files'][ 'site_footer']); //end base template ?>
