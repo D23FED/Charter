@@ -1,7 +1,5 @@
 @import 'initialize';
-@import 'override';
 
-// load base variables, functions, and mixins
 /* Accordion Table */
 $btn-color: #feb533;
 $btn-choose-color: $md-blue;
@@ -10,9 +8,9 @@ $column-padding-h: 1rem;
 $column-padding-v: 0.5rem;
 $table: 'ul.at-table';
 
-
-
 .accordionTableRow {
+	@import 'override';
+
 	position: relative;
 
 	// Table base
@@ -20,7 +18,6 @@ $table: 'ul.at-table';
 		display: block;
 		margin: 0;
 		padding: 0;
-
 	}
 
 	%heading {
@@ -31,6 +28,10 @@ $table: 'ul.at-table';
 		h#{$i} {
 			@extend %heading;
 		}
+	}
+
+	h1 {
+		font-size: 2.6rem;
 	}
 
 	h2 {
@@ -58,9 +59,6 @@ $table: 'ul.at-table';
 
 	h4 {
 		font-size: 1.6rem;
-	}
-	&:first-child {
-		margin-top: 7.5rem;
 	}
 
 	@import 'header';

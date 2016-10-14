@@ -122,7 +122,8 @@ var
 				paths.source + paths.sass
 			],
 			relative: paths.dist
-		})
+		}),
+		$.cssMqpacker()
 	],
 	sassIncludePaths = [
 		'src/style/',

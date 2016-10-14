@@ -64,9 +64,11 @@
 }
 
 @media (max-width:992px) {
+
   .tabbedComponent .tab-row > ul > li {
     display: none;
   }
+
   .tabbedComponent .tab-row .tabbedRow {
     display: inline-block;
     width: 100%;
