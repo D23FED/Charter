@@ -1,33 +1,43 @@
 @import 'initialize';
 
+.row {
+	@include bs-row-reset;
+}
+
 & {
-	display: table;
+	display: inline-block;
 	font-size: 4rem;
 	line-height: 1;
 	font-family: $font-open-sans;
-	> .#{$row}  {
+
+	> .#{$row} {
 		display: table-row;
 	}
-	@include breakpoint('md') {
 
-	}
+	@include breakpoint('md') {}
 }
 
 .before,
 .after {
 	font-size: 50%;
+	text-align: left;
 }
+
 // Row containing the actual price
 .price {
 	display: table;
+
 	> .#{$column} {
 		padding: 0 .1rem;
+
 		&:first-child {
 			padding-left: 0;
 		}
+
 		&:last-child {
 			padding-right: 0;
 		}
+
 		&.currency {
 			padding-right: 0;
 		}
@@ -61,7 +71,7 @@
 		display: table;
 	}
 
-	.#{$row}  {
+	.#{$row} {
 		display: table-row;
 	}
 }

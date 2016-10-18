@@ -1,33 +1,42 @@
 /* Pricing Component */
+.price-block .row {
+  margin: 0;
+}
+
+.price-block .row::before, .price-block .row::after {
+  display: none;
+}
+
 .price-block {
-  display: table;
+  display: inline-block;
   font-size: 4rem;
   line-height: 1;
   font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.price-block > .p-row {
+.price-block > .row {
   display: table-row;
 }
 
 .price-block .before,
 .price-block .after {
   font-size: 50%;
+  text-align: left;
 }
 
 .price-block .price {
   display: table;
 }
 
-.price-block .price > .p-col {
+.price-block .price > .col-price {
   padding: 0 .1rem;
 }
 
-.price-block .price > .p-col:first-child {
+.price-block .price > .col-price:first-child {
   padding-left: 0;
 }
 
-.price-block .price > .p-col:last-child,.price-block .price > .p-col.currency {
+.price-block .price > .col-price:last-child,.price-block .price > .col-price.currency {
   padding-right: 0;
 }
 
@@ -54,7 +63,7 @@
   display: table;
 }
 
-.price-block .details .p-row {
+.price-block .details .row {
   display: table-row;
 }
 
