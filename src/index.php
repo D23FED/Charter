@@ -12,10 +12,11 @@ $components = array(
 	<div class="col-xs-12">
 	<h1>Components</h1>
 		<ul>
-			<li><a href="components/accordion-table/">accordion-table</a></li>
-			<li><a href="components/image-art-direction/">image-art-direction</a></li>
-			<li><a href="components/tabs/">tabs</a></li>
-			<li><a href="components/video-wrapper/">video-wrapper/</a></li>
+			<li><a href="components/accordion-table/">Accordion Table</a></li>
+			<li><a href="components/image-art-direction/">Image Art Direction</a></li>
+			<li><a href="components/price/">Pricing</a></li>
+			<li><a href="components/tabs/">Tabs</a></li>
+			<li><a href="components/video-wrapper/">Video Wrapper/</a></li>
 		</ul>
 	</div>
 </div>
