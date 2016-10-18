@@ -1,0 +1,23 @@
+/* Pricing Component */
+@import 'initialize';
+
+$component-wrapper: 'price-block';
+$p-font-size-base: 4rem;
+$row: 'p-row';
+$column: 'p-col';
+$text-gradient-fallback-color: $lt-blue;
+$text-gradient-start-color: #4ab3f1;
+$text-gradient-end-color: $md-blue;
+
+@mixin gradient-text-blue {
+	color: $text-gradient-fallback-color;
+	background-image: linear-gradient(to bottom, $text-gradient-start-color 0, $text-gradient-end-color 100%);
+	background-repeat: repeat-x;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.#{$component-wrapper} {
+	@import 'base';
+	@import 'style-01';
+}
