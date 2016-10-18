@@ -10,7 +10,6 @@
 			@content;
 		}
 	}
-
 	@else {
 		@content;
 	}
@@ -25,7 +24,6 @@
 			@content;
 		}
 	}
-
 	@else {
 		@content;
 	}
@@ -126,11 +124,18 @@
 	}
 }
 
+@mixin bs-column-padding($padding: $grid-gutter-width / 2) {
+	padding: {
+		left: $padding;
+		right: $padding;
+	};
+}
+
 @mixin bs-column($pos: relative) {
 	position: $pos;
 	min-height: .1rem;
-	padding-left: $grid-gutter-width / 2;
-	padding-right: $grid-gutter-width / 2;
+
+	@include bs-column-padding;
 }
 
 @mixin bs-row {

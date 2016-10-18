@@ -1,6 +1,6 @@
+/* Image Art Direction */
 @import 'initialize';
 
-/* Image Art Direction */
 // Horizontal focus points
 // 1 = far left
 // 2 = left
@@ -13,51 +13,84 @@ $focus-left: 25%;
 $focus-middle: 50%;
 $focus-right: 75%;
 $focus-far-right: right;
-$x-positions: left, 25%, 50%, 75%, right;
+$x-positions: $focus-far-left, $focus-left, $focus-middle, $focus-right, $focus-far-right;
 $y-positions: top, bottom;
 $x-position-default: center;
-$container-name: image-focus;
-$container-class: imageArtDirection;
+$img-container-namespace: image-focus;
+$img-container: background-image;
+$component-class: imageArtDirection;
 
-[class*='image-focus-'] {
-	min-height: 20rem;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-}
+@import 'testing';
 
-.#{$container-class} a[class*='image-focus-'] {
-	display: block;
-	color: inherit;
-	text-decoration: none;
-}
+// Prevent duplicate container padding
+.#{$component-class} {
+	// If IAD is set inside a fixed-width container, do not set fixed widths on any containers inside it
+	.container & {
+		// remove padding on IAD so that the photo touches the edges of the container
+		@include bs-row;
 
-.container  .#{$container-class} {
-	vertical-align: middle;
-	color: #fff;
-}
+		// If IAD itself is already inside a container, remove fixed widths from nested containers
+		.container {
+			width: auto;
+		}
+	}
 
-@for $i from 1 through length($x-positions) {
+	// Inside a fluid-width page template or container, remove padding on IAD so that it touches the edges of the viewport
+	.container-fluid & {
+		@include bs-row;
+	}
+
+	// Remove padding from inner containers (set on outer component-wrapping element)
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+
+		// remove fixed widths from nested containers
+		.container {
+			width: auto;
+		}
+	}
+
+	// Set standard padding on bg image container
+	.#{$img-container} {
+		padding: $grid-gutter-width / 2;
+		min-height: 5rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	// Generate image positioning classes
 	@for $i from 1 through length($x-positions) {
-		.mob-#{$container-name}-#{$i} {
-			background-position: nth($x-positions, $i) $x-position-default;
+		&.mob-#{$img-container-namespace}-#{$i} {
+			.#{$img-container} {
+				background-position: nth($x-positions, $i) $x-position-default;
+			}
+		}
 
-			@for $j from 1 through length($y-positions) {
-				&.mob-#{$container-name}-#{nth($y-positions, $j)} {
+		@for $j from 1 through length($y-positions) {
+			&.mob-#{$img-container-namespace}-#{$i}.mob-#{$img-container-namespace}-#{nth($y-positions, $j)} {
+				.#{$img-container} {
 					background-position: nth($x-positions, $i) nth($y-positions, $j);
 				}
 			}
 		}
 	}
-}
 
-@include breakpoint('sm') {
-	.#{$container-name}-#{$i} {
-		background-position: nth($x-positions, $i) $x-position-default;
+	@include breakpoint('sm') {
+		@for $i from 1 through length($x-positions) {
+			&.#{$img-container-namespace}-#{$i} {
+				.#{$img-container} {
+					background-position: nth($x-positions, $i) $x-position-default;
+				}
+			}
 
-		@for $j from 1 through length($y-positions) {
-			&.#{$container-name}-#{nth($y-positions, $j)} {
-				background-position: nth($x-positions, $i) nth($y-positions, $j);
+			@for $j from 1 through length($y-positions) {
+				&.#{$img-container-namespace}-#{$i}.#{$img-container-namespace}-#{nth($y-positions, $j)} {
+					.#{$img-container} {
+						background-position: nth($x-positions, $i) nth($y-positions, $j);
+					}
+				}
 			}
 		}
 	}
