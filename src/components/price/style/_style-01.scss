@@ -1,6 +1,6 @@
 @import 'initialize';
 
-&.style-01 {
+.price-style-01 {
 	.before,
 	.after {
 		font-size: 1.4rem;
@@ -10,7 +10,8 @@
 
 	.currency,
 	.whole,
-	.super {
+	.super,
+	.separator {
 		color: $md-blue;
 		font-weight: 800;
 
@@ -40,5 +41,10 @@
 		color: #333;
 		font-size: 1.2rem;
 		font-size: percentage(1.2 / strip-unit($p-font-size-base));
+	}
+	// Separator between two prices in double price block
+	.separator {
+		font-size: $p-font-size-base;
+
 	}
 }

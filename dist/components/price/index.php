@@ -1,13 +1,21 @@
 <?php require( $_SERVER[ 'DOCUMENT_ROOT']. '/inc/header.php'); //begin base template ?>
 <?php
-$price_01 = array(
+$price_internet = array(
+	"before" => "from",
+	"after" => "",
+	"currency" => "$",
+	"whole" => "29",
+	"super" => "99/mo",
+	"terms" => "for 12 mos.*"
+);
+$price_tv = array(
 	"before" => "from",
 	"after" => "",
 	"currency" => "$",
 	"whole" => "59",
 	"super" => "99/mo",
 	"terms" => "for 12 mos.*"
-	);
+);
 
 function price_html($price, $class ='') { ?>
 	<div class="price-block <?php echo $class; ?>">
@@ -54,11 +62,38 @@ function price_html($price, $class ='') { ?>
 <?php } ?>
 <div class="container">
 	<div class="row">
-		<div class="col-xs-6"><?php price_html($price_01); ?></div>
-		<div class="col-xs-6"><?php price_html($price_01, 'style-01'); ?></div>
+		<div class="col-xs-12">
+			<h1>Single Price</h1>
+		</div>
 	</div>
-
+	<div class="row">
+		<div class="col-xs-6">
+			<h2>Basic</h2>
+			<?php price_html($price_internet); ?>
+		</div>
+		<div class="col-xs-6">
+			<h2>Style 01</h2>
+			<?php price_html($price_internet, 'price-style-01'); ?>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>Double Price Block</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="price-block-double price-style-01">
+				<?php price_html($price_tv, 'price-style-01'); ?>
+				<span class="separator price-style-01">
+					&plus;
+				</span>
+				<?php price_html($price_internet, 'price-style-01'); ?>
+			</div>
+		</div>
+	</div>
 </div>
+
 
 
 

@@ -8,6 +8,9 @@
 	> .#{$row}  {
 		display: table-row;
 	}
+	@include breakpoint('md') {
+
+	}
 }
 
 .before,

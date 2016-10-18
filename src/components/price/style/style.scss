@@ -19,5 +19,6 @@ $text-gradient-end-color: $md-blue;
 
 .#{$component-wrapper} {
 	@import 'base';
-	@import 'style-01';
 }
+@import 'double';
+@import 'style-01';
