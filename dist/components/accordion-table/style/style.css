@@ -26,6 +26,8 @@
 
 .accordionTableRow h1, .accordionTableRow h2, .accordionTableRow h3, .accordionTableRow h4, .accordionTableRow h5, .accordionTableRow h6 {
   margin-top: 0;
+  font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight: 300;
 }
 
 .accordionTableRow h1 {
@@ -38,9 +40,7 @@
 
 .accordionTableRow h3 {
   font-size: 2.2rem;
-  font-weight: 500;
   line-height: 1.1;
-  font-family: Open Sans Light,Helvetica Neue,Helvetica,Arial,sans-serif;
   margin-bottom: .3rem;
   margin-top: 0;
 }
@@ -95,6 +95,7 @@
   font-size: 1.6rem;
   padding: .7rem 4.0rem;
   width: 100%;
+  font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn {
@@ -138,6 +139,7 @@
   transition: all 150ms ease-out;
   -webkit-transition-property: color;
   transition-property: color;
+  text-transform: uppercase;
 }
 
 .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn:focus, .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn:hover {

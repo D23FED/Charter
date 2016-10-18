@@ -1,0 +1,22 @@
+@import 'initialize';
+
+$checkmark-size: 3rem;
+
+.bullets-checkmark {
+	list-style-type: none;
+	padding-left: $checkmark-size + 1rem;
+	margin-bottom: 1rem;
+
+	li::before {
+		content: '';
+		display: inline-block;
+		background-image: url(/images/res-form-sprite.png);
+		background-repeat: no-repeat;
+		background-position: -2px -85px;
+		width: $checkmark-size;
+		height: $checkmark-size;
+		margin-left: -$checkmark-size;
+		vertical-align: middle;
+		vertical-align: -webkit-baseline-middle;
+	}
+}
