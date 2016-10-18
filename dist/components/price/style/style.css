@@ -1,0 +1,120 @@
+/* Pricing Component */
+.price-block {
+  display: table;
+  font-size: 4rem;
+  line-height: 1;
+  font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.price-block > .p-row {
+  display: table-row;
+}
+
+.price-block .before,
+.price-block .after {
+  font-size: 50%;
+}
+
+.price-block .price {
+  display: table;
+}
+
+.price-block .price > .p-col {
+  padding: 0 .1rem;
+}
+
+.price-block .price > .p-col:first-child {
+  padding-left: 0;
+}
+
+.price-block .price > .p-col:last-child,.price-block .price > .p-col.currency {
+  padding-right: 0;
+}
+
+.price-block .currency,
+.price-block .whole,
+.price-block .details {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.price-block .whole {
+  font-size: 100%;
+}
+
+.price-block .currency {
+  font-size: 66.66667%;
+}
+
+.price-block .details {
+  font-size: 33.33333%;
+}
+
+.price-block .details > .inner {
+  display: table;
+}
+
+.price-block .details .p-row {
+  display: table-row;
+}
+
+/* Double Price Block */
+
+.price-block-double .price-block,.price-block-double .separator {
+  display: inline-block;
+}
+
+.price-style-01 .before,
+.price-style-01 .after {
+  font-size: 1.4rem;
+  font-size: 35%;
+  color: #666;
+}
+
+.price-style-01 .currency,
+.price-style-01 .whole,
+.price-style-01 .super,
+.price-style-01 .separator {
+  color: #00629B;
+  font-weight: 800;
+}
+
+.price-style-01 .currency,
+.price-style-01 .super {
+  font-size: 1.8rem;
+  font-size: 45%;
+}
+
+.price-style-01 .details {
+  text-align: center;
+  font-size: 100%;
+}
+
+.price-style-01 .term {
+  color: #333;
+  font-size: 1.2rem;
+  font-size: 30%;
+}
+
+.price-style-01 .separator {
+  font-size: 4rem;
+}
+
+@media (min-width:62em) {
+  .price-style-01 .currency,
+  .price-style-01 .whole,
+  .price-style-01 .super,
+  .price-style-01 .separator {
+    color: #0077BC;
+    background-image: -webkit-linear-gradient(top,#4ab3f1,#00629B);
+    background-image: linear-gradient(180deg,#4ab3f1 0,#00629B);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .price-style-01 .details {
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

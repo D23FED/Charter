@@ -1,0 +1,9 @@
+/* Double Price Block */
+.price-block-double {
+	.#{$component-wrapper} {
+		display: inline-block;
+	}
+	.separator {
+		display: inline-block;
+	}
+}

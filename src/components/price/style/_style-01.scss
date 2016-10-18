@@ -1,0 +1,50 @@
+@import 'initialize';
+
+.price-style-01 {
+	.before,
+	.after {
+		font-size: 1.4rem;
+		font-size: percentage(1.4 / strip-unit($p-font-size-base));
+		color: #666;
+	}
+
+	.currency,
+	.whole,
+	.super,
+	.separator {
+		color: $md-blue;
+		font-weight: 800;
+
+		@include breakpoint('md') {
+			@include gradient-text-blue;
+		}
+	}
+
+	.currency,
+	.super {
+		font-size: 1.8rem;
+		font-size: percentage(1.8 / strip-unit($p-font-size-base));
+	}
+
+	.details {
+		text-align: center;
+
+		@include breakpoint('md') {
+			text-align: right;
+		}
+
+
+		font-size: 100%;
+	}
+
+	.term {
+		color: #333;
+		font-size: 1.2rem;
+		font-size: percentage(1.2 / strip-unit($p-font-size-base));
+	}
+	// Separator between two prices in double price block
+	.separator {
+		font-size: $p-font-size-base;
+
+	}
+}

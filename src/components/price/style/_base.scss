@@ -1,0 +1,67 @@
+@import 'initialize';
+
+& {
+	display: table;
+	font-size: 4rem;
+	line-height: 1;
+	font-family: $font-open-sans;
+	> .#{$row}  {
+		display: table-row;
+	}
+	@include breakpoint('md') {
+
+	}
+}
+
+.before,
+.after {
+	font-size: 50%;
+}
+// Row containing the actual price
+.price {
+	display: table;
+	> .#{$column} {
+		padding: 0 .1rem;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+		&.currency {
+			padding-right: 0;
+		}
+	}
+}
+
+.currency,
+.whole,
+.details {
+	display: table-cell;
+	vertical-align: top;
+}
+
+// Price whole number
+.whole {
+	font-size: 100%;
+}
+
+// Currency symbol
+.currency {
+	font-size: percentage(2 / 3);
+}
+
+// Superscript, Cents, Term
+.details {
+	font-size: percentage(1 / 3);
+}
+
+.details {
+	> .inner {
+		display: table;
+	}
+
+	.#{$row}  {
+		display: table-row;
+	}
+}
