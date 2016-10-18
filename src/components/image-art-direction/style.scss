@@ -1,159 +1,97 @@
-@import 'initialize';
 /* Image Art Direction */
+@import 'initialize';
 
-/*
-Horizontal focus points
-1 = far left
-2 = left
-3 = center
-4 = right
-5 = far right
-*/
+// Horizontal focus points
+// 1 = far left
+// 2 = left
+// 3 = center
+// 4 = right
+// 5 = far right
 
 $focus-far-left: left;
 $focus-left: 25%;
 $focus-middle: 50%;
 $focus-right: 75%;
 $focus-far-right: right;
+$x-positions: $focus-far-left, $focus-left, $focus-middle, $focus-right, $focus-far-right;
+$y-positions: top, bottom;
+$x-position-default: center;
+$img-container-namespace: image-focus;
+$img-container: background-image;
+$component-class: imageArtDirection;
 
-[class*='image-focus-'] {
-	min-height: 20rem;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
+@import 'testing';
 
-.imageArtDirection a[class*='image-focus-'] {
-	display: block;
-	color: inherit;
-	text-decoration: none;
-}
+// Prevent duplicate container padding
+.#{$component-class} {
+	// If IAD is set inside a fixed-width container, do not set fixed widths on any containers inside it
+	.container & {
+		// remove padding on IAD so that the photo touches the edges of the container
+		@include bs-row;
 
-.image-art-direction.twc-container {
-	vertical-align: middle;
-	color: #ffffff;
-}
-
-// Focus far left
-.image-focus-1 {
-	background-position: left center;
-
-	&.image-focus-top {
-		background-position: left top;
-	}
-
-	&.image-focus-bottom {
-		background-position: left bottom;
-	}
-}
-
-// Focus left
-.image-focus-2 {
-	background-position: 25% center;
-
-	.image-focus-top {
-		background-position: 25% top;
-	}
-
-	.image-focus-bottom {
-		background-position: 25% bottom;
-	}
-}
-
-// Focus right
-.image-focus-3 {
-	background-position: 50% center;
-
-	&.image-focus-top {
-		background-position: 50% top;
-	}
-
-	&.image-focus-bottom {
-		background-position: 50% bottom;
-	}
-}
-
-.image-focus-4 {
-	background-position: 75% center;
-
-	&.image-focus-top {
-		background-position: 75% top;
-	}
-
-	&.image-focus-bottom {
-		background-position: 75% bottom;
-	}
-}
-
-.image-focus-5 {
-	background-position: right center;
-
-	&.image-focus-top {
-		background-position: right top;
-	}
-
-	&.image-focus-bottom {
-		background-position: right bottom;
-	}
-}
-
-@include breakpoint('sm') {
-	.mob-image-focus-1 {
-		background-position: left center;
-
-		&.mob-image-focus-top {
-			background-position: left top;
-		}
-
-		&.mob-image-focus-bottom {
-			background-position: left bottom;
+		// If IAD itself is already inside a container, remove fixed widths from nested containers
+		.container {
+			width: auto;
 		}
 	}
 
-	.mob-image-focus-2 {
-		background-position: 25% center;
+	// Inside a fluid-width page template or container, remove padding on IAD so that it touches the edges of the viewport
+	.container-fluid & {
+		@include bs-row;
+	}
 
-		&.mob-image-focus-top {
-			background-position: 25% top;
-		}
+	// Remove padding from inner containers (set on outer component-wrapping element)
+	.container {
+		padding-left: 0;
+		padding-right: 0;
 
-		&.mob-image-focus-bottom {
-			background-position: 25% bottom;
+		// remove fixed widths from nested containers
+		.container {
+			width: auto;
 		}
 	}
 
-	.mob-image-focus-3 {
-		background-position: 50% center;
+	// Set standard padding on bg image container
+	.#{$img-container} {
+		padding: $grid-gutter-width / 2;
+		min-height: 5rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
 
-		&.mob-image-focus-top {
-			background-position: 50% top;
+	// Generate image positioning classes
+	@for $i from 1 through length($x-positions) {
+		&.mob-#{$img-container-namespace}-#{$i} {
+			.#{$img-container} {
+				background-position: nth($x-positions, $i) $x-position-default;
+			}
 		}
 
-		&.mob-image-focus-bottom {
-			background-position: 50% bottom;
+		@for $j from 1 through length($y-positions) {
+			&.mob-#{$img-container-namespace}-#{$i}.mob-#{$img-container-namespace}-#{nth($y-positions, $j)} {
+				.#{$img-container} {
+					background-position: nth($x-positions, $i) nth($y-positions, $j);
+				}
+			}
 		}
 	}
 
-	.mob-image-focus-4 {
-		background-position: 75% center;
+	@include breakpoint('sm') {
+		@for $i from 1 through length($x-positions) {
+			&.#{$img-container-namespace}-#{$i} {
+				.#{$img-container} {
+					background-position: nth($x-positions, $i) $x-position-default;
+				}
+			}
 
-		&.mob-image-focus-top {
-			background-position: 75% top;
-		}
-
-		&.mob-image-focus-bottom {
-			background-position: 75% bottom;
-		}
-	}
-
-	.mob-image-focus-5 {
-		background-position: right center;
-
-		&.mob-image-focus-top {
-			background-position: right top;
-		}
-
-		&.mob-image-focus-bottom {
-			background-position: right bottom;
+			@for $j from 1 through length($y-positions) {
+				&.#{$img-container-namespace}-#{$i}.#{$img-container-namespace}-#{nth($y-positions, $j)} {
+					.#{$img-container} {
+						background-position: nth($x-positions, $i) nth($y-positions, $j);
+					}
+				}
+			}
 		}
 	}
 }

@@ -1,0 +1,124 @@
+// Focus far left
+.image-focus-1 {
+	background-position: nth($x-positions, 3) center;
+
+	&.image-focus-top {
+		background-position: left top;
+	}
+
+	&.image-focus-bottom {
+		background-position: left bottom;
+	}
+}
+
+// Focus left
+.image-focus-2 {
+	background-position: 25% center;
+
+	.image-focus-top {
+		background-position: 25% top;
+	}
+
+	.image-focus-bottom {
+		background-position: 25% bottom;
+	}
+}
+
+// Focus right
+.image-focus-3 {
+	background-position: 50% center;
+
+	&.image-focus-top {
+		background-position: 50% top;
+	}
+
+	&.image-focus-bottom {
+		background-position: 50% bottom;
+	}
+}
+
+.image-focus-4 {
+	background-position: 75% center;
+
+	&.image-focus-top {
+		background-position: 75% top;
+	}
+
+	&.image-focus-bottom {
+		background-position: 75% bottom;
+	}
+}
+
+.image-focus-5 {
+	background-position: right center;
+
+	&.image-focus-top {
+		background-position: right top;
+	}
+
+	&.image-focus-bottom {
+		background-position: right bottom;
+	}
+}
+
+@include breakpoint('sm') {
+	.mob-image-focus-1 {
+		background-position: left center;
+
+		&.mob-image-focus-top {
+			background-position: left top;
+		}
+
+		&.mob-image-focus-bottom {
+			background-position: left bottom;
+		}
+	}
+
+	.mob-image-focus-2 {
+		background-position: 25% center;
+
+		&.mob-image-focus-top {
+			background-position: 25% top;
+		}
+
+		&.mob-image-focus-bottom {
+			background-position: 25% bottom;
+		}
+	}
+
+	.mob-image-focus-3 {
+		background-position: 50% center;
+
+		&.mob-image-focus-top {
+			background-position: 50% top;
+		}
+
+		&.mob-image-focus-bottom {
+			background-position: 50% bottom;
+		}
+	}
+
+	.mob-image-focus-4 {
+		background-position: 75% center;
+
+		&.mob-image-focus-top {
+			background-position: 75% top;
+		}
+
+		&.mob-image-focus-bottom {
+			background-position: 75% bottom;
+		}
+	}
+
+	.mob-image-focus-5 {
+		background-position: right center;
+
+		&.mob-image-focus-top {
+			background-position: right top;
+		}
+
+		&.mob-image-focus-bottom {
+			background-position: right bottom;
+		}
+	}
+}

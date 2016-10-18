@@ -1,133 +1,153 @@
 /* Image Art Direction */
-/*
-Horizontal focus points
-1 = far left
-2 = left
-3 = center
-4 = right
-5 = far right
-*/
-[class*='image-focus-'] {
-  min-height: 20rem;
+/* Dev-only rules */
+main {
+  border: 1px dotted red;
+}
+
+main .container {
+  border: 1px dotted yellow;
+}
+
+main .container .container {
+  border: 1px dotted green;
+}
+
+/* End dev-only rules */
+.container .imageArtDirection {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.container .imageArtDirection .container {
+  width: auto;
+}
+
+.container-fluid .imageArtDirection {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.imageArtDirection .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.imageArtDirection .container .container {
+  width: auto;
+}
+
+.imageArtDirection .background-image {
+  padding: 1.5rem;
+  min-height: 5rem;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
-.imageArtDirection a[class*='image-focus-'] {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.image-art-direction.twc-container {
-  vertical-align: middle;
-  color: #ffffff;
-}
-
-.image-focus-1 {
+.imageArtDirection.mob-image-focus-1 .background-image {
   background-position: left center;
 }
 
-.image-focus-1.image-focus-top {
+.imageArtDirection.mob-image-focus-1.mob-image-focus-top .background-image {
   background-position: left top;
 }
 
-.image-focus-1.image-focus-bottom {
+.imageArtDirection.mob-image-focus-1.mob-image-focus-bottom .background-image {
   background-position: left bottom;
 }
 
-.image-focus-2 {
+.imageArtDirection.mob-image-focus-2 .background-image {
   background-position: 25% center;
 }
 
-.image-focus-2 .image-focus-top {
+.imageArtDirection.mob-image-focus-2.mob-image-focus-top .background-image {
   background-position: 25% top;
 }
 
-.image-focus-2 .image-focus-bottom {
+.imageArtDirection.mob-image-focus-2.mob-image-focus-bottom .background-image {
   background-position: 25% bottom;
 }
 
-.image-focus-3 {
+.imageArtDirection.mob-image-focus-3 .background-image {
   background-position: 50% center;
 }
 
-.image-focus-3.image-focus-top {
+.imageArtDirection.mob-image-focus-3.mob-image-focus-top .background-image {
   background-position: 50% top;
 }
 
-.image-focus-3.image-focus-bottom {
+.imageArtDirection.mob-image-focus-3.mob-image-focus-bottom .background-image {
   background-position: 50% bottom;
 }
 
-.image-focus-4 {
+.imageArtDirection.mob-image-focus-4 .background-image {
   background-position: 75% center;
 }
 
-.image-focus-4.image-focus-top {
+.imageArtDirection.mob-image-focus-4.mob-image-focus-top .background-image {
   background-position: 75% top;
 }
 
-.image-focus-4.image-focus-bottom {
+.imageArtDirection.mob-image-focus-4.mob-image-focus-bottom .background-image {
   background-position: 75% bottom;
 }
 
-.image-focus-5 {
+.imageArtDirection.mob-image-focus-5 .background-image {
   background-position: right center;
 }
 
-.image-focus-5.image-focus-top {
+.imageArtDirection.mob-image-focus-5.mob-image-focus-top .background-image {
   background-position: right top;
 }
 
-.image-focus-5.image-focus-bottom {
+.imageArtDirection.mob-image-focus-5.mob-image-focus-bottom .background-image {
   background-position: right bottom;
 }
 
 @media (min-width:48em) {
-  .mob-image-focus-1 {
+  .imageArtDirection.image-focus-1 .background-image {
     background-position: left center;
   }
-  .mob-image-focus-1.mob-image-focus-top {
+  .imageArtDirection.image-focus-1.image-focus-top .background-image {
     background-position: left top;
   }
-  .mob-image-focus-1.mob-image-focus-bottom {
+  .imageArtDirection.image-focus-1.image-focus-bottom .background-image {
     background-position: left bottom;
   }
-  .mob-image-focus-2 {
+  .imageArtDirection.image-focus-2 .background-image {
     background-position: 25% center;
   }
-  .mob-image-focus-2.mob-image-focus-top {
+  .imageArtDirection.image-focus-2.image-focus-top .background-image {
     background-position: 25% top;
   }
-  .mob-image-focus-2.mob-image-focus-bottom {
+  .imageArtDirection.image-focus-2.image-focus-bottom .background-image {
     background-position: 25% bottom;
   }
-  .mob-image-focus-3 {
+  .imageArtDirection.image-focus-3 .background-image {
     background-position: 50% center;
   }
-  .mob-image-focus-3.mob-image-focus-top {
+  .imageArtDirection.image-focus-3.image-focus-top .background-image {
     background-position: 50% top;
   }
-  .mob-image-focus-3.mob-image-focus-bottom {
+  .imageArtDirection.image-focus-3.image-focus-bottom .background-image {
     background-position: 50% bottom;
   }
-  .mob-image-focus-4 {
+  .imageArtDirection.image-focus-4 .background-image {
     background-position: 75% center;
   }
-  .mob-image-focus-4.mob-image-focus-top {
+  .imageArtDirection.image-focus-4.image-focus-top .background-image {
     background-position: 75% top;
   }
-  .mob-image-focus-4.mob-image-focus-bottom {
+  .imageArtDirection.image-focus-4.image-focus-bottom .background-image {
     background-position: 75% bottom;
   }
-  .mob-image-focus-5 {
+  .imageArtDirection.image-focus-5 .background-image {
     background-position: right center;
   }
-  .mob-image-focus-5.mob-image-focus-top {
+  .imageArtDirection.image-focus-5.image-focus-top .background-image {
     background-position: right top;
   }
-  .mob-image-focus-5.mob-image-focus-bottom {
+  .imageArtDirection.image-focus-5.image-focus-bottom .background-image {
     background-position: right bottom;
   }
 }
