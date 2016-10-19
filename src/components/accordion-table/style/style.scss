@@ -1,4 +1,5 @@
 @import 'initialize';
+@import 'testing';
 
 /* Accordion Table */
 $btn-color: #feb533;
@@ -64,4 +65,4 @@ $table: 'ul.at-table';
 	@import 'header';
 	@import 'details';
 }
-@import 'testing';
+@import 'offer-table';

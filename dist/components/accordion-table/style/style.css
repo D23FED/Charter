@@ -1,3 +1,7 @@
+.accordionTableRow:first-child {
+  margin-top: 7.5rem;
+}
+
 /* Accordion Table */
 .accordionTableRow {
   position: relative;
@@ -197,21 +201,12 @@
   padding: 2rem 1.5rem;
 }
 
-.accordionTableRow:first-child {
-  margin-top: 7.5rem;
-}
-
-.accordionTableRow .row-header ul.at-table.column-5 .at-column:nth-of-type(3) {
+.offer-table .row-header ul.at-table.column-5 .at-column:nth-of-type(3) {
   display: none;
 }
 
-.accordionTableRow .row-header ul.at-table.column-5 .at-column:nth-of-type(4) {
-  text-align: right;
-  width: 40%;
-}
-
-.new {
-  display: none;
+.offer-table .row-header ul.at-table.column-5 .at-column:nth-of-type(4) {
+  text-align: center;
 }
 
 @media (min-width:62em) {
@@ -253,6 +248,10 @@
   }
   .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn .linkLabel {
     display: inline-block;
+  }
+  .offer-table .row-header ul.at-table.column-5 .at-column:nth-of-type(4) {
+    text-align: right;
+    width: 40%;
   }
 }
 

@@ -14,7 +14,7 @@
   font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.price-block > .row {
+.price-block > .p-row {
   display: table-row;
 }
 
@@ -22,21 +22,22 @@
 .price-block .after {
   font-size: 50%;
   text-align: left;
+  display: block;
 }
 
 .price-block .price {
   display: table;
 }
 
-.price-block .price > .col-price {
+.price-block .price > .p-col {
   padding: 0 .1rem;
 }
 
-.price-block .price > .col-price:first-child {
+.price-block .price > .p-col:first-child {
   padding-left: 0;
 }
 
-.price-block .price > .col-price:last-child,.price-block .price > .col-price.currency {
+.price-block .price > .p-col:last-child,.price-block .price > .p-col.currency {
   padding-right: 0;
 }
 
@@ -63,14 +64,29 @@
   display: table;
 }
 
-.price-block .details .row {
+.price-block .details .p-row {
   display: table-row;
 }
 
 /* Double Price Block */
-
-.price-block-double .price-block,.price-block-double .separator {
+.price-block-double {
   display: inline-block;
+}
+
+.price-block-double::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.price-block-double .price-block,
+.price-block-double .separator {
+  float: left;
+}
+
+.price-block-double .separator {
+  margin: 0 1rem;
+  font-size: 90%;
 }
 
 .price-style-01 .before,
@@ -106,7 +122,7 @@
 }
 
 .price-style-01 .separator {
-  font-size: 4rem;
+  font-size: 3.6rem;
 }
 
 @media (min-width:62em) {

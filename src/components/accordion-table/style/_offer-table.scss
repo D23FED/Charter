@@ -1,0 +1,20 @@
+@import 'initialize';
+
+.offer-table {
+	.row-header ul.at-table.column-5 .at-column {
+		// Empty col
+		&:nth-of-type(3) {
+			display: none;
+		}
+
+		// Pricing col
+		&:nth-of-type(4) {
+			text-align: center;
+
+			@include breakpoint($accordion-switchpoint) {
+				text-align: right;
+				width: 40%;
+			}
+		}
+	}
+}

@@ -4,22 +4,4 @@
 	&:first-child {
 		margin-top: 7.5rem;
 	}
-
-	.row-header ul.at-table.column-5 .at-column {
-
-		// Empty col
-		&:nth-of-type(3) {
-			display: none;
-		}
-
-		// Pricing col
-		&:nth-of-type(4) {
-			text-align: right;
-			width: 40%;
-		}
-	}
-}
-
-.new {
-	display: none;
 }
