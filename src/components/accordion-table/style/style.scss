@@ -1,6 +1,7 @@
 @import 'initialize';
+// @import 'testing';
 
-/* Accordion Table */
+/* Accordion Table Component */
 $btn-color: #feb533;
 $btn-choose-color: $md-blue;
 $accordion-switchpoint: 'md';
@@ -64,3 +65,4 @@ $table: 'ul.at-table';
 	@import 'header';
 	@import 'details';
 }
+@import 'offer-table';

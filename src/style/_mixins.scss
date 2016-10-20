@@ -141,4 +141,16 @@
 @mixin bs-row {
 	margin-left: -$grid-gutter-width / 2;
 	margin-right: -$grid-gutter-width / 2;
+	&::before,
+	&::after {
+		@include clearfix;
+	}
+}
+
+@mixin bs-row-reset {
+	margin: 0;
+	&::before,
+	&::after {
+		display: none;
+	}
 }

@@ -1,6 +1,6 @@
 /* Pricing Component */
 .price-block {
-  display: table;
+  display: inline-block;
   font-size: 4rem;
   line-height: 1;
   font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -13,6 +13,8 @@
 .price-block .before,
 .price-block .after {
   font-size: 50%;
+  text-align: left;
+  display: block;
 }
 
 .price-block .price {
@@ -58,10 +60,25 @@
   display: table-row;
 }
 
-/* Double Price Block */
-
-.price-block-double .price-block,.price-block-double .separator {
+/* Pricing Component:  Double Price Block */
+.price-block-double {
   display: inline-block;
+}
+
+.price-block-double::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.price-block-double .price-block,
+.price-block-double .separator {
+  float: left;
+}
+
+.price-block-double .separator {
+  margin: 0 1rem;
+  font-size: 90%;
 }
 
 .price-style-01 .before,
@@ -97,10 +114,10 @@
 }
 
 .price-style-01 .separator {
-  font-size: 4rem;
+  font-size: 3.6rem;
 }
 
-@media (min-width:62em) {
+@media (min-width:992px) {
   .price-style-01 .currency,
   .price-style-01 .whole,
   .price-style-01 .super,

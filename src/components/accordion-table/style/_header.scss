@@ -72,6 +72,10 @@
 			@include breakpoint($accordion-switchpoint) {
 				margin-top: 0;
 			}
+
+			&:active {
+				box-shadow: none;
+			}
 		}
 
 		.btn-primary {
@@ -84,7 +88,7 @@
 		}
 	}
 
-	// See More Button
+	// 'See More' Button
 	.linkComponent.accordionTableExpander {
 		margin-bottom: 2.0rem;
 
@@ -93,7 +97,6 @@
 			position: absolute;
 			top: 1.5rem;
 			right: 0;
-			font-size: 1.4rem;
 			z-index: 2;
 			margin: 0;
 			color: $btn-choose-color;
@@ -118,6 +121,10 @@
 				color: $lt-blue;
 			}
 
+
+			&:active {
+				box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+			}
 
 			// Plus sign
 			&::after {

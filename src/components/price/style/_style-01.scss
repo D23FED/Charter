@@ -1,5 +1,6 @@
 @import 'initialize';
 
+// Pricing Style: Gradient/Offer Accordion Table
 .price-style-01 {
 	.before,
 	.after {
@@ -44,7 +45,7 @@
 	}
 	// Separator between two prices in double price block
 	.separator {
-		font-size: $p-font-size-base;
+		font-size: .9 * $p-font-size-base;
 
 	}
 }
