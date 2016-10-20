@@ -1,8 +1,4 @@
-.accordionTableRow:first-child {
-  margin-top: 7.5rem;
-}
-
-/* Accordion Table */
+/* Accordion Table Component */
 .accordionTableRow {
   position: relative;
 }
@@ -201,6 +197,7 @@
   padding: 2rem 1.5rem;
 }
 
+/* Accordion Table Component: Offer Style */
 .offer-table .row-header ul.at-table.column-5 .at-column:nth-of-type(3) {
   display: none;
 }
@@ -209,7 +206,7 @@
   text-align: center;
 }
 
-@media (min-width:62em) {
+@media (min-width:992px) {
   .accordionTableRow .row-header ul.at-table {
     display: table;
     width: 100%;

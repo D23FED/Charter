@@ -1,12 +1,4 @@
 /* Pricing Component */
-.price-block .row {
-  margin: 0;
-}
-
-.price-block .row::before, .price-block .row::after {
-  display: none;
-}
-
 .price-block {
   display: inline-block;
   font-size: 4rem;
@@ -68,7 +60,7 @@
   display: table-row;
 }
 
-/* Double Price Block */
+/* Pricing Component:  Double Price Block */
 .price-block-double {
   display: inline-block;
 }
@@ -125,7 +117,7 @@
   font-size: 3.6rem;
 }
 
-@media (min-width:62em) {
+@media (min-width:992px) {
   .price-style-01 .currency,
   .price-style-01 .whole,
   .price-style-01 .super,

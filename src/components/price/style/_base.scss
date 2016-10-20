@@ -1,8 +1,8 @@
 @import 'initialize';
 
-.row {
-	@include bs-row-reset;
-}
+// .row {
+// 	@include bs-row-reset;
+// }
 
 & {
 	display: inline-block;
@@ -14,7 +14,6 @@
 		display: table-row;
 	}
 
-	@include breakpoint('md') {}
 }
 
 .before,
