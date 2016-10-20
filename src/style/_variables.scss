@@ -1,5 +1,5 @@
 @import 'colors';
-@import "variables-bs";
+@import 'variables-bs';
 
 // 544px  = 34em
 // 768px  = 48em
@@ -7,10 +7,10 @@
 // 1200px = 75em
 $breakpoints: (
 	xxs: 0,
-	xs: em(544),
-	sm: em(768),
-	md: em(992),
-	lg: em(1200)
+	xs: 544px,
+	sm: 768px,
+	md: 992px,
+	lg: 1200px
 ) !default;
 
 $font-sans-default: "Helvetica Neue",Helvetica,Arial,sans-serif;
