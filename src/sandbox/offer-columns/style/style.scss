@@ -1,0 +1,150 @@
+// 'Featured Offers' 3-column layout
+// Ex: https://www.charter.com/browse/content/packages/
+@import 'initialize';
+
+$wrapper: 'featured-offers';
+$column: 'aem-GridColumn';
+$numOfColumns: 3;
+
+$colGradientStartColor: #fafafa;
+$colGradientEndColor: rgba(250, 250, 250, 0);
+
+.#{$wrapper} {
+	text-align: center;
+	color: #51565c;
+
+	.aem-Grid .#{$column} {
+		position: relative;
+		margin-bottom: 1.5rem;
+		font-family: $font-open-sans;
+		padding-left: $grid-gutter-width / 2;
+		padding-right: $grid-gutter-width / 2;
+
+		&:first-of-type {
+			padding-left: 0;
+		}
+
+		&:nth-of-type($numOfColumns) {
+			padding-right: 0;
+		}
+
+		// Shadow at bottom of column
+		&::after {
+			width: 96%;
+			left: 2%;
+			height: 2.6rem;
+			bottom: -1.4rem;
+			background-color: rgba(0, 0, 0, 0.3);
+			border-radius: 1.2rem;
+			filter: blur(0.6rem);
+			position: absolute;
+			top: inherit;
+			z-index: 10;
+			content: '';
+		}
+
+		// Inner
+		> div {
+			background-color: $gray-lighter;
+			position: relative;
+			z-index: 20;
+			background-image: radial-gradient(circle, $colGradientStartColor 25%, $colGradientEndColor 60%);
+			background-repeat: no-repeat;
+			background-position: 0 -90px;
+			padding: 2rem;
+
+			// Shadow on sides of column
+
+			&::before,
+			&::after {
+				content: '';
+				height: 100%;
+				position: absolute;
+				top: 0;
+				width: 2.5rem;
+				background-repeat: repeat-x;
+			}
+
+			// Shadow on left side of column
+			&::before {
+				background-image: linear-gradient(to right, #d0d0d0 0, rgba(208, 208, 208, 0) 100%);
+				left: 0;
+			}
+
+			// Shadow on right side of column
+
+			&::after {
+				background-image: linear-gradient(to right, rgba(208, 208, 208, 0) 0, #d0d0d0 100%);
+				right: 0;
+			}
+		}
+	}
+
+	// Package Title, 'Triple Play Select >>'
+	h2 {
+		font-size: 2.8rem;
+		color: $gray;
+		font-weight: 300;
+
+		a {
+			&::after {
+				font-awesome: angle-double-right;
+				display: inline-block;
+			}
+		}
+	}
+
+	// Primary feature, '125+ Channels with FREE HD & FREE DVR Service'
+	h3 {
+		font-size: 2rem;
+		color: #000;
+
+		// # of channels, '125+'
+		a {
+			font-size: 3.5rem;
+			font-weight: bold;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	// Link to show/hide details
+	.accordion-link {
+		// Offer details (shown after expanding accordion)
+		.details {}
+	}
+
+	.btn {
+		margin-top: 2rem;
+		margin-bottom: 0;
+		position: relative;
+		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+		box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
+		font-size: 2.3rem;
+		width: 100%;
+		text-transform: uppercase;
+		padding: .7rem 4.0rem;
+		border-radius: 0;
+
+		&::after {
+			position: absolute;
+			content: "";
+			height: 100%;
+			width: 100%;
+			left: 0;
+			bottom: -1.5rem;
+			background-image: radial-gradient(ellipse at center,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 75%);
+			z-index: -1;
+		}
+	}
+
+	// Buttons
+	.btn-primary {
+		background-color: $yellow;
+		background-image: linear-gradient(to bottom, #feb533 0, #ffa300 100%);
+		background-repeat: repeat-x;
+		border-color: #e69300;
+	}
+}
