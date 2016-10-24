@@ -87,8 +87,13 @@ $colGradientEndColor: rgba(250, 250, 250, 0);
 		font-weight: 300;
 
 		a {
+			// Double angle bracket
 			&::after {
-				font-awesome: angle-double-right;
+				content: '\u300b';
+				margin-left: .6rem;
+				font-size: 80%;
+
+				// font-awesome: angle-double-right;
 				display: inline-block;
 			}
 		}
@@ -101,7 +106,7 @@ $colGradientEndColor: rgba(250, 250, 250, 0);
 
 		// # of channels, '125+'
 		a {
-			font-size: 3.5rem;
+			font-size: 4.9rem;
 			font-weight: bold;
 		}
 	}
@@ -130,12 +135,12 @@ $colGradientEndColor: rgba(250, 250, 250, 0);
 
 		&::after {
 			position: absolute;
-			content: "";
+			content: '';
 			height: 100%;
 			width: 100%;
 			left: 0;
 			bottom: -1.5rem;
-			background-image: radial-gradient(ellipse at center,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 75%);
+			background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
 			z-index: -1;
 		}
 	}

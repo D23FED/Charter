@@ -73,8 +73,9 @@
 }
 
 .featured-offers h2 a::after {
-  font-family: FontAwesome;
-  content: '\f101';
+  content: '\u300b';
+  margin-left: .6rem;
+  font-size: 80%;
   display: inline-block;
 }
 
@@ -84,7 +85,7 @@
 }
 
 .featured-offers h3 a {
-  font-size: 3.5rem;
+  font-size: 4.9rem;
   font-weight: 700;
 }
 
@@ -107,7 +108,7 @@
 
 .featured-offers .btn::after {
   position: absolute;
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   left: 0;

@@ -491,6 +491,46 @@ main .container .container {
   font-size: 3.6rem;
 }
 
+.price-style-02.price-block {
+  font-size: 6.4rem;
+}
+
+.price-style-02 .before,
+.price-style-02 .after {
+  font-size: 34.375%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.price-style-02 .currency,
+.price-style-02 .whole,
+.price-style-02 .super,
+.price-style-02 .separator {
+  color: #00629B;
+  font-weight: 800;
+}
+
+.price-style-02 .currency {
+  font-size: 45.3125%;
+}
+
+.price-style-02 .super {
+  font-size: 25%;
+}
+
+.price-style-02 .details {
+  text-align: left;
+}
+
+.price-style-02 .term {
+  color: #000;
+  font-size: 30%;
+}
+
+.price-style-02 .separator {
+  font-size: 5.76rem;
+}
+
 /* Tabbed Component v2 | Oct 2016 */
 /* Override core CSS */
 .tabbedComponent .tab-row {
@@ -976,6 +1016,17 @@ main .container .container {
   }
   .price-style-01 .details{
     text-align: right;
+  }
+  .price-style-02 .currency,
+  .price-style-02 .whole,
+  .price-style-02 .super,
+  .price-style-02 .separator{
+    color: #0077BC;
+    background-image: -webkit-linear-gradient(top,#4ab3f1,#00629B);
+    background-image: linear-gradient(180deg,#4ab3f1 0,#00629B);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
   .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow{

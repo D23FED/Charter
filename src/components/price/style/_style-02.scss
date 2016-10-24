@@ -1,0 +1,53 @@
+@import 'initialize';
+
+// Pricing Style: Offer Columns
+// https://www.charter.com/browse/content/packages
+
+// Base everything off the font size for dollars
+$p-font-size-base-02: 6.4rem;
+
+.price-style-02 {
+	&.price-block {
+		font-size: $p-font-size-base-02;
+	}
+	.before,
+	.after {
+		font-size: percentage(2.2 / strip-unit($p-font-size-base-02));
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.currency,
+	.whole,
+	.super,
+	.separator {
+		color: $md-blue;
+		font-weight: 800;
+
+		@include breakpoint('md') {
+			@include gradient-text-blue;
+		}
+	}
+
+	.currency {
+		font-size: percentage(2.9 / strip-unit($p-font-size-base-02));
+	}
+
+	.super {
+		font-size: percentage(1.6 / strip-unit($p-font-size-base-02));
+	}
+
+	.details {
+		text-align: left;
+	}
+
+	.term {
+		color: #000;
+		font-size: percentage(1.2 / strip-unit($p-font-size-base));
+	}
+
+	// Separator between two prices in double price block
+	.separator {
+		font-size: 0.9 * $p-font-size-base-02;
+	}
+}
