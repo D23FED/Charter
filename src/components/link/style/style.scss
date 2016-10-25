@@ -1,0 +1,64 @@
+@import 'initialize';
+
+// Green based on Charter Teal
+$green: #009E3D;
+
+/* Default link styling, Charter Med Blue */
+a {
+	color: $md-blue;
+
+	@include hover-focus {
+		color: $blue;
+	}
+}
+
+/* Charter Blue */
+.text-primary {
+	color: $blue;
+
+	@at-root a#{&}:hover {
+		color: darken($blue, 10%);
+	}
+}
+
+/* Green based on Charter Teal */
+.text-success {
+	color: #009E3D;
+
+	@at-root a#{&}:hover,
+	a#{&}:focus {
+		color: darken(#009E3D, 10%);
+	}
+}
+
+/* Charter Light Blue */
+.text-info {
+	color: $lt-blue;
+
+	@at-root a#{&}:hover,
+	a#{&}:focus {
+		color: darken($lt-blue, 10%);
+	}
+}
+
+/* Charter Yellow */
+.text-warning {
+	color: $yellow;
+
+	@at-root a#{&}:hover,
+	a#{&}:focus {
+		color: darken($yellow, 10%);
+	}
+}
+
+/* Charter Pink */
+.text-danger {
+	color: #96004D;
+
+	@at-root a#{&}:hover,
+	a#{&}:focus {
+		color: darken(#96004D, 10%);
+	}
+}
+
+@import 'buttons';
