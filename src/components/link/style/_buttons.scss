@@ -1,0 +1,35 @@
+@import 'initialize';
+
+$darker-orange: #e69300;
+$dark-orange: #faa000;
+$light-orange: #ffb229;
+
+.btn-primary {
+	color: #fff;
+	background-color: $yellow;
+	border-color: $darker-orange;
+
+	&.active, &:active, &:focus, &:hover,
+	.open > .dropdown-toggle.#{&} {
+		color: #fff;
+		background-color: $light-orange;
+		border-color: $dark-orange;
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] #{&} {
+		background-color: $yellow;
+		border-color: $darker-orange;
+
+		&.active, &:active, &:focus, &:hover {
+			background-color: $yellow;
+			border-color: $darker-orange;
+		}
+	}
+
+	.badge {
+		color: $yellow;
+		background-color: #fff;
+	}
+}
