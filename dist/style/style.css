@@ -100,7 +100,7 @@
   margin-right: -1.5rem;
 }
 
-.accordionTableRow .row-header::before::after, .accordionTableRow .row-header::after::after {
+.accordionTableRow .row-header::after {
   content: '';
   display: table;
   clear: both;
@@ -212,7 +212,7 @@
   margin-right: -1.5rem;
 }
 
-.accordionTableRow .row-details::before::after, .accordionTableRow .row-details::after::after {
+.accordionTableRow .row-details::after {
   content: '';
   display: table;
   clear: both;
@@ -254,7 +254,7 @@ main .container .container {
   margin-right: -1.5rem;
 }
 
-.container .imageArtDirection::before::after, .container .imageArtDirection::after::after {
+.container .imageArtDirection::after {
   content: '';
   display: table;
   clear: both;
@@ -269,7 +269,7 @@ main .container .container {
   margin-right: -1.5rem;
 }
 
-.container-fluid .imageArtDirection::before::after, .container-fluid .imageArtDirection::after::after {
+.container-fluid .imageArtDirection::after {
   content: '';
   display: table;
   clear: both;
@@ -499,7 +499,6 @@ main .container .container {
 .price-style-02 .after {
   font-size: 34.375%;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .price-style-02 .currency,
@@ -514,21 +513,74 @@ main .container .container {
   font-size: 45.3125%;
 }
 
+.price-style-02 .whole {
+  line-height: .9;
+}
+
 .price-style-02 .super {
   font-size: 25%;
 }
 
 .price-style-02 .details {
   text-align: left;
+  font-size: 100%;
 }
 
 .price-style-02 .term {
   color: #000;
-  font-size: 30%;
+  font-size: 18.75%;
 }
 
 .price-style-02 .separator {
   font-size: 5.76rem;
+}
+
+.price-style-03.price-block {
+  font-size: 7.8rem;
+}
+
+.price-style-03 .before,
+.price-style-03 .after {
+  font-size: 15.38462%;
+  font-weight: 700;
+}
+
+.price-style-03 .currency,
+.price-style-03 .whole,
+.price-style-03 .super,
+.price-style-03 .separator {
+  color: #00629B;
+  font-weight: 800;
+}
+
+.price-style-03 .currency {
+  font-size: 39.74359%;
+}
+
+.price-style-03 .whole {
+  line-height: .8;
+}
+
+.price-style-03 .super {
+  font-size: 38.46154%;
+}
+
+.price-style-03 .super .extra {
+  font-size: 53.33333%;
+}
+
+.price-style-03 .details {
+  text-align: left;
+  font-size: 100%;
+}
+
+.price-style-03 .term {
+  color: #000;
+  font-size: 12.82051%;
+}
+
+.price-style-03 .separator {
+  font-size: 7.02rem;
 }
 
 /* Tabbed Component v2 | Oct 2016 */
@@ -1021,6 +1073,17 @@ main .container .container {
   .price-style-02 .whole,
   .price-style-02 .super,
   .price-style-02 .separator{
+    color: #0077BC;
+    background-image: -webkit-linear-gradient(top,#4ab3f1,#00629B);
+    background-image: linear-gradient(180deg,#4ab3f1 0,#00629B);
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .price-style-03 .currency,
+  .price-style-03 .whole,
+  .price-style-03 .super,
+  .price-style-03 .separator{
     color: #0077BC;
     background-image: -webkit-linear-gradient(top,#4ab3f1,#00629B);
     background-image: linear-gradient(180deg,#4ab3f1 0,#00629B);

@@ -1,9 +1,9 @@
-.featured-offers {
+.offer-columns {
   text-align: center;
   color: #51565c;
 }
 
-.featured-offers .aem-Grid .aem-GridColumn {
+.offer-columns .aem-Grid .aem-GridColumn {
   position: relative;
   margin-bottom: 1.5rem;
   font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -11,12 +11,87 @@
   padding-right: 1.5rem;
 }
 
-.featured-offers .aem-Grid .aem-GridColumn:first-of-type {
+.offer-columns .aem-Grid .aem-GridColumn:first-of-type {
   padding-left: 0;
 }
 
-.featured-offers .aem-Grid .aem-GridColumn:nth-of-type($numOfColumns) {
+.offer-columns .aem-Grid .aem-GridColumn:nth-of-type(3), .offer-columns .aem-Grid .aem-GridColumn:last-child {
   padding-right: 0;
+}
+
+.offer-columns .aem-Grid .aem-GridColumn > div {
+  background-color: #eeeeee;
+  position: relative;
+  z-index: 20;
+  background-image: -webkit-radial-gradient(circle,#fafafa 25%,rgba(250,250,250,0) 60%);
+  background-image: radial-gradient(circle,#fafafa 25%,rgba(250,250,250,0) 60%);
+  background-repeat: no-repeat;
+  background-position: 0 -90px;
+  padding: 2rem;
+}
+
+.offer-columns .richtext {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.offer-columns h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.offer-columns h3 {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 300;
+}
+
+.offer-columns h3 a {
+  font-weight: 800;
+}
+
+.offer-columns .accordion ul.bullets-checkmark {
+  padding-left: 3rem;
+  text-align: left;
+}
+
+.offer-columns .accordion ul.bullets-checkmark li {
+  position: relative;
+}
+
+.offer-columns .accordion ul.bullets-checkmark li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.offer-columns .btn {
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-size: 2.3rem;
+  width: 100%;
+  text-transform: uppercase;
+  padding: .7rem 4.0rem;
+  border-radius: 0;
+}
+
+.offer-columns .btn-primary {
+  background-color: #FAA41A;
+  background-image: -webkit-linear-gradient(top,#feb533,#ffa300);
+  background-image: linear-gradient(180deg,#feb533 0,#ffa300);
+  background-repeat: repeat-x;
+  border-color: #e69300;
+}
+
+.offer-columns .channel-logo {
+  color: #00629B;
+  display: inline-block;
+  font-style: normal;
+}
+
+.offer-columns {
+  margin-top: 10rem;
 }
 
 .featured-offers .aem-Grid .aem-GridColumn::after {
@@ -34,15 +109,12 @@
   content: '';
 }
 
-.featured-offers .aem-Grid .aem-GridColumn > div {
-  background-color: #eeeeee;
-  position: relative;
-  z-index: 20;
-  background-image: -webkit-radial-gradient(circle,#fafafa 25%,rgba(250,250,250,0) 60%);
-  background-image: radial-gradient(circle,#fafafa 25%,rgba(250,250,250,0) 60%);
-  background-repeat: no-repeat;
-  background-position: 0 -90px;
-  padding: 2rem;
+.featured-offers .aem-Grid .aem-GridColumn:first-of-type::after {
+  left: 0;
+}
+
+.featured-offers .aem-Grid .aem-GridColumn:nth-of-type(3)::after, .featured-offers .aem-Grid .aem-GridColumn:last-child::after {
+  right: 0;
 }
 
 .featured-offers .aem-Grid .aem-GridColumn > div::before, .featured-offers .aem-Grid .aem-GridColumn > div::after {
@@ -70,40 +142,33 @@
   font-size: 2.8rem;
   color: #808285;
   font-weight: 300;
+  margin-bottom: 2rem;
 }
 
 .featured-offers h2 a::after {
-  content: '\u300b';
+  content: '\00BB';
   margin-left: .6rem;
-  font-size: 80%;
   display: inline-block;
 }
 
 .featured-offers h3 {
   font-size: 2rem;
-  color: #000;
 }
 
 .featured-offers h3 a {
   font-size: 4.9rem;
-  font-weight: 700;
 }
 
 .featured-offers ul {
   list-style-type: none;
+  padding-left: 0;
+  font-size: 1.6rem;
 }
 
 .featured-offers .btn {
-  margin-top: 2rem;
-  margin-bottom: 0;
-  position: relative;
   text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.75);
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.33);
   font-size: 2.3rem;
-  width: 100%;
-  text-transform: uppercase;
-  padding: .7rem 4.0rem;
-  border-radius: 0;
 }
 
 .featured-offers .btn::after {
@@ -116,14 +181,6 @@
   background-image: -webkit-radial-gradient(center ellipse,rgba(0,0,0,0.6) 0,transparent 75%);
   background-image: radial-gradient(ellipse at center,rgba(0,0,0,0.6) 0,transparent 75%);
   z-index: -1;
-}
-
-.featured-offers .btn-primary {
-  background-color: #FAA41A;
-  background-image: -webkit-linear-gradient(top,#feb533,#ffa300);
-  background-image: linear-gradient(180deg,#feb533 0,#ffa300);
-  background-repeat: repeat-x;
-  border-color: #e69300;
 }
 
 /*# sourceMappingURL=style.css.map */

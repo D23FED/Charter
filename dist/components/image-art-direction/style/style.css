@@ -18,7 +18,7 @@ main .container .container {
   margin-right: -1.5rem;
 }
 
-.container .imageArtDirection::before::after, .container .imageArtDirection::after::after {
+.container .imageArtDirection::after {
   content: '';
   display: table;
   clear: both;
@@ -33,7 +33,7 @@ main .container .container {
   margin-right: -1.5rem;
 }
 
-.container-fluid .imageArtDirection::before::after, .container-fluid .imageArtDirection::after::after {
+.container-fluid .imageArtDirection::after {
   content: '';
   display: table;
   clear: both;

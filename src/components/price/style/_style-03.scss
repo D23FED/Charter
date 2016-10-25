@@ -1,0 +1,60 @@
+@import 'initialize';
+
+// Pricing Style: "Best Offer" Columns
+// https://www.charter.com/browse/content/best-offers
+
+$p-font-size-base-03: 7.8rem;
+
+.price-style-03 {
+	&.price-block {
+		font-size: $p-font-size-base-03;
+	}
+
+	.before,
+	.after {
+		font-size: percentage(1.2 / strip-unit($p-font-size-base-03));
+		font-weight: bold;
+	}
+
+	.currency,
+	.whole,
+	.super,
+	.separator {
+		color: $md-blue;
+		font-weight: 800;
+
+		@include breakpoint('md') {
+			@include gradient-text-blue;
+		}
+	}
+
+	.currency {
+		font-size: percentage(3.1 / strip-unit($p-font-size-base-03));
+	}
+
+	.whole {
+		line-height: .8;
+	}
+
+	.super {
+		font-size: percentage(3.0 / strip-unit($p-font-size-base-03));
+		.extra {
+			font-size: percentage(1.6 / 3);
+		}
+	}
+
+	.details {
+		text-align: left;
+		font-size: 100%;
+	}
+
+	.term {
+		color: #000;
+		font-size: percentage(1.0 / strip-unit($p-font-size-base-03));
+	}
+
+	// Separator between two prices in double price block
+	.separator {
+		font-size: 0.9 * $p-font-size-base-03;
+	}
+}

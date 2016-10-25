@@ -10,11 +10,12 @@ $p-font-size-base-02: 6.4rem;
 	&.price-block {
 		font-size: $p-font-size-base-02;
 	}
+
 	.before,
 	.after {
 		font-size: percentage(2.2 / strip-unit($p-font-size-base-02));
 		text-align: center;
-		text-transform: uppercase;
+		// text-transform: uppercase;
 	}
 
 	.currency,
@@ -33,17 +34,22 @@ $p-font-size-base-02: 6.4rem;
 		font-size: percentage(2.9 / strip-unit($p-font-size-base-02));
 	}
 
+	.whole {
+		line-height: .9;
+	}
+
 	.super {
 		font-size: percentage(1.6 / strip-unit($p-font-size-base-02));
 	}
 
 	.details {
 		text-align: left;
+		font-size: 100%;
 	}
 
 	.term {
 		color: #000;
-		font-size: percentage(1.2 / strip-unit($p-font-size-base));
+		font-size: percentage(1.2 / strip-unit($p-font-size-base-02));
 	}
 
 	// Separator between two prices in double price block
