@@ -171,3 +171,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+dist/sandbox/_component-template/

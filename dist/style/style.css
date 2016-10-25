@@ -1,5 +1,7 @@
 /* Common styles */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800");
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans: 400,300,600,700,800");
+
 @font-face {
   font-family: charter-icons;
   font-family: Charter Icons;
@@ -26,7 +28,9 @@
   margin-right: auto;
 }
 
+
 /* Accordion Table Component */
+
 .accordionTableRow {
   position: relative;
 }
@@ -52,7 +56,12 @@
   padding: 0;
 }
 
-.accordionTableRow h1, .accordionTableRow h2, .accordionTableRow h3, .accordionTableRow h4, .accordionTableRow h5, .accordionTableRow h6 {
+.accordionTableRow h1,
+.accordionTableRow h2,
+.accordionTableRow h3,
+.accordionTableRow h4,
+.accordionTableRow h5,
+.accordionTableRow h6 {
   margin-top: 0;
   font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: 300;
@@ -78,7 +87,8 @@
   text-decoration: none;
 }
 
-.accordionTableRow h3 a:focus, .accordionTableRow h3 a:hover {
+.accordionTableRow h3 a:focus,
+.accordionTableRow h3 a:hover {
   text-decoration: underline;
   color: #003057;
 }
@@ -100,7 +110,8 @@
   margin-right: -1.5rem;
 }
 
-.accordionTableRow .row-header::before::after, .accordionTableRow .row-header::after::after {
+.accordionTableRow .row-header::before::after,
+.accordionTableRow .row-header::after::after {
   content: '';
   display: table;
   clear: both;
@@ -179,7 +190,8 @@
   text-transform: uppercase;
 }
 
-.accordionTableRow .row-header .linkComponent.accordionTableExpander .btn:focus, .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn:hover {
+.accordionTableRow .row-header .linkComponent.accordionTableExpander .btn:focus,
+.accordionTableRow .row-header .linkComponent.accordionTableExpander .btn:hover {
   background-color: #fff;
   color: #0077BC;
 }
@@ -212,7 +224,8 @@
   margin-right: -1.5rem;
 }
 
-.accordionTableRow .row-details::before::after, .accordionTableRow .row-details::after::after {
+.accordionTableRow .row-details::before::after,
+.accordionTableRow .row-details::after::after {
   content: '';
   display: table;
   clear: both;
@@ -225,7 +238,9 @@
   padding: 2rem 1.5rem;
 }
 
+
 /* Accordion Table Component: Offer Style */
+
 .offer-table .row-header ul.at-table.column-5 .at-column:nth-of-type(3) {
   display: none;
 }
@@ -234,8 +249,11 @@
   text-align: center;
 }
 
+
 /* Image Art Direction */
+
 /* Dev-only rules */
+
 main {
   border: 1px dotted red;
 }
@@ -248,13 +266,16 @@ main .container .container {
   border: 1px dotted green;
 }
 
+
 /* End dev-only rules */
+
 .container .imageArtDirection {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
 
-.container .imageArtDirection::before::after, .container .imageArtDirection::after::after {
+.container .imageArtDirection::before::after,
+.container .imageArtDirection::after::after {
   content: '';
   display: table;
   clear: both;
@@ -269,7 +290,8 @@ main .container .container {
   margin-right: -1.5rem;
 }
 
-.container-fluid .imageArtDirection::before::after, .container-fluid .imageArtDirection::after::after {
+.container-fluid .imageArtDirection::before::after,
+.container-fluid .imageArtDirection::after::after {
   content: '';
   display: table;
   clear: both;
@@ -352,7 +374,9 @@ main .container .container {
   background-position: right bottom;
 }
 
+
 /* List Component: Checkmark Bullets Style */
+
 .bullets-checkmark {
   list-style-type: none;
   padding-left: 4rem;
@@ -372,7 +396,9 @@ main .container .container {
   vertical-align: -webkit-baseline-middle;
 }
 
+
 /* Pricing Component */
+
 .price-block {
   display: inline-block;
   font-size: 4rem;
@@ -434,7 +460,9 @@ main .container .container {
   display: table-row;
 }
 
+
 /* Pricing Component:  Double Price Block */
+
 .price-block-double {
   display: inline-block;
 }
@@ -491,8 +519,11 @@ main .container .container {
   font-size: 3.6rem;
 }
 
+
 /* Tabbed Component v2 | Oct 2016 */
+
 /* Override core CSS */
+
 .tabbedComponent .tab-row {
   display: block;
   box-shadow: none;
@@ -512,8 +543,11 @@ main .container .container {
   box-shadow: none;
 }
 
+
 /* End core.css overrides */
+
 /* Common Tab styles */
+
 .tabbedComponent .tab-row ul.nav-tabs::after {
   content: '';
   display: table;
@@ -549,13 +583,16 @@ main .container .container {
   transition-property: color,background-color;
 }
 
-.tabbedComponent .tab-row ul.nav-tabs .tab > a:focus, .tabbedComponent .tab-row ul.nav-tabs .tab > a:hover,
+.tabbedComponent .tab-row ul.nav-tabs .tab > a:focus,
+.tabbedComponent .tab-row ul.nav-tabs .tab > a:hover,
 .tabbedComponent .tab-row ul.nav-tabs .arrow > a:focus,
 .tabbedComponent .tab-row ul.nav-tabs .arrow > a:hover {
   color: #0077BC;
 }
 
-.tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a:focus {
+.tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a,
+.tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a:hover,
+.tabbedComponent .tab-row ul.nav-tabs .tab.js-active > a:focus {
   color: #333;
   background-color: #fff;
   cursor: default;
@@ -592,7 +629,9 @@ main .container .container {
   padding: 1rem;
 }
 
+
 /* Tab Style 1: Default */
+
 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
   margin-left: 0.1rem;
@@ -612,7 +651,8 @@ main .container .container {
   border-radius: .4rem .4rem 0 0;
 }
 
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:focus, .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:hover,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:focus,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:hover,
 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a:focus,
 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a:hover {
   color: #0077BC;
@@ -620,7 +660,9 @@ main .container .container {
   border-color: #eee #eee #ddd;
 }
 
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a:focus {
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a:hover,
+.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a:focus {
   color: #333;
   background-color: #fff;
   border: .1rem solid #ddd;
@@ -645,6 +687,7 @@ main .container .container {
   background: -webkit-linear-gradient(top,#ffffff,#ffffff 60%,#eef1f3);
   background: linear-gradient(180deg,#ffffff 0%,#ffffff 60%,#eef1f3);
 }
+
 
 /* Tab Style 2: Justified */
 
@@ -673,13 +716,16 @@ main .container .container {
   font-size: 1.7rem;
 }
 
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:focus, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:hover,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:focus,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a:hover,
 .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:focus,
 .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a:hover {
   color: #00629B;
 }
 
-.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:focus {
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:hover,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:focus {
   color: #0077BC;
   background: #fff;
 }
@@ -699,7 +745,9 @@ main .container .container {
   text-align: center;
 }
 
+
 /* Tab Style 3: Promo */
+
 .tabbedComponent.tab-style-3 .tab-row {
   overflow: hidden;
   text-align: center;
@@ -730,7 +778,8 @@ main .container .container {
   padding: 1.5rem;
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:focus, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:hover,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:focus,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a:hover,
 .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a:focus,
 .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a:hover {
   color: #00629B;
@@ -741,7 +790,9 @@ main .container .container {
   display: none;
 }
 
-.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:focus {
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:hover,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:focus {
   border: .1rem solid #FFF;
   box-shadow: 0 0 .5rem 0 #000000;
   background: #fff;
@@ -775,7 +826,9 @@ main .container .container {
   display: inline;
 }
 
+
 /* Tab Style 4: Side Tabs */
+
 .tabbedComponent.tab-style-4::after {
   content: '';
   display: table;
@@ -822,7 +875,8 @@ main .container .container {
   color: #00629B;
 }
 
-.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle), .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus {
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle),
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus {
   border: none;
   border-left-style: solid;
   border-left-width: .7rem;
@@ -834,7 +888,8 @@ main .container .container {
   background-color: #00629B;
 }
 
-.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle)::after, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus::after {
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle)::after,
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus::after {
   content: '';
   z-index: 10;
   position: absolute;
@@ -854,13 +909,17 @@ main .container .container {
   bottom: -2.2rem;
 }
 
-.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:hover, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:focus {
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle,
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:hover,
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:focus {
   color: #fff;
   background-color: transparent;
   cursor: pointer;
 }
 
-.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle::before, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:hover::before, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:focus::before {
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle::before,
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:hover::before,
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:focus::before {
   content: 'Hide ';
 }
 
@@ -868,8 +927,8 @@ main .container .container {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   display: inline-block;
   background-color: transparent;
   border: none;
@@ -911,62 +970,66 @@ main .container .container {
   padding-top: 2.2rem;
 }
 
-.tabbedComponent.tab-style-4 .tabbedRow .tabbedContent ul li, .tabbedComponent.tab-style-4 .tabbedRow .tabbedContent ol li {
+.tabbedComponent.tab-style-4 .tabbedRow .tabbedContent ul li,
+.tabbedComponent.tab-style-4 .tabbedRow .tabbedContent ol li {
   list-style-position: inside;
 }
 
+
 /* Assumes 16:9 video */
+
 .embed-responsive {
   padding-bottom: 56.25%;
 }
-@media (min-width:992px){
-  .accordionTableRow .row-header ul.at-table{
+
+@media (min-width: 992px) {
+  .accordionTableRow .row-header ul.at-table {
     display: table;
     width: 100%;
   }
-  .accordionTableRow .row-header ul.at-table.column-1 .at-column{
+  .accordionTableRow .row-header ul.at-table.column-1 .at-column {
     width: 100%;
   }
-  .accordionTableRow .row-header ul.at-table.column-2 .at-column{
+  .accordionTableRow .row-header ul.at-table.column-2 .at-column {
     width: 50%;
   }
-  .accordionTableRow .row-header ul.at-table.column-3 .at-column{
+  .accordionTableRow .row-header ul.at-table.column-3 .at-column {
     width: 33.33333%;
   }
-  .accordionTableRow .row-header ul.at-table.column-4 .at-column{
+  .accordionTableRow .row-header ul.at-table.column-4 .at-column {
     width: 25%;
   }
-  .accordionTableRow .row-header ul.at-table.column-5 .at-column{
+  .accordionTableRow .row-header ul.at-table.column-5 .at-column {
     width: 20%;
   }
-  .accordionTableRow .row-header img{
+  .accordionTableRow .row-header img {
     display: block;
   }
-  .accordionTableRow .row-header .at-column{
+  .accordionTableRow .row-header .at-column {
     display: table-cell;
     padding-top: 0;
     padding-bottom: 0;
   }
-  .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn{
+  .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn {
     margin-top: 0;
   }
-  .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn{
+  .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn {
     position: relative;
     top: auto;
     right: auto;
     width: 100%;
   }
-  .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn .linkLabel{
+  .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn .linkLabel {
     display: inline-block;
   }
-  .offer-table .row-header ul.at-table.column-5 .at-column:nth-of-type(4){
+  .offer-table .row-header ul.at-table.column-5 .at-column:nth-of-type(4) {
     text-align: right;
     width: 40%;
   }
   .price-style-01 .currency,
   .price-style-01 .whole,
   .price-style-01 .super,
-  .price-style-01 .separator{
+  .price-style-01 .separator {
     color: #0077BC;
     background-image: -webkit-linear-gradient(top,#4ab3f1,#00629B);
     background-image: linear-gradient(180deg,#4ab3f1 0,#00629B);
@@ -974,32 +1037,34 @@ main .container .container {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .price-style-01 .details{
+  .price-style-01 .details {
     text-align: right;
   }
   .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
-  .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow{
+  .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
     text-align: center;
     width: auto;
     color: #000;
   }
   .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a{
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
     font-size: 2.4rem;
   }
-  .tabbedComponent.tab-style-4 .tab-row{
+  .tabbedComponent.tab-style-4 .tab-row {
     float: left;
     width: 33.33333%;
   }
-  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab > a:not(.details-toggle){
+  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab > a:not(.details-toggle) {
     background-color: transparent;
     text-decoration: underline;
     border-bottom-width: 0;
   }
-  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle), .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus{
+  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle),
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus {
     background-color: #0077BC;
   }
-  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle)::after, .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus::after{
+  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle)::after,
+.tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab.js-active > a:not(.details-toggle):focus::after {
     border-top-width: 3.2rem;
     border-bottom-width: 3.2rem;
     border-left-width: 2.5rem;
@@ -1016,90 +1081,92 @@ main .container .container {
     bottom: auto;
     left: auto;
   }
-  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab .details-toggle{
+  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab .details-toggle {
     display: none;
   }
   .tabbedComponent.tab-style-4 .tab-content-container,
-  .tabbedComponent.tab-style-4 .tabbedContent{
+  .tabbedComponent.tab-style-4 .tabbedContent {
     padding: .5rem 4rem 2.5rem;
     float: left;
   }
-  .tabbedComponent.tab-style-4 .tab-content-container{
+  .tabbedComponent.tab-style-4 .tab-content-container {
     display: block;
     float: right;
     width: 66.66667%;
   }
 }
-@media (min-width:768px){
-  .imageArtDirection.image-focus-1 .background-image{
+
+@media (min-width: 768px) {
+  .imageArtDirection.image-focus-1 .background-image {
     background-position: left center;
   }
-  .imageArtDirection.image-focus-1.image-focus-top .background-image{
+  .imageArtDirection.image-focus-1.image-focus-top .background-image {
     background-position: left top;
   }
-  .imageArtDirection.image-focus-1.image-focus-bottom .background-image{
+  .imageArtDirection.image-focus-1.image-focus-bottom .background-image {
     background-position: left bottom;
   }
-  .imageArtDirection.image-focus-2 .background-image{
+  .imageArtDirection.image-focus-2 .background-image {
     background-position: 25% center;
   }
-  .imageArtDirection.image-focus-2.image-focus-top .background-image{
+  .imageArtDirection.image-focus-2.image-focus-top .background-image {
     background-position: 25% top;
   }
-  .imageArtDirection.image-focus-2.image-focus-bottom .background-image{
+  .imageArtDirection.image-focus-2.image-focus-bottom .background-image {
     background-position: 25% bottom;
   }
-  .imageArtDirection.image-focus-3 .background-image{
+  .imageArtDirection.image-focus-3 .background-image {
     background-position: 50% center;
   }
-  .imageArtDirection.image-focus-3.image-focus-top .background-image{
+  .imageArtDirection.image-focus-3.image-focus-top .background-image {
     background-position: 50% top;
   }
-  .imageArtDirection.image-focus-3.image-focus-bottom .background-image{
+  .imageArtDirection.image-focus-3.image-focus-bottom .background-image {
     background-position: 50% bottom;
   }
-  .imageArtDirection.image-focus-4 .background-image{
+  .imageArtDirection.image-focus-4 .background-image {
     background-position: 75% center;
   }
-  .imageArtDirection.image-focus-4.image-focus-top .background-image{
+  .imageArtDirection.image-focus-4.image-focus-top .background-image {
     background-position: 75% top;
   }
-  .imageArtDirection.image-focus-4.image-focus-bottom .background-image{
+  .imageArtDirection.image-focus-4.image-focus-bottom .background-image {
     background-position: 75% bottom;
   }
-  .imageArtDirection.image-focus-5 .background-image{
+  .imageArtDirection.image-focus-5 .background-image {
     background-position: right center;
   }
-  .imageArtDirection.image-focus-5.image-focus-top .background-image{
+  .imageArtDirection.image-focus-5.image-focus-top .background-image {
     background-position: right top;
   }
-  .imageArtDirection.image-focus-5.image-focus-bottom .background-image{
+  .imageArtDirection.image-focus-5.image-focus-bottom .background-image {
     background-position: right bottom;
   }
   .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a{
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
     font-size: 2.2rem;
   }
   .tabbedComponent.tab-style-4 .tab-content-container,
-  .tabbedComponent.tab-style-4 .tabbedContent{
+  .tabbedComponent.tab-style-4 .tabbedContent {
     padding: 2rem 4rem 4rem;
   }
 }
-@media (min-width:1200px){
-  .tabbedComponent.tab-style-2 .tab-row{
+
+@media (min-width: 1200px) {
+  .tabbedComponent.tab-style-2 .tab-row {
     display: table;
     width: 100%;
   }
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs{
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs {
     display: table-row;
   }
   .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab,
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow{
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
     width: 100%;
     float: none;
   }
   .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a{
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
     background: #fff;
     border: 0;
     border-radius: 0;
@@ -1108,54 +1175,58 @@ main .container .container {
     margin: 0;
     padding: 1rem 1.5rem;
   }
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:focus{
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:hover,
+.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab.js-active > a:focus {
     color: #fff;
     background-color: #0077BC;
     border: 0;
   }
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a::after{
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a::after {
     display: none;
   }
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow{
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
     display: table-cell;
   }
-  .tabbedComponent.tab-style-2 .tab-row .tabbedRow{
+  .tabbedComponent.tab-style-2 .tab-row .tabbedRow {
     display: table-cell;
   }
-  .tabbedComponent.tab-style-3 .tab-row{
+  .tabbedComponent.tab-style-3 .tab-row {
     display: table;
     width: 100%;
   }
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs{
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs {
     display: table-row;
   }
   .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab,
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow{
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 0;
     float: none;
   }
   .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab > a,
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a{
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow > a {
     margin-top: .5rem;
     margin-bottom: -.1rem;
     padding: 2.5rem 1.25rem;
   }
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:hover, .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:focus{
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:hover,
+.tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:focus {
     margin-top: 1rem;
     border-radius: .5rem .5rem 0 0;
   }
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow{
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
     display: block;
   }
-  .tabbedComponent.tab-style-3 .tab-row .tabbedRow{
+  .tabbedComponent.tab-style-3 .tab-row .tabbedRow {
     display: table-cell;
   }
-  .tabbedComponent.tab-style-3 .tab-row .tabbedRow .tabbedLabel{
+  .tabbedComponent.tab-style-3 .tab-row .tabbedRow .tabbedLabel {
     display: inline-block;
   }
-  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab > a:not(.details-toggle) span::after{
+  .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab > a:not(.details-toggle) span::after {
     font-family: FontAwesome;
     content: '\f101';
     background-repeat: no-repeat;
@@ -1165,14 +1236,16 @@ main .container .container {
     font-size: 75%;
   }
 }
-@media (min-width:544px){
+
+@media (min-width: 544px) {
   .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab,
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow{
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
     width: 33.33333%;
   }
 }
-@media (min-width:1200px) and (min-width:1200px){
-  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow{
+
+@media (min-width:1200px) and (min-width: 1200px) {
+  .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
     display: table-cell;
   }
 }
