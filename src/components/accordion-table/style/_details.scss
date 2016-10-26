@@ -1,6 +1,6 @@
 // Accordion Header: Details Row/Expansion
 .row-details {
-	@include bs-row;
+	@include bs-row(false);
 
 	#{$table} {
 

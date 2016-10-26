@@ -138,17 +138,18 @@
 	@include bs-column-padding;
 }
 
-@mixin bs-row {
+@mixin bs-row($clearfix: true) {
 	margin-left: -$grid-gutter-width / 2;
 	margin-right: -$grid-gutter-width / 2;
-	&::before,
-	&::after {
+
+	@if $clearfix == true {
 		@include clearfix;
 	}
 }
 
 @mixin bs-row-reset {
 	margin: 0;
+
 	&::before,
 	&::after {
 		display: none;
