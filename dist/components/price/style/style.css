@@ -118,13 +118,23 @@
 }
 
 .price-style-02.price-block {
-  font-size: 6.4rem;
+  font-size: 4.1rem;
 }
 
 .price-style-02 .before,
 .price-style-02 .after {
   font-size: 34.375%;
   text-align: center;
+}
+
+.price-style-02 .before {
+  padding-bottom: .2rem;
+  float: left;
+}
+
+.price-style-02 .price {
+  float: left;
+  padding-left: .5rem;
 }
 
 .price-style-02 .currency,
@@ -144,7 +154,7 @@
 }
 
 .price-style-02 .super {
-  font-size: 25%;
+  font-size: 46.34146%;
 }
 
 .price-style-02 .details {
@@ -154,7 +164,7 @@
 
 .price-style-02 .term {
   color: #000;
-  font-size: 18.75%;
+  font-size: 29.26829%;
 }
 
 .price-style-02 .separator {
@@ -224,6 +234,16 @@
   .price-style-01 .details {
     text-align: right;
   }
+  .price-style-02.price-block {
+    font-size: 6.4rem;
+  }
+  .price-style-02 .before {
+    float: none;
+  }
+  .price-style-02 .price {
+    padding-left: 0;
+    float: none;
+  }
   .price-style-02 .currency,
   .price-style-02 .whole,
   .price-style-02 .super,
@@ -234,6 +254,12 @@
     background-repeat: repeat-x;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .price-style-02 .super {
+    font-size: 25%;
+  }
+  .price-style-02 .term {
+    font-size: 18.75%;
   }
   .price-style-03 .currency,
   .price-style-03 .whole,

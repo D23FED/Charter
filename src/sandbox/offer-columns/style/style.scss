@@ -4,6 +4,7 @@
 
 $wrapper: 'offer-columns';
 $column: 'aem-GridColumn';
+$switchpoint: 'md';
 $numOfColumns: 3;
 
 $colGradientStartColor: #fafafa;
@@ -19,8 +20,12 @@ $colGradientEndColor: rgba(250, 250, 250, 0);
 		position: relative;
 		margin-bottom: 1.5rem;
 		font-family: $font-open-sans;
-		padding-left: $grid-gutter-width / 2;
-		padding-right: $grid-gutter-width / 2;
+
+		@include breakpoint($switchpoint) {
+			padding-left: $grid-gutter-width / 2;
+			padding-right: $grid-gutter-width / 2;
+		}
+
 
 		&:first-of-type {
 			padding-left: 0;
@@ -33,13 +38,23 @@ $colGradientEndColor: rgba(250, 250, 250, 0);
 
 		// Inner
 		> div {
-			background-color: $gray-lighter;
 			position: relative;
-			z-index: 20;
-			background-image: radial-gradient(circle, $colGradientStartColor 25%, $colGradientEndColor 60%);
-			background-repeat: no-repeat;
-			background-position: 0 -90px;
 			padding: 2rem;
+			border-top: 1px solid #d8d8d9;
+			border-bottom: 1px solid #d8d8d9;
+
+			@include breakpoint(sm) {
+				z-index: 20;
+				background-image: radial-gradient(circle, $colGradientStartColor 25%, $colGradientEndColor 60%);
+				background-repeat: no-repeat;
+				background-position: 0 -90px;
+			}
+
+
+			@include breakpoint($switchpoint) {
+				background-color: $gray-lighter;
+				border: none;
+			}
 		}
 	}
 
@@ -53,13 +68,24 @@ $colGradientEndColor: rgba(250, 250, 250, 0);
 	h2 {
 		margin-top: 0;
 		margin-bottom: 0;
+		text-align: left;
+
+		@include breakpoint($switchpoint) {
+			text-align: center;
+		}
 	}
 
 	// Primary feature, '125+ Channels with FREE HD & FREE DVR Service'
 	h3 {
+		display: none;
 		font-size: 2rem;
 		color: #000;
 		font-weight: 300;
+
+		@include breakpoint($switchpoint) {
+			display: block;
+		}
+
 
 		// # of channels, '125+'
 		a {
@@ -84,14 +110,6 @@ $colGradientEndColor: rgba(250, 250, 250, 0);
 		}
 	}
 
-	// Link to show/hide details
-	.accordion-link {
-		.show-details {}
-
-		// Offer details (shown after expanding accordion)
-		.details {}
-	}
-
 	.btn {
 		// margin-top: 2rem;
 		margin-bottom: 1.5rem;
@@ -112,9 +130,27 @@ $colGradientEndColor: rgba(250, 250, 250, 0);
 	}
 
 	.channel-logo {
+		display: none;
 		color: $md-blue;
-		display: inline-block;
 		font-style: normal;
+
+		@include breakpoint($switchpoint) {
+			display: inline-block;
+		}
+	}
+
+	ul, p {
+		display: none;
+
+		@include breakpoint($switchpoint) {
+			display: block;
+		}
+	}
+
+	.accordion-link {
+		h3, ul, p {
+			display: block;
+		}
 	}
 }
 

@@ -6,16 +6,41 @@
 // Base everything off the font size for dollars
 $p-font-size-base-02: 6.4rem;
 
+// Base size at smaller breakpoints
+$p-font-size-base-02-sm: 4.1rem;
+
 .price-style-02 {
 	&.price-block {
-		font-size: $p-font-size-base-02;
+		font-size: $p-font-size-base-02-sm;
+
+		@include breakpoint(md) {
+			font-size: $p-font-size-base-02;
+		}
 	}
 
 	.before,
 	.after {
 		font-size: percentage(2.2 / strip-unit($p-font-size-base-02));
 		text-align: center;
-		// text-transform: uppercase;
+	}
+
+	.before {
+		padding-bottom: .2rem;
+		float: left;
+
+		@include breakpoint(md) {
+			float: none;
+		}
+	}
+
+	.price {
+		float: left;
+		padding-left: .5rem;
+
+		@include breakpoint(md) {
+			padding-left: 0;
+			float: none;
+		}
 	}
 
 	.currency,
@@ -39,7 +64,11 @@ $p-font-size-base-02: 6.4rem;
 	}
 
 	.super {
-		font-size: percentage(1.6 / strip-unit($p-font-size-base-02));
+		font-size: percentage(1.9 / strip-unit($p-font-size-base-02-sm));
+
+		@include breakpoint('md') {
+			font-size: percentage(1.6 / strip-unit($p-font-size-base-02));
+		}
 	}
 
 	.details {
@@ -49,7 +78,11 @@ $p-font-size-base-02: 6.4rem;
 
 	.term {
 		color: #000;
-		font-size: percentage(1.2 / strip-unit($p-font-size-base-02));
+		font-size: percentage(1.2 / strip-unit($p-font-size-base-02-sm));
+
+		@include breakpoint('md') {
+			font-size: percentage(1.2 / strip-unit($p-font-size-base-02));
+		}
 	}
 
 	// Separator between two prices in double price block

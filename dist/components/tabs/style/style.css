@@ -422,6 +422,24 @@
   list-style-position: inside;
 }
 
+@media (min-width:544px) {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab,
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
+    width: 33.33333%;
+  }
+}
+
+@media (min-width:768px) {
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
+  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
+    font-size: 2.2rem;
+  }
+  .tabbedComponent.tab-style-4 .tab-content-container,
+  .tabbedComponent.tab-style-4 .tabbedContent {
+    padding: 2rem 4rem 4rem;
+  }
+}
+
 @media (min-width:992px) {
   .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
   .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
@@ -555,24 +573,6 @@
     position: relative;
     padding-left: .5rem;
     font-size: 75%;
-  }
-}
-
-@media (min-width:544px) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab,
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
-    width: 33.33333%;
-  }
-}
-
-@media (min-width:768px) {
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
-  .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
-    font-size: 2.2rem;
-  }
-  .tabbedComponent.tab-style-4 .tab-content-container,
-  .tabbedComponent.tab-style-4 .tabbedContent {
-    padding: 2rem 4rem 4rem;
   }
 }
 

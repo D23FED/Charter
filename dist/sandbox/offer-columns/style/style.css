@@ -1,3 +1,14 @@
+/* Begin dev-only styles. Not for production. */
+.offer-columns {
+  margin-top: 10rem;
+}
+
+.offer-columns .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--4 {
+  width: 100%;
+  float: none;
+}
+
+/* End dev-only styles ====================== */
 .offer-columns {
   text-align: center;
   color: #51565c;
@@ -7,8 +18,6 @@
   position: relative;
   margin-bottom: 1.5rem;
   font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .offer-columns .aem-Grid .aem-GridColumn:first-of-type {
@@ -20,14 +29,10 @@
 }
 
 .offer-columns .aem-Grid .aem-GridColumn > div {
-  background-color: #eeeeee;
   position: relative;
-  z-index: 20;
-  background-image: -webkit-radial-gradient(circle,#fafafa 25%,rgba(250,250,250,0) 60%);
-  background-image: radial-gradient(circle,#fafafa 25%,rgba(250,250,250,0) 60%);
-  background-repeat: no-repeat;
-  background-position: 0 -90px;
   padding: 2rem;
+  border-top: 1px solid #d8d8d9;
+  border-bottom: 1px solid #d8d8d9;
 }
 
 .offer-columns .richtext {
@@ -39,9 +44,11 @@
 .offer-columns h2 {
   margin-top: 0;
   margin-bottom: 0;
+  text-align: left;
 }
 
 .offer-columns h3 {
+  display: none;
   font-size: 2rem;
   color: #000;
   font-weight: 300;
@@ -85,64 +92,24 @@
 }
 
 .offer-columns .channel-logo {
+  display: none;
   color: #00629B;
-  display: inline-block;
   font-style: normal;
 }
 
-.offer-columns {
-  margin-top: 10rem;
+.offer-columns ul, .offer-columns p {
+  display: none;
 }
 
-.featured-offers .aem-Grid .aem-GridColumn::after {
-  width: 96%;
-  left: 2%;
-  height: 2.6rem;
-  bottom: -1.4rem;
-  background-color: rgba(0,0,0,0.3);
-  border-radius: 1.2rem;
-  -webkit-filter: blur(0.6rem);
-          filter: blur(0.6rem);
-  position: absolute;
-  top: inherit;
-  z-index: 10;
-  content: '';
-}
-
-.featured-offers .aem-Grid .aem-GridColumn:first-of-type::after {
-  left: 0;
-}
-
-.featured-offers .aem-Grid .aem-GridColumn:nth-of-type(3)::after, .featured-offers .aem-Grid .aem-GridColumn:last-child::after {
-  right: 0;
-}
-
-.featured-offers .aem-Grid .aem-GridColumn > div::before, .featured-offers .aem-Grid .aem-GridColumn > div::after {
-  content: '';
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 2.5rem;
-  background-repeat: repeat-x;
-}
-
-.featured-offers .aem-Grid .aem-GridColumn > div::before {
-  background-image: -webkit-linear-gradient(left,#d0d0d0,rgba(208,208,208,0));
-  background-image: linear-gradient(90deg,#d0d0d0 0,rgba(208,208,208,0));
-  left: 0;
-}
-
-.featured-offers .aem-Grid .aem-GridColumn > div::after {
-  background-image: -webkit-linear-gradient(left,rgba(208,208,208,0),#d0d0d0);
-  background-image: linear-gradient(90deg,rgba(208,208,208,0) 0,#d0d0d0);
-  right: 0;
+.offer-columns .accordion-link h3, .offer-columns .accordion-link ul, .offer-columns .accordion-link p {
+  display: block;
 }
 
 .featured-offers h2 {
   font-size: 2.8rem;
   color: #808285;
-  font-weight: 300;
   margin-bottom: 2rem;
+  font-weight: 700;
 }
 
 .featured-offers h2 a::after {
@@ -167,8 +134,9 @@
 
 .featured-offers .btn {
   text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.75);
-  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.33);
-  font-size: 2.3rem;
+  box-shadow: .0rem .1rem .3rem #666;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .featured-offers .btn::after {
@@ -181,6 +149,89 @@
   background-image: -webkit-radial-gradient(center ellipse,rgba(0,0,0,0.6) 0,transparent 75%);
   background-image: radial-gradient(ellipse at center,rgba(0,0,0,0.6) 0,transparent 75%);
   z-index: -1;
+}
+
+@media (min-width:768px) {
+  .offer-columns .aem-Grid .aem-GridColumn > div {
+    z-index: 20;
+    background-image: -webkit-radial-gradient(circle,#fafafa 25%,rgba(250,250,250,0) 60%);
+    background-image: radial-gradient(circle,#fafafa 25%,rgba(250,250,250,0) 60%);
+    background-repeat: no-repeat;
+    background-position: 0 -90px;
+  }
+  .featured-offers .aem-Grid .aem-GridColumn > div::before, .featured-offers .aem-Grid .aem-GridColumn > div::after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 2.5rem;
+    background-repeat: repeat-x;
+  }
+  .featured-offers .aem-Grid .aem-GridColumn > div::before {
+    background-image: -webkit-linear-gradient(left,#d0d0d0,rgba(208,208,208,0));
+    background-image: linear-gradient(90deg,#d0d0d0 0,rgba(208,208,208,0));
+    left: 0;
+  }
+  .featured-offers .aem-Grid .aem-GridColumn > div::after {
+    background-image: -webkit-linear-gradient(left,rgba(208,208,208,0),#d0d0d0);
+    background-image: linear-gradient(90deg,rgba(208,208,208,0) 0,#d0d0d0);
+    right: 0;
+  }
+}
+
+@media (min-width:992px) {
+  .offer-columns .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--4 {
+    float: left;
+    clear: none;
+    width: 33.33333333%;
+  }
+  .offer-columns .aem-Grid .aem-GridColumn {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .offer-columns .aem-Grid .aem-GridColumn > div {
+    background-color: #eeeeee;
+    border: none;
+  }
+  .offer-columns h2 {
+    text-align: center;
+  }
+  .offer-columns h3 {
+    display: block;
+  }
+  .offer-columns .channel-logo {
+    display: inline-block;
+  }
+  .offer-columns ul, .offer-columns p {
+    display: block;
+  }
+  .featured-offers .aem-Grid .aem-GridColumn::after {
+    width: 96%;
+    left: 2%;
+    height: 2.6rem;
+    bottom: -1.4rem;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 1.2rem;
+    -webkit-filter: blur(0.6rem);
+    filter: blur(0.6rem);
+    position: absolute;
+    top: inherit;
+    z-index: 10;
+    content: '';
+  }
+  .featured-offers .aem-Grid .aem-GridColumn:first-of-type::after {
+    left: 0;
+  }
+  .featured-offers .aem-Grid .aem-GridColumn:nth-of-type(3)::after, .featured-offers .aem-Grid .aem-GridColumn:last-child::after {
+    right: 0;
+  }
+  .featured-offers h2 {
+    font-weight: 300;
+  }
+  .featured-offers .btn {
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.33);
+    font-size: 2.3rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
