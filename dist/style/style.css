@@ -557,54 +557,6 @@ main .container .container {
   font-size: 5.76rem;
 }
 
-.price-style-03.price-block {
-  font-size: 7.8rem;
-}
-
-.price-style-03 .before,
-.price-style-03 .after {
-  font-size: 15.38462%;
-  font-weight: 700;
-}
-
-.price-style-03 .currency,
-.price-style-03 .whole,
-.price-style-03 .super,
-.price-style-03 .separator {
-  color: #00629B;
-  font-weight: 800;
-}
-
-.price-style-03 .currency {
-  font-size: 39.74359%;
-}
-
-.price-style-03 .whole {
-  line-height: .8;
-}
-
-.price-style-03 .super {
-  font-size: 38.46154%;
-}
-
-.price-style-03 .super .extra {
-  font-size: 53.33333%;
-}
-
-.price-style-03 .details {
-  text-align: left;
-  font-size: 100%;
-}
-
-.price-style-03 .term {
-  color: #000;
-  font-size: 12.82051%;
-}
-
-.price-style-03 .separator {
-  font-size: 7.02rem;
-}
-
 
 /* Tabbed Component v2 | Oct 2016 */
 
@@ -1219,17 +1171,6 @@ main .container .container {
   }
   .price-style-02 .term {
     font-size: 18.75%;
-  }
-  .price-style-03 .currency,
-  .price-style-03 .whole,
-  .price-style-03 .super,
-  .price-style-03 .separator {
-    color: #0077BC;
-    background-image: -webkit-linear-gradient(top,#4ab3f1,#00629B);
-    background-image: linear-gradient(180deg,#4ab3f1 0,#00629B);
-    background-repeat: repeat-x;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
   .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
   .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
