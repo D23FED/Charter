@@ -20,16 +20,18 @@
 				content: '';
 			}
 
+			// First and last columns have different shadow position because of padding differences
 			&:first-of-type {
 				&::after {
-					left: 0;
+					left: -1%;
 				}
 			}
 
 			&:nth-of-type(#{$numOfColumns}),
 			&:last-child {
 				&::after {
-					right: 0;
+					right: -1%;
+					left: auto;
 				}
 			}
 		}
@@ -71,6 +73,7 @@
 		color: $gray;
 		margin-bottom: 2rem;
 		font-weight: bold;
+		white-space: nowrap;
 
 		@include breakpoint($switchpoint) {
 			font-weight: 300;
@@ -97,12 +100,14 @@
 		}
 	}
 
+	// List of features, 'The fastest and most reliable network available'
 	ul {
 		list-style-type: none;
 		padding-left: 0;
 		font-size: 1.6rem;
 	}
 
+	// "Choose" button
 	.btn {
 		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
 		box-shadow: .0rem .1rem .3rem #666;
@@ -112,18 +117,22 @@
 		@include breakpoint($switchpoint) {
 			box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
 			font-size: 2.3rem;
+
+			// Large rounded shadow below button
+			&::after {
+				position: absolute;
+				content: '';
+				height: 100%;
+				width: 100%;
+				left: 0;
+				bottom: -1.5rem;
+				background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
+				z-index: -1;
+			}
 		}
 
-
-		&::after {
-			position: absolute;
-			content: '';
-			height: 100%;
-			width: 100%;
-			left: 0;
-			bottom: -1.5rem;
-			background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
-			z-index: -1;
+		&:active {
+			box-shadow: none;
 		}
 	}
 }

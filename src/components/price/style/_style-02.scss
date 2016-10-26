@@ -20,7 +20,7 @@ $p-font-size-base-02-sm: 4.1rem;
 
 	.before,
 	.after {
-		font-size: percentage(2.2 / strip-unit($p-font-size-base-02));
+		font-size: percentage(2.2 / strip-unit($p-font-size-base-02-sm));
 		text-align: center;
 	}
 
