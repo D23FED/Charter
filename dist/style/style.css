@@ -1143,6 +1143,10 @@ main .container .container {
   .price-style-02.price-block{
     font-size: 6.4rem;
   }
+  .price-style-02 .before,
+  .price-style-02 .after{
+    font-size: 34.375%;
+  }
   .price-style-02 .before{
     float: none;
   }
