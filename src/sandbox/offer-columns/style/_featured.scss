@@ -1,0 +1,138 @@
+// 'Featured Offers' Offer Columns Style
+// Ex: https://www.charter.com/browse/content/packages/
+@import 'initialize';
+
+.featured-offers {
+	.aem-Grid .#{$column} {
+		// Shadow at bottom of column
+		@include breakpoint($switchpoint) {
+			&::after {
+				width: 96%;
+				left: 2%;
+				height: 2.6rem;
+				bottom: -1.4rem;
+				background-color: rgba(0, 0, 0, 0.3);
+				border-radius: 1.2rem;
+				filter: blur(0.6rem);
+				position: absolute;
+				top: inherit;
+				z-index: 10;
+				content: '';
+			}
+
+			// First and last columns have different shadow position because of padding differences
+			&:first-of-type {
+				&::after {
+					left: -1%;
+				}
+			}
+
+			&:nth-of-type(#{$numOfColumns}),
+			&:last-child {
+				&::after {
+					right: -1%;
+					left: auto;
+				}
+			}
+		}
+
+
+		// Inner
+		> div {
+			// Shadow on sides of column
+			@include breakpoint(sm) {
+				&::before,
+				&::after {
+					content: '';
+					height: 100%;
+					position: absolute;
+					top: 0;
+					width: 2.5rem;
+					background-repeat: repeat-x;
+				}
+
+				// Shadow on left side of column
+				&::before {
+					background-image: linear-gradient(to right, #d0d0d0 0, rgba(208, 208, 208, 0) 100%);
+					left: 0;
+				}
+
+				// Shadow on right side of column
+
+				&::after {
+					background-image: linear-gradient(to right, rgba(208, 208, 208, 0) 0, #d0d0d0 100%);
+					right: 0;
+				}
+			}
+		}
+	}
+
+	// Package Title, 'Triple Play Select >>'
+	h2 {
+		font-size: 2.8rem;
+		color: $gray;
+		margin-bottom: 2rem;
+		font-weight: bold;
+		white-space: nowrap;
+
+		@include breakpoint($switchpoint) {
+			font-weight: 300;
+		}
+
+
+		a {
+			// Double angle bracket
+			&::after {
+				content: '\00BB';
+				margin-left: .6rem;
+				display: inline-block;
+			}
+		}
+	}
+
+	// Primary feature, '125+ Channels with FREE HD & FREE DVR Service'
+	h3 {
+		font-size: 2rem;
+
+		// # of channels, '125+'
+		a {
+			font-size: 4.9rem;
+		}
+	}
+
+	// List of features, 'The fastest and most reliable network available'
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		font-size: 1.6rem;
+	}
+
+	// "Choose" button
+	.btn {
+		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+		box-shadow: .0rem .1rem .3rem #666;
+		font-size: 1.6rem;
+		font-weight: bold;
+
+		@include breakpoint($switchpoint) {
+			box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
+			font-size: 2.3rem;
+
+			// Large rounded shadow below button
+			&::after {
+				position: absolute;
+				content: '';
+				height: 100%;
+				width: 100%;
+				left: 0;
+				bottom: -1.5rem;
+				background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
+				z-index: -1;
+			}
+		}
+
+		&:active {
+			box-shadow: none;
+		}
+	}
+}
