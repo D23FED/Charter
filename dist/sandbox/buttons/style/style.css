@@ -1,5 +1,5 @@
 .btn {
-  display: block;
+  display: inline-block;
   box-shadow: .0rem .1rem .3rem #666;
   padding: .7rem 4.0rem;
 }
@@ -8,7 +8,7 @@
   text-decoration: none;
 }
 
-.orange {
+.btn-primary {
   background: #feb533;
   background-image: -webkit-linear-gradient(top,#feb533,#ffa300);
   background-image: linear-gradient(180deg,#feb533,#ffa300);
@@ -16,31 +16,34 @@
   border-radius: .4rem;
   text-shadow: .1rem .1rem .3rem #888;
   font-weight: 700;
-  color: #fff;
   font-size: 1.9rem;
   white-space: nowrap;
   text-transform: uppercase;
-}
-
-.orange:hover {
-  background: #ffa300;
-  background-image: -webkit-linear-gradient(top,#ffa300,#feb533);
-  background-image: linear-gradient(180deg,#ffa300,#feb533);
-}
-
-.btn-primary {
   color: #fff;
   background-color: #ffa300;
   border-color: #e69300;
 }
 
-.btn-primary:active,
-.btn-primary:focus {
-  background-color: #ffb229;
-  border-color: #faa000;
+.btn-primary:hover {
+  background: #ffa300;
+  background-image: -webkit-linear-gradient(top,#ffa300,#feb533);
+  background-image: linear-gradient(180deg,#ffa300,#feb533);
+  border-color: #CC9933;
 }
 
-.btn-secondary {
+.btn-primary:active:focus,
+.btn-primary:active:hover {
+  border-color: #CC9933;
+  background: #feb533;
+}
+
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #feb533;
+  border-color: #ffa300;
+}
+
+.btn-info {
   text-transform: uppercase;
   color: #00629B;
   border: 1px solid #00629B;

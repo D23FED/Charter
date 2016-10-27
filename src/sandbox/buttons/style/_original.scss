@@ -4,7 +4,6 @@
 // button
 // input type='button'
 // input type='submit'`
-
 @mixin button-shadow-round {
 	&::after {
 		position: absolute;
@@ -18,21 +17,10 @@
 	}
 }
 
-@mixin button-shadow-round {
-	&::after {
-		position: absolute;
-		content: '';
-		height: 100%;
-		width: 100%;
-		left: 0;
-		bottom: -15px;
-		background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
-		z-index: -1;
-	}
-}
+.btn-primary {}
 
 .btn {
-	display: inline-block;
+	display: block;
 	box-shadow: .0rem .1rem .3rem #666;
 	padding: .7rem 4.0rem;
 	text-decoration: none;
@@ -42,7 +30,8 @@
 	}
 }
 
-.btn-primary {
+// Primary/Orange button style
+.orange {
 	background: $lt-orange;
 	background-image: linear-gradient(to bottom, $lt-orange, $bright-orange);
 	border: solid $orange-brown 0.1rem;
@@ -53,34 +42,29 @@
 	font-size: 1.9rem;
 	white-space: nowrap;
 	text-transform: uppercase;
-	color: #fff;
-	background-color: $bright-orange;
-	border-color: $tangerine;
 
 	&:hover {
 		background: $bright-orange;
 		background-image: linear-gradient(to bottom, $bright-orange, $lt-orange);
-		border-color: $orange-brown;
 	}
+}
 
-	&:active {
-		&:focus,
-		&:hover {
-			border-color: $orange-brown;
-			background: $lt-orange;
-		}
-	}
+// Another bleeping orange button
+.btn-primary {
+	color: #fff;
+	background-color: $bright-orange;
+	border-color: $tangerine;
 
 	&:active,
 	&:focus {
-		background-color: $lt-orange;
-		border-color: $bright-orange;
+		background-color: $lt-orange-2;
+		border-color: $bright-orange-2;
 	}
 }
 
 // Blue outline button
 
-.btn-info {
+.btn-secondary {
 	text-transform: uppercase;
 	color: $md-blue;
 	border: 1px solid $md-blue;
