@@ -36,6 +36,10 @@
 	box-shadow: .0rem .1rem .3rem #666;
 	padding: .7rem 4.0rem;
 	text-decoration: none;
+	font-size: 1.9rem;
+	font-weight: bold;
+	transition: all 150ms ease-out;
+	transition-property: color, border;
 
 	&:hover {
 		text-decoration: none;
@@ -57,7 +61,8 @@
 	background-color: $bright-orange;
 	border-color: $tangerine;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background: $bright-orange;
 		background-image: linear-gradient(to bottom, $bright-orange, $lt-orange);
 		border-color: $orange-brown;
@@ -66,15 +71,15 @@
 	&:active {
 		&:focus,
 		&:hover {
+			background: $bright-orange;
 			border-color: $orange-brown;
-			background: $lt-orange;
 		}
 	}
 
 	&:active,
 	&:focus {
-		background-color: $lt-orange;
-		border-color: $bright-orange;
+		background-color: $bright-orange;
+		border-color: $orange-brown;
 	}
 }
 
@@ -84,6 +89,26 @@
 	text-transform: uppercase;
 	color: $md-blue;
 	border: 1px solid $md-blue;
+	font-weight: 700;
+	background-color: #fff;
+
+	@include hover-focus {
+		background-color: #fff;
+		color: $md-blue;
+		border-color: $blue;
+	}
+
+
+	&:active {
+		background-color: #fff;
+		color: $md-blue;
+
+		&:focus,
+		&:hover {
+			background-color: #fff;
+		color: $md-blue;
+		}
+	}
 }
 
 // Who knows
