@@ -1,0 +1,95 @@
+/* Tab Style 5: Grey, used on International*/
+
+@if $nav-tabs-5-enable-justify == true {
+}
+.tabbedComponent.tab-style-5 {
+	@include clearfix;
+
+	// Row containing tabs
+	.tab-row {
+		overflow: initial;
+
+		// nav tabs list
+		ul.nav-tabs {
+			border-bottom: none;
+
+			// Actual tabs
+			.tab {
+				position: relative;
+				margin-bottom: 0;
+				width: 100%;
+				text-align: left;
+				margin-left: 0;
+				margin-right: 0;
+				z-index: 20;
+
+				// Tab link
+				> a
+				}
+
+				// Active tab link
+				&.js-active a {
+					&,
+					&:hover,
+					&:focus {
+
+
+
+
+					}
+				}
+
+				&.js-active > a.details-toggle {
+					&,
+					&:hover,
+					&:focus {
+
+						&::before {
+							content: 'Hide ';
+						}
+					}
+				}
+
+				// 'View/Hide Details' button
+				.details-toggle {
+
+					&::before {
+						content: 'View ';
+						display: inline-block;
+						padding-right: .5rem;
+					}
+
+
+				}
+			}
+
+			// Arrows not supported on side tab
+			.arrow {
+				display: none;
+			}
+		}
+	}
+
+	// Row containing all tab content panes
+
+	.tab-content-container,
+	.tabbedContent {
+		float: left;
+		width: 100%;
+
+	}
+
+	.tab-content-container {
+		display: none;
+	}
+
+	// Content that had been appended to the tab itself. Used to turn side tabs into 'accordion' style on mobile
+	.tabbedRow .tabbedContent {
+
+		ul, ol {
+			li {
+				list-style-position: inside;
+			}
+		}
+	}
+}
