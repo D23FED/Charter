@@ -20,7 +20,7 @@ $img-container-namespace: image-focus;
 $img-container: background-image;
 $component-class: imageArtDirection;
 
-@import 'testing';
+// @import 'testing';
 
 // Prevent duplicate container padding
 .#{$component-class} {

@@ -1,0 +1,80 @@
+@import 'initialize';
+
+// a.btn
+// button
+// input type='button'
+// input type='submit'`
+@mixin button-shadow-round {
+	&::after {
+		position: absolute;
+		content: '';
+		height: 100%;
+		width: 100%;
+		left: 0;
+		bottom: -15px;
+		background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
+		z-index: -1;
+	}
+}
+
+.btn-primary {}
+
+.btn {
+	display: block;
+	box-shadow: .0rem .1rem .3rem #666;
+	padding: .7rem 4.0rem;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// Primary/Orange button style
+.orange {
+	background: $lt-orange;
+	background-image: linear-gradient(to bottom, $lt-orange, $bright-orange);
+	border: solid $orange-brown 0.1rem;
+	border-radius: .4rem;
+	text-shadow: .1rem .1rem .3rem #888;
+	font-weight: bold;
+	color: #fff;
+	font-size: 1.9rem;
+	white-space: nowrap;
+	text-transform: uppercase;
+
+	&:hover {
+		background: $bright-orange;
+		background-image: linear-gradient(to bottom, $bright-orange, $lt-orange);
+	}
+}
+
+// Another bleeping orange button
+.btn-primary {
+	color: #fff;
+	background-color: $bright-orange;
+	border-color: $tangerine;
+
+	&:active,
+	&:focus {
+		background-color: $lt-orange-2;
+		border-color: $bright-orange-2;
+	}
+}
+
+// Blue outline button
+
+.btn-secondary {
+	text-transform: uppercase;
+	color: $md-blue;
+	border: 1px solid $md-blue;
+}
+
+// Who knows
+.btn-tertiary {
+	background-color: #4ab3f1;
+	background-image: -webkit-linear-gradient(top, #4ab3f1 0, #0091e6 100%);
+	background-image: linear-gradient(to bottom, #4ab3f1 0, #0091e6 100%);
+	background-repeat: repeat-x;
+	color: #fff;
+}

@@ -1,22 +1,5 @@
 /* Image Art Direction */
 
-/* Dev-only rules */
-
-main {
-  border: 1px dotted red;
-}
-
-main .container {
-  border: 1px dotted yellow;
-}
-
-main .container .container {
-  border: 1px dotted green;
-}
-
-
-/* End dev-only rules */
-
 .container .imageArtDirection {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
