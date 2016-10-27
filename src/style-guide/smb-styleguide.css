@@ -1,0 +1,172 @@
+/*
+ * 		Spectrum Small Business
+ * 		Raymond Heredia
+ * 		10-3-2016
+ * 		This is all based on a PDF Dan sent me through email.  There is a copy in this same directory.
+ *  
+ * 
+ * 		TO DO:
+ * 		1.	Discuss the approach for the links that use chevrons.  Glyphs?  Icons?
+ * 		2.	Combine selectors with similar rules.  I am not sure of all the Open Sans variations, if any.
+ * 		3.	Class names are just for my referece, they came from the PDF.  Those need to be changed.
+ * 		4.	I am missing the media queries.  Just using mobile, tablet, desktop as placeholders.
+ * 		5.	The style guide uses a lot of PX for font sizes.  In the name of RWD, those should be changed to more relative measurements.
+ * 
+ */
+
+@media (**mobile and tablet**) {
+	h1 {
+		font-family:"Open Sans Regular", Arial, Helvetica, sans-serif;
+		font-size:28px;
+		line-height:1.1em;
+		color:#00629B;
+	}
+	h2 {
+		font-family:"Open Sans Semibold", Arial, Helvetica, sans-serif;
+		font-size:24px;
+		line-height:1.25em;
+		color:#00629B;
+	}
+	h3 {
+		font-family:"Open Sans Semibold", Arial, Helvetica, sans-serif;
+		font-size:18px;
+		line-height:1.25em;
+	}
+	h4 {
+		font-family:"Open Sans Bold", Arial, Helvetica, sans-serif;
+		font-size:15px;
+		line-height:1.42em;
+		color:#333;
+	}
+	.secondary h3 {
+		font-family:"Open Sans Bold", Arial, Helvetica, sans-serif;
+		font-size:20px;
+		line-height:1.25em;
+		color:#00629B;
+	}
+	.secondary p {
+		font-size:15px;
+		line-height:21.4px;
+	}
+	.tertiary h3 {
+		font-family:"Open Sans Bold", Arial, Helvetica, sans-serif;
+		font-size:18px;
+		line-height:1.1em; /* SG says 19.8px and 1.1em...one of these is wrong.... */
+	}
+	.tertiary h4 {
+		font-family:"Open Sans Bold", Arial, Helvetica, sans-serif;
+		font-size:18px;
+		line-height:1.1em;/* SG says 22.5px and 1.1em...one of these is wrong.... */
+		color:#00629B;
+	}
+	.tertiary p {
+		font-size:13px;
+		line-height:18.6px;
+	}
+	.sidebar h4 {
+		font-family:"Open Sans Regular", Arial, Helvetica, sans-serif;
+		font-size:18px;
+		line-height:1.1em;
+	}
+	.sidebar p {
+		font-size:13px;
+		line-height:18.6px;
+	}
+	.sidebar a[href^="tel"] {
+	    font-family:"Open Sans Bold", Arial, Helvetica, sans-serif;
+	    font-size:18px;
+	    line-height:1.42em;
+	    color:#18B9A0;
+	}
+	p {
+		color:#333;	
+	}
+	article.lead {
+		font-size:18px;
+	}
+	article {
+		font-size:15px;
+		line-height:21.4px; /* need to calculate the em. */
+	}
+	article.minor {
+		font-size:13px;
+		line-height:18.6; /* need to calculate the em. */
+	}
+	article.legal {
+		font-size:11px;
+		line-height:15.8px;  /* need to calculate the em. */
+	}
+	p.heroCopy {
+		font-size:21px;
+		line-height:29.4px
+	}
+	p.bodyCopy {
+		font-size:13px;
+		line-height:18.6px;
+	}
+	p.legalCopy {
+		font-size:11px;
+		line-height:15.8px;
+	}
+	a {
+		color:#00629B;
+		text-decoration:none;
+	}
+	a:hover {
+		color:#00C0FF; /* How do they want the chevron to work? */
+	}
+	button {
+		text-transform:uppercase;
+		font-family:"Open Sans Semibold", Arial, Helvetica, sans-serif;
+		color:#F0F4F7;
+		border-radius:5px;
+		text-shadow:0 1px 0 rgba(0,0,0,.2);
+		background:#fdaa18;
+		background:-moz-linear-gradient(left,  #fdaa18 0%, #ffa300 100%);
+		background:-webkit-linear-gradient(left,  #fdaa18 0%,#ffa300 100%);
+		background:linear-gradient(to right,  #fdaa18 0%,#ffa300 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdaa18', endColorstr='#ffa300',GradientType=1 );
+	/*
+	 * integrate this:
+	 * Chevron portion overlay - RGBA: 0,0,0,0.15 | black w/ 15% opacity
+	 * Hover state: RGB: 255,187,41 | #FFBB29
+	 * 
+	 */
+	}
+
+	button.small {
+		font-size:13px;
+	/*	height:27px....I dont think its a good idea to specify the height of the button, instead the size of the text combined with padding should determine height.*/
+	}
+	button.medium {
+		font-size:16px;
+	/*	height:35px same reason as above.*/
+	}
+	button.large {
+		font-size:20px;
+	/*	height:42px same reason as above.*/
+	}
+	input[type="text"] {
+		font-size:14px;
+		color:#555;
+		border:1px solid #CCC;
+		border-radius:4px;
+		/*	height:34px same reason as above. The heights of the input fields should not be specified.*/
+	}
+	.menu header {
+		font-family:"Open Sans Semibold", Arial, Helvetica, sans-serif;
+		font-size:14px;
+		color:#00629B;
+	}
+	.menu **subhead** {
+		font-family:"Open Sans Regular", Arial, Helvetica, sans-serif;
+		font-size:13px;
+		color:#555;
+	/*	include the chevon. */
+	}
+}
+@media (**desktop**) {
+	h1 {
+		font-size:40px;
+	}
+}

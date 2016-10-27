@@ -1,0 +1,193 @@
+/* 
+ * 10-13-16
+ * Raymond Heredia
+ * These styles are exclusive to the styleGuide and not meant to be in vanilla.css or to be used anywhere else on Spectrum.
+ * 
+ * */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800');
+@font-face {
+	font-family: 'charter-icons';
+	src: url('charter-icons.eot');
+	src: url('charter-icons.eot?#iefix') format('embedded-opentype'),
+		url('charter-icons.woff') format('woff'),
+		url('charter-icons.ttf') format('truetype'),
+		url('charter-icons.svg#charter-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family:"Open Sans", sans-serif;
+}
+/*body:after {
+	content: "10/26/16: Applying styles based on Residential" !important;
+	padding:10px;
+	color:white;
+	background:red;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	display:block;
+	text-align:center;
+	opacity:.5;
+}*/
+code {padding:2px 0;}
+code pre, .wp {color:#00629B;white-space:pre-wrap;}
+p em, code pre em {background:#A0F3FF;font-style:normal;}
+p .comment, code pre .comment {background:none;font-style:normal;color:red;}
+body > div > div {margin:20px 0 20px 40px;padding:10px;}
+body > div > div:nth-child(even) {background:#F0F4F7;}
+.hero p {font-size:15px;}
+span p {font-size:13px;}
+.legal p {font-size:11px;}
+.important {color:red;}
+.palette {list-style-type:none;margin:0;padding:0;display:flex;color:#FFF;}
+.palette > li ul {list-style-type:none;padding:0;}
+.palette > li {display:block;float:left;width:20%;}
+.palette span {padding:10px;display:block;margin-right:10px;}
+.palette .sgMedBlue span {background:#00629B;}
+.palette .sgLtBlue span {background:#00C0FF;}
+.palette .sgYellow span {background:#FDAA18;}
+.palette .sgGray span {background:#919194;}
+.palette .sgTeal span {background:#18B9A0;margin-right:0;}
+
+h2.sgMedBlue {color:#00629B;}
+h2.sgLtBlue {color:#00C0FF;}
+h2.sgYellow {color:#FDAA18;}
+h2.sgGray {color:#919194;}
+h2.sgTeal {color:#18B9A0;margin-right:0;}
+.btn.cta {
+	background: #fdaa18;
+	background: -moz-linear-gradient(top,  #fdaa18 0%, #fdaa18 50%, #ffa300 51%, #ffa300 100%);
+	background: -webkit-linear-gradient(top,  #fdaa18 0%,#fdaa18 50%,#ffa300 51%,#ffa300 100%);
+	background: linear-gradient(to bottom,  #fdaa18 0%,#fdaa18 50%,#ffa300 51%,#ffa300 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdaa18', endColorstr='#ffa300',GradientType=0 );
+	font-weight:600;
+	color:#F0F4F7;
+	-moz-box-shadow:0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, 0.2);
+	box-shadow:0 1px 0 rgba(0, 0, 0, 0.2);
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:none;
+	padding:0;/* need to remove the default padding from bootstrap */
+}
+.btn.cta span {
+	color:#F0F4F7;
+	float:left;
+	padding:6px 12px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+.btn.cta:hover span {background:#FFBB29;}
+.btn.cta i:after {
+	background: rgba(0, 0, 0, 0.15) none repeat scroll 0 0;
+    content: "\e601";
+    display: block;
+    float: left;
+    font-family: "charter-icons";
+    font-style: normal;
+    -moz-border-radius:0 4px 4px 0;
+    -webkit-border-radius:0 4px 4px 0;
+    border-radius:0 4px 4px 0;
+    padding:6px 8px 6px 6px;
+}
+.btn-primary {
+	background:#00629b;
+}
+.btn-default {
+	background:#f66200;
+	color:#FFF;
+	border-color:#f66200;
+}
+.btn-default:hover {
+	background:#dd5800;
+	color:#FFF;
+}
+.btn-info {
+	background:#6c6c70;
+	border-color:#6c6c70;
+}
+.btn-info:hover {
+	background:#949496;
+}
+.btn.cta.submit {
+	background: #18b9a0;
+	background: -moz-linear-gradient(top,  #18b9a0 0%, #18b9a0 50%, #00b398 51%, #00b398 100%);
+	background: -webkit-linear-gradient(top,  #18b9a0 0%,#18b9a0 50%,#00b398 51%,#00b398 100%);
+	background: linear-gradient(to bottom,  #18b9a0 0%,#18b9a0 50%,#00b398 51%,#00b398 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18b9a0', endColorstr='#00b398',GradientType=0 );
+}
+.btn.cta.submit:hover span {background:#01CDAE;}
+.top-nav ul {
+	padding:0;
+	font-size:0;
+} 
+.top-nav li {
+	list-style-type:none;
+	display:inline-block;
+	padding:1.3em .5em .5em;
+	color:#FFF;
+	font-size:1.3rem;
+	font-weight:normal;
+	cursor:pointer;
+	border-radius:0 0 3px 3px;
+	background:#00629B;
+	margin-left:.42em;
+}
+.top-nav li:first-child {
+	margin-left:0;
+}
+.top-nav li:hover {
+	background:#0B7AC0;
+}
+.main-nav ul {
+	background:#52565C;
+	padding:0;
+	font-size:0;
+}
+.main-nav li {
+	list-style-type:none;
+	display:inline-block;
+	padding:1em;
+	color:#FFF;
+	border-right:1px solid #FFF;
+	font-size:1.7rem;
+	font-weight:700;
+	cursor:pointer;
+}
+.main-nav li:hover {
+	background:#0B7AC0;
+}
+footer {
+	color:#FFF;
+	background:#00629B;
+	padding:1.3em 1em;
+	font-size:.85em;
+}
+footer ul {
+	list-style-type:none;
+	padding:0;
+}
+footer h6 {
+	color:#8CC657;
+	font-size:1.1em;
+}
+footer ul + h6 {
+	margin-top:1.3em;
+}
+footer li {
+	padding-bottom:.5em;
+}
+footer p {
+	color:#FFF;
+}
+input[type="text"],
+input[type="email"] {
+	width: 100%;
+	width: -moz-available;
+	width: -webkit-fill-available;
+}
