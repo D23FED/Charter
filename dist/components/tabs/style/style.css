@@ -1,5 +1,31 @@
 /* Tabbed Component v2 | Oct 2016 */
 
+/* Begin dev-only rules (Just for testing, remove from final CSS) */
+
+/* =================================== */
+
+[class*='tab-style-'] {
+  margin-bottom: 10rem;
+}
+
+.tab-style-4,
+.tab-style-3 {
+  background-color: #003057;
+}
+
+.tab-style-3 .tab-row {
+  padding: 2rem 0;
+}
+
+.tab-style-2,
+.tab-style-3,
+.tab-style-4 {
+  display: none;
+}
+
+
+/* End dev-only rules ================ */
+
 /* Override core CSS */
 
 .tabbedComponent .tab-row {
@@ -105,65 +131,6 @@
   background-color: #fff;
   border: none;
   padding: 1rem;
-}
-
-
-/* Tab Style 1: Default */
-
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
-  text-align: left;
-  width: 100%;
-}
-
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a {
-  margin: 0;
-  color: #00629B;
-  background-color: #ededed;
-  border-width: .1rem;
-  border-style: solid;
-  border-color: #eee #eee #ddd;
-  border-radius: .4rem .4rem 0 0;
-}
-
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:focus,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a:hover,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a:focus,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a:hover {
-  color: #0077BC;
-  background-color: #ededed;
-  border-color: #eee #eee #ddd;
-}
-
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a:hover,
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a:focus {
-  color: #333;
-  background-color: #fff;
-  border: .1rem solid #ddd;
-  border-bottom-color: transparent;
-}
-
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab:first-child,.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab:last-child {
-  margin-left: 0;
-}
-
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow:first-child {
-  margin-right: .1rem;
-}
-
-.tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow:last-child {
-  margin-left: .1rem;
-}
-
-.tabbedComponent.tab-style-1 .tab-content-container {
-  border: .1rem solid #ddd;
-  border-width: 0 .1rem .1rem;
-  background: -webkit-linear-gradient(top,#ffffff,#ffffff 60%,#eef1f3);
-  background: linear-gradient(180deg,#ffffff 0%,#ffffff 60%,#eef1f3);
 }
 
 
@@ -453,6 +420,83 @@
   list-style-position: inside;
 }
 
+
+/* Tab Style 5: Grey, used on International*/
+
+.tab-style-5 .tabbedComponent.tab-style-1::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row {
+  display: table;
+  width: 100%;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs {
+  border-bottom: none;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
+  margin: 0;
+  display: inline-block;
+  float: none;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a,
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a {
+  display: inline-block;
+  background-color: transparent;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a.details-toggle,
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a.details-toggle {
+  display: none;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab {
+  position: relative;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: 20;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle::before,
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:hover::before,
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab.js-active > a.details-toggle:focus::before {
+  content: 'Hide ';
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab .details-toggle::before {
+  content: 'View ';
+  display: inline-block;
+  padding-right: .5rem;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
+  display: none;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-content-container,
+.tab-style-5 .tabbedComponent.tab-style-1 .tabbedContent {
+  float: left;
+  width: 100%;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tab-content-container {
+  display: none;
+}
+
+.tab-style-5 .tabbedComponent.tab-style-1 .tabbedRow .tabbedContent ul li,
+.tab-style-5 .tabbedComponent.tab-style-1 .tabbedRow .tabbedContent ol li {
+  list-style-position: inside;
+}
+
 @media (min-width: 544px) {
   .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab,
   .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
@@ -472,12 +516,6 @@
 }
 
 @media (min-width: 992px) {
-  .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
-  .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
-    text-align: center;
-    width: auto;
-    color: #000;
-  }
   .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
   .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
     font-size: 2.4rem;
@@ -529,6 +567,9 @@
 }
 
 @media (min-width: 1200px) {
+  .tab-style-3 .tab-row {
+    padding: 0;
+  }
   .tabbedComponent.tab-style-2 .tab-row {
     display: table;
     width: 100%;
@@ -610,6 +651,9 @@
     position: relative;
     padding-left: .5rem;
     font-size: 75%;
+  }
+  .tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs {
+    display: table-row;
   }
 }
 
