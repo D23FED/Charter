@@ -1,94 +1,124 @@
 /* Tab Style 5: Grey, used on International*/
 
-@if $nav-tabs-5-enable-justify == true {
-}
-.tabbedComponent.tab-style-5 {
-	@include clearfix;
+$border-grey: #E7E7E7;
+.tab-style-5 {
+	.tabbedComponent.tab-style-1 {
+		@include clearfix;
 
-	// Row containing tabs
-	.tab-row {
-		overflow: initial;
-
-		// nav tabs list
-		ul.nav-tabs {
-			border-bottom: none;
-
-			// Actual tabs
-			.tab {
-				position: relative;
-				margin-bottom: 0;
+		// Row containing tabs
+		.tab-row {
+			@if $nav-tabs-5-enable-justify == true {
+				display: table;
 				width: 100%;
-				text-align: left;
-				margin-left: 0;
-				margin-right: 0;
-				z-index: 20;
+			}
 
-				// Tab link
-				> a
-				}
+			// nav tabs list
+			ul.nav-tabs {
+				border-bottom: none;
 
-				// Active tab link
-				&.js-active a {
-					&,
-					&:hover,
-					&:focus {
-
-
-
-
+				@if $nav-tabs-5-enable-justify == true {
+					@include breakpoint(lg) {
+						display: table-row;
 					}
 				}
 
-				&.js-active > a.details-toggle {
-					&,
-					&:hover,
-					&:focus {
+				.tab,
+				.arrow {
+					margin: 0;
+					display: inline-block;
 
-						&::before {
-							content: 'Hide ';
+					@if $nav-tabs-5-enable-justify == true {
+						float: none;
+					}
+
+					> a {
+						display: inline-block;
+						background-color: transparent;
+						background: transparent;
+						border: 0;
+						border-right: 1px solid $border-grey;
+						color: $cool-grey;
+						cursor: pointer;
+						font: 13px/15px "open_sansbold";
+						font-size: 1.3rem;
+						line-height: 1.15;
+						margin: 0;
+						padding: 10px auto;
+						text-decoration: none;
+						text-align: center;
+						text-transform: uppercase;
+
+						&.details-toggle {
+							display: none;
 						}
 					}
 				}
 
-				// 'View/Hide Details' button
-				.details-toggle {
+				// Actual tabs
+				.tab {
+					position: relative;
+					margin-bottom: 0;
+					width: 100%;
+					text-align: left;
+					margin-left: 0;
+					margin-right: 0;
+					z-index: 20;
 
-					&::before {
-						content: 'View ';
-						display: inline-block;
-						padding-right: .5rem;
+					// Tab link
+					> a {}
+
+					// Active tab link
+					&.js-active a {
+						&,
+						&:hover,
+						&:focus {}
 					}
 
+					&.js-active > a.details-toggle {
+						&,
+						&:hover,
+						&:focus {
+							&::before {
+								content: 'Hide ';
+							}
+						}
+					}
 
+					// 'View/Hide Details' button
+					.details-toggle {
+						&::before {
+							content: 'View ';
+							display: inline-block;
+							padding-right: .5rem;
+						}
+					}
+				}
+
+				// Arrows not supported on side tab
+				.arrow {
+					display: none;
 				}
 			}
-
-			// Arrows not supported on side tab
-			.arrow {
-				display: none;
-			}
 		}
-	}
 
-	// Row containing all tab content panes
+		// Row containing all tab content panes
 
-	.tab-content-container,
-	.tabbedContent {
-		float: left;
-		width: 100%;
+		.tab-content-container,
+		.tabbedContent {
+			float: left;
+			width: 100%;
+		}
 
-	}
+		.tab-content-container {
+			display: none;
+		}
 
-	.tab-content-container {
-		display: none;
-	}
-
-	// Content that had been appended to the tab itself. Used to turn side tabs into 'accordion' style on mobile
-	.tabbedRow .tabbedContent {
-
-		ul, ol {
-			li {
-				list-style-position: inside;
+		// Content that had been appended to the tab itself. Used to turn side tabs into 'accordion' style on mobile
+		.tabbedRow .tabbedContent {
+			ul, ol {
+				li {
+					list-style-position: inside;
+				}
 			}
 		}
 	}
