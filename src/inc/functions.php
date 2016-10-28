@@ -13,7 +13,7 @@ function stylesheet($url, $class = '') {
 	$style_str .= "\r\n";
 	echo $style_str;
 }
-function script_tag($url, $attr = '') {
+function script_tag($url, $attr = 'type="text/javascript"') {
 	$script_str = "<script src='$url' $attr></script>";
 	$script_str .= "\r\n";
 	echo $script_str;

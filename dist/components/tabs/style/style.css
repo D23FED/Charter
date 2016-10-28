@@ -449,6 +449,19 @@
 .tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a {
   display: inline-block;
   background-color: transparent;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid #E7E7E7;
+  color: #51565c;
+  cursor: pointer;
+  font: 13px/15px open_sansbold;
+  font-size: 1.3rem;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px auto;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a.details-toggle,

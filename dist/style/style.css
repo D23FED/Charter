@@ -342,15 +342,44 @@
 }
 
 
-/* List Component: Checkmark Bullets Style */
+/* List Component */
 
-.bullets-checkmark {
+.list-component .list-style-circle {
+  list-style-type: circle;
+}
+
+.list-component .list-style-disc {
+  list-style-type: disc;
+}
+
+.list-component .list-style-square {
+  list-style-type: square;
+}
+
+.list-component .list-separated li {
+  border-bottom: 1px solid #333;
+}
+
+.list-component .list-separated li:last-child {
+  border: none;
+}
+
+.list-component .list-inline.list-separated li {
+  border-bottom: none;
+  border-right: 1px solid #333;
+}
+
+.list-component .list-inline.list-separated li:last-child {
+  border: none;
+}
+
+.list-component .bullets-checkmark {
   list-style-type: none;
   padding-left: 4rem;
   margin-bottom: 1rem;
 }
 
-.bullets-checkmark li::before {
+.list-component .bullets-checkmark li::before {
   content: '';
   display: inline-block;
   background-image: url(/images/res-form-sprite.png);
@@ -992,6 +1021,19 @@
 .tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow > a {
   display: inline-block;
   background-color: transparent;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid #E7E7E7;
+  color: #51565c;
+  cursor: pointer;
+  font: 13px/15px open_sansbold;
+  font-size: 1.3rem;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px auto;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .tab-style-5 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab > a.details-toggle,
