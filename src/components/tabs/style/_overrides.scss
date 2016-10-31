@@ -1,5 +1,5 @@
 /* Override core CSS */
-.tabbedComponent {
+.#{$component} {
 	// Row containing tabs
 	.tab-row {
 		display: block;

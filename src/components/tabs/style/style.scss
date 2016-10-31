@@ -2,7 +2,7 @@
 @import 'initialize';
 // Classes:
 // ========
-// Component wrapper                                : .tabbedComponent
+// Component wrapper                                : .#{$component}
 // Row containing all tabs                          : .tab-row
 // Individual tab wrapper wrapper                   : .tabbedRow
 // Individual tab wrapper (wraps LI > A)            : .tabbedLabel
@@ -28,6 +28,7 @@
 // 	div.tab-content-container
 // 		div.tabbedContent
 
+$component: 'tabbedComponent';
 //=== Shared nav styles
 $nav-link-padding: 1rem 1.5rem;
 
@@ -36,10 +37,10 @@ $nav-tabs-2-enable-justify: true;
 $nav-tabs-3-enable-justify: true;
 $nav-tabs-5-enable-justify: true;
 
-@import 'testing';
+// @import 'testing';
 @import 'overrides';
 @import 'common';
-// @import 'style-1';
+@import 'style-1';
 @import 'style-2';
 @import 'style-3';
 @import 'style-4';
