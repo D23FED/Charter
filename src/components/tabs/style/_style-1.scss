@@ -2,7 +2,7 @@
 $nav-tabs-gutter-width: 0.2rem;
 
 // Component wrapper
-.tabbedComponent.tab-style-1 {
+.#{$component}.tab-style-1 {
 	// Row containing tabs
 	.tab-row {
 		// nav tabs list

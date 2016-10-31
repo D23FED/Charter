@@ -1,4 +1,6 @@
-.tabbedComponent {
+$component: 'tabbedComponent';
+
+.#{$component} {
 	[class*=' icon-'] {
 		display: block;
 		margin-right: 0;
@@ -76,7 +78,7 @@
 }
 
 @media (max-width: 992px) {
-	.tabbedComponent .tab-row {
+	.#{$component} .tab-row {
 		> ul > li {
 			display: none;
 		}

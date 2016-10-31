@@ -1,6 +1,6 @@
 /* Tab Style 2: Justified */
 // Component wrapper
-.tabbedComponent.tab-style-2 {
+.#{$component}.tab-style-2 {
 	// Row containing tabs
 	.tab-row {
 		@if $nav-tabs-2-enable-justify == true {

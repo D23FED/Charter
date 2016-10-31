@@ -1,124 +1,278 @@
 /* Tab Style 5: Grey, used on International*/
 
 $border-grey: #E7E7E7;
-.tab-style-5 {
-	.tabbedComponent.tab-style-1 {
-		@include clearfix;
+$lighter-grey: #f5f3f3;
+$text-grey: #51565c;
+$shadow-grey: #c6c6c6;
+$gradient-grey: #d8d8d8;
 
-		// Row containing tabs
-		.tab-row {
-			@if $nav-tabs-5-enable-justify == true {
-				display: table;
+$shadow-w: 0.5rem;
+$shadow-h: 6rem;
+
+$z-index-tab: 10;
+$z-index-tab-active: 20;
+
+// Point where tabs switch to accordions
+$tab-switchpoint: 'md';
+
+.#{$component}.tab-style-5 {
+	@include clearfix;
+
+	// Row containing tabs
+	.tab-row {
+		@if $nav-tabs-5-enable-justify == true {
+			@include breakpoint($tab-switchpoint) {
 				width: 100%;
+				display: table;
+				overflow: hidden;
+			}
+		}
+
+		// nav tabs list
+		ul.nav-tabs {
+			border-bottom: none;
+			background-image: linear-gradient(to bottom, #f0f0f0 0%, $gradient-grey 100%);
+
+			@if $nav-tabs-5-enable-justify == true {
+				@include breakpoint($tab-switchpoint) {
+					display: table-row;
+				}
 			}
 
-			// nav tabs list
-			ul.nav-tabs {
-				border-bottom: none;
+			.tab,
+			.arrow {
+				margin: 0;
+				display: inline-block;
+				position: relative;
 
 				@if $nav-tabs-5-enable-justify == true {
-					@include breakpoint(lg) {
-						display: table-row;
+					@include breakpoint($tab-switchpoint) {
+						float: none;
 					}
 				}
 
-				.tab,
-				.arrow {
-					margin: 0;
+				> a {
 					display: inline-block;
+					background-color: transparent;
+					border-width: 0;
+					border-style: solid;
+					border-color: $border-grey;
+					color: $cool-grey;
+					font-size: 1.2rem;
+					font-weight: bold;
+					font-family: $font-open-sans;
+					line-height: 1.45;
+					margin: 0;
+					text-decoration: none;
+					text-align: center;
+					text-transform: uppercase;
+					box-shadow: 0px 5px 5px -3px rgba(97, 97, 97, 0.82);
+					display: block;
+					text-align: center;
+					text-decoration: none;
+					text-transform: uppercase;
+					transition: all 150ms ease-out;
+					transition-property: color, padding, font-size, border;
+					padding: 15px;
 
-					@if $nav-tabs-5-enable-justify == true {
-						float: none;
+					@include breakpoint('sm') {
+						font-size: 1.6rem;
+						padding: 20px;
 					}
 
-					> a {
-						display: inline-block;
-						background-color: transparent;
-						background: transparent;
-						border: 0;
-						border-right: 1px solid $border-grey;
-						color: $cool-grey;
-						cursor: pointer;
-						font: 13px/15px "open_sansbold";
-						font-size: 1.3rem;
-						line-height: 1.15;
-						margin: 0;
-						padding: 10px auto;
-						text-decoration: none;
-						text-align: center;
-						text-transform: uppercase;
 
-						&.details-toggle {
+					@include breakpoint($tab-switchpoint) {
+						font-size: 1.3rem;
+						transition-property: color;
+						padding: $nav-link-padding;
+						box-shadow: none;
+						line-height: 1.15;
+					}
+
+
+					@include hover-focus {
+						color: $lt-blue;
+					}
+
+
+					&.details-toggle {
+						display: none;
+					}
+				}
+			}
+
+			// Actual tabs
+			$tab-arrow-offset: 20px;
+
+			.tab {
+				position: relative;
+				margin-bottom: 0;
+				width: 100%;
+				text-align: center;
+				margin-left: 0;
+				margin-right: 0;
+				z-index: $z-index-tab;
+
+				// Tab link
+				> a {
+					width: 100%;
+					background-image: linear-gradient(to bottom, #ffffff 0%, $gradient-grey 100%);
+
+					@include breakpoint($tab-switchpoint) {
+						border-top: .5rem solid transparent;
+						background: transparent;
+					}
+
+
+					&:before,
+					&:after {
+						content: '^';
+						transform: rotate(180deg);
+						font-weight: bold;
+						position: absolute;
+						line-height: 1;
+
+						@include breakpoint($tab-switchpoint) {
+							display: none;
+						}
+					}
+
+					&::before {
+						left: $tab-arrow-offset;
+					}
+
+					&::after {
+						right: $tab-arrow-offset;
+					}
+				}
+
+				// Active tab link
+				&.js-active {
+					@include breakpoint($tab-switchpoint) {
+						z-index: $z-index-tab-active;
+					}
+
+
+					> a {
+						& {
+							border-top: 0.5rem solid $lt-blue;
+							color: $md-blue;
+							position: relative;
+
+							@include breakpoint($tab-switchpoint) {
+								background-color: $lighter-grey;
+							}
+						}
+
+						@include hover-focus {
+							color: $md-blue;
+						}
+
+
+						// Faux drop shadow
+						@include breakpoint($tab-switchpoint) {
+							&:before,
+							&:after {
+								content: '';
+								position: absolute;
+								border-color: $shadow-grey transparent;
+								border-style: solid;
+								top: -.6rem;
+								transform: none;
+								display: inline-block;
+							}
+
+							&:before {
+								border-width: 0 0 $shadow-h $shadow-w;
+								left: -($shadow-w - 0.1rem);
+							}
+
+							&::after {
+								border-width: 0 $shadow-w $shadow-h 0;
+								right: -($shadow-w - 0.1rem);
+							}
+						}
+					}
+				}
+
+				&.js-active > a.details-toggle {
+					&,
+					&:hover,
+					&:focus {
+						&::before {
+							content: 'Hide ';
+						}
+					}
+				}
+
+				// 'View/Hide Details' button
+				.details-toggle {
+					&::before {
+						content: 'View ';
+						display: inline-block;
+						padding-right: .5rem;
+					}
+				}
+			}
+
+			// Arrows not supported on side tab
+			.arrow {
+				@include breakpoint($tab-switchpoint) {
+					display: none;
+				}
+			}
+
+			// Wraps .tabbedLabel (which wraps tab LI), First immediate child of tab UL
+			// Width 1% collapses tab items to width of largest word
+			.tabbedRow {
+				width: auto;
+				text-align: center;
+
+				// Remove faux shadow from first and last tab,
+				$hideShadows: ('first': 'before', 'last': 'after');
+
+				@each $order, $pseudoElement in $hideShadows {
+					&:#{$order}-child {
+						.tab.js-active a::#{$pseudoElement} {
 							display: none;
 						}
 					}
 				}
 
-				// Actual tabs
-				.tab {
-					position: relative;
-					margin-bottom: 0;
-					width: 100%;
-					text-align: left;
-					margin-left: 0;
-					margin-right: 0;
-					z-index: 20;
-
-					// Tab link
-					> a {}
-
-					// Active tab link
-					&.js-active a {
-						&,
-						&:hover,
-						&:focus {}
+				@if $nav-tabs-5-enable-justify == true {
+					@include breakpoint($tab-switchpoint) {
+						display: table-cell;
 					}
-
-					&.js-active > a.details-toggle {
-						&,
-						&:hover,
-						&:focus {
-							&::before {
-								content: 'Hide ';
-							}
-						}
-					}
-
-					// 'View/Hide Details' button
-					.details-toggle {
-						&::before {
-							content: 'View ';
-							display: inline-block;
-							padding-right: .5rem;
-						}
-					}
-				}
-
-				// Arrows not supported on side tab
-				.arrow {
-					display: none;
 				}
 			}
 		}
+	}
 
-		// Row containing all tab content panes
+	// Row containing all tab content panes
 
-		.tab-content-container,
-		.tabbedContent {
-			float: left;
-			width: 100%;
+	.tab-content-container,
+	.tabbedContent {
+		float: left;
+		width: 100%;
+	}
+
+	.tab-content-container {
+		background: $lighter-grey;
+		background: linear-gradient(to bottom, $lighter-grey 0%, #e4e4e4 100%);
+		box-shadow: 0 1.0rem .6rem -.8rem #57595a inset, 0 -.6rem .6rem -.8rem #57595a inset;
+
+		@include breakpoint($tab-switchpoint) {
+			border-bottom-left-radius: 1.5rem;
+			border-bottom-right-radius: 1.5rem;
+			box-shadow: 0rem 2.4rem 3.8rem 0rem rgba(66, 65, 66, 0.5);
 		}
+	}
 
-		.tab-content-container {
-			display: none;
-		}
-
-		// Content that had been appended to the tab itself. Used to turn side tabs into 'accordion' style on mobile
-		.tabbedRow .tabbedContent {
-			ul, ol {
-				li {
-					list-style-position: inside;
-				}
+	// Content that had been appended to the tab itself. Used to turn side tabs into 'accordion' style on mobile
+	.tabbedRow .tabbedContent {
+		ul, ol {
+			li {
+				list-style-position: inside;
 			}
 		}
 	}
