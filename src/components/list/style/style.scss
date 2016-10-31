@@ -27,10 +27,71 @@ $checkmark-size: 3rem;
 	.list-inline.list-separated li {
 		border-bottom: none;
 		border-right: 1px solid #333;
+
 		&:last-child {
 			border: none;
 		}
 	}
+
+	$bullets-blue-font-size: 1.7rem;
+
+	.list-bullets-blue {
+		font-size: $bullets-blue-font-size;
+		line-height: 2;
+		list-style: none;
+		color: $cool-grey;
+		padding: 0 1.5rem;
+
+		li {
+			// Faux bullet
+			&::before {
+				content: '';
+				display: list-item;
+				list-style-type: disc;
+				font-size: $bullets-blue-font-size;
+				color: $bright-blue;
+				max-width: 0;
+				max-height: 0;
+			}
+		}
+	}
+
+	$bullets-white-font-size: 1.7rem;
+
+	.list-bullets-white {
+		margin: 30px 0 50px 20px;
+		color: #fff;
+		font-size: $bullets-white-font-size;
+		line-height: 2.5;
+		list-style-type: none;
+		margin-left: 2rem;
+		padding: 0 1.5rem;
+
+		li {
+			+ li {
+				margin-top: 1rem;
+			}
+
+			&::before {
+				content: '';
+				display: list-item;
+				list-style-type: disc;
+				color: #fff;
+				font-size: $bullets-white-font-size;
+				max-height: 0;
+				max-width: 0;
+			}
+
+			p {
+				line-height: 1.3;
+				padding: 0;
+				margin: 0;
+				color: #fff;
+				font-size: $bullets-white-font-size;
+			}
+		}
+	}
+
 	.bullets-checkmark {
 		list-style-type: none;
 		padding-left: $checkmark-size + 1rem;
