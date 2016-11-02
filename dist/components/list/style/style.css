@@ -29,6 +29,57 @@
   border: none;
 }
 
+.list-component .list-bullets-blue {
+  font-size: 1.7rem;
+  line-height: 2;
+  list-style: none;
+  color: #51565c;
+  padding: 0 1.5rem;
+  margin-left: .5rem;
+}
+
+.list-component .list-bullets-blue li::before {
+  content: '';
+  display: list-item;
+  list-style-type: disc;
+  font-size: 1.7rem;
+  color: #0091e6;
+  max-width: 0;
+  max-height: 0;
+}
+
+.list-component .list-bullets-white {
+  margin: 30px 0 50px 20px;
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 2.5;
+  list-style-type: none;
+  margin-left: 2rem;
+  padding: 0 1.5rem;
+}
+
+.list-component .list-bullets-white li + li {
+  margin-top: 1rem;
+}
+
+.list-component .list-bullets-white li::before {
+  content: '';
+  display: list-item;
+  list-style-type: disc;
+  color: #fff;
+  font-size: 1.7rem;
+  max-height: 0;
+  max-width: 0;
+}
+
+.list-component .list-bullets-white li p {
+  line-height: 1.3;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 1.7rem;
+}
+
 .list-component .bullets-checkmark {
   list-style-type: none;
   padding-left: 4rem;
@@ -46,6 +97,11 @@
   margin-left: -3rem;
   vertical-align: middle;
   vertical-align: -webkit-baseline-middle;
+}
+
+.list-component .list-bullets-white {
+  background-color: #003057;
+  padding: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

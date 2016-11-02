@@ -36,26 +36,28 @@ function price_html($price, $class ='') {
 		</div>
 
 		<?php // Price ?>
-		<div class="price">
+		<!-- <div class="row-price row"> -->
+			<div class="price">
 
-			<div class="currency <?=$price_column_class;?>">
-				<?php echo $price['currency']; ?>
-			</div>
-			<div class="whole <?=$price_column_class;?>">
-				<?php echo $price['whole']; ?>
-			</div>
-			<div class="details <?=$price_column_class;?>">
-				<div class="inner">
-					<div class="super">
-						<?php echo $price['super']; ?>
-					</div>
-					<div class="term">
-						<?php echo $price['terms']; ?>
+				<div class="currency <?=$price_column_class;?>">
+					<?php echo $price['currency']; ?>
+				</div>
+				<div class="whole <?=$price_column_class;?>">
+					<?php echo $price['whole']; ?>
+				</div>
+				<div class="details <?=$price_column_class;?>">
+					<div class="inner">
+						<div class="super">
+							<?php echo $price['super']; ?>
+						</div>
+						<div class="term">
+							<?php echo $price['terms']; ?>
+						</div>
 					</div>
 				</div>
-			</div>
 
-		</div>
+			</div>
+		<!-- </div> -->
 
 		<?php // After
 		if ( $price['after'] !== '') :?>

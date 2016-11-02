@@ -34,11 +34,10 @@
 	</ul>
 	<h2><code>list-inline</code></h2>
 	<ul class="list-inline">
-		<li>125+ channels Including FREE HD</li>
-		<li>Access 10,000+ On Demand choices - including HD and movies in 3D</li>
-		<li>Stream live TV and On Demand content with the Spectrum TV App</li>
-		<li>Access your favorite network TV apps</li>
-		<li>Optional DVR service can be added on up to 4 TVs in your home – up to 780 hours of storage</li>
+		<li>My Account</li>
+		<li>Locations</li>
+		<li>Contact Us</li>
+		<li>Services in My Area</li>
 	</ul>
 	<h2><code>list-separated</code></h2>
 	<ul class="list-separated">
@@ -50,14 +49,21 @@
 	</ul>
 	<h2><code>list-separated list-inline</code></h2>
 	<ul class="list-separated list-inline">
-		<li>125+ channels Including FREE HD</li>
-		<li>Access 10,000+ On Demand choices - including HD and movies in 3D</li>
-		<li>Stream live TV and On Demand content with the Spectrum TV App</li>
-		<li>Access your favorite network TV apps</li>
-		<li>Optional DVR service can be added on up to 4 TVs in your home – up to 780 hours of storage</li>
+		<li>My Account</li>
+		<li>Locations</li>
+		<li>Contact Us</li>
+		<li>Services in My Area</li>
 	</ul>
-	<h2><code>list-color-bullets</code></h2>
-	<ul class="list-color-bullets">
+	<h2><code>list-bullets-blue</code></h2>
+	<ul class="list-bullets-blue">
+		<li>FREE HD</li>
+		<li>200+ HD channels available</li>
+		<li>10,000+ On Demand choices</li>
+		<li>Free Primetime On Demand</li>
+		<li>Access to the Spectrum TV App</li>
+	</ul>
+	<h2><code>list-bullets-white</code></h2>
+	<ul class="list-bullets-white">
 		<li>125+ channels Including FREE HD</li>
 		<li>Access 10,000+ On Demand choices - including HD and movies in 3D</li>
 		<li>Stream live TV and On Demand content with the Spectrum TV App</li>
