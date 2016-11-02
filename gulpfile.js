@@ -309,7 +309,7 @@ gulp.task('html', function() {
 	return gulp.src(
 			[paths.source + globs.html]
 		)
-		.pipe($.changed(paths.dist))
+		// .pipe($.changed(paths.dist))
 		.pipe(gulp.dest(paths.dist));
 });
 
@@ -317,7 +317,7 @@ gulp.task('html', function() {
 gulp.task('php', function() {
 	return gulp.src(
 			[paths.source + globs.php])
-		.pipe($.changed(paths.dist))
+		// .pipe($.changed(paths.dist))
 		.pipe(gulp.dest(paths.dist))
 		.pipe($.debug({
 			title: 'Copied:'

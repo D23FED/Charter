@@ -41,6 +41,7 @@ $checkmark-size: 3rem;
 		list-style: none;
 		color: $cool-grey;
 		padding: 0 1.5rem;
+		margin-left: .5rem;
 
 		li {
 			// Faux bullet
@@ -110,4 +111,6 @@ $checkmark-size: 3rem;
 			vertical-align: -webkit-baseline-middle;
 		}
 	}
+
 }
+@import 'testing';

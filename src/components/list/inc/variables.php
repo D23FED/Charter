@@ -1,12 +1,12 @@
 <?php
 $document = array(
-	'title' => '',
+	'title' => 'List Component',
 	'body'  => array(
 		'id'    => '',
 		'class' => ''
 	),
 	'component' => array(
-		'name' => '',
+		'name' => 'List',
 		'lob'  => 'common', //common, residental, business, or enterprise
 		'lob_switch' => false //enable switching between several lines of business for a single component
 	),
