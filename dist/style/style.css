@@ -626,7 +626,7 @@
 }
 
 
-/* Tabbed Component v2 | Oct 2016 */
+/* Tabbed Component v3 | Nov 2016 */
 
 /* Override core CSS */
 
@@ -732,6 +732,10 @@
   border-radius: 0;
   background-color: #fff;
   border: none;
+  padding: 1rem;
+}
+
+.tabbedComponent .tabbedRow .tabbedContent {
   padding: 1rem;
 }
 
@@ -1082,7 +1086,7 @@
 }
 
 
-/* Tab Style 5: Grey, used on International*/
+/* Tab Style 5: Grey (used on International) */
 
 .tabbedComponent.tab-style-5::after {
   content: '';

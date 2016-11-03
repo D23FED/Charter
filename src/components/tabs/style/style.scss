@@ -1,4 +1,4 @@
-/* Tabbed Component v2 | Oct 2016 */
+/* Tabbed Component v3 | Nov 2016 */
 @import 'initialize';
 // Classes:
 // ========
@@ -31,6 +31,7 @@
 $component: 'tabbedComponent';
 //=== Shared nav styles
 $nav-link-padding: 1rem 1.5rem;
+$tab-content-pane-padding: 1rem;
 
 //== Tabs
 $nav-tabs-2-enable-justify: true;
