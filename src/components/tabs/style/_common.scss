@@ -102,6 +102,11 @@
 		border-radius: 0;
 		background-color: #fff;
 		border: none;
-		padding: 1rem;
+		padding: $tab-content-pane-padding;
+	}
+
+	// Content that had been appended to the tab itself. Used to turn side tabs into 'accordion' style on mobile
+	.tabbedRow .tabbedContent {
+		padding: $tab-content-pane-padding;
 	}
 }
