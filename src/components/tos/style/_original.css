@@ -1,0 +1,175 @@
+@import 'initialize';
+$component: 'toc';
+
+/* Side Nav
+--------------------------------------------------------------------- */
+.toc ul.drop-nav {
+	margin: 0 0 1em;
+	padding: 0;
+}
+.toc ul.drop-nav li {
+	color: #ffffff;
+	background: #004875 url("/etc/clientlibs/spectrum/common/core/imgs/tert_nav_collapsed.gif") no-repeat scroll 4px 33%;
+	margin-bottom: 2px;
+	padding: 2px 5px 2px 20px;
+	font-size: 12px;
+}
+.toc ul.drop-nav li a {
+	color: #ffffff;
+}
+.toc ul.drop-nav li.active {
+	background: #004875 url("/etc/clientlibs/spectrum/common/core/imgs/tert_nav_expanded.gif") no-repeat scroll 4px 33%;
+}
+/* Typography
+--------------------------------------------------------------------- */
+.toc section h1 {
+	border-bottom: 1px solid #ccc;
+	color: #005984;
+	font-size: 21px;
+	line-height: normal;
+	margin: 0 0 1em;
+	padding-bottom: 5px;
+}
+.toc section h2 {
+	color: #004875;
+	font-size: 29px;
+	margin: 40px 0 20px;
+}
+.toc ul.bulleted-list {
+	list-style: outside;
+	padding: 0 50px;
+}
+.toc ul.bulleted-list li {
+	margin-top: 10px;
+	line-height: 125%;
+}
+.toc ul.bulleted-list.blue {
+	color: #005984;
+}
+/* Misc
+--------------------------------------------------------------------- */
+.toc section {
+	padding: 1.5em 0;
+}
+.toc section p {
+	margin: 1.5em 0;
+}
+.toc .box {
+	border: 1px solid #eaeaea;
+	border-radius: 10px;
+	padding: 20px 15px;
+}
+.toc .center-block {
+	margin: 0 auto;
+}
+/* Media Queries
+--------------------------------------------------------------------- */
+@media(max-width:991px) {
+	.toc section h2 {
+		margin: 20px 0;
+	}
+	.toc .box {
+		border: 0;
+		padding: 0;
+	}
+}
+@media(max-width:479px) {
+	.toc ul.bulleted-list {
+		padding: 0 15px;
+	}
+}
+.toc #termsOfService {
+	padding-bottom: 20px;
+}
+.toc #termsOfService ul.navigation {
+	margin-bottom: 0;
+	padding-left: 0;
+}
+.toc #termsOfService li {
+	list-style: none;
+}
+.toc section #termsOfService p {
+	margin: 5px 0 10px;
+	font-size: 12px;
+}
+.toc ul.bulleted {
+	color: #005984;
+}
+.toc ul.bulleted li {
+	list-style-type: disc;
+	margin: 0 0 10px 23px;
+	font-size: 12px;
+	line-height: 18px;
+}
+.toc ul.numbered li {
+	font-size: 12px;
+	line-height: 18px;
+}
+.toc #termsOfService li {
+	font-size: 12px;
+	line-height: 18px;
+}
+.toc .navigation li {
+	font-size: 12px;
+	line-height: 18px;
+}
+.toc #navigation li {
+	font-size: 12px;
+	line-height: 18px;
+}
+.toc #termsOfService a:hover,
+#navigation a:hover {
+	text-decoration: underline;
+}
+.toc .navigation-level2 {
+	display: none;
+}
+.toc #hsiCustomer h3 {
+	color: #004875;
+	font-size: 17px;
+	font-weight: bold;
+}
+.toc #networkManagement li {
+	font-size: 12px;
+	line-height: 18px;
+}
+.toc #centerBody li {
+	font-size: 12px;
+	line-height: 18px;
+}
+table td {
+	padding: 2px;
+	vertical-align: top;
+}
+.toc #networkManagement table {
+	width: 100%;
+}
+.toc #hSIAcceptable .section {
+	border-bottom: 1px solid #CCCCCC;
+	color: #005984;
+	font-size: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 0 10px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+.toc #hSIAcceptable strong {
+	color: #004875;
+}
+.toc #commercialAcceptableUsePolicy .section {
+	border-bottom: 1px solid #CCCCCC;
+	color: #005984;
+	font-size: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 0 10px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+.toc #commercialAcceptableUsePolicy strong {
+	color: #004875;
+}
+.toc #commercialAcceptableUsePolicy #centerBody {
+	margin: 0;
+}
