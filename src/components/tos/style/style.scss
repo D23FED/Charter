@@ -10,7 +10,7 @@
 //       .col-md-9
 //         .row
 //           .col-md-12
-//             #termsOfService
+//             .terms-of-service
 //               h1 Terms of Service/Policies
 //               p The links below...
 //               ul.navigation
@@ -145,7 +145,7 @@ $bahama-blue: #005984;
 		margin: 0 auto;
 	}
 
-	#termsOfService {
+	.terms-of-service {
 		padding-bottom: 2rem;
 
 		ul.navigation {
@@ -163,15 +163,15 @@ $bahama-blue: #005984;
 		}
 	}
 
-	#termsOfService,
-	#navigation,
+	// .terms-of-service,
+	// #navigation,
 	.navigation {
 		li {
 			@extend %body-text;
 		}
 	}
 
-	#termsOfService a:hover {
+	.terms-of-service a:hover {
 		text-decoration: underline;
 	}
 
@@ -179,69 +179,69 @@ $bahama-blue: #005984;
 		display: none;
 	}
 
-	#hsiCustomer h3 {
-		//color: $muted-blue;
-		color: $blue;
-		font-size: 1.7rem;
-		font-weight: bold;
-	}
+	// #hsiCustomer h3 {
+	// 	//color: $muted-blue;
+	// 	color: $blue;
+	// 	font-size: 1.7rem;
+	// 	font-weight: bold;
+	// }
 
-	#networkManagement li,
-	#centerBody li {
-		@extend %body-text;
-	}
+	// #networkManagement li,
+	// #centerBody li {
+	// 	@extend %body-text;
+	// }
 
-	#networkManagement table {
-		width: 100%;
-	}
+	// #networkManagement table {
+	// 	width: 100%;
+	// }
 
-	#hSIAcceptable {
-		.section {
-			border-bottom: .1rem solid #CCCCCC;
-			//color: $bahama-blue;
-			color: $md-blue;
-			font-size: 2rem;
-			height: 2rem;
-			line-height: 2rem;
-			margin: 0 0 1rem;
-			padding-bottom: .5rem;
-			font-weight: bold;
-		}
+	// #hSIAcceptable {
+	// 	.section {
+	// 		border-bottom: .1rem solid #CCCCCC;
+	// 		//color: $bahama-blue;
+	// 		color: $md-blue;
+	// 		font-size: 2rem;
+	// 		height: 2rem;
+	// 		line-height: 2rem;
+	// 		margin: 0 0 1rem;
+	// 		padding-bottom: .5rem;
+	// 		font-weight: bold;
+	// 	}
 
-		strong {
-			//color: $muted-blue;
-			color: $blue;
-		}
-	}
+	// 	strong {
+	// 		//color: $muted-blue;
+	// 		color: $blue;
+	// 	}
+	// }
 
-	#commercialAcceptableUsePolicy {
-		.section {
-			border-bottom: .1rem solid #CCCCCC;
-			//color: $bahama-blue;
-			color: $md-blue;
-			font-size: 2rem;
-			height: 2rem;
-			line-height: 2rem;
-			margin: 0 0 1rem;
-			padding-bottom: .5rem;
-			font-weight: bold;
-		}
+	// #commercialAcceptableUsePolicy {
+	// 	.section {
+	// 		border-bottom: .1rem solid #CCCCCC;
+	// 		//color: $bahama-blue;
+	// 		color: $md-blue;
+	// 		font-size: 2rem;
+	// 		height: 2rem;
+	// 		line-height: 2rem;
+	// 		margin: 0 0 1rem;
+	// 		padding-bottom: .5rem;
+	// 		font-weight: bold;
+	// 	}
 
-		#centerBody {
-			margin: 0;
-		}
+	// 	#centerBody {
+	// 		margin: 0;
+	// 	}
 
-		strong {
-			//color: $muted-blue;
-			color: $blue;
-		}
-	}
+	// 	strong {
+	// 		//color: $muted-blue;
+	// 		color: $blue;
+	// 	}
+	// }
 
-	#navigation {
-		a:hover {
-			text-decoration: underline;
-		}
-	}
+	// #navigation {
+	// 	a:hover {
+	// 		text-decoration: underline;
+	// 	}
+	// }
 
 	table td {
 		padding: .2rem;
