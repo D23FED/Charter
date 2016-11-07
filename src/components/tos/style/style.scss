@@ -1,0 +1,250 @@
+@import 'initialize';
+
+// section#about-charter
+//   .container
+//     .row.box
+//       .col-md-3
+//         ul.drop-nav
+//           li
+//             a Terms of Service/Policies
+//       .col-md-9
+//         .row
+//           .col-md-12
+//             .terms-of-service
+//               h1 Terms of Service/Policies
+//               p The links below...
+//               ul.navigation
+//                 li
+//                   a#resi_terms_service.TCR.notouch.tlink01 Residential Services Terms and Conditions
+
+$component: 'tos';
+$img-nav-collapsed: url('/etc/clientlibs/spectrum/common/core/imgs/tert_nav_collapsed.gif');
+$img-nav-expanded: url('/etc/clientlibs/spectrum/common/core/imgs/tert_nav_expanded.gif');
+$body-text-size: 1.2rem;
+$body-text-leading: 1.8rem;
+$active-class: 'active';
+
+// Original blue colors; overwrite with brand colors
+$muted-blue: #004875;
+$bahama-blue: #005984;
+
+.#{$component} {
+	section {
+		padding: 1.8rem 0;
+
+		h1 {
+			border-bottom: .1rem solid #ccc;
+			//color: $bahama-blue;
+			color: $md-blue;
+			font-size: 2.1rem;
+			line-height: normal;
+			margin: 0 0 1.4rem;
+			padding-bottom: .5rem;
+		}
+
+		h2 {
+			//color: $muted-blue;
+			color: $blue;
+			font-size: 2.9rem;
+			margin: 2rem 0;
+
+			@include breakpoint(md) {
+				margin: 4rem 0 2rem;
+			}
+		}
+
+		p {
+			margin: 1.8rem 0;
+		}
+	}
+
+	%body-text {
+		font-size: $body-text-size;
+		line-height: $body-text-leading;
+	}
+
+	ul.drop-nav {
+		margin: 0 0 1.4rem;
+		padding: 0;
+
+		li {
+			color: #fff;
+			margin-bottom: .2rem;
+			padding: .2rem .5rem .2rem 2rem;
+			font-size: $body-text-size;
+			background-image: $img-nav-collapsed;
+
+			&,
+			&.#{$active-class} {
+				background-color: $blue;
+				background-repeat: no-repeat;
+				background-attachment: scroll;
+				background-position: 0.4rem 33%;
+			}
+
+			&.#{$active-class} {
+				background-image: $img-nav-expanded;
+			}
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	ul.bulleted-list {
+		list-style: outside;
+		padding: 0 1.5rem;
+
+		@include breakpoint(sm) {
+			padding: 0 5rem;
+		}
+
+		&.blue {
+			//color: $bahama-blue;
+			color: $md-blue;
+		}
+
+		li {
+			margin-top: 1rem;
+			line-height: 125%;
+		}
+
+	}
+
+	ul.bulleted {
+		//color: $bahama-blue;
+		color: $md-blue;
+
+		li {
+			list-style-type: disc;
+			margin: 0 0 1rem 2.3rem;
+
+			@extend %body-text;
+		}
+	}
+
+	ul.numbered {
+		li {
+			@extend %body-text;
+		}
+	}
+
+	.box {
+		border: 0;
+		padding: 0;
+		border-radius: 1rem;
+
+		@include breakpoint(lg) {
+			border: .1rem solid #eaeaea;
+			padding: 2rem 1.5rem;
+		}
+	}
+
+	.center-block {
+		margin: 0 auto;
+	}
+
+	.terms-of-service {
+		padding-bottom: 2rem;
+
+		ul.navigation {
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		p {
+			margin: .5rem 0 1rem;
+			font-size: $body-text-size;
+		}
+	}
+
+	// .terms-of-service,
+	// #navigation,
+	.navigation {
+		li {
+			@extend %body-text;
+		}
+	}
+
+	.terms-of-service a:hover {
+		text-decoration: underline;
+	}
+
+	.navigation-level2 {
+		display: none;
+	}
+
+	// #hsiCustomer h3 {
+	// 	//color: $muted-blue;
+	// 	color: $blue;
+	// 	font-size: 1.7rem;
+	// 	font-weight: bold;
+	// }
+
+	// #networkManagement li,
+	// #centerBody li {
+	// 	@extend %body-text;
+	// }
+
+	// #networkManagement table {
+	// 	width: 100%;
+	// }
+
+	// #hSIAcceptable {
+	// 	.section {
+	// 		border-bottom: .1rem solid #CCCCCC;
+	// 		//color: $bahama-blue;
+	// 		color: $md-blue;
+	// 		font-size: 2rem;
+	// 		height: 2rem;
+	// 		line-height: 2rem;
+	// 		margin: 0 0 1rem;
+	// 		padding-bottom: .5rem;
+	// 		font-weight: bold;
+	// 	}
+
+	// 	strong {
+	// 		//color: $muted-blue;
+	// 		color: $blue;
+	// 	}
+	// }
+
+	// #commercialAcceptableUsePolicy {
+	// 	.section {
+	// 		border-bottom: .1rem solid #CCCCCC;
+	// 		//color: $bahama-blue;
+	// 		color: $md-blue;
+	// 		font-size: 2rem;
+	// 		height: 2rem;
+	// 		line-height: 2rem;
+	// 		margin: 0 0 1rem;
+	// 		padding-bottom: .5rem;
+	// 		font-weight: bold;
+	// 	}
+
+	// 	#centerBody {
+	// 		margin: 0;
+	// 	}
+
+	// 	strong {
+	// 		//color: $muted-blue;
+	// 		color: $blue;
+	// 	}
+	// }
+
+	// #navigation {
+	// 	a:hover {
+	// 		text-decoration: underline;
+	// 	}
+	// }
+
+	table td {
+		padding: .2rem;
+		vertical-align: top;
+	}
+}
