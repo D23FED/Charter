@@ -4,6 +4,8 @@
 
 $wrapper: 'offer-columns';
 $column: 'aem-GridColumn';
+$col-padding: 2rem;
+$text-padding-x: 1.5rem;
 $switchpoint: 'md';
 $numOfColumns: 3;
 $grid-gutter-width-third: strip-unit($grid-gutter-width) * percentage(1 / 3) / 100%;
@@ -12,6 +14,8 @@ $colGradientStartColor: #fafafa;
 $colGradientEndColor: rgba(250, 250, 250, 0);
 $light-grey: #d8d8d9;
 $cool-grey: #51565c;
+
+
 
 // @import 'testing';
 
@@ -46,7 +50,7 @@ $cool-grey: #51565c;
 		// Inner
 		> div {
 			position: relative;
-			padding: 2rem;
+			padding: $col-padding;
 			border-top: 1px solid $light-grey;
 			border-bottom: 1px solid $light-grey;
 
@@ -71,8 +75,8 @@ $cool-grey: #51565c;
 		margin-bottom: 3rem;
 
 		@include breakpoint($switchpoint) {
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
+			padding-left: $text-padding-x;
+			padding-right: $text-padding-x;
 		}
 	}
 
@@ -166,3 +170,4 @@ $cool-grey: #51565c;
 }
 
 @import 'featured';
+@import 'best-choice';
