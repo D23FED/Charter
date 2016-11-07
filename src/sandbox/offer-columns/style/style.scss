@@ -15,7 +15,14 @@ $colGradientEndColor: rgba(250, 250, 250, 0);
 $light-grey: #d8d8d9;
 $cool-grey: #51565c;
 
+// Reset default text padding, and on Best Offers
+$text-padding-reset: -($col-padding + $text-padding-x);
+$feature-border-color: #b7b7b9;
 
+@mixin reset-text-padding {
+	margin-left: $text-padding-reset;
+	margin-right: $text-padding-reset;
+}
 
 // @import 'testing';
 

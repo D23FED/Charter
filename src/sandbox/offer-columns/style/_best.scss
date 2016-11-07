@@ -4,13 +4,6 @@
 
 // @import 'testing';
 
-$text-padding-reset: -($col-padding + $text-padding-x);
-$feature-border-color: #b7b7b9;
-
-@mixin reset-text-padding {
-	margin-left: $text-padding-reset;
-	margin-right: $text-padding-reset;
-}
 
 .best-offers {
 	.aem-Grid .#{$column} {

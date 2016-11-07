@@ -163,7 +163,7 @@
 }
 
 .price-style-03.price-block {
-    font-size: 9.6rem;
+    font-size: 24vw;
 }
 
 .price-style-03 .before, .price-style-03 .after {
@@ -195,18 +195,16 @@
 }
 
 .price-style-03 .super .extra {
-    font-size: 53.33333%;
+    font-size: 90%;
 }
 
 .price-style-03 .details {
     text-align: left;
     font-size: 100%;
-    vertical-align: bottom;
-    padding-bottom: 1rem;
 }
 
 .price-style-03 .term {
-    color: #000;
+    color: #444;
     font-size: 14.58333%;
 }
 
@@ -262,6 +260,10 @@
 
     .price-style-02 .term {
         font-size: 18.75%;
+    }
+
+    .price-style-03.price-block {
+        font-size: 9.6rem;
     }
 }
 
