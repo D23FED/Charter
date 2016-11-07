@@ -1,0 +1,206 @@
+// 'Best Choice' Offer Columns Style
+// Ex: https://www.charter.com/browse/content/best-choice-hp/
+@import 'initialize';
+
+// @import 'testing';
+
+$feature-border-color: #b7b7b9;
+$heading-color: $md-blue;
+$grey-01: #eeeef0;
+$grey-02: #e9e9eb;
+$grey-03: #e4e4e6;
+$dark-blue: #0b4a7b;
+
+// Paddings specific to this style of offer columns
+$bc-col-padding: 2rem;
+$bc-text-padding-x: 0rem;
+$bc-switchpoint: 'md';
+
+$bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
+
+@mixin bc-reset-text-padding {
+	margin-left: $bc-text-padding-reset;
+	margin-right: $bc-text-padding-reset;
+}
+
+@mixin blue-gradient {
+	$gradient-start: #003f63;
+	$gradient-end: #007bc6;
+
+	background: $gradient-start;
+	background: linear-gradient(to bottom, $gradient-start 0%, $gradient-end 100%);
+}
+
+.best-choice-offers {
+	// Overwrite column width
+	.aem-Grid.aem-Grid--12 {
+		> .aem-GridColumn.aem-GridColumn--default--4 {
+			width: 100%;
+
+			@include breakpoint($bc-switchpoint) {
+				width: percentage(1 / 3);
+			}
+		}
+	}
+
+	.aem-Grid .#{$column} {
+		&:first-of-type {}
+
+		&:nth-of-type(#{$numOfColumns}),
+		&:last-child {}
+
+		// Inner
+		> div {
+			background-color: #f5f5f7;
+			padding: $bc-col-padding;
+
+			@include breakpoint($bc-switchpoint) {
+				box-shadow: 1px 1px #9a9a9a;
+			}
+		}
+	}
+
+	// Package Title, 'Triple Play Select'
+	h2 {
+		@include bc-reset-text-padding;
+
+		@include blue-gradient;
+
+		padding: 1.5rem;
+		font-size: 2.1rem;
+		font-weight: bold;
+		line-height: 1.1;
+		color: #fff;
+		font-size: 5.3rem;
+		font-weight: 800;
+		text-transform: uppercase;
+
+		@include breakpoint($bc-switchpoint) {
+			padding: 1rem;
+			font-size: 3rem;
+		}
+
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	// Primary feature, '125+ Channels with FREE HD & FREE DVR Service'
+	h3 {
+		margin-top: 0;
+		line-height: 1;
+		margin-bottom: .5rem;
+		margin-left: -$bc-col-padding;
+		margin-right: -$bc-col-padding;
+		font-size: 6.25vw;
+		color: $dark-blue;
+		display: block;
+		border-bottom: 2px solid #ccc;
+		padding-bottom: 5rem;
+
+		@include breakpoint($bc-switchpoint) {
+			font-size: 2.4rem;
+			border-bottom: none;
+			margin-left: 0;
+			margin-right: 0;
+			padding-bottom: 0;
+		}
+
+
+		// # of channels, '125+'
+		a {
+			font-weight: bold;
+			color: $heading-color;
+			font-size: 20.3125vw;
+			text-decoration: none;
+
+			@include hover-focus {
+				text-decoration: none;
+				color: darken($heading-color, 15%);
+			}
+
+
+			@include breakpoint($bc-switchpoint) {
+				font-size: 6.5rem;
+			}
+		}
+	}
+
+	p, li {
+		font-size: 1.8rem;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		font-size: 1.6rem;
+
+		li {
+			@include bc-reset-text-padding;
+
+			background-color: $grey-01;
+			border-bottom: 1px solid $feature-border-color;
+			border-top: 1px solid $feature-border-color;
+			position: relative;
+			padding: 1rem ($bc-col-padding + $bc-text-padding-x);
+
+			+ li {
+				border-top: none;
+				background-color: $grey-02;
+				border-bottom: none;
+
+				@include breakpoint($switchpoint) {
+					border-bottom: 1px solid $feature-border-color;
+				}
+			}
+
+			strong, b {
+				color: $dark-blue;
+				font-size: 2.4rem;
+				line-height: 30px;
+				font-weight: 300;
+				display: block;
+			}
+		}
+	}
+
+	.richtext {
+		@include breakpoint($switchpoint) {
+			padding-left: $bc-text-padding-x;
+			padding-right: $bc-text-padding-x;
+		}
+	}
+
+	.accordion {
+		ul.bullets-checkmark {
+			li {}
+		}
+	}
+
+	// Link to show/hide details
+	.accordion-link {
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-decoration: underline;
+
+		.show-details {}
+
+		// Offer details (shown after expanding accordion)
+		.details {}
+	}
+
+	.btn {
+		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+		box-shadow: .0rem .1rem .3rem #666;
+		font-size: 5vw;
+		max-width: 75%;
+
+		@include center-block;
+
+		@include breakpoint($bc-switchpoint) {
+			font-size: 1.6rem;
+		}
+	}
+}

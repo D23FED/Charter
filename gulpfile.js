@@ -14,7 +14,8 @@ var
 			'pixrem',
 			'postcss-*',
 			'css-*',
-			'cssnano'
+			'cssnano',
+			'perfectionist'
 		]
 	}),
 	// cssnano = require('cssnano'),
@@ -124,7 +125,9 @@ var
 			relative: paths.dist
 		}),
 		$.cssMqpacker({sort: true}),
-		$.postcssPrettify()
+		$.perfectionist({
+			indentSize: 4
+		})
 	],
 	sassIncludePaths = [
 		'src/style/',
@@ -140,9 +143,9 @@ gulp.task('style', function() {
 		paths.source + globs.sass
 	])
 	// Output names of files being processed
-	.pipe($.debug({
-		title: 'Processing:'
-	}))
+	// .pipe($.debug({
+	// 	title: 'Processing:'
+	// }))
 	// Begin recording sourcemaps
 	.pipe($.sourcemaps.init())
 	.pipe($.changed(paths.dist))

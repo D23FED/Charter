@@ -1,26 +1,27 @@
 // 'Best Offers' Offer Columns Style
 // Ex: https://www.charter.com/browse/content/best-offers/
 @import 'initialize';
+
 // @import 'testing';
+
 
 .best-offers {
 	.aem-Grid .#{$column} {
-
-
-		&:first-of-type {
-		}
+		&:first-of-type {}
 
 		&:nth-of-type(#{$numOfColumns}),
-		&:last-child {
-		}
+		&:last-child {}
 
 		// Inner
 		> div {
+			box-shadow: 1px 1px #9a9a9a;
 		}
 	}
 
 	// Package Title, 'Triple Play Select'
 	h2 {
+		@include reset-text-padding;
+
 		background-color: $lt-blue;
 		padding: 1rem;
 		font-size: 2.1rem;
@@ -40,6 +41,7 @@
 		// # of channels, '125+'
 		a {
 			font-size: 5.6rem;
+			font-weight: bold;
 		}
 	}
 
@@ -47,6 +49,29 @@
 		list-style-type: none;
 		padding-left: 0;
 		font-size: 1.6rem;
+
+		li {
+			@include reset-text-padding;
+
+			background-color: rgba(0, 0, 0, 0.05);
+			border-bottom: 1px solid $feature-border-color;
+			border-top: 1px solid $feature-border-color;
+			position: relative;
+			padding: 20px ($col-padding + $text-padding-x);
+			font-size: 1.5rem;
+
+			+ li {
+				border-top: none;
+			}
+
+			strong, b {
+				color: $md-blue;
+				font-size: 2rem;
+				line-height: 30px;
+				font-weight: 300;
+				display: block;
+			}
+		}
 	}
 
 	.accordion {
@@ -57,6 +82,9 @@
 
 	// Link to show/hide details
 	.accordion-link {
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-decoration: underline;
 		.show-details {}
 
 		// Offer details (shown after expanding accordion)
@@ -64,19 +92,8 @@
 	}
 
 	.btn {
-		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
-		box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
-		font-size: 2.3rem;
-
-		&::after {
-			position: absolute;
-			content: '';
-			height: 100%;
-			width: 100%;
-			left: 0;
-			bottom: -1.5rem;
-			background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
-			z-index: -1;
-		}
+		text-shadow: none;
+		box-shadow: none;
+		font-size: 1.6rem;
 	}
 }

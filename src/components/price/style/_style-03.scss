@@ -1,19 +1,31 @@
 @import 'initialize';
 
-// Pricing Style: "Best Offer" Columns
-// https://www.charter.com/browse/content/best-offers
+// Pricing Style: 'Best Choice' Offer Columns
+// Ex: https://www.charter.com/browse/content/best-choice-hp/
 
-$p-font-size-base-03: 7.8rem;
+$p-font-size-base-03: 9.6rem;
+$p-font-size-base-03-sm: 24vw;
+// 'Best Choice' Offer Columns breakpoint
+
+$bc-switchpoint: 'md';
 
 .price-style-03 {
 	&.price-block {
-		font-size: $p-font-size-base-03;
+		font-size: $p-font-size-base-03-sm;
+
+		@include breakpoint($bc-switchpoint) {
+			font-size: $p-font-size-base-03;
+		}
 	}
 
 	.before,
 	.after {
-		font-size: percentage(1.2 / strip-unit($p-font-size-base-03));
+		font-size: percentage(1.6 / strip-unit($p-font-size-base-03));
 		font-weight: bold;
+	}
+
+	.before {
+		text-align: left;
 	}
 
 	.currency,
@@ -24,22 +36,24 @@ $p-font-size-base-03: 7.8rem;
 		font-weight: 800;
 
 		@include breakpoint('md') {
-			@include gradient-text-blue;
+			// @include gradient-text-blue;
 		}
 	}
 
 	.currency {
-		font-size: percentage(3.1 / strip-unit($p-font-size-base-03));
+		font-size: percentage(3.8 / strip-unit($p-font-size-base-03));
 	}
 
 	.whole {
 		line-height: .8;
+		font-weight: bold;
 	}
 
 	.super {
-		font-size: percentage(3.0 / strip-unit($p-font-size-base-03));
+		font-size: percentage(2.7 / strip-unit($p-font-size-base-03));
+
 		.extra {
-			font-size: percentage(1.6 / 3);
+			font-size: percentage(2.7 / 3);
 		}
 	}
 
@@ -49,8 +63,8 @@ $p-font-size-base-03: 7.8rem;
 	}
 
 	.term {
-		color: #000;
-		font-size: percentage(1.0 / strip-unit($p-font-size-base-03));
+		color: #444;
+		font-size: percentage(1.4 / strip-unit($p-font-size-base-03));
 	}
 
 	// Separator between two prices in double price block

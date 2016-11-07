@@ -5,9 +5,9 @@ $component-wrapper: 'price-block';
 $p-font-size-base: 4rem;
 $row: 'p-row';
 $column: 'p-col';
-$text-gradient-fallback-color: $lt-blue;
-$text-gradient-start-color: #4ab3f1;
-$text-gradient-end-color: $md-blue;
+$text-gradient-fallback-color : $lt-blue;
+$text-gradient-start-color    : #4ab3f1;
+$text-gradient-end-color      : $md-blue;
 
 @mixin gradient-text-blue {
 	color: $text-gradient-fallback-color;
@@ -24,4 +24,4 @@ $text-gradient-end-color: $md-blue;
 @import 'double';
 @import 'style-01';
 @import 'style-02';
-// @import 'style-03';
+@import 'style-03';
