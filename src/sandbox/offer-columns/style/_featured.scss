@@ -41,6 +41,10 @@
 		> div {
 			// Shadow on sides of column
 			@include breakpoint(sm) {
+				background-image: radial-gradient(circle, $colGradientStartColor 25%, $colGradientEndColor 60%);
+				background-repeat: no-repeat;
+				background-position: 0 -90px;
+
 				&::before,
 				&::after {
 					content: '';
@@ -107,7 +111,7 @@
 		font-size: 1.6rem;
 	}
 
-	// "Choose" button
+	// 'Choose' button
 	.btn {
 		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
 		box-shadow: .0rem .1rem .3rem #666;
@@ -130,6 +134,7 @@
 				z-index: -1;
 			}
 		}
+
 
 		&:active {
 			box-shadow: none;

@@ -64,9 +64,6 @@ $feature-border-color: #b7b7b9;
 			// BG gradient
 			@include breakpoint(sm) {
 				z-index: 20;
-				background-image: radial-gradient(circle, $colGradientStartColor 25%, $colGradientEndColor 60%);
-				background-repeat: no-repeat;
-				background-position: 0 -90px;
 			}
 
 

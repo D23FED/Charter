@@ -212,6 +212,12 @@
     font-size: 8.64rem;
 }
 
+@media (min-width:768px) {
+    .price-style-03.price-block {
+        font-size: 18rem;
+    }
+}
+
 @media (min-width:992px) {
     .price-style-01 .currency, .price-style-01 .whole, .price-style-01 .super,
     .price-style-01 .separator {

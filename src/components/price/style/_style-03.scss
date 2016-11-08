@@ -13,6 +13,10 @@ $bc-switchpoint: 'md';
 	&.price-block {
 		font-size: $p-font-size-base-03-sm;
 
+		@include breakpoint('sm') {
+			font-size: 18rem;
+		}
+
 		@include breakpoint($bc-switchpoint) {
 			font-size: $p-font-size-base-03;
 		}

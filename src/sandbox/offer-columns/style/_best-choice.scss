@@ -2,21 +2,38 @@
 // Ex: https://www.charter.com/browse/content/best-choice-hp/
 @import 'initialize';
 
-// @import 'testing';
-
+// Colors
 $feature-border-color: #b7b7b9;
 $heading-color: $md-blue;
+
+// Greys behind feature sections
 $grey-01: #eeeef0;
 $grey-02: #e9e9eb;
 $grey-03: #e4e4e6;
+
+// Grey behind topmost section
+$light-grey-01: #f5f5f7;
 $dark-blue: #0b4a7b;
+$dark-green: #003c34;
+$med-green: #006c5b;
+$light-teal: #00ab90;
+
+// Divider between feature sections
+$divider-border: 0.2rem solid #ccc;
 
 // Paddings specific to this style of offer columns
 $bc-col-padding: 2rem;
 $bc-text-padding-x: 0rem;
 $bc-switchpoint: 'md';
-
 $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
+
+// Space between columns
+$bc-grid-gutter-width: 1.5rem;
+$bc-grid-gutter-width-third: strip-unit($bc-grid-gutter-width) * percentage(1 / 3) / 100%;
+$bc-grid-gutter-width-third: $bc-grid-gutter-width-third + 0rem;
+
+// CSS Triangles that form the 'corners' of thw wrap-around ribbon at the bottom of the columns
+$ribbon-corner-height: 2.5rem;
 
 @mixin bc-reset-text-padding {
 	margin-left: $bc-text-padding-reset;
@@ -31,31 +48,70 @@ $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
 	background: linear-gradient(to bottom, $gradient-start 0%, $gradient-end 100%);
 }
 
-.best-choice-offers {
-	// Overwrite column width
-	.aem-Grid.aem-Grid--12 {
-		> .aem-GridColumn.aem-GridColumn--default--4 {
-			width: 100%;
+@mixin green-gradient {
+	$grn-gradient-start: $med-green;
+	$grn-gradient-end: $teal;
 
-			@include breakpoint($bc-switchpoint) {
-				width: percentage(1 / 3);
+	background: $grn-gradient-start;
+	background: linear-gradient(to bottom, $grn-gradient-start 0%, $grn-gradient-end 100%);
+}
+
+.best-choice-offers {
+	margin-bottom: 1.5rem;
+
+	.aem-Grid {
+		// Use flex to push columns to bottom of container
+		@include breakpoint($bc-switchpoint) {
+			display: flex;
+		}
+
+
+		// Overwrite column width
+		&.aem-Grid--12 {
+			> .aem-GridColumn.aem-GridColumn--default--4 {
+				width: 100%;
+
+				@include breakpoint($bc-switchpoint) {
+					width: percentage(1 / 3);
+				}
 			}
 		}
 	}
 
 	.aem-Grid .#{$column} {
-		&:first-of-type {}
+		margin-top: auto;
+		margin-bottom: 0;
 
-		&:nth-of-type(#{$numOfColumns}),
-		&:last-child {}
+		@include breakpoint($switchpoint) {
+			padding-left: $bc-grid-gutter-width-third;
+			padding-right: $bc-grid-gutter-width-third;
+
+			&:first-of-type {
+				padding-left: 0;
+				padding-right: $bc-grid-gutter-width-third * 2;
+			}
+
+			&:nth-of-type(#{$numOfColumns}),
+			&:last-child {
+				padding-right: 0;
+				padding-left: $bc-grid-gutter-width-third * 2;
+			}
+		}
+
 
 		// Inner
+		// Use a gradient to fake color at bottom of stack
 		> div {
-			background-color: #f5f5f7;
+			background-color: $light-grey-01;
+			background: linear-gradient(to bottom, $light-grey-01 69%, $grey-03 70%, $grey-03 70%);
 			padding: $bc-col-padding;
+			padding-top: 0;
 
+			// Shift point where it switches colors to be a little lower at larger sizes
 			@include breakpoint($bc-switchpoint) {
-				box-shadow: 1px 1px #9a9a9a;
+				box-shadow: .1rem .1rem #9a9a9a;
+				background-color: $light-grey-01;
+				background: linear-gradient(to bottom, $light-grey-01 59%, #f5f5f7 60%, $grey-03 60%);
 			}
 		}
 	}
@@ -85,6 +141,13 @@ $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
 			color: #fff;
 			text-decoration: none;
 		}
+
+		// Promo text, '- Most Popular -'
+		.callout {
+			font-size: 2.1rem;
+			line-height: 2.4rem;
+			color: $yellow;
+		}
 	}
 
 	// Primary feature, '125+ Channels with FREE HD & FREE DVR Service'
@@ -95,9 +158,9 @@ $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
 		margin-left: -$bc-col-padding;
 		margin-right: -$bc-col-padding;
 		font-size: 6.25vw;
+		font-weight: 500;
 		color: $dark-blue;
 		display: block;
-		border-bottom: 2px solid #ccc;
 		padding-bottom: 5rem;
 
 		@include breakpoint($bc-switchpoint) {
@@ -111,10 +174,14 @@ $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
 
 		// # of channels, '125+'
 		a {
-			font-weight: bold;
 			color: $heading-color;
 			font-size: 20.3125vw;
 			text-decoration: none;
+
+			@include breakpoint('sm') {
+				font-size: 15rem;
+			}
+
 
 			@include hover-focus {
 				text-decoration: none;
@@ -126,6 +193,16 @@ $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
 				font-size: 6.5rem;
 			}
 		}
+
+		// ...'Channels with FREE HD'
+		div {
+			padding-left: $col-padding;
+			padding-right: $col-padding;
+		}
+	}
+
+	ul, p {
+		display: block;
 	}
 
 	p, li {
@@ -141,26 +218,25 @@ $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
 			@include bc-reset-text-padding;
 
 			background-color: $grey-01;
-			border-bottom: 1px solid $feature-border-color;
-			border-top: 1px solid $feature-border-color;
+			border-bottom: $divider-border;
+			border-top: $divider-border;
 			position: relative;
 			padding: 1rem ($bc-col-padding + $bc-text-padding-x);
 
 			+ li {
 				border-top: none;
 				background-color: $grey-02;
-				border-bottom: none;
 
 				@include breakpoint($switchpoint) {
-					border-bottom: 1px solid $feature-border-color;
+					border-bottom: $divider-border;
 				}
 			}
 
 			strong, b {
 				color: $dark-blue;
 				font-size: 2.4rem;
-				line-height: 30px;
-				font-weight: 300;
+				line-height: 3.0rem;
+				font-weight: 500;
 				display: block;
 			}
 		}
@@ -174,9 +250,7 @@ $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
 	}
 
 	.accordion {
-		ul.bullets-checkmark {
-			li {}
-		}
+		display: none;
 	}
 
 	// Link to show/hide details
@@ -184,11 +258,6 @@ $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
 		font-size: 1.4rem;
 		font-weight: bold;
 		text-decoration: underline;
-
-		.show-details {}
-
-		// Offer details (shown after expanding accordion)
-		.details {}
 	}
 
 	.btn {
@@ -201,6 +270,62 @@ $bc-text-padding-reset: -($bc-col-padding + $bc-text-padding-x);
 
 		@include breakpoint($bc-switchpoint) {
 			font-size: 1.6rem;
+			max-width: 100%;
+		}
+	}
+
+	.channel-logo {
+		display: inline-block;
+	}
+
+	// Green ribbon at bottom of columns
+	.offer-column-footer {
+		font-family: $font-open-sans;
+		display: none;
+		color: #fff;
+		margin-left: -$ribbon-corner-height;
+		padding: 1.5vw 0;
+		position: relative;
+		text-align: center;
+		width: calc(100% + #{$ribbon-corner-height * 2});
+		z-index: 20;
+
+		@include green-gradient;
+
+		@include breakpoint($bc-switchpoint) {
+			display: block;
+			font-size: 2.8rem;
+		}
+
+
+		@include breakpoint('lg') {
+			font-size: 3.4rem;
+		}
+
+
+		&::before,
+		&::after {
+			display: none;
+			content: '';
+			position: absolute;
+			border-color: $dark-green transparent;
+			border-style: solid;
+			top: -$ribbon-corner-height;
+			z-index: 20;
+
+			@include breakpoint($bc-switchpoint) {
+				display: block;
+			}
+		}
+
+		&::before {
+			border-width: 0 0 $ribbon-corner-height $ribbon-corner-height;
+			left: 0;
+		}
+
+		&::after {
+			border-width: 0 $ribbon-corner-height $ribbon-corner-height 0;
+			right: 0;
 		}
 	}
 }
