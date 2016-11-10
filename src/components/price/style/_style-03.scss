@@ -38,10 +38,6 @@ $bc-switchpoint: 'md';
 	.separator {
 		color: $md-blue;
 		font-weight: 800;
-
-		@include breakpoint('md') {
-			// @include gradient-text-blue;
-		}
 	}
 
 	.currency {

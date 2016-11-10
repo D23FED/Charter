@@ -11,7 +11,8 @@
     display: table-row;
 }
 
-.price-block .before, .price-block .after {
+.price-block .before,
+.price-block .after {
     font-size: 50%;
     text-align: left;
     display: block;
@@ -29,11 +30,14 @@
     padding-left: 0;
 }
 
-.price-block .price > .p-col:last-child, .price-block .price > .p-col.currency {
+.price-block .price > .p-col:last-child,
+.price-block .price > .p-col.currency {
     padding-right: 0;
 }
 
-.price-block .currency, .price-block .whole, .price-block .details {
+.price-block .currency,
+.price-block .whole,
+.price-block .details {
     display: table-cell;
     vertical-align: top;
 }
@@ -70,7 +74,8 @@
     clear: both;
 }
 
-.price-block-double .price-block, .price-block-double .separator {
+.price-block-double .price-block,
+.price-block-double .separator {
     float: left;
 }
 
@@ -79,19 +84,23 @@
     font-size: 90%;
 }
 
-.price-style-01 .before, .price-style-01 .after {
+.price-style-01 .before,
+.price-style-01 .after {
     font-size: 1.4rem;
     font-size: 35%;
     color: #666;
 }
 
-.price-style-01 .currency, .price-style-01 .whole, .price-style-01 .super,
+.price-style-01 .currency,
+.price-style-01 .whole,
+.price-style-01 .super,
 .price-style-01 .separator {
     color: #00629b;
     font-weight: 800;
 }
 
-.price-style-01 .currency, .price-style-01 .super {
+.price-style-01 .currency,
+.price-style-01 .super {
     font-size: 1.8rem;
     font-size: 45%;
 }
@@ -115,7 +124,8 @@
     font-size: 4.1rem;
 }
 
-.price-style-02 .before, .price-style-02 .after {
+.price-style-02 .before,
+.price-style-02 .after {
     font-size: 53.65854%;
     text-align: center;
 }
@@ -130,7 +140,9 @@
     padding-left: .5rem;
 }
 
-.price-style-02 .currency, .price-style-02 .whole, .price-style-02 .super,
+.price-style-02 .currency,
+.price-style-02 .whole,
+.price-style-02 .super,
 .price-style-02 .separator {
     color: #00629b;
     font-weight: 800;
@@ -166,7 +178,8 @@
     font-size: 24vw;
 }
 
-.price-style-03 .before, .price-style-03 .after {
+.price-style-03 .before,
+.price-style-03 .after {
     font-size: 16.66667%;
     font-weight: 700;
 }
@@ -175,7 +188,9 @@
     text-align: left;
 }
 
-.price-style-03 .currency, .price-style-03 .whole, .price-style-03 .super,
+.price-style-03 .currency,
+.price-style-03 .whole,
+.price-style-03 .super,
 .price-style-03 .separator {
     color: #00629b;
     font-weight: 800;
@@ -212,14 +227,16 @@
     font-size: 8.64rem;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .price-style-03.price-block {
         font-size: 18rem;
     }
 }
 
-@media (min-width:992px) {
-    .price-style-01 .currency, .price-style-01 .whole, .price-style-01 .super,
+@media (min-width: 992px) {
+    .price-style-01 .currency,
+    .price-style-01 .whole,
+    .price-style-01 .super,
     .price-style-01 .separator {
         color: #0077bc;
         background-image: -webkit-linear-gradient(top, #4ab3f1, #00629b);
@@ -237,7 +254,8 @@
         font-size: 6.4rem;
     }
 
-    .price-style-02 .before, .price-style-02 .after {
+    .price-style-02 .before,
+    .price-style-02 .after {
         font-size: 34.375%;
     }
 
@@ -250,7 +268,9 @@
         float: none;
     }
 
-    .price-style-02 .currency, .price-style-02 .whole, .price-style-02 .super,
+    .price-style-02 .currency,
+    .price-style-02 .whole,
+    .price-style-02 .super,
     .price-style-02 .separator {
         color: #0077bc;
         background-image: -webkit-linear-gradient(top, #4ab3f1, #00629b);

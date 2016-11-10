@@ -1,4 +1,4 @@
-// 'Best Choice' Offer Columns Style
+/* Offer Columns: 'Best Choice' Style */
 // Ex: https://www.charter.com/browse/content/best-choice-hp/
 @import 'initialize';
 
@@ -60,9 +60,8 @@ $ribbon-corner-height: 2.5rem;
 	margin-bottom: 1.5rem;
 
 	.aem-Grid {
-		// Use flex to push columns to bottom of container
 		@include breakpoint($bc-switchpoint) {
-			display: flex;
+			display: table;
 		}
 
 
@@ -73,13 +72,16 @@ $ribbon-corner-height: 2.5rem;
 
 				@include breakpoint($bc-switchpoint) {
 					width: percentage(1 / 3);
+					vertical-align: bottom;
+					display: table-cell;
+					float: none;
+					clear: none;
 				}
 			}
 		}
 	}
 
 	.aem-Grid .#{$column} {
-		margin-top: auto;
 		margin-bottom: 0;
 
 		@include breakpoint($switchpoint) {
@@ -132,7 +134,12 @@ $ribbon-corner-height: 2.5rem;
 		text-transform: uppercase;
 
 		@include breakpoint($bc-switchpoint) {
+			font-size: 2.72vw;
 			padding: 1rem;
+		}
+
+
+		@include breakpoint('lg') {
 			font-size: 3rem;
 		}
 
@@ -235,7 +242,7 @@ $ribbon-corner-height: 2.5rem;
 			strong, b {
 				color: $dark-blue;
 				font-size: 2.4rem;
-				line-height: 3.0rem;
+				line-height: 3rem;
 				font-weight: 500;
 				display: block;
 			}
@@ -262,7 +269,7 @@ $ribbon-corner-height: 2.5rem;
 
 	.btn {
 		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
-		box-shadow: .0rem .1rem .3rem #666;
+		box-shadow: 0 .1rem .3rem #666;
 		font-size: 5vw;
 		max-width: 75%;
 
@@ -280,19 +287,24 @@ $ribbon-corner-height: 2.5rem;
 
 	// Green ribbon at bottom of columns
 	.offer-column-footer {
-		font-family: $font-open-sans;
-		display: none;
-		color: #fff;
-		margin-left: -$ribbon-corner-height;
-		padding: 1.5vw 0;
 		position: relative;
+		padding: 1.5vw 0;
+		font-family: $font-open-sans;
+		color: #fff;
 		text-align: center;
-		width: calc(100% + #{$ribbon-corner-height * 2});
 		z-index: 20;
+		width: 100%;
+		padding-left: $text-padding-x;
+		padding-right: $text-padding-x;
+		margin: 0 auto;
+		width: calc(100% - #{$grid-gutter-width});
+		font-size: 7.3vw;
 
 		@include green-gradient;
 
 		@include breakpoint($bc-switchpoint) {
+			margin-left: -$ribbon-corner-height;
+			width: calc(100% + #{$ribbon-corner-height * 2});
 			display: block;
 			font-size: 2.8rem;
 		}
