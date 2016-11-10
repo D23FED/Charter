@@ -6,7 +6,9 @@ a {
 
 /* Charter Blue */
 
-a:focus, a:hover, .text-primary {
+a:focus,
+a:hover,
+.text-primary {
     color: #003057;
 }
 
@@ -20,7 +22,8 @@ a.text-primary:hover {
     color: #009e3d;
 }
 
-a.text-success:hover, a.text-success:focus {
+a.text-success:hover,
+a.text-success:focus {
     color: #006b29;
 }
 
@@ -30,7 +33,8 @@ a.text-success:hover, a.text-success:focus {
     color: #0077bc;
 }
 
-a.text-info:hover, a.text-info:focus {
+a.text-info:hover,
+a.text-info:focus {
     color: #005789;
 }
 
@@ -40,7 +44,8 @@ a.text-info:hover, a.text-info:focus {
     color: #faa41a;
 }
 
-a.text-warning:hover, a.text-warning:focus {
+a.text-warning:hover,
+a.text-warning:focus {
     color: #dc8a05;
 }
 
@@ -50,7 +55,8 @@ a.text-warning:hover, a.text-warning:focus {
     color: #96004d;
 }
 
-a.text-danger:hover, a.text-danger:focus {
+a.text-danger:hover,
+a.text-danger:focus {
     color: #630033;
 }
 
@@ -60,18 +66,26 @@ a.text-danger:hover, a.text-danger:focus {
     border-color: #e69300;
 }
 
-.btn-primary.active, .btn-primary:active, .btn-primary:focus, .btn-primary:hover,
-.btn-primary .open > {
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary .open >  {
     color: #fff;
     background-color: #ffb229;
     border-color: #faa000;
 }
 
-.btn-primary.disabled, .btn-primary[disabled],
-.btn-primary fieldset[disabled] .btn-primary, .btn-primary.disabled.active,
-.btn-primary.disabled:active, .btn-primary.disabled:focus,
-.btn-primary.disabled:hover, .btn-primary[disabled].active,
-.btn-primary[disabled]:active, .btn-primary[disabled]:focus,
+.btn-primary.disabled,
+.btn-primary[disabled],
+.btn-primary fieldset[disabled] .btn-primary,
+.btn-primary.disabled.active,
+.btn-primary.disabled:active,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:hover,
+.btn-primary[disabled].active,
+.btn-primary[disabled]:active,
+.btn-primary[disabled]:focus,
 .btn-primary[disabled]:hover,
 .btn-primary fieldset[disabled] .btn-primary.active,
 .btn-primary fieldset[disabled] .btn-primary:active,

@@ -55,9 +55,9 @@
     color: #00629b;
     text-decoration: none;
     -webkit-transition: all 150ms ease-out;
-            transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
     -webkit-transition-property: color, background-color;
-            transition-property: color, background-color;
+    transition-property: color, background-color;
 }
 
 .tabbedComponent .tab-row ul.nav-tabs .tab > a:focus,
@@ -406,8 +406,8 @@
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     display: inline-block;
     background-color: transparent;
     border: none;
@@ -492,9 +492,9 @@
     text-decoration: none;
     text-transform: uppercase;
     -webkit-transition: all 150ms ease-out;
-            transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
     -webkit-transition-property: color, padding, font-size, border;
-            transition-property: color, padding, font-size, border;
+    transition-property: color, padding, font-size, border;
     padding: 15px;
 }
 
@@ -530,8 +530,8 @@
 .tabbedComponent.tab-style-5 .tab-row ul.nav-tabs .tab > a:after {
     content: '^';
     -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
     font-weight: 700;
     position: absolute;
     line-height: 1;
@@ -596,14 +596,14 @@
     list-style-position: inside;
 }
 
-@media (min-width:544px) {
+@media (min-width: 544px) {
     .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab,
     .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow {
         width: 33.33333%;
     }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
     .tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
         font-size: 2.2rem;
@@ -621,7 +621,7 @@
     }
 }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
     .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
     .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
         text-align: center;
@@ -704,7 +704,7 @@
     .tabbedComponent.tab-style-5 .tab-row ul.nav-tabs .arrow > a {
         font-size: 1.3rem;
         -webkit-transition-property: color;
-                transition-property: color;
+        transition-property: color;
         padding: 1rem 1.5rem;
         box-shadow: none;
         line-height: 1.15;
@@ -736,8 +736,8 @@
         border-style: solid;
         top: -.6rem;
         -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
+        -ms-transform: none;
+        transform: none;
         display: inline-block;
     }
 
@@ -766,7 +766,7 @@
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
     .tabbedComponent.tab-style-2 .tab-row {
         display: table;
         width: 100%;
@@ -867,7 +867,7 @@
     }
 }
 
-@media (min-width:1200px) and (min-width:1200px) {
+@media (min-width: 1200px) and (min-width: 1200px) {
     .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .arrow {
         display: table-cell;
     }

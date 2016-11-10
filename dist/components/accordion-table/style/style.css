@@ -25,8 +25,12 @@
     padding: 0;
 }
 
-.accordionTableRow h1, .accordionTableRow h2, .accordionTableRow h3,
-.accordionTableRow h4, .accordionTableRow h5, .accordionTableRow h6 {
+.accordionTableRow h1,
+.accordionTableRow h2,
+.accordionTableRow h3,
+.accordionTableRow h4,
+.accordionTableRow h5,
+.accordionTableRow h6 {
     margin-top: 0;
     font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 300;
@@ -52,7 +56,8 @@
     text-decoration: none;
 }
 
-.accordionTableRow h3 a:focus, .accordionTableRow h3 a:hover {
+.accordionTableRow h3 a:focus,
+.accordionTableRow h3 a:hover {
     text-decoration: underline;
     color: #003057;
 }
@@ -141,9 +146,9 @@
     box-shadow: 0 .1rem .3rem #666;
     width: auto;
     -webkit-transition: all 150ms ease-out;
-            transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
     -webkit-transition-property: color;
-            transition-property: color;
+    transition-property: color;
     text-transform: uppercase;
 }
 
@@ -198,7 +203,7 @@
     text-align: center;
 }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
     .accordionTableRow .row-header ul.at-table {
         display: table;
         width: 100%;

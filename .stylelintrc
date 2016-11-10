@@ -3,8 +3,11 @@
     "color-no-invalid-hex": true,
     "declaration-colon-space-after": "always",
     "max-empty-lines": 2,
-    "indentation": ["tab", {
+    "indentation": [4, {
       "except": ["value"]
-    }]
+    }],
+    "selector-list-comma-newline-after": "always",
+    "number-no-trailing-zeros": true,
+    "length-zero-no-unit": true
   }
 }
