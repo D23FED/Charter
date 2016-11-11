@@ -1,10 +1,9 @@
 /* Pricing Component */
-
 .price-block {
     display: inline-block;
     font-size: 4rem;
     line-height: 1;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .price-block > .p-row {
@@ -63,7 +62,6 @@
 }
 
 /* Pricing Component:  Double Price Block */
-
 .price-block-double {
     display: inline-block;
 }

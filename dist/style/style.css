@@ -28,7 +28,6 @@
 }
 
 /* Accordion Table Component */
-
 .accordionTableRow {
     position: relative;
 }
@@ -61,7 +60,7 @@
 .accordionTableRow h5,
 .accordionTableRow h6 {
     margin-top: 0;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 300;
 }
 
@@ -99,8 +98,8 @@
     background-size: 100% 4rem;
     background-repeat: no-repeat;
     background-position: 0 -2rem;
-    background-image: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, .15) 0, transparent 70%);
-    background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, .15) 0, transparent 70%);
+    background-image: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, 0.15) 0, transparent 70%);
+    background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0, transparent 70%);
     border-top: .1rem solid #ccc;
     padding: 1.5rem 0;
     line-height: 1;
@@ -113,7 +112,7 @@
 }
 
 .accordionTableRow .row-header .at-column {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     display: block;
     padding: 0;
     vertical-align: middle;
@@ -131,11 +130,11 @@
     font-size: 1.6rem;
     padding: .7rem 4rem;
     width: 100%;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn {
-    box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .33);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
     position: relative;
     margin-top: 1.5rem;
     margin-bottom: .5rem;
@@ -149,7 +148,7 @@
 }
 
 .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn-primary {
-    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .75);
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
     background-color: #feb533;
     background-image: -webkit-linear-gradient(top, #feb533, #ffa300);
     background-image: linear-gradient(180deg, #feb533 0, #ffa300);
@@ -170,7 +169,7 @@
     z-index: 2;
     margin: 0;
     color: #00629b;
-    border: .1rem solid #00629b;
+    border: 0.1rem solid #00629b;
     font-weight: 700;
     box-shadow: 0 .1rem .3rem #666;
     width: auto;
@@ -188,7 +187,7 @@
 }
 
 .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn:active {
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
 .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn::after {
@@ -223,7 +222,6 @@
 }
 
 /* Accordion Table Component: Offer Style */
-
 .offer-table .row-header ul.at-table.column-5 .at-column:nth-of-type(3) {
     display: none;
 }
@@ -233,7 +231,6 @@
 }
 
 /* Image Art Direction */
-
 .container .imageArtDirection {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
@@ -338,7 +335,6 @@
 }
 
 /* List Component */
-
 .list-component .list-style-circle {
     list-style-type: circle;
 }
@@ -444,12 +440,11 @@
 }
 
 /* Pricing Component */
-
 .price-block {
     display: inline-block;
     font-size: 4rem;
     line-height: 1;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .price-block > .p-row {
@@ -508,7 +503,6 @@
 }
 
 /* Pricing Component:  Double Price Block */
-
 .price-block-double {
     display: inline-block;
 }
@@ -673,9 +667,7 @@
 }
 
 /* Tabbed Component v3 | Nov 2016 */
-
 /* Override core CSS */
-
 .tabbedComponent .tab-row {
     display: block;
     box-shadow: none;
@@ -696,9 +688,7 @@
 }
 
 /* End core.css overrides */
-
 /* Common Tab styles */
-
 .tabbedComponent .tab-row ul.nav-tabs::after {
     content: '';
     display: table;
@@ -708,7 +698,7 @@
 .tabbedComponent .tab-row ul.nav-tabs .tab,
 .tabbedComponent .tab-row ul.nav-tabs .arrow {
     float: left;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 400;
     font-style: normal;
     list-style: none;
@@ -718,7 +708,7 @@
 
 .tabbedComponent .tab-row ul.nav-tabs .tab > a,
 .tabbedComponent .tab-row ul.nav-tabs .arrow > a {
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
     position: relative;
     border: .1rem solid transparent;
     background-color: #fff;
@@ -786,11 +776,10 @@
 }
 
 /* Tab Style 1: Default */
-
 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .tab,
 .tabbedComponent.tab-style-1 .tab-row ul.nav-tabs .arrow {
-    margin-left: .1rem;
-    margin-right: .1rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
     text-align: left;
     width: 100%;
 }
@@ -840,8 +829,8 @@
 .tabbedComponent.tab-style-1 .tab-content-container {
     border: .1rem solid #ddd;
     border-width: 0 .1rem .1rem;
-    background: -webkit-linear-gradient(top, #fff, #fff 60%, #eef1f3);
-    background: linear-gradient(180deg, #fff 0%, #fff 60%, #eef1f3);
+    background: -webkit-linear-gradient(top, #ffffff, #ffffff 60%, #eef1f3);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 60%, #eef1f3);
 }
 
 /* Tab Style 2: Justified */
@@ -865,7 +854,7 @@
     margin: .2rem;
     padding: 1rem;
     text-decoration: none;
-    border: .2rem solid #0077bc;
+    border: 0.2rem solid #0077bc;
     white-space: nowrap;
     font-weight: 700;
     font-size: 1.7rem;
@@ -901,7 +890,6 @@
 }
 
 /* Tab Style 3: Promo */
-
 .tabbedComponent.tab-style-3 .tab-row {
     overflow: hidden;
     text-align: center;
@@ -948,7 +936,7 @@
 .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:hover,
 .tabbedComponent.tab-style-3 .tab-row ul.nav-tabs .tab.js-active > a:focus {
     border: .1rem solid #fff;
-    box-shadow: 0 0 .5rem 0 #000;
+    box-shadow: 0 0 .5rem 0 #000000;
     background: #fff;
     color: #0077bc;
     border-radius: .5rem;
@@ -981,7 +969,6 @@
 }
 
 /* Tab Style 4: Side Tabs */
-
 .tabbedComponent.tab-style-4::after {
     content: '';
     display: table;
@@ -1021,7 +1008,7 @@
     font-size: 2.2rem;
     width: 100%;
     background-color: #0077bc;
-    border-bottom: .1rem solid #00629b;
+    border-bottom: 0.1rem solid #00629b;
 }
 
 .tabbedComponent.tab-style-4 .tab-row ul.nav-tabs .tab > a:not(.details-toggle):focus {
@@ -1129,7 +1116,6 @@
 }
 
 /* Tab Style 5: Grey (used on International) */
-
 .tabbedComponent.tab-style-5::after {
     content: '';
     display: table;
@@ -1157,10 +1143,10 @@
     color: #51565c;
     font-size: 1.2rem;
     font-weight: 700;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
     line-height: 1.45;
     margin: 0;
-    box-shadow: 0 5px 5px -3px rgba(97, 97, 97, .82);
+    box-shadow: 0 5px 5px -3px rgba(97, 97, 97, 0.82);
     display: block;
     text-align: center;
     text-decoration: none;
@@ -1196,8 +1182,8 @@
 
 .tabbedComponent.tab-style-5 .tab-row ul.nav-tabs .tab > a {
     width: 100%;
-    background-image: -webkit-linear-gradient(top, #fff, #d8d8d8);
-    background-image: linear-gradient(180deg, #fff 0%, #d8d8d8);
+    background-image: -webkit-linear-gradient(top, #ffffff, #d8d8d8);
+    background-image: linear-gradient(180deg, #ffffff 0%, #d8d8d8);
 }
 
 .tabbedComponent.tab-style-5 .tab-row ul.nav-tabs .tab > a:before,
@@ -1220,7 +1206,7 @@
 }
 
 .tabbedComponent.tab-style-5 .tab-row ul.nav-tabs .tab.js-active > a {
-    border-top: .5rem solid #0077bc;
+    border-top: 0.5rem solid #0077bc;
     color: #00629b;
     position: relative;
 }
@@ -1271,7 +1257,6 @@
 }
 
 /* Assumes 16:9 video */
-
 .embed-responsive {
     padding-bottom: 56.25%;
 }
@@ -1599,12 +1584,12 @@
     }
 
     .tabbedComponent.tab-style-5 .tab-row ul.nav-tabs .tab.js-active > a:before {
-        border-width: 0 0 6rem .5rem;
+        border-width: 0 0 6rem 0.5rem;
         left: -0.4rem;
     }
 
     .tabbedComponent.tab-style-5 .tab-row ul.nav-tabs .tab.js-active > a::after {
-        border-width: 0 .5rem 6rem 0;
+        border-width: 0 0.5rem 6rem 0;
         right: -0.4rem;
     }
 
@@ -1619,7 +1604,7 @@
     .tabbedComponent.tab-style-5 .tab-content-container {
         border-bottom-left-radius: 1.5rem;
         border-bottom-right-radius: 1.5rem;
-        box-shadow: 0 2.4rem 3.8rem 0 rgba(66, 65, 66, .5);
+        box-shadow: 0 2.4rem 3.8rem 0rem rgba(66, 65, 66, 0.5);
     }
 }
 

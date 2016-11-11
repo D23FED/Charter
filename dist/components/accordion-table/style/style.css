@@ -1,5 +1,4 @@
 /* Accordion Table Component */
-
 .accordionTableRow {
     position: relative;
 }
@@ -32,7 +31,7 @@
 .accordionTableRow h5,
 .accordionTableRow h6 {
     margin-top: 0;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 300;
 }
 
@@ -70,8 +69,8 @@
     background-size: 100% 4rem;
     background-repeat: no-repeat;
     background-position: 0 -2rem;
-    background-image: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, .15) 0, transparent 70%);
-    background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, .15) 0, transparent 70%);
+    background-image: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, 0.15) 0, transparent 70%);
+    background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0, transparent 70%);
     border-top: .1rem solid #ccc;
     padding: 1.5rem 0;
     line-height: 1;
@@ -84,7 +83,7 @@
 }
 
 .accordionTableRow .row-header .at-column {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     display: block;
     padding: 0;
     vertical-align: middle;
@@ -102,11 +101,11 @@
     font-size: 1.6rem;
     padding: .7rem 4rem;
     width: 100%;
-    font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn {
-    box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .33);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
     position: relative;
     margin-top: 1.5rem;
     margin-bottom: .5rem;
@@ -120,7 +119,7 @@
 }
 
 .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn-primary {
-    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .75);
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
     background-color: #feb533;
     background-image: -webkit-linear-gradient(top, #feb533, #ffa300);
     background-image: linear-gradient(180deg, #feb533 0, #ffa300);
@@ -141,7 +140,7 @@
     z-index: 2;
     margin: 0;
     color: #00629b;
-    border: .1rem solid #00629b;
+    border: 0.1rem solid #00629b;
     font-weight: 700;
     box-shadow: 0 .1rem .3rem #666;
     width: auto;
@@ -159,7 +158,7 @@
 }
 
 .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn:active {
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
 .accordionTableRow .row-header .linkComponent.accordionTableExpander .btn::after {
@@ -194,7 +193,6 @@
 }
 
 /* Accordion Table Component: Offer Style */
-
 .offer-table .row-header ul.at-table.column-5 .at-column:nth-of-type(3) {
     display: none;
 }

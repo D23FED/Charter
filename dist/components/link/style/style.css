@@ -1,11 +1,9 @@
 /* Default link styling, Charter Med Blue */
-
 a {
     color: #00629b;
 }
 
 /* Charter Blue */
-
 a:focus,
 a:hover,
 .text-primary {
@@ -17,7 +15,6 @@ a.text-primary:hover {
 }
 
 /* Green based on Charter Teal */
-
 .text-success {
     color: #009e3d;
 }
@@ -28,7 +25,6 @@ a.text-success:focus {
 }
 
 /* Charter Light Blue */
-
 .text-info {
     color: #0077bc;
 }
@@ -39,7 +35,6 @@ a.text-info:focus {
 }
 
 /* Charter Yellow */
-
 .text-warning {
     color: #faa41a;
 }
@@ -50,7 +45,6 @@ a.text-warning:focus {
 }
 
 /* Charter Pink */
-
 .text-danger {
     color: #96004d;
 }

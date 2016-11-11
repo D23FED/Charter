@@ -2,7 +2,7 @@
 // Ex: https://www.charter.com/browse/content/packages/
 @import 'initialize';
 
-.featured-offers {
+.offers-featured {
 	.aem-Grid .#{$column} {
 		// Shadow at bottom of column
 		@include breakpoint($switchpoint) {
