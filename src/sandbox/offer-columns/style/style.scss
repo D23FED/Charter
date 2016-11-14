@@ -5,6 +5,9 @@
 
 $wrapper: 'offersColumns';
 $column: 'aem-GridColumn';
+$columnThird: 'aem-GridColumn--default--4';
+$grid: 'aem-Grid';
+$grid-12: 'aem-Grid--12';
 $col-padding: 2rem;
 $text-padding-x: 1.5rem;
 $switchpoint: 'md';
@@ -31,46 +34,67 @@ $feature-border-color: #b7b7b9;
 	text-align: center;
 	color: $cool-grey;
 
-	// Grid columns
-	.aem-Grid .#{$column} {
-		position: relative;
-		margin-bottom: 1.5rem;
-		font-family: $font-open-sans;
+	.#{$grid} {
+		.#{$column} {
+			position: relative;
+			margin-bottom: 1.5rem;
+			font-family: $font-open-sans;
 
-		// Set 1/3 total gutter on middle column and 2/3 gutter on outer columns, or else middle column content will be smaller width than outer
-		@include breakpoint($switchpoint) {
-			padding-left: $grid-gutter-width-third;
-			padding-right: $grid-gutter-width-third;
+			// Set 1/3 total gutter on middle column and 2/3 gutter on outer columns, or else middle column content will be smaller width than outer
+			@include breakpoint($switchpoint) {
+				padding-left: $grid-gutter-width-third;
+				padding-right: $grid-gutter-width-third;
 
-			&:first-of-type {
-				padding-left: 0;
-				padding-right: $grid-gutter-width-third * 2;
+				&:first-of-type {
+					padding-left: 0;
+					padding-right: $grid-gutter-width-third * 2;
+				}
+
+				&:nth-of-type(#{$numOfColumns}),
+				&:last-child {
+					padding-right: 0;
+					padding-left: $grid-gutter-width-third * 2;
+				}
 			}
 
-			&:nth-of-type(#{$numOfColumns}),
-			&:last-child {
-				padding-right: 0;
-				padding-left: $grid-gutter-width-third * 2;
+
+			// Inner
+			> div {
+				position: relative;
+				padding: $col-padding;
+				border-top: 1px solid $light-grey;
+				border-bottom: 1px solid $light-grey;
+
+				// BG gradient
+				@include breakpoint(sm) {
+					z-index: 20;
+				}
+
+
+				@include breakpoint($switchpoint) {
+					background-color: $gray-lighter;
+					border: none;
+				}
 			}
 		}
 
-
-		// Inner
-		> div {
-			position: relative;
-			padding: $col-padding;
-			border-top: 1px solid $light-grey;
-			border-bottom: 1px solid $light-grey;
-
-			// BG gradient
-			@include breakpoint(sm) {
-				z-index: 20;
+		// Overwrite default layout column widths on small screens
+		&.#{$grid-12} {
+			@include breakpoint($switchpoint) {
+				display: table;
 			}
 
+			// Individual columns
+			> .#{$column}.#{$columnThird} {
+				width: 100%;
+				margin-bottom: 0;
 
-			@include breakpoint($switchpoint) {
-				background-color: $gray-lighter;
-				border: none;
+				@include breakpoint($switchpoint) {
+					width: percentage(1 / 3);
+					display: table-cell;
+					float: none;
+					clear: none;
+				}
 			}
 		}
 	}

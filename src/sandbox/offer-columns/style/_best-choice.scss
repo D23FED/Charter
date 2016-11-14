@@ -59,61 +59,45 @@ $ribbon-corner-height: 2.5rem;
 .offers-best-choice {
 	margin-bottom: 1.5rem;
 
-	.aem-Grid {
-		@include breakpoint($bc-switchpoint) {
-			display: table;
-		}
-
-
-		// Overwrite column width
-		&.aem-Grid--12 {
-			> .aem-GridColumn.aem-GridColumn--default--4 {
-				width: 100%;
-
+	.#{$grid} {
+		// Overwrite default column layout
+		&.#{$grid-12} {
+			> .#{$column}.#{$columnThird} {
 				@include breakpoint($bc-switchpoint) {
-					width: percentage(1 / 3);
 					vertical-align: bottom;
-					display: table-cell;
-					float: none;
-					clear: none;
+					padding-left: $bc-grid-gutter-width-third;
+					padding-right: $bc-grid-gutter-width-third;
+
+					&:first-of-type {
+						padding-left: 0;
+						padding-right: $bc-grid-gutter-width-third * 2;
+					}
+
+					&:nth-of-type(#{$numOfColumns}),
+					&:last-child {
+						padding-right: 0;
+						padding-left: $bc-grid-gutter-width-third * 2;
+					}
 				}
 			}
 		}
-	}
 
-	.aem-Grid .#{$column} {
-		margin-bottom: 0;
-
-		@include breakpoint($switchpoint) {
-			padding-left: $bc-grid-gutter-width-third;
-			padding-right: $bc-grid-gutter-width-third;
-
-			&:first-of-type {
-				padding-left: 0;
-				padding-right: $bc-grid-gutter-width-third * 2;
-			}
-
-			&:nth-of-type(#{$numOfColumns}),
-			&:last-child {
-				padding-right: 0;
-				padding-left: $bc-grid-gutter-width-third * 2;
-			}
-		}
-
-
-		// Inner
-		// Use a gradient to fake color at bottom of stack
-		> div {
-			background-color: $light-grey-01;
-			background: linear-gradient(to bottom, $light-grey-01 69%, $grey-03 70%, $grey-03 70%);
-			padding: $bc-col-padding;
-			padding-top: 0;
-
-			// Shift point where it switches colors to be a little lower at larger sizes
-			@include breakpoint($bc-switchpoint) {
-				box-shadow: .1rem .1rem #9a9a9a;
+		// Column appearance
+		.#{$column} {
+			// Inner
+			// Use a gradient to fake color at bottom of stack
+			> div {
 				background-color: $light-grey-01;
-				background: linear-gradient(to bottom, $light-grey-01 59%, #f5f5f7 60%, $grey-03 60%);
+				background: linear-gradient(to bottom, $light-grey-01 69%, $grey-03 70%, $grey-03 70%);
+				padding: $bc-col-padding;
+				padding-top: 0;
+
+				// Shift point where it switches colors to be a little lower at larger sizes
+				@include breakpoint($bc-switchpoint) {
+					box-shadow: .1rem .1rem #9a9a9a;
+					background-color: $light-grey-01;
+					background: linear-gradient(to bottom, $light-grey-01 59%, #f5f5f7 60%, $grey-03 60%);
+				}
 			}
 		}
 	}
@@ -260,13 +244,6 @@ $ribbon-corner-height: 2.5rem;
 		display: none;
 	}
 
-	// Link to show/hide details
-	.accordion-link {
-		font-size: 1.4rem;
-		font-weight: bold;
-		text-decoration: underline;
-	}
-
 	.btn {
 		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
 		box-shadow: 0 .1rem .3rem #666;
@@ -300,6 +277,13 @@ $ribbon-corner-height: 2.5rem;
 		width: calc(100% - #{$grid-gutter-width});
 		font-size: 7.3vw;
 
+		p {
+			font-size: 7.3vw;
+			color: #fff;
+			margin: 0 auto;
+			padding: 0;
+		}
+
 		@include green-gradient;
 
 		@include breakpoint($bc-switchpoint) {
@@ -307,11 +291,19 @@ $ribbon-corner-height: 2.5rem;
 			width: calc(100% + #{$ribbon-corner-height * 2});
 			display: block;
 			font-size: 2.8rem;
+
+			p {
+				font-size: 2.8rem;
+			}
 		}
 
 
 		@include breakpoint('lg') {
 			font-size: 3.4rem;
+
+			p {
+				font-size: 3.4rem;
+			}
 		}
 
 
