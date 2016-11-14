@@ -19,7 +19,8 @@
     border-right: 1px solid #333;
 }
 
-.list-separated li:last-of-type, .list-inline.list-separated li:last-of-type {
+.list-separated li:last-of-type,
+.list-inline.list-separated li:last-of-type {
     border-bottom: none;
     border-right: none;
 }

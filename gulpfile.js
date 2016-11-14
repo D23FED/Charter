@@ -15,7 +15,8 @@ var
 			'postcss-*',
 			'css-*',
 			'cssnano',
-			'perfectionist'
+			'perfectionist',
+			'stylefmt'
 		]
 	}),
 	// cssnano = require('cssnano'),
@@ -125,9 +126,10 @@ var
 			relative: paths.dist
 		}),
 		$.cssMqpacker({sort: true}),
-		$.perfectionist({
-			indentSize: 4
-		})
+		// $.perfectionist({
+		// 	indentSize: 4
+		// }),
+		$.stylefmt()
 	],
 	sassIncludePaths = [
 		'src/style/',
@@ -155,6 +157,7 @@ gulp.task('style', function() {
 		outputStyle: 'expanded'
 	})).on('error', $.sass.logError)
 	// CSS post-processing
+	// .pipe($.stylefmt)
 	.pipe($.postcss(postCssProcessors))
 	.pipe($.sourcemaps.write('.'))
 	// Write CSS to disk
