@@ -1,0 +1,68 @@
+.customTable table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 .2rem;
+}
+
+.customTable th {
+    text-align: center;
+}
+
+.customTable th:first-child {
+    text-align: left;
+}
+
+.customTable th:first-child .richtext {
+    margin-left: 1.5rem;
+}
+
+.customTable th .richtext {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    color: #52565c;
+    font-size: 1.2rem;
+}
+
+.customTable td {
+    width: 25%;
+    background-color: #efeeee;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: inset 2.2rem 0 2.8rem -0.7rem rgba(0, 0, 0, 0.1);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.customTable td:first-child {
+    box-shadow: none;
+}
+
+.customTable td .image,
+.customTable td img {
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.customTable img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.customTable .richtext {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+@media (min-width: 992px) {
+    .customTable th .richtext {
+        font-size: 2.3rem;
+    }
+
+    .customTable .richtext {
+        font-size: 1.7rem;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
