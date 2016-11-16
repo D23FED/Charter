@@ -3,11 +3,16 @@
     "color-no-invalid-hex": true,
     "declaration-colon-space-after": "always",
     "max-empty-lines": 2,
-    "indentation": [4, {
+    "indentation": ["tab", {
       "except": ["value"]
     }],
     "selector-list-comma-newline-after": "always",
     "number-no-trailing-zeros": true,
-    "length-zero-no-unit": true
+    "number-leading-zero": true,
+    "length-zero-no-unit": true,
+    "selector-combinator-space-after": true,
+    "color-hex-case": "lower",
+    "block-opening-brace-space-before": "always",
+    "at-rule-empty-line-before": "always"
   }
 }

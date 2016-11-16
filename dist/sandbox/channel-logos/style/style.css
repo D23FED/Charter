@@ -1,88 +1,88 @@
 .channel-logo::before {
-    font-family: Channel Logos;
-    content: '';
-    display: inline-block;
-    font-size: 2rem;
+	font-family: Channel Logos;
+	content: '';
+	display: inline-block;
+	font-size: 2rem;
 }
 
 .logo-ae::before {
-    content: "\e600";
+	content: "\e600";
 }
 
 .logo-max::before {
-    content: "\e601";
+	content: "\e601";
 }
 
 .logo-cnn::before {
-    content: "\e602";
+	content: "\e602";
 }
 
 .logo-epix::before {
-    content: "\e604";
+	content: "\e604";
 }
 
 .logo-espn::before {
-    content: "\e605";
+	content: "\e605";
 }
 
 .logo-hbo::before {
-    content: "\e607";
+	content: "\e607";
 }
 
 .logo-hgtv::before {
-    content: "\e608";
+	content: "\e608";
 }
 
 .logo-showtime::before {
-    content: "\e609";
+	content: "\e609";
 }
 
 .logo-starz::before {
-    content: "\e60a";
+	content: "\e60a";
 }
 
 .logo-tmc::before {
-    content: "\e60b";
+	content: "\e60b";
 }
 
 .logo-mtv::before {
-    content: "\e900";
+	content: "\e900";
 }
 
 .logo-disc::before {
-    content: "\e901";
+	content: "\e901";
 }
 
 .logo-tlc::before {
-    content: "\e902";
+	content: "\e902";
 }
 
 .logo-fox::before {
-    content: "\e903";
+	content: "\e903";
 }
 
 .logo-hall::before {
-    content: "\e904";
+	content: "\e904";
 }
 
 .logo-encore::before {
-    content: "\e905";
+	content: "\e905";
 }
 
 .logo-nfl-vert::before {
-    content: "\e906";
+	content: "\e906";
 }
 
 .logo-nfl-rz-hz::before {
-    content: "\e907";
+	content: "\e907";
 }
 
 .logo-nfl-rz-vert::before {
-    content: "\e908";
+	content: "\e908";
 }
 
 .logo-nfl-hz::before {
-    content: "\e909";
+	content: "\e909";
 }
 
 /*# sourceMappingURL=style.css.map */
