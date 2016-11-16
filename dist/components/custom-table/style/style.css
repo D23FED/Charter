@@ -1,0 +1,121 @@
+.customTable table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 .2rem;
+}
+
+.customTable th {
+    text-align: center;
+}
+
+.customTable th:first-child {
+    text-align: left;
+}
+
+.customTable th:first-child .richtext {
+    margin-left: 1.5rem;
+}
+
+.customTable th .richtext {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    color: #52565c;
+    font-size: 1.2rem;
+}
+
+.customTable td {
+    width: 25%;
+    background-color: #efeeee;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: inset 2.2rem 0 2.8rem -0.7rem rgba(0, 0, 0, 0.1);
+    padding: 2% 0.75rem;
+    height: 9rem;
+}
+
+.customTable td:first-child {
+    box-shadow: none;
+}
+
+.customTable td:first-child > [class*="row"]::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.customTable td:first-child .image {
+    display: none;
+}
+
+.customTable td:first-child .richtext {
+    text-align: left;
+}
+
+.customTable td .image,
+.customTable td img {
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.customTable img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.customTable .richtext {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.customTable h1,
+.customTable h2,
+.customTable h3,
+.customTable h4,
+.customTable h5,
+.customTable h6,
+.customTable li,
+.customTable p {
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #52565c;
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    .customTable td {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .customTable .richtext {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .customTable th .richtext {
+        font-size: 2.3rem;
+    }
+
+    .customTable td {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .customTable td:first-child .image,
+    .customTable td:first-child .richtext {
+        float: left;
+    }
+
+    .customTable td:first-child .image {
+        width: 25%;
+        display: block;
+    }
+
+    .customTable td:first-child .richtext {
+        width: 75%;
+        padding-left: 1.5rem;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */

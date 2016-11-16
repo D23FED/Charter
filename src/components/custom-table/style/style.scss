@@ -1,0 +1,138 @@
+@import 'initialize';
+
+$grey-bg: #EFEEEE;
+$grey-text: #52565c;
+$shadow-td: inset 2.2rem 0 2.8rem -0.7rem rgba(black, 0.1);
+$ct-switchpoint: 'md';
+$wrapper: 'customTable';
+
+.#{$wrapper} {
+	table {
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0 .2rem;
+	}
+
+	// Headings
+	th {
+		text-align: center;
+
+		&:first-child {
+			text-align: left;
+
+			.richtext {
+				margin-left: $grid-gutter-width / 2;
+			}
+		}
+
+		.richtext {
+			margin-bottom: 1.5rem;
+			font-weight: 300;
+			color: $grey-text;
+			font-size: 1.2rem;
+
+			// text-align: center;
+
+			@include breakpoint($ct-switchpoint) {
+				font-size: 2.3rem;
+			}
+		}
+	}
+
+	// Content
+	td {
+		width: percentage(1 / 4);
+		background-color: $grey-bg;
+		text-align: center;
+		vertical-align: middle;
+		box-shadow: $shadow-td;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		padding-right: $column-padding * 0.5;
+		padding-left: $column-padding * 0.5;
+		height: 9rem;
+
+		@include breakpoint('sm') {
+			padding-left: $column-padding;
+			padding-right: $column-padding;
+		}
+
+		@include breakpoint($ct-switchpoint) {
+			padding-left: $column-padding;
+			padding-right: $column-padding;
+		}
+
+
+		// First column
+		&:first-child {
+			box-shadow: none;
+
+			> [class*="row"] {
+				@include clearfix;
+			}
+			.image,
+			.richtext {
+				@include breakpoint($ct-switchpoint) {
+					float: left;
+				}
+			}
+
+			.image {
+				display: none;
+
+				@include breakpoint($ct-switchpoint) {
+					width: 25%;
+					display: block;
+				}
+			}
+
+			.richtext {
+				text-align: left;
+
+				@include breakpoint($ct-switchpoint) {
+					width: 75%;
+					padding-left: $column-padding;
+				}
+			}
+		}
+
+		.image,
+		img {
+			margin-bottom: 0;
+			max-width: 100%;
+		}
+	}
+
+	img {
+		@include center-block;
+	}
+
+	// Text
+	.richtext {
+		font-size: 1.2rem;
+		font-weight: 700;
+
+		@include breakpoint('sm') {
+			font-size: 1.7rem;
+		}
+
+		@include breakpoint($ct-switchpoint) {
+		}
+	}
+
+	%text {
+		font-family: $font-open-sans;
+		color: $grey-text;
+		line-height: 1.4;
+	}
+
+	@for $i from 1 through 6 {
+		h#{$i} {
+			@extend %text;
+		}
+	}
+
+	li, p {
+		@extend %text;
+	}
+}
