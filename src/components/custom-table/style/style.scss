@@ -13,6 +13,7 @@ $wrapper: 'customTable';
 		border-spacing: 0 .2rem;
 	}
 
+	// Headings
 	th {
 		text-align: center;
 
@@ -30,12 +31,15 @@ $wrapper: 'customTable';
 			color: $grey-text;
 			font-size: 1.2rem;
 
+			// text-align: center;
+
 			@include breakpoint($ct-switchpoint) {
 				font-size: 2.3rem;
 			}
 		}
 	}
 
+	// Content
 	td {
 		width: percentage(1 / 4);
 		background-color: $grey-bg;
@@ -44,11 +48,52 @@ $wrapper: 'customTable';
 		box-shadow: $shadow-td;
 		padding-top: 2%;
 		padding-bottom: 2%;
-		padding-left: $column-padding;
-		padding-right: $column-padding;
+		padding-right: $column-padding * 0.5;
+		padding-left: $column-padding * 0.5;
+		height: 9rem;
 
+		@include breakpoint('sm') {
+			padding-left: $column-padding;
+			padding-right: $column-padding;
+		}
+
+		@include breakpoint($ct-switchpoint) {
+			padding-left: $column-padding;
+			padding-right: $column-padding;
+		}
+
+
+		// First column
 		&:first-child {
 			box-shadow: none;
+
+			> [class*="row"] {
+				@include clearfix;
+			}
+			.image,
+			.richtext {
+				@include breakpoint($ct-switchpoint) {
+					float: left;
+				}
+			}
+
+			.image {
+				display: none;
+
+				@include breakpoint($ct-switchpoint) {
+					width: 25%;
+					display: block;
+				}
+			}
+
+			.richtext {
+				text-align: left;
+
+				@include breakpoint($ct-switchpoint) {
+					width: 75%;
+					padding-left: $column-padding;
+				}
+			}
 		}
 
 		.image,
@@ -62,13 +107,32 @@ $wrapper: 'customTable';
 		@include center-block;
 	}
 
+	// Text
 	.richtext {
 		font-size: 1.2rem;
 		font-weight: 700;
-		text-align: left;
 
-		@include breakpoint($ct-switchpoint) {
+		@include breakpoint('sm') {
 			font-size: 1.7rem;
 		}
+
+		@include breakpoint($ct-switchpoint) {
+		}
+	}
+
+	%text {
+		font-family: $font-open-sans;
+		color: $grey-text;
+		line-height: 1.4;
+	}
+
+	@for $i from 1 through 6 {
+		h#{$i} {
+			@extend %text;
+		}
+	}
+
+	li, p {
+		@extend %text;
 	}
 }
