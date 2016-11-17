@@ -1,83 +1,149 @@
 @import 'initialize';
 $page-header: 'body > header';
 
-#{$page-header} {
-  .nav-primary {
-    background-color: #52565c;
-    margin-top: 2.0rem;
-    margin-top: 2.0rem;
-    background: none repeat scroll 0 0 #52565c;
+// Menu item positions, from l to r
+$menu-item-search-pos: 1;
+$menu-item-contact-pos: 2;
+$menu-item-local-pos: 6;
+$text-size-user-nav: 1.2rem;
+$text-size-primary-nav: 1.6rem;
+$primary-nav-h: 5rem;
 
-    .section.list {
-      width: 117.0rem;
-      margin: 0 auto;
-    }
+#{$page-header} {
+  // Primary Navigation
+  .nav-primary {
+    background-color: $cool-grey-02;
+    margin-top: 2.0rem;
+    margin-top: 2.0rem;
 
     ul {
       display: table-row;
       text-align: center;
-      background-color: #52565c;
 
-      li {
-        display: table-cell;
-        text-align: center;
-        background: none repeat scroll 0 0 #52565c;
-        border-right: .1rem solid #fff;
-        color: #fff;
+      // background-color: $cool-grey-02;
+    }
 
-        a {
-          padding-top: 1.0rem;
-          padding-bottom: 1.0rem;
-          line-height: 2.2rem;
-          color: #fff;
-          font-weight: bold;
-          padding: 1.0rem 1.5rem;
-        }
+    li {
+      display: table-cell;
+      text-align: center;
+      border-right: .1rem solid #fff;
+      color: #fff;
+
+      &:last-of-type {
+        border: 0;
       }
+    }
 
-      p {
-        margin: 1.0rem 0;
+    a {
+      background-color: $cool-grey-02;
+      padding: 0;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      line-height: $primary-nav-h;
+      color: #fff;
+      font-weight: bold;
+      font-size: $text-size-primary-nav;
+      transition: all 150ms ease-out;
+      transition-property: background, color;
+      display: block;
+
+      @include hover-focus {
+        background-color: $lt-blue;
+        text-decoration: none;
       }
+    }
+
+    p {
+      margin: 0;
     }
   }
 
+  // User Navigation (Contact, Support, My Account, etc)
   .nav-user {
     ul {
       float: right;
-
-      li:nth-of-type(4) {
-        a span::after {
-          content: "\f095";
-          font-family: $font-font-awesome;
-          font-size: 1.4rem;
-          display: inline;
-          color: white;
-        }
-      }
+      display: table;
     }
 
     li {
       list-style-type: none;
-      display: inline-block;
-      // float: right;
-      margin: 0 .2rem;
+      display: table-cell;
+      margin: 0;
+      margin-left: .5rem;
+      border-top-color: #000;
+      vertical-align: top;
+
+      // Search Button
+      &:nth-of-type(#{$menu-item-search-pos}) {
+        a {
+          font-size: 0;
+
+          span::after {
+            font-awesome: search;
+            display: inline;
+            color: white;
+          }
+        }
+      }
+
+      // Contact button
+      &:nth-of-type(#{$menu-item-contact-pos}) {
+        a span::after {
+          font-awesome: phone;
+        }
+      }
+
+      // Localization button
+      &:last-child {
+        a span::before {
+          font-awesome: map-marker;
+        }
+      }
     }
 
     a {
+      display: inline-block;
+      padding-top: 1.5rem;
+      padding-left: .8rem;
+      padding-right: .8rem;
+      padding-bottom: .8rem;
       background-color: $md-blue;
       border-bottom-left-radius: .3rem;
       border-bottom-right-radius: .3rem;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      border: 0;
       color: #fff;
-      display: inline-block;
-      padding: 1.3rem .8rem .6rem;
-      font-size: 1.2rem;
+      font-size: $text-size-user-nav;
       text-decoration: none;
       box-shadow: none;
-      border-color: inherit;
-      border: 0;
       font-family: $font-open-sans;
+      transition: all 150ms ease-out;
+      transition-property: background, color;
+      line-height: 1;
+
+      @include hover-focus {
+        background-color: $blue;
+        color: #fff;
+
+        &:active {
+          background-color: darken($blue, 10%);
+          color: #fff;
+        }
+      }
+
+      &:active {
+        background-color: darken($blue, 10%);
+      }
+
+      &::after,
+      &::before,
+      & span::after,
+      & span::before {
+        color: white;
+        display: inline;
+        font-size: $text-size-user-nav;
+      }
     }
   }
 
@@ -93,9 +159,6 @@ $page-header: 'body > header';
 
   div.image {
     margin-bottom: 0;
-  }
-
-  .list-component li a {
   }
 }
 
@@ -118,7 +181,7 @@ header {
 
   p {
     font-size: 3.0rem;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     b {
       font-size: 3.0rem;
@@ -139,3 +202,4 @@ header {
 header .customWrapper .muiAddressLookup {
   margin: 4.0rem 0 0 5.0rem;
 }
+@import 'testing';
