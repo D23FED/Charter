@@ -1,6 +1,9 @@
 @import 'colors';
 @import 'variables-bs';
 
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
 // Breakpoints
 // 544px  = 34em
 // 768px  = 48em
@@ -18,3 +21,4 @@ $font-font-awesome: FontAwesome;
 
 // Global
 $column-padding: 1.5rem;
+$site-max-width: map-get($breakpoints, 'lg') - ( strip-unit( $column-padding * 2 ) * 1px);

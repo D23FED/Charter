@@ -10,6 +10,15 @@ $text-size-primary-nav: 1.6rem;
 $primary-nav-h: 5rem;
 
 #{$page-header} {
+  // Section of the header above the primary nav menu
+  .site-header-top {
+    max-width: map-get($breakpoints, 'lg');
+    padding-left: $column-padding;
+    padding-right: $column-padding;
+
+    @include center-block;
+  }
+
   // Primary Navigation
   .nav-primary {
     background-color: $cool-grey-02;
@@ -19,8 +28,6 @@ $primary-nav-h: 5rem;
     ul {
       display: table-row;
       text-align: center;
-
-      // background-color: $cool-grey-02;
     }
 
     li {
@@ -69,7 +76,8 @@ $primary-nav-h: 5rem;
       list-style-type: none;
       display: table-cell;
       margin: 0;
-      margin-left: .5rem;
+      padding-left: .5rem;
+      padding-right: 0;
       border-top-color: #000;
       vertical-align: top;
 
@@ -147,10 +155,12 @@ $primary-nav-h: 5rem;
     }
   }
 
-  // Logo!
-  .container .image {
-    float: left;
-    padding-top: 2.0rem;
+  // Logo
+  .site-logo {
+    .image {
+      float: left;
+      padding-top: 2.0rem;
+    }
   }
 
   .messageBox {

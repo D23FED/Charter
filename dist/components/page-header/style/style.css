@@ -1,3 +1,12 @@
+body > header .site-header-top {
+	max-width: 1200px;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 body > header .nav-primary {
 	background-color: #52565c;
 	margin-top: 2rem;
@@ -54,7 +63,8 @@ body > header .nav-user li {
 	list-style-type: none;
 	display: table-cell;
 	margin: 0;
-	margin-left: .5rem;
+	padding-left: .5rem;
+	padding-right: 0;
 	border-top-color: #000;
 	vertical-align: top;
 }
@@ -126,7 +136,7 @@ body > header .nav-user a span::before {
 	font-size: 1.2rem;
 }
 
-body > header .container .image {
+body > header .site-logo .image {
 	float: left;
 	padding-top: 2rem;
 }
@@ -178,10 +188,6 @@ header .customWrapper .muiAddressLookup {
 
 /* -------------------------- */
 /* Testing */
-.aem-AuthorLayer-Preview .injectionContainer {
-	display: none;
-}
-
 /* End Testing */
 /* -------------------------- */
 
