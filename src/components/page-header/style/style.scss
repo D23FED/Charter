@@ -57,6 +57,10 @@ $primary-nav-h: 5rem;
         background-color: $lt-blue;
         text-decoration: none;
       }
+
+      &:active {
+        background-color: darken($lt-blue, 10%);
+      }
     }
 
     p {
@@ -77,7 +81,6 @@ $primary-nav-h: 5rem;
       margin: 0;
       padding-left: .5rem;
       padding-right: 0;
-      border-top-color: #000;
       vertical-align: top;
 
       // Search Button
@@ -122,7 +125,7 @@ $primary-nav-h: 5rem;
       border: 0;
       color: #fff;
       font-size: $text-size-user-nav;
-      text-decoration: none;
+      // text-decoration: none;
       box-shadow: none;
       font-family: $font-open-sans;
       transition: all 150ms ease-out;
@@ -173,6 +176,10 @@ $primary-nav-h: 5rem;
     button {
       font-size: 1.6rem;
       font-family: $font-open-sans;
+      padding-top: .7rem;
+      padding-bottom: .7rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
     }
 
     input[type='text'] {
@@ -199,6 +206,15 @@ $primary-nav-h: 5rem;
 
     // Contains all text content
     .spectrum-customerLocation {
+      font-size: 1.6rem;
+      font-family: $font-open-sans;
+
+      .richtext {
+        ul,
+        p {
+          margin-bottom: 0;
+        }
+      }
     }
 
     // All errors
@@ -234,6 +250,15 @@ $primary-nav-h: 5rem;
       padding-right: $loc-edge-padding;
     }
 
+    input,
+    button {
+      font-size: 1.6rem;
+      font-family: $font-open-sans;
+      padding-top: .7rem;
+      padding-bottom: .7rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
 
     // Button container
     .geoloc-btn {

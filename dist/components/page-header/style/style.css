@@ -50,6 +50,10 @@ body > header .nav-primary a:hover {
 	text-decoration: none;
 }
 
+body > header .nav-primary a:active {
+	background-color: #005789;
+}
+
 body > header .nav-primary p {
 	margin: 0;
 }
@@ -65,7 +69,6 @@ body > header .nav-user li {
 	margin: 0;
 	padding-left: .5rem;
 	padding-right: 0;
-	border-top-color: #000;
 	vertical-align: top;
 }
 
@@ -101,7 +104,6 @@ body > header .nav-user a {
 	border: 0;
 	color: #fff;
 	font-size: 1.2rem;
-	text-decoration: none;
 	box-shadow: none;
 	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 	-webkit-transition: all 150ms ease-out;
@@ -152,6 +154,7 @@ body > header .searchForm input[type='text'],
 body > header .searchForm button {
 	font-size: 1.6rem;
 	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	padding: .7rem .5rem;
 }
 
 body > header .searchForm input[type='text'] {
@@ -168,8 +171,25 @@ body > header .userLocation {
 	padding-right: 1.5rem;
 }
 
+body > header .userLocation .spectrum-customerLocation {
+	font-size: 1.6rem;
+	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+body > header .userLocation .spectrum-customerLocation .richtext ul,
+body > header .userLocation .spectrum-customerLocation .richtext p {
+	margin-bottom: 0;
+}
+
 body > header .zipAction {
 	padding-left: 1.5rem;
+}
+
+body > header .zipAction input,
+body > header .zipAction button {
+	font-size: 1.6rem;
+	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	padding: .7rem .5rem;
 }
 
 body > header .zipAction .geoloc-btn {
