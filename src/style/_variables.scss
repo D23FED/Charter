@@ -20,5 +20,5 @@ $font-open-sans-lt: "Open Sans Light", $font-sans-default;
 $font-font-awesome: FontAwesome;
 
 // Global
-$column-padding: 1.5rem;
+$column-padding: $grid-gutter-width/2;
 $site-max-width: map-get($breakpoints, 'lg') - ( strip-unit( $column-padding * 2 ) * 1px);

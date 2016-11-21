@@ -139,56 +139,55 @@ body > header .nav-user a span::before {
 body > header .site-logo .image {
 	float: left;
 	padding-top: 2rem;
-}
-
-body > header .messageBox {
-	clear: both;
-}
-
-body > header div.image {
 	margin-bottom: 0;
 }
 
-#mui-wrapper {
-	height: 38.5rem;
-	max-width: 37.5rem;
-	width: 37.5rem;
-	float: right;
-	padding: 1.4rem 0 0;
-	background-color: #fff;
+body > header .searchForm {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
 }
 
-.combine-wrapper {
-	color: #000;
-	margin: 2rem 0 3rem;
-}
-
-.combine-wrapper p {
-	font-size: 3rem;
+body > header .searchForm input[type='text'],
+body > header .searchForm button {
+	font-size: 1.6rem;
 	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.combine-wrapper p b {
-	font-size: 3rem;
-	color: #03629c;
+body > header .searchForm input[type='text'] {
+	width: 50%;
 }
 
-.adaptive-image-wrapper {
+body > header .userLocation,
+body > header .zipAction {
+	width: 50%;
 	float: left;
 }
 
-.adaptive-image-wrapper .adaptiveimage {
-	float: left;
-	margin-right: 3rem;
+body > header .userLocation {
+	padding-right: 1.5rem;
 }
 
-header .customWrapper .muiAddressLookup {
-	margin: 4rem 0 0 5rem;
+body > header .zipAction {
+	padding-left: 1.5rem;
 }
 
-/* -------------------------- */
-/* Testing */
-/* End Testing */
-/* -------------------------- */
+body > header .zipAction .geoloc-btn {
+	display: inline-block;
+}
+
+body > header .image {
+	margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+	body > header .userLocation {
+		padding-left: 10%;
+	}
+
+	body > header .zipAction {
+		padding-right: 10%;
+	}
+}
 
 /*# sourceMappingURL=style.css.map */

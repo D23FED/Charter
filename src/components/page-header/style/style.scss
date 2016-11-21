@@ -23,7 +23,6 @@ $primary-nav-h: 5rem;
   .nav-primary {
     background-color: $cool-grey-02;
     margin-top: 2.0rem;
-    margin-top: 2.0rem;
 
     ul {
       display: table-row;
@@ -160,56 +159,89 @@ $primary-nav-h: 5rem;
     .image {
       float: left;
       padding-top: 2.0rem;
+      margin-bottom: 0;
     }
   }
 
-  .messageBox {
-    clear: both;
+  // Search
+  .searchForm {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    input[type='text'],
+    button {
+      font-size: 1.6rem;
+      font-family: $font-open-sans;
+    }
+
+    input[type='text'] {
+      width: 50%;
+    }
+  }
+  $loc-edge-padding: 10%;
+
+  // Localization
+  .userLocation,
+  .zipAction {
+    width: 50%;
+    float: left;
   }
 
-  div.image {
+  // Localization text
+  .userLocation {
+    padding-right: $column-padding;
+
+    @include breakpoint('sm') {
+      padding-left: $loc-edge-padding;
+    }
+
+
+    // Contains all text content
+    .spectrum-customerLocation {
+    }
+
+    // All errors
+    [class*='error-content'] {
+    }
+
+    // Out of footprint error
+    .oof-error-content {
+    }
+
+    // Geolocation error
+    .geo-error-content {
+    }
+
+    // ZIP length error (below 5 digits)
+    .length-error-content {
+    }
+
+    // Default Message
+    .oof-twc-error-content {
+    }
+
+    // Label 'Your current location is XXXXX'
+    .localized-content {
+    }
+  }
+
+  // Localization form
+  .zipAction {
+    padding-left: $column-padding;
+
+    @include breakpoint('sm') {
+      padding-right: $loc-edge-padding;
+    }
+
+
+    // Button container
+    .geoloc-btn {
+      display: inline-block;
+    }
+  }
+
+  .image {
     margin-bottom: 0;
   }
 }
-
-header {
-}
-
-// .muiAddressLookup
-#mui-wrapper {
-  height: 38.5rem;
-  max-width: 37.5rem;
-  width: 37.5rem;
-  float: right;
-  padding: 1.4rem 0 0;
-  background-color: #fff;
-}
-
-.combine-wrapper {
-  color: #000;
-  margin: 2.0rem 0 3.0rem 0;
-
-  p {
-    font-size: 3.0rem;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-    b {
-      font-size: 3.0rem;
-      color: #03629c;
-    }
-  }
-}
-
-.adaptive-image-wrapper {
-  float: left;
-
-  .adaptiveimage {
-    float: left;
-    margin-right: 3.0rem;
-  }
-}
-
-header .customWrapper .muiAddressLookup {
-  margin: 4.0rem 0 0 5.0rem;
-}
-@import 'testing';
