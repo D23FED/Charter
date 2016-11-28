@@ -1,0 +1,295 @@
+@import 'initialize';
+$page-header: 'body > header';
+
+// Menu item positions, from l to r
+$menu-item-search-pos: 1;
+$menu-item-contact-pos: 2;
+$menu-item-local-pos: 6;
+$text-size-user-nav: 1.2rem;
+$text-size-primary-nav: 1.6rem;
+$primary-nav-h: 5rem;
+
+#{$page-header} {
+  // Section of the header above the primary nav menu
+  .site-header-top {
+    max-width: map-get($breakpoints, 'lg');
+    padding-left: $column-padding;
+    padding-right: $column-padding;
+
+    @include center-block;
+  }
+
+  // Primary Navigation
+  .nav-primary {
+    background-color: $cool-grey-02;
+    margin-top: 2.0rem;
+
+    ul {
+      display: table-row;
+      text-align: center;
+    }
+
+    li {
+      display: table-cell;
+      text-align: center;
+      border-right: .1rem solid #fff;
+      color: #fff;
+
+      &:last-of-type {
+        border: 0;
+      }
+    }
+
+    a {
+      background-color: $cool-grey-02;
+      padding: 0;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      line-height: $primary-nav-h;
+      color: #fff;
+      font-weight: bold;
+      font-size: $text-size-primary-nav;
+      transition: all 150ms ease-out;
+      transition-property: background, color;
+      display: block;
+
+      @include hover-focus {
+        background-color: $lt-blue;
+        text-decoration: none;
+      }
+
+      &:active {
+        background-color: darken($lt-blue, 10%);
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // User Navigation (Contact, Support, My Account, etc)
+  .nav-user {
+    ul {
+      float: right;
+      display: table;
+    }
+
+    li {
+      list-style-type: none;
+      display: table-cell;
+      margin: 0;
+      padding-left: .5rem;
+      padding-right: 0;
+      vertical-align: top;
+
+      // Search Button
+      &:nth-of-type(#{$menu-item-search-pos}) {
+        a {
+          font-size: 0;
+
+          span::after {
+            font-awesome: search;
+            display: inline;
+            color: white;
+          }
+        }
+      }
+
+      // Contact button
+      &:nth-of-type(#{$menu-item-contact-pos}) {
+        a span::after {
+          font-awesome: phone;
+        }
+      }
+
+      // Localization button
+      &:last-child {
+        a span::before {
+          font-awesome: map-marker;
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      padding-top: 1.5rem;
+      padding-left: .8rem;
+      padding-right: .8rem;
+      padding-bottom: .8rem;
+      background-color: $md-blue;
+      border-bottom-left-radius: $btn-border-radius-small;
+      border-bottom-right-radius: $btn-border-radius-small;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border: 0;
+      color: #fff;
+      font-size: $text-size-user-nav;
+
+      // text-decoration: none;
+      box-shadow: none;
+      font-family: $font-open-sans;
+      transition: all 150ms ease-out;
+      transition-property: background, color;
+      line-height: 1;
+
+      @include hover-focus {
+        background-color: $blue;
+        color: #fff;
+
+        &:active {
+          background-color: darken($blue, 10%);
+          color: #fff;
+        }
+      }
+
+      &:active {
+        background-color: darken($blue, 10%);
+      }
+
+      &::after,
+      &::before,
+      & span::after,
+      & span::before {
+        color: white;
+        display: inline;
+        font-size: $text-size-user-nav;
+      }
+    }
+  }
+
+  // Logo
+  .site-logo {
+    .image {
+      float: left;
+      padding-top: 2.0rem;
+      margin-bottom: 0;
+    }
+  }
+
+  %header-button {
+    background-color: #fff;
+    background-color: $md-blue;
+    border: 2px solid $md-blue;
+    color: #fff;
+    border-radius: $border-radius-base;
+
+    @include hover-focus {
+      background-color: $blue;
+      color: #fff;
+
+      &:active {
+        background-color: darken($blue, 10%);
+        color: #fff;
+      }
+    }
+  }
+
+  // Search
+  .searchForm {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    input[type='text'],
+    button {
+      font-size: 1.6rem;
+      font-family: $font-open-sans;
+      padding-top: .7rem;
+      padding-bottom: .7rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
+
+    input[type='text'] {
+      width: 50%;
+    }
+
+    button {
+      @extend %header-button;
+    }
+  }
+  $loc-edge-padding: 10%;
+
+  // Localization
+  .userLocation,
+  .zipAction {
+    width: 50%;
+    float: left;
+  }
+
+  // Localization text
+  .userLocation {
+    padding-right: $column-padding;
+
+    @include breakpoint('sm') {
+      padding-left: $loc-edge-padding;
+    }
+
+
+    // Contains all text content
+    .spectrum-customerLocation {
+      font-size: 1.6rem;
+      font-family: $font-open-sans;
+
+      .richtext {
+        ul,
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // All errors
+    [class*='error-content'] {
+    }
+
+    // Out of footprint error
+    .oof-error-content {
+    }
+
+    // Geolocation error
+    .geo-error-content {
+    }
+
+    // ZIP length error (below 5 digits)
+    .length-error-content {
+    }
+
+    // Default Message
+    .oof-twc-error-content {
+    }
+
+    // Label 'Your current location is XXXXX'
+    .localized-content {
+    }
+  }
+
+  // Localization form
+  .zipAction {
+    padding-left: $column-padding;
+
+    @include breakpoint('sm') {
+      padding-right: $loc-edge-padding;
+    }
+
+    input,
+    button {
+      font-size: 1.6rem;
+      font-family: $font-open-sans;
+      padding-top: .7rem;
+      padding-bottom: .7rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
+
+    button {
+      @extend %header-button;
+    }
+
+    // Button container
+    .geoloc-btn {
+      display: inline-block;
+    }
+  }
+}
