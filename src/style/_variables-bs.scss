@@ -7,15 +7,13 @@ $bootstrap-sass-asset-helper: false !default;
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
-
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-
-$brand-primary:         $blue;
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default;   // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$brand-primary: $blue;
 // $brand-success:         #5cb85c !default;
 // $brand-info:            #5bc0de !default;
 // $brand-warning:         #f0ad4e !default;
@@ -32,9 +30,9 @@ $brand-primary:         $blue;
 // $text-color:            $gray-dark !default;
 
 //** Global textual link color.
-$link-color:            $md-blue;
+$link-color: $md-blue;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      $lt-blue;
+$link-hover-color: $lt-blue;
 //** Link hover decoration.
 // $link-hover-decoration: underline !default;
 
@@ -106,10 +104,9 @@ $link-hover-color:      $lt-blue;
 
 // $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 // $line-height-small:         1.5 !default;
-
-// $border-radius-base:        4px !default;
-// $border-radius-large:       6px !default;
-// $border-radius-small:       3px !default;
+$border-radius-base: 0.4rem !default;
+$border-radius-large: 0.6rem !default;
+$border-radius-small: 0.3rem !default;
 
 // //** Global color for active items (e.g., navs or dropdowns).
 // $component-active-color:    #fff !default;
@@ -175,10 +172,10 @@ $link-hover-color:      $lt-blue;
 
 // $btn-link-disabled-color:        $gray-light !default;
 
-// // Allows for customizing button radius independently from global border radius
-// $btn-border-radius-base:         $border-radius-base !default;
-// $btn-border-radius-large:        $border-radius-large !default;
-// $btn-border-radius-small:        $border-radius-small !default;
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base: $border-radius-base !default;
+$btn-border-radius-large: $border-radius-large !default;
+$btn-border-radius-small: $border-radius-small !default;
 
 
 // //== Forms
@@ -329,7 +326,7 @@ $link-hover-color:      $lt-blue;
 // //** Number of columns in the grid.
 // $grid-columns:              12 !default;
 // //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         3rem;
+$grid-gutter-width: 3rem;
 // // Navbar collapse
 // //** Point at which the navbar becomes uncollapsed.
 // $grid-float-breakpoint:     $screen-sm-min !default;

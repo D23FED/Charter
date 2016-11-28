@@ -97,8 +97,8 @@ body > header .nav-user a {
 	display: inline-block;
 	padding: 1.5rem .8rem .8rem;
 	background-color: #00629b;
-	border-bottom-left-radius: .3rem;
-	border-bottom-right-radius: .3rem;
+	border-bottom-left-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	border: 0;
@@ -142,6 +142,31 @@ body > header .site-logo .image {
 	float: left;
 	padding-top: 2rem;
 	margin-bottom: 0;
+}
+
+body > header .searchForm button,
+body > header .zipAction button {
+	background-color: #fff;
+	background-color: #00629b;
+	border: 2px solid #00629b;
+	color: #fff;
+	border-radius: 0.4rem;
+}
+
+body > header .searchForm button:focus,
+body > header .zipAction button:focus,
+body > header .searchForm button:hover,
+body > header .zipAction button:hover {
+	background-color: #003057;
+	color: #fff;
+}
+
+body > header .searchForm button:focus:active,
+body > header .zipAction button:focus:active,
+body > header .searchForm button:hover:active,
+body > header .zipAction button:hover:active {
+	background-color: #001424;
+	color: #fff;
 }
 
 body > header .searchForm {
@@ -194,10 +219,6 @@ body > header .zipAction button {
 
 body > header .zipAction .geoloc-btn {
 	display: inline-block;
-}
-
-body > header .image {
-	margin-bottom: 0;
 }
 
 @media (min-width: 768px) {

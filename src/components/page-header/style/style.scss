@@ -118,13 +118,14 @@ $primary-nav-h: 5rem;
       padding-right: .8rem;
       padding-bottom: .8rem;
       background-color: $md-blue;
-      border-bottom-left-radius: .3rem;
-      border-bottom-right-radius: .3rem;
+      border-bottom-left-radius: $btn-border-radius-small;
+      border-bottom-right-radius: $btn-border-radius-small;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       border: 0;
       color: #fff;
       font-size: $text-size-user-nav;
+
       // text-decoration: none;
       box-shadow: none;
       font-family: $font-open-sans;
@@ -166,6 +167,24 @@ $primary-nav-h: 5rem;
     }
   }
 
+  %header-button {
+    background-color: #fff;
+    background-color: $md-blue;
+    border: 2px solid $md-blue;
+    color: #fff;
+    border-radius: $border-radius-base;
+
+    @include hover-focus {
+      background-color: $blue;
+      color: #fff;
+
+      &:active {
+        background-color: darken($blue, 10%);
+        color: #fff;
+      }
+    }
+  }
+
   // Search
   .searchForm {
     width: 80%;
@@ -184,6 +203,10 @@ $primary-nav-h: 5rem;
 
     input[type='text'] {
       width: 50%;
+    }
+
+    button {
+      @extend %header-button;
     }
   }
   $loc-edge-padding: 10%;
@@ -260,13 +283,13 @@ $primary-nav-h: 5rem;
       padding-right: .5rem;
     }
 
+    button {
+      @extend %header-button;
+    }
+
     // Button container
     .geoloc-btn {
       display: inline-block;
     }
-  }
-
-  .image {
-    margin-bottom: 0;
   }
 }
