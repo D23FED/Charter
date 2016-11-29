@@ -7,7 +7,7 @@
 .offersColumns .aem-Grid .aem-GridColumn {
 	position: relative;
 	margin-bottom: 1.5rem;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 }
 
 .offersColumns .aem-Grid .aem-GridColumn > div {
@@ -261,7 +261,7 @@
 .offers-best-choice .offer-column-footer {
 	position: relative;
 	padding: 1.5vw 0;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	color: #fff;
 	text-align: center;
 	z-index: 20;
