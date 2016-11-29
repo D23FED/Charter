@@ -1,16 +1,23 @@
 @import 'initialize';
 $wrapper: 'carousel';
+$list: 'listComponent';
+$list-inner: 'list-component';
 $pager: 'bx-pager';
 $prev-next: 'bx-controls-direction';
 $pager-grey: #cacaca;
 $pager-blue: #3276b6;
 $img-arrows: url('http://charter.d23.us/images/arrows.png');
+$img-arrow-left: url('http://charter.d23.us/images/arrow-left.png');
+$img-arrow-right: url('http://charter.d23.us/images/arrow-right.png');
 $img-gradient: url('http://charter.d23.us/images/hero-gradient.png');
 $bg-gradient: linear-gradient(to bottom, rgba(212, 212, 212, 1) 0%, rgba(255, 255, 255, 0) 100%);
 $arrow-h: 1.5rem;
 $arrow-h: 2.7rem;
 
 .#{$wrapper} {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
   &::before {
     width: 100%;
     height: 6.4rem;
@@ -25,6 +32,22 @@ $arrow-h: 2.7rem;
   .bx-wrapper {
     margin-top: 0;
     margin-bottom: 0;
+
+    // Prev/Next
+    .#{$prev-next} {
+      a {
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    .bx-prev {
+      background-image: $img-arrow-left;
+    }
+
+    .bx-next {
+      background-image: $img-arrow-right;
+    }
   }
 
   // Slider viewport
@@ -33,6 +56,46 @@ $arrow-h: 2.7rem;
     border: none;
     box-shadow: none;
     background: transparent;
+  }
+
+  .slider {
+    margin: 0;
+    padding: 0;
+  }
+
+  // Each slide
+  .slide {
+    // First list, each LI is a 'column'
+    & > .#{$list} {
+      margin: 0;
+
+      > .#{$list-inner} > .list-inline {
+        margin: 0;
+
+        & > li {
+          padding: 0;
+        }
+
+        // First and last LIs/columns
+        & > .spectrum-first,
+        & > .spectrum-last {
+          width: 50%;
+          display: block;
+          float: left;
+        }
+
+        // First LI, first half column
+      }
+    }
+
+    img {
+      height: auto;
+    }
+
+    .richtext {
+      color: $lt-blue;
+      font-family: $font-open-sans;
+    }
   }
 
   // Prev/next buttons
@@ -53,14 +116,15 @@ $arrow-h: 2.7rem;
         background-color: rgba(black, 0.5);
       }
 
-      &::after {
-        background-image: $img-arrows;
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        display: block;
-        content: '';
-        z-index: 20;
-      }
+
+      // &::after {
+      //   background-image: $img-arrows;
+      //   background-repeat: no-repeat;
+      //   background-position: 0 0;
+      //   display: block;
+      //   content: '';
+      //   z-index: 20;
+      // }
     }
 
     .bx-prev {
