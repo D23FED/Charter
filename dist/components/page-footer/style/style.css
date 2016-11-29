@@ -109,14 +109,24 @@ body > footer .footer-states-list {
 	text-align: center;
 }
 
+body > footer .footer-states-list .list-inline.list-separated {
+	font-size: 0;
+}
+
+body > footer .footer-states-list .list-inline.list-separated li {
+	border-right: .1rem solid #fff;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+body > footer .footer-states-list .list-inline.list-separated li:last-child {
+	border: 0;
+}
+
 body > footer .footer-states-list p {
 	font-weight: 700;
 	line-height: 2rem;
 	font-size: 1.4rem;
-}
-
-body > footer .footer-states-list .listComponent .list-inline.list-separated li {
-	border-right: .2rem solid #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
