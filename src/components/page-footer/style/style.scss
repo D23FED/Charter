@@ -42,6 +42,11 @@ $state-separator-color: #0374ac;
     font-size: 1.3rem;
   }
 
+  .aem-Grid {
+    margin-left: -#{$grid-gutter-width / 2};
+    margin-right: -#{$grid-gutter-width / 2};
+  }
+
   // Social links
   .footer-header {
     text-align: center;

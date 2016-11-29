@@ -29,6 +29,11 @@ body > footer h3 {
 	font-size: 1.3rem;
 }
 
+body > footer .aem-Grid {
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+}
+
 body > footer .footer-header {
 	text-align: center;
 	font-family: Helvetica,Arial,sans-serif;
