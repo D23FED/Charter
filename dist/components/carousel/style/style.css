@@ -66,7 +66,7 @@
 
 .carousel .slide .richtext {
 	color: #0077bc;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 }
 
 .carousel .bx-controls-direction a {
@@ -101,7 +101,7 @@
 	bottom: 1rem;
 	text-align: center;
 	font-size: 1.2rem;
-	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Helvetica,Arial,sans-serif;
 	font-weight: 700;
 }
 

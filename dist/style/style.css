@@ -61,7 +61,7 @@
 .accordionTableRow h5,
 .accordionTableRow h6 {
 	margin-top: 0;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	font-weight: 300;
 }
 
@@ -131,7 +131,7 @@
 	font-size: 1.6rem;
 	padding: .7rem 4rem;
 	width: 100%;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 }
 
 .accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn {
@@ -445,7 +445,7 @@
 	display: inline-block;
 	font-size: 4rem;
 	line-height: 1;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 }
 
 .price-block > .p-row {
@@ -699,7 +699,7 @@
 .tabbedComponent .tab-row ul.nav-tabs .tab,
 .tabbedComponent .tab-row ul.nav-tabs .arrow {
 	float: left;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	list-style: none;
@@ -709,7 +709,7 @@
 
 .tabbedComponent .tab-row ul.nav-tabs .tab > a,
 .tabbedComponent .tab-row ul.nav-tabs .arrow > a {
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	position: relative;
 	border: .1rem solid transparent;
 	background-color: #fff;
@@ -1144,7 +1144,7 @@
 	color: #51565c;
 	font-size: 1.2rem;
 	font-weight: 700;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	line-height: 1.45;
 	margin: 0;
 	box-shadow: 0 5px 5px -3px rgba(97, 97, 97, 0.82);

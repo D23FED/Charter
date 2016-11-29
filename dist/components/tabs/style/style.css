@@ -30,7 +30,7 @@
 .tabbedComponent .tab-row ul.nav-tabs .tab,
 .tabbedComponent .tab-row ul.nav-tabs .arrow {
 	float: left;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	list-style: none;
@@ -40,7 +40,7 @@
 
 .tabbedComponent .tab-row ul.nav-tabs .tab > a,
 .tabbedComponent .tab-row ul.nav-tabs .arrow > a {
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	position: relative;
 	border: .1rem solid transparent;
 	background-color: #fff;
@@ -475,7 +475,7 @@
 	color: #51565c;
 	font-size: 1.2rem;
 	font-weight: 700;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	line-height: 1.45;
 	margin: 0;
 	box-shadow: 0 5px 5px -3px rgba(97, 97, 97, 0.82);

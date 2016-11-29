@@ -1,0 +1,122 @@
+body > footer {
+	color: #fff;
+	background-color: #00629b;
+}
+
+body > footer a {
+	color: #fff;
+	text-decoration: none;
+	-webkit-transition: all 150ms ease-out;
+	transition: all 150ms ease-out;
+	-webkit-transition-property: color;
+	transition-property: color;
+}
+
+body > footer a:focus,
+body > footer a:hover {
+	color: #8cc657;
+	text-decoration: none;
+}
+
+body > footer .listComponent ul li {
+	list-style-type: none;
+}
+
+body > footer h3 {
+	color: #8cc657;
+	margin-bottom: 1.1rem;
+	margin-top: 2.2rem;
+	font-size: 1.3rem;
+}
+
+body > footer .footer-header {
+	text-align: center;
+	font-family: Helvetica,Arial,sans-serif;
+	padding: 0;
+	background-color: #d4d3d3;
+	background-image: -webkit-linear-gradient(top, #d4d3d3, #f1f1f1);
+	background-image: linear-gradient(180deg, #d4d3d3 0%, #f1f1f1);
+	margin-bottom: 2.8rem;
+}
+
+body > footer .footer-header a {
+	color: #686f75;
+	text-decoration: none;
+}
+
+body > footer .footer-header a:focus,
+body > footer .footer-header a:hover {
+	color: #686f75;
+	text-decoration: underline;
+}
+
+body > footer .footer-header a.spectrum-facebook {
+	background-image: url(https://www.charter.com/browse/static/images/facebook.png);
+}
+
+body > footer .footer-header a.spectrum-twitter {
+	background-image: url(https://www.charter.com/browse/static/images/twitter.png);
+}
+
+body > footer .footer-header a.spectrum-youtube {
+	background-image: url(https://www.charter.com/browse/static/images/youtube.png);
+}
+
+body > footer .footer-header a.spectrum-facebook,
+body > footer .footer-header a.spectrum-twitter,
+body > footer .footer-header a.spectrum-youtube {
+	text-align: left;
+	padding: 2.7rem 3rem;
+	padding-left: 6.7rem;
+	background-repeat: no-repeat;
+	background-position: 3rem center;
+	display: inline-block;
+}
+
+body > footer .footer-header .listComponent ul {
+	margin-bottom: 0;
+}
+
+body > footer .footer-header .listComponent li {
+	padding-left: 0;
+	padding-right: 0;
+	background: url(https://www.charter.com/browse/static/images/footer-head-seperator.png) no-repeat left center;
+}
+
+body > footer .footer-header .listComponent li:first-child {
+	background: none;
+}
+
+body > footer .footer-header .listComponent p {
+	margin: 0;
+}
+
+body > footer .footer-body ul,
+body > footer .footer-body ol {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+body > footer .footer-body a {
+	font-size: 1.2rem;
+}
+
+body > footer .footer-states-list {
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	border-top: 0.1rem solid #0374ac;
+	padding: 2.8rem 0;
+	margin-top: 2.8rem;
+	text-align: center;
+}
+
+body > footer .footer-states-list p {
+	font-weight: 700;
+	line-height: 2rem;
+	font-size: 1.4rem;
+}
+
+body > footer .footer-states-list .listComponent .list-inline.list-separated li {
+	border-right: .2rem solid #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
