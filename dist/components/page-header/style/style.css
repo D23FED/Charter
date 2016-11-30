@@ -1,4 +1,4 @@
-body > header .site-header-top {
+.site-header .site-header-top {
 	max-width: 1200px;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
@@ -7,32 +7,30 @@ body > header .site-header-top {
 	margin-right: auto;
 }
 
-body > header .nav-primary {
+.site-header .nav-primary {
 	background-color: #52565c;
 	margin-top: 2rem;
 }
 
-body > header .nav-primary ul {
+.site-header .nav-primary ul {
 	display: table-row;
 	text-align: center;
 }
 
-body > header .nav-primary li {
+.site-header .nav-primary li {
 	display: table-cell;
 	text-align: center;
-	border-right: .1rem solid #fff;
+	border-right: 0.1rem solid #fff;
 	color: #fff;
 }
 
-body > header .nav-primary li:last-of-type {
+.site-header .nav-primary li:last-of-type {
 	border: 0;
 }
 
-body > header .nav-primary a {
+.site-header .nav-primary a {
 	background-color: #52565c;
-	padding: 0;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	padding: 0 1.5rem;
 	line-height: 5rem;
 	color: #fff;
 	font-weight: 700;
@@ -44,26 +42,26 @@ body > header .nav-primary a {
 	display: block;
 }
 
-body > header .nav-primary a:focus,
-body > header .nav-primary a:hover {
+.site-header .nav-primary a:focus,
+.site-header .nav-primary a:hover {
 	background-color: #0077bc;
 	text-decoration: none;
 }
 
-body > header .nav-primary a:active {
+.site-header .nav-primary a:active {
 	background-color: #005789;
 }
 
-body > header .nav-primary p {
+.site-header .nav-primary p {
 	margin: 0;
 }
 
-body > header .nav-user ul {
+.site-header .nav-user ul {
 	float: right;
 	display: table;
 }
 
-body > header .nav-user li {
+.site-header .nav-user li {
 	list-style-type: none;
 	display: table-cell;
 	margin: 0;
@@ -72,28 +70,28 @@ body > header .nav-user li {
 	vertical-align: top;
 }
 
-body > header .nav-user li:nth-of-type(1) a {
+.site-header .nav-user li:nth-of-type(1) a {
 	font-size: 0;
 }
 
-body > header .nav-user li:nth-of-type(1) a span::after {
+.site-header .nav-user li:nth-of-type(1) a span::after {
 	font-family: FontAwesome;
 	content: '\f002';
 	display: inline;
 	color: white;
 }
 
-body > header .nav-user li:nth-of-type(2) a span::after {
+.site-header .nav-user li:nth-of-type(2) a span::after {
 	font-family: FontAwesome;
 	content: '\f095';
 }
 
-body > header .nav-user li:last-child a span::before {
+.site-header .nav-user li:last-child a span::before {
 	font-family: FontAwesome;
 	content: '\f041';
 }
 
-body > header .nav-user a {
+.site-header .nav-user a {
 	display: inline-block;
 	padding: 1.5rem .8rem .8rem;
 	background-color: #00629b;
@@ -113,120 +111,119 @@ body > header .nav-user a {
 	line-height: 1;
 }
 
-body > header .nav-user a:focus,
-body > header .nav-user a:hover {
+.site-header .nav-user a:focus,
+.site-header .nav-user a:hover {
 	background-color: #003057;
 	color: #fff;
 }
 
-body > header .nav-user a:focus:active,
-body > header .nav-user a:hover:active {
+.site-header .nav-user a:focus:active,
+.site-header .nav-user a:hover:active {
 	background-color: #001424;
 	color: #fff;
 }
 
-body > header .nav-user a:active {
+.site-header .nav-user a:active {
 	background-color: #001424;
 }
 
-body > header .nav-user a::after,
-body > header .nav-user a::before,
-body > header .nav-user a span::after,
-body > header .nav-user a span::before {
+.site-header .nav-user a::after,
+.site-header .nav-user a::before,
+.site-header .nav-user a span::after,
+.site-header .nav-user a span::before {
 	color: white;
 	display: inline;
 	font-size: 1.2rem;
 }
 
-body > header .site-logo .image {
+.site-header .site-logo .image {
 	float: left;
 	padding-top: 2rem;
 	margin-bottom: 0;
 }
 
-body > header .searchForm button,
-body > header .zipAction button {
-	background-color: #fff;
+.site-header .searchForm button,
+.site-header .zipAction button {
 	background-color: #00629b;
-	border: 2px solid #00629b;
+	border: 0.2rem solid #00629b;
 	color: #fff;
 	border-radius: 0.4rem;
 }
 
-body > header .searchForm button:focus,
-body > header .zipAction button:focus,
-body > header .searchForm button:hover,
-body > header .zipAction button:hover {
+.site-header .searchForm button:focus,
+.site-header .zipAction button:focus,
+.site-header .searchForm button:hover,
+.site-header .zipAction button:hover {
 	background-color: #003057;
 	color: #fff;
 }
 
-body > header .searchForm button:focus:active,
-body > header .zipAction button:focus:active,
-body > header .searchForm button:hover:active,
-body > header .zipAction button:hover:active {
+.site-header .searchForm button:focus:active,
+.site-header .zipAction button:focus:active,
+.site-header .searchForm button:hover:active,
+.site-header .zipAction button:hover:active {
 	background-color: #001424;
 	color: #fff;
 }
 
-body > header .searchForm {
+.site-header .searchForm {
 	width: 80%;
 	margin: 0 auto;
 	text-align: center;
 }
 
-body > header .searchForm input[type='text'],
-body > header .searchForm button {
+.site-header .searchForm input[type='text'],
+.site-header .searchForm button {
 	font-size: 1.6rem;
 	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	padding: .7rem .5rem;
 }
 
-body > header .searchForm input[type='text'] {
+.site-header .searchForm input[type='text'] {
 	width: 50%;
 }
 
-body > header .userLocation,
-body > header .zipAction {
+.site-header .userLocation,
+.site-header .zipAction {
 	width: 50%;
 	float: left;
 }
 
-body > header .userLocation {
+.site-header .userLocation {
 	padding-right: 1.5rem;
 }
 
-body > header .userLocation .spectrum-customerLocation {
+.site-header .userLocation .spectrum-customerLocation {
 	font-size: 1.6rem;
 	font-family: Open Sans,Helvetica,Arial,sans-serif;
 }
 
-body > header .userLocation .spectrum-customerLocation .richtext ul,
-body > header .userLocation .spectrum-customerLocation .richtext p {
+.site-header .userLocation .spectrum-customerLocation .richtext ul,
+.site-header .userLocation .spectrum-customerLocation .richtext p {
 	margin-bottom: 0;
 }
 
-body > header .zipAction {
+.site-header .zipAction {
 	padding-left: 1.5rem;
 }
 
-body > header .zipAction input,
-body > header .zipAction button {
+.site-header .zipAction input,
+.site-header .zipAction button {
 	font-size: 1.6rem;
 	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	padding: .7rem .5rem;
 }
 
-body > header .zipAction .geoloc-btn {
+.site-header .zipAction .geoloc-btn {
 	display: inline-block;
 }
 
 @media (min-width: 768px) {
-	body > header .userLocation {
+	.site-header .userLocation {
 		padding-left: 10%;
 	}
 
-	body > header .zipAction {
+	.site-header .zipAction {
 		padding-right: 10%;
 	}
 }
