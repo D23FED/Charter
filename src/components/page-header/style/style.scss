@@ -1,5 +1,5 @@
 @import 'initialize';
-$page-header: 'body > header';
+$page-header: '.site-header';
 
 // Menu item positions, from l to r
 $menu-item-search-pos: 1;
@@ -22,7 +22,7 @@ $primary-nav-h: 5rem;
   // Primary Navigation
   .nav-primary {
     background-color: $cool-grey-02;
-    margin-top: 2.0rem;
+    margin-top: 2rem;
 
     ul {
       display: table-row;
@@ -32,7 +32,7 @@ $primary-nav-h: 5rem;
     li {
       display: table-cell;
       text-align: center;
-      border-right: .1rem solid #fff;
+      border-right: 0.1rem solid #fff;
       color: #fff;
 
       &:last-of-type {
@@ -42,9 +42,7 @@ $primary-nav-h: 5rem;
 
     a {
       background-color: $cool-grey-02;
-      padding: 0;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+      padding: 0 1.5rem;
       line-height: $primary-nav-h;
       color: #fff;
       font-weight: bold;
@@ -168,9 +166,8 @@ $primary-nav-h: 5rem;
   }
 
   %header-button {
-    background-color: #fff;
     background-color: $md-blue;
-    border: 2px solid $md-blue;
+    border: 0.2rem solid $md-blue;
     color: #fff;
     border-radius: $border-radius-base;
 
