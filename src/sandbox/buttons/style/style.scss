@@ -39,13 +39,14 @@
   font-size: 1.9rem;
   font-weight: bold;
   transition: all 150ms ease-out;
-  transition-property: color, border;
+  transition-property: color, border, background-color;
 
   &:hover {
     text-decoration: none;
   }
 }
 
+// Orange button
 .btn-primary {
   background: $lt-orange;
   background-image: linear-gradient(to bottom, $lt-orange, $bright-orange);
@@ -110,11 +111,37 @@
   }
 }
 
-// Who knows
-.btn-tertiary {
-  background-color: #4ab3f1;
-  background-image: -webkit-linear-gradient(top, #4ab3f1 0, #0091e6 100%);
-  background-image: linear-gradient(to bottom, #4ab3f1 0, #0091e6 100%);
-  background-repeat: repeat-x;
+// Flat blue button
+.btn-default {
+  background-color: $lt-blue;
+  background-image: none;
+  border: 0;
+  border-radius: $btn-border-radius-base;
+  // font-weight: 800;
   color: #fff;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  color: #fff;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:active:focus,
+  &:active:hover {
+    background-color: $md-blue;
+    color: #fff;
+  }
+
+  &:active {
+    color: #fff;
+
+    &:focus,
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &:focus {
+    outline-color: $yellow;
+  }
 }

@@ -30,6 +30,7 @@ function button_demo_html($class = 'btn') { ?>
 
 <div class="container">
 	<?php
+	button_demo_html('btn btn-default');
 	button_demo_html('btn btn-primary');
 	button_demo_html('btn btn-info');
 	?>
