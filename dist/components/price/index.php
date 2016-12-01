@@ -13,8 +13,9 @@ $price_tv = array(
 	"after" => "",
 	"currency" => "$",
 	"whole" => "59",
-	"super" => "99/mo",
-	"terms" => "for 12 mos.*"
+	"super" => "99",
+	"extra" => "/mo",
+	"terms" => "for 12 mos when bundled*"
 );
 
 $price_column_class = "p-col";
@@ -48,7 +49,10 @@ function price_html($price, $class ='') {
 				<div class="details <?=$price_column_class;?>">
 					<div class="inner">
 						<div class="super">
-							<?php echo $price['super']; ?>
+							<?php echo $price['super'];
+							if (isset($price['extra']) && $price['extra'] !== '') {
+								echo '<span class="extra">'.$price['extra'].'</span>';
+							}; ?>
 						</div>
 						<div class="term">
 							<?php echo $price['terms']; ?>
@@ -77,6 +81,8 @@ function price_html($price, $class ='') {
 			<h2>Single Price</h2>
 		</div>
 	</div>
+
+	<!-- Single prices -->
 	<div class="row">
 		<div class="col-xs-6">
 			<h3>Basic</h3>
@@ -87,6 +93,30 @@ function price_html($price, $class ='') {
 			<?php price_html($price_internet, 'price-style-01'); ?>
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-xs-6">
+			<h3>Style 02</h3>
+			<?php price_html($price_internet, 'price-style-02'); ?>
+		</div>
+		<div class="col-xs-6" style="text-align:right;">
+			<h3>Style 03</h3>
+			<?php price_html($price_internet, 'price-style-03'); ?>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-6">
+			<h3>Style 04</h3>
+			<?php price_html($price_internet, 'price-style-04'); ?>
+		</div>
+		<div class="col-xs-6" style="text-align:right;">
+			<h3>Style 05</h3>
+			<?php price_html($price_tv, 'price-style-05'); ?>
+		</div>
+	</div>
+
+	<!-- Double prices -->
 	<div class="row">
 		<div class="col-xs-12">
 			<h2>Double Price Block</h2>

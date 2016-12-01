@@ -1,0 +1,159 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0.5em 0;
+}
+
+.color-light {
+	display: inline-block;
+	background: #52575d;
+	padding: 0.5em;
+}
+
+ul {
+	list-style-type: none;
+}
+
+body {
+	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 1.6rem;
+	font-size: 16px;
+	line-height: 2rem;
+	line-height: 20px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+.h1 {
+	color: #333;
+}
+
+h1,
+.h1 {
+	font-size: 2.2rem;
+	line-height: 1.27;
+	font-weight: 500;
+}
+
+h1.alternate,
+.h1.alternate {
+	color: #03629c;
+	font-weight: 900;
+}
+
+h2,
+.h2 {
+	font-size: 2rem;
+	font-weight: 800;
+	color: #fff;
+}
+
+h3,
+.h3 {
+	font-size: 2.2rem;
+	font-size: 22px;
+	line-height: 2.8rem;
+	line-height: 28px;
+}
+
+h4,
+.h4 {
+	font-size: 2rem;
+	font-size: 20px;
+	line-height: 2.6rem;
+	line-height: 26px;
+}
+
+h5,
+.h5 {
+	font-size: 1.8rem;
+	font-size: 18px;
+	line-height: 2.4rem;
+	line-height: 24px;
+}
+
+h6,
+.h6 {
+	font-size: 1.6rem;
+	font-size: 16px;
+	line-height: 2.2rem;
+	line-height: 22px;
+}
+
+.color-light,
+.color-white {
+	color: #ffffff;
+}
+
+.color-medium {
+	color: #03629c;
+}
+
+.color-deep {
+	color: #003057;
+}
+
+.font-light {
+	font-weight: 200;
+}
+
+.font-medium {
+	font-weight: 400;
+}
+
+.font-bold {
+	font-weight: 700;
+}
+
+.font-x-bold {
+	font-weight: 900;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	vertical-align: baseline;
+	font-style: normal;
+	color: #004e7d;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+a:hover {
+	color: #00324e;
+}
+
+a.color-light:hover {
+	color: #8cc657;
+}
+
+@media (min-width: 992px) {
+	h1,
+	.h1 {
+		font-size: 3rem;
+		line-height: 1.2;
+	}
+
+	h2,
+	.h2 {
+		font-size: 2.6rem;
+	}
+}
+
+/*# sourceMappingURL=style.css.map */
