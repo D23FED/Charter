@@ -142,30 +142,6 @@
 	margin-bottom: 0;
 }
 
-.site-header .searchForm button,
-.site-header .zipAction button {
-	background-color: #00629b;
-	border: 0.2rem solid #00629b;
-	color: #fff;
-	border-radius: 0.4rem;
-}
-
-.site-header .searchForm button:focus,
-.site-header .zipAction button:focus,
-.site-header .searchForm button:hover,
-.site-header .zipAction button:hover {
-	background-color: #003057;
-	color: #fff;
-}
-
-.site-header .searchForm button:focus:active,
-.site-header .zipAction button:focus:active,
-.site-header .searchForm button:hover:active,
-.site-header .zipAction button:hover:active {
-	background-color: #001424;
-	color: #fff;
-}
-
 .site-header .searchForm {
 	width: 80%;
 	margin: 0 auto;
@@ -174,13 +150,18 @@
 
 .site-header .searchForm input[type='text'],
 .site-header .searchForm button {
-	font-size: 1.6rem;
 	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	padding: .7rem .5rem;
 }
 
 .site-header .searchForm input[type='text'] {
+	font-size: 1.6rem;
 	width: 50%;
+	vertical-align: bottom;
+}
+
+.site-header .searchForm button {
+	font-weight: 800;
 }
 
 .site-header .userLocation,
@@ -207,6 +188,11 @@
 	padding-left: 1.5rem;
 }
 
+.site-header .zipAction,
+.site-header .zipAction:active:focus {
+	background-color: transparent;
+}
+
 .site-header .zipAction input,
 .site-header .zipAction button {
 	font-size: 1.6rem;
@@ -214,8 +200,41 @@
 	padding: .7rem .5rem;
 }
 
+.site-header .zipAction button {
+	font-weight: 800;
+}
+
 .site-header .zipAction .geoloc-btn {
 	display: inline-block;
+}
+
+.site-header .zipAction .geoloc-btn button {
+	background-color: #0077bc;
+	background-image: none;
+	border: 0;
+	border-radius: 0.4rem;
+	font-size: 1.9rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.site-header .zipAction .geoloc-btn button:hover,
+.site-header .zipAction .geoloc-btn button:active,
+.site-header .zipAction .geoloc-btn button:focus,
+.site-header .zipAction .geoloc-btn button:active:focus,
+.site-header .zipAction .geoloc-btn button:active:hover {
+	background-color: #00629b;
+	color: #fff;
+}
+
+.site-header .zipAction .geoloc-btn button:active,
+.site-header .zipAction .geoloc-btn button:active:focus,
+.site-header .zipAction .geoloc-btn button:active:hover {
+	color: #fff;
+}
+
+.site-header .zipAction .geoloc-btn button:focus {
+	outline-color: #faa41a;
 }
 
 @media (min-width: 768px) {

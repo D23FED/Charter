@@ -165,23 +165,6 @@ $primary-nav-h: 5rem;
     }
   }
 
-  %header-button {
-    background-color: $md-blue;
-    border: 0.2rem solid $md-blue;
-    color: #fff;
-    border-radius: $border-radius-base;
-
-    @include hover-focus {
-      background-color: $blue;
-      color: #fff;
-
-      &:active {
-        background-color: darken($blue, 10%);
-        color: #fff;
-      }
-    }
-  }
-
   // Search
   .searchForm {
     width: 80%;
@@ -190,20 +173,18 @@ $primary-nav-h: 5rem;
 
     input[type='text'],
     button {
-      font-size: 1.6rem;
       font-family: $font-open-sans;
-      padding-top: .7rem;
-      padding-bottom: .7rem;
-      padding-left: .5rem;
-      padding-right: .5rem;
+      padding: .7rem .5rem;
     }
 
     input[type='text'] {
+      font-size: 1.6rem;
       width: 50%;
+      vertical-align: bottom;
     }
 
     button {
-      @extend %header-button;
+      font-weight: 800;
     }
   }
   $loc-edge-padding: 10%;
@@ -265,6 +246,13 @@ $primary-nav-h: 5rem;
   // Localization form
   .zipAction {
     padding-left: $column-padding;
+    // Temporary fix for bug in component markup
+    background-color: transparent;
+
+    &:active:focus {
+      background-color: transparent;
+    }
+    // End fixes
 
     @include breakpoint('sm') {
       padding-right: $loc-edge-padding;
@@ -281,12 +269,16 @@ $primary-nav-h: 5rem;
     }
 
     button {
-      @extend %header-button;
+      font-weight: 800;
     }
 
     // Button container
     .geoloc-btn {
       display: inline-block;
+
+      button {
+        @include btn-default();
+      }
     }
   }
 }

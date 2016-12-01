@@ -3,155 +3,186 @@
 // Usage example: @include breakpoint(sm) {}
 
 @mixin breakpoint($name, $bp: $breakpoints) {
-	$min: breakpoint-min($name, $bp);
+  $min: breakpoint-min($name, $bp);
 
-	@if $min {
-		@media (min-width: $min) {
-			@content;
-		}
-	}
-	@else {
-		@content;
-	}
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
 }
 
 // Media of at most the maximum breakpoint width, applies to the given breakpoint and narrower. (No query for the largest breakpoint)
 @mixin breakpoint-down($name, $bp: $breakpoints) {
-	$max: breakpoint-max($name, $bp);
+  $max: breakpoint-max($name, $bp);
 
-	@if $max {
-		@media (max-width: $max) {
-			@content;
-		}
-	}
-	@else {
-		@content;
-	}
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
 }
 
 // Media between the breakpoint's minimum and maximum widths, applies only to the given breakpoint. (No minimum for the smallest breakpoint, and no maximum for the largest one)
 @mixin breakpoint-only($name, $bp: $breakpoints) {
-	@include breakpoint($name, $bp) {
-		@include breakpoint-down($name, $bp) {
-			@content;
-		}
-	}
+  @include breakpoint($name, $bp){
+    @include breakpoint-down($name, $bp){
+      @content;
+    }
+  }
 }
 
 // Media that spans multiple breakpoint widths. @content applies between the min and max breakpoints
 @mixin breakpoint-between($lower, $upper, $bp: $breakpoints) {
-	@include breakpoint($lower, $bp) {
-		@include breakpoint-down($upper, $bp) {
-			@content;
-		}
-	}
+  @include breakpoint($lower, $bp){
+    @include breakpoint-down($upper, $bp){
+      @content;
+    }
+  }
 }
 
 // Positioning
 @mixin center-block($dis: block) {
-	display: $dis;
-	margin-left: auto;
-	margin-right: auto;
+  display: $dis;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @mixin horizontal-center($pos: absolute) {
-	position: $pos;
-	left: 50%;
-	transform: translateX(-50%);
+  position: $pos;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @mixin vertical-center($pos: absolute) {
-	position: $pos;
-	top: 50%;
-	transform: translateY(-50%);
+  position: $pos;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @mixin absolute-center($pos: absolute) {
-	position: $pos;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: $pos;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // Utilities
 // CSS image replacement
 @mixin text-hide {
-	font-size: 0;
-	line-height: 0;
-	color: transparent;
-	text-shadow: none;
-	background-color: transparent;
-	border: 0;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 @mixin clearfix {
-	&::after {
-		content: '';
-		display: table;
-		clear: both;
-	}
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin hover-focus {
-	&:focus,
-	&:hover {
-		@content;
-	}
+  &:focus,
+  &:hover {
+    @content;
+  }
 }
 
 // Using a pseudo element to contain an image
 @mixin pseudo-img($pos: absolute) {
-	content: '';
-	background-repeat: no-repeat;
-	display: block;
-	position: $pos;
+  content: '';
+  background-repeat: no-repeat;
+  display: block;
+  position: $pos;
 }
 
 @mixin aspect-ratio($width, $height) {
-	position: relative;
-	padding-bottom: $height / $width * 100%;
+  position: relative;
+  padding-bottom: $height / $width * 100%;
 
-	img,
-	video,
-	iframe,
-	object,
-	embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-	}
+  img,
+  video,
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 @mixin bs-column-padding($padding: $grid-gutter-width / 2) {
-	padding: {
-		left: $padding;
-		right: $padding;
-	};
+  padding: {
+    left: $padding;
+    right: $padding;
+  }
 }
 
 @mixin bs-column($pos: relative) {
-	position: $pos;
-	min-height: .1rem;
+  position: $pos;
+  min-height: .1rem;
 
-	@include bs-column-padding;
+  @include bs-column-padding;
 }
 
 @mixin bs-row($clearfix: true) {
-	margin-left: -$grid-gutter-width / 2;
-	margin-right: -$grid-gutter-width / 2;
+  margin-left: -$grid-gutter-width / 2;
+  margin-right: -$grid-gutter-width / 2;
 
-	@if $clearfix == true {
-		@include clearfix;
-	}
+  @if $clearfix == true {
+    @include clearfix;
+  }
 }
 
 @mixin bs-row-reset {
-	margin: 0;
+  margin: 0;
 
-	&::before,
-	&::after {
-		display: none;
-	}
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+@mixin btn-default() {
+  background-color: $lt-blue;
+  background-image: none;
+  border: 0;
+  border-radius: $btn-border-radius-base;
+  color: #fff;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  color: #fff;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:active:focus,
+  &:active:hover {
+    background-color: $md-blue;
+    color: #fff;
+  }
+
+  &:active {
+    color: #fff;
+
+    &:focus,
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &:focus {
+    outline-color: $yellow;
+  }
 }

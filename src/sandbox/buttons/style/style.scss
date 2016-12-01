@@ -113,35 +113,5 @@
 
 // Flat blue button
 .btn-default {
-  background-color: $lt-blue;
-  background-image: none;
-  border: 0;
-  border-radius: $btn-border-radius-base;
-  // font-weight: 800;
-  color: #fff;
-  font-size: 1.9rem;
-  text-transform: uppercase;
-  color: #fff;
-
-  &:hover,
-  &:active,
-  &:focus,
-  &:active:focus,
-  &:active:hover {
-    background-color: $md-blue;
-    color: #fff;
-  }
-
-  &:active {
-    color: #fff;
-
-    &:focus,
-    &:hover {
-      color: #fff;
-    }
-  }
-
-  &:focus {
-    outline-color: $yellow;
-  }
+  @include btn-default;
 }

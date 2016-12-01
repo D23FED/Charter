@@ -84,12 +84,12 @@ h3,
   line-height: 2.8rem;
   line-height: 28px;
 
-  @media (min-width: $screen-lg-min) {
-    font-size: 2.6rem;
-    font-size: 26px;
-    line-height: 3.2rem;
-    line-height: 32px;
-  }
+  // @media (min-width: $screen-lg-min) {
+  font-size: 2.6rem;
+  font-size: 26px;
+  line-height: 3.2rem;
+  line-height: 32px;
+  // }
 }
 
 h4,
@@ -99,12 +99,12 @@ h4,
   line-height: 2.6rem;
   line-height: 26px;
 
-  @media (min-width: $screen-lg-min) {
-    font-size: 2.4rem;
-    font-size: 24px;
-    line-height: 3.0rem;
-    line-height: 30px;
-  }
+  // @media (min-width: $screen-lg-min) {
+  font-size: 2.4rem;
+  font-size: 24px;
+  line-height: 3.0rem;
+  line-height: 30px;
+  // }
 }
 
 h5,
