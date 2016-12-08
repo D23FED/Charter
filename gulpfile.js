@@ -92,7 +92,7 @@ var
 			// In URLs, resolve unnecessary directory traversal & unquote the value
 			normalizeUrl: false,
 			// Normalizes argument order
-			orderedValues: false,
+			orderedValues: true,
 			// Reduces the two value syntax for background-repeat into the single value syntax
 			reduceBackgroundRepeat: true,
 			// Renames at-rules such as @keyframes

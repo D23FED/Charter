@@ -1,3 +1,4 @@
+/* Carousel Component */
 .carousel {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -19,22 +20,64 @@
 	margin-bottom: 0;
 }
 
-.carousel .bx-wrapper .bx-controls-direction a {
-	background-repeat: no-repeat;
-	background-position: center;
+.carousel .bx-wrapper .bx-pager.bx-default-pager a {
+	background-color: #cacaca;
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: 0 .6rem;
 }
 
-.carousel .bx-wrapper .bx-prev {
+.carousel .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.carousel .bx-wrapper .bx-pager.bx-default-pager a:active,
+.carousel .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background-color: #3276b6;
+}
+
+.carousel .bx-wrapper .bx-pager.bx-default-pager a:focus {
+	outline-color: #4d90fe;
+	outline: .5rem auto #4d90fe;
+}
+
+.carousel .bx-controls-direction a {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.3) center no-repeat;
+	position: absolute;
+	opacity: 0.5;
+	font-size: 2rem;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.6);
+	width: 3rem;
+	height: 7rem;
+	z-index: 10;
+	-webkit-transition: all 150ms ease-out;
+	transition: all 150ms ease-out;
+	-webkit-transition: background-color;
+	transition: background-color;
+	display: none;
+}
+
+.carousel .bx-controls-direction a:focus,
+.carousel .bx-controls-direction a:hover {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.carousel .bx-controls-direction .bx-prev {
+	left: 0;
 	background-image: url("http://charter.d23.us/images/arrow-left.png");
 }
 
-.carousel .bx-wrapper .bx-next {
+.carousel .bx-controls-direction .bx-next {
+	right: 0;
 	background-image: url("http://charter.d23.us/images/arrow-right.png");
 }
 
 .carousel .bx-viewport {
 	left: 0;
-	border: none;
+	border: 0;
 	box-shadow: none;
 	background: transparent;
 }
@@ -44,56 +87,14 @@
 	padding: 0;
 }
 
-.carousel .slide > .listComponent,
-.carousel .slide > .listComponent > .list-component > .list-inline {
-	margin: 0;
-}
-
-.carousel .slide > .listComponent > .list-component > .list-inline > li {
-	padding: 0;
-}
-
-.carousel .slide > .listComponent > .list-component > .list-inline > .spectrum-first,
-.carousel .slide > .listComponent > .list-component > .list-inline > .spectrum-last {
-	width: 50%;
-	display: block;
-	float: left;
-}
-
-.carousel .slide img {
-	height: auto;
+.carousel .slide .aem-GridColumn {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .carousel .slide .richtext {
 	color: #0077bc;
 	font-family: Open Sans,Helvetica,Arial,sans-serif;
-}
-
-.carousel .bx-controls-direction a {
-	background-color: rgba(0, 0, 0, 0.3);
-	position: absolute;
-	opacity: .5;
-	font-size: 2rem;
-	color: #fff;
-	text-align: center;
-	text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.6);
-	width: 3rem;
-	height: 7rem;
-	z-index: 10;
-}
-
-.carousel .bx-controls-direction a:focus,
-.carousel .bx-controls-direction a:hover {
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.carousel .bx-controls-direction .bx-prev {
-	left: 0;
-}
-
-.carousel .bx-controls-direction .bx-next {
-	right: 0;
-	background-position: -44px 19px;
 }
 
 .carousel .bx-pager {
@@ -114,6 +115,12 @@
 .carousel .bx-pager a:focus,
 .carousel .bx-pager a.active {
 	color: #3276b6;
+}
+
+@media (min-width: 768px) {
+	.carousel .bx-controls-direction a {
+		display: block;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */
