@@ -1,0 +1,12 @@
+@import 'initialize';
+
+.js-sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+%unsticky {
+  position: relative;
+  top: auto;
+}
