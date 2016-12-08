@@ -1,20 +1,19 @@
 @import 'initialize';
-$wrapper: 'carousel';
-$list: 'listComponent';
-$list-inner: 'list-component';
+$component-wrapper: 'carousel';
 $pager: 'bx-pager';
 $prev-next: 'bx-controls-direction';
+$arrow-h: 1.5rem;
+$arrow-h: 2.7rem;
 $pager-grey: #cacaca;
 $pager-blue: #3276b6;
+$bg-gradient: linear-gradient(to bottom, rgba(212, 212, 212, 1) 0%, rgba(255, 255, 255, 0) 100%);
 $img-arrows: url('http://charter.d23.us/images/arrows.png');
 $img-arrow-left: url('http://charter.d23.us/images/arrow-left.png');
 $img-arrow-right: url('http://charter.d23.us/images/arrow-right.png');
 $img-gradient: url('http://charter.d23.us/images/hero-gradient.png');
-$bg-gradient: linear-gradient(to bottom, rgba(212, 212, 212, 1) 0%, rgba(255, 255, 255, 0) 100%);
-$arrow-h: 1.5rem;
-$arrow-h: 2.7rem;
 
-.#{$wrapper} {
+/* Carousel Component */
+.#{$component-wrapper} {
   margin-top: 1rem;
   margin-bottom: 1rem;
 
@@ -30,57 +29,73 @@ $arrow-h: 2.7rem;
 
   // Slider wrapper
   .bx-wrapper {
-    margin-top: 0;
-    margin-bottom: 0;
+    // Rules already in core.css
+    // margin-top: 0;
+    // margin-bottom: 0;
 
-    // Prev/Next
-    .#{$prev-next} {
-      a {
-        @include vertical-center;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: rgba(black, 0.3);
-        position: absolute;
-        opacity: 0.5;
-        font-size: 2rem;
-        color: #fff;
-        text-align: center;
-        text-shadow: 0 0.1rem 0.2rem rgba(black, 0.6);
-        width: 3rem;
-        height: 7rem;
-        z-index: 10;
-        transition: all 150ms ease-out;
-        transition: background-color;
+    .bx-pager.bx-default-pager a {
+      background-color: $pager-grey;
+      width: 1.2rem;
+      height: 1.2rem;
+      margin: 0 .6rem;
 
-        @include hover-focus {
-          background-color: rgba(black, 0.9);
-        }
+      &:hover,
+      &:active,
+      &.active {
+        background-color: $pager-blue;
       }
 
-      .bx-prev {
-        left: 0;
+      &:focus {
+        outline-color: rgb(77, 144, 254); // #4D90FE
+        outline: .5rem auto #4d90fe;
+      }
+    }
+  }
+  // Prev/Next
+  .#{$prev-next} {
+    a {
+      @include vertical-center;
+      background-color: rgba(black, 0.3) center no-repeat;
+      position: absolute;
+      opacity: 0.5;
+      font-size: 2rem;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 0.1rem 0.2rem rgba(black, 0.6);
+      width: 3rem;
+      height: 7rem;
+      z-index: 10;
+      transition: all 150ms ease-out;
+      transition: background-color;
+      display: none;
+
+      @include breakpoint('sm') {
+        display: block;
       }
 
-      .bx-next {
-        right: 0;
+      @include hover-focus {
+        background-color: rgba(black, 0.9);
       }
     }
 
     .bx-prev {
+      left: 0;
       background-image: $img-arrow-left;
     }
 
     .bx-next {
+      right: 0;
       background-image: $img-arrow-right;
     }
   }
 
   // Slider viewport
   .bx-viewport {
-    left: 0;
-    border: 0;
-    box-shadow: none;
-    background: transparent;
+    // Rules already in core.css
+    // left: 0;
+    // border: 0;
+    // box-shadow: none;
+    // background: transparent;
   }
 
   .slider {
@@ -103,22 +118,22 @@ $arrow-h: 2.7rem;
 
   // Pager dot menu
   .#{$pager} {
-    // padding: 0;
-    // bottom: 1rem;
-    // text-align: center;
-    // font-size: 1.2rem;
-    // font-family: $font-sans-default;
-    // font-weight: 700;
+    padding: 0;
+    bottom: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: $font-sans-default;
+    font-weight: 700;
 
-    // a {
-    //   color: $pager-grey;
-    //   font-size: 0;
+    a {
+      color: $pager-grey;
+      font-size: 0;
 
-    //   &:hover,
-    //   &:focus,
-    //   &.active {
-    //     color: $pager-blue;
-    //   }
-    // }
+      &:hover,
+      &:focus,
+      &.active {
+        color: $pager-blue;
+      }
+    }
   }
 }

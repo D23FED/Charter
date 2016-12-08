@@ -1,3 +1,4 @@
+/* Carousel Component */
 .carousel {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -19,14 +20,30 @@
 	margin-bottom: 0;
 }
 
-.carousel .bx-wrapper .bx-controls-direction a {
+.carousel .bx-wrapper .bx-pager.bx-default-pager a {
+	background-color: #cacaca;
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: 0 .6rem;
+}
+
+.carousel .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.carousel .bx-wrapper .bx-pager.bx-default-pager a:active,
+.carousel .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background-color: #3276b6;
+}
+
+.carousel .bx-wrapper .bx-pager.bx-default-pager a:focus {
+	outline-color: #4d90fe;
+	outline: .5rem auto #4d90fe;
+}
+
+.carousel .bx-controls-direction a {
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.3) center no-repeat;
 	position: absolute;
 	opacity: 0.5;
 	font-size: 2rem;
@@ -40,26 +57,21 @@
 	transition: all 150ms ease-out;
 	-webkit-transition: background-color;
 	transition: background-color;
+	display: none;
 }
 
-.carousel .bx-wrapper .bx-controls-direction a:focus,
-.carousel .bx-wrapper .bx-controls-direction a:hover {
+.carousel .bx-controls-direction a:focus,
+.carousel .bx-controls-direction a:hover {
 	background-color: rgba(0, 0, 0, 0.9);
 }
 
-.carousel .bx-wrapper .bx-controls-direction .bx-prev {
+.carousel .bx-controls-direction .bx-prev {
 	left: 0;
-}
-
-.carousel .bx-wrapper .bx-controls-direction .bx-next {
-	right: 0;
-}
-
-.carousel .bx-wrapper .bx-prev {
 	background-image: url("http://charter.d23.us/images/arrow-left.png");
 }
 
-.carousel .bx-wrapper .bx-next {
+.carousel .bx-controls-direction .bx-next {
+	right: 0;
 	background-image: url("http://charter.d23.us/images/arrow-right.png");
 }
 
@@ -83,6 +95,32 @@
 .carousel .slide .richtext {
 	color: #0077bc;
 	font-family: Open Sans,Helvetica,Arial,sans-serif;
+}
+
+.carousel .bx-pager {
+	padding: 0;
+	bottom: 1rem;
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: Helvetica,Arial,sans-serif;
+	font-weight: 700;
+}
+
+.carousel .bx-pager a {
+	color: #cacaca;
+	font-size: 0;
+}
+
+.carousel .bx-pager a:hover,
+.carousel .bx-pager a:focus,
+.carousel .bx-pager a.active {
+	color: #3276b6;
+}
+
+@media (min-width: 768px) {
+	.carousel .bx-controls-direction a {
+		display: block;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */
