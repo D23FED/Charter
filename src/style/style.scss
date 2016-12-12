@@ -1,9 +1,8 @@
 /* Common styles */
-@import
-	'variables',
-	'functions',
-	'mixins',
-	'typography',
-	'base',
-	'components'
-;
+@import 'variables';
+@import 'functions';
+@import 'bootstrap/mixins';
+@import 'mixins';
+@import 'typography';
+@import 'base';
+@import 'components';

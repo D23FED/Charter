@@ -16,19 +16,16 @@
 }
 
 .btn-primary {
-	background: #feb533;
 	background-image: -webkit-linear-gradient(top, #feb533, #ffa300);
 	background-image: linear-gradient(180deg, #feb533, #ffa300);
-	border: 0.1rem solid #cc9933;
+	background-color: #ffa300;
+	border: 0.1rem solid #e69300;
 	border-radius: 0.4rem;
+	color: #fff;
 	text-shadow: .1rem .1rem .3rem #888;
 	font-weight: 700;
 	font-size: 1.9rem;
-	white-space: nowrap;
 	text-transform: uppercase;
-	color: #fff;
-	background-color: #ffa300;
-	border-color: #e69300;
 }
 
 .btn-primary:hover,

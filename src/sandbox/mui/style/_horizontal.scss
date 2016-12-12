@@ -1,0 +1,103 @@
+@import 'initialize';
+
+// Classes
+$form-inner: 'localization__inputs';
+$form-input: 'localization__input';
+$help-button: 'localization__info-pop';
+$help-button-icon: 'localization__tooltip-icon';
+$submit-button: 'localization__input-submit';
+$form-input-address: 'localization__input-address1';
+$form-input-address-wrapper: 'localization__input-container-address';
+
+// Colors
+$help-button-icon-color: #ffa300;
+$input-border-color: #b5b5b5;
+$input-bg-color: #f5f5f5;
+$form-text-color: #52565c;
+
+// Misc
+$form-font-size: 1rem;
+$form-part-border-radius: 1.4rem;
+$input-padding-base: 0.6rem;
+$help-button-width: 3rem;
+
+@mixin input-rounded-left {
+  border-bottom-left-radius: $form-part-border-radius;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: $form-part-border-radius;
+  border-top-right-radius: 0;
+}
+
+@mixin form-btn-rounded-right {
+  border-bottom-right-radius: $form-part-border-radius;
+  border-top-right-radius: $form-part-border-radius;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  padding: 0.9rem;
+}
+
+.#{$wrapper} {
+  .localization--horizontal-1 {
+    .#{$form-input},
+    .#{$submit-button} {
+      box-shadow: none;
+      padding: $input-padding-base ($input-padding-base * 2);
+    }
+
+    .#{$form-inner} {
+      position: relative;
+      display: inline-block;
+      padding-right: $help-button-width;
+    }
+
+    .#{$form-input} {
+      color: $form-text-color;
+      border-radius: 0;
+      border-color: $input-border-color;
+      background-color: $input-bg-color;
+      font-size: $form-font-size;
+    }
+
+    [class*='localization__col'] {
+      margin-left: 0;
+
+      .#{$form-input} {
+        border-left-width: 0;
+      }
+    }
+
+    .#{$form-input-address-wrapper} {
+      float: left;
+    }
+
+    .#{$form-input-address} {
+      @include input-rounded-left;
+      padding-left: 3rem;
+      background-repeat: no-repeat;
+      background-image: url('https://www.charter.com/browse/static/images/tv-product-page-angular/location-icon.png');
+      background-position: 10px 50%;
+    }
+
+    .#{$submit-button} {
+      @include btn-primary;
+
+      @include form-btn-rounded-right;
+      text-shadow: none;
+      font-weight: normal;
+      font-size: $form-font-size;
+      margin-left: 0;
+
+      // width: 100%;
+    }
+
+    .#{$help-button} {
+      position: absolute;
+      right: 0;
+
+      .#{$help-button-icon} {
+        color: $help-button-icon-color;
+        font-size: 2rem;
+      }
+    }
+  }
+}
