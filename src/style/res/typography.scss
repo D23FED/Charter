@@ -83,7 +83,7 @@ body {
 
     @include breakpoint('sm') {
       font-size: 3.6rem;
-      line-height: (36 / 42);
+      line-height: (42 / 38);
     }
 
     @include breakpoint('md') {
@@ -201,7 +201,6 @@ a {
   margin: 0;
   text-decoration: underline;
   vertical-align: baseline;
-
   // line-height: 2rem;
 
   @include hover-focus {
@@ -218,10 +217,10 @@ a {
 }
 
 .disclaimer {
+  color: $gray;
   font-size: 1.1rem;
   font-weight: 700;
-  color: $gray;
-  // line-height: 1.4rem;
+  line-height: (14 / 11);
 }
 
 li {
