@@ -1,0 +1,238 @@
+/* Typography */
+@mixin heading($tag) {
+  #{$tag},
+  .#{$tag} {
+    @content;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-open-sans;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: $dk-gray;
+}
+
+%heading {
+  margin: 5rem 0;
+}
+
+@for $i from 1 through 6 {
+  h#{$i},
+  .h#{$i} {
+    @extend %heading;
+  }
+}
+
+@include heading(h1) {
+	font-size: 2.2rem;
+	line-height: (28 / 22);
+	font-weight: 700;
+
+  @include breakpoint('sm') {
+    font-size: 2.6rem;
+    line-height: (32 / 26);
+  }
+
+  @include breakpoint('md') {
+    font-size: 3rem;
+    line-height: (36 / 30);
+  }
+
+  &.alternate {
+    font-size: 3.3rem;
+    line-height: (39 / 33);
+    font-weight: 900;
+
+    @include breakpoint('sm') {
+      font-size: 3.9rem;
+      line-height: (45 / 39);
+    }
+
+    @include breakpoint('md') {
+      font-size: 4.5rem;
+      line-height: (52 / 45);
+    }
+  }
+}
+
+@include heading(h2) {
+	font-size: 2rem;
+	line-height: (24 / 20);
+	font-weight: 400;
+
+  @include breakpoint('sm') {
+    font-size: 2.2rem;
+    line-height: (28 / 22);
+  }
+
+  @include breakpoint('md') {
+    font-size: 2.6rem;
+    line-height: (32 / 26);
+  }
+
+  &.alternate {
+    font-size: 3.4rem;
+    line-height: (40 / 34);
+    font-weight: 200;
+
+    @include breakpoint('sm') {
+      font-size: 3.6rem;
+      line-height: (36 / 42);
+    }
+
+    @include breakpoint('md') {
+      font-size: 3.9rem;
+      line-height: (48 / 39);
+    }
+  }
+}
+
+@include heading(h3) {
+	font-size: 1.8rem;
+	font-weight: 700;
+
+  @include breakpoint('sm') {
+    font-size: 2rem;
+  }
+
+  @include breakpoint('md') {
+    font-size: 2.2rem;
+  }
+
+  &.alternate {
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    @include breakpoint('sm') {
+      font-size: 2.8rem;
+    }
+
+    @include breakpoint('md') {
+      font-size: 3.3rem;
+    }
+  }
+}
+
+@include heading(h4) {
+	font-size: 1.8rem;
+	font-weight: 400;
+
+  @include breakpoint('sm') {
+    font-size: 2rem;
+  }
+
+  @include breakpoint('md') {
+    font-size: 2.2rem;
+  }
+
+  &.alternate {
+    font-size: 2.4rem;
+    font-weight: 400;
+
+    @include breakpoint('sm') {
+      font-size: 2.8rem;
+    }
+
+    @include breakpoint('md') {
+      font-size: 3.3rem;
+    }
+  }
+}
+
+@include heading(h5) {
+	font-size: 1.8rem;
+	font-weight: 700;
+
+  @include breakpoint('sm') {
+    font-size: 1.8rem;
+  }
+
+  @include breakpoint('md') {
+    font-size: 2rem;
+  }
+
+  &.alternate {
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    @include breakpoint('sm') {
+      font-size: 2.4rem;
+    }
+
+    @include breakpoint('md') {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+@include heading(h6) {
+	font-size: 1.6rem;
+	font-weight: 700;
+
+  @include breakpoint('sm') {
+    font-size: 1.8rem;
+  }
+
+  &.alternate {
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    @include breakpoint('sm') {
+      font-size: 2.4rem;
+    }
+
+    @include breakpoint('md') {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+a {
+  color: $lt-blue;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  text-decoration: underline;
+  vertical-align: baseline;
+
+  // line-height: 2rem;
+
+  @include hover-focus {
+    color: $blue;
+  }
+
+  &.color-light {
+    color: #fff;
+
+    @include hover-focus {
+      color: #efefef;
+    }
+  }
+}
+
+.disclaimer {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $gray;
+  // line-height: 1.4rem;
+}
+
+li {
+  font-size: 1.7rem;
+  line-height: (27 / 17);
+
+  @include breakpoint('sm') {
+    font-size: 2.1rem;
+    line-height: (26 / 21);
+  }
+
+  .light-color & {
+    color: #fff;
+  }
+}
