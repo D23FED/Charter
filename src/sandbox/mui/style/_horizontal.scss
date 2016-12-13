@@ -20,6 +20,7 @@ $form-font-size: 1rem;
 $form-part-border-radius: 1.4rem;
 $input-padding-base: 0.6rem;
 $help-button-width: 3rem;
+$location-icon-url: 'https://www.charter.com/browse/static/images/tv-product-page-angular/location-icon.png';
 
 @mixin input-rounded-left {
   border-bottom-left-radius: $form-part-border-radius;
@@ -33,7 +34,6 @@ $help-button-width: 3rem;
   border-top-right-radius: $form-part-border-radius;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  padding: 0.9rem;
 }
 
 .#{$wrapper} {
@@ -42,6 +42,9 @@ $help-button-width: 3rem;
     .#{$submit-button} {
       box-shadow: none;
       padding: $input-padding-base ($input-padding-base * 2);
+      line-height: 1;
+      border-width: 1;
+      margin: 0;
     }
 
     .#{$form-inner} {
@@ -56,8 +59,10 @@ $help-button-width: 3rem;
       border-color: $input-border-color;
       background-color: $input-bg-color;
       font-size: $form-font-size;
+      margin: 0;
     }
 
+    // columns in the row of form elements
     [class*='localization__col'] {
       margin-left: 0;
 
@@ -74,7 +79,7 @@ $help-button-width: 3rem;
       @include input-rounded-left;
       padding-left: 3rem;
       background-repeat: no-repeat;
-      background-image: url('https://www.charter.com/browse/static/images/tv-product-page-angular/location-icon.png');
+      background-image: url($location-icon-url);
       background-position: 10px 50%;
     }
 
@@ -82,12 +87,11 @@ $help-button-width: 3rem;
       @include btn-primary;
 
       @include form-btn-rounded-right;
+      padding: 0.9rem;
       text-shadow: none;
       font-weight: normal;
       font-size: $form-font-size;
-      margin-left: 0;
-
-      // width: 100%;
+      margin: 0;
     }
 
     .#{$help-button} {
