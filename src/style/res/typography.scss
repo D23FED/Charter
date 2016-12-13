@@ -83,7 +83,7 @@ body {
 
     @include breakpoint('sm') {
       font-size: 3.6rem;
-      line-height: (42 / 38);
+      line-height: (42 / 36);
     }
 
     @include breakpoint('md') {

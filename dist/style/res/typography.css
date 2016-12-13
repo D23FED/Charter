@@ -163,7 +163,7 @@ li {
 	h2.alternate,
 	.h2.alternate {
 		font-size: 3.6rem;
-		line-height: 1.1526;
+		line-height: 1.16667;
 	}
 
 	h3,
@@ -272,3 +272,5 @@ li {
 		font-size: 2.6rem;
 	}
 }
+
+/*# sourceMappingURL=typography.css.map */
