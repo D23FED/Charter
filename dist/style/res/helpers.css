@@ -1,0 +1,252 @@
+/* Helpers */
+.clear {
+	clear: both;
+}
+
+.block {
+	display: block;
+}
+
+.inline {
+	display: inline;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.left {
+	float: left;
+	left: 0;
+}
+
+.right {
+	float: right;
+	right: 0;
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.no-wrap {
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+.invisible,
+.fouc {
+	visibility: hidden;
+}
+
+.border-bottom {
+	border-bottom: 0.1rem solid #eeeeee;
+}
+
+.vertical-center {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.horizontal-center {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+	clear: both;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.image-left {
+	float: left;
+	margin-right: 1.5rem;
+}
+
+.image-center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.image-right {
+	float: right;
+	margin-left: 1.5rem;
+}
+
+.box {
+	margin: 1.5rem 0;
+	padding: 1.5rem;
+	background: #e7eef4;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.border-radius {
+	border-radius: 0.3rem;
+	background-clip: padding-box;
+}
+
+.bordered-solid,
+.bordered-dotted {
+	padding: 1.5rem;
+	border: 0.1rem solid #666;
+}
+
+.bordered-dotted {
+	border-style: dotted;
+}
+
+.bordered-left,
+.bordered-right {
+	border: 0 solid #e1e1e1;
+}
+
+.bordered-left {
+	border-left-width: 0.1rem;
+	padding-right: 1rem;
+}
+
+.bordered-right {
+	border-right-width: 0.1rem;
+	padding-left: 1rem;
+}
+
+.deep-blue-bg {
+	background: #003057;
+}
+
+.medium-blue-bg {
+	background: #00629b;
+}
+
+.light-blue-bg {
+	background: #0077bc;
+}
+
+.gray-bg {
+	background: #808285;
+}
+
+.dark-gray-bg {
+	background: #333;
+}
+
+.teal-bg {
+	background: #009e8c;
+}
+
+.yellow-bg {
+	background: #faa41a;
+}
+
+.pink-bg {
+	background: #96004d;
+}
+
+.purple-bg {
+	background: #500778;
+}
+
+.text-white {
+	color: #fff;
+}
+
+.text-black {
+	color: #000;
+}
+
+.text-deep-blue {
+	color: #003057;
+}
+
+.text-medium-blue {
+	color: #00629b;
+}
+
+.text-light-blue {
+	color: #0077bc;
+}
+
+.text-gray {
+	color: #808285;
+}
+
+.text-dark-gray {
+	color: #333;
+}
+
+.text-teal {
+	color: #009e8c;
+}
+
+.text-yellow {
+	color: #faa41a;
+}
+
+.text-pink {
+	color: #96004d;
+}
+
+.text-purple {
+	color: #500778;
+}
+
+.font-light {
+	font-weight: 300;
+}
+
+.font-medium {
+	font-weight: 400;
+}
+
+.font-bold {
+	font-weight: 700;
+}
+
+.font-extra-bold {
+	font-weight: 900;
+}
+
+/*# sourceMappingURL=helpers.css.map */
