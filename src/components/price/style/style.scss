@@ -12,10 +12,13 @@ $text-gradient-end-color: $md-blue;
   color: $text-gradient-fallback-color;
   background-image: none;
 
-  @supports ( (-webkit-background-clip: text) or (background-clip: text) ) {
+  // @supports should be avoided but so should -webkit-background-clip
+  @supports (
+  	( (-webkit-background-clip: text) or (background-clip: text) ) and
+  	( (-webkit-text-fill-color: transparent) or (text-fill-color: transparent) )
+	) {
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
-    color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     background-repeat: repeat-x;
