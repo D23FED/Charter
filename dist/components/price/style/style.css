@@ -293,14 +293,13 @@
 		background-image: none;
 	}
 
-	@supports (-webkit-background-clip:text) or (background-clip:text) {
+	@supports ((-webkit-background-clip:text) or (background-clip:text)) and ((-webkit-text-fill-color:transparent) or (text-fill-color:transparent)) {
 		.price-style-01 .currency,
 		.price-style-01 .whole,
 		.price-style-01 .super,
 		.price-style-01 .separator {
 			-webkit-text-fill-color: transparent;
 			text-fill-color: transparent;
-			color: transparent;
 			-webkit-background-clip: text;
 			background-clip: text;
 			background-repeat: repeat-x;
@@ -339,14 +338,13 @@
 		background-image: none;
 	}
 
-	@supports (-webkit-background-clip:text) or (background-clip:text) {
+	@supports ((-webkit-background-clip:text) or (background-clip:text)) and ((-webkit-text-fill-color:transparent) or (text-fill-color:transparent)) {
 		.price-style-02 .currency,
 		.price-style-02 .whole,
 		.price-style-02 .super,
 		.price-style-02 .separator {
 			-webkit-text-fill-color: transparent;
 			text-fill-color: transparent;
-			color: transparent;
 			-webkit-background-clip: text;
 			background-clip: text;
 			background-repeat: repeat-x;
