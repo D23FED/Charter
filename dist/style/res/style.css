@@ -1,3 +1,89 @@
 /* Residential style */
 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800");
+/*
+@font-face {
+	font-family: open_sansregular;
+	font-family: "Open Sans";
+	src: url(/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot);
+	src: url(/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?iefix) format("eot"), url(/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff) format("woff"), url(/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf) format("truetype"), url(/fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#webfont) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: open_sansitalic;
+	font-family: "Open Sans";
+	src: url(/fonts/opensans_italic_macroman/OpenSans-Italic-webfont.eot);
+	src: url(/fonts/opensans_italic_macroman/OpenSans-Italic-webfont.eot?#iefix) format("embedded-opentype"), url(/fonts/opensans_italic_macroman/OpenSans-Italic-webfont.woff) format("woff"), url(/fonts/opensans_italic_macroman/OpenSans-Italic-webfont.ttf) format("truetype"), url(/fonts/opensans_italic_macroman/OpenSans-Italic-webfont.svg#open_sansitalic) format("svg");
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: open_sanslight;
+	font-family: "Open Sans";
+	src: url(/fonts/opensans_light_macroman/OpenSans-Light-webfont.eot);
+	src: url(/fonts/opensans_light_macroman/OpenSans-Light-webfont.eot?iefix) format("eot"), url(/fonts/opensans_light_macroman/OpenSans-Light-webfont.woff) format("woff"), url(/fonts/opensans_light_macroman/OpenSans-Light-webfont.ttf) format("truetype"), url(/fonts/opensans_light_macroman/OpenSans-Light-webfont.svg#webfont) format("svg");
+	font-weight: 100;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: open_sanssemibold;
+	font-family: "Open Sans";
+	src: url(/fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.eot);
+	src: url(/fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.eot?iefix) format("eot"), url(/fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.woff) format("woff"), url(/fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.ttf) format("truetype"), url(/fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.svg#webfont) format("svg");
+	font-weight: 600;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: open_sansbold;
+	font-family: "Open Sans";
+	src: url(/fonts/opensans_bold_macroman/OpenSans-Bold-webfont.eot);
+	src: url(/fonts/opensans_bold_macroman/OpenSans-Bold-webfont.eot?iefix) format("eot"), url(/fonts/opensans_bold_macroman/OpenSans-Bold-webfont.woff) format("woff"), url(/fonts/opensans_bold_macroman/OpenSans-Bold-webfont.ttf) format("truetype"), url(/fonts/opensans_bold_macroman/OpenSans-Bold-webfont.svg#webfont) format("svg");
+	font-weight: 700;
+
+	font-style: normal;
+
+}
+@font-face {
+	font-family: open_sans_extrabold;
+	font-family: "Open Sans";
+	src: url(/fonts/opensans_extrabold_macroman/OpenSans-ExtraBold-webfont.eot);
+	src: url(/fonts/opensans_extrabold_macroman/OpenSans-ExtraBold-webfont.eot?iefix) format("eot"), url(/fonts/opensans_extrabold_macroman/OpenSans-ExtraBold-webfont.woff) format("woff"), url(/fonts/opensans_extrabold_macroman/OpenSans-ExtraBold-webfont.ttf) format("truetype"), url(/fonts/opensans_extrabold_macroman/OpenSans-ExtraBold-webfont.svg#webfont) format("svg");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: open_sans_condensedlight;
+	font-family: "Open Sans Condensed";
+	src: url(/fonts/opensanscondensed_light_macroman/OpenSans-CondLight-webfont.eot);
+	src: url(/fonts/opensanscondensed_light_macroman/OpenSans-CondLight-webfont.eot?#iefix) format("embedded-opentype"), url(/fonts/opensanscondensed_light_macroman/OpenSans-CondLight-webfont.woff) format("woff"), url(/fonts/opensanscondensed_light_macroman/OpenSans-CondLight-webfont.ttf) format("truetype"), url(/fonts/opensanscondensed_light_macroman/OpenSans-CondLight-webfont.svg#open_sans_condensedbold) format("svg");
+	font-weight: 100;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: open_sans_condensedbold;
+	font-family: "Open Sans Condensed";
+	src: url(/fonts/opensanscondensed_bold_macroman/OpenSans-CondBold-webfont.eot);
+	src: url(/fonts/opensanscondensed_bold_macroman/OpenSans-CondBold-webfont.eot?#iefix) format("embedded-opentype"), url(/fonts/opensanscondensed_bold_macroman/OpenSans-CondBold-webfont.woff) format("woff"), url(/fonts/opensanscondensed_bold_macroman/OpenSans-CondBold-webfont.ttf) format("truetype"), url(/fonts/opensanscondensed_bold_macroman/OpenSans-CondBold-webfont.svg#open_sans_condensedbold) format("svg");
+	font-weight: 700;
+	font-style: normal;
+}
+*/
+
+@font-face {
+	font-family: charter-icons;
+	font-family: Charter Icons;
+	src: url(/fonts/charter-icons/charter-icons.eot);
+	src: url(/fonts/charter-icons/charter-icons.eot?iefix) format("eot"), url(/fonts/charter-icons/charter-icons.woff) format("woff"), url(/fonts/charter-icons/charter-icons.ttf) format("truetype"), url(/fonts/charter-icons/charter-icons.svg#webfont) format("svg");
+}
+
+@font-face {
+	font-family: Glyphicons Halflings;
+	src: url(/fonts/bootstrap-icons/glyphicons-halflings-regular.eot);
+	src: url(/fonts/bootstrap-icons/glyphicons-halflings-regular.eot?iefix) format("eot"), url(/fonts/bootstrap-icons/glyphicons-halflings-regular.woff) format("woff"), url(/fonts/bootstrap-icons/glyphicons-halflings-regular.ttf) format("truetype"), url(/fonts/bootstrap-icons/glyphicons-halflings-regular.svg#webfont) format("svg");
+}
+
 /*# sourceMappingURL=style.css.map */
