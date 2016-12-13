@@ -1465,11 +1465,23 @@
 	.price-style-01 .super,
 	.price-style-01 .separator {
 		color: #0077bc;
-		background-image: -webkit-linear-gradient(top, #4ab3f1, #00629b);
-		background-image: linear-gradient(180deg, #4ab3f1 0, #00629b);
-		background-repeat: repeat-x;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		background-image: none;
+	}
+
+	@supports (-webkit-background-clip:text) or (background-clip:text) {
+		.price-style-01 .currency,
+		.price-style-01 .whole,
+		.price-style-01 .super,
+		.price-style-01 .separator {
+			-webkit-text-fill-color: transparent;
+			text-fill-color: transparent;
+			color: transparent;
+			-webkit-background-clip: text;
+			background-clip: text;
+			background-repeat: repeat-x;
+			background-image: -webkit-linear-gradient(top, #4ab3f1, #00629b);
+			background-image: linear-gradient(180deg, #4ab3f1 0, #00629b);
+		}
 	}
 
 	.price-style-01 .details {
@@ -1499,11 +1511,23 @@
 	.price-style-02 .super,
 	.price-style-02 .separator {
 		color: #0077bc;
-		background-image: -webkit-linear-gradient(top, #4ab3f1, #00629b);
-		background-image: linear-gradient(180deg, #4ab3f1 0, #00629b);
-		background-repeat: repeat-x;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		background-image: none;
+	}
+
+	@supports (-webkit-background-clip:text) or (background-clip:text) {
+		.price-style-02 .currency,
+		.price-style-02 .whole,
+		.price-style-02 .super,
+		.price-style-02 .separator {
+			-webkit-text-fill-color: transparent;
+			text-fill-color: transparent;
+			color: transparent;
+			-webkit-background-clip: text;
+			background-clip: text;
+			background-repeat: repeat-x;
+			background-image: -webkit-linear-gradient(top, #4ab3f1, #00629b);
+			background-image: linear-gradient(180deg, #4ab3f1 0, #00629b);
+		}
 	}
 
 	.price-style-02 .super {
