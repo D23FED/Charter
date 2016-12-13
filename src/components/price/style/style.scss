@@ -10,10 +10,17 @@ $text-gradient-end-color: $md-blue;
 
 @mixin gradient-text-blue {
   color: $text-gradient-fallback-color;
-  background-image: linear-gradient(to bottom, $text-gradient-start-color 0, $text-gradient-end-color 100%);
-  background-repeat: repeat-x;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: none;
+
+  @supports ( (-webkit-background-clip: text) or (background-clip: text) ) {
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(to bottom, $text-gradient-start-color 0, $text-gradient-end-color 100%);
+  }
 }
 
 .#{$component-wrapper} {

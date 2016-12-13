@@ -46,7 +46,10 @@ var
 	// PostCSS plugins
 	postCssProcessors = [
 		$.autoprefixer({
-			browsers: 'ie > 8, Chrome > 34,  Firefox > 34,  Safari > 5, ChromeAndroid > 17, iOS > 7, ExplorerMobile > 10'
+			// Supported browsers
+			browsers: 'ie > 8, Chrome > 34,  Firefox > 34,  Safari > 5, ChromeAndroid > 17, iOS > 7, ExplorerMobile > 10',
+			// Ignore @supports
+			supports: false
 		}),
 		$.cssnano({
 			//Removes unnecessary prefixes based on the browsers option.
