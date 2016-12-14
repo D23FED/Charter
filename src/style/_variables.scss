@@ -21,4 +21,5 @@ $font-font-awesome: FontAwesome;
 
 // Global
 $column-padding: $grid-gutter-width/2;
-$site-max-width: map-get($breakpoints, 'lg') - (strip-unit( $column-padding * 2 ) * 1px);
+$site-max-width: map-get($breakpoints, 'lg') - (strip-unit($column-padding * 2) * 1px);
+$container-class: 'container';
