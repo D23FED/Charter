@@ -15,7 +15,6 @@ body {
   font-family: $font-open-sans;
   font-size: 1.6rem;
   line-height: 1.5;
-  color: $dk-gray;
 }
 
 %heading {
@@ -211,7 +210,7 @@ a {
     color: #fff;
 
     @include hover-focus {
-      color: #efefef;
+      color: $link-hover-color-light;
     }
   }
 }
@@ -219,7 +218,6 @@ a {
 .disclaimer {
   color: $gray;
   font-size: 1.1rem;
-  font-weight: 700;
   line-height: (14 / 11);
 }
 

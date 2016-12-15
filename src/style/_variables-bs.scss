@@ -33,8 +33,9 @@ $brand-primary: $blue;
 $link-color: $md-blue;
 //** Link hover color set via `darken()` function.
 $link-hover-color: $lt-blue;
+$link-hover-color-light: $gray-ef;
 //** Link hover decoration.
-// $link-hover-decoration: underline !default;
+$link-hover-decoration: underline !default;
 
 
 //== Typography
