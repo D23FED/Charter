@@ -441,6 +441,10 @@
 }
 
 /* Pricing Component */
+main {
+	padding-bottom: 5rem;
+}
+
 .price-block {
 	display: inline-block;
 	font-size: 4rem;

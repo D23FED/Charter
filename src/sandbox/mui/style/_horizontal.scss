@@ -2,11 +2,26 @@
 
 // Classes
 $form-inner: 'localization__inputs';
+
+// Wrapping div, direct child of container
 $form-input: 'localization__input';
-$help-button: 'localization__info-pop';
+
+// all <input>s
+$form-input-container: 'localization__inputs';
+
+// all <input>s container
+$help-button-wrapper: 'localization__info-pop';
 $help-button-icon: 'localization__tooltip-icon';
 $submit-button: 'localization__input-submit';
+$col-apt-unit: 'localization__col1';
+
+// Apt/Unit column
+$col-zip: 'localization__col2';
+
+// ZIP column
 $form-input-address: 'localization__input-address1';
+
+// address <input>
 $form-input-address-wrapper: 'localization__input-container-address';
 
 // Colors
@@ -16,11 +31,17 @@ $input-bg-color: #f5f5f5;
 $form-text-color: #52565c;
 
 // Misc
-$form-font-size: 1rem;
+$form-font-size: 1.4rem;
 $form-part-border-radius: 1.4rem;
-$input-padding-base: 0.6rem;
+
+// rounded border on form elements
+$input-padding-base: 1.1rem;
 $help-button-width: 3rem;
 $location-icon-url: 'https://www.charter.com/browse/static/images/tv-product-page-angular/location-icon.png';
+$col-small-w: 11rem;
+$popover-width: 40rem;
+
+// width of apt/unit and zip columns
 
 @mixin input-rounded-left {
   border-bottom-left-radius: $form-part-border-radius;
@@ -37,7 +58,14 @@ $location-icon-url: 'https://www.charter.com/browse/static/images/tv-product-pag
 }
 
 .#{$wrapper} {
+  // <form> inner for horizontal layout 1
   .localization--horizontal-1 {
+    .#{$form-input-container} {
+      display: table;
+      padding: 0;
+      position: relative;
+    }
+
     .#{$form-input},
     .#{$submit-button} {
       box-shadow: none;
@@ -45,6 +73,10 @@ $location-icon-url: 'https://www.charter.com/browse/static/images/tv-product-pag
       line-height: 1;
       border-width: 1;
       margin: 0;
+      font-size: $form-font-size;
+      height: auto;
+      font-weight: normal;
+      font-family: $font-open-sans;
     }
 
     .#{$form-inner} {
@@ -60,11 +92,13 @@ $location-icon-url: 'https://www.charter.com/browse/static/images/tv-product-pag
       background-color: $input-bg-color;
       font-size: $form-font-size;
       margin: 0;
+      font-size: $form-font-size;
     }
 
     // columns in the row of form elements
     [class*='localization__col'] {
       margin-left: 0;
+      max-width: $col-small-w;
 
       .#{$form-input} {
         border-left-width: 0;
@@ -83,25 +117,34 @@ $location-icon-url: 'https://www.charter.com/browse/static/images/tv-product-pag
       background-position: 10px 50%;
     }
 
+    // Increase line-height here vs <input>s to make them equal height
     .#{$submit-button} {
       @include btn-primary;
 
       @include form-btn-rounded-right;
-      padding: 0.9rem;
+      padding: $input-padding-base 1.8rem;
       text-shadow: none;
-      font-weight: normal;
+      top: auto;
       font-size: $form-font-size;
-      margin: 0;
+      line-height: 1.4;
     }
 
-    .#{$help-button} {
-      position: absolute;
+    .#{$help-button-wrapper} {
+      @include vertical-center;
       right: 0;
+      width: auto;
+      margin: 0;
+      line-height: .9;
 
       .#{$help-button-icon} {
         color: $help-button-icon-color;
         font-size: 2rem;
       }
+    }
+
+    .popover {
+      max-width: none;
+      width: $popover-width;
     }
   }
 }
