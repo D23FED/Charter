@@ -48,19 +48,17 @@
 
 // Orange button
 .btn-primary {
-  background: $lt-orange;
   background-image: linear-gradient(to bottom, $lt-orange, $bright-orange);
-  border: solid $orange-brown 0.1rem;
+  background-color: $bright-orange;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: $tangerine;
   border-radius: $btn-border-radius-base;
+  color: #fff;
   text-shadow: .1rem .1rem .3rem #888;
   font-weight: bold;
-  color: #fff;
   font-size: 1.9rem;
-  white-space: nowrap;
   text-transform: uppercase;
-  color: #fff;
-  background-color: $bright-orange;
-  border-color: $tangerine;
 
   &:hover,
   &:focus {
