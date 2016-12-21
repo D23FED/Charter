@@ -2,72 +2,71 @@
 
 // Pricing Style: 'Best Offer' Columns
 // https://www.charter.com/browse/content/best-offers
-
 $p-font-size-base-04: 7.8rem;
 $p-font-size-base-04-sm: 24vw;
 
 .price-style-04 {
-	&.price-block {
-		font-size: $p-font-size-base-04;
+  &.price-block {
+    font-size: $p-font-size-base-04;
 
-		@include breakpoint($bc-switchpoint) {
-			font-size: $p-font-size-base-04-sm;
-		}
-	}
+    @include breakpoint($bc-switchpoint) {
+      font-size: $p-font-size-base-04-sm;
+    }
+  }
 
-	.before,
-	.after {
-		font-size: percentage(1.2 / strip-unit($p-font-size-base-04));
-		font-weight: bold;
-	}
+  .before,
+  .after {
+    font-size: percentage(1.2 / strip-unit($p-font-size-base-04));
+    font-weight: bold;
+  }
 
-	.before {
-		text-align: left;
-	}
+  .before {
+    text-align: left;
+  }
 
-	.currency,
-	.whole,
-	.super,
-	.separator {
-		color: $md-blue;
-		font-weight: 800;
+  .currency,
+  .whole,
+  .super,
+  .separator {
+    color: $md-blue;
+    font-weight: 800;
 
-		@include breakpoint('md') {
-			@include gradient-text-blue;
-		}
-	}
+    @include breakpoint('md'){
+      @include gradient-text-blue;
+    }
+  }
 
-	.currency {
-		font-size: percentage(3.1 / strip-unit($p-font-size-base-04));
-	}
+  .currency {
+    font-size: percentage(3.1 / strip-unit($p-font-size-base-04));
+  }
 
-	.whole {
-		line-height: .8;
-		font-weight: bold;
-	}
+  .whole {
+    line-height: 0.8;
+    font-weight: bold;
+  }
 
-	.super {
-		font-size: percentage(3 / strip-unit($p-font-size-base-04));
+  .super {
+    font-size: percentage(3 / strip-unit($p-font-size-base-04));
 
-		.extra {
-			font-size: percentage(1.6 / 3);
-		}
-	}
+    .extra {
+      font-size: percentage(1.6 / 3);
+    }
+  }
 
-	.details {
-		text-align: left;
-		font-size: 100%;
-		vertical-align: bottom;
-		padding-bottom: 1rem;
-	}
+  .details {
+    text-align: left;
+    font-size: 100%;
+    vertical-align: bottom;
+    padding-bottom: 1rem;
+  }
 
-	.term {
-		color: #000;
-		font-size: percentage(1 / strip-unit($p-font-size-base-04));
-	}
+  .term {
+    // color: #000;
+    font-size: percentage(1 / strip-unit($p-font-size-base-04));
+  }
 
-	// Separator between two prices in double price block
-	.separator {
-		font-size: 0.9 * $p-font-size-base-04;
-	}
+  // Separator between two prices in double price block
+  .separator {
+    font-size: 0.9 * $p-font-size-base-04;
+  }
 }

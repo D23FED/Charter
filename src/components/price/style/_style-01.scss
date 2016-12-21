@@ -4,9 +4,10 @@
 .price-style-01 {
   .before,
   .after {
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
     font-size: percentage(1.4 / strip-unit($p-font-size-base));
-    color: #666;
+
+    // color: #666;
   }
 
   .currency,
@@ -23,7 +24,7 @@
 
   .currency,
   .super {
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
     font-size: percentage(1.8 / strip-unit($p-font-size-base));
   }
 
@@ -37,12 +38,14 @@
   }
 
   .term {
-    color: #333;
-    font-size: 1.2rem;
+    // color: $dk-gray;
+
+    // font-size: 1.2rem;
     font-size: percentage(1.2 / strip-unit($p-font-size-base));
   }
+
   // Separator between two prices in double price block
   .separator {
-    font-size: .9 * $p-font-size-base;
+    font-size: 0.9 * $p-font-size-base;
   }
 }

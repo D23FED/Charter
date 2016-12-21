@@ -2,73 +2,72 @@
 
 // Pricing Style: 'Best Choice' Offer Columns
 // Ex: https://www.charter.com/browse/content/best-choice-hp/
-
 $p-font-size-base-03: 9.6rem;
 $p-font-size-base-03-sm: 24vw;
 // 'Best Choice' Offer Columns breakpoint
-
 $bc-switchpoint: 'md';
 
 .price-style-03 {
-	&.price-block {
-		font-size: $p-font-size-base-03-sm;
+  color: $md-blue;
 
-		@include breakpoint('sm') {
-			font-size: 18rem;
-		}
+  &.price-block {
+    font-size: $p-font-size-base-03-sm;
 
-		@include breakpoint($bc-switchpoint) {
-			font-size: $p-font-size-base-03;
-		}
-	}
+    @include breakpoint('sm') {
+      font-size: 18rem;
+    }
 
-	.before,
-	.after {
-		font-size: percentage(1.6 / strip-unit($p-font-size-base-03));
-		font-weight: bold;
-	}
+    @include breakpoint($bc-switchpoint) {
+      font-size: $p-font-size-base-03;
+    }
+  }
 
-	.before {
-		text-align: left;
-	}
+  .before,
+  .after {
+    font-size: percentage(1.6 / strip-unit($p-font-size-base-03));
+    font-weight: bold;
+  }
 
-	.currency,
-	.whole,
-	.super,
-	.separator {
-		color: $md-blue;
-		font-weight: 800;
-	}
+  .before {
+    text-align: left;
+  }
 
-	.currency {
-		font-size: percentage(3.8 / strip-unit($p-font-size-base-03));
-	}
+  .currency,
+  .whole,
+  .super,
+  .separator {
+    font-weight: 800;
+  }
 
-	.whole {
-		line-height: .8;
-		font-weight: bold;
-	}
+  .currency {
+    font-size: percentage(3.8 / strip-unit($p-font-size-base-03));
+  }
 
-	.super {
-		font-size: percentage(2.7 / strip-unit($p-font-size-base-03));
+  .whole {
+    line-height: 0.8;
+    font-weight: bold;
+  }
 
-		.extra {
-			font-size: percentage(2.7 / 3);
-		}
-	}
+  .super {
+    font-size: percentage(2.7 / strip-unit($p-font-size-base-03));
 
-	.details {
-		text-align: left;
-		font-size: 100%;
-	}
+    .extra {
+      font-size: percentage(2.7 / 3);
+    }
+  }
 
-	.term {
-		color: #444;
-		font-size: percentage(1.4 / strip-unit($p-font-size-base-03));
-	}
+  .details {
+    text-align: left;
+    font-size: 100%;
+  }
 
-	// Separator between two prices in double price block
-	.separator {
-		font-size: 0.9 * $p-font-size-base-03;
-	}
+  .term {
+    // color: #444;
+    font-size: percentage(1.4 / strip-unit($p-font-size-base-03));
+  }
+
+  // Separator between two prices in double price block
+  .separator {
+    font-size: 0.9 * $p-font-size-base-03;
+  }
 }
