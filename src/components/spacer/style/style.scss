@@ -1,0 +1,12 @@
+@import 'initialize';
+$component-wrapper: 'spacer';
+// Size of the largest spacer
+$spacer-size-max: 5;
+
+@for $i from 1 through $spacer-size-max {
+	$spacing: $i * 1rem;
+
+  .#{$component-wrapper}.bottom-spacer-#{$i} {
+    padding-bottom: $spacing;
+  }
+}
