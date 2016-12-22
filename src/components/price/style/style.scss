@@ -25,10 +25,7 @@ $text-gradient-end-color: $md-blue;
     background-image: linear-gradient(to bottom, $text-gradient-start-color 0, $text-gradient-end-color 100%);
   }
 }
-
-.#{$component-wrapper} {
-  @import 'base';
-}
+@import 'base';
 @import 'double';
 @import 'style-01';
 @import 'style-02';

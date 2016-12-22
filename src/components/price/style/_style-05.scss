@@ -6,10 +6,11 @@ $p-font-size-base-05: 17rem;
 $p-font-size-base-05-sm: 11rem;
 
 .price-style-05 {
+  color: $lt-blue;
+
   &.price-block {
     font-size: $p-font-size-base-05-sm;
     font-weight: 800;
-    color: $lt-blue;
 
     @include breakpoint('md') {
       font-size: $p-font-size-base-05;
@@ -39,7 +40,7 @@ $p-font-size-base-05-sm: 11rem;
 
   .currency,
   .super {
-    font-size: 3rem;
+    font-size: percentage(3 / strip-unit($p-font-size-base-05-sm));
     line-height: 1.2;
 
     @include breakpoint('md') {
@@ -69,7 +70,6 @@ $p-font-size-base-05-sm: 11rem;
   }
 
   .term {
-    color: $dk-gray;
     font-weight: normal;
     font-size: percentage(1.5 / strip-unit($p-font-size-base-05-sm));
 

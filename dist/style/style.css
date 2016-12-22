@@ -464,7 +464,7 @@
 }
 
 .price-block .price > .p-col {
-	padding: 0 .1rem;
+	padding: 0 0.1rem;
 }
 
 .price-block .price > .p-col:first-child {
@@ -526,9 +526,7 @@
 
 .price-style-01 .before,
 .price-style-01 .after {
-	font-size: 1.4rem;
 	font-size: 35%;
-	color: #666;
 }
 
 .price-style-01 .currency,
@@ -541,7 +539,6 @@
 
 .price-style-01 .currency,
 .price-style-01 .super {
-	font-size: 1.8rem;
 	font-size: 45%;
 }
 
@@ -551,13 +548,15 @@
 }
 
 .price-style-01 .term {
-	color: #333;
-	font-size: 1.2rem;
 	font-size: 30%;
 }
 
 .price-style-01 .separator {
 	font-size: 3.6rem;
+}
+
+.price-style-02 {
+	color: #00629b;
 }
 
 .price-style-02.price-block {
@@ -571,20 +570,19 @@
 }
 
 .price-style-02 .before {
-	padding-bottom: .2rem;
+	padding-bottom: 0.2rem;
 	float: left;
 }
 
 .price-style-02 .price {
 	float: left;
-	padding-left: .5rem;
+	padding-left: 0.5rem;
 }
 
 .price-style-02 .currency,
 .price-style-02 .whole,
 .price-style-02 .super,
 .price-style-02 .separator {
-	color: #00629b;
 	font-weight: 800;
 }
 
@@ -606,12 +604,15 @@
 }
 
 .price-style-02 .term {
-	color: #000;
 	font-size: 29.26829%;
 }
 
 .price-style-02 .separator {
 	font-size: 5.76rem;
+}
+
+.price-style-03 {
+	color: #00629b;
 }
 
 .price-style-03.price-block {
@@ -632,7 +633,6 @@
 .price-style-03 .whole,
 .price-style-03 .super,
 .price-style-03 .separator {
-	color: #00629b;
 	font-weight: 800;
 }
 
@@ -641,7 +641,7 @@
 }
 
 .price-style-03 .whole {
-	line-height: .8;
+	line-height: 0.8;
 	font-weight: 700;
 }
 
@@ -659,7 +659,6 @@
 }
 
 .price-style-03 .term {
-	color: #444;
 	font-size: 14.58333%;
 }
 
@@ -667,10 +666,13 @@
 	font-size: 8.64rem;
 }
 
+.price-style-05 {
+	color: #0077bc;
+}
+
 .price-style-05.price-block {
 	font-size: 11rem;
 	font-weight: 800;
-	color: #0077bc;
 }
 
 .price-style-05 .before,
@@ -692,7 +694,7 @@
 
 .price-style-05 .currency,
 .price-style-05 .super {
-	font-size: 3rem;
+	font-size: 27.27273%;
 	line-height: 1.2;
 }
 
@@ -711,7 +713,6 @@
 }
 
 .price-style-05 .term {
-	color: #333;
 	font-weight: 400;
 	font-size: 13.63636%;
 }
