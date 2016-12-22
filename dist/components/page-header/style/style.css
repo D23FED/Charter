@@ -7,9 +7,13 @@
 	margin-right: auto;
 }
 
+.site-header .menu-lg {
+	display: none;
+}
+
 .site-header .nav-primary {
 	background-color: #52565c;
-	margin-top: 2rem;
+	margin-top: 0;
 }
 
 .site-header .nav-primary ul {
@@ -139,6 +143,7 @@
 .site-header .site-logo .image {
 	float: left;
 	padding-top: 2rem;
+	padding-bottom: 2rem;
 	margin-bottom: 0;
 }
 
@@ -151,7 +156,7 @@
 .site-header .searchForm input[type='text'],
 .site-header .searchForm button {
 	font-family: Open Sans,Helvetica,Arial,sans-serif;
-	padding: .7rem .5rem;
+	padding: 0.7rem 0.5rem;
 }
 
 .site-header .searchForm input[type='text'] {
@@ -197,7 +202,7 @@
 .site-header .zipAction button {
 	font-size: 1.6rem;
 	font-family: Open Sans,Helvetica,Arial,sans-serif;
-	padding: .7rem .5rem;
+	padding: 0.7rem 0.5rem;
 }
 
 .site-header .zipAction button {
@@ -237,7 +242,21 @@
 	outline-color: #faa41a;
 }
 
+.site-header-02 .menu-lg,
+.site-header-03 .menu-lg,
+.site-header-04 .menu-lg {
+	float: right;
+}
+
 @media (min-width: 768px) {
+	.site-header .menu-sm {
+		display: none;
+	}
+
+	.site-header .menu-lg {
+		display: block;
+	}
+
 	.site-header .userLocation {
 		padding-left: 10%;
 	}
