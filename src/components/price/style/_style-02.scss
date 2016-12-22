@@ -82,7 +82,6 @@ $p-font-size-base-02-sm: 4.1rem;
   }
 
   .term {
-    // color: #000;
     font-size: percentage(1.2 / strip-unit($p-font-size-base-02-sm));
 
     @include breakpoint('md') {

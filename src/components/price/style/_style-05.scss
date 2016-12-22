@@ -70,7 +70,6 @@ $p-font-size-base-05-sm: 11rem;
   }
 
   .term {
-    // color: $dk-gray;
     font-weight: normal;
     font-size: percentage(1.5 / strip-unit($p-font-size-base-05-sm));
 
