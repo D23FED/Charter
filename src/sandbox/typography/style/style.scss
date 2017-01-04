@@ -1,174 +1,217 @@
 @import 'initialize';
-// For prototype purposes only - do not ingest
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 0.5em 0;
+
+/* Typography | 2017 01 04 */
+
+@mixin heading($tag) {
+    #{$tag},
+    .#{$tag} {
+        @content;
+    }
 }
 
-.color-light {
-  display: inline-block;
-  background: #52575d;
-  padding: 0.5em;
+html {
+    font-size: 62.5%;
 }
-
-ul {
-  list-style-type: none;
-}
-// End prototype only styling
-
 
 body {
-  color: $dk-gray;
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 1.6rem;
-  font-size: 16px;
-  line-height: 2.0rem;
-  line-height: 20px;
+    // font-family: $font-open-sans;
+    // font-size: 1.6rem;
+    // line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  color: $dk-gray;
+// Headings
+%heading {
+    margin: 0.5rem 0;
 }
 
-h1,
-.h1 {
-  font-size: 2.2rem;
-  line-height: 1.27;
-  color: $dk-gray;
-  font-weight: 500;
-
-  @include breakpoint('md') {
-    font-size: 3.0rem;
-    line-height: 1.2;
-  }
-
-  &.alternate {
-    color: $heading-blue;
-    font-weight: 900;
-  }
+@for $i from 1 through 6 {
+    h#{$i},
+    .h#{$i} {
+        @extend %heading;
+    }
 }
 
-h2,
-.h2 {
-  font-size: 2.0rem;
-  font-weight: 800;
-  color: #fff;
-
-  @include breakpoint('md') {
-    font-size: 2.6rem;
-  }
-
-  &.alternate {
-  }
+@include heading(h1) {
+    font-size: 2.2rem;
+    line-height: (28 / 22);
+    font-weight: 700;
+    @include breakpoint('sm') {
+        font-size: 2.6rem;
+        line-height: (32 / 26);
+    }
+    @include breakpoint('md') {
+        font-size: 3rem;
+        line-height: (36 / 30);
+    }
+    &.alternate {
+        font-size: 3.6rem;
+        line-height: (39 / 33);
+        font-weight: 400;
+        @include breakpoint('sm') {
+            font-size: 3.9rem;
+            line-height: (45 / 39);
+        }
+        @include breakpoint('md') {
+            font-size: 4.5rem;
+            line-height: (52 / 45);
+        }
+    }
 }
 
-h3,
-.h3 {
-  font-size: 2.2rem;
-  font-size: 22px;
-  line-height: 2.8rem;
-  line-height: 28px;
-
-  // @media (min-width: $screen-lg-min) {
-  //   font-size: 2.6rem;
-  //   font-size: 26px;
-  //   line-height: 3.2rem;
-  //   line-height: 32px;
-  // }
+@include heading(h2) {
+    font-size: 2rem;
+    line-height: (24 / 20);
+    font-weight: 400;
+    @include breakpoint('sm') {
+        font-size: 2.2rem;
+        line-height: (28 / 22);
+    }
+    @include breakpoint('md') {
+        font-size: 2.6rem;
+        line-height: (32 / 26);
+    }
+    &.alternate {
+        font-size: 3.4rem;
+        line-height: (40 / 34);
+        font-weight: 200;
+        @include breakpoint('sm') {
+            font-size: 3.6rem;
+            line-height: (42 / 36);
+        }
+        @include breakpoint('md') {
+            font-size: 3.9rem;
+            line-height: (48 / 39);
+        }
+    }
 }
 
-h4,
-.h4 {
-  font-size: 2rem;
-  font-size: 20px;
-  line-height: 2.6rem;
-  line-height: 26px;
-
-  // @media (min-width: $screen-lg-min) {
-//   font-size: 2.4rem;
-//   font-size: 24px;
-//   line-height: 3.0rem;
-//   line-height: 30px;
-// }
+@include heading(h3) {
+    font-size: 1.8rem;
+    font-weight: 700;
+    @include breakpoint('sm') {
+        font-size: 2rem;
+    }
+    @include breakpoint('md') {
+        font-size: 2.2rem;
+    }
+    &.alternate {
+        font-size: 2.4rem;
+        font-weight: 700;
+        @include breakpoint('sm') {
+            font-size: 2.8rem;
+        }
+        @include breakpoint('md') {
+            font-size: 3.3rem;
+        }
+    }
 }
 
-h5,
-.h5 {
-  font-size: 1.8rem;
-  font-size: 18px;
-  line-height: 2.4rem;
-  line-height: 24px;
+@include heading(h4) {
+    font-size: 1.8rem;
+    font-weight: 400;
+    @include breakpoint('sm') {
+        font-size: 2rem;
+    }
+    @include breakpoint('md') {
+        font-size: 2.2rem;
+    }
+    &.alternate {
+        font-size: 2.4rem;
+        font-weight: 400;
+        @include breakpoint('sm') {
+            font-size: 2.8rem;
+        }
+        @include breakpoint('md') {
+            font-size: 3.3rem;
+        }
+    }
 }
 
-h6,
-.h6 {
-  font-size: 1.6rem;
-  font-size: 16px;
-  line-height: 2.2rem;
-  line-height: 22px;
+@include heading(h5) {
+    font-size: 1.8rem;
+    font-weight: 700;
+    @include breakpoint('sm') {
+        font-size: 1.8rem;
+    }
+    @include breakpoint('md') {
+        font-size: 2rem;
+    }
+    &.alternate {
+        font-size: 2.2rem;
+        font-weight: 700;
+        @include breakpoint('sm') {
+            font-size: 2.4rem;
+        }
+        @include breakpoint('md') {
+            font-size: 2.6rem;
+        }
+    }
 }
 
-.color-light,
-.color-white {
-  color: #ffffff;
+@include heading(h6) {
+    font-size: 1.6rem;
+    font-weight: 700;
+    @include breakpoint('sm') {
+        font-size: 1.8rem;
+    }
+    &.alternate {
+        font-size: 2.2rem;
+        font-weight: 400;
+        @include breakpoint('sm') {
+            font-size: 2.4rem;
+        }
+        @include breakpoint('md') {
+            font-size: 2.6rem;
+        }
+    }
 }
 
-.color-medium {
-  color: $heading-blue;
-}
-
-.color-deep {
-  color: $blue;
-}
-
-
-// Font weight helpers
-.font-light {
-  font-weight: 200;
-}
-
-.font-medium {
-  font-weight: 400;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.font-x-bold {
-  font-weight: 900;
-}
-
+// Links
 a {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  vertical-align: baseline;
-  font-style: normal;
-  color: #004e7d;
-  text-decoration: underline;
-  cursor: pointer;
+    color: $lt-blue;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: underline;
+    vertical-align: baseline;
+    @include hover-focus {
+        color: $blue;
+    }
+    &.color-light {
+        color: #fff;
+        @include hover-focus {
+            color: $link-hover-color-light;
+        }
+    }
+    &.text-white {
+        text-decoration: none;
+        @include hover-focus {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+    &.text-yellow {
+        @include hover-focus {
+            color: #fff;
+        }
+    }
 }
 
-a:hover {
-  color: #00324e;
+li {
+    // font-size: 1.7rem;
+    // line-height: (27 / 17);
+    @include breakpoint('sm') {
+        // font-size: 2.1rem;
+        // line-height: (26 / 21);
+    }
+    .light-color & {
+        color: #fff;
+    }
 }
 
-a.color-light:hover {
-  color: #8cc657;
+.disclaimer {
+    color: $gray;
+    font-size: 1.1rem;
+    line-height: (14 / 11);
 }
