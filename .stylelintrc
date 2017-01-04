@@ -8,12 +8,9 @@
     }],
     "selector-list-comma-newline-after": "always",
     "number-no-trailing-zeros": true,
-    "number-leading-zero": true,
     "length-zero-no-unit": true,
-    "selector-combinator-space-after": true,
     "color-hex-case": "lower",
     "block-opening-brace-space-before": "always",
-    "at-rule-empty-line-before": "always",
-    "function-space-after": "always"
-  }
+    "at-rule-empty-line-before": "always"
+		  }
 }
