@@ -194,7 +194,6 @@ a {
     &.text-yellow {
         @include hover-focus {
             color: #fff;
-            text-decoration: underline;
         }
     }
 }

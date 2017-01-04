@@ -123,13 +123,13 @@ a.text-white {
 }
 
 a.text-white:focus,
-a.text-white:hover,
-a.text-yellow:focus,
-a.text-yellow:hover {
+a.text-white:hover {
 	color: #fff;
 	text-decoration: underline;
 }
 
+a.text-yellow:focus,
+a.text-yellow:hover,
 .light-color li {
 	color: #fff;
 }
