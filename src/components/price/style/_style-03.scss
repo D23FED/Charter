@@ -1,72 +1,63 @@
 @import 'initialize';
-
-// Pricing Style: 'Best Choice' Offer Columns
+// Pricing Style: Blue Medium size
+// Alternate: 'Best Choice' Offer Columns
 // Ex: https://www.charter.com/browse/content/best-choice-hp/
 $p-font-size-base-03: 9.6rem;
-$p-font-size-base-03-sm: 24vw;
+$p-font-size-base-03-sm: $p-font-size-base-03 * 0.65;
+$p-font-size-base-03-sm-alt: 24vw;
 // 'Best Choice' Offer Columns breakpoint
 $bc-switchpoint: 'md';
-
 .price-style-03 {
-  color: $md-blue;
-
-  &.price-block {
-    font-size: $p-font-size-base-03-sm;
-
-    @include breakpoint('sm') {
-      font-size: 18rem;
-    }
-
-    @include breakpoint($bc-switchpoint) {
-      font-size: $p-font-size-base-03;
-    }
-  }
-
-  .before,
-  .after {
-    font-size: percentage(1.6 / strip-unit($p-font-size-base-03));
-    font-weight: bold;
-  }
-
-  .before {
-    text-align: left;
-  }
-
-  .currency,
-  .whole,
-  .super,
-  .separator {
-    font-weight: 800;
-  }
-
-  .currency {
-    font-size: percentage(3.8 / strip-unit($p-font-size-base-03));
-  }
-
-  .whole {
-    line-height: 0.8;
-    font-weight: bold;
-  }
-
-  .super {
-    font-size: percentage(2.7 / strip-unit($p-font-size-base-03));
-
-    .extra {
-      font-size: percentage(2.7 / 3);
-    }
-  }
-
-  .details {
-    text-align: left;
-    font-size: 100%;
-  }
-
-  .term {
-    font-size: percentage(1.4 / strip-unit($p-font-size-base-03));
-  }
-
-  // Separator between two prices in double price block
-  .separator {
-    font-size: 0.9 * $p-font-size-base-03;
-  }
+	color: $md-blue;
+	&.price-block {
+		font-size: $p-font-size-base-03-sm;
+		// When price appears in HP Offer Columns
+		&.alternate {
+			font-size: $p-font-size-base-03-sm-alt;
+			@include breakpoint($bc-switchpoint) {
+				font-size: $p-font-size-base-03;
+			}
+		}
+		@include breakpoint($bc-switchpoint) {
+			font-size: $p-font-size-base-03;
+		}
+	}
+	.before,
+	.after {
+		font-size: percentage(1.6 / strip-unit($p-font-size-base-03));
+		font-weight: bold;
+	}
+	.before {
+		text-align: left;
+	}
+	.currency,
+	.whole,
+	.super,
+	.separator {
+		font-weight: 800;
+	}
+	.currency {
+		font-size: percentage(3.8 / strip-unit($p-font-size-base-03));
+	}
+	.whole {
+		line-height: 0.8;
+		font-weight: bold;
+	}
+	.super {
+		font-size: percentage(2.7 / strip-unit($p-font-size-base-03));
+		.extra {
+			font-size: percentage(2.7 / 3);
+		}
+	}
+	.details {
+		text-align: left;
+		font-size: 100%;
+	}
+	.term {
+		font-size: percentage(1.4 / strip-unit($p-font-size-base-03));
+	}
+	// Separator between two prices in double price block
+	.separator {
+		font-size: 0.9 * $p-font-size-base-03;
+	}
 }
