@@ -1388,6 +1388,11 @@
 		background-position: right bottom;
 	}
 
+	.price-style-03.price-block.alternate,
+	.price-style-03.price-block {
+		font-size: 9.6rem;
+	}
+
 	.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
 	.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .arrow > a {
 		font-size: 2.2rem;
@@ -1535,11 +1540,6 @@
 
 	.price-style-02 .term {
 		font-size: 18.75%;
-	}
-
-	.price-style-03.price-block.alternate,
-	.price-style-03.price-block {
-		font-size: 9.6rem;
 	}
 
 	.price-style-05.price-block {

@@ -177,6 +177,7 @@
 	font-size: 6.24rem;
 }
 
+/* Alternate version of style 3: intended for use within 'Best Choice' Offer Columns */
 .price-style-03.price-block.alternate {
 	font-size: 24vw;
 }
@@ -283,6 +284,13 @@
 	font-size: 15.3rem;
 }
 
+@media (min-width: 768px) {
+	.price-style-03.price-block.alternate,
+	.price-style-03.price-block {
+		font-size: 9.6rem;
+	}
+}
+
 @media (min-width: 992px) {
 	.price-style-01 .currency,
 	.price-style-01 .whole,
@@ -358,11 +366,6 @@
 
 	.price-style-02 .term {
 		font-size: 18.75%;
-	}
-
-	.price-style-03.price-block.alternate,
-	.price-style-03.price-block {
-		font-size: 9.6rem;
 	}
 
 	.price-style-05.price-block {
