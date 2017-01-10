@@ -27,7 +27,9 @@
 		"selector_separator_newline": true,
 		"end_with_newline": true,
 		"newline_between_rules": true,
-		"eol": "\n"
+		"eol": "\n",
+		"max_preserve_newlines": 2,
+
 	},
 	"scss": {
 		"indent_size": 1,
@@ -36,7 +38,9 @@
 		"selector_separator_newline": true,
 		"end_with_newline": true,
 		"newline_between_rules": true,
-		"eol": "\n"
+		"eol": "\n",
+		"max_preserve_newlines": 2,
+
 	},
 	"html": {
 		"indent_inner_html": false,

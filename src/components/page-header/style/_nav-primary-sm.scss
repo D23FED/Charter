@@ -1,0 +1,42 @@
+/* Small-breakpoint version of primary nav, toggled with hamburger button */
+.navbar-sm {
+	background-color: transparent;
+	border: none;
+	margin-bottom: 1.5rem;
+	@include breakpoint('sm') {
+		display: none;
+	}
+	// Actual nav UL within navbar container
+	.navbar-nav {
+		padding: $column-padding;
+		background: $cool-grey;
+		margin-left: -$column-padding;
+		margin-right: -$column-padding;
+		margin-top: 0;
+		margin-bottom: 0;
+		&>li>a,
+		.open .dropdown-menu>li>a {
+			color: #fff;
+			text-decoration: none;
+			@include hover-focus {
+				color: $lt-blue;
+			}
+		}
+		// Open link containing dropdown menu
+		&>.open {
+			&>a {
+				&,
+				&:focus,
+				&:hover {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	// Hamburger button
+	.navbar-toggle {
+		margin-top: $navbar-toggle-spacing-top;
+		transition: background 150ms ease-out;
+	}
+}
