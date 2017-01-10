@@ -8,8 +8,8 @@
 //     User nav
 //     Button-style primary nav
 
-.site-header-04 {
-  .menu-lg {
-    float: right;
-  }
+.site-header-top-04 {
+	.aem-Grid.aem-Grid--default--12 > .aem-GridColumn--default--12.customWrapper {
+		float: none;
+	}
 }

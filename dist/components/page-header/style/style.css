@@ -357,6 +357,8 @@
 	display: inline-block;
 	font-size: 1.4rem;
 	line-height: 1;
+	-webkit-transition: color 150ms ease-out;
+	transition: color 150ms ease-out;
 }
 
 .site-header .icon-map-marker a:focus::before,
@@ -365,9 +367,12 @@
 }
 
 .site-header-02 .menu-lg,
-.site-header-03 .menu-lg,
-.site-header-04 .menu-lg {
+.site-header-03 .menu-lg {
 	float: right;
+}
+
+.site-header-top-04 .aem-Grid.aem-Grid--default--12 > .aem-GridColumn--default--12.customWrapper {
+	float: none;
 }
 
 @media (min-width: 768px) {
