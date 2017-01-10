@@ -1,0 +1,36 @@
+@import 'initialize';
+/* Subnav | v1 */
+.menu-subnav {
+	background-color: $cool-grey-02;
+	ul {
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 0;
+		max-width: $site-max-width;
+		text-align: center;
+		font-size: 0;
+	}
+	li {
+		// height: 4rem;
+		padding: 0;
+	}
+	a {
+		line-height: 4rem;
+		border-right: 0.1rem solid #8d939b;
+		color: #fff;
+		text-align: center;
+		font-size: 1.4rem;
+		display: block;
+		text-decoration: none;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		transition: all 150ms ease-out;
+		transition-property: background, color;
+		@include hover-focus {
+			background-color: $lt-blue;
+		}
+	}
+	.spectrum-last a {
+		border-right-width: 0;
+	}
+}

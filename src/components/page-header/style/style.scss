@@ -8,6 +8,16 @@ $menu-item-local-pos: 6;
 $text-size-user-nav: 1.2rem;
 $text-size-primary-nav: 1.6rem;
 $primary-nav-h: 5rem;
+// width of hamburger toggle button
+$navbar-toggle-width: 4.4rem;
+$navbar-toggle-height: 3.4rem;
+$navbar-toggle-spacing-top: 1rem;
+$icon-map-marker-height: 1.4rem;
+
+@mixin map-marker-icon {
+	content: "\E062";
+	font-family: 'Glyphicons Halflings';
+}
 @import 'base';
 @import 'style-01';
 @import 'style-02';

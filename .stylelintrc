@@ -12,5 +12,5 @@
     "color-hex-case": "lower",
     "block-opening-brace-space-before": "always",
     "at-rule-empty-line-before": "always"
-		  }
+  }
 }
