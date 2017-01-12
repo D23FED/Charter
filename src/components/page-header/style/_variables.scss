@@ -1,0 +1,22 @@
+$page-header: '.site-header';
+$logo: 'site-logo';
+// Menu item positions, from l to r
+$menu-item-search-pos: 1;
+$menu-item-contact-pos: 2;
+$menu-item-local-pos: 6;
+$text-size-user-nav: 1.2rem;
+$text-size-primary-nav: 1.6rem;
+$primary-nav-h: 5rem;
+// width of hamburger toggle button
+$navbar-toggle-width: 4.4rem;
+$navbar-toggle-height: 3.4rem;
+$navbar-toggle-spacing-top: 1rem;
+$icon-map-marker-height: 1.4rem;
+$icon-map-marker: 'icon-map-marker';
+// Space between header and body content
+$header-spacing-bottom: 2rem;
+
+@mixin map-marker-icon {
+  content: "\E062";
+  font-family: 'Glyphicons Halflings';
+}

@@ -1,0 +1,126 @@
+/* Site header 02 */
+/* Section of the header above the primary nav menuc*/
+.site-header .site-header-top {
+	max-width: 1200px;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	background-color: #fff;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.site-header .site-header-top .aem-GridColumn:first-of-type {
+	padding-left: 0;
+}
+
+.site-header .site-header-top .aem-GridColumn:nth-last-of-type(2),
+.site-header .site-header-top .aem-GridColumn:nth-last-of-type(3) {
+	padding-right: 0;
+}
+
+/* Show/hide menu elements responsively, target elements at specific browser widths */
+
+/* Temporary styles for display while authoring, remove for prod */
+
+.site-header .menu-sm .mui-wrapper .btn-sm {
+	font-size: 1.2rem;
+	margin-top: 0.7rem;
+	padding: 0.5rem 1rem;
+	font-weight: 400;
+	text-shadow: 0.1rem 0.1rem 0.3rem #888;
+}
+
+.site-header .menu-lg {
+	display: none;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .menu-lg,
+.aem-AuthorLayer-Edit .site-header .menu-lg {
+	display: block;
+}
+
+.site-header .menu-lg .mui-wrapper {
+	display: inline-block;
+	float: right;
+}
+
+.site-header .site-header-shadowed {
+	box-shadow: 0 1rem 1.2rem -0.7rem rgba(0, 0, 0, 0.3);
+	border-bottom: 0.1rem solid #e7e7e7;
+	position: relative;
+}
+
+/* ZIP Map marker icon/link */
+.site-header .icon-map-marker a {
+	color: #003057;
+	font-size: 0;
+	position: absolute;
+	z-index: 10;
+	right: 7.4rem;
+	top: 2rem;
+}
+
+.site-header .icon-map-marker a::before {
+	content: "\E062";
+	font-family: Glyphicons Halflings;
+	display: inline-block;
+	font-size: 1.4rem;
+	line-height: 1;
+	-webkit-transition: color 150ms ease-out;
+	transition: color 150ms ease-out;
+}
+
+.site-header .icon-map-marker a:focus::before,
+.site-header .icon-map-marker a:hover::before {
+	color: #00629b;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .icon-map-marker a,
+.aem-AuthorLayer-Edit .site-header .icon-map-marker a {
+	position: relative;
+	right: auto;
+	top: auto;
+}
+
+/* Unique to Header 02 */
+.muiAddressLookup .localization.loading {
+	display: block;
+}
+
+.site-header-top-02 {
+	position: relative;
+}
+
+.site-header-top-02 .menu-sm .mui-wrapper,
+.site-header-top-02 .menu-lg .mui-wrapper {
+	padding-right: 2rem;
+}
+
+.site-header-top-02 .icon-map-marker a {
+	right: 1.5rem;
+	top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.site-header .menu-sm {
+		display: none;
+	}
+
+	.aem-AuthorLayer-Layouting .site-header .menu-sm,
+	.aem-AuthorLayer-Edit .site-header .menu-sm {
+		display: block;
+	}
+
+	.site-header .menu-lg {
+		display: block;
+	}
+
+	.site-header-top-02 .icon-map-marker a {
+		top: 5.6rem;
+	}
+}
+
+/*# sourceMappingURL=header-02.css.map */

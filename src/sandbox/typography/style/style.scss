@@ -46,7 +46,7 @@ body {
     &.alternate {
         font-size: 3.6rem;
         line-height: (39 / 33);
-        font-weight: 400;
+        font-weight: 900;
         @include breakpoint('sm') {
             font-size: 3.9rem;
             line-height: (45 / 39);

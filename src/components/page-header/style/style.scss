@@ -1,25 +1,37 @@
 @import 'initialize';
-$page-header: '.site-header';
-$logo: 'site-logo';
-// Menu item positions, from l to r
-$menu-item-search-pos: 1;
-$menu-item-contact-pos: 2;
-$menu-item-local-pos: 6;
-$text-size-user-nav: 1.2rem;
-$text-size-primary-nav: 1.6rem;
-$primary-nav-h: 5rem;
-// width of hamburger toggle button
-$navbar-toggle-width: 4.4rem;
-$navbar-toggle-height: 3.4rem;
-$navbar-toggle-spacing-top: 1rem;
-$icon-map-marker-height: 1.4rem;
-
-@mixin map-marker-icon {
-	content: "\E062";
-	font-family: 'Glyphicons Halflings';
+/* Site headers */
+@import 'variables';
+#{$page-header} {
+	// Basic header styles and layout
+	@import 'base';
+	@import 'shadowed';
+	// Site logo
+	@import 'logo';
+	// Show/hide menu elements responsively
+	@import 'responsive';
+	// Primary Navigation (button-style)
+	@import 'nav-primary';
+	// Primary Navigation (text-style)
+	@import 'nav-primary-text';
+	// Small-breakpoint version of primary nav, toggled with hamburger button
+	@import 'nav-primary-sm';
+	// User Navigation (Contact, Support, My Account, etc)
+	@import 'nav-user';
+	// Search form
+	@import 'form-search';
+	// ZIP code/Localization form
+	@import 'form-zip';
+	// ZIP Map marker icon link wrapper. Clicking triggers form to enter ZIP code
+	@import 'icon-zip-map-marker';
+		// Some weird Div AEM adds
+	.aem-Grid-newComponent {
+		display: none;
+		@include aem-authoring {
+			display: block;
+		}
+	}
 }
-@import 'base';
-@import 'style-01';
+// @import 'style-01';
 @import 'style-02';
 @import 'style-03';
 @import 'style-04';

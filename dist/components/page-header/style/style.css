@@ -1,16 +1,10 @@
-.site-header {
-	/* Show/hide menu elements responsively, target elements at specific browser widths */
-	/* Primary Navigation (button-style) */
-	/* Primary Navigation (text-style) */
-	/* Small-breakpoint version of primary nav, toggled with hamburger button */
-	/* User Navigation (Contact, Support, My Account, etc) */
-	/* ZIP code/Localization form */
-}
-
+/* Site headers */
+/* Section of the header above the primary nav menuc*/
 .site-header .site-header-top {
 	max-width: 1200px;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
+	background-color: #fff;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -31,6 +25,7 @@
 	position: relative;
 }
 
+/* Brand logo */
 .site-header .site-logo .image {
 	float: left;
 	padding-top: 2rem;
@@ -38,13 +33,9 @@
 	margin-bottom: 0;
 }
 
-.site-header .aem-Grid-newComponent {
-	display: none;
-}
+/* Show/hide menu elements responsively, target elements at specific browser widths */
 
-.aem-AuthorLayer-Edit .site-header .aem-Grid-newComponent {
-	display: block;
-}
+/* Temporary styles for display while authoring, remove for prod */
 
 .site-header .menu-sm .mui-wrapper .btn-sm {
 	font-size: 1.2rem;
@@ -58,11 +49,18 @@
 	display: none;
 }
 
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .menu-lg,
+.aem-AuthorLayer-Edit .site-header .menu-lg {
+	display: block;
+}
+
 .site-header .menu-lg .mui-wrapper {
 	display: inline-block;
 	float: right;
 }
 
+/* Primary Navigation (button-style) */
 .site-header .nav-primary {
 	background-color: #52565c;
 	margin-top: 0;
@@ -78,6 +76,8 @@
 	text-align: center;
 	border-right: 0.1rem solid #fff;
 	color: #fff;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .site-header .nav-primary li:last-of-type {
@@ -96,6 +96,7 @@
 	-webkit-transition-property: background, color;
 	transition-property: background, color;
 	display: block;
+	text-decoration: none;
 }
 
 .site-header .nav-primary a:focus,
@@ -112,9 +113,10 @@
 	margin: 0;
 }
 
+/* Primary Navigation (text-style) */
 .site-header .nav-primary-text {
 	background-color: transparent;
-	margin-top: 0;
+	margin-top: 1.5rem;
 }
 
 .site-header .nav-primary-text a {
@@ -132,10 +134,29 @@
 	color: #003057;
 }
 
+/* Small-breakpoint version of primary nav, toggled with hamburger button */
 .site-header .navbar-sm {
 	background-color: transparent;
 	border: none;
 	margin-bottom: 1.5rem;
+	position: static;
+}
+
+.site-header .navbar-sm > .navbar-collapse {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: 0;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .navbar-sm > .navbar-collapse,
+.aem-AuthorLayer-Edit .site-header .navbar-sm > .navbar-collapse {
+	position: relative;
+	left: auto;
+	right: auto;
+	width: auto;
 }
 
 .site-header .navbar-sm .navbar-nav {
@@ -169,6 +190,7 @@
 	transition: background 150ms ease-out;
 }
 
+/* User Navigation (Contact, Support, My Account, etc) */
 .site-header .nav-user ul {
 	float: right;
 	display: table;
@@ -222,6 +244,9 @@
 	-webkit-transition-property: background, color;
 	transition-property: background, color;
 	line-height: 1;
+	text-decoration: none;
+	font-weight: 400;
+	text-transform: none;
 }
 
 .site-header .nav-user a:focus,
@@ -249,6 +274,7 @@
 	font-size: 1.2rem;
 }
 
+/* Form: Search */
 .site-header .searchForm {
 	width: 80%;
 	margin: 0 auto;
@@ -271,6 +297,7 @@
 	font-weight: 800;
 }
 
+/* Form: ZIP code/Localization */
 .site-header .zipAction {
 	width: 50%;
 	float: left;
@@ -342,6 +369,7 @@
 	margin-bottom: 0;
 }
 
+/* ZIP Map marker icon/link */
 .site-header .icon-map-marker a {
 	color: #003057;
 	font-size: 0;
@@ -366,13 +394,82 @@
 	color: #00629b;
 }
 
-.site-header-02 .menu-lg,
-.site-header-03 .menu-lg {
-	float: right;
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .icon-map-marker a,
+.aem-AuthorLayer-Edit .site-header .icon-map-marker a {
+	position: relative;
+	right: auto;
+	top: auto;
+}
+
+.site-header .aem-Grid-newComponent {
+	display: none;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+
+/* Unique to Header 02 */
+.aem-AuthorLayer-Layouting .site-header .aem-Grid-newComponent,
+.aem-AuthorLayer-Edit .site-header .aem-Grid-newComponent,
+.muiAddressLookup .localization.loading {
+	display: block;
+}
+
+.site-header-top-02 {
+	position: relative;
+}
+
+.site-header-top-02 .menu-sm .mui-wrapper,
+.site-header-top-02 .menu-lg .mui-wrapper {
+	padding-right: 2rem;
+}
+
+.site-header-top-02 .icon-map-marker a {
+	right: 1.5rem;
+	top: 1.5rem;
+}
+
+.site-header-top-03 {
+	background-color: transparent;
+}
+
+.site-header-top-03 .menu-row.mui-wrapper {
+	margin-bottom: 2rem;
+}
+
+/* Site Header 04 */
+.site-header .site-header-top .aem-GridColumn:nth-last-of-type(4) {
+	padding-right: 0;
 }
 
 .site-header-top-04 .aem-Grid.aem-Grid--default--12 > .aem-GridColumn--default--12.customWrapper {
 	float: none;
+	clear: none;
+	margin: -1.5rem;
+	padding: 0;
+	width: auto;
+}
+
+.site-header-top-04 .menu-row.mui-wrapper {
+	margin-bottom: 2rem;
+}
+
+/* Unique to Site Header 05 */
+.site-header-top-wrapper {
+	background: #f8f8f8;
+}
+
+.site-header-top-05 {
+	padding-bottom: 2rem;
+}
+
+.site-header-top-05 .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--6,
+.site-header-top-05 .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--4 {
+	float: none;
+}
+
+.site-header-top-05 .mui-wrapper.menu-lg .btn {
+	white-space: normal;
 }
 
 @media (min-width: 768px) {
@@ -399,6 +496,32 @@
 
 	.site-header .userLocation {
 		padding-left: 10%;
+	}
+
+	.site-header-top-02 .icon-map-marker a {
+		top: 5.6rem;
+	}
+
+	.site-header-top-03 .menu-row.mui-wrapper {
+		margin-bottom: 0;
+	}
+
+	.site-header-top-04 .menu-row.mui-wrapper {
+		margin-bottom: 0;
+	}
+
+	.site-header-top-04 .menu-row.mui-wrapper .text-center {
+		text-align: right;
+	}
+
+	.site-header-top-04 .menu-row.mui-wrapper .btn {
+		position: relative;
+		right: 6.5rem;
+	}
+
+	.site-header-top-05 .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--6,
+	.site-header-top-05 .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--4 {
+		float: left;
 	}
 }
 
