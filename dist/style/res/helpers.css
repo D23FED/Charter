@@ -1,4 +1,4 @@
-/* Helpers | Jan 12 4pm EM */
+/* Helpers | Jan 12 4:21pm EM */
 .clear {
 	clear: both;
 }
@@ -357,6 +357,23 @@
 	color: #777;
 }
 
+.text-gradient-blue {
+	color: #0077bc;
+	background-image: none;
+}
+
+@supports ((-webkit-background-clip:text) or (background-clip:text)) and ((-webkit-text-fill-color:transparent) or (text-fill-color:transparent)) {
+	.text-gradient-blue {
+		-webkit-text-fill-color: transparent;
+		text-fill-color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-repeat: repeat-x;
+		background-image: -webkit-linear-gradient(top, #4ab3f1, #00629b);
+		background-image: linear-gradient(180deg, #4ab3f1 0, #00629b);
+	}
+}
+
 .font-light {
 	font-weight: 300;
 }
@@ -537,3 +554,19 @@ hr.black {
 	margin-right: 0;
 }
 
+.bullets-blue {
+	list-style: none;
+	padding-left: 1em;
+}
+
+.bullets-blue li::before {
+	content: '\2022';
+	display: block;
+	position: relative;
+	max-height: 0;
+	left: -1em;
+	color: #0091e6;
+	font-size: 1em;
+}
+
+/*# sourceMappingURL=helpers.css.map */

@@ -1,6 +1,6 @@
 @import 'initialize';
 
-/* Helpers | Jan 12 4pm EM */
+/* Helpers | Jan 12 4:21pm EM */
 
 .clear {
 	clear: both;
@@ -353,6 +353,10 @@
 	color: #777;
 }
 
+.text-gradient-blue {
+	@include gradient-text-blue($lt-blue)
+}
+
 // Font variants
 .font-light {
 	font-weight: 300;
@@ -424,4 +428,19 @@ hr {
 .container-fluid .imageArtDirection {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+// Lists
+.bullets-blue {
+	list-style: none;
+	padding-left: 1em;
+	li::before {
+		content: '\2022';
+		display: block;
+		position: relative;
+		max-height: 0;
+		left: -1em;
+		color: #0091e6;
+		font-size: 1em;
+	}
 }
