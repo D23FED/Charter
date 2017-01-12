@@ -2,9 +2,9 @@
 /* Section of the header above the primary nav menuc*/
 }
 .site-header-top {
-	max-width: map-get($breakpoints, 'lg');
-	padding-left: $column-padding;
-	padding-right: $column-padding;
+	// max-width: map-get($breakpoints, 'lg');
+	// padding-left: $column-padding;
+	// padding-right: $column-padding;
 	background-color: #fff;
 	@include center-block;
 	.aem-GridColumn:first-of-type {

@@ -1,9 +1,6 @@
 /* Site header 04 */
 /* Section of the header above the primary nav menuc*/
 .site-header .site-header-top {
-	max-width: 1200px;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
 	background-color: #fff;
 	display: block;
 	margin-left: auto;
