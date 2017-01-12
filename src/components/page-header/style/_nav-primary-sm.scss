@@ -1,10 +1,28 @@
+@at-root {
 /* Small-breakpoint version of primary nav, toggled with hamburger button */
+}
 .navbar-sm {
 	background-color: transparent;
 	border: none;
 	margin-bottom: 1.5rem;
+	position: static;
 	@include breakpoint('sm') {
 		display: none;
+	}
+
+	// Contains all collapsing content
+	& > .navbar-collapse {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+		margin: 0;
+		@include aem-authoring {
+			position: relative;
+			left: auto;
+			right: auto;
+			width: auto;
+		}
 	}
 	// Actual nav UL within navbar container
 	.navbar-nav {

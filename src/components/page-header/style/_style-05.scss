@@ -4,16 +4,34 @@
 //   Small
 //     Hamburger button
 //     ZIP Pin
-//     Localization button
+//     Localization button (large)
 //   Large
 //     User nav
-//     Localization button
-//     Button-style nav
-
-.site-header-05 {
-  .menu-sm {
-  }
-
-  .menu-lg {
-  }
+//     Localization button (large)
+//     Primary nav: Text-style
+$grid-wrapper: '.aem-Grid.aem-Grid--12';
+$primary-nav-text-wrapper: '.aem-GridColumn.aem-GridColumn--default--6';
+$mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
+@at-root {
+	/* Unique to Site Header 05 */
+}
+.site-header-top-wrapper {
+  background: #f8f8f8;
+}
+.site-header-top-05 {
+	padding-bottom: $header-spacing-bottom;
+	#{$grid-wrapper} {
+		> #{$primary-nav-text-wrapper},
+		> #{$mui-lg-wrapper} {
+			float: none;
+			@include breakpoint('sm') {
+				float: left;
+			}
+		}
+	}
+	.mui-wrapper.menu-lg {
+		.btn {
+			white-space: initial;
+		}
+	}
 }

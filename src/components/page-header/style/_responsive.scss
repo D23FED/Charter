@@ -1,11 +1,14 @@
-/* Show/hide menu elements responsively, target elements at specific browser widths */
+@at-root {
+	/* Show/hide menu elements responsively, target elements at specific browser widths */
+}
 
 // Menu elements only shown at small breakpoints
 .menu-sm {
 	@include breakpoint('sm') {
 		display: none;
-		.aem-AuthorLayer-Layouting &,
-		.aem-AuthorLayer-Edit & {
+	}
+	@include aem-authoring {
+		@include breakpoint('sm') {
 			display: block;
 		}
 	}
@@ -21,9 +24,13 @@
 		}
 	}
 }
+
 // Menu elements only shown at large breakpoints
 .menu-lg {
 	display: none;
+	@include aem-authoring {
+		display: block;
+	}
 	@include breakpoint('sm') {
 		display: block;
 	}

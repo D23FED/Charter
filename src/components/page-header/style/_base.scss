@@ -1,54 +1,18 @@
-#{$page-header} {
-	// Section of the header above the primary nav menu
-	.site-header-top {
-		max-width: map-get($breakpoints, 'lg');
-		padding-left: $column-padding;
-		padding-right: $column-padding;
-		@include center-block;
-		.aem-GridColumn:first-of-type {
-			padding-left: 0;
-		}
-		.aem-GridColumn:nth-last-of-type(2),
-		.aem-GridColumn:nth-last-of-type(3) {
-			padding-right: 0;
-		}
-	}
-	// Shadowed-style header
-	.site-header-shadowed {
-		box-shadow: 0.0rem 1.0rem 1.2rem -0.7rem rgba(0, 0, 0, 0.3);
-		border-bottom: 0.1rem solid #e7e7e7;
-		position: relative;
-	}
-	// Logo
-	.#{$logo} {
-		.image {
-			float: left;
-			padding-top: 2.0rem;
-			padding-bottom: 2.0rem;
-			margin-bottom: 0;
-		}
-	}
-	// Some weird Div AEM adds
-	.aem-Grid-newComponent {
-		display: none;
-		.aem-AuthorLayer-Edit & {
-			display: block;
-		}
-	}
-	// Show/hide menu elements responsively
-	@import 'responsive';
-	// Primary Navigation (button-style)
-	@import 'nav-primary';
-	// Primary Navigation (text-style)
-	@import 'nav-primary-text';
-	// Small-breakpoint version of primary nav, toggled with hamburger button
-	@import 'nav-primary-sm';
-	// User Navigation (Contact, Support, My Account, etc)
-	@import 'nav-user';
-	// Search form
-	@import 'form-search';
-	// ZIP code/Localization form
-	@import 'form-zip';
-	// ZIP Map marker icon link wrapper. Clicking triggers form to enter ZIP code
-	@import 'icon-zip-map-marker';
+@at-root {
+/* Section of the header above the primary nav menuc*/
 }
+.site-header-top {
+	// max-width: map-get($breakpoints, 'lg');
+	// padding-left: $column-padding;
+	// padding-right: $column-padding;
+	background-color: #fff;
+	@include center-block;
+	.aem-GridColumn:first-of-type {
+		padding-left: 0;
+	}
+	.aem-GridColumn:nth-last-of-type(2),
+	.aem-GridColumn:nth-last-of-type(3) {
+		padding-right: 0;
+	}
+}
+

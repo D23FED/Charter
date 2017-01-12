@@ -1,4 +1,6 @@
+@at-root {
 /* User Navigation (Contact, Support, My Account, etc) */
+}
 .nav-user {
 	ul {
 		float: right;
@@ -55,6 +57,9 @@
 		transition: all 150ms ease-out;
 		transition-property: background, color;
 		line-height: 1;
+		text-decoration: none;
+		font-weight: normal;
+		text-transform: none;
 		@include hover-focus {
 			background-color: $blue;
 			color: #fff;

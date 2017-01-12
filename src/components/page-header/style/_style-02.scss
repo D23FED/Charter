@@ -2,12 +2,34 @@
 // Style 2
 //   Logo
 //   Small
-//     Localization button
+//     Localization button (small)
+//     ZIP Pin
 //   Large
-//     Localization form
+//     Localization form (horizontal)
+//     ZIP Pin
 
-.site-header-02 {
-  .menu-lg {
-    float: right;
-  }
+/* Unique to Header 02 */
+
+.muiAddressLookup .localization.loading {
+	display: block;
+}
+
+.site-header-top-02 {
+	position: relative;
+	// Add space to accomodate ZIP Pin icon
+	.menu-sm .mui-wrapper,
+	.menu-lg .mui-wrapper {
+		padding-right: $column-padding + 0.5rem;
+	}
+	// Rearrange ZIP Pin icon to look right small MUI button
+	.#{$icon-map-marker} {
+		a {
+			right: $column-padding;
+			top: 1.5rem;
+			// Rearrange ZIP Pin icon to look right with long MUI horizontal form
+			@include breakpoint('sm') {
+				top: 5.6rem;
+			}
+		}
+	}
 }
