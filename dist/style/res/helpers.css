@@ -1,4 +1,4 @@
-/* Helpers */
+/* Helpers | Jan 12 4pm EM */
 .clear {
 	clear: both;
 }
@@ -13,6 +13,15 @@
 
 .inline-block {
 	display: inline-block;
+}
+
+.table,
+.display-table {
+	display: table;
+}
+
+.table-cell {
+	display: table-cell;
 }
 
 .relative {
@@ -33,13 +42,35 @@
 	right: 0;
 }
 
+.bottom-justified {
+	bottom: 0;
+}
+
+.top-justified {
+	top: 0;
+}
+
+.left-justified {
+	left: 0;
+}
+
+.right-justified {
+	right: 0;
+}
+
 .centered {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.no-wrap {
+.full {
+	width: 100%;
+}
+
+.no-wrap,
+.nowrap {
 	overflow: hidden;
+	white-space: nowrap;
 }
 
 .hidden {
@@ -145,48 +176,128 @@
 
 .bordered-left {
 	border-left-width: 0.1rem;
-	padding-right: 1rem;
+	padding-left: 1rem;
 }
 
 .bordered-right {
 	border-right-width: 0.1rem;
-	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
-.deep-blue-bg {
+/* Color Helpers */
+.bg-white {
+	background: #fff;
+}
+
+.bg-transparent-white {
+	background: rgba(255, 255, 255, 0.95);
+}
+
+.bg-transparent-deep-blue {
+	background: rgba(1, 57, 99, 0.8);
+}
+
+.bg-primary {
+	background: #337ab7;
+}
+
+.bg-success {
+	background: #dff0d8;
+}
+
+.bg-info {
+	background: #d9edf7;
+}
+
+.bg-warning {
+	background: #fcf8e3;
+}
+
+.bg-danger {
+	background: #f2dede;
+}
+
+.bg-deep-blue {
 	background: #003057;
 }
 
-.medium-blue-bg {
-	background: #004e7d;
+.bg-medium-blue {
+	background: #00629b;
 }
 
-.light-blue-bg {
+.bg-light-blue {
 	background: #0077bc;
 }
 
-.gray-bg {
+.bg-light-gray {
+	background: #e4e4e4;
+}
+
+.bg-gray {
 	background: #808285;
 }
 
-.dark-gray-bg {
+.bg-dark-gray {
 	background: #333;
 }
 
-.teal-bg {
+.bg-teal {
 	background: #009e8c;
 }
 
-.yellow-bg {
+.bg-yellow {
 	background: #faa41a;
 }
 
-.pink-bg {
+.bg-pink {
 	background: #96004d;
 }
 
-.purple-bg {
+.bg-purple {
 	background: #500778;
+}
+
+.bg-gradient-primary {
+	background: -webkit-linear-gradient(top, #083e60, #0b7ac0);
+	background: linear-gradient(180deg, #083e60 0%, #0b7ac0);
+}
+
+.bg-gradient-secondary {
+	background: -webkit-linear-gradient(top, #d4d3d3, #f1f1f1);
+	background: linear-gradient(180deg, #d4d3d3 0%, #f1f1f1);
+}
+
+.bg-gradient-success {
+	background: -webkit-linear-gradient(top, #006c5b, #00ab90);
+	background: linear-gradient(180deg, #006c5b 0%, #00ab90);
+}
+
+.bg-gradient-tertiary {
+	background: -webkit-linear-gradient(top, #e4e4e4, #9a9b9f);
+	background: linear-gradient(180deg, #e4e4e4 0%, #9a9b9f);
+}
+
+.bg-inset-gradient {
+	position: relative;
+	box-shadow: inset 0.5vw 0vw 1vw 0 #c4c2c2, inset -0.5vw 0 1vw 0 #c4c2c2;
+	background: #f7f7f7;
+}
+
+.bg-inset-gradient:after {
+	background: rgba(0, 0, 0, 0.5);
+	content: "";
+	-webkit-filter: blur(0.5rem);
+	filter: blur(0.5rem);
+	width: 102%;
+	position: absolute;
+	bottom: -2%;
+	height: 2rem;
+	left: -1%;
+	z-index: -1;
+}
+
+.bg-secondary-inset-gradient {
+	box-shadow: inset 0 2px 38px #b2b2b2, inset 0 -350px 75px #d8d8d8;
 }
 
 .text-white {
@@ -197,15 +308,18 @@
 	color: #000;
 }
 
-.text-deep-blue {
+.text-deep-blue,
+.text-primary {
 	color: #003057;
 }
 
-.text-medium-blue {
+.text-medium-blue,
+.text-secondary {
 	color: #00629b;
 }
 
-.text-light-blue {
+.text-light-blue,
+.text-info {
 	color: #0077bc;
 }
 
@@ -221,16 +335,26 @@
 	color: #009e8c;
 }
 
-.text-yellow {
+.text-yellow,
+.text-warning {
 	color: #faa41a;
 }
 
-.text-pink {
+.text-pink,
+.text-danger {
 	color: #96004d;
 }
 
 .text-purple {
 	color: #500778;
+}
+
+.text-success {
+	color: #009e3d;
+}
+
+.text-muted {
+	color: #777;
 }
 
 .font-light {
@@ -249,4 +373,167 @@
 	font-weight: 900;
 }
 
-/*# sourceMappingURL=helpers.css.map */
+.font-italic {
+	font-style: italic;
+}
+
+.underline,
+.font-underline {
+	text-decoration: underline;
+}
+
+hr.spacer {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border: 0;
+	border-top: none;
+}
+
+hr.inset {
+	width: 60%;
+}
+
+hr.black {
+	border-top: 0.1rem solid #333;
+}
+
+.fs-8 {
+	font-size: 0.8rem;
+}
+
+.fs-9 {
+	font-size: 0.9rem;
+}
+
+.fs-10 {
+	font-size: 1rem;
+}
+
+.fs-11 {
+	font-size: 1.1rem;
+}
+
+.fs-12 {
+	font-size: 1.2rem;
+}
+
+.fs-13 {
+	font-size: 1.3rem;
+}
+
+.fs-14 {
+	font-size: 1.4rem;
+}
+
+.fs-15 {
+	font-size: 1.5rem;
+}
+
+.fs-16 {
+	font-size: 1.6rem;
+}
+
+.fs-17 {
+	font-size: 1.7rem;
+}
+
+.fs-18 {
+	font-size: 1.8rem;
+}
+
+.fs-19 {
+	font-size: 1.9rem;
+}
+
+.fs-20 {
+	font-size: 2rem;
+}
+
+.fs-21 {
+	font-size: 2.1rem;
+}
+
+.fs-22 {
+	font-size: 2.2rem;
+}
+
+.fs-23 {
+	font-size: 2.3rem;
+}
+
+.fs-24 {
+	font-size: 2.4rem;
+}
+
+.fs-25 {
+	font-size: 2.5rem;
+}
+
+.fs-26 {
+	font-size: 2.6rem;
+}
+
+.fs-27 {
+	font-size: 2.7rem;
+}
+
+.fs-28 {
+	font-size: 2.8rem;
+}
+
+.fs-29 {
+	font-size: 2.9rem;
+}
+
+.fs-30 {
+	font-size: 3rem;
+}
+
+.fs-31 {
+	font-size: 3.1rem;
+}
+
+.fs-32 {
+	font-size: 3.2rem;
+}
+
+.fs-33 {
+	font-size: 3.3rem;
+}
+
+.fs-34 {
+	font-size: 3.4rem;
+}
+
+.fs-35 {
+	font-size: 3.5rem;
+}
+
+.fs-36 {
+	font-size: 3.6rem;
+}
+
+.policy-terms {
+	padding: 0.25em 0.5em;
+}
+
+.policy-terms a {
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.policy-terms a::before {
+	font-family: FontAwesome;
+	content: '\f0da';
+	margin-right: 0.5em;
+}
+
+.policy-terms a a:hover::before {
+	text-decoration: none;
+}
+
+.container-fluid .imageArtDirection {
+	margin-left: 0;
+	margin-right: 0;
+}
+

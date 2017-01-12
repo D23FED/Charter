@@ -1,247 +1,427 @@
 @import 'initialize';
-/* Helpers */
+
+/* Helpers | Jan 12 4pm EM */
+
 .clear {
-  clear: both;
+	clear: both;
 }
 
 .block {
-  display: block;
+	display: block;
 }
 
 .inline {
-  display: inline;
+	display: inline;
 }
 
 .inline-block {
-  display: inline-block;
+	display: inline-block;
+}
+
+.table,
+.display-table {
+	display: table;
+}
+
+.table-cell {
+	display: table-cell;
 }
 
 .relative {
-  position: relative;
+	position: relative;
 }
 
 .absolute {
-  position: absolute;
+	position: absolute;
 }
 
 .left {
-  float: left;
-  left: 0;
+	float: left;
+	left: 0;
 }
 
 .right {
-  float: right;
-  right: 0;
+	float: right;
+	right: 0;
+}
+
+.bottom-justified {
+	bottom: 0;
+}
+
+.top-justified {
+	top: 0;
+}
+
+.left-justified {
+	left: 0;
+}
+
+.right-justified {
+	right: 0;
 }
 
 .centered {
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.no-wrap {
-  overflow: hidden;
+.full {
+	width: 100%;
+}
+
+.no-wrap,
+.nowrap {
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .hidden {
-  display: none;
+	display: none;
 }
 
 .invisible,
 .fouc {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 .border-bottom {
-  border-bottom: 0.1rem solid #eeeeee;
+	border-bottom: 0.1rem solid #eeeeee;
 }
 
 .vertical-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .horizontal-center {
-  @include horizontal-center;
+	@include horizontal-center;
 }
 
 .absolute-center {
-  @include absolute-center;
+	@include absolute-center;
 }
 
 .text-left {
-  text-align: left;
+	text-align: left;
 }
 
 .text-center {
-  text-align: center;
-  clear: both;
+	text-align: center;
+	clear: both;
 }
 
 .text-right {
-  text-align: right;
+	text-align: right;
 }
 
 .text-bold {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .image-left {
-  float: left;
-  margin-right: 1.5rem;
+	float: left;
+	margin-right: 1.5rem;
 }
 
 .image-center {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .image-right {
-  float: right;
-  margin-left: 1.5rem;
+	float: right;
+	margin-left: 1.5rem;
 }
 
 .box {
-  margin-top: 1.5rem;
-  margin-right: 0;
-  margin-bottom: 1.5rem;
-  margin-left: 0;
-  padding: 1.5rem;
-  background: $lt-cool-grey;
+	margin-top: 1.5rem;
+	margin-right: 0;
+	margin-bottom: 1.5rem;
+	margin-left: 0;
+	padding: 1.5rem;
+	background: $lt-cool-grey;
 }
 
 .clickable {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .border-radius {
-  border-radius: $border-radius-small;
-  background-clip: padding-box;
+	border-radius: $border-radius-small;
+	background-clip: padding-box;
 }
 
 .bordered-solid,
 .bordered-dotted {
-  padding: 1.5rem;
-  border: 0.1rem solid #666;
+	padding: 1.5rem;
+	border: 0.1rem solid #666;
 }
 
 .bordered-dotted {
-  border-style: dotted;
+	border-style: dotted;
 }
 
 .bordered-left,
 .bordered-right {
-  border-color: #e1e1e1;
-  border-style: solid;
-  border-width: 0;
+	border-color: #e1e1e1;
+	border-style: solid;
+	border-width: 0;
 }
 
 .bordered-left {
-  border-left-width: 0.1rem;
-  padding-right: 1rem;
+	border-left-width: 0.1rem;
+	padding-left: 1rem;
 }
 
 .bordered-right {
-  border-right-width: 0.1rem;
-  padding-left: 1rem;
+	border-right-width: 0.1rem;
+	padding-right: 1rem;
 }
 
 // Color Helpers
-.deep-blue-bg {
-  background: $blue;
+
+/* Color Helpers */
+
+.bg-white {
+	background: #fff;
 }
 
-.medium-blue-bg {
-  background: $md-blue-fill;
+.bg-transparent-white {
+	background: rgba(255, 255, 255, 0.95);
 }
 
-.light-blue-bg {
-  background: $lt-blue;
+.bg-transparent-deep-blue {
+	background: rgba(1, 57, 99, 0.8);
 }
 
-.gray-bg {
-  background: $gray;
+.bg-primary {
+	background: #337ab7;
 }
 
-.dark-gray-bg {
-  background: $dk-gray;
+.bg-success {
+	background: #dff0d8;
 }
 
-.teal-bg {
-  background: $teal;
+.bg-info {
+	background: #d9edf7;
 }
 
-.yellow-bg {
-  background: $yellow;
+.bg-warning {
+	background: #fcf8e3;
 }
 
-.pink-bg {
-  background: $pink;
+.bg-danger {
+	background: #f2dede;
 }
 
-.purple-bg {
-  background: $purple;
+.bg-deep-blue {
+	background: $blue;
+}
+
+.bg-medium-blue {
+	background: $md-blue;
+}
+
+.bg-light-blue {
+	background: $lt-blue;
+}
+
+.bg-light-gray {
+	background: #e4e4e4;
+}
+
+.bg-gray {
+	background: $gray;
+}
+
+.bg-dark-gray {
+	background: $dk-gray;
+}
+
+.bg-teal {
+	background: $teal;
+}
+
+.bg-yellow {
+	background: $yellow;
+}
+
+.bg-pink {
+	background: $pink;
+}
+
+.bg-purple {
+	background: $purple;
+}
+
+.bg-gradient-primary {
+	background: linear-gradient(to bottom, #083e60 0%, #0b7ac0 100%);
+}
+
+.bg-gradient-secondary {
+	background: linear-gradient(to bottom, #d4d3d3 0%, #f1f1f1 100%);
+}
+
+.bg-gradient-success {
+	background: linear-gradient(to bottom, #006c5b 0%, #00ab90 100%);
+}
+
+.bg-gradient-tertiary {
+	background: linear-gradient(to bottom, #E4E4E4 0%, #9A9B9F 100%);
+}
+
+.bg-inset-gradient {
+	position: relative;
+	box-shadow: 0.5vw 0vw 1vw 0 #c4c2c2 inset, -0.5vw 0 1vw 0 #c4c2c2 inset;
+	background: #f7f7f7;
+}
+
+.bg-inset-gradient:after {
+	background: rgba(0, 0, 0, 0.5);
+	content: "";
+	filter: blur(.5rem);
+	width: 102%;
+	position: absolute;
+	bottom: -2%;
+	height: 2rem;
+	left: -1%;
+	z-index: -1;
+}
+
+.bg-secondary-inset-gradient {
+	box-shadow: 0 2px 38px #b2b2b2 inset, 0 -350px 75px #d8d8d8 inset;
 }
 
 // Font colors
 .text-white {
-  color: #fff;
+	color: #fff;
 }
 
 .text-black {
-  color: #000;
+	color: #000;
 }
 
-.text-deep-blue {
-  color: $blue;
+.text-deep-blue,
+.text-primary {
+	color: $blue;
 }
 
-.text-medium-blue {
-  color: $md-blue;
+.text-medium-blue,
+.text-secondary {
+	color: $md-blue;
 }
 
-.text-light-blue {
-  color: $lt-blue;
+.text-light-blue,
+.text-info {
+	color: $lt-blue;
 }
 
 .text-gray {
-  color: $gray;
+	color: $gray;
 }
 
 .text-dark-gray {
-  color: $dk-gray;
+	color: $dk-gray;
 }
 
 .text-teal {
-  color: $teal;
+	color: $teal;
 }
 
-.text-yellow {
-  color: $yellow;
+.text-yellow,
+.text-warning {
+	color: $yellow;
 }
 
-.text-pink {
-  color: $pink;
+.text-pink,
+.text-danger {
+	color: $pink;
 }
 
 .text-purple {
-  color: $purple;
+	color: $purple;
 }
 
+.text-success {
+	color: #009E3D;
+}
+
+.text-muted {
+	color: #777;
+}
+
+// Font variants
 .font-light {
-  font-weight: 300;
+	font-weight: 300;
 }
 
 .font-medium {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 .font-bold {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 .font-extra-bold {
-  font-weight: 900;
+	font-weight: 900;
+}
+
+.font-italic {
+	font-style: italic;
+}
+
+.underline,
+.font-underline {
+	text-decoration: underline;
+}
+
+// Horizontal rules
+hr {
+	&.spacer {
+		margin-top: 2.0rem;
+		margin-bottom: 2.0rem;
+		border: 0;
+		border-top: none;
+	}
+	&.inset {
+		width: 60%;
+	}
+	&.black {
+		border-top: 0.1rem solid $dk-gray;
+	}
+}
+
+//  Font size helpers
+@for $i from 8 through 36 {
+	$size: $i * 0.1rem;
+	.fs-#{$i} {
+		font-size: $size;
+	}
+}
+
+// Policies and Terms
+.policy-terms {
+	padding: 0.25em 0.5em;
+	a {
+		font-size: 1.4rem;
+		font-weight: 700;
+		&::before {
+			font-family: FontAwesome;
+			content: '\f0da';
+			margin-right: 0.5em;
+		}
+		a:hover::before {
+			text-decoration: none;
+		}
+	}
+}
+
+//  Fix for Core.css
+.container-fluid .imageArtDirection {
+	margin-left: 0;
+	margin-right: 0;
 }
