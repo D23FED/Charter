@@ -1,12 +1,6 @@
-/* Typography */
+/* Typography | 2017 01 13 EM */
 html {
 	font-size: 62.5%;
-}
-
-body {
-	font-family: Open Sans,Helvetica,Arial,sans-serif;
-	font-size: 1.6rem;
-	line-height: 1.5;
 }
 
 h1,
@@ -35,7 +29,7 @@ h1.alternate,
 .h1.alternate {
 	font-size: 3.6rem;
 	line-height: 1.18182;
-	font-weight: 400;
+	font-weight: 900;
 }
 
 h2,
@@ -124,19 +118,70 @@ a.color-light:hover {
 	color: #efefef;
 }
 
+a.text-white {
+	text-decoration: none;
+}
+
+a.text-white:focus,
+a.text-white:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.linkComponent a.text-white:focus,
+.linkComponent a.text-white:hover {
+	text-decoration: none;
+}
+
+.linkComponent a.text-white:focus .linkLabel,
+.linkComponent a.text-white:hover .linkLabel {
+	text-decoration: underline;
+}
+
+a.text-yellow:focus,
+a.text-yellow:hover,
+.light-color li {
+	color: #fff;
+}
+
 .disclaimer {
 	color: #808285;
 	font-size: 1.1rem;
 	line-height: 1.27273;
 }
 
-li {
-	font-size: 1.7rem;
-	line-height: 1.58824;
+[class*="icon-"] a span:after {
+	margin: 0 0.5rem;
 }
 
-.light-color li {
-	color: #fff;
+.icon-angle-right span:after {
+	font-family: FontAwesome;
+	content: '\f105';
+}
+
+.icon-angle-left span:after {
+	font-family: FontAwesome;
+	content: '\f104';
+}
+
+.icon-angle-up span:after {
+	font-family: FontAwesome;
+	content: '\f106';
+}
+
+.icon-angle-down span:after {
+	font-family: FontAwesome;
+	content: '\f107';
+}
+
+.icon-double-angle-left span:after {
+	font-family: FontAwesome;
+	content: '\f100';
+}
+
+.icon-double-angle-right span:after {
+	font-family: FontAwesome;
+	content: '\f101';
 }
 
 @media (min-width: 768px) {
@@ -202,11 +247,6 @@ li {
 	h6.alternate,
 	.h6.alternate {
 		font-size: 2.4rem;
-	}
-
-	li {
-		font-size: 2.1rem;
-		line-height: 1.2381;
 	}
 }
 
