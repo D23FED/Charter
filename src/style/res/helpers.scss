@@ -1,73 +1,16 @@
+/* Helpers | Jan 13 9am EM */
 @import 'initialize';
-/* Helpers */
-.clear {
-  clear: both;
-}
+@import 'helpers/display';
+@import 'helpers/position';
+@import 'helpers/spacing';
+@import 'helpers/borders';
+@import 'helpers/colors';
+@import 'helpers/fonts';
 
-.block {
-  display: block;
-}
-
-.inline {
-  display: inline;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.left {
-  float: left;
-  left: 0;
-}
-
-.right {
-  float: right;
-  right: 0;
-}
-
-.centered {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.no-wrap {
+.no-wrap,
+.nowrap {
   overflow: hidden;
-}
-
-.hidden {
-  display: none;
-}
-
-.invisible,
-.fouc {
-  visibility: hidden;
-}
-
-.border-bottom {
-  border-bottom: 0.1rem solid #eeeeee;
-}
-
-.vertical-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.horizontal-center {
-  @include horizontal-center;
-}
-
-.absolute-center {
-  @include absolute-center;
+  white-space: nowrap;
 }
 
 .text-left {
@@ -103,145 +46,67 @@
   margin-left: 1.5rem;
 }
 
-.box {
-  margin-top: 1.5rem;
-  margin-right: 0;
-  margin-bottom: 1.5rem;
+//  Fix for Core.css
+.container-fluid .imageArtDirection {
   margin-left: 0;
-  padding: 1.5rem;
-  background: $lt-cool-grey;
+  margin-right: 0;
 }
 
 .clickable {
   cursor: pointer;
 }
 
-.border-radius {
-  border-radius: $border-radius-small;
-  background-clip: padding-box;
+// Horizontal rules
+hr {
+  &.spacer {
+    margin-top: 2.0rem;
+    margin-bottom: 2.0rem;
+    border: 0;
+    border-top: none;
+  }
+
+  &.inset {
+    width: 60%;
+  }
+
+  &.black {
+    border-top: 0.1rem solid $dk-gray;
+  }
 }
 
-.bordered-solid,
-.bordered-dotted {
-  padding: 1.5rem;
-  border: 0.1rem solid #666;
+// Policies and Terms
+.policy-terms {
+  padding: 0.5rem 1rem;
+
+  a {
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    &::before {
+      font-family: FontAwesome;
+      content: '\f0da';
+      margin-right: 0.5em;
+    }
+
+    // a:hover::before {
+    //   text-decoration: none;
+    // }
+  }
 }
 
-.bordered-dotted {
-  border-style: dotted;
-}
 
-.bordered-left,
-.bordered-right {
-  border-color: #e1e1e1;
-  border-style: solid;
-  border-width: 0;
-}
+// Lists
+.bullets-blue {
+  list-style: none;
+  padding-left: 1em;
 
-.bordered-left {
-  border-left-width: 0.1rem;
-  padding-right: 1rem;
-}
-
-.bordered-right {
-  border-right-width: 0.1rem;
-  padding-left: 1rem;
-}
-
-// Color Helpers
-.deep-blue-bg {
-  background: $blue;
-}
-
-.medium-blue-bg {
-  background: $md-blue-fill;
-}
-
-.light-blue-bg {
-  background: $lt-blue;
-}
-
-.gray-bg {
-  background: $gray;
-}
-
-.dark-gray-bg {
-  background: $dk-gray;
-}
-
-.teal-bg {
-  background: $teal;
-}
-
-.yellow-bg {
-  background: $yellow;
-}
-
-.pink-bg {
-  background: $pink;
-}
-
-.purple-bg {
-  background: $purple;
-}
-
-// Font colors
-.text-white {
-  color: #fff;
-}
-
-.text-black {
-  color: #000;
-}
-
-.text-deep-blue {
-  color: $blue;
-}
-
-.text-medium-blue {
-  color: $md-blue;
-}
-
-.text-light-blue {
-  color: $lt-blue;
-}
-
-.text-gray {
-  color: $gray;
-}
-
-.text-dark-gray {
-  color: $dk-gray;
-}
-
-.text-teal {
-  color: $teal;
-}
-
-.text-yellow {
-  color: $yellow;
-}
-
-.text-pink {
-  color: $pink;
-}
-
-.text-purple {
-  color: $purple;
-}
-
-.font-light {
-  font-weight: 300;
-}
-
-.font-medium {
-  font-weight: 400;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.font-extra-bold {
-  font-weight: 900;
+  li::before {
+    content: '\2022';
+    display: block;
+    position: relative;
+    max-height: 0;
+    left: -1em;
+    color: #0091e6;
+    font-size: 1em;
+  }
 }

@@ -1,0 +1,44 @@
+.border-bottom {
+	border-bottom: 0.1rem solid #eeeeee;
+}
+
+.border-radius {
+	border-radius: $border-radius-small;
+	background-clip: padding-box;
+}
+
+.bordered-solid,
+.bordered-dotted {
+	padding: 1.5rem;
+	border: 0.1rem solid #666;
+}
+
+.bordered-dotted {
+	border-style: dotted;
+}
+
+.bordered-left,
+.bordered-right {
+	border-color: #e1e1e1;
+	border-style: solid;
+	border-width: 0;
+}
+
+.bordered-left {
+	border-left-width: 0.1rem;
+	padding-left: 1rem;
+}
+
+.bordered-right {
+	border-right-width: 0.1rem;
+	padding-right: 1rem;
+}
+
+.box {
+	margin-top: 1.5rem;
+	margin-right: 0;
+	margin-bottom: 1.5rem;
+	margin-left: 0;
+	padding: 1.5rem;
+	background: $lt-cool-grey;
+}
