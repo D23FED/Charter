@@ -76,7 +76,7 @@ hr {
 
 // Policies and Terms
 .policy-terms {
-  padding: 0.25em 0.5em;
+  padding: 0.5rem 1rem;
 
   a {
     font-size: 1.4rem;
@@ -88,9 +88,9 @@ hr {
       margin-right: 0.5em;
     }
 
-    a:hover::before {
-      text-decoration: none;
-    }
+    // a:hover::before {
+    //   text-decoration: none;
+    // }
   }
 }
 

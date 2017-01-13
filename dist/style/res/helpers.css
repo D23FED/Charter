@@ -926,7 +926,7 @@ hr.black {
 }
 
 .policy-terms {
-	padding: 0.25em 0.5em;
+	padding: 0.5rem 1rem;
 }
 
 .policy-terms a {
@@ -938,10 +938,6 @@ hr.black {
 	font-family: FontAwesome;
 	content: '\f0da';
 	margin-right: 0.5em;
-}
-
-.policy-terms a a:hover::before {
-	text-decoration: none;
 }
 
 .bullets-blue {
