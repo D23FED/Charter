@@ -1,4 +1,4 @@
-/* Helpers | Jan 12 4:21pm EM */
+/* Helpers | Jan 13 9am EM */
 .clear {
 	clear: both;
 }
@@ -22,6 +22,15 @@
 
 .table-cell {
 	display: table-cell;
+}
+
+.hidden {
+	display: none;
+}
+
+.invisible,
+.fouc {
+	visibility: hidden;
 }
 
 .relative {
@@ -63,29 +72,6 @@
 	margin-right: auto;
 }
 
-.full {
-	width: 100%;
-}
-
-.no-wrap,
-.nowrap {
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-.hidden {
-	display: none;
-}
-
-.invisible,
-.fouc {
-	visibility: hidden;
-}
-
-.border-bottom {
-	border-bottom: 0.1rem solid #eeeeee;
-}
-
 .vertical-center {
 	position: relative;
 	top: 50%;
@@ -111,47 +97,402 @@
 	transform: translate(-50%, -50%);
 }
 
-.text-left {
-	text-align: left;
+.full {
+	width: 100%;
 }
 
-.text-center {
-	text-align: center;
-	clear: both;
+.m-0 {
+	margin: 0;
 }
 
-.text-right {
-	text-align: right;
+.mt-0 {
+	margin-top: 0;
 }
 
-.text-bold {
-	font-weight: 700;
+.mr-0 {
+	margin-right: 0;
 }
 
-.image-left {
-	float: left;
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.ml-0,
+.mx-0 {
+	margin-left: 0;
+}
+
+.mx-0 {
+	margin-right: 0;
+}
+
+.my-0 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.m-5 {
+	margin: 0.5rem;
+}
+
+.mt-5 {
+	margin-top: 0.5rem;
+}
+
+.mr-5 {
+	margin-right: 0.5rem;
+}
+
+.mb-5 {
+	margin-bottom: 0.5rem;
+}
+
+.ml-5,
+.mx-5 {
+	margin-left: 0.5rem;
+}
+
+.mx-5 {
+	margin-right: 0.5rem;
+}
+
+.my-5 {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.m-10 {
+	margin: 1rem;
+}
+
+.mt-10 {
+	margin-top: 1rem;
+}
+
+.mr-10 {
+	margin-right: 1rem;
+}
+
+.mb-10 {
+	margin-bottom: 1rem;
+}
+
+.ml-10,
+.mx-10 {
+	margin-left: 1rem;
+}
+
+.mx-10 {
+	margin-right: 1rem;
+}
+
+.my-10 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.m-15 {
+	margin: 1.5rem;
+}
+
+.mt-15 {
+	margin-top: 1.5rem;
+}
+
+.mr-15 {
 	margin-right: 1.5rem;
 }
 
-.image-center {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+.mb-15 {
+	margin-bottom: 1.5rem;
 }
 
-.image-right {
-	float: right;
+.ml-15,
+.mx-15 {
 	margin-left: 1.5rem;
 }
 
-.box {
-	margin: 1.5rem 0;
-	padding: 1.5rem;
-	background: #e7eef4;
+.mx-15 {
+	margin-right: 1.5rem;
 }
 
-.clickable {
-	cursor: pointer;
+.my-15 {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.m-20 {
+	margin: 2rem;
+}
+
+.mt-20 {
+	margin-top: 2rem;
+}
+
+.mr-20 {
+	margin-right: 2rem;
+}
+
+.mb-20 {
+	margin-bottom: 2rem;
+}
+
+.ml-20,
+.mx-20 {
+	margin-left: 2rem;
+}
+
+.mx-20 {
+	margin-right: 2rem;
+}
+
+.my-20 {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.m-25 {
+	margin: 2.5rem;
+}
+
+.mt-25 {
+	margin-top: 2.5rem;
+}
+
+.mr-25 {
+	margin-right: 2.5rem;
+}
+
+.mb-25 {
+	margin-bottom: 2.5rem;
+}
+
+.ml-25,
+.mx-25 {
+	margin-left: 2.5rem;
+}
+
+.mx-25 {
+	margin-right: 2.5rem;
+}
+
+.my-25 {
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+.p-0 {
+	padding: 0;
+}
+
+.pt-0 {
+	padding-top: 0;
+}
+
+.pr-0 {
+	padding-right: 0;
+}
+
+.pb-0 {
+	padding-bottom: 0;
+}
+
+.pl-0,
+.px-0 {
+	padding-left: 0;
+}
+
+.px-0 {
+	padding-right: 0;
+}
+
+.py-0 {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.p-5 {
+	padding: 0.5rem;
+}
+
+.pt-5 {
+	padding-top: 0.5rem;
+}
+
+.pr-5 {
+	padding-right: 0.5rem;
+}
+
+.pb-5 {
+	padding-bottom: 0.5rem;
+}
+
+.pl-5,
+.px-5 {
+	padding-left: 0.5rem;
+}
+
+.px-5 {
+	padding-right: 0.5rem;
+}
+
+.py-5 {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.p-10 {
+	padding: 1rem;
+}
+
+.pt-10 {
+	padding-top: 1rem;
+}
+
+.pr-10 {
+	padding-right: 1rem;
+}
+
+.pb-10 {
+	padding-bottom: 1rem;
+}
+
+.pl-10,
+.px-10 {
+	padding-left: 1rem;
+}
+
+.px-10 {
+	padding-right: 1rem;
+}
+
+.py-10 {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.p-15 {
+	padding: 1.5rem;
+}
+
+.pt-15 {
+	padding-top: 1.5rem;
+}
+
+.pr-15 {
+	padding-right: 1.5rem;
+}
+
+.pb-15 {
+	padding-bottom: 1.5rem;
+}
+
+.pl-15,
+.px-15 {
+	padding-left: 1.5rem;
+}
+
+.px-15 {
+	padding-right: 1.5rem;
+}
+
+.py-15 {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.p-20 {
+	padding: 2rem;
+}
+
+.pt-20 {
+	padding-top: 2rem;
+}
+
+.pr-20 {
+	padding-right: 2rem;
+}
+
+.pb-20 {
+	padding-bottom: 2rem;
+}
+
+.pl-20,
+.px-20 {
+	padding-left: 2rem;
+}
+
+.px-20 {
+	padding-right: 2rem;
+}
+
+.py-20 {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.p-25 {
+	padding: 2.5rem;
+}
+
+.pt-25 {
+	padding-top: 2.5rem;
+}
+
+.pr-25 {
+	padding-right: 2.5rem;
+}
+
+.pb-25 {
+	padding-bottom: 2.5rem;
+}
+
+.pl-25,
+.px-25 {
+	padding-left: 2.5rem;
+}
+
+.px-25 {
+	padding-right: 2.5rem;
+}
+
+.py-25 {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+.m-auto {
+	margin: auto;
+}
+
+.mt-auto {
+	margin-top: auto;
+}
+
+.mr-auto {
+	margin-right: auto;
+}
+
+.mb-auto {
+	margin-bottom: auto;
+}
+
+.ml-auto,
+.mx-auto {
+	margin-left: auto;
+}
+
+.mx-auto {
+	margin-right: auto;
+}
+
+.my-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.border-bottom {
+	border-bottom: 0.1rem solid #eeeeee;
 }
 
 .border-radius {
@@ -182,6 +523,12 @@
 .bordered-right {
 	border-right-width: 0.1rem;
 	padding-right: 1rem;
+}
+
+.box {
+	margin: 1.5rem 0;
+	padding: 1.5rem;
+	background: #e7eef4;
 }
 
 /* Color Helpers */
@@ -399,21 +746,6 @@
 	text-decoration: underline;
 }
 
-hr.spacer {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	border: 0;
-	border-top: none;
-}
-
-hr.inset {
-	width: 60%;
-}
-
-hr.black {
-	border-top: 0.1rem solid #333;
-}
-
 .fs-8 {
 	font-size: 0.8rem;
 }
@@ -530,6 +862,69 @@ hr.black {
 	font-size: 3.6rem;
 }
 
+.no-wrap,
+.nowrap {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+	clear: both;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.image-left {
+	float: left;
+	margin-right: 1.5rem;
+}
+
+.image-center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.image-right {
+	float: right;
+	margin-left: 1.5rem;
+}
+
+.container-fluid .imageArtDirection {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+hr.spacer {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border: 0;
+	border-top: none;
+}
+
+hr.inset {
+	width: 60%;
+}
+
+hr.black {
+	border-top: 0.1rem solid #333;
+}
+
 .policy-terms {
 	padding: 0.25em 0.5em;
 }
@@ -547,11 +942,6 @@ hr.black {
 
 .policy-terms a a:hover::before {
 	text-decoration: none;
-}
-
-.container-fluid .imageArtDirection {
-	margin-left: 0;
-	margin-right: 0;
 }
 
 .bullets-blue {

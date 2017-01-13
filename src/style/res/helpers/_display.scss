@@ -1,0 +1,33 @@
+.clear {
+	clear: both;
+}
+
+.block {
+	display: block;
+}
+
+.inline {
+	display: inline;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.table,
+.display-table {
+	display: table;
+}
+
+.table-cell {
+	display: table-cell;
+}
+
+.hidden {
+	display: none;
+}
+
+.invisible,
+.fouc {
+	visibility: hidden;
+}

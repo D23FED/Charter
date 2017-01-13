@@ -8,23 +8,7 @@ $text-gradient-fallback-color: $lt-blue;
 $text-gradient-start-color: #4ab3f1;
 $text-gradient-end-color: $md-blue;
 
-@mixin gradient-text-blue {
-  color: $text-gradient-fallback-color;
-  background-image: none;
 
-  // @supports should be avoided but so should -webkit-background-clip
-  @supports (
-  	( (-webkit-background-clip: text) or (background-clip: text) ) and
-  	( (-webkit-text-fill-color: transparent) or (text-fill-color: transparent) )
-	) {
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-repeat: repeat-x;
-    background-image: linear-gradient(to bottom, $text-gradient-start-color 0, $text-gradient-end-color 100%);
-  }
-}
 @import 'base';
 @import 'double';
 @import 'style-01';
