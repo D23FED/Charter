@@ -17,6 +17,10 @@
 	white-space: normal;
 }
 
+.site-header .site-header-top-05 {
+	background-color: transparent;
+}
+
 /* Section of the header above the primary nav menuc*/
 .site-header .site-header-top {
 	background-color: #fff;

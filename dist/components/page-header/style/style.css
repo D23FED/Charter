@@ -326,6 +326,10 @@
 	white-space: normal;
 }
 
+.site-header .site-header-top-05 {
+	background-color: transparent;
+}
+
 @media (min-width: 768px) {
 	.site-header .menu-sm {
 		display: none;

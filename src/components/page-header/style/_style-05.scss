@@ -34,4 +34,7 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
 			white-space: initial;
 		}
 	}
+	#{$page-header} & {
+		background-color: transparent;
+	}
 }
