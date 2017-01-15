@@ -14,9 +14,9 @@ html {
 }
 
 body {
-	// font-family: $font-open-sans;
-	// font-size: 1.6rem;
-	// line-height: 1.5;
+	font-family: $font-open-sans;
+	font-size: 1.6rem;
+	line-height: 1.5;
 }
 
 // Headings
@@ -248,4 +248,16 @@ li {
 
 .icon-double-angle-right span:after {
 	font-awesome: angle-double-right;
+}
+
+// Fix for container component padding
+@media (max-width: 767px) {
+	.container {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+	main.container {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
