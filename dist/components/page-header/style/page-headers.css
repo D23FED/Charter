@@ -22,6 +22,18 @@
 	position: relative;
 }
 
+/* Brand logo */
+.site-header .site-logo img {
+	float: left;
+	padding-top: 1.5rem;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.site-header .site-logo p {
+	margin: 0;
+}
+
 /* Show/hide menu elements responsively, target elements at specific browser widths */
 
 /* Temporary styles for display while authoring, remove for prod */
@@ -124,6 +136,7 @@
 	margin-top: 1rem;
 	-webkit-transition: background 150ms ease-out;
 	transition: background 150ms ease-out;
+	margin-right: 0;
 }
 
 /* Fixes for Primary Navigation (button-style) */
@@ -148,7 +161,8 @@
 
 /* Fixes for Brand logo */
 .site-header .site-logo .image {
-	padding-bottom: 2rem;
+	padding: 0;
+	float: none;
 }
 
 /* Form: ZIP code/Localization */
@@ -254,6 +268,42 @@
 	position: relative;
 	right: auto;
 	top: auto;
+}
+
+.site-header .my-services-menu .aem-Grid,
+.site-header .support-menu .aem-Grid {
+	background: -webkit-linear-gradient(top, #fff 80%, #dfe5e5) repeat 0 0;
+	background: linear-gradient(180deg, #fff 80%, #dfe5e5) repeat 0 0;
+	display: none;
+	height: 30rem;
+	margin: 0;
+	padding: 1rem;
+	text-align: left;
+	top: auto;
+	z-index: 150;
+	box-shadow: 0 .4rem .5rem -.1rem #333;
+}
+
+.site-header .my-services-menu ul,
+.site-header .support-menu ul {
+	list-style-type: none;
+	list-style-position: inside;
+	margin: 0;
+	padding: 0;
+}
+
+.site-header .my-services-menu li a,
+.site-header .support-menu li a {
+	padding-left: 5px;
+	font-size: 1.2rem;
+	color: #333;
+}
+
+.site-header .my-services-menu h3,
+.site-header .support-menu h3 {
+	font-size: 2rem;
+	color: #333;
+	font-weight: 400;
 }
 
 .site-header .aem-Grid-newComponent {

@@ -862,6 +862,44 @@
 	font-size: 3.6rem;
 }
 
+.btn-dk-orange .btn {
+	position: relative;
+	width: 100%;
+	background-color: #f66200;
+	border: none;
+	text-transform: uppercase;
+	text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+	box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
+	font-weight: 700;
+	font-size: 2rem;
+	background-image: none;
+}
+
+.btn-dk-orange .btn:focus,
+.btn-dk-orange .btn:hover {
+	background-color: #dd5800;
+}
+
+.btn-dk-orange .btn:active {
+	box-shadow: none;
+}
+
+.btn-dk-orange .btn:active::after {
+	display: none;
+}
+
+.btn-dk-orange .btn::after {
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-image: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, 0.6) 0, transparent 75%);
+	background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, transparent 75%);
+	position: absolute;
+	left: 0;
+	bottom: -1.5rem;
+	z-index: -1;
+}
+
 .no-wrap,
 .nowrap {
 	overflow: hidden;

@@ -1,0 +1,36 @@
+// Dark orange button
+$btn-color: #f66200;
+$btn-hover-color: #dd5800;
+.btn-dk-orange {
+	.btn {
+		position: relative;
+		width: 100%;
+		background-color: $btn-color;
+		border: none;
+		text-transform: uppercase;
+		text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.75);
+		box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 0.33);
+		font-weight: 700;
+		font-size: 2rem;
+		background-image: none;
+		@include hover-focus {
+			background-color: $btn-hover-color;
+		}
+		&:active {
+			box-shadow: none;
+			&::after {
+				display: none;
+			}
+		}
+		&::after {
+			content: "";
+			height: 100%;
+			width: 100%;
+			background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
+			position: absolute;
+			left: 0;
+			bottom: -1.5rem;
+			z-index: -1;
+		}
+	}
+}

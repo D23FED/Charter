@@ -5,7 +5,13 @@
 	img {
 		float: left;
 		padding-top: $logo-spacing-v;
-		padding-bottom: $logo-spacing-v;
+		padding-bottom: 0;
 		margin-bottom: 0;
+		@include breakpoint('sm') {
+			// padding-bottom: $logo-spacing-v;
+		}
+	}
+	p {
+		margin: 0;
 	}
 }
