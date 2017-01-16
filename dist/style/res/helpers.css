@@ -1,4 +1,4 @@
-/* Helpers | Jan 13 9am EM */
+/* Helpers | Jan 16 */
 .clear {
 	clear: both;
 }
@@ -954,5 +954,23 @@ hr.black {
 	color: #0091e6;
 	font-size: 1em;
 }
+
+/* Fix for accordion issues - Charter Jira 1290 */
+.accordion .accordion-simple .accordion-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.accordion .accordion-simple .accordion-header::before {
+	margin-right: 1rem;
+}
+
+/* End Fix for accordion issues - Charter Jira 1290 */
 
 /*# sourceMappingURL=helpers.css.map */

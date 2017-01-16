@@ -1,4 +1,4 @@
-/* Helpers | Jan 13 9am EM */
+/* Helpers | Jan 16 */
 @import 'initialize';
 @import 'helpers/display';
 @import 'helpers/position';
@@ -110,3 +110,5 @@ hr {
     font-size: 1em;
   }
 }
+
+@import 'helpers/fix-accordion';
