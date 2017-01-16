@@ -1,0 +1,17 @@
+@import 'initialize';
+.phone-main {
+	position: absolute;
+	line-height: 1;
+	top: 1.5rem;
+	right: 1.5rem;
+	a {
+		color: #88C657;
+		text-decoration: none;
+		display: block;
+		font-weight: bold;
+		font-size: 1.8rem;
+		@include breakpoint('sm') {
+			font-size: 4.7rem;
+		}
+	}
+}
