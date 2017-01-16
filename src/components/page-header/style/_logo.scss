@@ -2,10 +2,10 @@
 /* Brand logo */
 }
 .#{$logo} {
-	.image {
+	img {
 		float: left;
-		padding-top: 2.0rem;
-		padding-bottom: 2.0rem;
+		padding-top: $logo-spacing-v;
+		padding-bottom: $logo-spacing-v;
 		margin-bottom: 0;
 	}
 }
