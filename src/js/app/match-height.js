@@ -12,5 +12,6 @@ var matchHeight = function(el) {
 	})
 }
 $(function() {
-	matchHeight('.equal-height');
+	matchHeight('.equal-height-top2');
+	matchHeight('.equal-height-bottom4');
 })
