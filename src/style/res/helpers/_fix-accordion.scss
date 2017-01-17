@@ -1,4 +1,6 @@
+@at-root {
 /* Fix for accordion issues - Charter Jira 1290 */
+}
 .accordion .accordion-simple .accordion-header {
 	display: flex;
 	align-items: center;
@@ -6,4 +8,6 @@
 .accordion .accordion-simple .accordion-header::before {
 	margin-right: 1rem;
 }
+@at-root {
 /* End Fix for accordion issues - Charter Jira 1290 */
+}

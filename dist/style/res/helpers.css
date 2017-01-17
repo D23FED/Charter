@@ -864,7 +864,7 @@
 
 .btn-dk-orange .btn {
 	position: relative;
-	width: 100%;
+	width: 85%;
 	background-color: #f66200;
 	border: none;
 	text-transform: uppercase;
@@ -967,15 +967,29 @@ hr.black {
 	padding: 0.5rem 1rem;
 }
 
+.policy-terms .linkComponent {
+	background-color: #00629b;
+	margin-bottom: 0.2rem;
+}
+
+.policy-terms .spacer {
+	display: none;
+}
+
 .policy-terms a {
 	font-size: 1.4rem;
 	font-weight: 700;
+	padding-left: 0.5rem;
 }
 
 .policy-terms a::before {
 	font-family: FontAwesome;
 	content: '\f0da';
 	margin-right: 0.5em;
+}
+
+div.policy-terms {
+	background-color: transparent;
 }
 
 .bullets-blue {

@@ -1,4 +1,4 @@
-/* Helpers | Jan 16 */
+/* Helpers | Jan 17 */
 @import 'initialize';
 @import 'helpers/display';
 @import 'helpers/position';
@@ -6,7 +6,9 @@
 @import 'helpers/borders';
 @import 'helpers/colors';
 @import 'helpers/fonts';
-@import 'helpers/btn-dk-orange';
+@import 'helpers/buttons';
+@import 'helpers/terms';
+@import 'helpers/fix-accordion';
 
 .no-wrap,
 .nowrap {
@@ -75,25 +77,6 @@ hr {
   }
 }
 
-// Policies and Terms
-.policy-terms {
-  padding: 0.5rem 1rem;
-
-  a {
-    font-size: 1.4rem;
-    font-weight: 700;
-
-    &::before {
-      font-family: FontAwesome;
-      content: '\f0da';
-      margin-right: 0.5em;
-    }
-
-    // a:hover::before {
-    //   text-decoration: none;
-    // }
-  }
-}
 
 
 // Lists
@@ -112,4 +95,3 @@ hr {
   }
 }
 
-@import 'helpers/fix-accordion';

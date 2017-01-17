@@ -1,0 +1,24 @@
+// Policies and Terms
+.policy-terms {
+	padding: 0.5rem 1rem;
+	.linkComponent {
+		background-color: $md-blue;
+		margin-bottom: 0.2rem;
+	}
+	.spacer {
+		display: none;
+	}
+	a {
+		font-size: 1.4rem;
+		font-weight: 700;
+		padding-left: 0.5rem;
+		&::before {
+			font-awesome: caret-right;
+			margin-right: 0.5em;
+		}
+	}
+}
+
+div.policy-terms {
+	background-color: transparent;
+}
