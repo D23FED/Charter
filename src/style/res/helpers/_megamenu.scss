@@ -1,4 +1,6 @@
-// Megamenu
+@at-root {
+/* Megamenu */
+}
 .my-services-menu,
 .support-menu {
 	.aem-Grid {
@@ -7,11 +9,8 @@
 		height: 30rem;
 		margin: 0;
 		padding: 1rem;
-		// position: absolute;
-		// right: -18.0rem;
 		text-align: left;
 		top: auto;
-		// width: 88.0rem;
 		z-index: 150;
 		box-shadow: 0px .4rem .5rem -.1rem #333;
 	}
