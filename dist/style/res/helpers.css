@@ -1,4 +1,4 @@
-/* Helpers | Jan 17 */
+/* Helpers | Jan 18 */
 /* Display */
 .clear {
 	clear: both;
@@ -765,6 +765,10 @@
 	text-decoration: underline;
 }
 
+.underline-none a {
+	text-decoration: none;
+}
+
 .fs-8 {
 	font-size: 0.8rem;
 }
@@ -927,6 +931,12 @@
 	left: 0;
 	bottom: -1.5rem;
 	z-index: -1;
+}
+
+.icon-remove-sign:after {
+	font-family: FontAwesome;
+	content: '\F057';
+	color: #c0c0c0;
 }
 
 .policy-terms {

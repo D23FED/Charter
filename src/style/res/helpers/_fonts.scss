@@ -26,6 +26,11 @@
 	text-decoration: underline;
 }
 
+.underline-none {
+	a {
+		text-decoration: none;
+	}
+}
 //  Font size helpers
 @for $i from 8 through 36 {
 	$size: $i * 0.1rem;

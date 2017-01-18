@@ -35,12 +35,15 @@ popover.init = function() {
 	// console.info('popover domready');
 	// Popover containing menu of contact info
 	popover.$menuContact = $('.popover-contact');
+	popover.$btnClose = $('.popover-contact-xref .close-message');
 	// User navigation menu
 	popover.$userNavItems = $('.nav-user ul.list-inline li');
 	// Contact Us nav menu item
 	popover.$menuItemContact = popover.$userNavItems.eq(1);
 	// Append popover
 	popover.$menuItemContact.append(popover.$menuContact);
+	// Append close button
+	popover.$menuContact.append(popover.$btnClose);
 	// Menu item click
 	popover.$menuItemContact.on('click touchend', function(e) {
 		e.preventDefault();
