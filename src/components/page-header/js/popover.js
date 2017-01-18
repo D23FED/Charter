@@ -6,7 +6,7 @@ var popover = {
 	// Open popover
 	open: function() {
 		console.info('open Contact');
-		$('.popover-contact').show();
+		$('.popover-contact').show().attr('aria-hidden',false);
 		$('body').addClass(popover.activeClass);
 		popoverContactIsOpen = true;
 		console.info('Popover width after open:' + $('.popover-contact').width());
@@ -14,7 +14,7 @@ var popover = {
 	// Close popover
 	close: function() {
 		console.info('close Contact');
-		$('.popover-contact').hide();
+		$('.popover-contact').hide().attr('aria-hidden',true);
 		$('body').removeClass(popover.activeClass);
 		popoverContactIsOpen = false;
 	},
@@ -40,17 +40,10 @@ popover.init = function() {
 	$userNavItems = $('.nav-user ul.list-inline li');
 	// Contact Us nav menu item
 	$menuItemContact = $userNavItems.eq(1);
-	menuItemW = $menuItemContact.width();
-	menuItemH = $menuItemContact.height();
-	menuItemX = $menuItemContact.offset().left + parseInt($menuItemContact.css('padding-left'));
 	// Append popover
 	$menuItemContact.append($menuContact);
 	// Popover width
-	popoverW = $('.popover-contact').width();
-	wDiff = popoverW - menuItemW;
 	popoverContactIsOpen = false;
-	// Set popover's position based on nav menu item position
-	$('.popover-contact').css('left', menuItemX);
 	// Menu item click
 	$menuItemContact.on('click touchend', function(e) {
 		e.preventDefault();
@@ -61,22 +54,20 @@ popover.init = function() {
 		popover.close();
 		// if menu not open
 		if (open !== true) {
-			// Set menu left to nav menu item position, ignoring padding
-			menuItemX = $menuItemContact.offset().left;
+			// menuItemX = $menuItemContact.offset().left;
 			menuItemH = $menuItemContact.height();
+			// menuItemPadding = parseInt($menuItemContact.css('padding-left'));
 			// Height of "arrow" in px on outside of box to make it look like a word bubble
 			menuArrowH = 9;
-			menuItemPadding = parseInt($menuItemContact.css('padding-left'));
-			siteHeaderOffset = $('.site-header-top').offset().left;
-			popoverX = (menuItemX + menuItemPadding) - siteHeaderOffset;
+			// siteHeaderOffset = $('.site-header-top').offset().left;
+			// x and y position of popover menu
+			// popoverX = (menuItemX + menuItemPadding) - siteHeaderOffset;
 			popoverY = menuItemH + menuArrowH;
-			$('.popover-contact').css('left', popoverX);
+			// Set menu left to nav menu item position, ignoring padding
+			// $('.popover-contact').css('left', popoverX);
 			// Set menu top to nav menu item height, plus height of "arrow" on top center of box around the nav menu
 			$('.popover-contact').css('top', popoverY);
-			console.info('log: ', 'menuItemX ' + menuItemX);
-			console.info('Popover width after click:' + $('.popover-contact').width());
 			popover.open();
-			console.info('Popover width after click & open:' + $('.popover-contact').width());
 		}
 		console.groupEnd();
 	});
@@ -87,7 +78,6 @@ popover.init = function() {
 		}
 	})
 }
-
 // Wait for popover Xref to load, then initialize script
 $(function() {
 	popover.whenAvailable('.popover-contact', popover.init);
