@@ -34,15 +34,15 @@ popover.whenAvailable = function(name, callback) {
 popover.init = function() {
 	// console.info('popover domready');
 	// Popover containing menu of contact info
-	$menuContact = $('.popover-contact');
+	popover.$menuContact = $('.popover-contact');
 	// User navigation menu
-	$userNavItems = $('.nav-user ul.list-inline li');
+	popover.$userNavItems = $('.nav-user ul.list-inline li');
 	// Contact Us nav menu item
-	$menuItemContact = $userNavItems.eq(1);
+	popover.$menuItemContact = popover.$userNavItems.eq(1);
 	// Append popover
-	$menuItemContact.append($menuContact);
+	popover.$menuItemContact.append(popover.$menuContact);
 	// Menu item click
-	$menuItemContact.on('click touchend', function(e) {
+	popover.$menuItemContact.on('click touchend', function(e) {
 		e.preventDefault();
 		// console.group();
 		// console.info('click Contact Us');
@@ -51,19 +51,19 @@ popover.init = function() {
 		popover.close();
 		// if menu was not open
 		if (openState !== true) {
-			// menuItemX = $menuItemContact.offset().left;
-			menuItemH = $menuItemContact.height();
-			// menuItemPadding = parseInt($menuItemContact.css('padding-left'));
+			// menuItemX = popover.$menuItemContact.offset().left;
+			popover.menuItemH = popover.$menuItemContact.height();
+			// menuItemPadding = parseInt(popover.$menuItemContact.css('padding-left'));
 			// Height of "arrow" in px on outside of box to make it look like a word bubble
-			menuArrowH = 9;
+			popover.menuArrowH = 9;
 			// siteHeaderOffset = $('.site-header-top').offset().left;
 			// x and y position of popover menu
 			// popoverX = (menuItemX + menuItemPadding) - siteHeaderOffset;
-			popoverY = menuItemH + menuArrowH;
+			popover.popoverY = popover.menuItemH + popover.menuArrowH;
 			// Set menu left to nav menu item position, ignoring padding
 			// $('.popover-contact').css('left', popoverX);
 			// Set menu top to nav menu item height, plus height of "arrow" on top center of box around the nav menu
-			$('.popover-contact').css('top', popoverY);
+			popover.$menuContact.css('top', popover.popoverY);
 			popover.open();
 		}
 		// console.groupEnd();
