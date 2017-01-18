@@ -1,4 +1,5 @@
-/* Helpers | Jan 13 9am EM */
+/* Helpers | Jan 17 */
+/* Display */
 .clear {
 	clear: both;
 }
@@ -24,6 +25,20 @@
 	display: table-cell;
 }
 
+.display-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.display-inline-flex {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
 .hidden {
 	display: none;
 }
@@ -33,6 +48,7 @@
 	visibility: hidden;
 }
 
+/* Position */
 .relative {
 	position: relative;
 }
@@ -101,6 +117,7 @@
 	width: 100%;
 }
 
+/* Margin and Padding */
 .m-0 {
 	margin: 0;
 }
@@ -491,6 +508,7 @@
 	margin-bottom: auto;
 }
 
+/* Borders */
 .border-bottom {
 	border-bottom: 0.1rem solid #eeeeee;
 }
@@ -721,6 +739,7 @@
 	}
 }
 
+/* Type variants */
 .font-light {
 	font-weight: 300;
 }
@@ -862,6 +881,100 @@
 	font-size: 3.6rem;
 }
 
+/* Buttons */
+.btn-dk-orange .btn {
+	position: relative;
+	width: 85%;
+	background-color: #f66200;
+	border: none;
+	text-transform: uppercase;
+	text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+	box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
+	font-weight: 700;
+	font-size: 2rem;
+	background-image: none;
+}
+
+.btn-dk-orange .btn:hover {
+	background-color: #dd5800;
+}
+
+.btn-dk-orange .btn:active {
+	box-shadow: none;
+	color: #fff;
+	background-color: #286090;
+	border-color: #204d74;
+}
+
+.btn-dk-orange .btn:active::after {
+	display: none;
+}
+
+.btn-dk-orange .btn:focus {
+	box-shadow: none;
+	color: #fff;
+	background-color: #286090;
+	border-color: #204d74;
+}
+
+.btn-dk-orange .btn::after {
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-image: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, 0.6) 0, transparent 75%);
+	background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, transparent 75%);
+	position: absolute;
+	left: 0;
+	bottom: -1.5rem;
+	z-index: -1;
+}
+
+.policy-terms {
+	padding: 0.5rem 1rem;
+}
+
+.policy-terms .linkComponent {
+	background-color: #00629b;
+	margin-bottom: 0.2rem;
+}
+
+.policy-terms .spacer {
+	display: none;
+}
+
+.policy-terms a {
+	font-size: 1.4rem;
+	font-weight: 700;
+	padding-left: 0.5rem;
+}
+
+.policy-terms a::before {
+	font-family: FontAwesome;
+	content: '\f0da';
+	margin-right: 0.5em;
+}
+
+div.policy-terms {
+	background-color: transparent;
+}
+
+/* Fix for accordion issues - Charter Jira 1290 */
+.accordion .accordion-simple .accordion-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.accordion .accordion-simple .accordion-header::before {
+	margin-right: 1rem;
+}
+
+/* End Fix for accordion issues - Charter Jira 1290 */
 .no-wrap,
 .nowrap {
 	overflow: hidden;
@@ -923,21 +1036,6 @@ hr.inset {
 
 hr.black {
 	border-top: 0.1rem solid #333;
-}
-
-.policy-terms {
-	padding: 0.5rem 1rem;
-}
-
-.policy-terms a {
-	font-size: 1.4rem;
-	font-weight: 700;
-}
-
-.policy-terms a::before {
-	font-family: FontAwesome;
-	content: '\f0da';
-	margin-right: 0.5em;
 }
 
 .bullets-blue {

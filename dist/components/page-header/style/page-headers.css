@@ -22,6 +22,18 @@
 	position: relative;
 }
 
+/* Brand logo */
+.site-header .site-logo img {
+	float: left;
+	padding-top: 1.5rem;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.site-header .site-logo p {
+	margin: 0;
+}
+
 /* Show/hide menu elements responsively, target elements at specific browser widths */
 
 /* Temporary styles for display while authoring, remove for prod */
@@ -76,6 +88,7 @@
 	border: none;
 	margin-bottom: 1.5rem;
 	position: static;
+	min-height: auto;
 }
 
 .site-header .navbar-sm > .navbar-collapse {
@@ -124,6 +137,7 @@
 	margin-top: 1rem;
 	-webkit-transition: background 150ms ease-out;
 	transition: background 150ms ease-out;
+	margin-right: 0;
 }
 
 /* Fixes for Primary Navigation (button-style) */
@@ -148,7 +162,14 @@
 
 /* Fixes for Brand logo */
 .site-header .site-logo .image {
-	padding-bottom: 2rem;
+	padding: 0;
+	float: none;
+}
+
+/* Forms */
+.site-header .messagebox-wrapper {
+	padding: 1rem 0;
+	display: none;
 }
 
 /* Form: ZIP code/Localization */
@@ -256,15 +277,138 @@
 	top: auto;
 }
 
+/* Megamenu */
+.site-header .my-services-menu,
+.site-header .support-menu {
+	width: 80%;
+	right: 0;
+	position: absolute;
+	display: none;
+}
+
+.site-header .my-services-menu .aem-Grid,
+.site-header .support-menu .aem-Grid {
+	background: -webkit-linear-gradient(top, #fff 80%, #dfe5e5) repeat 0 0;
+	background: linear-gradient(180deg, #fff 80%, #dfe5e5) repeat 0 0;
+	margin: 0;
+	padding: 1.5rem;
+	text-align: left;
+	top: auto;
+	z-index: 150;
+	box-shadow: 0 .4rem .5rem -.1rem #333;
+}
+
+.site-header .my-services-menu .aem-GridColumn,
+.site-header .support-menu .aem-GridColumn {
+	margin-top: -1.5rem;
+}
+
+.site-header .my-services-menu ul,
+.site-header .support-menu ul {
+	list-style-type: none;
+	list-style-position: inside;
+	margin: 0;
+	padding: 0 0 0 2.5rem;
+}
+
+.site-header .my-services-menu li a,
+.site-header .support-menu li a {
+	padding-left: 5px;
+	line-height: 1.41667;
+	font-size: 1.2rem;
+	color: #333;
+	text-decoration: none;
+}
+
+.site-header .my-services-menu li a:focus,
+.site-header .my-services-menu li a:hover,
+.site-header .support-menu li a:focus,
+.site-header .support-menu li a:hover {
+	text-decoration: underline;
+}
+
+.site-header .my-services-menu h3,
+.site-header .support-menu h3 {
+	margin-top: 1.5rem;
+	font-weight: 400;
+}
+
+.site-header .my-services-menu h3,
+.site-header .my-services-menu h3 a,
+.site-header .support-menu h3,
+.site-header .support-menu h3 a {
+	font-size: 2rem;
+	color: #333;
+}
+
+/* Popover (Contact Us menu item) */
+.site-header .main-container .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--6 {
+	width: auto;
+}
+
+.site-header .popover-contact {
+	position: absolute;
+	border: 1px solid #b7b7b7;
+	background-color: #fff;
+	padding: 1.5rem;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .popover-contact,
+.aem-AuthorLayer-Edit .site-header .popover-contact {
+	position: relative;
+}
+
+.site-header .popover-contact:after,
+.site-header .popover-contact:before {
+	border: medium solid transparent;
+	bottom: 100%;
+	content: " ";
+	height: 0;
+	left: 50%;
+	pointer-events: none;
+	position: absolute;
+	width: 0;
+}
+
+.site-header .popover-contact:after {
+	border-color: transparent transparent #fff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+.site-header .popover-contact:before {
+	border-color: transparent transparent #b7b7b7;
+	border-width: 9px;
+	margin-left: -9px;
+}
+
 .site-header .aem-Grid-newComponent {
 	display: none;
 }
 
 /* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .aem-Grid-newComponent,
+.aem-AuthorLayer-Edit .site-header .aem-Grid-newComponent {
+	display: block;
+}
+
+.phone-main {
+	position: absolute;
+	line-height: 1;
+	top: 1.5rem;
+	right: 1.5rem;
+}
+
+.phone-main a {
+	color: #88c657;
+	text-decoration: none;
+	display: block;
+	font-weight: 700;
+	font-size: 1.8rem;
+}
 
 /* Unique to Header 02 */
-.aem-AuthorLayer-Layouting .site-header .aem-Grid-newComponent,
-.aem-AuthorLayer-Edit .site-header .aem-Grid-newComponent,
 .muiAddressLookup .localization.loading {
 	display: block;
 }
@@ -314,6 +458,7 @@
 }
 
 .site-header-top-05 {
+	position: relative;
 	padding-bottom: 2rem;
 }
 
@@ -322,8 +467,21 @@
 	float: none;
 }
 
+.site-header-top-05 .navbar-sm .navbar-toggle {
+	position: absolute;
+	right: 1.5rem;
+	top: .8rem;
+	margin-top: 0;
+}
+
 .site-header-top-05 .mui-wrapper.menu-lg .btn {
 	white-space: normal;
+	margin-right: 2rem;
+}
+
+.site-header-top-05 .menu-lg .icon-map-marker a {
+	right: 1.5rem;
+	top: 3.5rem;
 }
 
 .site-header .site-header-top-05 {
@@ -356,8 +514,16 @@
 		padding-left: 10%;
 	}
 
+	.phone-main a {
+		font-size: 4.7rem;
+	}
+
 	.site-header-top-02 .icon-map-marker a {
 		top: 5.6rem;
+	}
+
+	.site-header-top-03 {
+		position: relative;
 	}
 
 	.site-header-top-03 .menu-row.mui-wrapper {
@@ -383,4 +549,4 @@
 	}
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=page-headers.css.map */

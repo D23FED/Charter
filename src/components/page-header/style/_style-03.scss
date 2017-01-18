@@ -9,6 +9,9 @@
 //     User nav
 .site-header-top-03 {
 	background-color: transparent;
+	@include breakpoint('sm') {
+		position: relative;
+	}
 	.menu-row.mui-wrapper {
 		margin-bottom: $header-spacing-bottom;
 		@include breakpoint('sm') {

@@ -1,0 +1,40 @@
+@at-root {
+	/* Popover (Contact Us menu item) */
+}
+
+$title-spacing-v: 1.5rem;
+// Columns misconfigured
+.main-container .aem-Grid.aem-Grid--12>.aem-GridColumn.aem-GridColumn--default--6 {
+	width: auto;
+}
+
+.popover-contact {
+	position: absolute;
+	border: 1px solid #b7b7b7;
+	background-color: #fff;
+	padding: $column-padding;
+	@include aem-authoring {
+		position: relative;
+	}
+	&:after,
+	&:before {
+		border: medium solid transparent;
+		bottom: 100%;
+		content: " ";
+		height: 0;
+		left: 50%;
+		pointer-events: none;
+		position: absolute;
+		width: 0;
+	}
+	&:after {
+		border-color: transparent transparent #fff;
+		border-width: 8px;
+		margin-left: -8px;
+	}
+	&:before {
+		border-color: transparent transparent #b7b7b7;
+		border-width: 9px;
+		margin-left: -9px;
+	}
+}

@@ -6,6 +6,7 @@
 	border: none;
 	margin-bottom: 1.5rem;
 	position: static;
+	min-height: auto;
 	@include breakpoint('sm') {
 		display: none;
 	}
@@ -56,5 +57,6 @@
 	.navbar-toggle {
 		margin-top: $navbar-toggle-spacing-top;
 		transition: background 150ms ease-out;
+		margin-right: 0;
 	}
 }

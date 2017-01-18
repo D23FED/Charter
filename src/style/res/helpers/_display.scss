@@ -1,3 +1,7 @@
+@at-root {
+/* Display */
+}
+
 .clear {
 	clear: both;
 }
@@ -21,6 +25,14 @@
 
 .table-cell {
 	display: table-cell;
+}
+
+.display-flex {
+	display: flex
+}
+
+.display-inline-flex {
+	display: inline-flex;
 }
 
 .hidden {

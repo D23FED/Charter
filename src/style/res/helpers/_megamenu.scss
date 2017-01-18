@@ -1,0 +1,37 @@
+@at-root {
+/* Megamenu */
+}
+.my-services-menu,
+.support-menu {
+	.aem-Grid {
+		background: linear-gradient(to bottom, #fff 80%, #dfe5e5 100%) repeat 0 0;
+		display: none;
+		height: 30rem;
+		margin: 0;
+		padding: 1rem;
+		text-align: left;
+		top: auto;
+		z-index: 150;
+		box-shadow: 0px .4rem .5rem -.1rem #333;
+	}
+	ul {
+		list-style-type: none;
+		list-style-position: inside;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		a {
+			padding-left: 5px;
+			font-size: 1.2rem;
+			color: #333;
+		}
+	}
+
+	// Column titles
+	h3 {
+		font-size: 2rem;
+		color: #333;
+		font-weight: normal;
+	}
+}
