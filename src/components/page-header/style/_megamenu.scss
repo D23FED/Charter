@@ -7,9 +7,10 @@ $title-spacing-v: 1.5rem;
 	width: 80%;
 	right: 0;
 	position: absolute;
+	display: none;
 	.aem-Grid {
 		background: linear-gradient(to bottom, #fff 80%, #dfe5e5 100%) repeat 0 0;
-		display: none;
+		// display: none;
 		// height: 30rem;
 		margin: 0;
 		padding: 1.5rem;
