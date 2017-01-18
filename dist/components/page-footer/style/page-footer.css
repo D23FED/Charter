@@ -55,15 +55,15 @@
 }
 
 .site-footer .footer-header a.spectrum-facebook {
-	background-image: url(https://www.charter.com/browse/static/images/facebook.png);
+	background-image: url(/content/dam/spectrum/common/en/images/facebook.png);
 }
 
 .site-footer .footer-header a.spectrum-twitter {
-	background-image: url(https://www.charter.com/browse/static/images/twitter.png);
+	background-image: url(/content/dam/spectrum/common/en/images/twitter.png);
 }
 
 .site-footer .footer-header a.spectrum-youtube {
-	background-image: url(https://www.charter.com/browse/static/images/youtube.png);
+	background-image: url(/content/dam/spectrum/common/en/images/youtube.png);
 }
 
 .site-footer .footer-header a.spectrum-facebook,
@@ -185,7 +185,7 @@
 	}
 
 	.site-footer .footer-header .listComponent li {
-		background-image: url(https://www.charter.com/browse/static/images/footer-head-seperator.png);
+		background-image: url("/content/dam/spectrum/common/en/images/footer-head-separator.png");
 		background-position: left center;
 		background-repeat: no-repeat;
 		width: auto;
@@ -197,4 +197,4 @@
 	}
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=page-footer.css.map */

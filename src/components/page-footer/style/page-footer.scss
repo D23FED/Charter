@@ -42,7 +42,7 @@
 			}
 			@each $social in $social-networks {
 				&.spectrum-#{$social} {
-					background-image: url(https://www.charter.com/browse/static/images/#{$social}.png);
+					background-image: url(#{$img-path}#{$social}.png);
 					@extend %social-link;
 				}
 			}
@@ -91,7 +91,7 @@
 				padding-left: 0;
 				padding-right: 0;
 				@include breakpoint('sm') {
-					background-image: url(https://www.charter.com/browse/static/images/footer-head-seperator.png);
+					background-image: url($img-path + 'footer-head-separator.png');
 					background-position: left center;
 					background-repeat: no-repeat;
 					// display: inline-block;
