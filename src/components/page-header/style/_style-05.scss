@@ -19,6 +19,7 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
   background: #f8f8f8;
 }
 .site-header-top-05 {
+	position: relative;
 	padding-bottom: $header-spacing-bottom;
 	#{$grid-wrapper} {
 		> #{$primary-nav-text-wrapper},
@@ -29,9 +30,24 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
 			}
 		}
 	}
+	.navbar-sm .navbar-toggle {
+		position: absolute;
+		right: 1.5rem;
+		top: .8rem;
+		margin-top: 0;
+	}
+	// MUI Button
 	.mui-wrapper.menu-lg {
 		.btn {
 			white-space: initial;
+			margin-right: 2rem
+		}
+	}
+	// ZIP Pin icon: large version
+	.menu-lg {
+		.icon-map-marker a {
+			right: 1.5rem;
+			top: 3.5rem;
 		}
 	}
 	#{$page-header} & {

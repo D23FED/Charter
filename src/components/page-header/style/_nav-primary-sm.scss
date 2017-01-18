@@ -6,6 +6,7 @@
 	border: none;
 	margin-bottom: 1.5rem;
 	position: static;
+	min-height: auto;
 	@include breakpoint('sm') {
 		display: none;
 	}

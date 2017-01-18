@@ -1,6 +1,7 @@
 @at-root {
-/* Buttons */
+	/* Buttons */
 }
+
 $btn-color: #f66200;
 $btn-hover-color: #dd5800;
 .btn-dk-orange {
@@ -15,11 +16,10 @@ $btn-hover-color: #dd5800;
 		font-weight: 700;
 		font-size: 2rem;
 		background-image: none;
-		@include hover-focus {
+		&:hover {
 			background-color: $btn-hover-color;
 		}
 		&:active {
-			box-shadow: none;
 			box-shadow: none;
 			color: #fff;
 			background-color: #286090;
@@ -27,6 +27,12 @@ $btn-hover-color: #dd5800;
 			&::after {
 				display: none;
 			}
+		}
+		&:focus {
+			box-shadow: none;
+			color: #fff;
+			background-color: #286090;
+			border-color: #204d74;
 		}
 		&::after {
 			content: "";

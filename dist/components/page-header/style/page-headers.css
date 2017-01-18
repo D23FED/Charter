@@ -88,6 +88,7 @@
 	border: none;
 	margin-bottom: 1.5rem;
 	position: static;
+	min-height: auto;
 }
 
 .site-header .navbar-sm > .navbar-collapse {
@@ -163,6 +164,12 @@
 .site-header .site-logo .image {
 	padding: 0;
 	float: none;
+}
+
+/* Forms */
+.site-header .messagebox-wrapper {
+	padding: 1rem 0;
+	display: none;
 }
 
 /* Form: ZIP code/Localization */
@@ -276,13 +283,13 @@
 	width: 80%;
 	right: 0;
 	position: absolute;
+	display: none;
 }
 
 .site-header .my-services-menu .aem-Grid,
 .site-header .support-menu .aem-Grid {
 	background: -webkit-linear-gradient(top, #fff 80%, #dfe5e5) repeat 0 0;
 	background: linear-gradient(180deg, #fff 80%, #dfe5e5) repeat 0 0;
-	display: none;
 	margin: 0;
 	padding: 1.5rem;
 	text-align: left;
@@ -332,6 +339,48 @@
 .site-header .support-menu h3 a {
 	font-size: 2rem;
 	color: #333;
+}
+
+/* Popover (Contact Us menu item) */
+.site-header .main-container .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--6 {
+	width: auto;
+}
+
+.site-header .popover-contact {
+	position: absolute;
+	border: 1px solid #b7b7b7;
+	background-color: #fff;
+	padding: 1.5rem;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .popover-contact,
+.aem-AuthorLayer-Edit .site-header .popover-contact {
+	position: relative;
+}
+
+.site-header .popover-contact:after,
+.site-header .popover-contact:before {
+	border: medium solid transparent;
+	bottom: 100%;
+	content: " ";
+	height: 0;
+	left: 50%;
+	pointer-events: none;
+	position: absolute;
+	width: 0;
+}
+
+.site-header .popover-contact:after {
+	border-color: transparent transparent #fff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+.site-header .popover-contact:before {
+	border-color: transparent transparent #b7b7b7;
+	border-width: 9px;
+	margin-left: -9px;
 }
 
 .site-header .aem-Grid-newComponent {
@@ -409,6 +458,7 @@
 }
 
 .site-header-top-05 {
+	position: relative;
 	padding-bottom: 2rem;
 }
 
@@ -417,8 +467,21 @@
 	float: none;
 }
 
+.site-header-top-05 .navbar-sm .navbar-toggle {
+	position: absolute;
+	right: 1.5rem;
+	top: .8rem;
+	margin-top: 0;
+}
+
 .site-header-top-05 .mui-wrapper.menu-lg .btn {
 	white-space: normal;
+	margin-right: 2rem;
+}
+
+.site-header-top-05 .menu-lg .icon-map-marker a {
+	right: 1.5rem;
+	top: 3.5rem;
 }
 
 .site-header .site-header-top-05 {
