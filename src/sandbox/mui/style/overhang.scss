@@ -1,195 +1,181 @@
-/*
-Raymond Heredia (c-raymond.heredia@charter.com)
-1-16-17
-Update to overhang responsiveness.
-*/
+@import 'initialize';
 
-#mui-wrapper h2 {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 3.2rem;
-	font-weight: bold;
-	text-align: center;
-	margin: 0 20px;
-}
-
-#mui-wrapper h2.prod-offer {
-	font-size: 2.2rem;
-	font-weight: 400;
-}
-
-#mui-wrapper .muiAddressLookup .localization--vertical-1 .localization__inputs,
-#mui-wrapper .muiAddressLookup .localization--vertical-2 .localization__inputs,
-#mui-wrapper .muiAddressLookup .localization--vertical-3 .localization__inputs {
-	padding-bottom: 10px;
-	margin: 0 auto;
-}
-
-#mui-wrapper .muiAddressLookup .mui-loader-container {
-	height: 185px;
-	width: 245px;
-	margin: 0 auto;
-}
-
-#mui-wrapper .muiAddressLookup .mui-loader-container img {
-	position: relative;
-	top: 50px;
-	left: 88px;
-}
-
-#mui-wrapper .combine-wrapper {
-	color: #000;
-	margin: 2rem 0 3rem;
-}
-
-#mui-wrapper .combine-wrapper p {
-	font-size: 3rem;
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#mui-wrapper .combine-wrapper p b,
-#mui-wrapper .combine-wrapper p strong {
-	color: #03629c;
-}
-
-#mui-wrapper .adaptive-image-wrapper {
-	float: left;
-}
-
-#mui-wrapper .adaptive-image-wrapper .adaptiveimage {
-	float: left;
-	margin-right: 3rem;
-}
-
-#mui-wrapper {
-	padding: 1.5rem 1.5rem 2rem;
-	color: #fff;
-	background: #0072cb;
-	background: -webkit-linear-gradient(top, #0072cb 0%, #005598 100%);
-	background: linear-gradient(to bottom, #0072cb 0%, #005598 100%);
-}
-
-.site-header .customWrapper .muiAddressLookup {
-	margin: 0;
-}
-
-.site-header .imageArtDirection .background-image {
-	padding: 0;
-}
-
-#mui-wrapper .price-block {
-	color: #fff;
-	display: table;
-}
-
-#mui-wrapper .price-style-01 .currency,
-#mui-wrapper .price-style-01 .whole,
-#mui-wrapper .price-style-01 .super,
-#mui-wrapper .price-style-01 .separator {
-	color: #fff;
-	background: transparent;
-}
-
-#mui-wrapper .price-style-01 .before,
-#mui-wrapper .price-style-01 .after,
-#mui-wrapper .price-style-01 .term {
-	color: #fff;
-}
-
-#mui-wrapper .price-block {
-	font-size: 6rem;
-}
-
-#mui-wrapper .offer-bottom {
-	margin-left: 15px;
-	margin-bottom: 20px;
-}
+/* Hero */
 
 #image-art-mui-wrapper {
 	width: 100%;
 	height: 100%;
+	@include breakpoint('md') {
+		&>div:after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+	.imageArtDirection {
+		.background-image {
+			padding: 0;
+		}
+		.imageArtDirection {
+			@include breakpoint('md') {
+				width: 60%;
+				float: left;
+			}
+			.background-image {
+				width: 100%;
+				height: 20rem;
+				background-size: contain;
+				@include breakpoint('xs') {
+					height: 30rem;
+				}
+				@include breakpoint('md') {
+					float: left;
+					height: 40rem;
+					background-size: cover;
+				}
+			}
+		}
+	}
 }
 
-#mui-wrapper .price-block .super {
-	font-weight: normal;
-	font-size: 2rem;
-	text-align: left;
-	margin-top: 12px;
-}
 
-#mui-wrapper .price-block .whole {
-	font-size: 8rem;
-}
-
-#mui-wrapper .price-block .currency {
-	font-size: 2.4rem;
-	vertical-align: middle;
-}
-
-#mui-wrapper .price-block .before {
-	margin-bottom: -1rem;
-}
-
-#mui-wrapper .price-block .before,
-#mui-wrapper .price-block .term {
-	font-size: 1rem;
-	text-align: left;
-}
-
-#mui-wrapper h3 {
-	margin: 0;
-	font-weight: 700;
-	text-align: center;
-}
-
-#mui-wrapper .price-block {
-	width: 212px;
-	margin: 1rem auto;
-}
-
-#mui-wrapper .price {
-	margin: 0 auto;
-}
+/* MUI Hero Overhang */
 
 #mui-wrapper {
 	width: 100%;
 	height: auto;
 	float: right;
-}
-
-#mui-wrapper>div>.container.section {
-	width: auto !important;
-}
-
-#mui-wrapper .muiAddressLookup {
-	margin: 0 2.5rem;
-}
-
-#mui-wrapper .offer-bottom {
+	padding: 1.5rem 1.5rem 2rem;
+	color: #fff;
+	background-color: #0072cb;
+	background-image: linear-gradient(to bottom, #0072cb 0%, #005598 100%);
 	text-align: center;
-}
-
-#mui-wrapper .muiAddressLookup label {
-	display: none;
-}
-
-@media (min-width: 992px) {
-	#image-art-mui-wrapper .imageArtDirection .imageArtDirection {
-		width: 60%;
-		float: left;
-	}
-	#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
-		float: left;
-		min-height: 400px !important;
-		background-size: cover;
-	}
-	#image-art-mui-wrapper>div:after {
-		display: block;
-		content: "";
-		clear: both;
-	}
-	#mui-wrapper {
+	@include breakpoint('md') {
 		width: 40%;
-		text-align: center;
 		float: right;
+	}
+	h2 {
+		font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 3.2rem;
+		font-weight: bold;
+		// text-align: center;
+		margin: 0 2rem;
+	}
+	h3 {
+		margin: 0;
+		font-weight: 700;
+		// text-align: center;
+	}
+	.price-block {
+		color: #fff;
+		display: table;
+		font-size: 6rem;
+		width: 21.2rem;
+		margin: 1rem auto;
+		.super {
+			font-weight: normal;
+			font-size: 2rem;
+			text-align: left;
+			margin-top: 1.2rem;
+		}
+		.whole {
+			font-size: 8rem;
+		}
+		.currency {
+			font-size: 2.4rem;
+			vertical-align: middle;
+		}
+		.before,
+		.term {
+			font-size: 1rem;
+		}
+		.before {
+			margin-bottom: -1rem;
+		}
+		.term {
+			text-align: left;
+		}
+	}
+	.price {
+		margin: 0 auto;
+	}
+	.price-style-01 {
+		.currency,
+		.whole,
+		.super,
+		.separator {
+			background: transparent;
+			color: #fff;
+			-webkit-text-fill-color: #fff;
+			text-fill-color: #fff;
+		}
+		.before,
+		.after,
+		.term {
+			color: #fff;
+		}
+	}
+	.offer-bottom {
+		margin-left: 1.5rem;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+	.prod-offer {
+		font-size: 2.2rem;
+		font-weight: 400;
+	}
+	@at-root {
+		/* MUI form */
+	}
+	.muiAddressLookup {
+		margin: 0 2.5rem;
+		label {
+			display: none;
+		}
+		.localization--vertical-1,
+		.localization--vertical-2,
+		.localization--vertical-3 {
+			.localization__inputs {
+				padding-bottom: 1rem;
+				margin: 0 auto;
+			}
+		}
+		.mui-loader-container {
+			height: 185px;
+			width: 245px;
+			margin: 0 auto;
+			img {
+				position: relative;
+				top: 50px;
+				left: 88px;
+			}
+		}
+	}
+}
+
+
+/* Banner below hero */
+
+.combine-wrapper {
+	color: #000;
+	margin: 2rem 0 3rem;
+	p {
+		font-size: 3rem;
+		font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		b,
+		strong {
+			color: #03629c;
+		}
+	}
+}
+
+
+/* Offers above footer */
+
+.adaptive-image-wrapper {
+	float: left;
+	.adaptiveimage {
+		float: left;
+		margin-right: 3rem;
 	}
 }

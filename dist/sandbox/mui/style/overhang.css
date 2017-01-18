@@ -1,25 +1,125 @@
-/*
-Raymond Heredia (c-raymond.heredia@charter.com)
-1-16-17
-Update to overhang responsiveness.
-*/
+/* Hero */
+#image-art-mui-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+#image-art-mui-wrapper .imageArtDirection .background-image {
+	padding: 0;
+}
+
+#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
+	width: 100%;
+	height: 20rem;
+	background-size: contain;
+}
+
+/* MUI Hero Overhang */
+#mui-wrapper {
+	width: 100%;
+	height: auto;
+	float: right;
+	padding: 1.5rem 1.5rem 2rem;
+	color: #fff;
+	background-color: #0072cb;
+	background-image: -webkit-linear-gradient(top, #0072cb, #005598);
+	background-image: linear-gradient(180deg, #0072cb 0%, #005598);
+	text-align: center;
+}
+
 #mui-wrapper h2 {
 	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 	font-size: 3.2rem;
 	font-weight: 700;
-	text-align: center;
-	margin: 0 20px;
+	margin: 0 2rem;
 }
 
-#mui-wrapper h2.prod-offer {
+#mui-wrapper h3 {
+	margin: 0;
+	font-weight: 700;
+}
+
+#mui-wrapper .price-block {
+	color: #fff;
+	display: table;
+	font-size: 6rem;
+	width: 21.2rem;
+	margin: 1rem auto;
+}
+
+#mui-wrapper .price-block .super {
+	font-weight: 400;
+	font-size: 2rem;
+	text-align: left;
+	margin-top: 1.2rem;
+}
+
+#mui-wrapper .price-block .whole {
+	font-size: 8rem;
+}
+
+#mui-wrapper .price-block .currency {
+	font-size: 2.4rem;
+	vertical-align: middle;
+}
+
+#mui-wrapper .price-block .before,
+#mui-wrapper .price-block .term {
+	font-size: 1rem;
+}
+
+#mui-wrapper .price-block .before {
+	margin-bottom: -1rem;
+}
+
+#mui-wrapper .price-block .term {
+	text-align: left;
+}
+
+#mui-wrapper .price {
+	margin: 0 auto;
+}
+
+#mui-wrapper .price-style-01 .currency,
+#mui-wrapper .price-style-01 .whole,
+#mui-wrapper .price-style-01 .super,
+#mui-wrapper .price-style-01 .separator {
+	background: transparent;
+	color: #fff;
+	-webkit-text-fill-color: #fff;
+	text-fill-color: #fff;
+}
+
+#mui-wrapper .price-style-01 .before,
+#mui-wrapper .price-style-01 .after,
+#mui-wrapper .price-style-01 .term {
+	color: #fff;
+}
+
+#mui-wrapper .offer-bottom {
+	margin-left: 1.5rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+#mui-wrapper .prod-offer {
 	font-size: 2.2rem;
 	font-weight: 400;
+}
+
+/* MUI form */
+#mui-wrapper .muiAddressLookup {
+	margin: 0 2.5rem;
+}
+
+#mui-wrapper .muiAddressLookup label {
+	display: none;
 }
 
 #mui-wrapper .muiAddressLookup .localization--vertical-1 .localization__inputs,
 #mui-wrapper .muiAddressLookup .localization--vertical-2 .localization__inputs,
 #mui-wrapper .muiAddressLookup .localization--vertical-3 .localization__inputs {
-	padding-bottom: 10px;
+	padding-bottom: 1rem;
 	margin: 0 auto;
 }
 
@@ -35,143 +135,45 @@ Update to overhang responsiveness.
 	left: 88px;
 }
 
-#mui-wrapper .combine-wrapper {
+/* Banner below hero */
+.combine-wrapper {
 	color: #000;
 	margin: 2rem 0 3rem;
 }
 
-#mui-wrapper .combine-wrapper p {
+.combine-wrapper p {
 	font-size: 3rem;
 	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-#mui-wrapper .combine-wrapper p b,
-#mui-wrapper .combine-wrapper p strong {
+.combine-wrapper p b,
+.combine-wrapper p strong {
 	color: #03629c;
 }
 
-#mui-wrapper .adaptive-image-wrapper {
+/* Offers above footer */
+.adaptive-image-wrapper {
 	float: left;
 }
 
-#mui-wrapper .adaptive-image-wrapper .adaptiveimage {
+.adaptive-image-wrapper .adaptiveimage {
 	float: left;
 	margin-right: 3rem;
 }
 
-#mui-wrapper {
-	padding: 1.5rem 1.5rem 2rem;
-	color: #fff;
-	background: #0072cb;
-	background: -webkit-linear-gradient(top, #0072cb, #005598);
-	background: linear-gradient(180deg, #0072cb 0%, #005598);
-}
-
-.site-header .customWrapper .muiAddressLookup {
-	margin: 0;
-}
-
-.site-header .imageArtDirection .background-image {
-	padding: 0;
-}
-
-#mui-wrapper .price-block {
-	color: #fff;
-	display: table;
-}
-
-#mui-wrapper .price-style-01 .currency,
-#mui-wrapper .price-style-01 .whole,
-#mui-wrapper .price-style-01 .super,
-#mui-wrapper .price-style-01 .separator {
-	color: #fff;
-	background: transparent;
-}
-
-#mui-wrapper .price-style-01 .before,
-#mui-wrapper .price-style-01 .after,
-#mui-wrapper .price-style-01 .term {
-	color: #fff;
-}
-
-#mui-wrapper .price-block {
-	font-size: 6rem;
-}
-
-#mui-wrapper .offer-bottom {
-	margin-left: 15px;
-	margin-bottom: 20px;
-}
-
-#image-art-mui-wrapper {
-	width: 100%;
-	height: 100%;
-}
-
-#mui-wrapper .price-block .super {
-	font-weight: 400;
-	font-size: 2rem;
-	text-align: left;
-	margin-top: 12px;
-}
-
-#mui-wrapper .price-block .whole {
-	font-size: 8rem;
-}
-
-#mui-wrapper .price-block .currency {
-	font-size: 2.4rem;
-	vertical-align: middle;
-}
-
-#mui-wrapper .price-block .before {
-	margin-bottom: -1rem;
-}
-
-#mui-wrapper .price-block .before,
-#mui-wrapper .price-block .term {
-	font-size: 1rem;
-	text-align: left;
-}
-
-#mui-wrapper h3 {
-	margin: 0;
-	font-weight: 700;
-	text-align: center;
-}
-
-#mui-wrapper .price-block {
-	width: 212px;
-	margin: 1rem auto;
-}
-
-#mui-wrapper .price {
-	margin: 0 auto;
-}
-
-#mui-wrapper {
-	width: 100%;
-	height: auto;
-	float: right;
-}
-
-#mui-wrapper > div > .container.section {
-	width: auto !important;
-}
-
-#mui-wrapper .muiAddressLookup {
-	margin: 0 2.5rem;
-}
-
-#mui-wrapper .offer-bottom {
-	text-align: center;
-}
-
-#mui-wrapper .muiAddressLookup label {
-	display: none;
+@media (min-width: 544px) {
+	#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
+		height: 30rem;
+	}
 }
 
 @media (min-width: 992px) {
+	#image-art-mui-wrapper > div:after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+
 	#image-art-mui-wrapper .imageArtDirection .imageArtDirection {
 		width: 60%;
 		float: left;
@@ -179,21 +181,12 @@ Update to overhang responsiveness.
 
 	#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
 		float: left;
-		min-height: 400px !important;
+		height: 40rem;
 		background-size: cover;
-	}
-
-	#image-art-mui-wrapper > div:after {
-		display: block;
-		content: "";
-		clear: both;
 	}
 
 	#mui-wrapper {
 		width: 40%;
-		text-align: center;
 		float: right;
 	}
 }
-
-/*# sourceMappingURL=overhang.css.map */
