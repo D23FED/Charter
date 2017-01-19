@@ -1,4 +1,5 @@
-/* Helpers | Jan 18 */
+/* Helpers | Jan 19 */
+
 @import 'initialize';
 @import 'helpers/display';
 @import 'helpers/position';
@@ -9,89 +10,82 @@
 @import 'helpers/buttons';
 @import 'helpers/terms';
 @import 'helpers/fix-accordion';
-
 .no-wrap,
 .nowrap {
-  overflow: hidden;
-  white-space: nowrap;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .text-left {
-  text-align: left;
+	text-align: left;
 }
 
 .text-center {
-  text-align: center;
-  clear: both;
+	text-align: center;
+	clear: both;
 }
 
 .text-right {
-  text-align: right;
+	text-align: right;
 }
 
 .text-bold {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .image-left {
-  float: left;
-  margin-right: 1.5rem;
+	float: left;
+	margin-right: 1.5rem;
 }
 
 .image-center {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .image-right {
-  float: right;
-  margin-left: 1.5rem;
-}
-
-//  Fix for Core.css
-.container-fluid .imageArtDirection {
-  margin-left: 0;
-  margin-right: 0;
+	float: right;
+	margin-left: 1.5rem;
 }
 
 .clickable {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 // Horizontal rules
 hr {
-  &.spacer {
-    margin-top: 2.0rem;
-    margin-bottom: 2.0rem;
-    border: 0;
-    border-top: none;
-  }
-
-  &.inset {
-    width: 60%;
-  }
-
-  &.black {
-    border-top: 0.1rem solid $dk-gray;
-  }
+	&.spacer {
+		margin-top: 2.0rem;
+		margin-bottom: 2.0rem;
+		border: 0;
+		border-top: none;
+	}
+	&.inset {
+		width: 60%;
+	}
+	&.black {
+		border-top: 0.1rem solid $dk-gray;
+	}
 }
-
-
 
 // Lists
 .bullets-blue {
-  list-style: none;
-  padding-left: 1em;
-
-  li::before {
-    content: '\2022';
-    display: block;
-    position: relative;
-    max-height: 0;
-    left: -1em;
-    color: #0091e6;
-    font-size: 1em;
-  }
+	list-style: none;
+	padding-left: 1em;
+	li::before {
+		content: '\2022';
+		display: block;
+		position: relative;
+		max-height: 0;
+		left: -1em;
+		color: #0091e6;
+		font-size: 1em;
+	}
 }
 
+//  Fix for Core.css
+.container-fluid .imageArtDirection {
+	margin-left: 0;
+	margin-right: 0;
+}
