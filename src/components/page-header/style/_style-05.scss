@@ -15,15 +15,17 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
 @at-root {
 	/* Unique to Site Header 05 */
 }
+
 .site-header-top-wrapper {
-  background: #f8f8f8;
+	background: #f8f8f8;
 }
+
 .site-header-top-05 {
 	position: relative;
 	padding-bottom: $header-spacing-bottom;
 	#{$grid-wrapper} {
-		> #{$primary-nav-text-wrapper},
-		> #{$mui-lg-wrapper} {
+		>#{$primary-nav-text-wrapper},
+		>#{$mui-lg-wrapper} {
 			float: none;
 			@include breakpoint('sm') {
 				float: left;
@@ -43,6 +45,10 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
 			margin-right: 2rem
 		}
 	}
+	.mui-wrapper.menu-sm {
+		padding-top: 2rem;
+	}
+
 	// ZIP Pin icon: large version
 	.menu-lg {
 		.icon-map-marker a {
@@ -52,5 +58,10 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
 	}
 	#{$page-header} & {
 		background-color: transparent;
+	}
+	.#{$logo} {
+		img {
+			max-width: 100%;
+		}
 	}
 }

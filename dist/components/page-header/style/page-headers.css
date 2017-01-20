@@ -154,6 +154,10 @@
 }
 
 /* Fixes for User Nav */
+.site-header .nav-user li {
+	position: relative;
+}
+
 .site-header .nav-user a {
 	text-decoration: none;
 	font-weight: 400;
@@ -168,8 +172,11 @@
 
 /* Forms */
 .site-header .messagebox-wrapper {
-	padding: 1rem 0;
 	display: none;
+}
+
+.site-header .messagebox-wrapper .message-content {
+	padding: 1rem 0;
 }
 
 /* Form: ZIP code/Localization */
@@ -346,11 +353,23 @@
 	width: auto;
 }
 
+.site-header .popover-contact-xref {
+	display: none;
+}
+
 .site-header .popover-contact {
 	position: absolute;
-	border: 1px solid #b7b7b7;
+	border: .1rem solid #b7b7b7;
 	background-color: #fff;
 	padding: 1.5rem;
+	display: none;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	top: 4.4rem;
+	min-width: 20rem;
+	z-index: 100;
 }
 
 /* Temporary styles for display while authoring, remove for prod */
@@ -361,26 +380,58 @@
 
 .site-header .popover-contact:after,
 .site-header .popover-contact:before {
-	border: medium solid transparent;
-	bottom: 100%;
 	content: " ";
-	height: 0;
-	left: 50%;
-	pointer-events: none;
-	position: absolute;
+	border: medium solid transparent;
 	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 50%;
+	position: absolute;
+	pointer-events: none;
 }
 
 .site-header .popover-contact:after {
-	border-color: transparent transparent #fff;
-	border-width: 8px;
-	margin-left: -8px;
+	border-bottom-color: #fff;
+	border-width: 0.8rem;
+	margin-left: -0.8rem;
 }
 
 .site-header .popover-contact:before {
-	border-color: transparent transparent #b7b7b7;
-	border-width: 9px;
-	margin-left: -9px;
+	border-bottom-color: #b7b7b7;
+	border-width: 0.9rem;
+	margin-left: -0.9rem;
+}
+
+.site-header .popover-contact a {
+	padding: 0;
+	background-color: transparent;
+	border-radius: 0;
+	color: #0077bc;
+	font-size: inherit;
+	text-decoration: underline;
+}
+
+.site-header .popover-contact a:focus,
+.site-header .popover-contact a:hover {
+	background-color: transparent;
+	color: #003057;
+}
+
+.site-header .popover-contact a:focus:active,
+.site-header .popover-contact a:hover:active {
+	background-color: transparent;
+	text-decoration: none;
+	color: #003057;
+}
+
+.site-header .popover-contact a:active {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+/* Text adjustments */
+.site-header hr {
+	margin-top: 0;
 }
 
 .site-header .aem-Grid-newComponent {
@@ -408,7 +459,7 @@
 	font-size: 1.8rem;
 }
 
-/* Unique to Header 02 */
+/* Unique to Site Header 02 */
 .muiAddressLookup .localization.loading {
 	display: block;
 }
@@ -427,6 +478,7 @@
 	top: 1.5rem;
 }
 
+/* Unique to Site Header 03 */
 .site-header-top-03 {
 	background-color: transparent;
 }
@@ -435,7 +487,7 @@
 	margin-bottom: 2rem;
 }
 
-/* Site Header 04 */
+/* Unique to Site Header 04 */
 .site-header .site-header-top .aem-GridColumn:nth-last-of-type(4) {
 	padding-right: 0;
 }
@@ -479,6 +531,10 @@
 	margin-right: 2rem;
 }
 
+.site-header-top-05 .mui-wrapper.menu-sm {
+	padding-top: 2rem;
+}
+
 .site-header-top-05 .menu-lg .icon-map-marker a {
 	right: 1.5rem;
 	top: 3.5rem;
@@ -486,6 +542,10 @@
 
 .site-header .site-header-top-05 {
 	background-color: transparent;
+}
+
+.site-header-top-05 .site-logo img {
+	max-width: 100%;
 }
 
 @media (min-width: 768px) {

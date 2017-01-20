@@ -2,6 +2,7 @@
 {
     "files.exclude": {
         "**/node_modules": true,
-        "**/*.sublime-project": true
+        "**/*.sublime-project": true,
+				"**/*.vscode": true
     }
 }

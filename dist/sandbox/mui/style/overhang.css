@@ -1,0 +1,194 @@
+/* Hero */
+#image-art-mui-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+#image-art-mui-wrapper .imageArtDirection .background-image {
+	padding: 0;
+}
+
+#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
+	width: 100%;
+	height: 20rem;
+	background-size: contain;
+}
+
+/* MUI Hero Overhang */
+#mui-wrapper {
+	width: 100%;
+	height: auto;
+	float: right;
+	padding: 1.5rem 1.5rem 2rem;
+	color: #fff;
+	background-color: #0072cb;
+	background-image: -webkit-linear-gradient(top, #0072cb, #005598);
+	background-image: linear-gradient(180deg, #0072cb 0%, #005598);
+	text-align: center;
+}
+
+#mui-wrapper h2 {
+	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 3.2rem;
+	font-weight: 700;
+	margin: 0 2rem;
+}
+
+#mui-wrapper h3 {
+	margin: 0;
+	font-weight: 700;
+}
+
+#mui-wrapper .price-block {
+	color: #fff;
+	display: table;
+	font-size: 6rem;
+	width: 21.2rem;
+	margin: 1rem auto;
+}
+
+#mui-wrapper .price-block .super {
+	font-weight: 400;
+	font-size: 2rem;
+	text-align: left;
+	margin-top: 1.2rem;
+}
+
+#mui-wrapper .price-block .whole {
+	font-size: 8rem;
+}
+
+#mui-wrapper .price-block .currency {
+	font-size: 2.4rem;
+	vertical-align: middle;
+}
+
+#mui-wrapper .price-block .before,
+#mui-wrapper .price-block .term {
+	font-size: 1rem;
+}
+
+#mui-wrapper .price-block .before {
+	margin-bottom: -1rem;
+}
+
+#mui-wrapper .price-block .term {
+	text-align: left;
+}
+
+#mui-wrapper .price {
+	margin: 0 auto;
+}
+
+#mui-wrapper .price-style-01 .currency,
+#mui-wrapper .price-style-01 .whole,
+#mui-wrapper .price-style-01 .super,
+#mui-wrapper .price-style-01 .separator {
+	background: transparent;
+	color: #fff;
+	-webkit-text-fill-color: #fff;
+	text-fill-color: #fff;
+}
+
+#mui-wrapper .price-style-01 .before,
+#mui-wrapper .price-style-01 .after,
+#mui-wrapper .price-style-01 .term {
+	color: #fff;
+}
+
+#mui-wrapper .offer-bottom {
+	margin-left: 1.5rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+#mui-wrapper .prod-offer {
+	font-size: 2.2rem;
+	font-weight: 400;
+}
+
+/* MUI form */
+#mui-wrapper .muiAddressLookup {
+	margin: 0 2.5rem;
+}
+
+#mui-wrapper .muiAddressLookup label {
+	display: none;
+}
+
+#mui-wrapper .muiAddressLookup .localization--vertical-1 .localization__inputs,
+#mui-wrapper .muiAddressLookup .localization--vertical-2 .localization__inputs,
+#mui-wrapper .muiAddressLookup .localization--vertical-3 .localization__inputs {
+	padding-bottom: 1rem;
+	margin: 0 auto;
+}
+
+#mui-wrapper .muiAddressLookup .mui-loader-container {
+	height: 185px;
+	width: 245px;
+	margin: 0 auto;
+}
+
+#mui-wrapper .muiAddressLookup .mui-loader-container img {
+	position: relative;
+	top: 50px;
+	left: 88px;
+}
+
+/* Banner below hero */
+.combine-wrapper {
+	color: #000;
+	margin: 2rem 0 3rem;
+}
+
+.combine-wrapper p {
+	font-size: 3rem;
+	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.combine-wrapper p b,
+.combine-wrapper p strong {
+	color: #03629c;
+}
+
+/* Offers above footer */
+.adaptive-image-wrapper {
+	float: left;
+}
+
+.adaptive-image-wrapper .adaptiveimage {
+	float: left;
+	margin-right: 3rem;
+}
+
+@media (min-width: 544px) {
+	#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
+		height: 30rem;
+	}
+}
+
+@media (min-width: 992px) {
+	#image-art-mui-wrapper > div:after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+
+	#image-art-mui-wrapper .imageArtDirection .imageArtDirection {
+		width: 60%;
+		float: left;
+	}
+
+	#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
+		float: left;
+		height: 40rem;
+		background-size: cover;
+	}
+
+	#mui-wrapper {
+		width: 40%;
+		float: right;
+	}
+}
+
+/*# sourceMappingURL=overhang.css.map */

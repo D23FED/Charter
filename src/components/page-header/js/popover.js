@@ -1,94 +1,103 @@
 // Popover
-var popoverContactIsOpen = false;
 var popover = {
-	// Class added to <body> when active
 	activeClass: 'popover-active',
-	// Open popover
-	open: function() {
-		console.info('open Contact');
-		$('.popover-contact').show();
-		$('body').addClass(popover.activeClass);
-		popoverContactIsOpen = true;
-		console.info('Popover width after open:' + $('.popover-contact').width());
-	},
-	// Close popover
-	close: function() {
-		console.info('close Contact');
-		$('.popover-contact').hide();
-		$('body').removeClass(popover.activeClass);
-		popoverContactIsOpen = false;
-	},
-	// Wait for xref to load before calling popover
-	whenAvailable: function(name, callback) {
-		var interval = 500; // ms
-		window.setTimeout(function() {
-			if ($(name).length > 0) {
-				console.info(name + ' has loaded');
-				callback();
-			} else {
-				console.warn(name + ' not yet loaded');
-				window.setTimeout(arguments.callee, interval);
-			}
-		}, interval);
-	}
+	containerSelector: '.popover-contact',
+	closeButtonSelector: '.close-message',
+	hideBelow: 768,
+	isOpen: false,
+	xrefCheckCounter: 40
+	closeButton: $('div',{'class':'close-message spectrum-icon-only icon-remove-sign'})
 };
+// Open Popover
+popover.open = function() {
+	// console.info('open Contact');
+	$(popover.containerSelector).show().attr('aria-hidden', false);
+	$('body').addClass(popover.activeClass);
+	popover.isOpen = true;
+};
+// Close Popover
+popover.close = function() {
+	// console.info('close Contact');
+	$(popover.containerSelector).hide().attr('aria-hidden', true);
+	$('body').removeClass(popover.activeClass);
+	popover.isOpen = false;
+};
+// Wait for xref to load before calling Popover
+popover.whenAvailable = function(name, callback) {
+	var interval = 500; // ms
+	window.setTimeout(function() {
+		if ($(name).length > 0) {
+			// Element found
+			callback();
+		} else if (popover.xrefCheckCounter < 20) {
+			// Element not found
+			console.warn(name + ' not found, tries:',popover.xrefCheckCounter);
+			popover.xrefCheckCounter++;
+			window.setTimeout(arguments.callee, interval);
+		} else {
+			// Element not found after max # of tries
+			console.error('Failure to initiate "Contact Us" popover: '+ name + ' was never found.');
+		}
+	}, interval);
+};
+// Initialize Popover
 popover.init = function() {
-	console.info('popover domready');
+	// console.info('popover domready');
 	// Popover containing menu of contact info
-	$menuContact = $('.popover-contact');
+	popover.$menuContact = $(popover.containerSelector);
+	popover.$btnClose = $('.popover-contact-xref .close-message');
 	// User navigation menu
-	$userNavItems = $('.nav-user ul.list-inline li');
+	popover.$userNavItems = $('.nav-user ul.list-inline li');
 	// Contact Us nav menu item
-	$menuItemContact = $userNavItems.eq(1);
-	menuItemW = $menuItemContact.width();
-	menuItemH = $menuItemContact.height();
-	menuItemX = $menuItemContact.offset().left + parseInt($menuItemContact.css('padding-left'));
+	popover.$menuItemContact = popover.$userNavItems.eq(1);
 	// Append popover
-	$menuItemContact.append($menuContact);
-	// Popover width
-	popoverW = $('.popover-contact').width();
-	wDiff = popoverW - menuItemW;
-	popoverContactIsOpen = false;
-	// Set popover's position based on nav menu item position
-	$('.popover-contact').css('left', menuItemX);
+	popover.$menuItemContact.append(popover.$menuContact);
+	// Append close button
+	// popover.$menuContact.append(popover.closeButton);
 	// Menu item click
-	$menuItemContact.on('click touchend', function(e) {
+	popover.$menuItemContact.find('a.btn').on('click touchend', function(e) {
 		e.preventDefault();
-		console.group();
+		// console.group();
 		console.info('click Contact Us');
 		// Check if open var is set
-		var open = popoverContactIsOpen;
+		var openState = popover.isOpen;
 		popover.close();
-		// if menu not open
-		if (open !== true) {
-			// Set menu left to nav menu item position, ignoring padding
-			menuItemX = $menuItemContact.offset().left;
-			menuItemH = $menuItemContact.height();
+		// if menu was not open
+		if (openState !== true) {
+			// menuItemX = popover.$menuItemContact.offset().left;
+			popover.menuItemH = popover.$menuItemContact.height();
+			// menuItemPadding = parseInt(popover.$menuItemContact.css('padding-left'));
 			// Height of "arrow" in px on outside of box to make it look like a word bubble
-			menuArrowH = 9;
-			menuItemPadding = parseInt($menuItemContact.css('padding-left'));
-			siteHeaderOffset = $('.site-header-top').offset().left;
-			popoverX = (menuItemX + menuItemPadding) - siteHeaderOffset;
-			popoverY = menuItemH + menuArrowH;
-			$('.popover-contact').css('left', popoverX);
+			popover.menuArrowH = 9;
+			// siteHeaderOffset = $('.site-header-top').offset().left;
+			// x and y position of popover menu
+			// popoverX = (menuItemX + menuItemPadding) - siteHeaderOffset;
+			popover.popoverY = popover.menuItemH + popover.menuArrowH;
+			// Set menu left to nav menu item position, ignoring padding
+			// $(popover.containerSelector).css('left', popoverX);
 			// Set menu top to nav menu item height, plus height of "arrow" on top center of box around the nav menu
-			$('.popover-contact').css('top', popoverY);
-			console.info('log: ', 'menuItemX ' + menuItemX);
-			console.info('Popover width after click:' + $('.popover-contact').width());
+			popover.$menuContact.css('top', popover.popoverY);
 			popover.open();
-			console.info('Popover width after click & open:' + $('.popover-contact').width());
 		}
-		console.groupEnd();
+		// console.groupEnd();
+	});
+	// "unbind" child links
+	popover.$menuItemContact.find([popover.containerSelector,'a']).on('click touchend', function(e) {
+		e.stopPropagation();
+	});
+	// Click close button
+	popover.$menuContact.find('.close-message').on('click touchend', function(e) {
+		console.info('click Close button');
+		popover.close();
 	});
 	// Close menu at smallest breakpoint
 	$(window).on('resize', function() {
-		if (window.innerWidth < 768) {
+		if (window.innerWidth < popover.hideBelow) {
 			popover.close();
 		}
 	})
 }
-
 // Wait for popover Xref to load, then initialize script
 $(function() {
-	popover.whenAvailable('.popover-contact', popover.init);
+	popover.whenAvailable(popover.containerSelector, popover.init);
 })

@@ -1,9 +1,11 @@
 @at-root {
-/* Forms */
-}
-// Prevent forms from touching when multiple are open
-.messagebox-wrapper {
-	padding: 1rem 0;
-	display: none;
+	/* Forms */
 }
 
+// Prevent forms from touching when multiple are open
+.messagebox-wrapper {
+	display: none;
+	.message-content {
+		padding: 1rem 0;
+	}
+}

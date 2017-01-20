@@ -1,14 +1,9 @@
-@at-root {
-	/* Popover (Contact Us menu item) */
-}
+@import 'initialize';
+
+/* Popovers (not appearing in site header) */
 
 $title-spacing-v: 1.5rem;
 $color-popover-border: #b7b7b7;
-// Columns misconfigured
-.main-container .aem-Grid.aem-Grid--12>.aem-GridColumn.aem-GridColumn--default--6 {
-	width: auto;
-}
-
 // Wrapper
 .popover-contact-xref {
 	display: none;
@@ -51,6 +46,13 @@ $color-popover-border: #b7b7b7;
 		border-width: 0.9rem;
 		margin-left: -0.9rem;
 	}
+	p {
+		color: #333;
+		text-transform: none;
+		font-weight: normal;
+		font-size: 1.6rem;
+		text-align: left;
+	}
 	a {
 		padding: 0;
 		background-color: transparent;
@@ -71,5 +73,11 @@ $color-popover-border: #b7b7b7;
 			background-color: transparent;
 			text-decoration: none;
 		}
+	}
+	// Close button
+	.close-message {
+		position: absolute;
+		right: 1rem;
+		top: .6rem;
 	}
 }

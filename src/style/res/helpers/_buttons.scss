@@ -46,3 +46,12 @@ $btn-hover-color: #dd5800;
 		}
 	}
 }
+
+// Icon for close button
+.icon-remove-sign {
+	&:after {
+		font-family: FontAwesome;
+		content: '\F057';
+		color: #c0c0c0;
+	}
+}

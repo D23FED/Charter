@@ -1,4 +1,4 @@
-/* Helpers | Jan 17 */
+/* Helpers | Jan 19 */
 /* Display */
 .clear {
 	clear: both;
@@ -89,11 +89,19 @@
 }
 
 .vertical-center {
-	position: relative;
+	position: "relative";
+}
+
+.vertical-center,
+.vertical-center-abs {
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+}
+
+.vertical-center-abs {
+	position: absolute;
 }
 
 .horizontal-center {
@@ -298,6 +306,156 @@
 	margin-bottom: 2.5rem;
 }
 
+.m-n5 {
+	margin: -0.5rem;
+}
+
+.mt-n5 {
+	margin-top: -0.5rem;
+}
+
+.mr-n5 {
+	margin-right: -0.5rem;
+}
+
+.mb-n5 {
+	margin-bottom: -0.5rem;
+}
+
+.ml-n5,
+.mx-n5 {
+	margin-left: -0.5rem;
+}
+
+.mx-n5 {
+	margin-right: -0.5rem;
+}
+
+.my-n5 {
+	margin-top: -0.5rem;
+	margin-bottom: -0.5rem;
+}
+
+.m-n10 {
+	margin: -1rem;
+}
+
+.mt-n10 {
+	margin-top: -1rem;
+}
+
+.mr-n10 {
+	margin-right: -1rem;
+}
+
+.mb-n10 {
+	margin-bottom: -1rem;
+}
+
+.ml-n10,
+.mx-n10 {
+	margin-left: -1rem;
+}
+
+.mx-n10 {
+	margin-right: -1rem;
+}
+
+.my-n10 {
+	margin-top: -1rem;
+	margin-bottom: -1rem;
+}
+
+.m-n15 {
+	margin: -1.5rem;
+}
+
+.mt-n15 {
+	margin-top: -1.5rem;
+}
+
+.mr-n15 {
+	margin-right: -1.5rem;
+}
+
+.mb-n15 {
+	margin-bottom: -1.5rem;
+}
+
+.ml-n15,
+.mx-n15 {
+	margin-left: -1.5rem;
+}
+
+.mx-n15 {
+	margin-right: -1.5rem;
+}
+
+.my-n15 {
+	margin-top: -1.5rem;
+	margin-bottom: -1.5rem;
+}
+
+.m-n20 {
+	margin: -2rem;
+}
+
+.mt-n20 {
+	margin-top: -2rem;
+}
+
+.mr-n20 {
+	margin-right: -2rem;
+}
+
+.mb-n20 {
+	margin-bottom: -2rem;
+}
+
+.ml-n20,
+.mx-n20 {
+	margin-left: -2rem;
+}
+
+.mx-n20 {
+	margin-right: -2rem;
+}
+
+.my-n20 {
+	margin-top: -2rem;
+	margin-bottom: -2rem;
+}
+
+.m-n25 {
+	margin: -2.5rem;
+}
+
+.mt-n25 {
+	margin-top: -2.5rem;
+}
+
+.mr-n25 {
+	margin-right: -2.5rem;
+}
+
+.mb-n25 {
+	margin-bottom: -2.5rem;
+}
+
+.ml-n25,
+.mx-n25 {
+	margin-left: -2.5rem;
+}
+
+.mx-n25 {
+	margin-right: -2.5rem;
+}
+
+.my-n25 {
+	margin-top: -2.5rem;
+	margin-bottom: -2.5rem;
+}
+
 .p-0 {
 	padding: 0;
 }
@@ -476,6 +634,156 @@
 .py-25 {
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
+}
+
+.p-n5 {
+	padding: -0.5rem;
+}
+
+.pt-n5 {
+	padding-top: -0.5rem;
+}
+
+.pr-n5 {
+	padding-right: -0.5rem;
+}
+
+.pb-n5 {
+	padding-bottom: -0.5rem;
+}
+
+.pl-n5,
+.px-n5 {
+	padding-left: -0.5rem;
+}
+
+.px-n5 {
+	padding-right: -0.5rem;
+}
+
+.py-n5 {
+	padding-top: -0.5rem;
+	padding-bottom: -0.5rem;
+}
+
+.p-n10 {
+	padding: -1rem;
+}
+
+.pt-n10 {
+	padding-top: -1rem;
+}
+
+.pr-n10 {
+	padding-right: -1rem;
+}
+
+.pb-n10 {
+	padding-bottom: -1rem;
+}
+
+.pl-n10,
+.px-n10 {
+	padding-left: -1rem;
+}
+
+.px-n10 {
+	padding-right: -1rem;
+}
+
+.py-n10 {
+	padding-top: -1rem;
+	padding-bottom: -1rem;
+}
+
+.p-n15 {
+	padding: -1.5rem;
+}
+
+.pt-n15 {
+	padding-top: -1.5rem;
+}
+
+.pr-n15 {
+	padding-right: -1.5rem;
+}
+
+.pb-n15 {
+	padding-bottom: -1.5rem;
+}
+
+.pl-n15,
+.px-n15 {
+	padding-left: -1.5rem;
+}
+
+.px-n15 {
+	padding-right: -1.5rem;
+}
+
+.py-n15 {
+	padding-top: -1.5rem;
+	padding-bottom: -1.5rem;
+}
+
+.p-n20 {
+	padding: -2rem;
+}
+
+.pt-n20 {
+	padding-top: -2rem;
+}
+
+.pr-n20 {
+	padding-right: -2rem;
+}
+
+.pb-n20 {
+	padding-bottom: -2rem;
+}
+
+.pl-n20,
+.px-n20 {
+	padding-left: -2rem;
+}
+
+.px-n20 {
+	padding-right: -2rem;
+}
+
+.py-n20 {
+	padding-top: -2rem;
+	padding-bottom: -2rem;
+}
+
+.p-n25 {
+	padding: -2.5rem;
+}
+
+.pt-n25 {
+	padding-top: -2.5rem;
+}
+
+.pr-n25 {
+	padding-right: -2.5rem;
+}
+
+.pb-n25 {
+	padding-bottom: -2.5rem;
+}
+
+.pl-n25,
+.px-n25 {
+	padding-left: -2.5rem;
+}
+
+.px-n25 {
+	padding-right: -2.5rem;
+}
+
+.py-n25 {
+	padding-top: -2.5rem;
+	padding-bottom: -2.5rem;
 }
 
 .m-auto {
@@ -765,6 +1073,10 @@
 	text-decoration: underline;
 }
 
+.underline-none a {
+	text-decoration: none;
+}
+
 .fs-8 {
 	font-size: 0.8rem;
 }
@@ -881,6 +1193,37 @@
 	font-size: 3.6rem;
 }
 
+.logo-tmc::before {
+	font-size: 3rem;
+}
+
+.channel-logo::before {
+	font-weight: 400;
+}
+
+.no-wrap,
+.nowrap {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+	clear: both;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
 /* Buttons */
 .btn-dk-orange .btn {
 	position: relative;
@@ -929,6 +1272,12 @@
 	z-index: -1;
 }
 
+.icon-remove-sign:after {
+	font-family: FontAwesome;
+	content: '\F057';
+	color: #c0c0c0;
+}
+
 .policy-terms {
 	padding: 0.5rem 1rem;
 }
@@ -975,29 +1324,6 @@ div.policy-terms {
 }
 
 /* End Fix for accordion issues - Charter Jira 1290 */
-.no-wrap,
-.nowrap {
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-.text-left {
-	text-align: left;
-}
-
-.text-center {
-	text-align: center;
-	clear: both;
-}
-
-.text-right {
-	text-align: right;
-}
-
-.text-bold {
-	font-weight: 700;
-}
-
 .image-left {
 	float: left;
 	margin-right: 1.5rem;
@@ -1012,11 +1338,6 @@ div.policy-terms {
 .image-right {
 	float: right;
 	margin-left: 1.5rem;
-}
-
-.container-fluid .imageArtDirection {
-	margin-left: 0;
-	margin-right: 0;
 }
 
 .clickable {
@@ -1051,6 +1372,19 @@ hr.black {
 	left: -1em;
 	color: #0091e6;
 	font-size: 1em;
+}
+
+.container-fluid .imageArtDirection {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+@media (max-width: 767px) {
+	.center-sm,
+	.center-sm .text-left,
+	.center-sm .text-right {
+		text-align: center;
+	}
 }
 
 /*# sourceMappingURL=helpers.css.map */
