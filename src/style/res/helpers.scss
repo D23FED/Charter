@@ -6,32 +6,10 @@
 @import 'helpers/spacing';
 @import 'helpers/borders';
 @import 'helpers/colors';
-@import 'helpers/fonts';
+@import 'helpers/text';
 @import 'helpers/buttons';
 @import 'helpers/terms';
 @import 'helpers/fix-accordion';
-.no-wrap,
-.nowrap {
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-.text-left {
-	text-align: left;
-}
-
-.text-center {
-	text-align: center;
-	clear: both;
-}
-
-.text-right {
-	text-align: right;
-}
-
-.text-bold {
-	font-weight: bold;
-}
 
 .image-left {
 	float: left;

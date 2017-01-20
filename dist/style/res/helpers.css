@@ -1193,6 +1193,37 @@
 	font-size: 3.6rem;
 }
 
+.logo-tmc::before {
+	font-size: 3rem;
+}
+
+.channel-logo::before {
+	font-weight: 400;
+}
+
+.no-wrap,
+.nowrap {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+	clear: both;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
 /* Buttons */
 .btn-dk-orange .btn {
 	position: relative;
@@ -1293,29 +1324,6 @@ div.policy-terms {
 }
 
 /* End Fix for accordion issues - Charter Jira 1290 */
-.no-wrap,
-.nowrap {
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-.text-left {
-	text-align: left;
-}
-
-.text-center {
-	text-align: center;
-	clear: both;
-}
-
-.text-right {
-	text-align: right;
-}
-
-.text-bold {
-	font-weight: 700;
-}
-
 .image-left {
 	float: left;
 	margin-right: 1.5rem;
@@ -1369,6 +1377,14 @@ hr.black {
 .container-fluid .imageArtDirection {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+@media (max-width: 767px) {
+	.center-sm,
+	.center-sm .text-left,
+	.center-sm .text-right {
+		text-align: center;
+	}
 }
 
 /*# sourceMappingURL=helpers.css.map */
