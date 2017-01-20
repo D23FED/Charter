@@ -1,0 +1,30 @@
+/* "Scroll for more" links on Product pages */
+
+.product-scroll a {
+	background: url(/content/dam/spectrum/residential/en/images/internet/arrow.png) no-repeat left center;
+	color: #11a2ff;
+	display: block;
+	clear: left;
+	font-size: 1.4rem;
+	margin: 0.5rem 0 3.0rem 0rem;
+	padding: 1rem 1rem 1rem 4.5rem;
+	text-decoration: none;
+	font-weight: bold;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.product-scroll-white a {
+	background: url(/content/dam/spectrum/residential/en/images/internet/arrow-white.png) no-repeat left center;
+	display: block;
+	clear: left;
+	font-size: 1.4rem;
+	margin: 0.5rem 0 3rem 0;
+	padding: 1rem 1rem 1rem 4.5rem;
+	text-decoration: none;
+	font-weight: bold;
+	&:hover {
+		text-decoration: none;
+	}
+}
