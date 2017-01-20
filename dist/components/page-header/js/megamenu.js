@@ -1,4 +1,4 @@
-/* Megamenu (My Services and Support menu items) */
+/* Megamenu (My Services and Support menu items) v2 */
 var megaMenu = {
 	activeClassSupport: 'menu-support-active',
 	activeClassServices: 'menu-services-active',
@@ -6,7 +6,8 @@ var megaMenu = {
 	hideBelow: 768,
 	mmSupportIsOpen: false,
 	mmServicesIsOpen: false,
-	mmIsOpen: false
+	mmIsOpen: false,
+	xrefCheckCounter: 0
 };
 // Open My Services Menu
 megaMenu.openServices = function() {
@@ -81,9 +82,12 @@ megaMenu.whenAvailable = function(name, callback) {
 		if ($(name).length > 0) {
 			// console.info(name + ' was found');
 			callback();
-		} else {
-			// console.warn(name + ' not found');
+		} else if (megaMenu.xrefCheckCounter < 20) {
+			// console.warn(name + ' not found, tries:',megaMenu.xrefCheckCounter);
+			megaMenu.xrefCheckCounter++;
 			window.setTimeout(arguments.callee, interval);
+		} else {
+			console.error(name + ' was never found, giving up');
 		}
 	}, interval);
 };
