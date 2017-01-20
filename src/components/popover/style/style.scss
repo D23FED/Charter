@@ -1,0 +1,83 @@
+@import 'initialize';
+
+/* Popovers (not appearing in site header) */
+
+$title-spacing-v: 1.5rem;
+$color-popover-border: #b7b7b7;
+// Wrapper
+.popover-contact-xref {
+	display: none;
+}
+
+.popover-contact {
+	position: absolute;
+	border: .1rem solid #b7b7b7;
+	background-color: #fff;
+	padding: $column-padding;
+	display: none;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 4.4rem;
+	min-width: 20rem;
+	z-index: 100;
+	@include aem-authoring {
+		position: relative;
+	}
+	&:after,
+	&:before {
+		content: " ";
+		border-width: medium;
+		border-style: solid;
+		border-color: transparent;
+		width: 0;
+		height: 0;
+		bottom: 100%;
+		left: 50%;
+		position: absolute;
+		pointer-events: none;
+	}
+	&:after {
+		border-bottom-color: #fff;
+		border-width: 0.8rem;
+		margin-left: -0.8rem;
+	}
+	&:before {
+		border-bottom-color: #b7b7b7;
+		border-width: 0.9rem;
+		margin-left: -0.9rem;
+	}
+	p {
+		color: #333;
+		text-transform: none;
+		font-weight: normal;
+		font-size: 1.6rem;
+		text-align: left;
+	}
+	a {
+		padding: 0;
+		background-color: transparent;
+		border-radius: 0;
+		color: $lt-blue;
+		font-size: inherit;
+		text-decoration: underline;
+		@include hover-focus {
+			background-color: transparent;
+			color: $blue;
+			&:active {
+				background-color: transparent;
+				text-decoration: none;
+				color: $blue;
+			}
+		}
+		&:active {
+			background-color: transparent;
+			text-decoration: none;
+		}
+	}
+	// Close button
+	.close-message {
+		position: absolute;
+		right: 1rem;
+		top: .6rem;
+	}
+}

@@ -1,7 +1,8 @@
 // Popover
 var popover = {
 	activeClass: 'popover-active',
-	isOpen: false
+	isOpen: false,
+	closeButton: $('div',{'class':'close-message spectrum-icon-only icon-remove-sign'})
 };
 // Open Popover
 popover.open = function() {
@@ -43,12 +44,12 @@ popover.init = function() {
 	// Append popover
 	popover.$menuItemContact.append(popover.$menuContact);
 	// Append close button
-	popover.$menuContact.append(popover.$btnClose);
+	// popover.$menuContact.append(popover.$btnClose);
 	// Menu item click
-	popover.$menuItemContact.on('click touchend', function(e) {
+	popover.$menuItemContact.find('a.btn').on('click touchend', function(e) {
 		e.preventDefault();
 		// console.group();
-		// console.info('click Contact Us');
+		console.info('click Contact Us');
 		// Check if open var is set
 		var openState = popover.isOpen;
 		popover.close();
@@ -70,6 +71,11 @@ popover.init = function() {
 			popover.open();
 		}
 		// console.groupEnd();
+	});
+
+	// Click close button
+	popover.$menuContact.find('.close-message').on('click touchend', function(e) {
+		console.info('click Close button');
 	});
 	// Close menu at smallest breakpoint
 	$(window).on('resize', function() {

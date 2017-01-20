@@ -1,4 +1,4 @@
-// Popover
+// Popover: Access page
 var popover = {
 	activeClass: 'popover-active',
 	isOpen: false,
@@ -6,7 +6,7 @@ var popover = {
 };
 // Open Popover
 popover.open = function() {
-	// console.info('open Contact');
+	// console.info('open Contact')
 	$('.popover-contact').show().attr('aria-hidden', false);
 	$('body').addClass(popover.activeClass);
 	popover.isOpen = true;
@@ -38,18 +38,18 @@ popover.init = function() {
 	popover.$menuContact = $('.popover-contact');
 	popover.$btnClose = $('.popover-contact-xref .close-message');
 	// User navigation menu
-	popover.$userNavItems = $('.nav-user ul.list-inline li');
+	// popover.$userNavItems = $('.nav-user ul.list-inline li');
 	// Contact Us nav menu item
-	popover.$menuItemContact = popover.$userNavItems.eq(1);
+	popover.$menuItemContact = $('[data-linkname="contact_us"]');
 	// Append popover
 	popover.$menuItemContact.append(popover.$menuContact);
 	// Append close button
-	// popover.$menuContact.append(popover.$btnClose);
+	popover.$menuContact.addClass('popover-content-access-page').append(popover.$btnClose);
 	// Menu item click
-	popover.$menuItemContact.find('a.btn').on('click touchend', function(e) {
+	popover.$menuItemContact.on('click touchend', function(e) {
 		e.preventDefault();
 		// console.group();
-		console.info('click Contact Us');
+		// console.info('click Contact Us');
 		// Check if open var is set
 		var openState = popover.isOpen;
 		popover.close();
@@ -71,11 +71,6 @@ popover.init = function() {
 			popover.open();
 		}
 		// console.groupEnd();
-	});
-
-	// Click close button
-	popover.$menuContact.find('.close-message').on('click touchend', function(e) {
-		console.info('click Close button');
 	});
 	// Close menu at smallest breakpoint
 	$(window).on('resize', function() {
