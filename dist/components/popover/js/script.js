@@ -10,14 +10,12 @@ var popover = {
 };
 // Open Popover
 popover.open = function() {
-	// console.info('open Contact')
 	$(popover.containerSelector).show().attr('aria-hidden', false);
 	$('body').addClass(popover.activeClass);
 	popover.isOpen = true;
 };
 // Close Popover
 popover.close = function() {
-	// console.info('close Contact');
 	$(popover.containerSelector).hide().attr('aria-hidden', true);
 	$('body').removeClass(popover.activeClass);
 	popover.isOpen = false;
@@ -27,20 +25,21 @@ popover.whenAvailable = function(name, callback) {
 	var interval = 500; // ms
 	window.setTimeout(function() {
 		if ($(name).length > 0) {
+			// console.info(name + ' was found');
 			callback();
-			// console.info(name + ' has loaded');
-		} else {
+		} else if (popover.xrefCheckCounter < 20) {
+			// console.warn(name + ' not found, tries:',popover.xrefCheckCounter);
+			popover.xrefCheckCounter++;
 			window.setTimeout(arguments.callee, interval);
-			// console.warn(name + ' not yet loaded');
+		} else {
+			console.error('"Contact Us" popover failed to initialize: ' + name + ' was not found.');
 		}
 	}, interval);
 };
 // Initialize Popover
 popover.init = function() {
-	// console.info('popover domready');
 	// Popover containing menu of contact info
 	popover.$menuContact = $(popover.containerSelector);
-	// popover.$btnClose = $('.popover-contact-xref .close-message');
 	// Contact Us nav menu item
 	popover.$menuItemContact = $(popover.buttonSelector);
 	// Append close button
@@ -52,7 +51,6 @@ popover.init = function() {
 		e.preventDefault();
 		e.stopPropagation();
 		console.dir((e.target));
-		// console.info('click Contact Us');
 		// Check if open var is set
 		var openState = popover.isOpen;
 		popover.close();
@@ -65,7 +63,6 @@ popover.init = function() {
 			popover.popoverY = popover.menuItemH + popover.menuArrowH;
 			// Set menu top to nav menu item height + height of "arrow" on top center of box around the nav menu
 			popover.$menuContact.css('top', popover.popoverY);
-			console.log('Button height:' + popover.$menuItemContact.height() + ' ' + popover.$menuItemContact.outerHeight() + ' | Button offset:' + popover.$menuItemContact.offset().top);
 			popover.open();
 		}
 	});
