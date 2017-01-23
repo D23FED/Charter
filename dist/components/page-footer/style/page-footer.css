@@ -27,6 +27,7 @@
 	margin-bottom: 1.1rem;
 	margin-top: 2.2rem;
 	font-size: 1.3rem;
+	font-weight: inherit;
 }
 
 .site-footer .aem-Grid {
@@ -41,6 +42,8 @@
 	background-image: -webkit-linear-gradient(top, #d4d3d3, #f1f1f1);
 	background-image: linear-gradient(180deg, #d4d3d3 0%, #f1f1f1);
 	margin-bottom: 2.8rem;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .site-footer .footer-header a {
@@ -106,11 +109,6 @@
 	margin: 0;
 }
 
-.site-footer .footer-body {
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-}
-
 .site-footer .footer-body ul,
 .site-footer .footer-body ol {
 	margin-left: 0;
@@ -151,7 +149,7 @@
 }
 
 .site-footer .footer-states-list .list-inline.list-separated li a {
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 }
 
 .site-footer .footer-states-list p {
@@ -162,15 +160,13 @@
 
 .site-footer .copyright {
 	font-size: 1.2rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
 }
 
 @media (min-width: 768px) {
 	.site-footer .footer-header a.spectrum-facebook,
 	.site-footer .footer-header a.spectrum-twitter,
 	.site-footer .footer-header a.spectrum-youtube {
-		font-size: inherit;
+		font-size: 1.2rem;
 		padding: 2.7rem 3rem;
 		padding-left: 6.7rem;
 		background-position: 3rem center;
