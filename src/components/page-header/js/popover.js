@@ -1,12 +1,13 @@
 // Popover
+// Used on global header #3, "Contact Us" menu item
 var popover = {
 	activeClass: 'popover-active',
 	containerSelector: '.popover-contact',
 	closeButtonSelector: '.close-message',
 	hideBelow: 768,
 	isOpen: false,
-	xrefCheckCounter: 40
-	closeButton: $('div',{'class':'close-message spectrum-icon-only icon-remove-sign'})
+	xrefCheckCounter: 0,
+	closeButton: $('<div/>', { 'class': 'close-message spectrum-icon-only icon-remove-sign' })
 };
 // Open Popover
 popover.open = function() {
@@ -31,12 +32,12 @@ popover.whenAvailable = function(name, callback) {
 			callback();
 		} else if (popover.xrefCheckCounter < 20) {
 			// Element not found
-			console.warn(name + ' not found, tries:',popover.xrefCheckCounter);
+			// console.warn(name + ' not found, tries:', popover.xrefCheckCounter);
 			popover.xrefCheckCounter++;
 			window.setTimeout(arguments.callee, interval);
 		} else {
 			// Element not found after max # of tries
-			console.error('Failure to initiate "Contact Us" popover: '+ name + ' was never found.');
+			console.error('Failure to initiate "Contact Us" popover: ' + name + ' was never found.');
 		}
 	}, interval);
 };
@@ -53,12 +54,24 @@ popover.init = function() {
 	// Append popover
 	popover.$menuItemContact.append(popover.$menuContact);
 	// Append close button
-	// popover.$menuContact.append(popover.closeButton);
+	popover.$menuContact.append(popover.closeButton);
+	// Close menu if user clicks outside of menu
+	$('body').on('click', function(e) {
+		var $t = $(e.target);
+		if (
+			popover.isOpen &&
+			!$t.is(popover.containerSelector) &&
+			!$t.parents(popover.containerSelector).length) {
+			// console.error('Click outside Popover');
+			popover.close();
+		}
+	});
 	// Menu item click
 	popover.$menuItemContact.find('a.btn').on('click touchend', function(e) {
 		e.preventDefault();
+		e.stopPropagation();
 		// console.group();
-		console.info('click Contact Us');
+		// console.info('click Contact Us');
 		// Check if open var is set
 		var openState = popover.isOpen;
 		popover.close();
@@ -82,12 +95,12 @@ popover.init = function() {
 		// console.groupEnd();
 	});
 	// "unbind" child links
-	popover.$menuItemContact.find([popover.containerSelector,'a']).on('click touchend', function(e) {
+	popover.$menuItemContact.find([popover.containerSelector, 'a'].join(' ')).on('click touchend', function(e) {
 		e.stopPropagation();
 	});
 	// Click close button
 	popover.$menuContact.find('.close-message').on('click touchend', function(e) {
-		console.info('click Close button');
+		// console.info('click Close button');
 		popover.close();
 	});
 	// Close menu at smallest breakpoint
@@ -95,7 +108,7 @@ popover.init = function() {
 		if (window.innerWidth < popover.hideBelow) {
 			popover.close();
 		}
-	})
+	});
 }
 // Wait for popover Xref to load, then initialize script
 $(function() {
