@@ -1,4 +1,5 @@
-/* Megamenu (My Services and Support menu items) v2 */
+// Megamenu
+// Appears below "My Services" and "Support" menu items (only for specific regions)
 var megaMenu = {
 	activeClassSupport: 'menu-support-active',
 	activeClassServices: 'menu-services-active',
@@ -87,13 +88,13 @@ megaMenu.whenAvailable = function(name, callback) {
 			megaMenu.xrefCheckCounter++;
 			window.setTimeout(arguments.callee, interval);
 		} else {
-			console.error(name + ' was never found, giving up');
+			console.error('Failed to initalize megamenu. '+name + ' was never found after ' + megaMenu.xrefCheckCounter+' tries.');
 		}
 	}, interval);
 };
 // Initialize megamenu
 megaMenu.init = function() {
-	console.info('megamenu domready v1.4');
+	// console.info('megamenu domready v1.4');
 	megaMenu.$menuServices = $('.my-services-menu');
 	megaMenu.$menuSupport = $('.support-menu');
 	megaMenu.$userNavItems = $('.nav-user ul.list-inline li');
@@ -125,10 +126,6 @@ megaMenu.init = function() {
 			megaMenu.openSupport();
 		}
 	});
-	// $('body').on('click touchend', function(e) {
-	// 	megaMenu.closeSupport();
-	// 	megaMenu.closeServices();
-	// });
 	// Hide megamenus at small breakpoint
 	$(window).on('resize', function() {
 		if (window.innerWidth < megaMenu.hideBelow) {
