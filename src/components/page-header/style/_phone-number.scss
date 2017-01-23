@@ -2,16 +2,25 @@
 .phone-main {
 	position: absolute;
 	line-height: 1;
-	top: 1.5rem;
-	right: 1.5rem;
+	top: 3.5rem;
+	// right: 1.5rem;
+	left: 60vw;
 	a {
 		color: #88C657;
 		text-decoration: none;
 		display: block;
 		font-weight: bold;
-		font-size: 1.8rem;
+		font-size: 2rem;
 		@include breakpoint('sm') {
 			font-size: 4.7rem;
 		}
+	}
+	@include breakpoint('sm') {
+		left: inherit;
+		right: 1.5rem;
+	}
+	@include breakpoint('md') {
+		left: 66vw;
+		top: 1.5rem;
 	}
 }

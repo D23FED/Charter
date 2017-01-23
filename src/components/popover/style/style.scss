@@ -9,6 +9,24 @@ $color-popover-border: #b7b7b7;
 	display: none;
 }
 
+.cta-contact {
+	position: relative;
+	a {
+		font-size: 1.4rem;
+		padding: .7rem 1rem;
+		@include breakpoint('sm') {
+			padding: .7rem 4rem;
+			font-size: 1.9rem;
+		}
+	}
+	svg {
+		display: none;
+		@include breakpoint('sm') {
+			display: block;
+		}
+	}
+}
+
 .popover-contact {
 	position: absolute;
 	border: .1rem solid #b7b7b7;
@@ -79,5 +97,15 @@ $color-popover-border: #b7b7b7;
 		position: absolute;
 		right: 1rem;
 		top: .6rem;
+		cursor: pointer;
+	}
+}
+
+
+/* Just for Access page */
+
+@media (max-width:991px) {
+	#jumbotron .imageArtDirection .background-image {
+		background: none !important;
 	}
 }
