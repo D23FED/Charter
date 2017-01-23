@@ -15,6 +15,22 @@
 }
 
 .site-header-top-02 {
+	.menu-sm {
+		@include breakpoint('sm') {
+			display: block;
+		}
+		@include breakpoint('md') {
+			display: none;
+		}
+	}
+	.menu-lg {
+		@include breakpoint('sm') {
+			display: none;
+		}
+		@include breakpoint('md') {
+			display: block;
+		}
+	}
 	position: relative;
 	// Add space to accomodate ZIP Pin icon
 	.menu-sm .mui-wrapper,

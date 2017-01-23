@@ -578,6 +578,14 @@
 		font-size: 4.7rem;
 	}
 
+	.site-header-top-02 .menu-sm {
+		display: block;
+	}
+
+	.site-header-top-02 .menu-lg {
+		display: none;
+	}
+
 	.site-header-top-02 .icon-map-marker a {
 		top: 5.6rem;
 	}
@@ -606,6 +614,16 @@
 	.site-header-top-05 .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--6,
 	.site-header-top-05 .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--4 {
 		float: left;
+	}
+}
+
+@media (min-width: 992px) {
+	.site-header-top-02 .menu-sm {
+		display: none;
+	}
+
+	.site-header-top-02 .menu-lg {
+		display: block;
 	}
 }
 
