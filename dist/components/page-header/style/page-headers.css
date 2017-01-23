@@ -429,6 +429,13 @@
 	text-decoration: none;
 }
 
+.site-header .popover-contact .close-message {
+	position: absolute;
+	right: 1rem;
+	top: .6rem;
+	cursor: pointer;
+}
+
 /* Text adjustments */
 .site-header hr {
 	margin-top: 0;

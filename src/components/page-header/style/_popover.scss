@@ -72,4 +72,11 @@ $color-popover-border: #b7b7b7;
 			text-decoration: none;
 		}
 	}
+	// Close button
+	.close-message {
+		position: absolute;
+		right: 1rem;
+		top: .6rem;
+		cursor: pointer;
+	}
 }
