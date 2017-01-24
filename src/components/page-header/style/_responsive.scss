@@ -16,11 +16,8 @@
 	.mui-wrapper {
 		// Small "Check availability" button
 		.btn-sm {
-			font-size: 1.2rem;
 			margin-top: 0.7rem;
-			padding: 0.5rem 1rem;
-			font-weight: 400;
-			text-shadow: 0.1rem 0.1rem 0.3rem #888;
+			@include btn-sm;
 		}
 	}
 }

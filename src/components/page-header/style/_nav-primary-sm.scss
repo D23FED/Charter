@@ -4,7 +4,7 @@
 .navbar-sm {
 	background-color: transparent;
 	border: none;
-	margin-bottom: 1.5rem;
+	margin-bottom: 0;
 	position: static;
 	min-height: auto;
 	@include breakpoint('sm') {
@@ -58,5 +58,7 @@
 		margin-top: $navbar-toggle-spacing-top;
 		transition: background 150ms ease-out;
 		margin-right: 0;
+		margin-bottom: 0;
+		z-index: 1000;
 	}
 }
