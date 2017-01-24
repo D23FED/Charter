@@ -4,16 +4,15 @@ $mui-wrapper: 'muiAddressLookup';
 $submit-button: 'localization__input-submit';
 // Buttons render differently on FF
 @at-root {
-/* Browser-specific: to be removed */
+	/* Browser-specific: to be removed */
 }
-@-moz-document url-prefix() {
-	.#{$mui-wrapper} {
-		// <form> inner for horizontal layout 1
-		.localization--horizontal-1 {
-			.#{$submit-button} {
-				padding-top: .8rem;
-				padding-bottom: .8rem;
-			}
-		}
+
+// FF handles buttons poorly
+@at-root {
+	.site-header .#{$mui-wrapper} .localization--horizontal-1 .#{$submit-button},
+	x:-moz-any-link,
+	x:default {
+		padding-top: .8rem;
+		padding-bottom: .8rem;
 	}
 }

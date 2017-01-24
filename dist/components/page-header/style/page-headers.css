@@ -482,12 +482,11 @@
 }
 
 /* Browser-specific: to be removed */
-
-@-moz-document url-prefix() {
-	.site-header .muiAddressLookup .localization--horizontal-1 .localization__input-submit {
-		padding-top: .8rem;
-		padding-bottom: .8rem;
-	}
+.site-header .muiAddressLookup .localization--horizontal-1 .localization__input-submit,
+x:-moz-any-link,
+x:default {
+	padding-top: .8rem;
+	padding-bottom: .8rem;
 }
 
 .site-header .aem-Grid-newComponent {
