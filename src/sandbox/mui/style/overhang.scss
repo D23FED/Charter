@@ -1,8 +1,8 @@
 @import 'initialize';
 
-/* Hero */
+/* Homepage Hero */
 
-#image-art-mui-wrapper {
+.hp-hero {
 	width: 100%;
 	height: 100%;
 	@include breakpoint('md') {
@@ -41,7 +41,7 @@
 
 /* MUI Hero Overhang */
 
-#mui-wrapper {
+.mui-overhang {
 	width: 100%;
 	height: auto;
 	float: right;
@@ -156,7 +156,7 @@
 
 /* Banner below hero */
 
-.combine-wrapper {
+.banner-offer {
 	color: #000;
 	margin: 2rem 0 3rem;
 	p {
