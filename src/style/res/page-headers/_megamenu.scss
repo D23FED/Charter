@@ -1,0 +1,52 @@
+@at-root {
+/* Megamenu */
+}
+$title-spacing-v: 1.5rem;
+.my-services-menu,
+.support-menu {
+	width: 80%;
+	right: 0;
+	position: absolute;
+	display: none;
+	.aem-Grid {
+		background: linear-gradient(to bottom, #fff 80%, #dfe5e5 100%) repeat 0 0;
+		margin: 0;
+		padding: 1.5rem;
+		text-align: left;
+		top: auto;
+		z-index: $zi-megamenu;
+		box-shadow: 0px .4rem .5rem -.1rem #333;
+	}
+	.aem-GridColumn {
+		margin-top: -$title-spacing-v;
+	}
+	ul {
+		list-style-type: none;
+		list-style-position: inside;
+		margin: 0;
+		padding: 0 0 0 2.5rem;
+	}
+	li {
+		a {
+			padding-left: 5px;
+			line-height: (17 / 12);
+			font-size: 1.2rem;
+			color: #333;
+			text-decoration: none;
+			@include hover-focus {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// Column titles
+	h3 {
+		margin-top: $title-spacing-v;
+		font-weight: normal;
+	}
+	h3,
+	h3 a {
+		font-size: 2rem;
+		color: #333;
+	}
+}

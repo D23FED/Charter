@@ -3,6 +3,19 @@
 	display: none;
 }
 
+.cta-contact {
+	position: relative;
+}
+
+.cta-contact a {
+	font-size: 1.4rem;
+	padding: .7rem 1rem;
+}
+
+.cta-contact svg {
+	display: none;
+}
+
 .popover-contact {
 	position: absolute;
 	border: .1rem solid #b7b7b7;
@@ -87,6 +100,26 @@
 	position: absolute;
 	right: 1rem;
 	top: .6rem;
+	cursor: pointer;
+}
+
+/* Just for Access page */
+
+@media (min-width: 768px) {
+	.cta-contact a {
+		padding: .7rem 4rem;
+		font-size: 1.9rem;
+	}
+
+	.cta-contact svg {
+		display: block;
+	}
+}
+
+@media (max-width: 991px) {
+	#jumbotron .imageArtDirection .background-image {
+		background: none !important;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

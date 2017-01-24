@@ -1,0 +1,83 @@
+@import 'initialize';
+// Style 5:
+//   Logo
+//   Small
+//     Hamburger button
+//     ZIP Pin
+//     Localization button (large)
+//   Large
+//     User nav
+//     Localization button (large)
+//     Primary nav: Text-style
+$grid-wrapper: '.aem-Grid.aem-Grid--12';
+$primary-nav-text-wrapper: '.aem-GridColumn.aem-GridColumn--default--6';
+$mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
+@at-root {
+	/* Unique to Site Header 05 */
+}
+
+.site-header-top-wrapper {
+	background: #f8f8f8;
+}
+
+.site-header-top-05 {
+	position: relative;
+	padding-bottom: $logo-spacing-v;
+	#{$grid-wrapper} {
+		>#{$primary-nav-text-wrapper},
+		>#{$mui-lg-wrapper} {
+			// float: none;
+			@include breakpoint('sm') {
+				// float: left;
+			}
+		}
+	}
+	.navbar-sm .navbar-toggle {
+		position: absolute;
+		right: 1.5rem;
+		top: .8rem;
+		margin-top: 0;
+	}
+	// MUI Button
+	.mui-wrapper.menu-lg {
+		.btn {
+			white-space: initial;
+			margin-right: 2rem;
+			@include btn-sm;
+			@include breakpoint('sm') {
+				white-space: nowrap;
+				padding-right: .3rem;
+			}
+			@include breakpoint('md') {
+				white-space: initial;
+				font-size: $btn-font-size-default;
+				padding: $btn-padding-default-y $btn-padding-default-x/2;
+				font-weight: 700;
+			}
+			@include breakpoint('lg') {
+				padding: $btn-padding-default;
+			}
+		}
+	}
+	.mui-wrapper.menu-sm {
+		// padding-top: 2rem;
+	}
+	// ZIP Pin icon: large version
+	.menu-lg {
+		.icon-map-marker a {
+			right: 1.5rem;
+			top: 1.8rem;
+			@include breakpoint('md') {
+				top: 2.5rem;
+			}
+		}
+	}
+	#{$page-header} & {
+		background-color: transparent;
+	}
+	.#{$logo} {
+		img {
+			max-width: 100%;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+@at-root {
+	/* Section of the header above the primary nav menuc*/
+}
+
+.site-header-top {
+	min-height: $site-header-min-height;
+	background-color: #fff;
+	@include center-block;
+	.aem-GridColumn:first-of-type {
+		padding-left: 0;
+	}
+	.aem-GridColumn:nth-last-of-type(2),
+	.aem-GridColumn:nth-last-of-type(3) {
+		padding-right: 0;
+	}
+}
+
+&.js-sticky .site-header-top {
+	max-width: none;
+	>div {
+		max-width: map-get($breakpoints, 'lg');
+		@include center-block;
+		padding-left: $column-padding;
+		padding-right: $column-padding;
+	}
+}

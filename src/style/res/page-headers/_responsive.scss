@@ -1,0 +1,38 @@
+@at-root {
+	/* Show/hide menu elements responsively, target elements at specific browser widths */
+}
+
+// Menu elements only shown at small breakpoints
+.menu-sm {
+	@include breakpoint('sm') {
+		display: none;
+	}
+	@include aem-authoring {
+		@include breakpoint('sm') {
+			display: block;
+		}
+	}
+	// Wraps MUI button
+	.mui-wrapper {
+		// Small "Check availability" button
+		.btn-sm {
+			margin-top: 0.7rem;
+			@include btn-sm;
+		}
+	}
+}
+
+// Menu elements only shown at large breakpoints
+.menu-lg {
+	display: none;
+	@include aem-authoring {
+		display: block;
+	}
+	@include breakpoint('sm') {
+		display: block;
+	}
+	.mui-wrapper {
+		display: inline-block;
+		float: right;
+	}
+}

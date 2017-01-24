@@ -1,21 +1,21 @@
-/* Hero */
-#image-art-mui-wrapper {
+/* Homepage Hero */
+.hp-hero {
 	width: 100%;
 	height: 100%;
 }
 
-#image-art-mui-wrapper .imageArtDirection .background-image {
+.hp-hero .imageArtDirection .background-image {
 	padding: 0;
 }
 
-#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
+.hp-hero .imageArtDirection .imageArtDirection .background-image {
 	width: 100%;
 	height: 20rem;
 	background-size: contain;
 }
 
 /* MUI Hero Overhang */
-#mui-wrapper {
+.mui-overhang {
 	width: 100%;
 	height: auto;
 	float: right;
@@ -27,19 +27,19 @@
 	text-align: center;
 }
 
-#mui-wrapper h2 {
+.mui-overhang h2 {
 	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 	font-size: 3.2rem;
 	font-weight: 700;
 	margin: 0 2rem;
 }
 
-#mui-wrapper h3 {
+.mui-overhang h3 {
 	margin: 0;
 	font-weight: 700;
 }
 
-#mui-wrapper .price-block {
+.mui-overhang .price-block {
 	color: #fff;
 	display: table;
 	font-size: 6rem;
@@ -47,107 +47,107 @@
 	margin: 1rem auto;
 }
 
-#mui-wrapper .price-block .super {
+.mui-overhang .price-block .super {
 	font-weight: 400;
 	font-size: 2rem;
 	text-align: left;
 	margin-top: 1.2rem;
 }
 
-#mui-wrapper .price-block .whole {
+.mui-overhang .price-block .whole {
 	font-size: 8rem;
 }
 
-#mui-wrapper .price-block .currency {
+.mui-overhang .price-block .currency {
 	font-size: 2.4rem;
 	vertical-align: middle;
 }
 
-#mui-wrapper .price-block .before,
-#mui-wrapper .price-block .term {
+.mui-overhang .price-block .before,
+.mui-overhang .price-block .term {
 	font-size: 1rem;
 }
 
-#mui-wrapper .price-block .before {
+.mui-overhang .price-block .before {
 	margin-bottom: -1rem;
 }
 
-#mui-wrapper .price-block .term {
+.mui-overhang .price-block .term {
 	text-align: left;
 }
 
-#mui-wrapper .price {
+.mui-overhang .price {
 	margin: 0 auto;
 }
 
-#mui-wrapper .price-style-01 .currency,
-#mui-wrapper .price-style-01 .whole,
-#mui-wrapper .price-style-01 .super,
-#mui-wrapper .price-style-01 .separator {
+.mui-overhang .price-style-01 .currency,
+.mui-overhang .price-style-01 .whole,
+.mui-overhang .price-style-01 .super,
+.mui-overhang .price-style-01 .separator {
 	background: transparent;
 	color: #fff;
 	-webkit-text-fill-color: #fff;
 	text-fill-color: #fff;
 }
 
-#mui-wrapper .price-style-01 .before,
-#mui-wrapper .price-style-01 .after,
-#mui-wrapper .price-style-01 .term {
+.mui-overhang .price-style-01 .before,
+.mui-overhang .price-style-01 .after,
+.mui-overhang .price-style-01 .term {
 	color: #fff;
 }
 
-#mui-wrapper .offer-bottom {
+.mui-overhang .offer-bottom {
 	margin-left: 1.5rem;
 	margin-bottom: 2rem;
 	text-align: center;
 }
 
-#mui-wrapper .prod-offer {
+.mui-overhang .prod-offer {
 	font-size: 2.2rem;
 	font-weight: 400;
 }
 
 /* MUI form */
-#mui-wrapper .muiAddressLookup {
+.mui-overhang .muiAddressLookup {
 	margin: 0 2.5rem;
 }
 
-#mui-wrapper .muiAddressLookup label {
+.mui-overhang .muiAddressLookup label {
 	display: none;
 }
 
-#mui-wrapper .muiAddressLookup .localization--vertical-1 .localization__inputs,
-#mui-wrapper .muiAddressLookup .localization--vertical-2 .localization__inputs,
-#mui-wrapper .muiAddressLookup .localization--vertical-3 .localization__inputs {
+.mui-overhang .muiAddressLookup .localization--vertical-1 .localization__inputs,
+.mui-overhang .muiAddressLookup .localization--vertical-2 .localization__inputs,
+.mui-overhang .muiAddressLookup .localization--vertical-3 .localization__inputs {
 	padding-bottom: 1rem;
 	margin: 0 auto;
 }
 
-#mui-wrapper .muiAddressLookup .mui-loader-container {
+.mui-overhang .muiAddressLookup .mui-loader-container {
 	height: 185px;
 	width: 245px;
 	margin: 0 auto;
 }
 
-#mui-wrapper .muiAddressLookup .mui-loader-container img {
+.mui-overhang .muiAddressLookup .mui-loader-container img {
 	position: relative;
 	top: 50px;
 	left: 88px;
 }
 
 /* Banner below hero */
-.combine-wrapper {
+.banner-offer {
 	color: #000;
 	margin: 2rem 0 3rem;
 }
 
-.combine-wrapper p {
+.banner-offer p {
 	font-size: 3rem;
 	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.combine-wrapper p b,
-.combine-wrapper p strong {
+.banner-offer p b,
+.banner-offer p strong {
 	color: #03629c;
 }
 
@@ -162,30 +162,30 @@
 }
 
 @media (min-width: 544px) {
-	#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
+	.hp-hero .imageArtDirection .imageArtDirection .background-image {
 		height: 30rem;
 	}
 }
 
 @media (min-width: 992px) {
-	#image-art-mui-wrapper > div:after {
+	.hp-hero > div:after {
 		display: block;
 		content: "";
 		clear: both;
 	}
 
-	#image-art-mui-wrapper .imageArtDirection .imageArtDirection {
+	.hp-hero .imageArtDirection .imageArtDirection {
 		width: 60%;
 		float: left;
 	}
 
-	#image-art-mui-wrapper .imageArtDirection .imageArtDirection .background-image {
+	.hp-hero .imageArtDirection .imageArtDirection .background-image {
 		float: left;
 		height: 40rem;
 		background-size: cover;
 	}
 
-	#mui-wrapper {
+	.mui-overhang {
 		width: 40%;
 		float: right;
 	}

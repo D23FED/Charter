@@ -34,9 +34,9 @@
 .btn {
   display: inline-block;
   box-shadow: .0rem .1rem .3rem #666;
-  padding: .7rem 4.0rem;
+  padding: $btn-padding-default;
   text-decoration: none;
-  font-size: 1.9rem;
+  font-size: $btn-font-size-default;
   font-weight: bold;
   transition: all 150ms ease-out;
   transition-property: color, border, background-color;
@@ -57,7 +57,7 @@
   color: #fff;
   text-shadow: .1rem .1rem .3rem #888;
   font-weight: bold;
-  font-size: 1.9rem;
+  font-size: $btn-font-size-default;
   text-transform: uppercase;
 
   &:hover,

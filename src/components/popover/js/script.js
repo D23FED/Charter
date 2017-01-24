@@ -1,4 +1,5 @@
-// Popover: Access page
+// Popover
+// Access page
 var popover = {
 	activeClass: 'popover-active',
 	containerSelector: '.popover-contact',

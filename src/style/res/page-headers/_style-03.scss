@@ -1,0 +1,24 @@
+@import 'initialize';
+// Style 3:
+//   Logo
+//   Small
+//     Hamburger button
+//     ZIP Pin
+//   Large
+//     Primary nav: button-style
+//     User nav
+
+/* Unique to Site Header 03 */
+
+.site-header-top-03 {
+	background-color: transparent;
+	@include breakpoint('sm') {
+		position: relative;
+	}
+	.menu-row.mui-wrapper {
+		margin-bottom: $logo-spacing-v;
+		// @include breakpoint('sm') {
+		// 	margin-bottom: 0;
+		// }
+	}
+}

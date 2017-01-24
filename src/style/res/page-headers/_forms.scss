@@ -1,0 +1,35 @@
+@at-root {
+	/* Forms */
+}
+
+
+// Parent:
+// .messageBox
+// 	.messagebox-wrapper
+// 		.close-message
+// 		.message-content
+// 			.link-messagebox
+
+// ZIP form
+// .userLocation
+// 	.spectrum-customerLocation
+
+// Prevent forms from touching when multiple are open
+.messagebox-wrapper {
+	display: none;
+	position: relative;
+	.message-content {
+		padding: 1rem 0;
+	}
+}
+
+.messageBox {
+	.close-message {
+		position: absolute;
+		right: .5rem;
+		@include breakpoint('sm') {
+			// right: $column-padding;
+			// right: 0;
+		}
+	}
+}

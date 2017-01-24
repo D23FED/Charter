@@ -1,0 +1,95 @@
+@at-root {
+	/* Form: ZIP code/Localization */
+}
+
+// Padding between form elements
+$loc-edge-padding: 10%;
+// Container Form where user enters ZIP code. Text input and "Go" button
+.zipAction {
+	width: 50%;
+	float: left;
+	padding-left: $column-padding;
+	// Temporary fix for bug in component markup
+	background-color: transparent;
+	&:active:focus {
+		background-color: transparent;
+	}
+	// End fixes
+	@include breakpoint('sm') {
+		padding-right: $loc-edge-padding;
+	}
+	// Form element
+	.geoLoc {
+		padding-top: 1rem;
+		width: 100%;
+		text-align: center;
+		@include breakpoint('sm') {
+			padding-top: 0;
+		}
+	}
+	input,
+	button {
+		font-size: 1.6rem;
+		font-family: $font-open-sans;
+		padding-top: 0.7rem;
+		padding-bottom: 0.7rem;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+	input {
+		width: 40%;
+		text-align: center;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	button {
+		font-weight: 800;
+	}
+	// Button container
+	.geoloc-btn {
+		display: inline-block;
+		button {
+			@include btn-default;
+			&::after {
+				padding-left: .4rem;
+			}
+		}
+
+	}
+}
+
+// Form messages. "Your current location is 55555" etc
+.userLocation {
+	width: 100%;
+	float: left;
+	padding-right: $column-padding;
+	@include breakpoint('sm') {
+		padding-left: $loc-edge-padding;
+	}
+	@include breakpoint('lg') {
+		width: 80%;
+	}
+	// Contains all text content
+	.spectrum-customerLocation {
+		font-size: 1.6rem;
+		font-family: $font-open-sans;
+		.richtext {
+			ul,
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+	// All errors
+	[class*='error-content'] {}
+	// Out of footprint error
+	.oof-error-content {}
+	// Geolocation error
+	.geo-error-content {}
+	// ZIP length error (below 5 digits)
+	.length-error-content {}
+	// Default Message
+	.oof-twc-error-content {}
+	// Label 'Your current location is XXXXX'
+	.localized-content {}
+}

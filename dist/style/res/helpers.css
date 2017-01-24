@@ -51,6 +51,7 @@
 /* Position */
 .relative {
 	position: relative;
+	vertical-align: ba;
 }
 
 .absolute {
@@ -123,6 +124,22 @@
 
 .full {
 	width: 100%;
+}
+
+.vertical-top {
+	vertical-align: top;
+}
+
+.vertical-middle {
+	vertical-align: middle;
+}
+
+.vertical-bottom {
+	vertical-align: bottom;
+}
+
+.vertical-baseline {
+	vertical-align: baseline;
 }
 
 /* Margin and Padding */
@@ -816,6 +833,8 @@
 	margin-bottom: auto;
 }
 
+/* Sizing */
+
 /* Borders */
 .border-bottom {
 	border-bottom: 0.1rem solid #eeeeee;
@@ -865,6 +884,8 @@
 .bg-transparent-white {
 	background: rgba(255, 255, 255, 0.95);
 }
+
+/* White bg for Small only */
 
 .bg-transparent-deep-blue {
 	background: rgba(1, 57, 99, 0.8);
@@ -1275,11 +1296,19 @@
 .icon-remove-sign:after {
 	font-family: FontAwesome;
 	content: '\F057';
-	color: #c0c0c0;
+	color: #333;
+	cursor: pointer;
+	-webkit-transition: color 150ms ease-out;
+	transition: color 150ms ease-out;
+}
+
+.icon-remove-sign:focus:after,
+.icon-remove-sign:hover:after {
+	color: #808285;
 }
 
 .policy-terms {
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 0;
 }
 
 .policy-terms .linkComponent {
@@ -1324,6 +1353,63 @@ div.policy-terms {
 }
 
 /* End Fix for accordion issues - Charter Jira 1290 */
+/* Responsive Images */
+.img-responsive-xs-25,
+.img-responsive-sm-25,
+.img-responsive-md-25,
+.img-responsive-lg-25 {
+	max-width: 25%;
+}
+
+.img-responsive-xs-35,
+.img-responsive-sm-35,
+.img-responsive-md-35,
+.img-responsive-lg-35 {
+	max-width: 35%;
+}
+
+.img-responsive-xs-45,
+.img-responsive-sm-45,
+.img-responsive-md-45,
+.img-responsive-lg-45 {
+	max-width: 45%;
+}
+
+.img-responsive-xs-55,
+.img-responsive-sm-55,
+.img-responsive-md-55,
+.img-responsive-lg-55 {
+	max-width: 55%;
+}
+
+.img-responsive-xs-65,
+.img-responsive-sm-65,
+.img-responsive-md-65,
+.img-responsive-lg-65 {
+	max-width: 65%;
+}
+
+.img-responsive-xs-75,
+.img-responsive-sm-75,
+.img-responsive-md-75,
+.img-responsive-lg-75 {
+	max-width: 75%;
+}
+
+.img-responsive-xs-85,
+.img-responsive-sm-85,
+.img-responsive-md-85,
+.img-responsive-lg-85 {
+	max-width: 85%;
+}
+
+.img-responsive-xs-95,
+.img-responsive-sm-95,
+.img-responsive-md-95,
+.img-responsive-lg-95 {
+	max-width: 95%;
+}
+
 .image-left {
 	float: left;
 	margin-right: 1.5rem;
@@ -1379,7 +1465,315 @@ hr.black {
 	margin-right: 0;
 }
 
+@media (min-width: 544px) {
+	.text-left-xs {
+		text-align: left;
+	}
+
+	.text-center-xs {
+		text-align: center;
+	}
+
+	.text-right-xs {
+		text-align: right;
+	}
+}
+
+@media (min-width: 768px) {
+	.text-left-sm {
+		text-align: left;
+	}
+
+	.text-center-sm {
+		text-align: center;
+	}
+
+	.text-right-sm {
+		text-align: right;
+	}
+
+	.img-responsive-xs-25 {
+		max-width: 100%;
+	}
+
+	.img-responsive-sm-25,
+	.img-responsive-md-25,
+	.img-responsive-lg-25 {
+		max-width: 25%;
+	}
+
+	.img-responsive-xs-35 {
+		max-width: 100%;
+	}
+
+	.img-responsive-sm-35,
+	.img-responsive-md-35,
+	.img-responsive-lg-35 {
+		max-width: 35%;
+	}
+
+	.img-responsive-xs-45 {
+		max-width: 100%;
+	}
+
+	.img-responsive-sm-45,
+	.img-responsive-md-45,
+	.img-responsive-lg-45 {
+		max-width: 45%;
+	}
+
+	.img-responsive-xs-55 {
+		max-width: 100%;
+	}
+
+	.img-responsive-sm-55,
+	.img-responsive-md-55,
+	.img-responsive-lg-55 {
+		max-width: 55%;
+	}
+
+	.img-responsive-xs-65 {
+		max-width: 100%;
+	}
+
+	.img-responsive-sm-65,
+	.img-responsive-md-65,
+	.img-responsive-lg-65 {
+		max-width: 65%;
+	}
+
+	.img-responsive-xs-75 {
+		max-width: 100%;
+	}
+
+	.img-responsive-sm-75,
+	.img-responsive-md-75,
+	.img-responsive-lg-75 {
+		max-width: 75%;
+	}
+
+	.img-responsive-xs-85 {
+		max-width: 100%;
+	}
+
+	.img-responsive-sm-85,
+	.img-responsive-md-85,
+	.img-responsive-lg-85 {
+		max-width: 85%;
+	}
+
+	.img-responsive-xs-95 {
+		max-width: 100%;
+	}
+
+	.img-responsive-sm-95,
+	.img-responsive-md-95,
+	.img-responsive-lg-95 {
+		max-width: 95%;
+	}
+}
+
+@media (min-width: 992px) {
+	.text-left-md {
+		text-align: left;
+	}
+
+	.text-center-md {
+		text-align: center;
+	}
+
+	.text-right-md {
+		text-align: right;
+	}
+
+	.img-responsive-xs-25,
+	.img-responsive-sm-25 {
+		max-width: 100%;
+	}
+
+	.img-responsive-md-25,
+	.img-responsive-lg-25 {
+		max-width: 25%;
+	}
+
+	.img-responsive-xs-35,
+	.img-responsive-sm-35 {
+		max-width: 100%;
+	}
+
+	.img-responsive-md-35,
+	.img-responsive-lg-35 {
+		max-width: 35%;
+	}
+
+	.img-responsive-xs-45,
+	.img-responsive-sm-45 {
+		max-width: 100%;
+	}
+
+	.img-responsive-md-45,
+	.img-responsive-lg-45 {
+		max-width: 45%;
+	}
+
+	.img-responsive-xs-55,
+	.img-responsive-sm-55 {
+		max-width: 100%;
+	}
+
+	.img-responsive-md-55,
+	.img-responsive-lg-55 {
+		max-width: 55%;
+	}
+
+	.img-responsive-xs-65,
+	.img-responsive-sm-65 {
+		max-width: 100%;
+	}
+
+	.img-responsive-md-65,
+	.img-responsive-lg-65 {
+		max-width: 65%;
+	}
+
+	.img-responsive-xs-75,
+	.img-responsive-sm-75 {
+		max-width: 100%;
+	}
+
+	.img-responsive-md-75,
+	.img-responsive-lg-75 {
+		max-width: 75%;
+	}
+
+	.img-responsive-xs-85,
+	.img-responsive-sm-85 {
+		max-width: 100%;
+	}
+
+	.img-responsive-md-85,
+	.img-responsive-lg-85 {
+		max-width: 85%;
+	}
+
+	.img-responsive-xs-95,
+	.img-responsive-sm-95 {
+		max-width: 100%;
+	}
+
+	.img-responsive-md-95,
+	.img-responsive-lg-95 {
+		max-width: 95%;
+	}
+}
+
+@media (min-width: 1199px) {
+	.img-responsive-xs-25,
+	.img-responsive-sm-25,
+	.img-responsive-md-25 {
+		max-width: 100%;
+	}
+
+	.img-responsive-lg-25 {
+		max-width: 25%;
+	}
+
+	.img-responsive-xs-35,
+	.img-responsive-sm-35,
+	.img-responsive-md-35 {
+		max-width: 100%;
+	}
+
+	.img-responsive-lg-35 {
+		max-width: 35%;
+	}
+
+	.img-responsive-xs-45,
+	.img-responsive-sm-45,
+	.img-responsive-md-45 {
+		max-width: 100%;
+	}
+
+	.img-responsive-lg-45 {
+		max-width: 45%;
+	}
+
+	.img-responsive-xs-55,
+	.img-responsive-sm-55,
+	.img-responsive-md-55 {
+		max-width: 100%;
+	}
+
+	.img-responsive-lg-55 {
+		max-width: 55%;
+	}
+
+	.img-responsive-xs-65,
+	.img-responsive-sm-65,
+	.img-responsive-md-65 {
+		max-width: 100%;
+	}
+
+	.img-responsive-lg-65 {
+		max-width: 65%;
+	}
+
+	.img-responsive-xs-75,
+	.img-responsive-sm-75,
+	.img-responsive-md-75 {
+		max-width: 100%;
+	}
+
+	.img-responsive-lg-75 {
+		max-width: 75%;
+	}
+
+	.img-responsive-xs-85,
+	.img-responsive-sm-85,
+	.img-responsive-md-85 {
+		max-width: 100%;
+	}
+
+	.img-responsive-lg-85 {
+		max-width: 85%;
+	}
+
+	.img-responsive-xs-95,
+	.img-responsive-sm-95,
+	.img-responsive-md-95 {
+		max-width: 100%;
+	}
+
+	.img-responsive-lg-95 {
+		max-width: 95%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.text-left-lg {
+		text-align: left;
+	}
+
+	.text-center-lg {
+		text-align: center;
+	}
+
+	.text-right-lg {
+		text-align: right;
+	}
+}
+
 @media (max-width: 767px) {
+	.fw-sm-only,
+	.fw-sm-only .btn,
+	.fw-sm-only a {
+		width: 100%;
+	}
+
+	.bg-transparent-white-sm-only {
+		background: rgba(255, 255, 255, 0.95);
+	}
+
 	.center-sm,
 	.center-sm .text-left,
 	.center-sm .text-right {

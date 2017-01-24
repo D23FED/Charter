@@ -1,30 +1,17 @@
-@import 'initialize';
-
-/* Popovers (not appearing in site header) */
+@at-root {
+	/* Popover (Contact Us menu item) */
+}
 
 $title-spacing-v: 1.5rem;
 $color-popover-border: #b7b7b7;
+// Columns misconfigured
+.main-container .aem-Grid.aem-Grid--12>.aem-GridColumn.aem-GridColumn--default--6 {
+	width: auto;
+}
+
 // Wrapper
 .popover-contact-xref {
 	display: none;
-}
-
-.cta-contact {
-	position: relative;
-	a {
-		font-size: 1.4rem;
-		padding: .7rem 1rem;
-		@include breakpoint('sm') {
-			padding: .7rem 4rem;
-			font-size: 1.9rem;
-		}
-	}
-	svg {
-		display: none;
-		@include breakpoint('sm') {
-			display: block;
-		}
-	}
 }
 
 .popover-contact {
@@ -37,7 +24,7 @@ $color-popover-border: #b7b7b7;
 	transform: translateX(-50%);
 	top: 4.4rem;
 	min-width: 20rem;
-	z-index: 100;
+	z-index: $zi-popover;
 	@include aem-authoring {
 		position: relative;
 	}
@@ -63,13 +50,6 @@ $color-popover-border: #b7b7b7;
 		border-bottom-color: #b7b7b7;
 		border-width: 0.9rem;
 		margin-left: -0.9rem;
-	}
-	p {
-		color: #333;
-		text-transform: none;
-		font-weight: normal;
-		font-size: 1.6rem;
-		text-align: left;
 	}
 	a {
 		padding: 0;
@@ -98,14 +78,5 @@ $color-popover-border: #b7b7b7;
 		right: 1rem;
 		top: .6rem;
 		cursor: pointer;
-	}
-}
-
-
-/* Just for Access page */
-
-@media (max-width:991px) {
-	#jumbotron .imageArtDirection .background-image {
-		background: none !important;
 	}
 }

@@ -1,0 +1,13 @@
+@at-root {
+	/* Sizing */
+}
+
+.fw-sm-only {
+	&,
+	& .btn,
+	& a {
+		@media (max-width: $breakpoint-sm-max) {
+			width: 100%;
+		}
+	}
+}

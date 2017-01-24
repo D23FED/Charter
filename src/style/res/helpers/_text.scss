@@ -75,6 +75,21 @@
 	font-weight: bold;
 }
 
+//  Responsive text alignment
+@each $position in (left, center, right) {
+	@each $bp-name,
+	$bp-width in $breakpoints {
+		@if $bp-name !='xxs' {
+			@media (min-width: $bp-width) {
+				.text-#{$position}-#{$bp-name} {
+					text-align: $position;
+				}
+			}
+		}
+	}
+}
+
+// Legacy
 .center-sm {
 	@media (max-width: 767px) {
 		text-align: center;
