@@ -76,7 +76,7 @@
 }
 
 //  Responsive text alignment
-@each $position in ('left', 'center', 'right') {
+@each $position in (left, center, right) {
 	@each $bp-name,
 	$bp-width in $breakpoints {
 		@if $bp-name !='xxs' {

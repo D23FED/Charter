@@ -1,12 +1,14 @@
 @import 'initialize';
 
 /* Site headers */
-
 @import 'page-headers/variables';
 #{$page-header} {
-	min-height: $site-header-min-height;
+	// Sometimes modal BG is appeneded to <body>. Set z-index of page header to equal to bg to avoid modal bg from overlapping modal
+	position: static;
+	z-index: $zi-modal-bg;
 	// Basic header styles and layout
 	@import 'page-headers/base';
+	// Shadowed page header
 	@import 'page-headers/shadowed';
 	// Site logo
 	@import 'page-headers/logo';

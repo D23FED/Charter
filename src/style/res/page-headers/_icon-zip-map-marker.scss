@@ -6,7 +6,7 @@
 		color: $blue;
 		font-size: 0;
 		position: absolute;
-		z-index: 10;
+		z-index: $zi-icon-map-marker;
 		// Space between icon and hamburger button + space between hamburger button and viewport right side + width of humburger button
 		right: ($column-padding * 2) + $navbar-toggle-width;
 		top: ( $navbar-toggle-spacing-top + ($navbar-toggle-height /2)) - ($icon-map-marker-height / 2);

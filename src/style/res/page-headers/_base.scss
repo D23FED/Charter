@@ -3,9 +3,7 @@
 }
 
 .site-header-top {
-	// max-width: map-get($breakpoints, 'lg');
-	// padding-left: $column-padding;
-	// padding-right: $column-padding;
+	min-height: $site-header-min-height;
 	background-color: #fff;
 	@include center-block;
 	.aem-GridColumn:first-of-type {

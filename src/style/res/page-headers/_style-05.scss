@@ -57,12 +57,14 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
 	.mui-wrapper.menu-sm {
 		// padding-top: 2rem;
 	}
-
 	// ZIP Pin icon: large version
 	.menu-lg {
 		.icon-map-marker a {
 			right: 1.5rem;
-			top: 2.5rem;
+			top: 1.8rem;
+			@include breakpoint('md') {
+				top: 2.5rem;
+			}
 		}
 	}
 	#{$page-header} & {

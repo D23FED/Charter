@@ -32,3 +32,11 @@ $btn-padding-default-y: .7rem;
 $btn-padding-default-x: 4.0rem;
 $btn-padding-default: $btn-padding-default-y $btn-padding-default-x;
 $site-header-min-height: 8rem;
+
+// z-indexes
+$zi-modal: 1050;
+$zi-modal-bg: 1040;
+$zi-primary-nav-sm: 1000;
+$zi-popover: 100;
+$zi-megamenu: 150;
+$zi-icon-map-marker: 10;

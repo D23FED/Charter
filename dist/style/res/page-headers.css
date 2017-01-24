@@ -1,10 +1,12 @@
 /* Site headers */
 .site-header {
-	min-height: 8rem;
+	position: static;
+	z-index: 1040;
 }
 
 /* Section of the header above the primary nav menuc*/
 .site-header .site-header-top {
+	min-height: 8rem;
 	background-color: #fff;
 	display: block;
 	margin-left: auto;
@@ -113,6 +115,7 @@
 	right: 0;
 	width: 100%;
 	margin: 0;
+	z-index: 1000;
 }
 
 /* Temporary styles for display while authoring, remove for prod */
@@ -571,7 +574,7 @@ x:default {
 
 .site-header-top-05 .menu-lg .icon-map-marker a {
 	right: 1.5rem;
-	top: 2.5rem;
+	top: 1.8rem;
 }
 
 .site-header .site-header-top-05 {
@@ -661,6 +664,10 @@ x:default {
 		font-size: 1.9rem;
 		padding: 0.7rem 2rem;
 		font-weight: 700;
+	}
+
+	.site-header-top-05 .menu-lg .icon-map-marker a {
+		top: 2.5rem;
 	}
 }
 

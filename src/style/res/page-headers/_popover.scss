@@ -24,7 +24,7 @@ $color-popover-border: #b7b7b7;
 	transform: translateX(-50%);
 	top: 4.4rem;
 	min-width: 20rem;
-	z-index: 100;
+	z-index: $zi-popover;
 	@include aem-authoring {
 		position: relative;
 	}
