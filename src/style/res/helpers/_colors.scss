@@ -1,5 +1,5 @@
 @at-root {
-/* Color Helpers */
+	/* Color Helpers */
 }
 
 .bg-white {
@@ -8,6 +8,16 @@
 
 .bg-transparent-white {
 	background: rgba(255, 255, 255, 0.95);
+}
+
+@at-root {
+	/* White bg for Small only */
+}
+
+.bg-transparent-white-sm-only {
+	@media (max-width: $breakpoint-sm-max) {
+		background: rgba(255, 255, 255, 0.95);
+	}
 }
 
 .bg-transparent-deep-blue {

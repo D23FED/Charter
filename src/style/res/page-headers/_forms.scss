@@ -17,6 +17,7 @@
 // Prevent forms from touching when multiple are open
 .messagebox-wrapper {
 	display: none;
+	position: relative;
 	.message-content {
 		padding: 1rem 0;
 	}
@@ -27,7 +28,8 @@
 		position: absolute;
 		right: .5rem;
 		@include breakpoint('sm') {
-			right: $column-padding;
+			// right: $column-padding;
+			// right: 0;
 		}
 	}
 }

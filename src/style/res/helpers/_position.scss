@@ -1,9 +1,10 @@
 @at-root {
 	/* Position */
 }
-
+$vertical-aligns: (top, middle, bottom, baseline);
 .relative {
 	position: relative;
+	vertical-align: ba;
 }
 
 .absolute {
@@ -59,4 +60,10 @@
 
 .full {
 	width: 100%;
+}
+
+@each $alignment in $vertical-aligns {
+	.vertical-#{$alignment} {
+		vertical-align: $alignment;
+	}
 }

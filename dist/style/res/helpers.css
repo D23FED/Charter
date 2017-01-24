@@ -51,6 +51,7 @@
 /* Position */
 .relative {
 	position: relative;
+	vertical-align: ba;
 }
 
 .absolute {
@@ -123,6 +124,22 @@
 
 .full {
 	width: 100%;
+}
+
+.vertical-top {
+	vertical-align: top;
+}
+
+.vertical-middle {
+	vertical-align: middle;
+}
+
+.vertical-bottom {
+	vertical-align: bottom;
+}
+
+.vertical-baseline {
+	vertical-align: baseline;
 }
 
 /* Margin and Padding */
@@ -867,6 +884,8 @@
 .bg-transparent-white {
 	background: rgba(255, 255, 255, 0.95);
 }
+
+/* White bg for Small only */
 
 .bg-transparent-deep-blue {
 	background: rgba(1, 57, 99, 0.8);
@@ -1749,6 +1768,10 @@ hr.black {
 	.fw-sm-only .btn,
 	.fw-sm-only a {
 		width: 100%;
+	}
+
+	.bg-transparent-white-sm-only {
+		background: rgba(255, 255, 255, 0.95);
 	}
 
 	.center-sm,

@@ -44,7 +44,12 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
 			white-space: initial;
 			margin-right: 2rem;
 			@include btn-sm;
+			@include breakpoint('sm') {
+				white-space: nowrap;
+				padding-right: .3rem;
+			}
 			@include breakpoint('md') {
+				white-space: initial;
 				font-size: $btn-font-size-default;
 				padding: $btn-padding-default-y $btn-padding-default-x/2;
 				font-weight: 700;

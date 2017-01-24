@@ -52,6 +52,11 @@
 	margin: 0;
 }
 
+.site-header .site-logo .image {
+	padding: 0;
+	float: none;
+}
+
 /* Show/hide menu elements responsively, target elements at specific browser widths */
 
 /* Temporary styles for display while authoring, remove for prod */
@@ -189,15 +194,10 @@
 	text-transform: none;
 }
 
-/* Fixes for Brand logo */
-.site-header .site-logo .image {
-	padding: 0;
-	float: none;
-}
-
 /* Forms */
 .site-header .messagebox-wrapper {
 	display: none;
+	position: relative;
 }
 
 .site-header .messagebox-wrapper .message-content {
@@ -300,7 +300,7 @@
 
 /* ZIP Map marker icon/link */
 .site-header .icon-map-marker a {
-	color: #003057;
+	color: #ff0000;
 	font-size: 0;
 	position: absolute;
 	z-index: 10;
@@ -320,7 +320,7 @@
 
 .site-header .icon-map-marker a:focus::before,
 .site-header .icon-map-marker a:hover::before {
-	color: #00629b;
+	color: #b30000;
 }
 
 /* Temporary styles for display while authoring, remove for prod */
@@ -603,10 +603,6 @@ x:default {
 		display: none;
 	}
 
-	.site-header .messageBox .close-message {
-		right: 1.5rem;
-	}
-
 	.site-header .zipAction {
 		padding-right: 10%;
 	}
@@ -644,6 +640,11 @@ x:default {
 	.site-header-top-04 .menu-row.mui-wrapper .text-right {
 		text-align: right;
 	}
+
+	.site-header-top-05 .mui-wrapper.menu-lg .btn {
+		white-space: nowrap;
+		padding-right: .3rem;
+	}
 }
 
 @media (min-width: 992px) {
@@ -661,6 +662,7 @@ x:default {
 	}
 
 	.site-header-top-05 .mui-wrapper.menu-lg .btn {
+		white-space: normal;
 		font-size: 1.9rem;
 		padding: 0.7rem 2rem;
 		font-weight: 700;

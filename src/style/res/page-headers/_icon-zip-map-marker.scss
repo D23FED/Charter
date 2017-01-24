@@ -1,9 +1,10 @@
 @at-root {
-/* ZIP Map marker icon/link */
+	/* ZIP Map marker icon/link */
 }
+
 .#{$icon-map-marker} {
 	a {
-		color: $blue;
+		color: #ff0000;
 		font-size: 0;
 		position: absolute;
 		z-index: $zi-icon-map-marker;
@@ -19,7 +20,7 @@
 		}
 		@include hover-focus {
 			&::before {
-				color: $md-blue;
+				color: darken(#ff0000, 15%);
 			}
 		}
 		@include aem-authoring {
@@ -27,6 +28,5 @@
 			right: auto;
 			top: auto;
 		}
-
 	}
 }
