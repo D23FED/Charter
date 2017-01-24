@@ -115,6 +115,11 @@
 	padding-left: 0;
 }
 
+.site-footer .footer-body li {
+	line-height: 1.1;
+	margin-bottom: 1rem;
+}
+
 .site-footer .footer-body a {
 	font-size: 1.2rem;
 }
@@ -175,9 +180,6 @@
 
 	.site-footer .footer-header .listComponent ul {
 		padding: 0;
-		margin-left: 0;
-		margin-right: 0;
-		width: 100%;
 	}
 
 	.site-footer .footer-header .listComponent li {
