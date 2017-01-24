@@ -1,6 +1,7 @@
 @at-root {
-/* Section of the header above the primary nav menuc*/
+	/* Section of the header above the primary nav menuc*/
 }
+
 .site-header-top {
 	// max-width: map-get($breakpoints, 'lg');
 	// padding-left: $column-padding;
@@ -16,3 +17,12 @@
 	}
 }
 
+&.js-sticky .site-header-top {
+	max-width: none;
+	>div {
+		max-width: map-get($breakpoints, 'lg');
+		@include center-block;
+		padding-left: $column-padding;
+		padding-right: $column-padding;
+	}
+}
