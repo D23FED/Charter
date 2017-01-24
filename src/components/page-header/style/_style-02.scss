@@ -15,6 +15,7 @@
 }
 
 .site-header-top-02 {
+	position: relative;
 	.menu-sm {
 		@include breakpoint('sm') {
 			display: block;
@@ -31,21 +32,30 @@
 			display: block;
 		}
 	}
-	position: relative;
+	// .menu-row.mui-wrapper {
+	// 	.linkComponent > div,
+	// 	.text-right {
+	// 		text-align: center;
+	// 		@include breakpoint('sm') {
+	// 			text-align: right;
+	// 		}
+	// 	}
+	// }
 	// Add space to accomodate ZIP Pin icon
+	// ZIP Pin icon removed
 	.menu-sm .mui-wrapper,
 	.menu-lg .mui-wrapper {
-		padding-right: $column-padding + 0.5rem;
+		// padding-right: $column-padding + 0.5rem;
 	}
 	// Rearrange ZIP Pin icon to look right small MUI button
-	.#{$icon-map-marker} {
-		a {
-			right: $column-padding;
-			top: 1.5rem;
-			// Rearrange ZIP Pin icon to look right with long MUI horizontal form
-			@include breakpoint('sm') {
-				top: 5.6rem;
-			}
-		}
-	}
+	// .#{$icon-map-marker} {
+	// 	a {
+	// 		right: $column-padding;
+	// 		top: 1.5rem;
+	// 		// Rearrange ZIP Pin icon to look right with long MUI horizontal form
+	// 		@include breakpoint('sm') {
+	// 			top: 5.6rem;
+	// 		}
+	// 	}
+	// }
 }

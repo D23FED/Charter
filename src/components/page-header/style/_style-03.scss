@@ -16,9 +16,9 @@
 		position: relative;
 	}
 	.menu-row.mui-wrapper {
-		margin-bottom: $header-spacing-bottom;
-		@include breakpoint('sm') {
-			margin-bottom: 0;
-		}
+		margin-bottom: $logo-spacing-v;
+		// @include breakpoint('sm') {
+		// 	margin-bottom: 0;
+		// }
 	}
 }
