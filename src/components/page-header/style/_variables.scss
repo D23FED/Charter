@@ -1,6 +1,6 @@
 $page-header: '.site-header';
 $logo: 'site-logo';
-$logo-spacing-v: 1.5rem; //distance from top of viewport
+$logo-spacing-v: 1rem; //distance from top of viewport
 // Menu item positions, from l to r
 $menu-item-search-pos: 1;
 $menu-item-contact-pos: 2;
@@ -19,4 +19,11 @@ $header-spacing-bottom: 2rem;
 @mixin map-marker-icon {
 	content: "\E062";
 	font-family: 'Glyphicons Halflings';
+}
+
+@mixin btn-sm {
+	font-size: 1.2rem;
+	padding: 0.5rem 1rem;
+	font-weight: 400;
+	text-shadow: 0.1rem 0.1rem 0.3rem #888;
 }
