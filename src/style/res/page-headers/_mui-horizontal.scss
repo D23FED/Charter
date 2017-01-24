@@ -8,11 +8,9 @@ $submit-button: 'localization__input-submit';
 }
 
 // FF handles buttons poorly
-@at-root {
-	.site-header .#{$mui-wrapper} .localization--horizontal-1 .#{$submit-button},
-	x:-moz-any-link,
-	x:default {
-		padding-top: .8rem;
-		padding-bottom: .8rem;
-	}
+.site-header .#{$mui-wrapper} .localization--horizontal-1 .#{$submit-button},
+x:-moz-any-link,
+x:default {
+	padding-top: .8rem;
+	padding-bottom: .8rem;
 }

@@ -1,10 +1,10 @@
 /* Site headers */
+/* Section of the header above the primary nav menuc*/
 .site-header {
 	position: static;
 	z-index: 1040;
 }
 
-/* Section of the header above the primary nav menuc*/
 .site-header .site-header-top {
 	min-height: 8rem;
 	background-color: #fff;
@@ -494,16 +494,6 @@ x:-moz-any-link,
 x:default {
 	padding-top: .8rem;
 	padding-bottom: .8rem;
-}
-
-.site-header .aem-Grid-newComponent {
-	display: none;
-}
-
-/* Temporary styles for display while authoring, remove for prod */
-.aem-AuthorLayer-Layouting .site-header .aem-Grid-newComponent,
-.aem-AuthorLayer-Edit .site-header .aem-Grid-newComponent {
-	display: block;
 }
 
 .phone-main {

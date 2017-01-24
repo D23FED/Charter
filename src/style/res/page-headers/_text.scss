@@ -1,7 +1,9 @@
 @at-root {
-/* Text adjustments */
-}
-hr {
-	margin-top: 0;
+	/* Text adjustments */
 }
 
+#{$page-header} {
+	hr {
+		margin-top: 0;
+	}
+}

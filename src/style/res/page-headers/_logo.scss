@@ -2,17 +2,19 @@
 	/* Brand logo */
 }
 
-.#{$logo} {
-	img {
-		float: left;
-		padding: $logo-spacing-v 0;
-		margin-bottom: 0;
-	}
-	p {
-		margin: 0;
-	}
-	.image {
-		padding: 0;
-		float: none;
+#{$page-header} {
+	.#{$logo} {
+		img {
+			float: left;
+			padding: $logo-spacing-v 0;
+			margin-bottom: 0;
+		}
+		p {
+			margin: 0;
+		}
+		.image {
+			padding: 0;
+			float: none;
+		}
 	}
 }

@@ -2,15 +2,17 @@
 	/* Fixes for Primary Navigation (button-style) */
 }
 
-.nav-primary {
-	margin-top: 0;
-	li {
-		padding: 0;
-	}
-	.list-inline.list-separated li {
-		border-right: 0.1rem solid #fff;
-	}
-	a {
-		text-decoration: none;
+#{$page-header} {
+	.nav-primary {
+		margin-top: 0;
+		li {
+			padding: 0;
+		}
+		.list-inline.list-separated li {
+			border-right: 0.1rem solid #fff;
+		}
+		a {
+			text-decoration: none;
+		}
 	}
 }
