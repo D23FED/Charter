@@ -4,6 +4,7 @@
 
 @import 'variables';
 #{$page-header} {
+	min-height: $site-header-min-height;
 	// Basic header styles and layout
 	@import 'base';
 	@import 'shadowed';

@@ -1,4 +1,8 @@
 /* Site headers */
+.site-header {
+	min-height: 8rem;
+}
+
 /* Section of the header above the primary nav menuc*/
 .site-header .site-header-top {
 	background-color: #fff;
@@ -528,25 +532,15 @@ x:default {
 	background-color: transparent;
 }
 
-.site-header-top-03 .menu-row.mui-wrapper {
+/* Unique to Site Header 04 */
+.site-header-top-03 .menu-row.mui-wrapper,
+.site-header-top-04 .menu-row.mui-wrapper {
 	margin-bottom: 1rem;
 }
 
-/* Unique to Site Header 04 */
-.site-header .site-header-top .aem-GridColumn:nth-last-of-type(4) {
-	padding-right: 0;
-}
-
-.site-header-top-04 .aem-Grid.aem-Grid--default--12 > .aem-GridColumn--default--12.customWrapper {
-	float: none;
-	clear: none;
-	margin: -1.5rem;
-	padding: 0;
-	width: auto;
-}
-
-.site-header-top-04 .menu-row.mui-wrapper {
-	margin-bottom: 2rem;
+.site-header-top-04 .menu-row.mui-wrapper .linkComponent > div,
+.site-header-top-04 .menu-row.mui-wrapper .text-right {
+	text-align: center;
 }
 
 /* Unique to Site Header 05 */
@@ -643,17 +637,9 @@ x:default {
 		position: relative;
 	}
 
-	.site-header-top-04 .menu-row.mui-wrapper {
-		margin-bottom: 0;
-	}
-
-	.site-header-top-04 .menu-row.mui-wrapper .text-center {
+	.site-header-top-04 .menu-row.mui-wrapper .linkComponent > div,
+	.site-header-top-04 .menu-row.mui-wrapper .text-right {
 		text-align: right;
-	}
-
-	.site-header-top-04 .menu-row.mui-wrapper .btn {
-		position: relative;
-		right: 6.5rem;
 	}
 }
 
