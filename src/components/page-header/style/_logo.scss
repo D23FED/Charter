@@ -1,11 +1,12 @@
 @at-root {
-/* Brand logo */
+	/* Brand logo */
 }
+
 .#{$logo} {
 	img {
 		float: left;
-		padding-top: $logo-spacing-v;
-		padding-bottom: 0;
+		padding: $logo-spacing-v 0;
+		// padding-bottom: $logo-spacing-v;
 		margin-bottom: 0;
 		@include breakpoint('sm') {
 			// padding-bottom: $logo-spacing-v;
@@ -13,5 +14,9 @@
 	}
 	p {
 		margin: 0;
+	}
+	.image {
+		padding: 0;
+		float: none;
 	}
 }
