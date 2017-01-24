@@ -57,7 +57,7 @@ $popover-width: 40rem;
   border-top-left-radius: 0;
 }
 
-.#{$wrapper} {
+.#{$mui-wrapper} {
   // <form> inner for horizontal layout 1
   .localization--horizontal-1 {
     .#{$form-input-container} {
