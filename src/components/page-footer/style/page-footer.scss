@@ -80,10 +80,10 @@
 				margin-bottom: 0;
 				@include breakpoint('sm') {
 					padding: 0;
-					margin-left: 0;
-					margin-right: 0;
+					// margin-left: 0;
+					// margin-right: 0;
 					// display: block;
-					width: 100%;
+					// width: 100%;
 				}
 			}
 			li {
@@ -114,10 +114,19 @@
 	.footer-body {
 		// padding-left: $column-padding;
 		// padding-right: $column-padding;
+		@include breakpoint('sm') {
+			.aem-GridColumn {
+				// padding-left: 0
+			}
+		}
 		ul,
 		ol {
 			margin-left: 0;
 			padding-left: 0;
+		}
+		li {
+			line-height: 1.1;
+			margin-bottom: 1rem
 		}
 		a {
 			font-size: 1.2rem;
@@ -163,5 +172,8 @@
 		font-size: 1.2rem;
 		// padding-left: $column-padding;
 		// padding-right: $column-padding;
+	}
+	a {
+		// white-space: nowrap;
 	}
 }
