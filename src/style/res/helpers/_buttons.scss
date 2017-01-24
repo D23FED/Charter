@@ -52,6 +52,13 @@ $btn-hover-color: #dd5800;
 	&:after {
 		font-family: FontAwesome;
 		content: '\F057';
-		color: #c0c0c0;
+		color: $dk-gray;
+		cursor: pointer;
+		transition: color $transition-time-default ease-out;
+	}
+	@include hover-focus {
+		&:after {
+			color: $gray;
+		}
 	}
 }
