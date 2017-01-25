@@ -1,0 +1,23 @@
+.modal .muiAddressLookup .localization--horizontal-2 .localization__inputs,
+.modal .muiAddressLookup .localization--horizontal-2 .localization__input-container-address {
+	position: relative;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble-address1--error {
+	margin-top: 0;
+	top: 7.1rem;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble-zip--error {
+	margin-top: 0;
+	top: 19rem;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble-zip--error .localization__bubble-pointer {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=horizontal-2-modal.css.map */

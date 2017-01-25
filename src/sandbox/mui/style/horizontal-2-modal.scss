@@ -1,0 +1,25 @@
+// Horizontal 2 inside modal
+.modal .muiAddressLookup .localization--horizontal-2 {
+	// Wrap form inputs
+	.localization__inputs {
+		position: relative;
+	}
+	// Wraps address input and erro
+	.localization__input-container-address {
+		position: relative;
+	}
+	//  Address error message
+	.localization__bubble-address1--error {
+		margin-top: 0;
+		top: 7.1rem;
+	}
+	// Zip Error
+	.localization__bubble-zip--error {
+		margin-top: 0;
+		top: 19rem;
+		.localization__bubble-pointer {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
