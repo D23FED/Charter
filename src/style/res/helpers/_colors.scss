@@ -7,16 +7,47 @@
 }
 
 .bg-transparent-white {
-	background: rgba(255, 255, 255, 0.95);
+	@include bg-white(65);
 }
 
-@at-root {
-	/* White bg for Small only */
+.bg-transparent-white-xs-only {
+	@media (max-width: $breakpoint-sm-max) {
+		@include bg-white(65);
+	}
 }
 
 .bg-transparent-white-sm-only {
-	@media (max-width: $breakpoint-sm-max) {
-		background: rgba(255, 255, 255, 0.95);
+	@media (min-width: map-get($breakpoints, 'sm')) and (max-width: (map-get($breakpoints, 'md') - 1px)) {
+		@include bg-white(65);
+	}
+}
+
+.bg-transparent-white-md-only {
+	@media (min-width: map-get($breakpoints, 'md')) and (max-width: (map-get($breakpoints, 'lg') - 1px)) {
+		@include bg-white(65);
+	}
+}
+
+
+/* Legacy */
+
+// .bg-transparent-white-sm-only {
+// 	@media (max-width: map-get($breakpoints, 'sm') - 1px) {
+// 		@include bg-white(65);
+// 	}
+// 	@media (min-width: map-get($breakpoints, 'sm')) {
+// 		background-color: transparent;
+// 	}
+// }
+
+@each $bp-name,
+$bp-width in $breakpoints {
+	@if $bp-name !='xxs' and $bp-name !='xs' {
+		.bg-transparent-white-#{$bp-name} {
+			@include breakpoint($bp-name) {
+				@include bg-white(65);
+			}
+		}
 	}
 }
 
@@ -25,7 +56,7 @@
 }
 
 .bg-primary {
-	background: #337ab7;
+	background: $brand-primary;
 }
 
 .bg-success {
