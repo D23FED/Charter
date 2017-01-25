@@ -1,25 +1,33 @@
 @import 'initialize';
+$color-phone: #88C657;
 .phone-main {
 	position: absolute;
 	line-height: 1;
-	top: 3.5rem;
-	left: 60vw;
+	margin-right: .5rem;
+	top: 2.7rem;
+	width: 100%;
+	width: calc(100% - 1.5rem);
+	right: 0;
+	.richtext {
+		@include center-block();
+		@include container-w;
+	}
+	@include breakpoint('sm') {
+		margin-right: 1.5rem;
+		top: 1.5rem;
+	}
 	a {
-		color: #88C657;
-		text-decoration: none;
-		display: block;
+		color: $color-phone;
 		font-weight: bold;
-		font-size: 2rem;
+		font-size: 1.7rem;
+		text-align: ;
+		text-align: right;
+		text-decoration: none;
+		@include breakpoint('xs') {
+			font-size: 2.4rem;
+		}
 		@include breakpoint('sm') {
 			font-size: 4.7rem;
 		}
-	}
-	@include breakpoint('sm') {
-		left: inherit;
-		right: 1.5rem;
-	}
-	@include breakpoint('md') {
-		left: 66vw;
-		top: 1.5rem;
 	}
 }
