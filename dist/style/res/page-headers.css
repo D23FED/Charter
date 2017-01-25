@@ -499,16 +499,26 @@ x:default {
 .phone-main {
 	position: absolute;
 	line-height: 1;
-	top: 3.5rem;
-	left: 60vw;
+	margin-right: .5rem;
+	top: 2.7rem;
+	width: 100%;
+	width: -webkit-calc(100% - 1.5rem);
+	width: calc(100% - 1.5rem);
+	right: 0;
+}
+
+.phone-main .richtext {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .phone-main a {
 	color: #88c657;
-	text-decoration: none;
-	display: block;
 	font-weight: 700;
-	font-size: 2rem;
+	font-size: 1.7rem;
+	text-align: right;
+	text-decoration: none;
 }
 
 /* Unique to Site Header 02 */
@@ -575,6 +585,12 @@ x:default {
 	max-width: 100%;
 }
 
+@media (min-width: 544px) {
+	.phone-main a {
+		font-size: 2.4rem;
+	}
+}
+
 @media (min-width: 768px) {
 	.site-header .menu-sm {
 		display: none;
@@ -605,13 +621,17 @@ x:default {
 		padding-left: 10%;
 	}
 
-	.phone-main a {
-		font-size: 4.7rem;
+	.phone-main .richtext {
+		max-width: 768px;
 	}
 
 	.phone-main {
-		left: inherit;
-		right: 1.5rem;
+		margin-right: 1.5rem;
+		top: 1.5rem;
+	}
+
+	.phone-main a {
+		font-size: 4.7rem;
 	}
 
 	.site-header-top-02 .menu-sm {
@@ -638,9 +658,8 @@ x:default {
 }
 
 @media (min-width: 992px) {
-	.phone-main {
-		left: 66vw;
-		top: 1.5rem;
+	.phone-main .richtext {
+		max-width: 992px;
 	}
 
 	.site-header-top-02 .menu-sm {
@@ -666,6 +685,10 @@ x:default {
 @media (min-width: 1200px) {
 	.site-header .userLocation {
 		width: 80%;
+	}
+
+	.phone-main .richtext {
+		max-width: 1200px;
 	}
 
 	.site-header-top-05 .mui-wrapper.menu-lg .btn {

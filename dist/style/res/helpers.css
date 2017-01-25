@@ -51,7 +51,6 @@
 /* Position */
 .relative {
 	position: relative;
-	vertical-align: ba;
 }
 
 .absolute {
@@ -882,10 +881,10 @@
 }
 
 .bg-transparent-white {
-	background: rgba(255, 255, 255, 0.95);
+	background-color: rgba(255, 255, 255, 0.65);
 }
 
-/* White bg for Small only */
+/* Legacy */
 
 .bg-transparent-deep-blue {
 	background: rgba(1, 57, 99, 0.8);
@@ -1480,6 +1479,22 @@ hr.black {
 }
 
 @media (min-width: 768px) {
+	.p-0-sm {
+		padding: 0;
+	}
+
+	.p-15-sm {
+		padding: 1.5rem;
+	}
+
+	.p-20-sm {
+		padding: 2rem;
+	}
+
+	.bg-transparent-white-sm {
+		background-color: rgba(255, 255, 255, 0.65);
+	}
+
 	.text-left-sm {
 		text-align: left;
 	}
@@ -1573,7 +1588,29 @@ hr.black {
 	}
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+	.bg-transparent-white-sm-only {
+		background-color: rgba(255, 255, 255, 0.65);
+	}
+}
+
 @media (min-width: 992px) {
+	.p-0-md {
+		padding: 0;
+	}
+
+	.p-15-md {
+		padding: 1.5rem;
+	}
+
+	.p-20-md {
+		padding: 2rem;
+	}
+
+	.bg-transparent-white-md {
+		background-color: rgba(255, 255, 255, 0.65);
+	}
+
 	.text-left-md {
 		text-align: left;
 	}
@@ -1667,7 +1704,41 @@ hr.black {
 	}
 }
 
-@media (min-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+	.bg-transparent-white-md-only {
+		background-color: rgba(255, 255, 255, 0.65);
+	}
+}
+
+@media (min-width: 1200px) {
+	.p-0-lg {
+		padding: 0;
+	}
+
+	.p-15-lg {
+		padding: 1.5rem;
+	}
+
+	.p-20-lg {
+		padding: 2rem;
+	}
+
+	.bg-transparent-white-lg {
+		background-color: rgba(255, 255, 255, 0.65);
+	}
+
+	.text-left-lg {
+		text-align: left;
+	}
+
+	.text-center-lg {
+		text-align: center;
+	}
+
+	.text-right-lg {
+		text-align: right;
+	}
+
 	.img-responsive-xs-25,
 	.img-responsive-sm-25,
 	.img-responsive-md-25 {
@@ -1749,20 +1820,6 @@ hr.black {
 	}
 }
 
-@media (min-width: 1200px) {
-	.text-left-lg {
-		text-align: left;
-	}
-
-	.text-center-lg {
-		text-align: center;
-	}
-
-	.text-right-lg {
-		text-align: right;
-	}
-}
-
 @media (max-width: 767px) {
 	.fw-sm-only,
 	.fw-sm-only .btn,
@@ -1770,8 +1827,8 @@ hr.black {
 		width: 100%;
 	}
 
-	.bg-transparent-white-sm-only {
-		background: rgba(255, 255, 255, 0.95);
+	.bg-transparent-white-xs-only {
+		background-color: rgba(255, 255, 255, 0.65);
 	}
 
 	.center-sm,
