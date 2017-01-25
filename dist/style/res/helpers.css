@@ -1,4 +1,4 @@
-/* Helpers | Jan 19 */
+/* Helpers */
 /* Display */
 .clear {
 	clear: both;
@@ -1244,6 +1244,36 @@
 	font-weight: 700;
 }
 
+hr.spacer {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border: 0;
+	border-top: none;
+}
+
+hr.inset {
+	width: 60%;
+}
+
+hr.black {
+	border-top: 0.1rem solid #333;
+}
+
+.bullets-blue {
+	list-style: none;
+	padding-left: 1em;
+}
+
+.bullets-blue li::before {
+	content: '\2022';
+	display: block;
+	position: relative;
+	max-height: 0;
+	left: -1em;
+	color: #0091e6;
+	font-size: 1em;
+}
+
 /* Buttons */
 .btn-dk-orange .btn {
 	position: relative;
@@ -1427,36 +1457,6 @@ div.policy-terms {
 
 .clickable {
 	cursor: pointer;
-}
-
-hr.spacer {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	border: 0;
-	border-top: none;
-}
-
-hr.inset {
-	width: 60%;
-}
-
-hr.black {
-	border-top: 0.1rem solid #333;
-}
-
-.bullets-blue {
-	list-style: none;
-	padding-left: 1em;
-}
-
-.bullets-blue li::before {
-	content: '\2022';
-	display: block;
-	position: relative;
-	max-height: 0;
-	left: -1em;
-	color: #0091e6;
-	font-size: 1em;
 }
 
 .container-fluid .imageArtDirection {
