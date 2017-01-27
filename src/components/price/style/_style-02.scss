@@ -1,96 +1,77 @@
 @import 'initialize';
-
 // Pricing Style: Offer Columns
 // https://www.charter.com/browse/content/packages
-
 // Base everything off the font size for dollars
 $p-font-size-base-02: 6.4rem;
-
 // Base size at smaller breakpoints
 $p-font-size-base-02-sm: 4.1rem;
-
 .price-style-02 {
-  color: $md-blue;
-
-  &.price-block {
-    font-size: $p-font-size-base-02-sm;
-
-    @include breakpoint(md) {
-      font-size: $p-font-size-base-02;
-    }
-  }
-
-  .before,
-  .after {
-    font-size: percentage(2.2 / strip-unit($p-font-size-base-02-sm));
-    text-align: center;
-
-    @include breakpoint('md') {
-      font-size: percentage(2.2 / strip-unit($p-font-size-base-02));
-    }
-  }
-
-  .before {
-    padding-bottom: 0.2rem;
-    float: left;
-
-    @include breakpoint(md) {
-      float: none;
-    }
-  }
-
-  .price {
-    float: left;
-    padding-left: 0.5rem;
-
-    @include breakpoint(md) {
-      padding-left: 0;
-      float: none;
-    }
-  }
-
-  .currency,
-  .whole,
-  .super,
-  .separator {
-    font-weight: 800;
-
-    @include breakpoint('md'){
-      @include gradient-text-blue;
-    }
-  }
-
-  .currency {
-    font-size: percentage(2.9 / strip-unit($p-font-size-base-02));
-  }
-
-  .whole {
-    line-height: .9;
-  }
-
-  .super {
-    font-size: percentage(1.9 / strip-unit($p-font-size-base-02-sm));
-
-    @include breakpoint('md') {
-      font-size: percentage(1.6 / strip-unit($p-font-size-base-02));
-    }
-  }
-
-  .details {
-    text-align: left;
-    font-size: 100%;
-  }
-
-  .term {
-    font-size: percentage(1.2 / strip-unit($p-font-size-base-02-sm));
-
-    @include breakpoint('md') {
-      font-size: percentage(1.2 / strip-unit($p-font-size-base-02));
-    }
-  }
-
-  // Separator between two prices in double price block
-  .separator {
-    font-size: 0.9 * $p-font-size-base-02;
-  }
+	// color: $md-blue;
+	&.price-block {
+		font-size: $p-font-size-base-02-sm;
+		@include breakpoint(md) {
+			font-size: $p-font-size-base-02;
+		}
+	}
+	.before,
+	.after {
+		font-size: percentage(2.2 / strip-unit($p-font-size-base-02-sm));
+		text-align: center;
+		@include breakpoint('md') {
+			font-size: percentage(2.2 / strip-unit($p-font-size-base-02));
+		}
+	}
+	.before {
+		padding-bottom: 0.2rem;
+		float: left;
+		@include breakpoint(md) {
+			float: none;
+		}
+	}
+	.price {
+		float: left;
+		padding-left: 0.5rem;
+		@include breakpoint(md) {
+			padding-left: 0;
+			float: none;
+		}
+	}
+	.currency,
+	.whole,
+	.super,
+	.separator {
+		color: $md-blue;
+		font-weight: 800;
+		@include breakpoint('md') {
+			background-image: none; //ingested from live site
+			@include gradient-text-blue;
+		}
+	}
+	.currency {
+		font-size: percentage(2.9 / strip-unit($p-font-size-base-02));
+	}
+	.whole {
+		line-height: .9;
+	}
+	.super {
+		font-size: percentage(1.9 / strip-unit($p-font-size-base-02-sm));
+		@include breakpoint('md') {
+			font-size: percentage(1.6 / strip-unit($p-font-size-base-02));
+		}
+	}
+	.details {
+		text-align: left;
+		font-size: 100%;
+	}
+	.term {
+		color: #000; //ingested from live site
+		font-size: percentage(1.2 / strip-unit($p-font-size-base-02-sm));
+		@include breakpoint('md') {
+			font-size: percentage(1.2 / strip-unit($p-font-size-base-02));
+		}
+	}
+	// Separator between two prices in double price block
+	.separator {
+		font-size: 0.9 * $p-font-size-base-02;
+	}
 }

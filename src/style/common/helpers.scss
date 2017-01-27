@@ -1,0 +1,30 @@
+/* Helpers */
+
+@import 'initialize';
+@import 'helpers/display';
+@import 'helpers/position';
+@import 'helpers/spacing';
+@import 'helpers/size';
+@import 'helpers/borders';
+@import 'helpers/colors';
+@import 'helpers/text';
+@import 'helpers/buttons';
+@import 'helpers/terms';
+@import 'helpers/fix-accordion';
+@import 'helpers/img-responsive';
+@import 'helpers/img';
+@import 'helpers/forms';
+.clickable {
+	cursor: pointer;
+}
+
+//  Fix for Core.css
+.container-fluid .imageArtDirection {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.disclaimerWrapper {
+	border-top: .1rem solid #ccc;
+	padding: 2rem;
+}

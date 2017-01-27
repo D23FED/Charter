@@ -1,0 +1,92 @@
+/* Popovers (not appearing in site header) */
+.popover-contact-xref {
+	display: none;
+}
+
+.popover-contact {
+	position: absolute;
+	border: .1rem solid #b7b7b7;
+	background-color: #fff;
+	padding: 1.5rem;
+	display: none;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	top: 4.4rem;
+	min-width: 20rem;
+	z-index: 100;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .popover-contact,
+.aem-AuthorLayer-Edit .popover-contact {
+	position: relative;
+}
+
+.popover-contact:after,
+.popover-contact:before {
+	content: " ";
+	border: medium solid transparent;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 50%;
+	position: absolute;
+	pointer-events: none;
+}
+
+.popover-contact:after {
+	border-bottom-color: #fff;
+	border-width: 0.8rem;
+	margin-left: -0.8rem;
+}
+
+.popover-contact:before {
+	border-bottom-color: #b7b7b7;
+	border-width: 0.9rem;
+	margin-left: -0.9rem;
+}
+
+.popover-contact p {
+	color: #333;
+	text-transform: none;
+	font-weight: 400;
+	font-size: 1.6rem;
+	text-align: left;
+}
+
+.popover-contact a {
+	padding: 0;
+	background-color: transparent;
+	border-radius: 0;
+	color: #0077bc;
+	font-size: inherit;
+	text-decoration: underline;
+}
+
+.popover-contact a:focus,
+.popover-contact a:hover {
+	background-color: transparent;
+	color: #003057;
+}
+
+.popover-contact a:focus:active,
+.popover-contact a:hover:active {
+	background-color: transparent;
+	text-decoration: none;
+	color: #003057;
+}
+
+.popover-contact a:active {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.popover-contact .close-message {
+	position: absolute;
+	right: 1rem;
+	top: .6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

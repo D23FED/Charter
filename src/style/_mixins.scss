@@ -251,19 +251,39 @@
 }
 
 @mixin gradient-text-blue($fallback-color: $lt-blue, $start-color: #4ab3f1, $end-color: $md-blue) {
-  color: $fallback-color;
-  background-image: none;
+	color: $fallback-color;
+	background-image: none;
+	// @supports should be avoided but so should -webkit-background-clip
+	@supports ( ( (-webkit-background-clip: text) or (background-clip: text)) and ( (-webkit-text-fill-color: transparent) or (text-fill-color: transparent))) {
+		-webkit-text-fill-color: transparent;
+		text-fill-color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-repeat: repeat-x;
+		background-image: linear-gradient(to bottom, $start-color 0, $end-color 100%);
+	}
+}
 
-  // @supports should be avoided but so should -webkit-background-clip
-  @supports (
-  	( (-webkit-background-clip: text) or (background-clip: text) ) and
-  	( (-webkit-text-fill-color: transparent) or (text-fill-color: transparent) )
-	) {
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-repeat: repeat-x;
-    background-image: linear-gradient(to bottom, $start-color 0, $end-color 100%);
-  }
+@mixin bg-white($percent: 100) {
+	background-color: rgba(255, 255, 255, ($percent * .01))
+}
+
+@mixin container-w() {
+	@include breakpoint('sm') {
+		max-width: map-get($breakpoints, 'sm')
+	}
+	@include breakpoint('md') {
+		max-width: map-get($breakpoints, 'md')
+	}
+	@include breakpoint('lg') {
+		max-width: map-get($breakpoints, 'lg')
+	}
+}
+
+@mixin container-spacing(: $grid-gutter-width) {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: floor(($gutter / 2));
+	padding-right: ceil(($gutter / 2));
+	@include clearfix;
 }

@@ -1,0 +1,20 @@
+/* Offer columns CSS */
+.offer-columns .aem-Grid {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.offer-columns .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--4 {
+  align-self: flex-end;
+}
+.offer-columns .aem-GridColumn--default--4 {
+  margin-bottom: 1em;
+}
+@media (min-width: 767px) {
+  .offer-columns .aem-GridColumn--default--4 {
+    margin-bottom: 0;
+  }
+}
+
+#react-autosuggest-address1 {
+  text-align: left;
+}

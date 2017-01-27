@@ -1,202 +1,175 @@
 @import 'initialize';
-
+/* Product Pages */
 %heading {
-  font-family: $font-open-sans;
+	font-family: $font-open-sans;
 }
 
 %pseudo {
-  font-weight: normal;
-  display: inline-block;
+	font-weight: normal;
+	display: inline-block;
 }
 
-.product-page {
-  h1,
-  .h1 {
-    @extend %heading;
-    color: $dk-gray;
-    font-size: 2.4rem;
-    font-weight: 800;
-    line-height: (28 / 24);
+.product-page {}
 
-    @include breakpoint('sm') {
-      font-size: 4rem;
-      line-height: (44 / 40);
-    }
-
-    @include breakpoint('md') {
-      font-size: 4.8rem;
-      line-height: (52 / 48);
-    }
-  }
-
-  h2,
-  .h2 {
-    @extend %heading;
-    color: $lt-blue;
-    font-size: 2.5rem;
-    line-height: (30 / 25);
-    font-weight: 300;
-
-    @include breakpoint('sm') {
-      font-size: 4.5rem;
-      line-height: (50 / 45);
-    }
-
-    @include breakpoint('md') {
-      font-size: 5.5rem;
-      line-height: (60 / 55);
-    }
-
-    &.light-color {
-      color: #fff;
-    }
-  }
-
-  h3,
-  .h3 {
-    @extend %heading;
-    color: $dk-gray;
-    font-size: 2rem;
-    line-height: (24 / 20);
-    font-weight: 300;
-
-    @include breakpoint('sm') {
-      font-size: 4rem;
-      line-height: (44 / 40);
-    }
-
-    @include breakpoint('md') {
-      font-size: 2.4rem;
-      line-height: (28 / 20);
-    }
-
-    &.light-color {
-      color: #fff;
-    }
-
-    &.alternate-color {
-      color: $lt-blue;
-    }
-  }
-
-  h4,
-  .h4 {
-    @extend %heading;
-    color: $dk-gray;
-    font-size: 2.1rem;
-    line-height: (25 / 21);
-    font-weight: 800;
-
-    @include breakpoint('sm') {
-      font-size: 3.5rem;
-      line-height: (40 / 35);
-    }
-  }
-
-  h5,
-  .h5 {
-    @extend %heading;
-    color: $dk-gray;
-    font-size: 1.6rem;
-    line-height: (21 / 16);
-    font-weight: 700;
-
-    @include breakpoint('sm') {
-      font-size: 2rem;
-      line-height: (25 / 30);
-    }
-
-    @include breakpoint('md') {
-      font-size: 1.7rem;
-      line-height: (22 / 17);
-    }
-
-    &.light-color {
-      color: #fff;
-    }
-  }
-
-  p,
-  li {
-    font-family: $font-open-sans;
-    color: $dk-gray;
-    font-size: 1.6rem;
-    line-height: (24 / 16);
-
-    @include breakpoint('sm') {
-      font-size: 1.7rem;
-      line-height: (24 / 17);
-    }
-
-    &.light-color {
-      color: #fff;
-    }
-
-    &.disclaimer {
-      color: $gray;
-      font-size: 1.1rem;
-      line-height: (14 / 11);
-    }
-
-    a {
-      text-decoration: underline;
-      font-weight: bold;
-
-      &.learn-more {
-        font-size: 1.6rem;
-        line-height: (21 / 16);
-
-        @include breakpoint('sm') {
-          font-size: 2rem;
-          line-height: (3 / 2);
-        }
-
-        @include breakpoint('md') {
-          font-size: 1.7rem;
-          line-height: (24 / 17);
-        }
-
-        &::after {
-          @extend %pseudo;
-          font-size: percentage(2 / 3);
-          padding-left: .5rem;
-          font-awesome: chevron-right;
-        }
-      }
-
-      &.scroll {
-        font-size: 2rem;
-        line-height: (20 / 14);
-
-        &::before {
-          @extend %pseudo;
-          font-awesome: arrow-circle-o-down;
-          padding-right: .5rem;
-        }
-      }
-
-      &.light-color {
-        color: #fff;
-      }
-    }
-  }
-
-  li {
-    font-size: 1.7rem;
-    line-height: (27 / 17);
-
-    @include breakpoint('sm') {
-      font-size: 2.1rem;
-      line-height: (26 / 21);
-    }
-
-    @include breakpoint('md') {
-      font-size: 1.7rem;
-      line-height: (24 / 17);
-    }
-
-    &.light-color {
-      color: #fff;
-    }
-  }
+// h1,
+// .h1 {
+// 	@extend %heading;
+// 	color: $dk-gray;
+// 	font-size: 2.4rem;
+// 	font-weight: 800;
+// 	line-height: (28 / 24);
+// 	@include breakpoint('sm') {
+// 		font-size: 4rem;
+// 		line-height: (44 / 40);
+// 	}
+// 	@include breakpoint('md') {
+// 		font-size: 4.8rem;
+// 		line-height: (52 / 48);
+// 	}
+// }
+// h2,
+// .h2 {
+// 	@extend %heading;
+// 	color: $lt-blue;
+// 	font-size: 2.5rem;
+// 	line-height: (30 / 25);
+// 	font-weight: 300;
+// 	@include breakpoint('sm') {
+// 		font-size: 4.5rem;
+// 		line-height: (50 / 45);
+// 	}
+// 	@include breakpoint('md') {
+// 		font-size: 5.5rem;
+// 		line-height: (60 / 55);
+// 	}
+// 	&.light-color {
+// 		color: #fff;
+// 	}
+// }
+// h3,
+// .h3 {
+// 	@extend %heading;
+// 	color: $dk-gray;
+// 	font-size: 2rem;
+// 	line-height: (24 / 20);
+// 	font-weight: 300;
+// 	@include breakpoint('sm') {
+// 		font-size: 4rem;
+// 		line-height: (44 / 40);
+// 	}
+// 	@include breakpoint('md') {
+// 		font-size: 2.4rem;
+// 		line-height: (28 / 20);
+// 	}
+// 	&.light-color {
+// 		color: #fff;
+// 	}
+// 	&.alternate-color {
+// 		color: $lt-blue;
+// 	}
+// }
+// h4,
+// .h4 {
+// 	@extend %heading;
+// 	color: $dk-gray;
+// 	font-size: 2.1rem;
+// 	line-height: (25 / 21);
+// 	font-weight: 800;
+// 	@include breakpoint('sm') {
+// 		font-size: 3.5rem;
+// 		line-height: (40 / 35);
+// 	}
+// }
+// h5,
+// .h5 {
+// 	@extend %heading;
+// 	color: $dk-gray;
+// 	font-size: 1.6rem;
+// 	line-height: (21 / 16);
+// 	font-weight: 700;
+// 	@include breakpoint('sm') {
+// 		font-size: 2rem;
+// 		line-height: (25 / 30);
+// 	}
+// 	@include breakpoint('md') {
+// 		font-size: 1.7rem;
+// 		line-height: (22 / 17);
+// 	}
+// 	&.light-color {
+// 		color: #fff;
+// 	}
+// }
+p,
+li {
+	// font-family: $font-open-sans;
+	// color: $dk-gray;
+	// font-size: 1.6rem;
+	// line-height: (24 / 16);
+	@include breakpoint('sm') {
+		// font-size: 1.7rem;
+		// line-height: (24 / 17);
+	}
+	&.light-color {
+		// color: #fff;
+	}
+	&.disclaimer {
+		// color: $gray;
+		// font-size: 1.1rem;
+		// line-height: (14 / 11);
+	}
+	.learn-more,
+	.scroll {
+		// font-weight: 400;
+		// display: inline-block;
+	}
+	// text-decoration: underline;
+	// font-weight: bold;
+	// "Learn More" links
+	.learn-more {
+		// font-size: 1.6rem;
+		// line-height: (21 / 16);
+		@include breakpoint('sm') {
+			font-size: 2rem;
+			line-height: 1.5;
+		}
+		@include breakpoint('md') {
+			// font-size: 1.7rem;
+			// line-height: (24 / 17);
+		}
+		&::after {
+			@extend %pseudo;
+			font-size: percentage(2 / 3);
+			padding-left: .5rem;
+			font-awesome: chevron-right;
+		}
+	}
+	// "Scroll to..." links
+	.scroll {
+		font-size: 2rem;
+		line-height: (20 / 14);
+		&::before {
+			@extend %pseudo;
+			font-awesome: arrow-circle-o-down;
+			padding-right: .5rem;
+		}
+	}
+	&.light-color {
+		// color: #fff;
+	}
 }
+
+// li {
+// 	font-size: 1.7rem;
+// 	line-height: (27 / 17);
+// 	@include breakpoint('sm') {
+// 		font-size: 2.1rem;
+// 		line-height: (26 / 21);
+// 	}
+// 	@include breakpoint('md') {
+// 		font-size: 1.7rem;
+// 		line-height: (24 / 17);
+// 	}
+// 	&.light-color {
+// 		color: #fff;
+// 	}
+// }

@@ -1,15 +1,14 @@
 /* Pricing Component:  Double Price Block */
+
 .price-block-double {
-  @include clearfix;
-  display: inline-block;
-
-  .#{$component-wrapper},
-  .separator {
-    float: left;
-  }
-
-  .separator {
-    margin: 0 1rem;
-    font-size: 90%;
-  }
+	@include clearfix;
+	display: inline-block;
+	.#{$component-wrapper},
+	.separator {
+		float: left;
+	}
+	.separator {
+		margin: 0 1rem;
+		font-size: 90%;
+	}
 }

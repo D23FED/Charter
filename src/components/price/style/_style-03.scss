@@ -8,17 +8,20 @@ $p-font-size-base-03-sm-alt: 24vw;
 // 'Best Choice' Offer Columns breakpoint
 $bc-switchpoint: 'sm';
 .price-style-03 {
-	color: $md-blue;
+	// color: $md-blue;
 	&.price-block {
-		font-size: $p-font-size-base-03-sm;
+		font-size: $p-font-size-base-03-sm-alt;
 		// When price appears in HP Offer Columns
 		&.alternate {
-			font-size: $p-font-size-base-03-sm-alt;
+			// font-size: $p-font-size-base-03-sm-alt;
 			@include breakpoint($bc-switchpoint) {
-				font-size: $p-font-size-base-03;
+				// font-size: $p-font-size-base-03;
 			}
 		}
 		@include breakpoint($bc-switchpoint) {
+			font-size: 18rem;
+		}
+		@include breakpoint('md') {
 			font-size: $p-font-size-base-03;
 		}
 	}
@@ -34,6 +37,7 @@ $bc-switchpoint: 'sm';
 	.whole,
 	.super,
 	.separator {
+		color: $md-blue; //ingested from live site
 		font-weight: 800;
 	}
 	.currency {
@@ -54,6 +58,7 @@ $bc-switchpoint: 'sm';
 		font-size: 100%;
 	}
 	.term {
+		color: #444; //ingested from live site
 		font-size: percentage(1.4 / strip-unit($p-font-size-base-03));
 	}
 	// Separator between two prices in double price block

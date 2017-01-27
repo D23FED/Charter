@@ -89,7 +89,7 @@
 	}
 }
 
-// Legacy
+// Legacy text centering
 .center-sm {
 	@media (max-width: 767px) {
 		text-align: center;
@@ -97,5 +97,36 @@
 		.text-right {
 			text-align: center;
 		}
+	}
+}
+
+// Horizontal rules
+hr {
+	&.spacer {
+		margin-top: 2.0rem;
+		margin-bottom: 2.0rem;
+		border: 0;
+		border-top: none;
+	}
+	&.inset {
+		width: 60%;
+	}
+	&.black {
+		border-top: 0.1rem solid $dk-gray;
+	}
+}
+
+// Lists
+.bullets-blue {
+	list-style: none;
+	padding-left: 1em;
+	li::before {
+		content: '\2022';
+		display: block;
+		position: relative;
+		max-height: 0;
+		left: -1em;
+		color: #0091e6;
+		font-size: 1em;
 	}
 }
