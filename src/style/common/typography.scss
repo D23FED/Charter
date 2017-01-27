@@ -32,25 +32,25 @@ a {
 		}
 	}
 	&.text-white {
-		text-decoration: none;
-		@include hover-focus {
-			color: #fff;
-			text-decoration: underline;
-		}
+		// text-decoration: none;
+		// @include hover-focus {
+		// 	color: #fff;
+		// 	text-decoration: underline;
+		// }
 		// Different behavior inside the Link Component, in case author has added a pseudo-element icon
-		.linkComponent & {
-			@include hover-focus {
-				text-decoration: none;
-				// SPAN inside A
-				.linkLabel {
-					text-decoration: underline;
-				}
-			}
-		}
+		// .linkComponent & {
+		// 	@include hover-focus {
+		// 		text-decoration: none;
+		// 		// SPAN inside A
+		// 		.linkLabel {
+		// 			text-decoration: underline;
+		// 		}
+		// 	}
+		// }
 	}
 	&.text-yellow {
 		@include hover-focus {
-			color: #fff;
+			// color: #fff;
 		}
 	}
 }
