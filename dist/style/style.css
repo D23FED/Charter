@@ -526,7 +526,9 @@
 
 .price-style-01 .before,
 .price-style-01 .after {
+	font-size: 1.4rem;
 	font-size: 35%;
+	color: #666;
 }
 
 .price-style-01 .currency,
@@ -539,6 +541,7 @@
 
 .price-style-01 .currency,
 .price-style-01 .super {
+	font-size: 1.8rem;
 	font-size: 45%;
 }
 
@@ -548,15 +551,13 @@
 }
 
 .price-style-01 .term {
+	color: #333;
+	font-size: 1.2rem;
 	font-size: 30%;
 }
 
 .price-style-01 .separator {
 	font-size: 3.6rem;
-}
-
-.price-style-02 {
-	color: #00629b;
 }
 
 .price-style-02.price-block {
@@ -583,6 +584,7 @@
 .price-style-02 .whole,
 .price-style-02 .super,
 .price-style-02 .separator {
+	color: #00629b;
 	font-weight: 800;
 }
 
@@ -604,6 +606,7 @@
 }
 
 .price-style-02 .term {
+	color: #000;
 	font-size: 29.26829%;
 }
 
@@ -611,15 +614,7 @@
 	font-size: 5.76rem;
 }
 
-.price-style-03 {
-	color: #00629b;
-}
-
 .price-style-03.price-block {
-	font-size: 6.24rem;
-}
-
-.price-style-03.price-block.alternate {
 	font-size: 24vw;
 }
 
@@ -637,6 +632,7 @@
 .price-style-03 .whole,
 .price-style-03 .super,
 .price-style-03 .separator {
+	color: #00629b;
 	font-weight: 800;
 }
 
@@ -663,6 +659,7 @@
 }
 
 .price-style-03 .term {
+	color: #444;
 	font-size: 14.58333%;
 }
 
@@ -670,13 +667,10 @@
 	font-size: 8.64rem;
 }
 
-.price-style-05 {
-	color: #0077bc;
-}
-
 .price-style-05.price-block {
 	font-size: 11rem;
 	font-weight: 800;
+	color: #0077bc;
 }
 
 .price-style-05 .before,
@@ -698,7 +692,7 @@
 
 .price-style-05 .currency,
 .price-style-05 .super {
-	font-size: 27.27273%;
+	font-size: 3rem;
 	line-height: 1.2;
 }
 
@@ -717,6 +711,7 @@
 }
 
 .price-style-05 .term {
+	color: #333;
 	font-weight: 400;
 	font-size: 13.63636%;
 }
@@ -1388,9 +1383,8 @@
 		background-position: right bottom;
 	}
 
-	.price-style-03.price-block.alternate,
 	.price-style-03.price-block {
-		font-size: 9.6rem;
+		font-size: 18rem;
 	}
 
 	.tabbedComponent.tab-style-2 .tab-row ul.nav-tabs .tab > a,
@@ -1540,6 +1534,10 @@
 
 	.price-style-02 .term {
 		font-size: 18.75%;
+	}
+
+	.price-style-03.price-block {
+		font-size: 9.6rem;
 	}
 
 	.price-style-05.price-block {
