@@ -14,7 +14,7 @@
 	font-size: 1.4rem;
 	height: auto;
 	font-weight: 400;
-	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-family: Open Sans;
 }
 
 .muiAddressLookup .localization--horizontal-1 .localization__inputs {
@@ -158,7 +158,7 @@ fieldset[disabled] .muiAddressLookup .localization--horizontal-1 .localization__
 .form-header {
 	color: #003057;
 	font-size: 1.4rem;
-	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-family: Open Sans;
 	padding-left: 0.5rem;
 	margin-top: 1rem;
 	margin-bottom: 0.7rem;

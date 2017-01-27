@@ -230,7 +230,7 @@
 .site-header .zipAction input,
 .site-header .zipAction button {
 	font-size: 1.6rem;
-	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-family: Open Sans;
 	padding: 0.7rem 0.5rem;
 }
 
@@ -290,7 +290,7 @@
 
 .site-header .userLocation .spectrum-customerLocation {
 	font-size: 1.6rem;
-	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-family: Open Sans;
 }
 
 .site-header .userLocation .spectrum-customerLocation .richtext ul,
@@ -427,7 +427,7 @@
 
 .site-header .popover-contact:after,
 .site-header .popover-contact:before {
-	content: " ";
+	content: "\20";
 	border: medium solid transparent;
 	width: 0;
 	height: 0;

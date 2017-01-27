@@ -2,57 +2,11 @@
 	/* Color Helpers */
 }
 
+
+/* Background colors */
+
 .bg-white {
 	background: #fff;
-}
-
-.bg-transparent-white {
-	@include bg-white(65);
-}
-
-.bg-transparent-white-xs-only {
-	@media (max-width: $breakpoint-sm-max) {
-		@include bg-white(65);
-	}
-}
-
-.bg-transparent-white-sm-only {
-	@media (min-width: map-get($breakpoints, 'sm')) and (max-width: (map-get($breakpoints, 'md') - 1px)) {
-		@include bg-white(65);
-	}
-}
-
-.bg-transparent-white-md-only {
-	@media (min-width: map-get($breakpoints, 'md')) and (max-width: (map-get($breakpoints, 'lg') - 1px)) {
-		@include bg-white(65);
-	}
-}
-
-
-//  Legacy
-
-// .bg-transparent-white-sm-only {
-// 	@media (max-width: map-get($breakpoints, 'sm') - 1px) {
-// 		@include bg-white(65);
-// 	}
-// 	@media (min-width: map-get($breakpoints, 'sm')) {
-// 		background-color: transparent;
-// 	}
-// }
-
-@each $bp-name,
-$bp-width in $breakpoints {
-	@if $bp-name !='xxs' and $bp-name !='xs' {
-		.bg-transparent-white-#{$bp-name} {
-			@include breakpoint($bp-name) {
-				@include bg-white(65);
-			}
-		}
-	}
-}
-
-.bg-transparent-deep-blue {
-	background: rgba(1, 57, 99, 0.8);
 }
 
 .bg-primary {
@@ -94,6 +48,7 @@ $bp-width in $breakpoints {
 .bg-gray {
 	background: $gray;
 }
+
 .bg-gray-f8 {
 	background: #f8f8f8;
 }
@@ -118,6 +73,50 @@ $bp-width in $breakpoints {
 	background: $purple;
 }
 
+
+/* Translucent backgrounds */
+
+.bg-transparent-white {
+	@include bg-white(65);
+}
+
+.bg-transparent-white-xs-only {
+	@media (max-width: $breakpoint-sm-max) {
+		@include bg-white(65);
+	}
+}
+
+.bg-transparent-white-sm-only {
+	@media (min-width: map-get($breakpoints, 'sm')) and (max-width: (map-get($breakpoints, 'md') - 1px)) {
+		@include bg-white(65);
+	}
+}
+
+.bg-transparent-white-md-only {
+	@media (min-width: map-get($breakpoints, 'md')) and (max-width: (map-get($breakpoints, 'lg') - 1px)) {
+		@include bg-white(65);
+	}
+}
+
+// Responsive translucent white backgrounds
+@each $bp-name,
+$bp-width in $breakpoints {
+	@if $bp-name !='xxs' and $bp-name !='xs' {
+		.bg-transparent-white-#{$bp-name} {
+			@include breakpoint($bp-name) {
+				@include bg-white(65);
+			}
+		}
+	}
+}
+
+.bg-transparent-deep-blue {
+	background: rgba(1, 57, 99, 0.8);
+}
+
+
+/* Gradient backgrounds */
+
 .bg-gradient-primary {
 	background: linear-gradient(to bottom, #083e60 0%, #0b7ac0 100%);
 }
@@ -138,35 +137,78 @@ $bp-width in $breakpoints {
 	position: relative;
 	box-shadow: 0.5vw 0vw 1vw 0 #c4c2c2 inset, -0.5vw 0 1vw 0 #c4c2c2 inset;
 	background: #f7f7f7;
-}
-
-.bg-inset-gradient:after {
-	background: rgba(0, 0, 0, 0.5);
-	content: "";
-	filter: blur(.5rem);
-	width: 102%;
-	position: absolute;
-	bottom: -2%;
-	height: 2rem;
-	left: -1%;
-	z-index: -1;
+	&::after {
+		background: rgba(0, 0, 0, 0.5);
+		content: "";
+		filter: blur(.5rem);
+		width: 102%;
+		position: absolute;
+		bottom: -2%;
+		height: 2rem;
+		left: -1%;
+		z-index: -1;
+	}
 }
 
 .bg-secondary-inset-gradient {
 	box-shadow: 0 2px 38px #b2b2b2 inset, 0 -350px 75px #d8d8d8 inset;
 }
 
+
+/* Already in link component css */
+
+.text-primary {
+	color: $blue;
+}
+
+.text-info {
+	color: $lt-blue;
+}
+
+.text-warning {
+	color: $yellow;
+}
+
+,
+.text-danger {
+	color: $pink;
+}
+
+.text-success {
+	color: #009E3D;
+}
+
+
+/* Added in Helpers*/
+
 // Font colors
 .text-white {
 	color: #fff;
+	@at-root a#{&} {
+		text-decoration: none;
+		@include hover-focus {
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+	// Different behavior inside the Link Component, in case author has added a pseudo-element icon
+	.linkComponent & {
+		@include hover-focus {
+			text-decoration: none;
+			// SPAN inside A
+			.linkLabel {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 .text-black {
 	color: #000;
 }
 
-.text-deep-blue,
-.text-primary {
+// Same as primary
+.text-deep-blue {
 	color: $blue;
 }
 
@@ -175,8 +217,8 @@ $bp-width in $breakpoints {
 	color: $md-blue;
 }
 
-.text-light-blue,
-.text-info {
+// Same as info
+.text-light-blue {
 	color: $lt-blue;
 }
 
@@ -192,22 +234,23 @@ $bp-width in $breakpoints {
 	color: $teal;
 }
 
-.text-yellow,
-.text-warning {
+// Same as warning
+.text-yellow {
 	color: $yellow;
+	@at-root a#{&} {
+		@include hover-focus {
+			color: #fff;
+		}
+	}
 }
 
-.text-pink,
-.text-danger {
+// Same as danger
+.text-pink {
 	color: $pink;
 }
 
 .text-purple {
 	color: $purple;
-}
-
-.text-success {
-	color: #009E3D;
 }
 
 .text-muted {

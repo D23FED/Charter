@@ -26,7 +26,7 @@
 
 .popover-contact:after,
 .popover-contact:before {
-	content: " ";
+	content: "\20";
 	border: medium solid transparent;
 	width: 0;
 	height: 0;
