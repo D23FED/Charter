@@ -1,29 +1,43 @@
 // Icon links
+$nbsp-content: '\00a0';
+$icon-double-angle-left-content: '\f100';
+$icon-double-angle-right-content: '\f101';
+$icon-angle-left-content: '\f104';
+$icon-angle-right-content: '\f105';
+$icon-angle-up-content: '\f106';
+$icon-angle-down-content: '\f107';
+
 [class*="icon-"] a span::after {
-	// font-family: FontAwesome;
-	margin: 0 0.5rem;
+	font-family: $font-stack-icon;
+	margin: 0;
 }
 
 // Angle icons
 .icon-angle-right span::after {
-	font-awesome: angle-right;
+	content: '\00a0\f105';
+	color: aliceblue;
 }
 
 .icon-angle-left span::after {
+	content: '\00a0\f104';
 	font-awesome: angle-left;
 }
 
 .icon-angle-up span::after {
+	content: '\00a0\f106';
 	font-awesome: angle-up;
 }
 
 .icon-angle-down span::after {
+	content: '\00a0\f107';
 	font-awesome: angle-down;
 }
 .icon-double-angle-left span::after {
+	content: '\00a0\f100';
 	font-awesome: angle-double-left;
 }
 
 .icon-double-angle-right span::after {
+	content: '\00a0\f101';
 	font-awesome: angle-double-right;
 }
