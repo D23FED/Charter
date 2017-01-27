@@ -1,0 +1,15 @@
+/* 404 Page */
+@import 'initialize';
+.info-buttons {
+	.btn {
+		width: 100%;
+		@include breakpoint('sm') {
+			padding-left: .5rem;
+			padding-right: .5rem;
+		}
+		@include breakpoint('md') {
+			padding-left: $btn-padding-default-x;
+			padding-right: $btn-padding-default-x;
+		}
+	}
+}
