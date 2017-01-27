@@ -618,7 +618,8 @@ x:default {
 	}
 
 	.site-header .userLocation {
-		padding-left: 10%;
+		padding-left: 0;
+		margin-left: -3rem;
 	}
 
 	.phone-main .richtext {
@@ -684,7 +685,8 @@ x:default {
 
 @media (min-width: 1200px) {
 	.site-header .userLocation {
-		width: 80%;
+		width: 84%;
+		margin-left: 0;
 	}
 
 	.phone-main .richtext {

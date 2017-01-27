@@ -29,7 +29,7 @@
 }
 
 
-/* Legacy */
+//  Legacy
 
 // .bg-transparent-white-sm-only {
 // 	@media (max-width: map-get($breakpoints, 'sm') - 1px) {
@@ -93,6 +93,9 @@ $bp-width in $breakpoints {
 
 .bg-gray {
 	background: $gray;
+}
+.bg-gray-f8 {
+	background: #f8f8f8;
 }
 
 .bg-dark-gray {
