@@ -63,10 +63,13 @@ $loc-edge-padding: 10%;
 		float: left;
 		padding-right: $column-padding;
 		@include breakpoint('sm') {
-			padding-left: $loc-edge-padding;
+			// padding-left: $loc-edge-padding;
+			padding-left: 0;
+			margin-left: -3rem;
 		}
 		@include breakpoint('lg') {
-			width: 80%;
+			width: 84%;
+			margin-left: 0;
 		}
 		// Contains all text content
 		.spectrum-customerLocation {
