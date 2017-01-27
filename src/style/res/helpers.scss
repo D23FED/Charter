@@ -13,6 +13,7 @@
 @import 'helpers/fix-accordion';
 @import 'helpers/img-responsive';
 @import 'helpers/img';
+@import 'helpers/forms';
 .clickable {
 	cursor: pointer;
 }
@@ -21,4 +22,9 @@
 .container-fluid .imageArtDirection {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.disclaimerWrapper {
+	border-top: .1rem solid #ccc;
+	padding: 2rem;
 }
