@@ -1,0 +1,154 @@
+/* Headings */
+@mixin heading($tag) {
+	#{$tag},
+	.#{$tag} {
+		@content;
+	}
+}
+
+
+%heading {
+	margin: 0.5rem 0;
+}
+
+@for $i from 1 through 6 {
+	h#{$i},
+	.h#{$i} {
+		@extend %heading;
+	}
+}
+
+@include heading(h1) {
+	font-size: 2.2rem;
+	line-height: (28 / 22);
+	font-weight: 700;
+	@include breakpoint('sm') {
+		font-size: 2.6rem;
+		line-height: (32 / 26);
+	}
+	@include breakpoint('md') {
+		font-size: 3rem;
+		line-height: (36 / 30);
+	}
+	&.alternate {
+		font-size: 3.6rem;
+		line-height: (39 / 33);
+		font-weight: 900;
+		@include breakpoint('sm') {
+			font-size: 3.9rem;
+			line-height: (45 / 39);
+		}
+		@include breakpoint('md') {
+			font-size: 4.5rem;
+			line-height: (52 / 45);
+		}
+	}
+}
+
+@include heading(h2) {
+	font-size: 2rem;
+	line-height: (24 / 20);
+	font-weight: 400;
+	@include breakpoint('sm') {
+		font-size: 2.2rem;
+		line-height: (28 / 22);
+	}
+	@include breakpoint('md') {
+		font-size: 2.6rem;
+		line-height: (32 / 26);
+	}
+	&.alternate {
+		font-size: 3.4rem;
+		line-height: (40 / 34);
+		font-weight: 200;
+		@include breakpoint('sm') {
+			font-size: 3.6rem;
+			line-height: (42 / 36);
+		}
+		@include breakpoint('md') {
+			font-size: 3.9rem;
+			line-height: (48 / 39);
+		}
+	}
+}
+
+@include heading(h3) {
+	font-size: 1.8rem;
+	font-weight: 700;
+	@include breakpoint('sm') {
+		font-size: 2rem;
+	}
+	@include breakpoint('md') {
+		font-size: 2.2rem;
+	}
+	&.alternate {
+		font-size: 2.4rem;
+		font-weight: 700;
+		@include breakpoint('sm') {
+			font-size: 2.8rem;
+		}
+		@include breakpoint('md') {
+			font-size: 3.3rem;
+		}
+	}
+}
+
+@include heading(h4) {
+	font-size: 1.8rem;
+	font-weight: 400;
+	@include breakpoint('sm') {
+		font-size: 2rem;
+	}
+	@include breakpoint('md') {
+		font-size: 2.2rem;
+	}
+	&.alternate {
+		font-size: 2.4rem;
+		font-weight: 400;
+		@include breakpoint('sm') {
+			font-size: 2.8rem;
+		}
+		@include breakpoint('md') {
+			font-size: 3.3rem;
+		}
+	}
+}
+
+@include heading(h5) {
+	font-size: 1.8rem;
+	font-weight: 700;
+	@include breakpoint('sm') {
+		font-size: 1.8rem;
+	}
+	@include breakpoint('md') {
+		font-size: 2rem;
+	}
+	&.alternate {
+		font-size: 2.2rem;
+		font-weight: 700;
+		@include breakpoint('sm') {
+			font-size: 2.4rem;
+		}
+		@include breakpoint('md') {
+			font-size: 2.6rem;
+		}
+	}
+}
+
+@include heading(h6) {
+	font-size: 1.6rem;
+	font-weight: 700;
+	@include breakpoint('sm') {
+		font-size: 1.8rem;
+	}
+	&.alternate {
+		font-size: 2.2rem;
+		font-weight: 400;
+		@include breakpoint('sm') {
+			font-size: 2.4rem;
+		}
+		@include breakpoint('md') {
+			font-size: 2.6rem;
+		}
+	}
+}

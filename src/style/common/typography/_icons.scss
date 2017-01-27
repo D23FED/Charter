@@ -1,0 +1,29 @@
+// Icon links
+[class*="icon-"] a span::after {
+	// font-family: FontAwesome;
+	margin: 0 0.5rem;
+}
+
+// Angle icons
+.icon-angle-right span::after {
+	font-awesome: angle-right;
+}
+
+.icon-angle-left span::after {
+	font-awesome: angle-left;
+}
+
+.icon-angle-up span::after {
+	font-awesome: angle-up;
+}
+
+.icon-angle-down span::after {
+	font-awesome: angle-down;
+}
+.icon-double-angle-left span::after {
+	font-awesome: angle-double-left;
+}
+
+.icon-double-angle-right span::after {
+	font-awesome: angle-double-right;
+}
