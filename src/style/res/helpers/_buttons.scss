@@ -4,6 +4,9 @@
 
 $btn-color: #f66200;
 $btn-hover-color: #dd5800;
+$btn-lt-blue-gradient-start: #4ab3f1;
+$btn-lt-blue-gradient-end: #0091e6;
+$btn-lt-blue-bg-color: $btn-lt-blue-gradient-start;
 .btn-dk-orange {
 	.btn {
 		position: relative;
@@ -11,8 +14,8 @@ $btn-hover-color: #dd5800;
 		background-color: $btn-color;
 		border: none;
 		text-transform: uppercase;
-		text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.75);
-		box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, 0.33);
+		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+		box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
 		font-weight: 700;
 		font-size: 2rem;
 		background-image: none;
@@ -60,5 +63,36 @@ $btn-hover-color: #dd5800;
 		&:after {
 			color: $gray;
 		}
+	}
+}
+
+// Light blue button, on 404 page
+%btn-lt-blue {
+	background-color: $btn-lt-blue-gradient-start;
+	background-image: linear-gradient(to bottom, $btn-lt-blue-gradient-start 0, $btn-lt-blue-gradient-end 100%);
+	border-radius: $btn-border-radius-small;
+	box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.294);
+	color: #fff;
+	display: inline-block;
+	font-weight: 700;
+	margin-bottom: 1.2em;
+	padding: 0.8rem 0;
+	width: 100%;
+	text-decoration: none;
+	font-size: 1.6rem;
+	@include breakpoint('sm') {
+		font-size: 1.8rem;
+	}
+	@include breakpoint('md') {
+		font-size: 2.0rem;
+	}
+	@include hover-focus {
+		background-color: $btn-lt-blue-gradient-end;
+		background-image: linear-gradient(to bottom, $btn-lt-blue-gradient-end 0, $btn-lt-blue-gradient-start 100%);
+	}
+	&:active {
+		background-color: $btn-lt-blue-gradient-end;
+		background-image: linear-gradient(to bottom, $btn-lt-blue-gradient-end 0, $btn-lt-blue-gradient-start 100%);
+		box-shadow: none;
 	}
 }
