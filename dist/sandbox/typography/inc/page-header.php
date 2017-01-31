@@ -1,2 +1,2 @@
 <!-- Custom page <head> -->
-<?php // stylesheet('example.css');
+<?php stylesheet('/style/common/typography.css');

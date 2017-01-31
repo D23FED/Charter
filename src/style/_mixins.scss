@@ -1,6 +1,8 @@
 // Media Queries
+// From Bootstrap 4: -up, -min, -max, -infix
 // Media of at least the minimum breakpoint width. (No query for the smallest breakpoint)
 // Usage example: @include breakpoint(sm) {}
+// Renamed from "breakpoint-up" to simply "breakpoint"
 @mixin breakpoint($name, $bp: $breakpoints) {
 	$min: breakpoint-min($name, $bp);
 	@if $min {
@@ -13,8 +15,22 @@
 	}
 }
 
-// Media of at most the maximum breakpoint width, applies to the given breakpoint and narrower. (No query for the largest breakpoint)
-@mixin breakpoint-down($name, $bp: $breakpoints) {
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// same as "@mixin breakpoint", included here for compatibility
+@mixin media-breakpoint-up($name, $bp: $breakpoints) {
+	$min: breakpoint-min($name, $bp);
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	}
+	@else {
+		@content;
+	}
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+@mixin media-breakpoint-down($name, $bp: $breakpoints) {
 	$max: breakpoint-max($name, $bp);
 	@if $max {
 		@media (max-width: $max) {
@@ -26,21 +42,19 @@
 	}
 }
 
-// Media between the breakpoint's minimum and maximum widths, applies only to the given breakpoint. (No minimum for the smallest breakpoint, and no maximum for the largest one)
-@mixin breakpoint-only($name, $bp: $breakpoints) {
-	@include breakpoint($name, $bp) {
-		@include breakpoint-down($name, $bp) {
+// Media that spans multiple breakpoint widths between the min and max breakpoints.
+@mixin media-breakpoint-between($lower, $upper, $bp: $breakpoints) {
+	@include media-breakpoint-up($lower, $bp) {
+		@include media-breakpoint-down($upper, $bp) {
 			@content;
 		}
 	}
 }
 
-// Media that spans multiple breakpoint widths. @content applies between the min and max breakpoints
-@mixin breakpoint-between($lower, $upper, $bp: $breakpoints) {
-	@include breakpoint($lower, $bp) {
-		@include breakpoint-down($upper, $bp) {
-			@content;
-		}
+// Media between the breakpoint's minimum and maximum widths.
+@mixin media-breakpoint-only($name, $bp: $breakpoints) {
+	@include media-breakpoint-between($name, $name, $bp) {
+		@content;
 	}
 }
 
@@ -265,18 +279,18 @@
 }
 
 @mixin bg-white($percent: 100) {
-	background-color: rgba(255, 255, 255, ($percent * .01))
+	background-color: rgba(255, 255, 255, ($percent * .01));
 }
 
 @mixin container-w() {
 	@include breakpoint('sm') {
-		max-width: map-get($breakpoints, 'sm')
+		max-width: map-get($breakpoints, 'sm');
 	}
 	@include breakpoint('md') {
-		max-width: map-get($breakpoints, 'md')
+		max-width: map-get($breakpoints, 'md');
 	}
 	@include breakpoint('lg') {
-		max-width: map-get($breakpoints, 'lg')
+		max-width: map-get($breakpoints, 'lg');
 	}
 }
 

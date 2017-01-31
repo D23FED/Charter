@@ -1,5 +1,6 @@
 // Policies and Terms
 .policy-terms {
+	// background-color: transparent;
 	padding: 0.5rem 0;
 	.linkComponent {
 		background-color: $md-blue;
@@ -17,8 +18,4 @@
 			margin-right: 0.5em;
 		}
 	}
-}
-
-div.policy-terms {
-	background-color: transparent;
 }

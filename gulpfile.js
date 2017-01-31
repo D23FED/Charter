@@ -1,7 +1,6 @@
 /* global require */
 /* jslint node: true */
 "use strict";
-
 // Settings
 var
 	gulp = require('gulp'),
@@ -61,7 +60,7 @@ var
 			//Converts between equivalent length, time & angle values
 			convertValues: false,
 			// Trims whitespace and semicolons
-			core : false,
+			core: false,
 			// Removes comments unless marked with '!'
 			discardComments: false,
 			// Removes duplicated rules
@@ -128,7 +127,7 @@ var
 			],
 			relative: paths.dist
 		}),
-		$.cssMqpacker({sort: true}),
+		$.cssMqpacker({ sort: true }),
 		// $.perfectionist({
 		// 	indentSize: 4
 		// }),
@@ -141,158 +140,155 @@ var
 		'src/style/ent',
 		'style/'
 	];
-
 // Sass => CSS
 gulp.task('style', function() {
 	return gulp.src([
-		paths.source + globs.sass
-	])
-	// Output names of files being processed
-	// .pipe($.debug({
-	// 	title: 'Processing:'
-	// }))
-	// Begin recording sourcemaps
-	.pipe($.sourcemaps.init())
-	.pipe($.changed(paths.dist))
-	// Compile Sass
-	.pipe($.sass({
-		includePaths: sassIncludePaths,
-		outputStyle: 'expanded'
-	})).on('error', $.sass.logError)
-	// CSS post-processing
-	// .pipe($.stylefmt)
-	.pipe($.postcss(postCssProcessors))
-	.pipe($.sourcemaps.write('.'))
-	// Write CSS to disk
-	.pipe(gulp.dest(paths.dist))
-	.pipe($.debug({
-		title: 'Output:',
-		minimal: true
-	}))
-	.on('end', function() {
-		$.util.log('CSS Processed');
-	});
+			paths.source + globs.sass
+		])
+		// Begin recording sourcemaps
+		.pipe($.sourcemaps.init())
+		// Compile Sass
+		.pipe($.sass({
+			includePaths: sassIncludePaths,
+			outputStyle: 'expanded'
+		})).on('error', $.sass.logError)
+		// CSS post-processing
+		// .pipe($.stylefmt)
+		.pipe($.postcss(postCssProcessors))
+		.pipe($.sassUnicode())
+		.pipe($.sourcemaps.write('.'))
+		// Write CSS to disk
+		.pipe(gulp.dest(paths.dist))
+		.pipe($.filter([
+			'**',
+			'!**/*.map',
+			// '!dist/sandbox',
+			'!dist/sandbox/**'
+		]))
+		// .pipe(filter)
+		.pipe($.debug({
+			title: 'Output:',
+			minimal: true
+		}))
+		.on('end', function() {
+			$.util.log('CSS Processed');
+		});
 });
-
-// Concatenate and Uglifiy Global JS
+// Concatenate and Uglify Global JS
 gulp.task('js-global', function() {
 	return gulp.src([
-		paths.source + paths.scriptLibs + globs.scripts,
-		paths.source + paths.scripts + globs.scripts,
-		'!node_modules/**/*'
-	])
-	.pipe($.debug({
-		title: 'Processing:'
-	}))
-	.pipe($.sourcemaps.init())
-	// Concat
-	.pipe($.concat('script.js', {
-		newLine: ';\r\n'
-	}))
-	// Uglify
-	.pipe($.uglify())
-	.pipe($.rename({
-		suffix: '.min'
-	}))
-	.pipe($.sourcemaps.write('.'))
-	.pipe(gulp.dest(paths.dist + 'js/'))
-	.pipe($.debug({
-		title: 'Output:',
-		minimal: true
-	}));
+			paths.source + paths.scriptLibs + globs.scripts,
+			paths.source + paths.scripts + globs.scripts,
+			'!node_modules/**/*'
+		])
+		.pipe($.debug({
+			title: 'Processing:'
+		}))
+		.pipe($.sourcemaps.init())
+		// Concat
+		.pipe($.concat('script.js', {
+			newLine: ';\r\n'
+		}))
+		// Uglify
+		.pipe($.uglify())
+		.pipe($.rename({
+			suffix: '.min'
+		}))
+		.pipe($.sourcemaps.write('.'))
+		.pipe(gulp.dest(paths.dist + 'js/'))
+		.pipe($.debug({
+			title: 'Output:',
+			minimal: true
+		}));
 });
-
 // Copy Individual Component/Sandbox project JS to build folder
 gulp.task('js-components', function() {
 	return gulp.src([
-		paths.source + paths.components + globs.scripts,
-		paths.source + paths.sandbox + globs.scripts,
-		'!' + paths.source + paths.scriptLibs + globs.scripts,
-		'!' + paths.source + paths.scripts + globs.scripts,
-		'!node_modules/**/*'
-	], {
-		base: './' + paths.source
-	})
-	.pipe(gulp.dest(paths.dist))
-	.pipe($.debug({
-		title: 'Output:',
-		minimal: true
-	}));
+			paths.source + paths.components + globs.scripts,
+			paths.source + paths.sandbox + globs.scripts,
+			'!' + paths.source + paths.scriptLibs + globs.scripts,
+			'!' + paths.source + paths.scripts + globs.scripts,
+			'!node_modules/**/*'
+		], {
+			base: './' + paths.source
+		})
+		.pipe(gulp.dest(paths.dist))
+		.pipe($.debug({
+			title: 'Output:',
+			minimal: true
+		}));
 });
-
 // Lint JS with ESLint
 gulp.task('jsl', function() {
 	return gulp.src([
-		paths.source + paths.scripts + globs.scripts,
-		'!node_modules/**/*'
-	])
-	.pipe($.debug({
-		title: 'Linting:'
-	}))
-	// Lint
-	.pipe($.eslint({
-		extends: 'eslint:recommended',
-		ecmaFeatures: {
-			'impliedStrict': true
-		},
-		rules: {
-			'strict': ['off', 'global'],
-			'indent': 'off',
-			'no-console': 'warn',
-			'no-debugger': 'warn',
-			'no-extra-semi': 'warn',
-			'no-empty': 'warn',
-			'comma-dangle': 'warn',
-			'linebreak-style': 'off'
-		},
-		env: {
-			browser: true,
-			node: true,
-			amd: true,
-			es6: true,
-			jquery: true
-		},
-		globals: {
-			'$': true
-		}
-	}))
-	// Output results
-	.pipe($.eslint.format());
+			paths.source + paths.scripts + globs.scripts,
+			'!node_modules/**/*'
+		])
+		.pipe($.debug({
+			title: 'Linting:'
+		}))
+		// Lint
+		.pipe($.eslint({
+			extends: 'eslint:recommended',
+			ecmaFeatures: {
+				'impliedStrict': true
+			},
+			rules: {
+				'strict': ['off', 'global'],
+				'indent': 'off',
+				'no-console': 'warn',
+				'no-debugger': 'warn',
+				'no-extra-semi': 'warn',
+				'no-empty': 'warn',
+				'comma-dangle': 'warn',
+				'linebreak-style': 'off'
+			},
+			env: {
+				browser: true,
+				node: true,
+				amd: true,
+				es6: true,
+				jquery: true
+			},
+			globals: {
+				'$': true
+			}
+		}))
+		// Output results
+		.pipe($.eslint.format());
 });
-
 // Prettify JS
 gulp.task('jsp', function() {
 	return gulp.src([
-		paths.source + paths.scripts + globs.scripts,
-		'!node_modules/**/*'
-	])
-	.pipe($.debug({
-		title: 'Prettifying:'
-	}))
-	.pipe($.jsPrettify({
-		"indent_size": 1,
-		"indent_char": "	",
-		"eol": "\n",
-		"indent_level": 0,
-		"indent_with_tabs": true,
-		"preserve_newlines": true,
-		"max_preserve_newlines": 2,
-		"space_after_anon_function": false,
-		"brace_style": "collapse",
-		"keep_array_indentation": true,
-		"keep_function_indentation": false,
-		"space_before_conditional": true,
-		"break_chained_methods": false,
-		"eval_code": false,
-		"unescape_strings": false,
-		"wrap_line_length": 0,
-		"wrap_attributes": "auto",
-		"wrap_attributes_indent_size": 4,
-		"end_with_newline": true
-	}))
-	.pipe(gulp.dest(paths.source + paths.scripts));
+			paths.source + paths.scripts + globs.scripts,
+			'!node_modules/**/*'
+		])
+		.pipe($.debug({
+			title: 'Prettifying:'
+		}))
+		.pipe($.jsPrettify({
+			"indent_size": 1,
+			"indent_char": "	",
+			"eol": "\n",
+			"indent_level": 0,
+			"indent_with_tabs": true,
+			"preserve_newlines": true,
+			"max_preserve_newlines": 2,
+			"space_after_anon_function": false,
+			"brace_style": "collapse",
+			"keep_array_indentation": true,
+			"keep_function_indentation": false,
+			"space_before_conditional": true,
+			"break_chained_methods": false,
+			"eval_code": false,
+			"unescape_strings": false,
+			"wrap_line_length": 0,
+			"wrap_attributes": "auto",
+			"wrap_attributes_indent_size": 4,
+			"end_with_newline": true
+		}))
+		.pipe(gulp.dest(paths.source + paths.scripts));
 });
-
 // Image compression and copying. Currently only works on images at root /images/ folder, need to expand to cover individual component images.
 gulp.task('img', function() {
 	return gulp.src(paths.source + paths.images + globs.img)
@@ -312,7 +308,6 @@ gulp.task('img', function() {
 			title: 'Processing image:'
 		}));
 });
-
 // Copy HTML to build folder
 gulp.task('html', function() {
 	return gulp.src(
@@ -321,7 +316,6 @@ gulp.task('html', function() {
 		// .pipe($.changed(paths.dist))
 		.pipe(gulp.dest(paths.dist));
 });
-
 // Copy PHP to build folder
 gulp.task('php', function() {
 	return gulp.src(
@@ -332,23 +326,12 @@ gulp.task('php', function() {
 			title: 'Copied:'
 		}));
 });
-
-//Live reloading of changes
-// gulp.task('browser-sync', function() {
-// 	browserSync.init({
-// 		proxy: 'charter.local',
-// 		port: '8888'
-// 	});
-// });
-
 // All JS build tasks
 gulp.task('js',
 	gulp.parallel('js-global', 'js-components'));
-
 // PHP + HTML
 gulp.task('markup',
 	gulp.parallel('php', 'html'));
-
 // File watcher
 gulp.task('watch', function() {
 	// JS
@@ -368,7 +351,6 @@ gulp.task('watch', function() {
 		paths.source + globs.html
 	], gulp.parallel(['markup']));
 });
-
 // Default
 gulp.task('default',
 	gulp.parallel('style', 'js', 'markup'));

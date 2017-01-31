@@ -1,14 +1,15 @@
-/* Typography | 2017 01 13 EM */
+/* Typography */
 html {
 	font-size: 62.5%;
 }
 
 body {
-	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-family: Open Sans;
 	font-size: 1.6rem;
 	line-height: 1.5;
 }
 
+/* Headings */
 h1,
 .h1,
 h2,
@@ -124,28 +125,35 @@ a.color-light:hover {
 	color: #efefef;
 }
 
-a.text-white {
-	text-decoration: none;
+[class*="icon-"] a span::after {
+	font-family: FontAwesome;
+	margin: 0;
 }
 
-a.text-white:focus,
-a.text-white:hover {
-	color: #fff;
-	text-decoration: underline;
+.icon-angle-right span::after {
+	content: '\00a0\f105';
 }
 
-.linkComponent a.text-white:focus,
-.linkComponent a.text-white:hover {
-	text-decoration: none;
+.icon-angle-left span::after {
+	content: '\00a0\f104';
 }
 
-.linkComponent a.text-white:focus .linkLabel,
-.linkComponent a.text-white:hover .linkLabel {
-	text-decoration: underline;
+.icon-angle-up span::after {
+	content: '\00a0\f106';
 }
 
-a.text-yellow:focus,
-a.text-yellow:hover,
+.icon-angle-down span::after {
+	content: '\00a0\f107';
+}
+
+.icon-double-angle-left span::after {
+	content: '\00a0\f100';
+}
+
+.icon-double-angle-right span::after {
+	content: '\00a0\f101';
+}
+
 .light-color li {
 	color: #fff;
 }
@@ -154,40 +162,6 @@ a.text-yellow:hover,
 	color: #808285;
 	font-size: 1.1rem;
 	line-height: 1.27273;
-}
-
-[class*="icon-"] a span:after {
-	margin: 0 0.5rem;
-}
-
-.icon-angle-right span:after {
-	font-family: FontAwesome;
-	content: '\f105';
-}
-
-.icon-angle-left span:after {
-	font-family: FontAwesome;
-	content: '\f104';
-}
-
-.icon-angle-up span:after {
-	font-family: FontAwesome;
-	content: '\f106';
-}
-
-.icon-angle-down span:after {
-	font-family: FontAwesome;
-	content: '\f107';
-}
-
-.icon-double-angle-left span:after {
-	font-family: FontAwesome;
-	content: '\f100';
-}
-
-.icon-double-angle-right span:after {
-	font-family: FontAwesome;
-	content: '\f101';
 }
 
 @media (min-width: 768px) {

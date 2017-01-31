@@ -16,9 +16,10 @@ $breakpoints: (
 $breakpoint-sm-max: (map-get($breakpoints,'sm') - 1px);
 // Typefaces
 $font-sans-default: Helvetica, Arial, sans-serif;
-$font-open-sans: "Open Sans", $font-sans-default ;
-$font-open-sans-lt: "Open Sans Light", $font-sans-default;
+$font-open-sans: "Open Sans";
 $font-font-awesome: FontAwesome;
+$font-stack-sans: $font-open-sans+ ', ' + $font-sans-default;
+$font-stack-icon: $font-font-awesome;
 
 // Global
 $column-padding: $grid-gutter-width/2;
