@@ -1,0 +1,10 @@
+/* Fix for EPB-265 */
+.package-columns .aem-Grid,
+.package-columns [class*="aem-GridColumn"] {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+/*# sourceMappingURL=package-fix-epb-265.css.map */

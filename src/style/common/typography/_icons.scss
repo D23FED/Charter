@@ -15,29 +15,29 @@ $icon-angle-down-content: '\f107';
 // Angle icons
 .icon-angle-right span::after {
 	content: '\00a0\f105';
-	color: aliceblue;
+	// color: aliceblue;
 }
 
 .icon-angle-left span::after {
 	content: '\00a0\f104';
-	font-awesome: angle-left;
+	// font-awesome: angle-left;
 }
 
 .icon-angle-up span::after {
 	content: '\00a0\f106';
-	font-awesome: angle-up;
+	// font-awesome: angle-up;
 }
 
 .icon-angle-down span::after {
 	content: '\00a0\f107';
-	font-awesome: angle-down;
+	// font-awesome: angle-down;
 }
 .icon-double-angle-left span::after {
 	content: '\00a0\f100';
-	font-awesome: angle-double-left;
+	// font-awesome: angle-double-left;
 }
 
 .icon-double-angle-right span::after {
 	content: '\00a0\f101';
-	font-awesome: angle-double-right;
+	// font-awesome: angle-double-right;
 }

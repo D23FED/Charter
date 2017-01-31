@@ -1,0 +1,7 @@
+/* Fix for EPB-265 */
+.package-columns  {
+	.aem-Grid,
+	[class*="aem-GridColumn"] {
+		display: flex;
+	}
+}

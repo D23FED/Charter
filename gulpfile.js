@@ -142,7 +142,6 @@ var
 	];
 // Sass => CSS
 gulp.task('style', function() {
-	var filter = $.filter(['**', '!**/*.css.map']);
 	return gulp.src([
 			paths.source + globs.sass
 		])
@@ -158,7 +157,6 @@ gulp.task('style', function() {
 		.pipe($.postcss(postCssProcessors))
 		.pipe($.sassUnicode())
 		.pipe($.sourcemaps.write('.'))
-		.pipe($.duration('tite'))
 		// Write CSS to disk
 		.pipe(gulp.dest(paths.dist))
 		.pipe($.filter([
@@ -328,13 +326,6 @@ gulp.task('php', function() {
 			title: 'Copied:'
 		}));
 });
-//Live reloading of changes
-// gulp.task('browser-sync', function() {
-// 	browserSync.init({
-// 		proxy: 'charter.local',
-// 		port: '8888'
-// 	});
-// });
 // All JS build tasks
 gulp.task('js',
 	gulp.parallel('js-global', 'js-components'));

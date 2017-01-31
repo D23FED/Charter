@@ -132,37 +132,26 @@ a.color-light:hover {
 
 .icon-angle-right span::after {
 	content: '\00a0\f105';
-	color: aliceblue;
 }
 
 .icon-angle-left span::after {
 	content: '\00a0\f104';
-	font-family: FontAwesome;
-	content: '\f104';
 }
 
 .icon-angle-up span::after {
 	content: '\00a0\f106';
-	font-family: FontAwesome;
-	content: '\f106';
 }
 
 .icon-angle-down span::after {
 	content: '\00a0\f107';
-	font-family: FontAwesome;
-	content: '\f107';
 }
 
 .icon-double-angle-left span::after {
 	content: '\00a0\f100';
-	font-family: FontAwesome;
-	content: '\f100';
 }
 
 .icon-double-angle-right span::after {
 	content: '\00a0\f101';
-	font-family: FontAwesome;
-	content: '\f101';
 }
 
 .light-color li {
