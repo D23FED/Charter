@@ -143,7 +143,8 @@ var
 // Sass => CSS
 gulp.task('style', function() {
 	return gulp.src([
-			paths.source + globs.sass
+			paths.source + globs.sass,
+			'!'+paths.source + '**/_component-template/**'
 		])
 		// Begin recording sourcemaps
 		.pipe($.sourcemaps.init())

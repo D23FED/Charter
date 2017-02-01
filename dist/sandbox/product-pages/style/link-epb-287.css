@@ -1,0 +1,6 @@
+/* Link fix | EPB-287 */
+.tv-everywhere-wrap a:not(.btn) {
+	font-weight: 700;
+}
+
+/*# sourceMappingURL=link-epb-287.css.map */
