@@ -161,9 +161,8 @@ gulp.task('style', function() {
 		.pipe(gulp.dest(paths.dist))
 		.pipe($.filter([
 			'**',
-			'!**/*.map',
-			// '!dist/sandbox',
-			'!dist/sandbox/**'
+			'!**/*.map'
+			// '!dist/sandbox/**'
 		]))
 		// .pipe(filter)
 		.pipe($.debug({
