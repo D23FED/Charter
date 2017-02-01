@@ -1,0 +1,36 @@
+@import 'initialize';
+$color-phone: #88C657;
+.phone-main {
+	position: relative;
+	line-height: 1;
+	margin-right: 0;
+	top: auto;
+	width: auto;
+	right: auto;
+	margin-top: 2.4rem;
+	.richtext {
+		margin: auto;
+		max-width: none;
+	}
+	@include breakpoint('xs') {
+		margin-top: 2.1rem;
+	}
+	@include breakpoint('sm') {
+		margin-top: 1rem;
+		margin-right: 0;
+		top: auto;
+	}
+	a {
+		color: $color-phone;
+		font-weight: bold;
+		font-size: 1.7rem;
+		text-align: right;
+		text-decoration: none;
+		@include breakpoint('xs') {
+			font-size: 2.4rem;
+		}
+		@include breakpoint('sm') {
+			font-size: 4.7rem;
+		}
+	}
+}
