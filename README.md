@@ -21,8 +21,10 @@
 | JS                | `/src/js/app`    |
 | Third-party JS    | `/src/js/lib`    |
 
+
+
 ###Sandbox/Component Template structure
-Blank template folder located at `src/sandbox/_template`.
+Blank template folder located at `src/sandbox/_component-template`. Duplicate this folder inside `/sandbox/` or `/components/` to begin a new project.
 
 Within this folder is the following structure:
 
@@ -35,8 +37,8 @@ Within this folder is the following structure:
 | Component JS | `js/script.js` |
 | Component style                | `style/style.scss`    |
 
-###URL Naming Conventions
-Any folders that will be part of a URL should only contain lowercase letters, numbers, and hyphens. No spaces, underscores, or camelCasing. This makes URLs more predictable and consistent.
+###URL and File Naming Conventions
+Any files or folders that will be part of a URL should only contain lowercase letters, numbers, and hyphens. No spaces, underscores, or camelCasing. This makes URLs more predictable and consistent.
 
 * Bad: `/myAwesomeComponent/`, `/my_awesome_component/`
 * Good: `my-awesome-component`
@@ -59,13 +61,13 @@ Any folders that will be part of a URL should only contain lowercase letters, nu
 Prefer generic naming convention of "small, medium" etc over "tablet, desktop" to allow flexibility in adding/removing breakpoints in the future.
 (All media queries will be written in `em`s, approximate pixel values only listed for reference.)
 
-| Name        | Size           | Shorthand |
-| ---         | ---            | ---       |
-| Extra Small | >0             | xs        |
-| Small       | ≥34em (544px)  | sm        |
-| Medium      | ≥46em (768px)  | md        |
-| Large       | ≥62em (992px)  | lg        |
-| Extra Large | ≥75em (1200px) | xl        |
+| Name        | Size    | Shorthand |
+| ---         | ---     | ---       |
+| Extra Small | >0      | xs        |
+| Small       | ≥544px  | sm        |
+| Medium      | ≥768px  | md        |
+| Large       | ≥992px  | lg        |
+| Extra Large | ≥1200px | xl        |
 
 ###Usage in Sass
 #####Mobile-first media query mixin
@@ -103,14 +105,6 @@ p {
 	}
 }
 ```
-
-## Tips for working with Bootstrap grids
-* `.container`s (static or `.container-fluid`) are not nestable
-* `.row`s **must** be placed within a `.container` (not required to be a direct parent, just an ancestor)
-* **Only** columns may be immediate children of `.row`s
-* Content should be placed within columns (`.col-*`)
-* Containers have horizontal padding to prevent content from butting right up to the edge of the viewport
-* Rows counteract the left padding of the first column and right padding of the last column to ensure text is completely aligned down the page
 
 ## JS Debouncing and Throttling
 Events such as resizing and scrolling should be debounced or throttled to avoid unnecessary performance losses ([more info](https://css-tricks.com/the-difference-between-throttling-and-debouncing/)). A custom build of lodash is included with the `_.debounce` and `_.throttle` functions.
