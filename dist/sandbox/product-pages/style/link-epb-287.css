@@ -3,4 +3,10 @@
 	font-weight: 700;
 }
 
+.test {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
 /*# sourceMappingURL=link-epb-287.css.map */

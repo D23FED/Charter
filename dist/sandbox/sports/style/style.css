@@ -1,0 +1,224 @@
+.disclaimerWrapper {
+	border-top: 1px solid #ccc;
+	padding: 20px;
+}
+
+.football {
+	right: -18%;
+	top: 13%;
+}
+
+.hockey {
+	right: -23%;
+	top: 21%;
+}
+
+.soccer {
+	right: -8%;
+	top: 1%;
+}
+
+.baseball {
+	right: -3%;
+	top: 2%;
+}
+
+.tennis {
+	right: -18%;
+	top: 1%;
+}
+
+.golf {
+	right: -24%;
+	top: 8%;
+}
+
+.basketball {
+	right: -10%;
+	top: -10%;
+}
+
+.motorsports {
+	right: -50%;
+	top: 36%;
+}
+
+.boxing {
+	right: -20%;
+	top: 7%;
+}
+
+.sports-gradient-bg {
+	background: -webkit-linear-gradient(top, #083e60, #0b7ac0);
+	background: linear-gradient(180deg, #083e60, #0b7ac0);
+}
+
+.sports-slides .athlete {
+	background: transparent -webkit-linear-gradient(top, #0064a0, #004772) repeat scroll 0 0;
+	background: transparent linear-gradient(180deg, #0064a0 0%, #004772) repeat scroll 0 0;
+	box-shadow: inset 6px 1px 9px -6px #004772;
+	height: 212px;
+	overflow: hidden;
+	padding: 2rem 0 0 4rem;
+}
+
+.sports-slides .aem-GridColumn--default--4 {
+	padding: 0;
+}
+
+.athlete p {
+	opacity: 0.5;
+}
+
+.hero-pricing {
+	margin-top: -25rem;
+}
+
+.pkg-logos h4 {
+	color: #0069ad;
+	text-align: center;
+}
+
+.pkg-logos .logo-wrap {
+	border: 1px solid #d9d9d9;
+	border-radius: 10px;
+	margin: 0 auto;
+	max-width: 100%;
+	text-align: center;
+	width: 100%;
+}
+
+.pkg-logos img.logos {
+	max-width: 100%;
+}
+
+.pkg-logos .plus::before {
+	content: url("/content/dam/spectrum/residential/en/images/lp/sport/plus-arrow.png");
+	left: -36px;
+	position: absolute;
+	top: 50%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.hero-pricing {
+		margin-top: -10rem;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.hero-pricing {
+		margin-top: -21rem;
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.sports-slides .athlete {
+		padding: 1rem 0 0 2rem;
+	}
+
+	.football {
+		right: -24%;
+	}
+
+	.basketball {
+		right: -19%;
+	}
+
+	.boxing {
+		right: -23%;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.boxing {
+		display: none;
+	}
+
+	.pkg-logos h4 {
+		float: left;
+		font-size: 2.6417vw;
+		line-height: 3.26953vw;
+		margin: 6% 0;
+		text-align: right;
+		width: 20%;
+	}
+
+	.pkg-logos .logo-wrap {
+		float: right;
+		margin: 15px auto;
+		max-width: 78%;
+		padding: 10px;
+		width: 78%;
+	}
+
+	.pkg-logos .plus::before {
+		left: 55%;
+		top: -35px;
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+
+	.offersColumns h2 {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.hero-pricing {
+		margin: 0;
+	}
+
+	.pkg-logos h4 {
+		margin: 6% 0;
+		width: 26%;
+		font-size: 3.4375vw;
+		line-height: 4.5vw;
+	}
+
+	.pkg-logos h4 b,
+	.pkg-logos h4 strong {
+		font-size: 4.6875vw;
+		line-height: 5vw;
+		font-weight: 700;
+	}
+
+	.pkg-logos .logo-wrap {
+		margin: 15px auto;
+		max-width: 72%;
+		width: 72%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.pkg-logos .plus::before {
+		content: url("/content/dam/spectrum/residential/en/images/lp/sport/plus-arrow-sm.png");
+		left: 58%;
+		top: -20px;
+	}
+
+	.pkg-logos .logo-wrap {
+		margin: 5px auto;
+	}
+
+	.pkg-logos img.logos {
+		max-width: -webkit-calc(100% + 10px);
+		max-width: calc(100% + 10px);
+	}
+
+	.pkg-logos h4 {
+		margin: 6% 0;
+		width: 26%;
+		font-size: 2.6417vw;
+		line-height: 3.26953vw;
+	}
+
+	.pkg-logos h4 b,
+	.pkg-logos h4 strong {
+		font-size: 4.6875vw;
+		line-height: 5vw;
+		font-weight: 700;
+	}
+}
+
+/*# sourceMappingURL=style.css.map */
