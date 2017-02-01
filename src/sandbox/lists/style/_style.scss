@@ -1,3 +1,5 @@
+@import 'initialize'; // load base variables, functions, and mixins
+
 .list-style-disc {
   list-style-type: disc;
 }
@@ -8,7 +10,6 @@
 
 .list-style-square {
   list-style-type: square;
-  font-weight: bold;
 }
 
 .list-separated li {

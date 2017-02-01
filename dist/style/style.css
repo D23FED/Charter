@@ -143,6 +143,11 @@ a {
 	vertical-align: baseline;
 }
 
+a:focus,
+a:hover {
+	color: #003057;
+}
+
 a.color-light {
 	color: #fff;
 }
@@ -1372,10 +1377,24 @@ a.color-light:hover {
 }
 
 /* Already in link component css */
+.text-primary {
+	color: #003057;
+}
 
+.text-info {
+	color: #0077bc;
+}
+
+.text-warning {
+	color: #faa41a;
+}
 
 .text-danger {
 	color: #96004d;
+}
+
+.text-success {
+	color: #009e3d;
 }
 
 /* Added in Helpers*/
@@ -1874,214 +1893,760 @@ hr.black {
 	padding: 2rem;
 }
 
-/* Boxed Container */
-.container .boxed {
-	border: 0.1rem solid #eaeaea;
-	border-radius: 1rem;
-	padding: 1.4rem;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+/* Site headers */
+/* Section of the header above the primary nav menuc*/
+.site-header {
+	position: static;
+	z-index: 1040;
 }
 
-/* Default link styling, Charter Med Blue */
-a {
-	color: #00629b;
+.site-header .site-header-top {
+	min-height: 8rem;
+	background-color: #fff;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-/* Charter Blue */
-a:focus,
-a:hover,
-.text-primary {
+.site-header .site-header-top .aem-GridColumn:first-of-type {
+	padding-left: 0;
+}
+
+.site-header .site-header-top .aem-GridColumn:nth-last-of-type(2),
+.site-header .site-header-top .aem-GridColumn:nth-last-of-type(3) {
+	padding-right: 0;
+}
+
+.site-header.js-sticky .site-header-top {
+	max-width: none;
+}
+
+.site-header.js-sticky .site-header-top > div {
+	max-width: 1200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.site-header .site-header-shadowed {
+	box-shadow: 0 1rem 1.2rem -0.7rem rgba(0, 0, 0, 0.3);
+	border-bottom: 0.1rem solid #e7e7e7;
+	position: relative;
+}
+
+/* Brand logo */
+.site-header .site-logo img {
+	float: left;
+	padding: 1rem 0;
+	margin-bottom: 0;
+}
+
+.site-header .site-logo p {
+	margin: 0;
+}
+
+.site-header .site-logo .image {
+	padding: 0;
+	float: none;
+}
+
+/* Show/hide menu elements responsively, target elements at specific browser widths */
+
+/* Temporary styles for display while authoring, remove for prod */
+
+.site-header .menu-sm .mui-wrapper .btn-sm {
+	margin-top: 0.7rem;
+	font-size: 1.2rem;
+	padding: 0.5rem 1rem;
+	font-weight: 400;
+	text-shadow: 0.1rem 0.1rem 0.3rem #888;
+}
+
+.site-header .menu-lg {
+	display: none;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .menu-lg,
+.aem-AuthorLayer-Edit .site-header .menu-lg {
+	display: block;
+}
+
+.site-header .menu-lg .mui-wrapper {
+	display: inline-block;
+	float: right;
+}
+
+/* Primary Navigation (text-style) */
+.site-header .nav-primary-text {
+	background-color: transparent;
+	margin-top: 1.5rem;
+}
+
+.site-header .nav-primary-text a {
+	background-color: transparent;
+	color: #51565c;
+	padding: 1.5rem 0 1rem;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.site-header .nav-primary-text a:focus,
+.site-header .nav-primary-text a:hover,
+.site-header .nav-primary-text a:active {
+	background-color: transparent;
 	color: #003057;
 }
 
-a.text-primary:hover {
-	color: #001424;
+/* Small-breakpoint version of primary nav, toggled with hamburger button */
+.site-header .navbar-sm {
+	background-color: transparent;
+	border: none;
+	margin-bottom: 0;
+	position: static;
+	min-height: auto;
 }
 
-/* Green based on Charter Teal */
-.text-success {
-	color: #009e3d;
+.site-header .navbar-sm > .navbar-collapse {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: 0;
+	z-index: 1000;
 }
 
-a.text-success:hover,
-a.text-success:focus {
-	color: #006b29;
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .navbar-sm > .navbar-collapse,
+.aem-AuthorLayer-Edit .site-header .navbar-sm > .navbar-collapse {
+	position: relative;
+	left: auto;
+	right: auto;
+	width: auto;
 }
 
-/* Charter Light Blue */
-.text-info {
+.site-header .navbar-sm .navbar-nav {
+	padding: 1.5rem;
+	background: #51565c;
+	margin: 0 -1.5rem;
+}
+
+.site-header .navbar-sm .navbar-nav > li > a,
+.site-header .navbar-sm .navbar-nav .open .dropdown-menu > li > a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.site-header .navbar-sm .navbar-nav > li > a:focus,
+.site-header .navbar-sm .navbar-nav > li > a:hover,
+.site-header .navbar-sm .navbar-nav .open .dropdown-menu > li > a:focus,
+.site-header .navbar-sm .navbar-nav .open .dropdown-menu > li > a:hover {
 	color: #0077bc;
 }
 
-a.text-info:hover,
-a.text-info:focus {
-	color: #005789;
+.site-header .navbar-sm .navbar-nav > .open > a,
+.site-header .navbar-sm .navbar-nav > .open > a:focus,
+.site-header .navbar-sm .navbar-nav > .open > a:hover {
+	background-color: transparent;
 }
 
-/* Charter Yellow */
-.text-warning {
-	color: #faa41a;
-}
-
-a.text-warning:hover,
-a.text-warning:focus {
-	color: #dc8a05;
-}
-
-/* Charter Pink */
-.text-danger {
-	color: #96004d;
-}
-
-a.text-danger:hover,
-a.text-danger:focus {
-	color: #630033;
-}
-
-.btn-primary {
-	color: #fff;
-	background-color: #faa41a;
-	border-color: #e69300;
-}
-
-.btn-primary.active,
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover,
-.btn-primary .open >  {
-	color: #fff;
-	background-color: #ffb229;
-	border-color: #faa000;
-}
-
-.btn-primary.disabled,
-.btn-primary[disabled],
-.btn-primary fieldset[disabled] .btn-primary,
-.btn-primary.disabled.active,
-.btn-primary.disabled:active,
-.btn-primary.disabled:focus,
-.btn-primary.disabled:hover,
-.btn-primary[disabled].active,
-.btn-primary[disabled]:active,
-.btn-primary[disabled]:focus,
-.btn-primary[disabled]:hover,
-.btn-primary fieldset[disabled] .btn-primary.active,
-.btn-primary fieldset[disabled] .btn-primary:active,
-.btn-primary fieldset[disabled] .btn-primary:focus,
-.btn-primary fieldset[disabled] .btn-primary:hover {
-	background-color: #faa41a;
-	border-color: #e69300;
-}
-
-.btn-primary .badge {
-	color: #faa41a;
-	background-color: #fff;
-}
-
-/* List Component */
-.list-component .list-style-circle {
-	list-style-type: circle;
-}
-
-.list-component .list-style-disc {
-	list-style-type: disc;
-}
-
-.list-component .list-style-square {
-	list-style-type: square;
-}
-
-.list-component .list-separated li {
-	border-bottom: 1px solid #333;
-}
-
-.list-component .list-separated li:last-child {
-	border: none;
-}
-
-.list-component .list-inline.list-separated li {
-	border-bottom: none;
-	border-right: 1px solid #333;
-}
-
-.list-component .list-inline.list-separated li:last-child {
-	border: none;
-}
-
-.list-component .list-bullets-blue {
-	font-size: 1.7rem;
-	line-height: 2;
-	list-style: none;
-	color: #51565c;
-	padding: 0 1.5rem;
-	margin-left: .5rem;
-}
-
-.list-component .list-bullets-blue li::before {
-	content: '';
-	display: list-item;
-	list-style-type: disc;
-	font-size: 1.7rem;
-	color: #0091e6;
-	max-width: 0;
-	max-height: 0;
-}
-
-.list-component .list-bullets-white {
-	margin: 30px 0 50px 20px;
-	color: #fff;
-	font-size: 1.7rem;
-	line-height: 2.5;
-	list-style-type: none;
-	margin-left: 2rem;
-	padding: 0 1.5rem;
-}
-
-.list-component .list-bullets-white li + li {
+.site-header .navbar-sm .navbar-toggle {
 	margin-top: 1rem;
+	-webkit-transition: background 150ms ease-out;
+	transition: background 150ms ease-out;
+	margin-right: 0;
+	margin-bottom: 0;
+	z-index: 1000;
 }
 
-.list-component .list-bullets-white li::before {
-	content: '';
-	display: list-item;
-	list-style-type: disc;
-	color: #fff;
-	font-size: 1.7rem;
-	max-height: 0;
-	max-width: 0;
+/* Fixes for Primary Navigation (button-style) */
+.site-header .nav-primary {
+	margin-top: 0;
 }
 
-.list-component .list-bullets-white li p {
-	line-height: 1.3;
+.site-header .nav-primary li {
 	padding: 0;
-	margin: 0;
-	color: #fff;
-	font-size: 1.7rem;
 }
 
-.list-component .bullets-checkmark {
+.site-header .nav-primary .list-inline.list-separated li {
+	border-right: 0.1rem solid #fff;
+}
+
+.site-header .nav-primary a {
+	text-decoration: none;
+}
+
+/* Fixes for User Nav */
+.site-header .nav-user li {
+	position: relative;
+}
+
+.site-header .nav-user a {
+	text-decoration: none;
+	font-weight: 400;
+	text-transform: none;
+}
+
+/* Forms */
+.site-header .messagebox-wrapper {
+	display: none;
+	position: relative;
+}
+
+.site-header .messagebox-wrapper .message-content {
+	padding: 1rem 0;
+}
+
+.site-header .messageBox .close-message {
+	position: absolute;
+	right: .5rem;
+}
+
+/* Form: ZIP code/Localization */
+.site-header .zipAction {
+	width: 50%;
+	float: left;
+	padding-left: 1.5rem;
+}
+
+.site-header .zipAction,
+.site-header .zipAction:active:focus {
+	background-color: transparent;
+}
+
+.site-header .zipAction .geoLoc {
+	padding-top: 1rem;
+	width: 100%;
+	text-align: center;
+}
+
+.site-header .zipAction input,
+.site-header .zipAction button {
+	font-size: 1.6rem;
+	font-family: Open Sans;
+	padding: 0.7rem 0.5rem;
+}
+
+.site-header .zipAction input {
+	width: 40%;
+	text-align: center;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.site-header .zipAction button {
+	font-weight: 800;
+}
+
+.site-header .zipAction .geoloc-btn {
+	display: inline-block;
+}
+
+.site-header .zipAction .geoloc-btn button {
+	background-color: #0077bc;
+	background-image: none;
+	border: 0;
+	border-radius: 0.4rem;
+	font-size: 1.9rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.site-header .zipAction .geoloc-btn button:hover,
+.site-header .zipAction .geoloc-btn button:active,
+.site-header .zipAction .geoloc-btn button:focus,
+.site-header .zipAction .geoloc-btn button:active:focus,
+.site-header .zipAction .geoloc-btn button:active:hover {
+	background-color: #00629b;
+	color: #fff;
+}
+
+.site-header .zipAction .geoloc-btn button:active,
+.site-header .zipAction .geoloc-btn button:active:focus,
+.site-header .zipAction .geoloc-btn button:active:hover {
+	color: #fff;
+}
+
+.site-header .zipAction .geoloc-btn button:focus {
+	outline-color: #faa41a;
+}
+
+.site-header .zipAction .geoloc-btn button::after {
+	padding-left: .4rem;
+}
+
+.site-header .userLocation {
+	width: 100%;
+	float: left;
+	padding-right: 1.5rem;
+}
+
+.site-header .userLocation .spectrum-customerLocation {
+	font-size: 1.6rem;
+	font-family: Open Sans;
+}
+
+.site-header .userLocation .spectrum-customerLocation .richtext ul,
+.site-header .userLocation .spectrum-customerLocation .richtext p {
+	margin-bottom: 0;
+}
+
+/* ZIP Map marker icon/link */
+.site-header .icon-map-marker a {
+	color: #ff0000;
+	font-size: 0;
+	position: absolute;
+	z-index: 10;
+	right: 7.4rem;
+	top: 2rem;
+}
+
+.site-header .icon-map-marker a::before {
+	content: "\E062";
+	font-family: Glyphicons Halflings;
+	display: inline-block;
+	font-size: 1.4rem;
+	line-height: 1;
+	-webkit-transition: color 150ms ease-out;
+	transition: color 150ms ease-out;
+}
+
+.site-header .icon-map-marker a:focus::before,
+.site-header .icon-map-marker a:hover::before {
+	color: #b30000;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .icon-map-marker a,
+.aem-AuthorLayer-Edit .site-header .icon-map-marker a {
+	position: relative;
+	right: auto;
+	top: auto;
+}
+
+/* Megamenu */
+.site-header .my-services-menu,
+.site-header .support-menu {
+	width: 80%;
+	right: 0;
+	position: absolute;
+	display: none;
+}
+
+.site-header .my-services-menu .aem-Grid,
+.site-header .support-menu .aem-Grid {
+	background: -webkit-linear-gradient(top, #fff 80%, #dfe5e5) repeat 0 0;
+	background: linear-gradient(180deg, #fff 80%, #dfe5e5) repeat 0 0;
+	margin: 0;
+	padding: 1.5rem;
+	text-align: left;
+	top: auto;
+	z-index: 150;
+	box-shadow: 0 .4rem .5rem -.1rem #333;
+}
+
+.site-header .my-services-menu .aem-GridColumn,
+.site-header .support-menu .aem-GridColumn {
+	margin-top: -1.5rem;
+}
+
+.site-header .my-services-menu ul,
+.site-header .support-menu ul {
 	list-style-type: none;
-	padding-left: 4rem;
+	list-style-position: inside;
+	margin: 0;
+	padding: 0 0 0 2.5rem;
+}
+
+.site-header .my-services-menu li a,
+.site-header .support-menu li a {
+	padding-left: 5px;
+	line-height: 1.41667;
+	font-size: 1.2rem;
+	color: #333;
+	text-decoration: none;
+}
+
+.site-header .my-services-menu li a:focus,
+.site-header .my-services-menu li a:hover,
+.site-header .support-menu li a:focus,
+.site-header .support-menu li a:hover {
+	text-decoration: underline;
+}
+
+.site-header .my-services-menu h3,
+.site-header .support-menu h3 {
+	margin-top: 1.5rem;
+	font-weight: 400;
+}
+
+.site-header .my-services-menu h3,
+.site-header .my-services-menu h3 a,
+.site-header .support-menu h3,
+.site-header .support-menu h3 a {
+	font-size: 2rem;
+	color: #333;
+}
+
+/* Popover (Contact Us menu item) */
+.site-header .main-container .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--6 {
+	width: auto;
+}
+
+.site-header .popover-contact-xref {
+	display: none;
+}
+
+.site-header .popover-contact {
+	position: absolute;
+	border: .1rem solid #b7b7b7;
+	background-color: #fff;
+	padding: 1.5rem;
+	display: none;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	top: 4.4rem;
+	min-width: 20rem;
+	z-index: 100;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-header .popover-contact,
+.aem-AuthorLayer-Edit .site-header .popover-contact {
+	position: relative;
+}
+
+.site-header .popover-contact:after,
+.site-header .popover-contact:before {
+	content: "\20";
+	border: medium solid transparent;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 50%;
+	position: absolute;
+	pointer-events: none;
+}
+
+.site-header .popover-contact:after {
+	border-bottom-color: #fff;
+	border-width: 0.8rem;
+	margin-left: -0.8rem;
+}
+
+.site-header .popover-contact:before {
+	border-bottom-color: #b7b7b7;
+	border-width: 0.9rem;
+	margin-left: -0.9rem;
+}
+
+.site-header .popover-contact a {
+	padding: 0;
+	background-color: transparent;
+	border-radius: 0;
+	color: #0077bc;
+	font-size: inherit;
+	text-decoration: underline;
+}
+
+.site-header .popover-contact a:focus,
+.site-header .popover-contact a:hover {
+	background-color: transparent;
+	color: #003057;
+}
+
+.site-header .popover-contact a:focus:active,
+.site-header .popover-contact a:hover:active {
+	background-color: transparent;
+	text-decoration: none;
+	color: #003057;
+}
+
+.site-header .popover-contact a:active {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.site-header .popover-contact .close-message {
+	position: absolute;
+	right: 1rem;
+	top: .6rem;
+	cursor: pointer;
+}
+
+/* Text adjustments */
+.site-header hr {
+	margin-top: 0;
+}
+
+/* Browser-specific: to be removed */
+.site-header .muiAddressLookup .localization--horizontal-1 .localization__input-submit,
+x:-moz-any-link,
+x:default {
+	padding-top: .8rem;
+	padding-bottom: .8rem;
+}
+
+.phone-main {
+	position: absolute;
+	line-height: 1;
+	margin-right: .5rem;
+	top: 2.7rem;
+	width: 100%;
+	width: -webkit-calc(100% - 1.5rem);
+	width: calc(100% - 1.5rem);
+	right: 0;
+}
+
+.phone-main .richtext {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.phone-main a {
+	color: #88c657;
+	font-weight: 700;
+	font-size: 1.7rem;
+	text-align: right;
+	text-decoration: none;
+}
+
+/* Unique to Site Header 02 */
+.muiAddressLookup .localization.loading {
+	display: block;
+}
+
+.site-header-top-02 {
+	position: relative;
+}
+
+/* Unique to Site Header 03 */
+.site-header-top-03 {
+	background-color: transparent;
+}
+
+/* Unique to Site Header 04 */
+.site-header-top-03 .menu-row.mui-wrapper,
+.site-header-top-04 .menu-row.mui-wrapper {
 	margin-bottom: 1rem;
 }
 
-.list-component .bullets-checkmark li::before {
-	content: '';
-	display: inline-block;
-	background-image: url(/images/res-form-sprite.png);
-	background-repeat: no-repeat;
-	background-position: -2px -85px;
-	width: 3rem;
-	height: 3rem;
-	margin-left: -3rem;
-	vertical-align: middle;
-	vertical-align: -webkit-baseline-middle;
+.site-header-top-04 .menu-row.mui-wrapper .linkComponent > div,
+.site-header-top-04 .menu-row.mui-wrapper .text-right {
+	text-align: center;
 }
 
-.list-component .list-bullets-white {
-	background-color: #003057;
-	padding: 3rem;
+/* Unique to Site Header 05 */
+.site-header-top-wrapper {
+	background: #f8f8f8;
+}
+
+.site-header-top-05 {
+	position: relative;
+	padding-bottom: 1rem;
+}
+
+.site-header-top-05 .navbar-sm .navbar-toggle {
+	position: absolute;
+	right: 1.5rem;
+	top: .8rem;
+	margin-top: 0;
+}
+
+.site-header-top-05 .mui-wrapper.menu-lg .btn {
+	white-space: normal;
+	margin-right: 2rem;
+	font-size: 1.2rem;
+	padding: 0.5rem 1rem;
+	font-weight: 400;
+	text-shadow: 0.1rem 0.1rem 0.3rem #888;
+}
+
+.site-header-top-05 .menu-lg .icon-map-marker a {
+	right: 1.5rem;
+	top: 1.8rem;
+}
+
+.site-header .site-header-top-05 {
+	background-color: transparent;
+}
+
+.site-header-top-05 .site-logo img {
+	max-width: 100%;
+}
+
+.site-footer {
+	color: #fff;
+	background-color: #00629b;
+}
+
+.site-footer a {
+	color: #fff;
+	text-decoration: none;
+	-webkit-transition: all 150ms ease-out;
+	transition: all 150ms ease-out;
+	-webkit-transition-property: color;
+	transition-property: color;
+}
+
+.site-footer a:focus,
+.site-footer a:hover {
+	color: #8cc657;
+	text-decoration: none;
+}
+
+.site-footer .listComponent ul li {
+	list-style-type: none;
+}
+
+.site-footer h3 {
+	color: #8cc657;
+	margin-bottom: 1.1rem;
+	margin-top: 2.2rem;
+	font-size: 1.3rem;
+	font-weight: inherit;
+}
+
+.site-footer .aem-Grid {
+	margin: 0;
+}
+
+.site-footer .footer-header {
+	text-align: center;
+	font-family: Helvetica,Arial,sans-serif;
+	padding: 0;
+	background-color: #d4d3d3;
+	background-image: -webkit-linear-gradient(top, #d4d3d3, #f1f1f1);
+	background-image: linear-gradient(180deg, #d4d3d3 0%, #f1f1f1);
+	margin-bottom: 2.8rem;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.site-footer .footer-header a {
+	color: #686f75;
+	text-decoration: none;
+}
+
+.site-footer .footer-header a:focus,
+.site-footer .footer-header a:hover {
+	color: #686f75;
+	text-decoration: underline;
+}
+
+.site-footer .footer-header a.spectrum-facebook {
+	background-image: url(/content/dam/spectrum/common/en/images/facebook.png);
+}
+
+.site-footer .footer-header a.spectrum-twitter {
+	background-image: url(/content/dam/spectrum/common/en/images/twitter.png);
+}
+
+.site-footer .footer-header a.spectrum-youtube {
+	background-image: url(/content/dam/spectrum/common/en/images/youtube.png);
+}
+
+.site-footer .footer-header a.spectrum-facebook,
+.site-footer .footer-header a.spectrum-twitter,
+.site-footer .footer-header a.spectrum-youtube {
+	text-align: left;
+	font-size: 0;
+	width: 2.8rem;
+	padding: 0;
+	padding-top: 2.8rem;
+	background-position: center;
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+
+.site-footer .footer-header .listComponent ul {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	display: table;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+
+.site-footer .footer-header .listComponent li {
+	background-image: none;
+	display: table-cell;
+	width: 33.33333%;
+	line-height: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.site-footer .footer-header .listComponent li:first-child {
+	background: none;
+}
+
+.site-footer .footer-header .listComponent p {
+	margin: 0;
+}
+
+.site-footer .footer-body ul,
+.site-footer .footer-body ol {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.site-footer .footer-body li {
+	line-height: 1.1;
+	margin-bottom: 1rem;
+}
+
+.site-footer .footer-body a {
+	font-size: 1.2rem;
+}
+
+.site-footer .footer-states-list {
+	font-family: Open Sans;
+	border-top: 0.1rem solid #0374ac;
+	padding: 2.8rem 0;
+	margin-top: 2.8rem;
+	text-align: center;
+	display: none;
+}
+
+/* Temporary styles for display while authoring, remove for prod */
+.aem-AuthorLayer-Layouting .site-footer .footer-states-list,
+.aem-AuthorLayer-Edit .site-footer .footer-states-list {
+	display: block;
+}
+
+.site-footer .footer-states-list .list-inline.list-separated {
+	font-size: 0;
+}
+
+.site-footer .footer-states-list .list-inline.list-separated li {
+	border-right: .1rem solid #fff;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+.site-footer .footer-states-list .list-inline.list-separated li:last-child {
+	border: 0;
+}
+
+.site-footer .footer-states-list .list-inline.list-separated li a {
+	font-size: 1.2rem;
+}
+
+.site-footer .footer-states-list p {
+	font-weight: 700;
+	line-height: 2rem;
+	font-size: 1.4rem;
+}
+
+.site-footer .copyright {
+	font-size: 1.2rem;
 }
 
 @media (min-width: 544px) {
@@ -2095,6 +2660,10 @@ a.text-danger:focus {
 
 	.text-right-xs {
 		text-align: right;
+	}
+
+	.phone-main a {
+		font-size: 2.4rem;
 	}
 }
 
@@ -2964,6 +3533,97 @@ a.text-danger:focus {
 	.muiAddressLookup .localization--horizontal-2 .localization__form {
 		width: 450px;
 	}
+
+	.site-header .menu-sm {
+		display: none;
+	}
+
+	.aem-AuthorLayer-Layouting .site-header .menu-sm,
+	.aem-AuthorLayer-Edit .site-header .menu-sm {
+		display: block;
+	}
+
+	.site-header .menu-lg {
+		display: block;
+	}
+
+	.site-header .navbar-sm {
+		display: none;
+	}
+
+	.site-header .zipAction {
+		padding-right: 10%;
+	}
+
+	.site-header .zipAction .geoLoc {
+		padding-top: 0;
+	}
+
+	.site-header .userLocation {
+		padding-left: 0;
+		margin-left: -3rem;
+	}
+
+	.phone-main .richtext {
+		max-width: 768px;
+	}
+
+	.phone-main {
+		margin-right: 1.5rem;
+		top: 1.5rem;
+	}
+
+	.phone-main a {
+		font-size: 4.7rem;
+	}
+
+	.site-header-top-02 .menu-sm {
+		display: block;
+	}
+
+	.site-header-top-02 .menu-lg {
+		display: none;
+	}
+
+	.site-header-top-03 {
+		position: relative;
+	}
+
+	.site-header-top-04 .menu-row.mui-wrapper .linkComponent > div,
+	.site-header-top-04 .menu-row.mui-wrapper .text-right {
+		text-align: right;
+	}
+
+	.site-header-top-05 .mui-wrapper.menu-lg .btn {
+		white-space: nowrap;
+		padding-right: .3rem;
+	}
+
+	.site-footer .footer-header a.spectrum-facebook,
+	.site-footer .footer-header a.spectrum-twitter,
+	.site-footer .footer-header a.spectrum-youtube {
+		font-size: 1.2rem;
+		padding: 2.7rem 3rem;
+		padding-left: 6.7rem;
+		background-position: 3rem center;
+		width: auto;
+	}
+
+	.site-footer .footer-header .listComponent ul {
+		padding: 0;
+	}
+
+	.site-footer .footer-header .listComponent li {
+		background-image: url("/content/dam/spectrum/common/en/images/footer-head-separator.png");
+		background-position: left center;
+		background-repeat: no-repeat;
+		width: auto;
+		line-height: 1;
+	}
+
+	.site-footer .footer-states-list {
+		display: block;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3829,6 +4489,29 @@ a.text-danger:focus {
 	.img-responsive-lg-95 {
 		max-width: 95%;
 	}
+
+	.phone-main .richtext {
+		max-width: 992px;
+	}
+
+	.site-header-top-02 .menu-sm {
+		display: none;
+	}
+
+	.site-header-top-02 .menu-lg {
+		display: block;
+	}
+
+	.site-header-top-05 .mui-wrapper.menu-lg .btn {
+		white-space: normal;
+		font-size: 1.9rem;
+		padding: 0.7rem 2rem;
+		font-weight: 700;
+	}
+
+	.site-header-top-05 .menu-lg .icon-map-marker a {
+		top: 2.5rem;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -4634,6 +5317,19 @@ a.text-danger:focus {
 
 	.img-responsive-lg-95 {
 		max-width: 95%;
+	}
+
+	.site-header .userLocation {
+		width: 84%;
+		margin-left: 0;
+	}
+
+	.phone-main .richtext {
+		max-width: 1200px;
+	}
+
+	.site-header-top-05 .mui-wrapper.menu-lg .btn {
+		padding: 0.7rem 4rem;
 	}
 }
 

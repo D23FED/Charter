@@ -8,4 +8,8 @@
 @import 'base';
 @import 'common/typography';
 @import 'common/helpers';
-@import 'components';
+@import 'res/page-headers';
+@import 'res/page-footer';
+// Uncomment to test Components or sandboxed projects
+// @import 'components';
+// @import 'sandbox';

@@ -7,4 +7,8 @@
 	display: flex;
 }
 
+.package-columns .accordionTableRow .aem-Grid {
+	display: block;
+}
+
 /*# sourceMappingURL=package-fix-epb-265.css.map */

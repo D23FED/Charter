@@ -143,7 +143,8 @@ var
 // Sass => CSS
 gulp.task('style', function() {
 	return gulp.src([
-			paths.source + globs.sass
+			paths.source + globs.sass,
+			'!'+paths.source + '**/_component-template/**'
 		])
 		// Begin recording sourcemaps
 		.pipe($.sourcemaps.init())
@@ -161,9 +162,8 @@ gulp.task('style', function() {
 		.pipe(gulp.dest(paths.dist))
 		.pipe($.filter([
 			'**',
-			'!**/*.map',
-			// '!dist/sandbox',
-			'!dist/sandbox/**'
+			'!**/*.map'
+			// '!dist/sandbox/**'
 		]))
 		// .pipe(filter)
 		.pipe($.debug({

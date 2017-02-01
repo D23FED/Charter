@@ -1,0 +1,7 @@
+@import 'initialize';
+/* Link fix | EPB-287 */
+.tv-everywhere-wrap {
+	a:not(.btn) {
+		font-weight: bold;
+	}
+}

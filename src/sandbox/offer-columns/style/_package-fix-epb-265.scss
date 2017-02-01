@@ -4,4 +4,8 @@
 	[class*="aem-GridColumn"] {
 		display: flex;
 	}
+	.accordionTableRow .aem-Grid {
+		display: block;
+	}
+
 }
