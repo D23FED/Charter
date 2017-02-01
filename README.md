@@ -21,8 +21,6 @@
 | JS                | `/src/js/app`    |
 | Third-party JS    | `/src/js/lib`    |
 
-
-
 ###Sandbox/Component Template structure
 Blank template folder located at `src/sandbox/_component-template`. Duplicate this folder inside `/sandbox/` or `/components/` to begin a new project.
 
@@ -58,16 +56,15 @@ Any files or folders that will be part of a URL should only contain lowercase le
 | `gulp jsp` | Prettify JS |
 
 ##Breakpoints
-Prefer generic naming convention of "small, medium" etc over "tablet, desktop" to allow flexibility in adding/removing breakpoints in the future.
-(All media queries will be written in `em`s, approximate pixel values only listed for reference.)
+Naming conventions follow "small, medium" etc over "tablet, desktop" to allow flexibility in adding/removing breakpoints in the future.
 
-| Name        | Size    | Shorthand |
-| ---         | ---     | ---       |
-| Extra Small | >0      | xs        |
-| Small       | ≥544px  | sm        |
-| Medium      | ≥768px  | md        |
-| Large       | ≥992px  | lg        |
-| Extra Large | ≥1200px | xl        |
+| Name              | Size    | Shorthand |
+| ---               | ---     | ---       |
+| Extra Extra Small | >0      | xxs       |
+| Extra Small       | ≥544px  | xs        |
+| Small             | ≥768px  | sm        |
+| Medium            | ≥992px  | md        |
+| Large             | ≥1200px | lg        |
 
 ###Usage in Sass
 #####Mobile-first media query mixin
@@ -93,12 +90,12 @@ Compiles to:
 ```css
 p {
 	font-size: 10px;
-	@media (min-width: 41.6875em) {
+	@media (min-width: 768px) {
 		p {
 			font-size: 20px;
 		}
 	}
-	@media (min-width: 65em) {
+	@media (min-width: 992px ) {
 		p {
 			font-size: 30px;
 		}
