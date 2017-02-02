@@ -1,0 +1,27 @@
+@import 'initialize';
+// Residential base
+/* Banner below hero */
+.banner-offer {
+	color: #000;
+	margin: 2rem 0 3rem;
+	p {
+		font-size: 3rem;
+		font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		b,
+		strong {
+			color: #03629c;
+		}
+	}
+}
+
+
+/* Offers above footer */
+
+.adaptive-image-wrapper {
+	float: left;
+	.adaptiveimage {
+		float: left;
+		margin-right: 3rem;
+	}
+}
+

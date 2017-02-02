@@ -29,6 +29,8 @@ $column-padding: $grid-gutter-width/2;
 $site-max-width: map-get($breakpoints, 'lg') - (strip-unit($column-padding * 2) * 1px);
 $container-class: 'container';
 $font-size-default: 1.6rem;
+$site-header-class: 'site-header';
+$site-footer-class: 'site-footer';
 
 $transition-time-default: 150ms;
 $btn-font-size-default: 1.9rem;

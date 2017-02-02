@@ -1,15 +1,13 @@
 /* Common styles */
 
+// Variables & Mixins
 @import 'variables';
 @import 'functions';
-@import 'bootstrap/mixins';
+@import 'lib/bootstrap/mixins';
 @import 'mixins';
 @import 'typefaces';
 @import 'base';
-@import 'common/typography';
-@import 'common/helpers';
-@import 'res/page-headers';
-@import 'res/page-footer';
+@import 'residential';
 // Uncomment to test Components or sandboxed projects
 // @import 'components';
 // @import 'sandbox';

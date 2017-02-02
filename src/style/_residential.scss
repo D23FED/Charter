@@ -1,0 +1,15 @@
+@import 'initialize';
+/* Residental */
+// Import order matches: https://github.webapps.rr.com/CharterCMS/residential/blob/master/content/src/main/content/jcr_root/etc/clientlibs/spectrum/residential/core/css.txts
+@import 'res/core',
+	'res/typography',
+	'res/helpers',
+	'res/buttons',
+	'res/channel-logos',
+	'res/footer',
+	'res/header',
+	'res/links',
+	'res/localization',
+	'res/overhang',
+	'res/price',
+	'res/search-form';

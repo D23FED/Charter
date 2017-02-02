@@ -1,0 +1,6 @@
+@import 'initialize';
+// Search form in site header
+.#{$site-header-class} {
+	@import 'page-headers/form-search';
+}
+
