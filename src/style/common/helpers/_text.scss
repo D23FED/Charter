@@ -2,6 +2,7 @@
 	/* Type variants */
 }
 
+// Weights
 .font-light {
 	font-weight: 300;
 }
@@ -10,7 +11,8 @@
 	font-weight: 400;
 }
 
-.font-bold {
+.font-bold,
+.text-bold {
 	font-weight: 700;
 }
 
@@ -18,10 +20,12 @@
 	font-weight: 900;
 }
 
+// Styles
 .font-italic {
 	font-style: italic;
 }
 
+// Decoration
 .underline,
 .font-underline {
 	text-decoration: underline;
@@ -41,38 +45,24 @@
 	}
 }
 
-// Channel Logo icon font fixes
-// Logo appears smaller than others
-.logo-tmc::before {
-	font-size: 3rem;
-}
-
-// Prevent inheriting bold styles
-.channel-logo::before {
-	font-weight: normal;
-}
-
 .no-wrap,
 .nowrap {
 	overflow: hidden;
 	white-space: nowrap;
 }
 
+// Alignment
 .text-left {
 	text-align: left;
 }
 
 .text-center {
 	text-align: center;
-	clear: both;
+	// clear: both;
 }
 
 .text-right {
 	text-align: right;
-}
-
-.text-bold {
-	font-weight: bold;
 }
 
 //  Responsive text alignment
@@ -129,4 +119,15 @@ hr {
 		color: #0091e6;
 		font-size: 1em;
 	}
+}
+
+// Channel Logo icon font fixes
+// Logo appears smaller than others
+.logo-tmc::before {
+	font-size: 3rem;
+}
+
+// Prevent inheriting bold styles
+.channel-logo::before {
+	font-weight: normal;
 }

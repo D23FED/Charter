@@ -14,14 +14,5 @@
 @import 'helpers/img-responsive';
 @import 'helpers/img';
 @import 'helpers/forms';
-
-//  Fix for Core.css
-.container-fluid .imageArtDirection {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.disclaimerWrapper {
-	border-top: .1rem solid #ccc;
-	padding: 2rem;
-}
+@import 'helpers/image-art-direction';
+@import 'helpers/disclaimer';

@@ -6,15 +6,18 @@
 	clear: both;
 }
 
-.block {
+.block,
+.display-block {
 	display: block;
 }
 
-.inline {
+.inline,
+.display-inline {
 	display: inline;
 }
 
-.inline-block {
+.inline-block,
+.display-inline-block {
 	display: inline-block;
 }
 
@@ -23,7 +26,8 @@
 	display: table;
 }
 
-.table-cell {
+.table-cell,
+.display-table-cell {
 	display: table-cell;
 }
 

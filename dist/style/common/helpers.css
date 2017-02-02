@@ -4,15 +4,18 @@
 	clear: both;
 }
 
-.block {
+.block,
+.display-block {
 	display: block;
 }
 
-.inline {
+.inline,
+.display-inline {
 	display: inline;
 }
 
-.inline-block {
+.inline-block,
+.display-inline-block {
 	display: inline-block;
 }
 
@@ -21,7 +24,8 @@
 	display: table;
 }
 
-.table-cell {
+.table-cell,
+.display-table-cell {
 	display: table-cell;
 }
 
@@ -833,6 +837,7 @@
 }
 
 /* Sizing */
+/* Full width elements, child links, and child buttons at Small */
 
 /* Borders */
 .border-bottom {
@@ -1300,7 +1305,8 @@ a.text-yellow:hover {
 	font-weight: 400;
 }
 
-.font-bold {
+.font-bold,
+.text-bold {
 	font-weight: 700;
 }
 
@@ -1437,14 +1443,6 @@ a.text-yellow:hover {
 	font-size: 3.6rem;
 }
 
-.logo-tmc::before {
-	font-size: 3rem;
-}
-
-.channel-logo::before {
-	font-weight: 400;
-}
-
 .no-wrap,
 .nowrap {
 	overflow: hidden;
@@ -1457,15 +1455,10 @@ a.text-yellow:hover {
 
 .text-center {
 	text-align: center;
-	clear: both;
 }
 
 .text-right {
 	text-align: right;
-}
-
-.text-bold {
-	font-weight: 700;
 }
 
 hr.spacer {
@@ -1496,6 +1489,14 @@ hr.black {
 	left: -1em;
 	color: #0091e6;
 	font-size: 1em;
+}
+
+.logo-tmc::before {
+	font-size: 3rem;
+}
+
+.channel-logo::before {
+	font-weight: 400;
 }
 
 /* Buttons */

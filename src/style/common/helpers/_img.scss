@@ -1,7 +1,8 @@
 /* Images */
+// Alignment
 .image-left {
 	float: left;
-	margin-right: 1.5rem;
+	margin-right: $column-padding;
 }
 
 .image-center {
@@ -12,5 +13,5 @@
 
 .image-right {
 	float: right;
-	margin-left: 1.5rem;
+	margin-left: $column-padding;
 }
