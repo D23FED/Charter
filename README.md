@@ -29,9 +29,9 @@ Source files are divided by line of business. (Another root folder contains the 
 | Default page template | `template/` |
 
 ###Creating a new project
-####Sandbox/Component Template structure
 **To begin a new project**, duplicate the blank project template folder into `/sandbox/` or `/components/` and rename. The blank project template folder is located at `src/sandbox/_component-template`.
 
+####Sandbox/Component Template structure
 Within this folder is the following structure:
 
 | Content                                              | Location              |
@@ -61,11 +61,13 @@ In the terminal/command line (after running `npm install` once):
 | `gulp watch` | Begin folder watcher, compile automatically on change |
 
 ###Style
+
 | Task         | Action              |
 | ---          | ---                 |
 | `gulp style` | Compile Sass to CSS |
 
 ###Javascript
+
 | Task         | Action              |
 | ---          | ---                 |
 | `gulp js`            | Copies all JS to build folder, concatenates and uglifies global (non-component) JS (shorthand for running `js-global` and `js-components` in a single task) |
@@ -75,6 +77,8 @@ In the terminal/command line (after running `npm install` once):
 | `gulp jsp`           | Prettify JS                                                                                                                                                 |
 
 ###Other
+| Task         | Action              |
+| ---          | ---                 |
 | `gulp markup` | Copy PHP and HTML to build folder                                   |
 | `gulp img`    | Minify images with [imagemin](https://github.com/imagemin/imagemin) |
 
