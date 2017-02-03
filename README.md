@@ -11,29 +11,39 @@
 2. `npm install`
 
 ##Site structure
+###Source files
 | Content           | Location         |
 | ---               | ---              |
 | Source files      | `/src`           |
-| Build files       | `/dist`          |
 | Global includes   | `/src/inc`       |
 | Global style      | `/src/style`     |
 | Third-party style | `/src/style/lib` |
 | JS                | `/src/js/app`    |
 | Third-party JS    | `/src/js/lib`    |
 
-###Sandbox/Component Template structure
-Blank template folder located at `src/sandbox/_component-template`. Duplicate this folder inside `/sandbox/` or `/components/` to begin a new project.
+###Production files
+| Content           | Location         |
+| ---               | ---              |
+| Build files       | `/dist`          |
+
+###Creating a new project
+####Sandbox/Component Template structure
+The blank template folder located at `src/sandbox/_component-template`.
+
+**To begin a new project**, duplicate this folder inside `/sandbox/` or `/components/` and rename.
 
 Within this folder is the following structure:
 
 | Content           | Location     |
 | ---               | ---          |
-| Component includes      | `inc/`       |
-| Template block: Component page `<head>` content       | `inc/page-header.php`      |
-| Template block: Component page footer content (appended before closing `<body>` tag)   | `inc/page-footer.php`       |
-| Component page variables      | `inc/variables.php`     |
-| Component JS | `js/script.js` |
-| Component style                | `style/style.scss`    |
+| Includes      | `inc/`       |
+| `<head>` template blpck       | `inc/page-header.php`      |
+| Footer template block (primary for js files, contents are appended before closing `<body>` tag)   | `inc/page-footer.php`       |
+| Variables (project title, category etc)      | `inc/variables.php`     |
+| JS | `js/script.js` |
+| Style                | `style/style.scss`    |
+
+The site logic will automatically look for and include `style/style.css`, `js/script.js`,  and under `inc/`,`page-header.php`, `page-footer.php` and `variables.php`.
 
 ###URL and File Naming Conventions
 Any files or folders that will be part of a URL should only contain lowercase letters, numbers, and hyphens. No spaces, underscores, or camelCasing. This makes URLs more predictable and consistent.
@@ -42,18 +52,29 @@ Any files or folders that will be part of a URL should only contain lowercase le
 * Good: `my-awesome-component`
 
 ##Running tasks with gulp
+
+In the terminal/command line (after running `npm install`):
+
 | Task | Action  |
 |---|---|
 | `gulp`  |  Default task, compiles/concatenates CSS and JS |
 | `gulp watch`|  Begin folder watcher |
+
+###Style
+| Task | Action  |
+|---|---|
 | `gulp style` | Compile Sass to CSS |
+
+###Javascript
 | `gulp js`| Copies all JS to build folder, concatenates and uglifies global (non-component) JS (shorthand for running `js-global` and `js-components` in a single task) |
-| `gulp markup` | Copy PHP and HTML to build folder |
-| `gulp img` | Minify images with [imagemin](https://github.com/imagemin/imagemin) |
 | `gulp js-global`| Concatenates and uglifies only global (non-component) JS |
 | `gulp js-components`| Processes and copies JS only for components and sandbox projects |
 | `gulp jsl` | Lint JS with [ESLint](http://eslint.org/) (set rules with personal [config file](http://eslint.org/docs/user-guide/configuring#using-configuration-files)) |
 | `gulp jsp` | Prettify JS |
+
+###Other
+| `gulp markup` | Copy PHP and HTML to build folder |
+| `gulp img` | Minify images with [imagemin](https://github.com/imagemin/imagemin) |
 
 ##Breakpoints
 Naming conventions follow "small, medium" etc over "tablet, desktop" to allow flexibility in adding/removing breakpoints in the future.
