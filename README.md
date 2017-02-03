@@ -66,9 +66,11 @@ In the terminal/command line (after running `npm install` once):
 | `gulp style` | Compile Sass to CSS |
 
 ###Javascript
+| Task         | Action              |
+| ---          | ---                 |
 | `gulp js`            | Copies all JS to build folder, concatenates and uglifies global (non-component) JS (shorthand for running `js-global` and `js-components` in a single task) |
-| `gulp js-global`     | Concatenates and uglifies only global (non-component) JS                                                                                                    |
-| `gulp js-components` | Processes and copies JS only for components and sandbox projects                                                                                            |
+| `gulp js-global`     | Concatenates and uglifies only global (non-component) JS |
+| `gulp js-components` | Processes and copies JS only for components and sandbox projects |
 | `gulp jsl`           | Lint JS with [ESLint](http://eslint.org/) (set rules with personal [config file](http://eslint.org/docs/user-guide/configuring#using-configuration-files))  |
 | `gulp jsp`           | Prettify JS                                                                                                                                                 |
 
