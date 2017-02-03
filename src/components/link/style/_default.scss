@@ -1,0 +1,8 @@
+/* Default link styling, Charter Med Blue */
+a {
+	color: $md-blue;
+
+	@include hover-focus {
+		color: $blue;
+	}
+}

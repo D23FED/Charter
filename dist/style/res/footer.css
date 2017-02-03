@@ -1,3 +1,4 @@
+/* Site footer */
 .site-footer {
 	color: #fff;
 	background-color: #00629b;
@@ -125,7 +126,7 @@
 }
 
 .site-footer .footer-states-list {
-	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-family: Open Sans;
 	border-top: 0.1rem solid #0374ac;
 	padding: 2.8rem 0;
 	margin-top: 2.8rem;
@@ -195,4 +196,4 @@
 	}
 }
 
-/*# sourceMappingURL=page-footer.css.map */
+/*# sourceMappingURL=footer.css.map */

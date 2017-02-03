@@ -135,32 +135,6 @@
 	left: 88px;
 }
 
-/* Banner below hero */
-.banner-offer {
-	color: #000;
-	margin: 2rem 0 3rem;
-}
-
-.banner-offer p {
-	font-size: 3rem;
-	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
-}
-
-.banner-offer p b,
-.banner-offer p strong {
-	color: #03629c;
-}
-
-/* Offers above footer */
-.adaptive-image-wrapper {
-	float: left;
-}
-
-.adaptive-image-wrapper .adaptiveimage {
-	float: left;
-	margin-right: 3rem;
-}
-
 @media (min-width: 544px) {
 	.hp-hero .imageArtDirection .imageArtDirection .background-image {
 		height: 30rem;

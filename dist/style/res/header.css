@@ -230,7 +230,7 @@
 .site-header .zipAction input,
 .site-header .zipAction button {
 	font-size: 1.6rem;
-	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-family: Open Sans;
 	padding: 0.7rem 0.5rem;
 }
 
@@ -290,7 +290,7 @@
 
 .site-header .userLocation .spectrum-customerLocation {
 	font-size: 1.6rem;
-	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-family: Open Sans;
 }
 
 .site-header .userLocation .spectrum-customerLocation .richtext ul,
@@ -427,7 +427,7 @@
 
 .site-header .popover-contact:after,
 .site-header .popover-contact:before {
-	content: " ";
+	content: "\20";
 	border: medium solid transparent;
 	width: 0;
 	height: 0;
@@ -505,7 +505,6 @@ x:default {
 	width: -webkit-calc(100% - 1.5rem);
 	width: calc(100% - 1.5rem);
 	right: 0;
-	text-align: right;
 }
 
 .phone-main .richtext {
@@ -520,6 +519,10 @@ x:default {
 	font-size: 1.7rem;
 	text-align: right;
 	text-decoration: none;
+}
+
+.site-header-top-00 {
+	border-bottom: 1px solid #eee;
 }
 
 /* Unique to Site Header 02 */
@@ -699,4 +702,4 @@ x:default {
 	}
 }
 
-/*# sourceMappingURL=page-headers.css.map */
+/*# sourceMappingURL=header.css.map */
