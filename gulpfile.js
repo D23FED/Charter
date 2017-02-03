@@ -25,12 +25,17 @@ var
 		source: 'src/',
 		scripts: 'js/app/',
 		scriptLibs: 'js/lib/',
+		siteTemplate: 'template/',
 		css: 'style/',
 		sass: 'style/',
 		dist: 'dist/',
 		images: 'images/',
 		components: 'components/',
-		sandbox: 'sandbox/'
+		sandbox: 'sandbox/',
+		lobResidential: 'res/',
+		lobBusiness: 'bus/',
+		lobEnterprise: 'ent/',
+		lobCommom: 'com/'
 	},
 	globs = {
 		css: '**/*.css',
@@ -134,10 +139,10 @@ var
 		$.stylefmt()
 	],
 	sassIncludePaths = [
-		'src/style/',
-		'src/style/res',
-		'src/style/bus',
-		'src/style/ent',
+		'src/template/style/',
+		'src/res/style/',
+		'src/bus/style/',
+		// 'src/ent/style/',
 		'style/'
 	];
 // Sass => CSS
@@ -174,11 +179,11 @@ gulp.task('style', function() {
 			$.util.log('CSS Processed');
 		});
 });
-// Concatenate and Uglify Global JS
+// Concatenate and Uglify Global Template JS
 gulp.task('js-global', function() {
 	return gulp.src([
-			paths.source + paths.scriptLibs + globs.scripts,
-			paths.source + paths.scripts + globs.scripts,
+			paths.source + paths.siteTemplate + paths.scriptLibs + globs.scripts,
+			paths.source + paths.siteTemplate + paths.scripts + globs.scripts,
 			'!node_modules/**/*'
 		])
 		.pipe($.debug({
@@ -195,7 +200,7 @@ gulp.task('js-global', function() {
 			suffix: '.min'
 		}))
 		.pipe($.sourcemaps.write('.'))
-		.pipe(gulp.dest(paths.dist + 'js/'))
+		.pipe(gulp.dest(paths.dist + paths.siteTemplate + 'js/'))
 		.pipe($.debug({
 			title: 'Output:',
 			minimal: true
@@ -204,10 +209,11 @@ gulp.task('js-global', function() {
 // Copy Individual Component/Sandbox project JS to build folder
 gulp.task('js-components', function() {
 	return gulp.src([
-			paths.source + paths.components + globs.scripts,
-			paths.source + paths.sandbox + globs.scripts,
-			'!' + paths.source + paths.scriptLibs + globs.scripts,
-			'!' + paths.source + paths.scripts + globs.scripts,
+			paths.source + paths.lobCommon + globs.scripts,
+			paths.source + paths.lobResidential + globs.scripts,
+			paths.source + paths.lobBusiness + globs.scripts,
+			// paths.source + paths.lobEnterprise + globs.scripts,
+			'!' + paths.source + paths.siteTemplate + globs.scripts,
 			'!node_modules/**/*'
 		], {
 			base: './' + paths.source
@@ -290,6 +296,7 @@ gulp.task('jsp', function() {
 		.pipe(gulp.dest(paths.source + paths.scripts));
 });
 // Image compression and copying. Currently only works on images at root /images/ folder, need to expand to cover individual component images.
+// Todo: replace with gulp-pipe-media
 gulp.task('img', function() {
 	return gulp.src(paths.source + paths.images + globs.img)
 		// Prevent errors from breaking `watch` task
@@ -336,10 +343,7 @@ gulp.task('markup',
 gulp.task('watch', function() {
 	// JS
 	gulp.watch([
-		paths.source + paths.scriptLibs + globs.scripts,
-		paths.source + paths.scripts + globs.scripts,
-		paths.source + paths.components + globs.scripts,
-		paths.source + paths.sandbox + globs.scripts
+		paths.source + globs.scripts
 	], gulp.parallel(['js']));
 	// Sass
 	gulp.watch(paths.source + globs.sass, gulp.parallel(['style']));
