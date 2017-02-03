@@ -2984,6 +2984,7 @@ a.text-danger:focus {
 }
 
 /* Pricing Component */
+/* Dev only, not for prod */
 .price-block {
 	-webkit-margin-after: 4rem;
 	margin-block-end: 4rem;
@@ -2992,6 +2993,8 @@ a.text-danger:focus {
 	line-height: 1;
 	font-family: Open Sans;
 }
+
+/* End dev only */
 
 .price-block > .p-row {
 	display: table-row;
