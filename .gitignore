@@ -173,3 +173,4 @@ $RECYCLE.BIN/
 *.lnk
 dist/sandbox/_component-template/
 .vscode
+dist/bus/sandbox/_component-template/

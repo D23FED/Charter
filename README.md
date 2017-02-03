@@ -1,9 +1,9 @@
 #Charter Front-end Dev Sandbox and Component Prototyping
-| Server           | URL                                                      |
-| ---              | ---                                                      |
-| Production site  | [charter.d23.us](http://charter.d23.us/)                 |
-| Staging site     | [staging.charter.d23.us](http://staging.charter.d23.us/) |
-| Development site | [dev.charter.d23.us](http://dev.charter.d23.us/)         |
+| Environment | URL                                                      |
+| ---         | ---                                                      |
+| Production  | [charter.d23.us](http://charter.d23.us/)                 |
+| Staging     | [staging.charter.d23.us](http://staging.charter.d23.us/) |
+| Development | [dev.charter.d23.us](http://dev.charter.d23.us/)         |
 
 ##Installation
 
@@ -12,63 +12,53 @@
 
 ##Site structure
 
-###Source files
 | Content           | Location         |
 | ---               | ---              |
-| Source files      | `/src`           |
-| Global includes   | `/src/inc`       |
-| Global style      | `/src/style`     |
-| Third-party style | `/src/style/lib` |
-| JS                | `/src/js/app`    |
-| Third-party JS    | `/src/js/lib`    |
-
-###Production files
-| Content           | Location         |
-| ---               | ---              |
-| Build files       | `/dist`          |
+| Source files      | `/src/`           |
+| Production files  | `/dist/`          |
 
 ###Line of Business
 Source files are divided by line of business. (Another root folder contains the default page layout template that is loaded by all individual projects.)
 
 | Content               | Location     |
 | ---                   | ---          |
-| Common                | `/com/`      |
-| Residential           | `/res/`      |
-| Business              | `/bus/`      |
-| Enterprise            | `/ent/`      |
-| Default page template | `/template/` |
+| Common                | `com/`      |
+| Residential           | `res/`      |
+| Business              | `bus/`      |
+| Enterprise            | `ent/`      |
+| Default page template | `template/` |
 
 ###Creating a new project
 ####Sandbox/Component Template structure
-**To begin a new project**, duplicate the blank project template folder inside `/sandbox/` or `/components/` and rename. The blank project template folder is located at `src/sandbox/_component-template`.
+**To begin a new project**, duplicate the blank project template folder into `/sandbox/` or `/components/` and rename. The blank project template folder is located at `src/sandbox/_component-template`.
 
 Within this folder is the following structure:
 
 | Content                                              | Location              |
 | ---                                                  | ---                   |
+| Style (Sass)                                         | `style/style.scss`    |
+| JS                                                   | `js/script.js`        |
 | Includes                                             | `inc/`                |
 | `<head>` template block                              | `inc/page-header.php` |
 | Footer template block (js appended before `</body>`) | `inc/page-footer.php` |
-| Variables (project title, category etc)              | `inc/variables.php`   |
-| JS                                                   | `js/script.js`        |
-| Style                                                | `style/style.scss`    |
+| Project Variables (title, category etc)              | `inc/variables.php`   |
 
-The site logic will automatically look for and include `style/style.css`, `js/script.js`,  and under `inc/`,`page-header.php`, `page-footer.php` and `variables.php`.
+The site logic will automatically look for and include these files.
 
-###URL and File Naming Conventions
-Any files or folders that will be part of a URL should only contain lowercase letters, numbers, and hyphens. No spaces, underscores, or camelCasing. This makes URLs more predictable and consistent.
+####URL and File Naming Conventions
+Any project files or folders that will be part of a URL should only contain lowercase letters, numbers, and hyphens, to be predictable and consistent. No spaces, underscores, or camelCasing.
 
 * Bad: `/myAwesomeComponent/`, `/my_awesome_component/`
 * Good: `my-awesome-component`
 
-##Running tasks with gulp
+##Running tasks with Gulp
 
-In the terminal/command line (after running `npm install`):
+In the terminal/command line (after running `npm install` once):
 
-| Task         | Action                                         |
-| ---          | ---                                            |
-| `gulp`       | Default task, compiles/concatenates CSS and JS |
-| `gulp watch` | Begin folder watcher                           |
+| Task         | Action                                                |
+| ---          | ---                                                   |
+| `gulp`       | Default task, compiles/concatenates CSS and JS        |
+| `gulp watch` | Begin folder watcher, compile automatically on change |
 
 ###Style
 | Task         | Action              |
