@@ -1,20 +1,21 @@
-/* Offer columns CSS */
-.offer-columns .aem-Grid {
-  display: inline-flex;
-  flex-wrap: wrap;
-}
-.offer-columns .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--4 {
-  align-self: flex-end;
-}
-.offer-columns .aem-GridColumn--default--4 {
-  margin-bottom: 1em;
-}
-@media (min-width: 767px) {
-  .offer-columns .aem-GridColumn--default--4 {
-    margin-bottom: 0;
-  }
+/* Offer Columns Fix */
+.offer-columns {
+	.aem-Grid {
+		display: inline-flex;
+		flex-wrap: wrap;
+	}
+	.aem-Grid.aem-Grid--12>.aem-GridColumn.aem-GridColumn--default--4 {
+		align-self: flex-end;
+	}
+	.aem-GridColumn--default--4 {
+		margin-bottom: 1em;
+		@include breakpoint('sm') {
+			margin-bottom: 0;
+		}
+	}
 }
 
+/* MUI Fix */
 #react-autosuggest-address1 {
-  text-align: left;
+	text-align: left;
 }
