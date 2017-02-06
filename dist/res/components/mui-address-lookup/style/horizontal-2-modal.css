@@ -1,0 +1,76 @@
+/* Fix for MUI Modal form's input fields stretching beyond container width */
+.modal .muiAddressLookup .localization--horizontal-2 .localization__form {
+	width: 450px;
+	max-width: 100%;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__inputs,
+.modal .muiAddressLookup .localization--horizontal-2 .localization__input-container-address {
+	position: relative;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__line2 [class*="__col"] {
+	width: 50%;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__line2 .localization__col1 {
+	padding-right: 1.5rem;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__line2 .localization__col2 {
+	padding-left: 1.5rem;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble {
+	max-width: 100%;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble-address1--error {
+	margin-top: 0;
+	top: 7.1rem;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble-address1--error .localization__bubble-pointer-address1 {
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	left: 50%;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble-zip--error {
+	margin-top: 0;
+	top: 19rem;
+}
+
+.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble-zip--error .localization__bubble-pointer {
+	left: 75%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+	.modal .muiAddressLookup .localization--horizontal-2 .localization__line2 .localization__col1 {
+		width: 200px;
+	}
+
+	.modal .muiAddressLookup .localization--horizontal-2 .localization__line2 .localization__col2 {
+		width: 100px;
+		margin-right: 2rem;
+	}
+
+	.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble-address1--error .localization__bubble-pointer-address1 {
+		left: 10px;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+
+	.modal .muiAddressLookup .localization--horizontal-2 .localization__bubble-zip--error .localization__bubble-pointer {
+		left: 50%;
+	}
+}
+
+/*# sourceMappingURL=horizontal-2-modal.css.map */
