@@ -2,9 +2,4 @@
 	/* Fix for MUI Modal form's input fields stretching beyond container width */
 }
 
-.muiAddressLookup .localization--horizontal-2 .localization__form {
-	width: auto;
-	@include breakpoint('sm') {
-		width: 450px;
-	}
-}
+// Moved to MUI component style

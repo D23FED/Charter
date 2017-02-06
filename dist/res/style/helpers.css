@@ -1682,10 +1682,6 @@ hr.black {
 }
 
 /* Fix for MUI Modal form's input fields stretching beyond container width */
-.muiAddressLookup .localization--horizontal-2 .localization__form {
-	width: auto;
-}
-
 .container-fluid .imageArtDirection {
 	margin-left: 0;
 	margin-right: 0;
@@ -2507,10 +2503,6 @@ hr.black {
 	.img-responsive-md-95,
 	.img-responsive-lg-95 {
 		max-width: 95%;
-	}
-
-	.muiAddressLookup .localization--horizontal-2 .localization__form {
-		width: 450px;
 	}
 }
 
