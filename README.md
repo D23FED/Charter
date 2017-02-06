@@ -118,13 +118,13 @@ Compiles to:
 ```css
 p { font-size: 10px; }
 
-/* Small breakpoint */
-@media (min-width: 768px) {
+/* Medium breakpoint */
+@media (min-width: 992px) {
 	p { font-size: 20px; }
 }
 
-/* Medium breakpoint */
-@media (min-width: 992px ) {
+/* Large breakpoint */
+@media (min-width: 1200px ) {
 	p { font-size: 30px; }
 }
 ```
