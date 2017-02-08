@@ -1,0 +1,87 @@
+@at-root {
+	/* User Navigation (Contact, Support, My Account, etc) */
+}
+
+#{$page-header} {
+	.nav-user {
+		ul {
+			float: right;
+			display: table;
+		}
+		li {
+			list-style-type: none;
+			display: table-cell;
+			margin: 0;
+			padding-left: .5rem;
+			padding-right: 0;
+			vertical-align: top;
+			position: relative;
+			// Search Button
+			&:nth-of-type(#{$menu-item-search-pos}) {
+				a {
+					font-size: 0;
+					span::after {
+						font-awesome: search;
+						display: inline;
+						color: white;
+					}
+				}
+			}
+			// Contact button
+			&:nth-of-type(#{$menu-item-contact-pos}) {
+				a span::after {
+					font-awesome: phone;
+				}
+			}
+			// Localization button
+			&:last-child {
+				a span::before {
+					font-awesome: map-marker;
+				}
+			}
+		}
+		a {
+			display: inline-block;
+			padding-top: 1.5rem;
+			padding-left: .8rem;
+			padding-right: .8rem;
+			padding-bottom: .8rem;
+			background-color: $md-blue;
+			border-bottom-left-radius: $btn-border-radius-small;
+			border-bottom-right-radius: $btn-border-radius-small;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			border: 0;
+			color: #fff;
+			font-size: $text-size-user-nav;
+			box-shadow: none;
+			font-family: $font-open-sans;
+			transition: all 150ms ease-out;
+			transition-property: background, color;
+			line-height: 1;
+			text-decoration: none;
+			font-weight: normal;
+			text-transform: none;
+			@include hover-focus {
+				background-color: $blue;
+				color: #fff;
+				&:active {
+					background-color: darken($blue, 10%);
+					color: #fff;
+				}
+			}
+			&:active {
+				background-color: darken($blue, 10%);
+			}
+			// Icons
+			&::after,
+			&::before,
+			& span::after,
+			& span::before {
+				color: white;
+				display: inline;
+				font-size: $text-size-user-nav;
+			}
+		}
+	}
+}
