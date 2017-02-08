@@ -1,21 +1,25 @@
 @at-root {
-/* Form: Search */
+	/* Form: Search */
 }
-.searchForm {
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
-	input[type='text'],
-	button {
-		font-family: $font-open-sans;
-		padding: 0.7rem 0.5rem;
-	}
-	input[type='text'] {
-		font-size: 1.6rem;
-		width: 50%;
-		vertical-align: bottom;
-	}
-	button {
-		font-weight: 800;
+// @import 'initialize';
+
+#{$page-header} {
+	.searchForm {
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+		input[type='text'],
+		button {
+			font-family: $font-open-sans;
+			padding: 0.7rem 0.5rem;
+		}
+		input[type='text'] {
+			font-size: 1.6rem;
+			width: 50%;
+			vertical-align: bottom;
+		}
+		button {
+			font-weight: 800;
+		}
 	}
 }

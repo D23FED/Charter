@@ -20,14 +20,12 @@
 			padding: 1rem 0;
 		}
 	}
+	// Wrappers for ZIP and search forms
 	.messageBox {
+		// Close button
 		.close-message {
 			position: absolute;
 			right: .5rem;
-			@include breakpoint('sm') {
-				// right: $column-padding;
-				// right: 0;
-			}
 		}
 	}
 }

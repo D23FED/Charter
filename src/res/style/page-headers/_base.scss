@@ -1,11 +1,10 @@
-@at-root {
-	/* Section of the header above the primary nav menuc*/
-}
-
 #{$page-header} {
-	// Sometimes modal BG is appeneded to <body>. Set z-index of page header to equal to bg to avoid modal bg from overlapping modal
+	// Sometimes modal BG is appended to <body>. Set z-index of page header to equal to bg to avoid modal bg from overlapping modal
 	position: static;
-	z-index: $zi-modal-bg;
+	// z-index: $zi-modal-bg;
+	@at-root {
+		/* Section of the header above the primary nav menu */
+	}
 	.site-header-top {
 		min-height: $site-header-min-height;
 		background-color: #fff;
@@ -18,9 +17,14 @@
 			padding-right: 0;
 		}
 	}
+	@at-root {
+		/* Sticky header */
+	}
+	// Move max-width the first child when header is sticky
 	&.js-sticky .site-header-top {
 		max-width: none;
 		>div {
+			position: relative;
 			max-width: map-get($breakpoints, 'lg');
 			@include center-block;
 			padding-left: $column-padding;

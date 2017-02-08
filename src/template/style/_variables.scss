@@ -21,7 +21,7 @@ $breakpoint-lg-max: (map-get($breakpoints,'lg') - 1px);
 $font-sans-default: Helvetica, Arial, sans-serif;
 $font-open-sans: "Open Sans";
 $font-font-awesome: FontAwesome;
-$font-stack-sans: $font-open-sans+ ', ' + $font-sans-default;
+$font-stack-sans: unquote($font-open-sans+ ', ' + $font-sans-default);
 $font-stack-icon: $font-font-awesome;
 
 // Global

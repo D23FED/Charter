@@ -32,22 +32,4 @@
 			display: block;
 		}
 	}
-
-	// Add space to accomodate ZIP Pin icon
-	// ZIP Pin icon removed
-	.menu-sm .mui-wrapper,
-	.menu-lg .mui-wrapper {
-		// padding-right: $column-padding + 0.5rem;
-	}
-	// Rearrange ZIP Pin icon to look right small MUI button
-	// .#{$icon-map-marker} {
-	// 	a {
-	// 		right: $column-padding;
-	// 		top: 1.5rem;
-	// 		// Rearrange ZIP Pin icon to look right with long MUI horizontal form
-	// 		@include breakpoint('sm') {
-	// 			top: 5.6rem;
-	// 		}
-	// 	}
-	// }
 }
