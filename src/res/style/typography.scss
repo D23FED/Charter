@@ -7,7 +7,7 @@ html {
 }
 
 body {
-	font-family: $font-open-sans;
+	font-family: $font-stack-sans;
 	font-size: 1.6rem;
 	line-height: 1.5;
 }
@@ -26,48 +26,21 @@ a {
 		color: $blue;
 	}
 	&.color-light {
-		color: #fff;
-		@include hover-focus {
-			color: $link-hover-color-light;
-		}
+		// Moved to helpers/colors
 	}
 	&.text-white {
-		// text-decoration: none;
-		// @include hover-focus {
-		// 	color: #fff;
-		// 	text-decoration: underline;
-		// }
-		// Different behavior inside the Link Component, in case author has added a pseudo-element icon
-		// .linkComponent & {
-		// 	@include hover-focus {
-		// 		text-decoration: none;
-		// 		// SPAN inside A
-		// 		.linkLabel {
-		// 			text-decoration: underline;
-		// 		}
-		// 	}
-		// }
+		// Moved to helpers/colors
 	}
 	&.text-yellow {
-		@include hover-focus {
-			// color: #fff;
-		}
-	}
-}
-
-@import 'typography/icons';
-li {
-	.light-color & {
-		color: #fff;
+		// Moved to helpers/colors
 	}
 }
 
 .disclaimer {
-	color: $gray;
-	font-size: 1.1rem;
-	line-height: (14 / 11);
+	// Moved to helpers/disclaimer
 }
 
+@import 'typography/icons';
 // Fix for container component padding
 @media (max-width: $breakpoint-sm-max) {
 	.container {

@@ -63,7 +63,7 @@ html {
 }
 
 body {
-	font-family: Open Sans;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	font-size: 1.6rem;
 	line-height: 1.5;
 }
@@ -170,15 +170,6 @@ a {
 	vertical-align: baseline;
 }
 
-a.color-light {
-	color: #fff;
-}
-
-a.color-light:focus,
-a.color-light:hover {
-	color: #efefef;
-}
-
 [class*="icon-"] a span::after {
 	font-family: FontAwesome;
 	margin: 0;
@@ -206,16 +197,6 @@ a.color-light:hover {
 
 .icon-double-angle-right span::after {
 	content: '\00a0\f101';
-}
-
-.light-color li {
-	color: #fff;
-}
-
-.disclaimer {
-	color: #808285;
-	font-size: 1.1rem;
-	line-height: 1.27273;
 }
 
 /* Helpers */
@@ -1502,6 +1483,19 @@ a.text-yellow:hover {
 	}
 }
 
+a.color-light {
+	color: #fff;
+}
+
+a.color-light:focus,
+a.color-light:hover {
+	color: #efefef;
+}
+
+.light-color li {
+	color: #fff;
+}
+
 /* Type variants */
 .font-light {
 	font-weight: 300;
@@ -1891,6 +1885,12 @@ hr.black {
 .container-fluid .imageArtDirection {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.disclaimer {
+	color: #808285;
+	font-size: 1.1rem;
+	line-height: 1.27273;
 }
 
 .disclaimerWrapper {
