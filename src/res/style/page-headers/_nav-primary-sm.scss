@@ -20,14 +20,8 @@
 			width: 100%;
 			margin: 0;
 			z-index: $zi-primary-nav-sm;
-			@include aem-authoring {
-				position: relative;
-				left: auto;
-				right: auto;
-				width: auto;
-			}
 		}
-		// Actual nav UL within navbar container
+		// <ul> within navbar container
 		.navbar-nav {
 			padding: $column-padding;
 			background: $cool-grey;

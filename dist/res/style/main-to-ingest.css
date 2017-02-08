@@ -1,4 +1,4 @@
-/* Offer columns CSS */
+/* Offer Columns Fix */
 .offer-columns .aem-Grid {
 	display: -webkit-inline-box;
 	display: -webkit-inline-flex;
@@ -19,11 +19,12 @@
 	margin-bottom: 1em;
 }
 
+/* MUI Fix */
 #react-autosuggest-address1 {
 	text-align: left;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
 	.offer-columns .aem-GridColumn--default--4 {
 		margin-bottom: 0;
 	}

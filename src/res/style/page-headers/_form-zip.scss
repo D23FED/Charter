@@ -5,7 +5,7 @@
 // Padding between form elements
 $loc-edge-padding: 10%;
 #{$page-header} {
-	// Container Form where user enters ZIP code. Text input and "Go" button
+	// Container for description and <form></form> where user enters ZIP code
 	.zipAction {
 		width: 50%;
 		float: left;
@@ -19,7 +19,7 @@ $loc-edge-padding: 10%;
 		@include breakpoint('sm') {
 			padding-right: $loc-edge-padding;
 		}
-		// Form element
+		// <form> containing ZIP <input> and submit button
 		.geoLoc {
 			padding-top: 1rem;
 			width: 100%;
@@ -31,7 +31,7 @@ $loc-edge-padding: 10%;
 		input,
 		button {
 			font-size: 1.6rem;
-			font-family: $font-open-sans;
+			// font-family: $font-stack-sans;
 			padding-top: 0.7rem;
 			padding-bottom: 0.7rem;
 			padding-left: 0.5rem;
@@ -46,7 +46,7 @@ $loc-edge-padding: 10%;
 		button {
 			font-weight: 800;
 		}
-		// Button container
+		// ZIP input submit button button wrapper
 		.geoloc-btn {
 			display: inline-block;
 			button {
@@ -63,7 +63,6 @@ $loc-edge-padding: 10%;
 		float: left;
 		padding-right: $column-padding;
 		@include breakpoint('sm') {
-			// padding-left: $loc-edge-padding;
 			padding-left: 0;
 			margin-left: -3rem;
 		}
@@ -74,7 +73,7 @@ $loc-edge-padding: 10%;
 		// Contains all text content
 		.spectrum-customerLocation {
 			font-size: 1.6rem;
-			font-family: $font-open-sans;
+			// font-family: $font-stack-sans;
 			.richtext {
 				ul,
 				p {

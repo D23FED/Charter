@@ -8,11 +8,6 @@
 		@include breakpoint('sm') {
 			display: none;
 		}
-		@include aem-authoring {
-			@include breakpoint('sm') {
-				display: block;
-			}
-		}
 		// Wraps MUI button
 		.mui-wrapper {
 			// Small "Check availability" button
@@ -25,9 +20,6 @@
 	// Menu elements only shown at large breakpoints
 	.menu-lg {
 		display: none;
-		@include aem-authoring {
-			display: block;
-		}
 		@include breakpoint('sm') {
 			display: block;
 		}

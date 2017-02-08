@@ -1,10 +1,9 @@
 /* Site headers */
-/* Section of the header above the primary nav menuc*/
 .site-header {
 	position: static;
-	z-index: 1040;
 }
 
+/* Section of the header above the primary nav menu */
 .site-header .site-header-top {
 	min-height: 8rem;
 	background-color: #fff;
@@ -27,18 +26,13 @@
 }
 
 .site-header.js-sticky .site-header-top > div {
+	position: relative;
 	max-width: 1200px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
-}
-
-.site-header .site-header-shadowed {
-	box-shadow: 0 1rem 1.2rem -0.7rem rgba(0, 0, 0, 0.3);
-	border-bottom: 0.1rem solid #e7e7e7;
-	position: relative;
 }
 
 /* Brand logo */
@@ -59,8 +53,6 @@
 
 /* Show/hide menu elements responsively, target elements at specific browser widths */
 
-/* Temporary styles for display while authoring, remove for prod */
-
 .site-header .menu-sm .mui-wrapper .btn-sm {
 	margin-top: 0.7rem;
 	font-size: 1.2rem;
@@ -73,21 +65,70 @@
 	display: none;
 }
 
-/* Temporary styles for display while authoring, remove for prod */
-.aem-AuthorLayer-Layouting .site-header .menu-lg,
-.aem-AuthorLayer-Edit .site-header .menu-lg {
-	display: block;
-}
-
 .site-header .menu-lg .mui-wrapper {
 	display: inline-block;
 	float: right;
 }
 
+/* Primary Navigation (button-style) */
+.site-header .nav-primary {
+	background-color: #52565c;
+	margin-top: 0;
+}
+
+.site-header .nav-primary ul {
+	display: table-row;
+	text-align: center;
+}
+
+.site-header .nav-primary li {
+	display: table-cell;
+	text-align: center;
+	border-right: 0.1rem solid #fff;
+	color: #fff;
+	padding: 0;
+}
+
+.site-header .nav-primary li:last-of-type {
+	border: 0;
+}
+
+.site-header .nav-primary a {
+	background-color: #52565c;
+	padding: 0 1.5rem;
+	line-height: 5rem;
+	color: #fff;
+	font-weight: 700;
+	font-size: 1.6rem;
+	-webkit-transition: all 150ms ease-out;
+	transition: all 150ms ease-out;
+	-webkit-transition-property: background, color;
+	transition-property: background, color;
+	display: block;
+	text-decoration: none;
+}
+
+.site-header .nav-primary a:focus,
+.site-header .nav-primary a:hover {
+	background-color: #0077bc;
+	text-decoration: none;
+}
+
+.site-header .nav-primary a:active {
+	background-color: #005789;
+}
+
+.site-header .nav-primary p {
+	margin: 0;
+}
+
+.site-header .nav-primary .list-inline.list-separated li {
+	border-right: 0.1rem solid #fff;
+}
+
 /* Primary Navigation (text-style) */
 .site-header .nav-primary-text {
 	background-color: transparent;
-	margin-top: 1.5rem;
 }
 
 .site-header .nav-primary-text a {
@@ -121,15 +162,6 @@
 	width: 100%;
 	margin: 0;
 	z-index: 1000;
-}
-
-/* Temporary styles for display while authoring, remove for prod */
-.aem-AuthorLayer-Layouting .site-header .navbar-sm > .navbar-collapse,
-.aem-AuthorLayer-Edit .site-header .navbar-sm > .navbar-collapse {
-	position: relative;
-	left: auto;
-	right: auto;
-	width: auto;
 }
 
 .site-header .navbar-sm .navbar-nav {
@@ -166,32 +198,89 @@
 	z-index: 1000;
 }
 
-/* Fixes for Primary Navigation (button-style) */
-.site-header .nav-primary {
-	margin-top: 0;
+/* User Navigation (Contact, Support, My Account, etc) */
+.site-header .nav-user ul {
+	float: right;
+	display: table;
 }
 
-.site-header .nav-primary li {
-	padding: 0;
-}
-
-.site-header .nav-primary .list-inline.list-separated li {
-	border-right: 0.1rem solid #fff;
-}
-
-.site-header .nav-primary a {
-	text-decoration: none;
-}
-
-/* Fixes for User Nav */
 .site-header .nav-user li {
+	list-style-type: none;
+	display: table-cell;
+	margin: 0;
+	padding-left: .5rem;
+	padding-right: 0;
+	vertical-align: top;
 	position: relative;
 }
 
+.site-header .nav-user li:nth-of-type(1) a {
+	font-size: 0;
+}
+
+.site-header .nav-user li:nth-of-type(1) a span::after {
+	font-family: FontAwesome;
+	content: '\f002';
+	display: inline;
+	color: white;
+}
+
+.site-header .nav-user li:nth-of-type(2) a span::after {
+	font-family: FontAwesome;
+	content: '\f095';
+}
+
+.site-header .nav-user li:last-child a span::before {
+	font-family: FontAwesome;
+	content: '\f041';
+}
+
 .site-header .nav-user a {
+	display: inline-block;
+	padding: 1.5rem .8rem .8rem;
+	background-color: #00629b;
+	border-bottom-left-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border: 0;
+	color: #fff;
+	font-size: 1.2rem;
+	box-shadow: none;
+	font-family: Open Sans;
+	-webkit-transition: all 150ms ease-out;
+	transition: all 150ms ease-out;
+	-webkit-transition-property: background, color;
+	transition-property: background, color;
+	line-height: 1;
 	text-decoration: none;
 	font-weight: 400;
 	text-transform: none;
+}
+
+.site-header .nav-user a:focus,
+.site-header .nav-user a:hover {
+	background-color: #003057;
+	color: #fff;
+}
+
+.site-header .nav-user a:focus:active,
+.site-header .nav-user a:hover:active {
+	background-color: #001424;
+	color: #fff;
+}
+
+.site-header .nav-user a:active {
+	background-color: #001424;
+}
+
+.site-header .nav-user a::after,
+.site-header .nav-user a::before,
+.site-header .nav-user a span::after,
+.site-header .nav-user a span::before {
+	color: white;
+	display: inline;
+	font-size: 1.2rem;
 }
 
 /* Forms */
@@ -230,7 +319,6 @@
 .site-header .zipAction input,
 .site-header .zipAction button {
 	font-size: 1.6rem;
-	font-family: Open Sans;
 	padding: 0.7rem 0.5rem;
 }
 
@@ -290,12 +378,19 @@
 
 .site-header .userLocation .spectrum-customerLocation {
 	font-size: 1.6rem;
-	font-family: Open Sans;
 }
 
 .site-header .userLocation .spectrum-customerLocation .richtext ul,
 .site-header .userLocation .spectrum-customerLocation .richtext p {
 	margin-bottom: 0;
+}
+
+/* Fix for button display on FF | !! Browser-specific !! */
+.site-header .muiAddressLookup .localization--horizontal-1 .localization__input-submit,
+x:-moz-any-link,
+x:default {
+	padding-top: .8rem;
+	padding-bottom: .8rem;
 }
 
 /* ZIP Map marker icon/link */
@@ -323,15 +418,7 @@
 	color: #b30000;
 }
 
-/* Temporary styles for display while authoring, remove for prod */
-.aem-AuthorLayer-Layouting .site-header .icon-map-marker a,
-.aem-AuthorLayer-Edit .site-header .icon-map-marker a {
-	position: relative;
-	right: auto;
-	top: auto;
-}
-
-/* Megamenu */
+/* Megamenu | Appears below "My Services" and "Support" menu items */
 .site-header .my-services-menu,
 .site-header .support-menu {
 	width: 80%;
@@ -367,7 +454,7 @@
 
 .site-header .my-services-menu li a,
 .site-header .support-menu li a {
-	padding-left: 5px;
+	padding-left: 0.5rem;
 	line-height: 1.41667;
 	font-size: 1.2rem;
 	color: #333;
@@ -406,7 +493,7 @@
 
 .site-header .popover-contact {
 	position: absolute;
-	border: .1rem solid #b7b7b7;
+	border: 0.1rem solid #b7b7b7;
 	background-color: #fff;
 	padding: 1.5rem;
 	display: none;
@@ -417,12 +504,6 @@
 	top: 4.4rem;
 	min-width: 20rem;
 	z-index: 100;
-}
-
-/* Temporary styles for display while authoring, remove for prod */
-.aem-AuthorLayer-Layouting .site-header .popover-contact,
-.aem-AuthorLayer-Edit .site-header .popover-contact {
-	position: relative;
 }
 
 .site-header .popover-contact:after,
@@ -479,7 +560,7 @@
 .site-header .popover-contact .close-message {
 	position: absolute;
 	right: 1rem;
-	top: .6rem;
+	top: 0.6rem;
 	cursor: pointer;
 }
 
@@ -488,14 +569,7 @@
 	margin-top: 0;
 }
 
-/* Browser-specific: to be removed */
-.site-header .muiAddressLookup .localization--horizontal-1 .localization__input-submit,
-x:-moz-any-link,
-x:default {
-	padding-top: .8rem;
-	padding-bottom: .8rem;
-}
-
+/* Large phone # in page headers */
 .phone-main {
 	position: absolute;
 	line-height: 1;
@@ -521,8 +595,15 @@ x:default {
 	text-decoration: none;
 }
 
+.site-header .site-header-shadowed {
+	box-shadow: 0 1rem 1.2rem -0.7rem rgba(0, 0, 0, 0.3);
+	border-bottom: 0.1rem solid #e7e7e7;
+	position: relative;
+}
+
+/* Unique to Site Header 00 */
 .site-header-top-00 {
-	border-bottom: 1px solid #eee;
+	border-bottom: 0.1rem solid #eee;
 }
 
 /* Unique to Site Header 02 */
@@ -598,11 +679,6 @@ x:default {
 @media (min-width: 768px) {
 	.site-header .menu-sm {
 		display: none;
-	}
-
-	.aem-AuthorLayer-Layouting .site-header .menu-sm,
-	.aem-AuthorLayer-Edit .site-header .menu-sm {
-		display: block;
 	}
 
 	.site-header .menu-lg {

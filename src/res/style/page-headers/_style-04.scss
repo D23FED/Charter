@@ -13,36 +13,10 @@
 	/* Unique to Site Header 04 */
 }
 
-// Magic number: distance MUI button is from right edge to appear centered below user nav
-// $btn-distance-from-edge: 6.5rem;
-// .site-header .site-header-top .aem-GridColumn:nth-last-of-type(4) {
-// 	padding-right: 0;
-// }
-
 .site-header-top-04 {
-	// Grid layout element wrapping hidden content
-	// .aem-Grid.aem-Grid--default--12>.aem-GridColumn--default--12.customWrapper {
-	// 	float: none;
-	// 	float: none;
-	// 	clear: none;
-	// 	margin: 0 - $column-padding;
-	// 	padding: 0;
-	// 	width: auto;
-	// }
 	// Spacing below Check Availability button
 	.menu-row.mui-wrapper {
 		margin-bottom: $logo-spacing-v;
-
-		// @include breakpoint('sm') {
-		// 	margin-bottom: 0;
-		// 	.text-center {
-		// 		text-align: right;
-		// 	}
-		// 	.btn {
-		// 		position: relative;
-		// 		right: $btn-distance-from-edge;
-		// 	}
-		// }
 		.linkComponent>div,
 		.text-right {
 			text-align: center;

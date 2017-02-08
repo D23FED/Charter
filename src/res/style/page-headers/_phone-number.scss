@@ -1,5 +1,8 @@
 @import 'initialize';
 $color-phone: #88C657;
+@at-root {
+	/* Large phone # in page headers */
+}
 .phone-main {
 	position: absolute;
 	line-height: 1;

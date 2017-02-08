@@ -1,0 +1,39 @@
+@import 'initialize';
+@import '../page-headers/variables';
+@at-root {
+	/* Authoring styles: Page header */
+}
+
+#{$page-header} {
+	// ZIP Icon
+	.#{$icon-map-marker} {
+		a {
+			position: relative;
+			right: auto;
+			top: auto;
+		}
+	}
+	// Small nav
+	.navbar-sm {
+		// Contains all collapsing content
+		&>.navbar-collapse {
+			position: relative;
+			left: auto;
+			right: auto;
+			width: auto;
+		}
+	}
+	// popover
+	.popover-contact {
+		position: relative;
+	}
+	// Responsive menus
+	.menu-sm {
+		@include breakpoint('sm') {
+			display: block;
+		}
+	}
+	.menu-lg {
+		display: block;
+	}
+}

@@ -15,7 +15,7 @@ $color-popover-border: #b7b7b7;
 	}
 	.popover-contact {
 		position: absolute;
-		border: .1rem solid #b7b7b7;
+		border: 0.1rem solid #b7b7b7;
 		background-color: #fff;
 		padding: $column-padding;
 		display: none;
@@ -24,9 +24,6 @@ $color-popover-border: #b7b7b7;
 		top: 4.4rem;
 		min-width: 20rem;
 		z-index: $zi-popover;
-		@include aem-authoring {
-			position: relative;
-		}
 		&:after,
 		&:before {
 			content: " ";
@@ -75,7 +72,7 @@ $color-popover-border: #b7b7b7;
 		.close-message {
 			position: absolute;
 			right: 1rem;
-			top: .6rem;
+			top: 0.6rem;
 			cursor: pointer;
 		}
 	}

@@ -24,11 +24,6 @@
 					color: darken(#ff0000, 15%);
 				}
 			}
-			@include aem-authoring {
-				position: relative;
-				right: auto;
-				top: auto;
-			}
 		}
 	}
 }

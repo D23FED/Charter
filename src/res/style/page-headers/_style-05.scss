@@ -26,10 +26,7 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
 	#{$grid-wrapper} {
 		>#{$primary-nav-text-wrapper},
 		>#{$mui-lg-wrapper} {
-			// float: none;
-			@include breakpoint('sm') {
-				// float: left;
-			}
+			@include breakpoint('sm') {}
 		}
 	}
 	.navbar-sm .navbar-toggle {
@@ -58,9 +55,6 @@ $mui-lg-wrapper: '.aem-GridColumn.aem-GridColumn--default--4';
 				padding: $btn-padding-default;
 			}
 		}
-	}
-	.mui-wrapper.menu-sm {
-		// padding-top: 2rem;
 	}
 	// ZIP Pin icon: large version
 	.menu-lg {
