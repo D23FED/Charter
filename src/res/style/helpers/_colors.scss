@@ -260,3 +260,19 @@ $bp-width in $breakpoints {
 .text-gradient-blue {
 	@include gradient-text-blue($lt-blue)
 }
+
+// Random/legacy
+a {
+	&.color-light {
+		color: #fff;
+		@include hover-focus {
+			color: $link-hover-color-light;
+		}
+	}
+}
+
+li {
+	.light-color & {
+		color: #fff;
+	}
+}
