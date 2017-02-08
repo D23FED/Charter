@@ -2218,6 +2218,7 @@ hr.black {
 	padding-right: 0;
 }
 
+/* Sticky header */
 .site-header.js-sticky .site-header-top {
 	max-width: none;
 }
