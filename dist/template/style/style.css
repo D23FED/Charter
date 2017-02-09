@@ -2062,6 +2062,7 @@ hr.black {
 	margin: 0;
 }
 
+/* Social links */
 .site-footer .footer-header {
 	text-align: center;
 	font-family: Helvetica,Arial,sans-serif;
@@ -2137,6 +2138,7 @@ hr.black {
 	margin: 0;
 }
 
+/* Columns of primary footer links */
 .site-footer .footer-body ul,
 .site-footer .footer-body ol {
 	margin-left: 0;
@@ -2152,8 +2154,9 @@ hr.black {
 	font-size: 1.2rem;
 }
 
+/* Search for services by state */
 .site-footer .footer-states-list {
-	font-family: Open Sans;
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
 	border-top: 0.1rem solid #0374ac;
 	padding: 2.8rem 0;
 	margin-top: 2.8rem;
