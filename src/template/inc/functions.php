@@ -32,3 +32,30 @@ function lob_switch($lobs = 'common') { ?>
 		<a class="lob-name" href="#"></a>
 	</div>
 <?php }
+
+// Create button demo markup
+function button_demo_html($class = 'btn') { ?>
+	<div class="row">
+		<div class="col-xs-12">
+		<hr>
+		<h3>Button Style: <code><?=$class?></code></h3>
+		<h4>Link</h4>
+			<a class="<?=$class?>" href="#">Button-style Link</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h4>&lt;button&gt;</h4>
+			<button class="<?=$class?>">True &lt;button&gt;</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h4>&lt;input&gt;</h4>
+			<form action="#">
+				<input type="button" value="Launch Nukes" class="<?=$class?>">
+				<input type="submit" value="Submit" class="<?=$class?>">
+			</form>
+		</div>
+	</div>
+<?php }; ?>
