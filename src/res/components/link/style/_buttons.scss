@@ -1,35 +1,216 @@
 @import 'initialize';
 
-$darker-orange: #e69300;
-$dark-orange: #faa000;
-$light-orange: #ffb229;
+// a.btn
+// button
+// input type='button'
+// input type='submit'`
+$btn-dk-orange-color: #f66200;
+$btn-dk-orange-hover-color: #dd5800;
+$btn-lt-blue-gradient-start: #4ab3f1;
+$btn-lt-blue-gradient-end: #0091e6;
+$btn-lt-blue-bg-color: $btn-lt-blue-gradient-start;
 
+@mixin button-shadow-round {
+  &::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -15px;
+    background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
+    z-index: -1;
+  }
+}
+
+@mixin button-shadow-round {
+  &::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -15px;
+    background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
+    z-index: -1;
+  }
+}
+
+.btn {
+  display: inline-block;
+  box-shadow: .0rem .1rem .3rem #666;
+  padding: $btn-padding-default;
+  text-decoration: none;
+  font-size: $btn-font-size-default;
+  font-weight: bold;
+  transition: all 150ms ease-out;
+  transition-property: color, border, background-color;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Orange button
 .btn-primary {
-	color: #fff;
-	background-color: $yellow;
-	border-color: $darker-orange;
+  background-image: linear-gradient(to bottom, $lt-orange, $bright-orange);
+  background-color: $bright-orange;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: $tangerine;
+  border-radius: $btn-border-radius-base;
+  color: #fff;
+  text-shadow: .1rem .1rem .3rem #888;
+  font-weight: bold;
+  font-size: $btn-font-size-default;
+  text-transform: uppercase;
 
-	&.active, &:active, &:focus, &:hover,
-	.open > .dropdown-toggle.#{&} {
-		color: #fff;
-		background-color: $light-orange;
-		border-color: $dark-orange;
-	}
+  &:hover,
+  &:focus {
+    background: $bright-orange;
+    background-image: linear-gradient(to bottom, $bright-orange, $lt-orange);
+    border-color: $orange-brown;
+  }
 
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] #{&} {
-		background-color: $yellow;
-		border-color: $darker-orange;
+  &:active {
+    &:focus,
+    &:hover {
+      background: $bright-orange;
+      border-color: $orange-brown;
+    }
+  }
 
-		&.active, &:active, &:focus, &:hover {
-			background-color: $yellow;
-			border-color: $darker-orange;
+  &:active,
+  &:focus {
+    background-color: $bright-orange;
+    border-color: $orange-brown;
+  }
+}
+
+// Blue outline button
+
+.btn-info {
+  text-transform: uppercase;
+  color: $md-blue;
+  border: 1px solid $md-blue;
+  font-weight: 700;
+  background-color: #fff;
+
+  @include hover-focus {
+    background-color: #fff;
+    color: $md-blue;
+    border-color: $blue;
+  }
+
+  &:active {
+    background-color: #fff;
+    color: $md-blue;
+
+    &:focus,
+    &:hover {
+      background-color: #fff;
+      color: $md-blue;
+    }
+  }
+}
+
+// Flat blue button
+.btn-default {
+  @include btn-default;
+}
+
+
+/* Dark orange button, used on Access page | ECTP-951 */
+.btn-dk-orange {
+	.btn {
+		position: relative;
+		width: 85%;
+		background-color: $btn-dk-orange-color;
+		border: none;
+		text-transform: uppercase;
+		text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
+		box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
+		font-weight: 700;
+		font-size: 2rem;
+		background-image: none;
+		&:hover {
+			background-color: $btn-dk-orange-hover-color;
+		}
+		&:active {
+			box-shadow: none;
+			color: #fff;
+			background-color: #286090;
+			border-color: #204d74;
+			&::after {
+				display: none;
+			}
+		}
+		&:focus {
+			box-shadow: none;
+			color: #fff;
+			background-color: #286090;
+			border-color: #204d74;
+		}
+		&::after {
+			content: "";
+			height: 100%;
+			width: 100%;
+			background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0) 75%);
+			position: absolute;
+			left: 0;
+			bottom: -1.5rem;
+			z-index: -1;
 		}
 	}
+}
 
-	.badge {
-		color: $yellow;
-		background-color: #fff;
+// Icon for close button
+.icon-remove-sign {
+	&:after {
+		font-family: FontAwesome;
+		content: '\F057';
+		color: $dk-gray;
+		cursor: pointer;
+		transition: color $transition-time-default ease-out;
 	}
+	@include hover-focus {
+		&:after {
+			color: $gray;
+		}
+	}
+}
+
+// Light blue button, on 404 page
+%btn-lt-blue {
+	background-color: $btn-lt-blue-gradient-start;
+	background-image: linear-gradient(to bottom, $btn-lt-blue-gradient-start 0, $btn-lt-blue-gradient-end 100%);
+	border-radius: $btn-border-radius-small;
+	box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.294);
+	color: #fff;
+	display: inline-block;
+	font-weight: 700;
+	margin-bottom: 1.2em;
+	padding: 0.8rem 0;
+	width: 100%;
+	text-decoration: none;
+	font-size: 1.6rem;
+	@include breakpoint('sm') {
+		font-size: 1.8rem;
+	}
+	@include breakpoint('md') {
+		font-size: 2.0rem;
+	}
+	@include hover-focus {
+		background-color: $btn-lt-blue-gradient-end;
+		background-image: linear-gradient(to bottom, $btn-lt-blue-gradient-end 0, $btn-lt-blue-gradient-start 100%);
+	}
+	&:active {
+		background-color: $btn-lt-blue-gradient-end;
+		background-image: linear-gradient(to bottom, $btn-lt-blue-gradient-end 0, $btn-lt-blue-gradient-start 100%);
+		box-shadow: none;
+	}
+}
+
+.clickable {
+	cursor: pointer;
 }
