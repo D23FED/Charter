@@ -880,6 +880,175 @@
 	background: #e7eef4;
 }
 
+/* Border width only */
+.bd-0 {
+	border-width: 0;
+	border-style: none;
+}
+
+.bdt-0 {
+	border-top-width: 0;
+	border-top-style: none;
+}
+
+.bdr-0 {
+	border-right-width: 0;
+	border-right-style: none;
+}
+
+.bdb-0 {
+	border-bottom-width: 0;
+	border-bottom-style: none;
+}
+
+.bdl-0,
+.bdx-0 {
+	border-left-width: 0;
+	border-left-style: none;
+}
+
+.bdx-0 {
+	border-right-width: 0;
+	border-right-style: none;
+}
+
+.bdy-0 {
+	border-top: 0;
+	border-top-style: none;
+	border-bottom: 0;
+	border-bottom-style: none;
+}
+
+.bd-1 {
+	border-width: 0.1rem;
+	border-style: solid;
+}
+
+.bdt-1 {
+	border-top-width: 0.1rem;
+	border-top-style: solid;
+}
+
+.bdr-1 {
+	border-right-width: 0.1rem;
+	border-right-style: solid;
+}
+
+.bdb-1 {
+	border-bottom-width: 0.1rem;
+	border-bottom-style: solid;
+}
+
+.bdl-1,
+.bdx-1 {
+	border-left-width: 0.1rem;
+	border-left-style: solid;
+}
+
+.bdx-1 {
+	border-right-width: 0.1rem;
+	border-right-style: solid;
+}
+
+.bdy-1 {
+	border-top: 0.1rem;
+	border-top-style: solid;
+	border-bottom: 0.1rem;
+	border-bottom-style: solid;
+}
+
+/* Border color only */
+.bd-gray {
+	border-color: #808285;
+}
+
+.bdt-gray {
+	border-top-color: #808285;
+}
+
+.bdr-gray {
+	border-right-color: #808285;
+}
+
+.bdb-gray {
+	border-bottom-color: #808285;
+}
+
+.bdl-gray,
+.bdx-gray {
+	border-left-color: #808285;
+}
+
+.bdx-gray {
+	border-right-color: #808285;
+}
+
+.bdy-gray {
+	border-top-color: #808285;
+	border-bottom-color: #808285;
+}
+
+.bd-dkgray {
+	border-color: #333;
+}
+
+.bdt-dkgray {
+	border-top-color: #333;
+}
+
+.bdr-dkgray {
+	border-right-color: #333;
+}
+
+.bdb-dkgray {
+	border-bottom-color: #333;
+}
+
+.bdl-dkgray,
+.bdx-dkgray {
+	border-left-color: #333;
+}
+
+.bdx-dkgray {
+	border-right-color: #333;
+}
+
+.bdy-dkgray {
+	border-top-color: #333;
+	border-bottom-color: #333;
+}
+
+.bd-ltgray {
+	border-color: #eee;
+}
+
+.bdt-ltgray {
+	border-top-color: #eee;
+}
+
+.bdr-ltgray {
+	border-right-color: #eee;
+}
+
+.bdb-ltgray {
+	border-bottom-color: #eee;
+}
+
+.bdl-ltgray,
+.bdx-ltgray {
+	border-left-color: #eee;
+}
+
+.bdx-ltgray {
+	border-right-color: #eee;
+}
+
+.bdy-ltgray {
+	border-top-color: #eee;
+	border-bottom-color: #eee;
+}
+
+/* Legacy: Border width and color combined */
 .bd-0-gray {
 	border: 0 solid #808285;
 }
@@ -1512,72 +1681,6 @@ hr.black {
 	font-weight: 400;
 }
 
-/* Buttons */
-.btn-dk-orange .btn {
-	position: relative;
-	width: 85%;
-	background-color: #f66200;
-	border: none;
-	text-transform: uppercase;
-	text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.75);
-	box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.33);
-	font-weight: 700;
-	font-size: 2rem;
-	background-image: none;
-}
-
-.btn-dk-orange .btn:hover {
-	background-color: #dd5800;
-}
-
-.btn-dk-orange .btn:active {
-	box-shadow: none;
-	color: #fff;
-	background-color: #286090;
-	border-color: #204d74;
-}
-
-.btn-dk-orange .btn:active::after {
-	display: none;
-}
-
-.btn-dk-orange .btn:focus {
-	box-shadow: none;
-	color: #fff;
-	background-color: #286090;
-	border-color: #204d74;
-}
-
-.btn-dk-orange .btn::after {
-	content: "";
-	height: 100%;
-	width: 100%;
-	background-image: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, 0.6) 0, transparent 75%);
-	background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0, transparent 75%);
-	position: absolute;
-	left: 0;
-	bottom: -1.5rem;
-	z-index: -1;
-}
-
-.icon-remove-sign:after {
-	font-family: FontAwesome;
-	content: '\F057';
-	color: #333;
-	cursor: pointer;
-	-webkit-transition: color 150ms ease-out;
-	transition: color 150ms ease-out;
-}
-
-.icon-remove-sign:focus:after,
-.icon-remove-sign:hover:after {
-	color: #808285;
-}
-
-.clickable {
-	cursor: pointer;
-}
-
 .policy-terms {
 	padding: 0.5rem 0;
 }
@@ -1603,23 +1706,6 @@ hr.black {
 	margin-right: 0.5em;
 }
 
-/* Fix for accordion issues - Charter Jira 1290 */
-.accordion .accordion-simple .accordion-header {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-
-.accordion .accordion-simple .accordion-header::before {
-	margin-right: 1rem;
-}
-
-/* End Fix for accordion issues - Charter Jira 1290 */
 /* Responsive Images */
 .img-responsive-xs-25,
 .img-responsive-sm-25,
@@ -1687,6 +1773,7 @@ hr.black {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	display: block;
 }
 
 .image-right {
@@ -1694,10 +1781,10 @@ hr.black {
 	margin-left: 1.5rem;
 }
 
-/* Fix for MUI Modal form's input fields stretching beyond container width */
-.container-fluid .imageArtDirection {
-	margin-left: 0;
-	margin-right: 0;
+/* Disclaimer */
+.disclaimerWrapper {
+	border-top: .1rem solid #ccc;
+	padding: 2rem;
 }
 
 .disclaimer {
@@ -1706,9 +1793,26 @@ hr.black {
 	line-height: 1.27273;
 }
 
-.disclaimerWrapper {
-	border-top: .1rem solid #ccc;
-	padding: 2rem;
+/* Fix for accordion issues - Charter Jira 1290 */
+.accordion .accordion-simple .accordion-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.accordion .accordion-simple .accordion-header::before {
+	margin-right: 1rem;
+}
+
+/* End Fix for accordion issues - Charter Jira 1290 */
+.container-fluid .imageArtDirection {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 @media (min-width: 544px) {

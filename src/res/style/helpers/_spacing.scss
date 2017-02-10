@@ -6,9 +6,40 @@ $spacer : 1rem;
 $spacer-x: $spacer;
 $spacer-y: $spacer;
 $spacers: ( // Zero
-0: ( x: 0, y: 0), // Positive
-5: ( x: ($spacer-x * .5), y: ($spacer-y * .5)), 10: ( x: ($spacer-x), y: ($spacer-y)), 15: ( x: ($spacer-x * 1.5), y: ($spacer-y * 1.5)), 20: ( x: ($spacer-x * 2), y: ($spacer-y * 2)), 25: ( x: ($spacer-x * 2.5), y: ($spacer-y * 2.5)), // Negative
-n5: ( x: ($spacer-x * -.5), y: ($spacer-y * -.5)), n10: ( x: ($spacer-x * -1), y: ($spacer-y * -1)), n15: ( x: ($spacer-x * -1.5), y: ($spacer-y * -1.5)), n20: ( x: ($spacer-x * -2), y: ($spacer-y * -2)), n25: ( x: ($spacer-x * -2.5), y: ($spacer-y * -2.5)));
+	0: ( x: 0, y: 0), // Positive
+	5: (
+		x: ($spacer-x * .5),
+		y: ($spacer-y * .5)),
+	10: (
+		x: ($spacer-x),
+		y: ($spacer-y)),
+	15: (
+		x: ($spacer-x * 1.5),
+		y: ($spacer-y * 1.5)),
+	 20: (
+		 x: ($spacer-x * 2),
+		 y: ($spacer-y * 2)),
+	 25: (
+		 x: ($spacer-x * 2.5),
+		 y: ($spacer-y * 2.5)),
+	 // Negative
+n5: (
+	x: ($spacer-x * -.5),
+	y: ($spacer-y * -.5)),
+ n10: (
+	 x: ($spacer-x * -1),
+	 y: ($spacer-y * -1)),
+ n15: (
+	 x: ($spacer-x * -1.5),
+	 y: ($spacer-y * -1.5)),
+ n20: (
+	 x: ($spacer-x * -2),
+	 y: ($spacer-y * -2)),
+ n25: (
+	 x: ($spacer-x * -2.5),
+	 y: ($spacer-y * -2.5)
+	)
+);
 @each $breakpoint in map-keys($breakpoints) {
 	@if $breakpoint !='xs' {
 		@include media-breakpoint-up($breakpoint) {
@@ -127,32 +158,32 @@ n5: ( x: ($spacer-x * -.5), y: ($spacer-y * -.5)), n10: ( x: ($spacer-x * -1), y
 }
 
 // Some special margin utils
-.m-auto {
-	margin: auto;
-}
+// .m-auto {
+// 	margin: auto;
+// }
 
-.mt-auto {
-	margin-top: auto;
-}
+// .mt-auto {
+// 	margin-top: auto;
+// }
 
-.mr-auto {
-	margin-right: auto;
-}
+// .mr-auto {
+// 	margin-right: auto;
+// }
 
-.mb-auto {
-	margin-bottom: auto;
-}
+// .mb-auto {
+// 	margin-bottom: auto;
+// }
 
-.ml-auto {
-	margin-left: auto;
-}
+// .ml-auto {
+// 	margin-left: auto;
+// }
 
-.mx-auto {
-	margin-right: auto;
-	margin-left: auto;
-}
+// .mx-auto {
+// 	margin-right: auto;
+// 	margin-left: auto;
+// }
 
-.my-auto {
-	margin-top: auto;
-	margin-bottom: auto;
-}
+// .my-auto {
+// 	margin-top: auto;
+// 	margin-bottom: auto;
+// }

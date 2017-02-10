@@ -49,31 +49,114 @@
 
 $bd-sizes: (0, 1);
 $bd-colors: ( 'gray': $gray, 'dkgray':$dk-gray, 'ltgray': #eee);
+
+/* Border width only */
+
+@function border-style($width) {
+	@if $width==0 {
+		@return none;
+	}
+	@else {
+		@return solid;
+	}
+}
+
+@each $width in $bd-sizes {
+	$remWidth: $width * .1rem;
+	$style: border-style($width);
+	.bd-#{$width} {
+		border-width: $remWidth;
+		border-style: $style;
+	}
+	.bdt-#{$width} {
+		border-top-width: $remWidth;
+		border-top-style: $style;
+	}
+	.bdr-#{$width} {
+		border-right-width: $remWidth;
+		border-right-style: $style;
+	}
+	.bdb-#{$width} {
+		border-bottom-width: $remWidth;
+		border-bottom-style: $style;
+	}
+	.bdl-#{$width} {
+		border-left-width: $remWidth;
+		border-left-style: $style;
+	}
+	.bdx-#{$width} {
+		border-right-width: $remWidth;
+		border-right-style: $style;
+		border-left-width: $remWidth;
+		border-left-style: $style;
+	}
+	.bdy-#{$width} {
+		border-top: $remWidth;
+		border-top-style: $style;
+		border-bottom: $remWidth;
+		border-bottom-style: $style;
+	}
+}
+
+
+/* Border color only */
+
+@each $color-name,
+$color in $bd-colors {
+	.bd-#{$color-name} {
+		border-color: $color
+	}
+	.bdt-#{$color-name} {
+		border-top-color: $color;
+	}
+	.bdr-#{$color-name} {
+		border-right-color: $color;
+	}
+	.bdb-#{$color-name} {
+		border-bottom-color: $color;
+	}
+	.bdl-#{$color-name} {
+		border-left-color: $color;
+	}
+	.bdx-#{$color-name} {
+		border-right-color: $color;
+		border-left-color: $color;
+	}
+	.bdy-#{$color-name} {
+		border-top-color: $color;
+		border-bottom-color: $color;
+	}
+}
+
+
+/* Legacy: Border width and color combined */
+
 @each $width in $bd-sizes {
 	@each $color-name,
 	$color in $bd-colors {
+		$remWidth: $width * .1rem;
 		.bd-#{$width}-#{$color-name} {
-			border: ($width * .1rem) solid $color
+			border: $remWidth solid $color
 		}
 		.bdt-#{$width}-#{$color-name} {
-			border-top: ($width * .1rem) solid $color;
+			border-top: $remWidth solid $color;
 		}
 		.bdr-#{$width}-#{$color-name} {
-			border-right: ($width * .1rem) solid $color;
+			border-right: $remWidth solid $color;
 		}
 		.bdb-#{$width}-#{$color-name} {
-			border-bottom: ($width * .1rem) solid $color;
+			border-bottom: $remWidth solid $color;
 		}
 		.bdl-#{$width}-#{$color-name} {
-			border-left: ($width * .1rem) solid $color;
+			border-left: $remWidth solid $color;
 		}
 		.bdx-#{$width}-#{$color-name} {
-			border-right: ($width * .1rem) solid $color;
-			border-left: ($width * .1rem) solid $color;
+			border-right: $remWidth solid $color;
+			border-left: $remWidth solid $color;
 		}
 		.bdy-#{$width}-#{$color-name} {
-			border-top: ($width * .1rem) solid $color;
-			border-bottom: ($width * .1rem) solid $color;
+			border-top: $remWidth solid $color;
+			border-bottom: $remWidth solid $color;
 		}
 	}
 }
