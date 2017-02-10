@@ -1037,9 +1037,6 @@ a {
 	margin-bottom: auto;
 }
 
-/* Sizing */
-/* Full width elements, child links, and child buttons at Small */
-
 /* Borders */
 .border-bottom {
 	border-bottom: 0.1rem solid #eeeeee;
@@ -1868,29 +1865,25 @@ hr.black {
 	font-weight: 400;
 }
 
-.policy-terms {
-	padding: 0.5rem 0;
+/* Sizing */
+/* Full width elements, child links, and child buttons at Small */
+
+/* Images */
+.image-left {
+	float: left;
+	margin-right: 1.5rem;
 }
 
-.policy-terms .linkComponent {
-	background-color: #00629b;
-	margin-bottom: 0.2rem;
+.image-center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: block;
 }
 
-.policy-terms .spacer {
-	display: none;
-}
-
-.policy-terms a {
-	font-size: 1.4rem;
-	font-weight: 700;
-	padding-left: 0.5rem;
-}
-
-.policy-terms a::before {
-	font-family: FontAwesome;
-	content: '\f0da';
-	margin-right: 0.5em;
+.image-right {
+	float: right;
+	margin-left: 1.5rem;
 }
 
 /* Responsive Images */
@@ -1950,22 +1943,29 @@ hr.black {
 	max-width: 95%;
 }
 
-/* Images */
-.image-left {
-	float: left;
-	margin-right: 1.5rem;
+.policy-terms {
+	padding: 0.5rem 0;
 }
 
-.image-center {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	display: block;
+.policy-terms .linkComponent {
+	background-color: #00629b;
+	margin-bottom: 0.2rem;
 }
 
-.image-right {
-	float: right;
-	margin-left: 1.5rem;
+.policy-terms .spacer {
+	display: none;
+}
+
+.policy-terms a {
+	font-size: 1.4rem;
+	font-weight: 700;
+	padding-left: 0.5rem;
+}
+
+.policy-terms a::before {
+	font-family: FontAwesome;
+	content: '\f0da';
+	margin-right: 0.5em;
 }
 
 /* Disclaimer */
@@ -1978,28 +1978,6 @@ hr.black {
 	color: #808285;
 	font-size: 1.1rem;
 	line-height: 1.27273;
-}
-
-/* Fix for accordion issues - Charter Jira 1290 */
-.accordion .accordion-simple .accordion-header {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-
-.accordion .accordion-simple .accordion-header::before {
-	margin-right: 1rem;
-}
-
-/* End Fix for accordion issues - Charter Jira 1290 */
-.container-fluid .imageArtDirection {
-	margin-left: 0;
-	margin-right: 0;
 }
 
 /* Dark orange button, used on Access page | ECTP-951 */
@@ -6538,12 +6516,6 @@ a.text-danger:focus {
 		padding-right: 0;
 	}
 
-	.fw-sm-only,
-	.fw-sm-only .btn,
-	.fw-sm-only a {
-		width: 100%;
-	}
-
 	.bg-transparent-white-xs-only {
 		background-color: rgba(255, 255, 255, 0.65);
 	}
@@ -6552,6 +6524,12 @@ a.text-danger:focus {
 	.center-sm .text-left,
 	.center-sm .text-right {
 		text-align: center;
+	}
+
+	.fw-sm-only,
+	.fw-sm-only .btn,
+	.fw-sm-only a {
+		width: 100%;
 	}
 }
 
