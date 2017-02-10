@@ -12,7 +12,6 @@
 			<hr>
 			<?php include_once('inc/section/spacing.php');?>
 			<hr>
-			<?php include_once('inc/section/size.php');?>
 			<hr>
 			<?php include_once('inc/section/borders.php');?>
 			<hr>
@@ -20,11 +19,11 @@
 			<hr>
 			<?php include_once('inc/section/text.php');?>
 			<hr>
-			<?php include_once('inc/section/buttons.php');?>
+			<?php include_once('inc/section/size.php');?>
 			<hr>
 			<?php include_once('inc/section/images.php');?>
 			<hr>
-			<?php include_once('inc/section/forms.php');?>
+			<?php include_once('inc/section/terms.php');?>
 			<hr>
 			<?php include_once('inc/section/disclaimer.php');?>
 			<hr>
