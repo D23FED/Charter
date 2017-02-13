@@ -1,92 +1,119 @@
-
 /* Accordion Component */
-.accordion .accordion-content {
-	display: none;
+
+@import 'initialize';
+.accordion {
+	.accordion-content {
+		display: none;
+		&.js-active {
+			display: block;
+		}
+	}
+	.cursor-pointer {
+		cursor: pointer;
+	}
+	.accordion-simple {
+		/* */
+		.show-details {
+			display: inline-block;
+		}
+		.accordion-header {
+			display: flex;
+			align-items: center;
+			&::before {
+				content: url(/etc/clientlibs/spectrum/residential/core/imgs/collapse.png);
+			}
+			&.js-active::before {
+				content: url(/etc/clientlibs/spectrum/residential/core/imgs/expand.png);
+			}
+		}
+	}
+	.accordion-show-hide,
+	.accordion-show-hide-toggle {}
 }
-.accordion .accordion-content.js-active {
-	display: block;
-}
-.accordion .cursor-pointer {
-	cursor: pointer;
-}
-/* Simple Accordion */
-.accordion .accordion-simple {
-	/* */
-}
-.accordion .accordion-simple .show-details {
-	display: inline-block;
-}
-.accordion .accordion-simple .accordion-header::before {
-	content: url(/etc/clientlibs/spectrum/residential/core/imgs/collapse.png);
-}
-.accordion .accordion-simple .accordion-header.js-active::before {
-	content: url(/etc/clientlibs/spectrum/residential/core/imgs/expand.png);
-}
-/* Show and Hide Accordion */
-.accordion .accordion-show-hide {
-	/* */
-}
-/* Show or Hide Toggle Accordion */
-.accordion .accordion-show-hide-toggle {
-	/* */
-}
+
+
 /* Accordion Full Width - WEBCMS-22229 */
-.accordion-full .accordion {
-	background: #fff none repeat scroll 0 0;
-	border: 1px solid #808285;
+
+.accordion-full {
+	.accordion {
+		background: #fff none repeat scroll 0 0;
+		border: 1px solid $gray;
+		.accordion-simple .accordion-header {
+			padding: 1.5rem 3rem;
+			width: 100%;
+			position: relative;
+			&::before,
+			&.js-active::before {
+				content: "";
+				margin-right: 1rem;
+			}
+			&::after {
+				content: "\2212";
+				position: absolute;
+				right: 3rem;
+				top: 1rem;
+				border: 1px solid;
+				padding: 0.5rem 1rem;
+				font-weight: bold;
+			}
+			&.js-active::after {
+				content: "\2b";
+				position: absolute;
+				right: 3rem;
+				top: 1rem;
+				border: 1px solid;
+				padding: 0.5rem 1rem;
+				font-weight: bold;
+			}
+		}
+		.accordion-content {
+			padding: 1.5rem 4.5rem 0 4.5rem;
+		}
+	}
+	.accordion-header p {
+		color: $dk-gray;
+		font-size: 1.7rem;
+		margin: 0;
+	}
+	.accordion .accordion-simple .accordion-header.js-active::after,
+	.accordion-link:hover {
+		color: $lt-blue;
+	}
 }
-.accordion-full .accordion .accordion-simple .accordion-header {
-	padding: 1.5rem 3rem;
-	width: 100%;
-	position: relative;
-}
-.accordion-full .accordion .accordion-simple .accordion-header::before,
-.accordion-full .accordion .accordion-simple .accordion-header.js-active::before {
-	content: "";
-}
-.accordion-full .accordion .accordion-simple .accordion-header::after {
-	content: "\2212";
-	position: absolute;
-	right: 3rem;
-	top: 1rem;
-	border: 1px solid;
-	padding: 0.5rem 1rem;
-	font-weight: bold;
-}
-.accordion-full .accordion .accordion-simple .accordion-header.js-active::after {
-	content: "\2b";
-	position: absolute;
-	right: 3rem;
-	top: 1rem;
-	border: 1px solid;
-	padding: 0.5rem 1rem;
-	font-weight: bold;
-}
-.accordion-full .accordion .accordion-content {
-	padding: 1.5rem 4.5rem 0 4.5rem;
-}
-.accordion-full .accordion-header p {
-	color: #333;
-	font-size: 1.7rem;
-	margin: 0;
-}
-.accordion-full .accordion .accordion-simple .accordion-header.js-active::after,
-.accordion-full .accordion-link:hover,
+
 .accordion-link:hover p {
-	color: #0077BC;
+	color: $lt-blue;
 }
+
 .accordion-full .accordion .bullets-checkmark {
 	list-style-type: none;
+	li:before {
+		content: '';
+		display: inline-block;
+		height: 3rem;
+		width: 2.2rem;
+		margin-left: -3rem;
+		background: url("/etc/clientlibs/spectrum/residential/core/imgs/res-form-sprite.png") no-repeat;
+		background-position: -0.2rem -8.5rem;
+		content: "icon";
+		text-indent: -9999px;
+		margin-bottom: 0.7rem;
+	}
 }
-.accordion-full .accordion .bullets-checkmark li:before {
-	content: '';
-	display: inline-block;
-	height: 3rem;
-	width: 2.2rem;
-	margin-left: -3rem;
-	background: url("/etc/clientlibs/spectrum/residential/core/imgs/res-form-sprite.png") no-repeat;
-	background-position: -0.2rem -8.5rem;
-	content: "icon";
-	text-indent: -9999px;
-	margin-bottom: 0.7rem;
+
+@at-root {
+	/* Fix for accordion issues - Charter Jira 1290 */
+}
+
+.accordion .accordion-simple .accordion-header {
+	// display: flex;
+	// align-items: center;
+}
+
+.accordion .accordion-simple .accordion-header::before {
+	// margin-right: 1rem;
+}
+
+@at-root {
+	/* End Fix for accordion issues - Charter Jira 1290 */
 }
