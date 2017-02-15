@@ -1,0 +1,26 @@
+.policy-terms {
+	padding: 0.5rem 0;
+}
+
+.policy-terms .linkComponent {
+	background-color: #00629b;
+	margin-bottom: 0.2rem;
+}
+
+.policy-terms .spacer {
+	display: none;
+}
+
+.policy-terms a {
+	font-size: 1.4rem;
+	font-weight: 700;
+	padding-left: 0.5rem;
+}
+
+.policy-terms a::before {
+	font-family: FontAwesome;
+	content: '\f0da';
+	margin-right: 0.5em;
+}
+
+/*# sourceMappingURL=terms.css.map */

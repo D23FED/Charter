@@ -1,6 +1,7 @@
 @at-root {
 	/* Position */
 }
+
 $vertical-aligns: (top, middle, bottom, baseline);
 .relative {
 	position: relative;
@@ -8,6 +9,10 @@ $vertical-aligns: (top, middle, bottom, baseline);
 
 .absolute {
 	position: absolute;
+}
+
+@at-root {
+	/* .left and .right are Legacy classes combining float and abs positioning. To be removed following authoring update */
 }
 
 .left {
@@ -18,6 +23,14 @@ $vertical-aligns: (top, middle, bottom, baseline);
 .right {
 	float: right;
 	right: 0;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
 }
 
 .bottom-justified {
@@ -49,12 +62,28 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	@include vertical-center;
 }
 
+.vertical-center-flex {
+	display: flex;
+	align-items: center;
+}
+
 .horizontal-center {
 	@include horizontal-center;
 }
 
+.horizontal-center-flex {
+	display: flex;
+	justify-content: center;
+}
+
 .absolute-center {
 	@include absolute-center;
+}
+
+.absolute-center-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .full {

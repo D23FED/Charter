@@ -5,7 +5,9 @@
 }
 
 .disclaimer {
-	color: $gray;
+	color: #808285;
 	font-size: 1.1rem;
-	line-height: (14 / 11);
+	line-height: 1.27273;
 }
+
+/*# sourceMappingURL=disclaimer.css.map */
