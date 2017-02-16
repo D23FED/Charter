@@ -1,5 +1,5 @@
 @at-root {
-/* Display */
+	/* Display */
 }
 
 .clear {
@@ -37,6 +37,10 @@
 
 .display-inline-flex {
 	display: inline-flex;
+}
+
+.flex-1 {
+	flex: 1;
 }
 
 .hidden {

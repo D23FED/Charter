@@ -21,25 +21,28 @@ $spacers: ( // Zero
 		 y: ($spacer-y * 2)),
 	 25: (
 		 x: ($spacer-x * 2.5),
-		 y: ($spacer-y * 2.5)),
-	 // Negative
-n5: (
-	x: ($spacer-x * -.5),
-	y: ($spacer-y * -.5)),
- n10: (
-	 x: ($spacer-x * -1),
-	 y: ($spacer-y * -1)),
- n15: (
-	 x: ($spacer-x * -1.5),
-	 y: ($spacer-y * -1.5)),
- n20: (
-	 x: ($spacer-x * -2),
-	 y: ($spacer-y * -2)),
- n25: (
-	 x: ($spacer-x * -2.5),
-	 y: ($spacer-y * -2.5)
-	)
+		 y: ($spacer-y * 2.5))
 );
+$spacers-negative: (
+	// Negative
+	n5: (
+		x: ($spacer-x * -.5),
+		y: ($spacer-y * -.5)),
+	n10: (
+		x: ($spacer-x * -1),
+		y: ($spacer-y * -1)),
+	n15: (
+		x: ($spacer-x * -1.5),
+		y: ($spacer-y * -1.5)),
+	n20: (
+		x: ($spacer-x * -2),
+		y: ($spacer-y * -2)),
+	n25: (
+		x: ($spacer-x * -2.5),
+		y: ($spacer-y * -2.5))
+	);
+
+// Generate positive and 0 margins
 @each $breakpoint in map-keys($breakpoints) {
 	@if $breakpoint !='xs' {
 		@include media-breakpoint-up($breakpoint) {
@@ -102,7 +105,9 @@ n5: (
 	}
 }
 
-// Legacy
+@at-root {
+	/* Legacy: To be removed following authoring */
+}
 .p-0-sm {
 	@include breakpoint('sm') {
 		padding: 0;
@@ -157,33 +162,6 @@ n5: (
 	}
 }
 
-// Some special margin utils
-// .m-auto {
-// 	margin: auto;
-// }
-
-// .mt-auto {
-// 	margin-top: auto;
-// }
-
-// .mr-auto {
-// 	margin-right: auto;
-// }
-
-// .mb-auto {
-// 	margin-bottom: auto;
-// }
-
-// .ml-auto {
-// 	margin-left: auto;
-// }
-
-// .mx-auto {
-// 	margin-right: auto;
-// 	margin-left: auto;
-// }
-
-// .my-auto {
-// 	margin-top: auto;
-// 	margin-bottom: auto;
-// }
+@at-root {
+	/* End Legacy */
+}
