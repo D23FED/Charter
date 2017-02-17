@@ -7,13 +7,24 @@
 .btn {
 	font-weight: 500;
 	font-size: 1.7rem;
+
+	&.btn-fw {
+		width: 100%;
+	}
+
+	&.btn-no-wrap {
+		white-space: nowrap;
+	}
 }
+
 .btn-lg {
 	font-size: 1.9rem;
 }
+
 .btn-sm {
 	font-size: 1.4rem;
 }
+
 .btn-xs {
 	font-size: 1.3rem;
 }
@@ -26,6 +37,10 @@ $btn-default-colors: (
 	// active: #f0f4f7,
 	// focus: #f0f4f7,
 	// active-hover: #f0f4f7,
+	hover-bg: #fdaa18,
+	active-bg: #fdaa18,
+	active-hover-bg: #fdaa18,
+	// hover-bd: #000000,
 	bg-gradient-start: #fdaa18,
 	bg-gradient-end: #ffa300,
 	bg-gradient-hover-start: #fdaa18,
@@ -46,6 +61,7 @@ $btn-default-colors: (
 	padding-bottom: 0;
 	line-height: 2.1;
 	box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
 
 	@include hover-focus {
 		background-image: none;

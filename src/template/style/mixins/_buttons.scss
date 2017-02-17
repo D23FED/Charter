@@ -1,16 +1,24 @@
 // Modfied button mixin from Bootstrap
 // Accepts additional colors instead of assuming variations
-// Remove support for dropdowns and badges
+// Removed support for dropdowns and badges
+// Requires only text, bg and border color, all other states will be generated. Optionally you may pass overrides for any state's color.
 // Accepts a map with this format:
-
 // $btn-colors: (
-// 	color: #000000,
-// 	background: #111111,
-// 	border: #222222,
-// 	hover: #333333,
-// 	focus: #444444,
-// 	active: #555555,
-// 	active-hover: #666666
+// 	color          : #000000,
+// 	background     : #000000,
+// 	border         : #000000,
+// 	hover          : #000000,
+// 	hover-bg       : #000000,
+// 	hover-bd       : #000000,
+// 	focus          : #000000,
+// 	focus-bg       : #000000,
+// 	focus-bd       : #000000,
+// 	active         : #000000,
+// 	active-bg      : #000000,
+// 	active-bd      : #000000,
+// 	active-hover   : #000000,
+// 	active-hover-bg: #000000,
+// 	active-hover-bd: #000000
 // );
 
 @mixin spe_button-variant($color-map) {
@@ -58,12 +66,38 @@
 		$btn-bg-color-active-hover: darken($btn-color-active-hover, 17%);
 		$btn-bd-color-active-hover: darken($btn-color-active, 25%);
 	}
+	// Hover background and border override
+	@if map-has-key($color-map, hover-bg) {
+		$btn-bg-color-hover: map-get($color-map, hover-bg);
+	}
 
-	// Check for
-	// @if map-has-key($color-map, ) {
-	// };
-	// @else {
-	// };
+	@if map-has-key($color-map, hover-bd) {
+		$btn-bd-color-hover: map-get($color-map, hover-bd);
+	}
+	// focus background and border override
+	@if map-has-key($color-map, focus-bg) {
+		$btn-bg-color-focus: map-get($color-map, focus-bg);
+	}
+
+	@if map-has-key($color-map, focus-bd) {
+		$btn-bd-color-focus: map-get($color-map, focus-bd);
+	}
+	// active background and border override
+	@if map-has-key($color-map, active-bg) {
+		$btn-bg-color-active: map-get($color-map, active-bg);
+	}
+
+	@if map-has-key($color-map, active-bd) {
+		$btn-bd-color-active: map-get($color-map, active-bd);
+	}
+	// active-hover background and border override
+	@if map-has-key($color-map, active-hover-bg) {
+		$btn-bg-color-active-hover: map-get($color-map, active-hover-bg);
+	}
+
+	@if map-has-key($color-map, active-hover-bd) {
+		$btn-bd-color-active-hover: map-get($color-map, active-hover-bd);
+	}
 
   color: $btn-color;
   background-color: $btn-bg-color;

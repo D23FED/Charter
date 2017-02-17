@@ -5,6 +5,14 @@
 	font-size: 1.7rem;
 }
 
+.btn.btn-fw {
+	width: 100%;
+}
+
+.btn.btn-no-wrap {
+	white-space: nowrap;
+}
+
 .btn-lg {
 	font-size: 1.9rem;
 }
@@ -28,18 +36,19 @@
 	position: relative;
 	line-height: 2.1;
 	box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
 }
 
 .btn-default:focus,
-.btn-default.focus,
-.btn-default:hover,
-.btn-default:active,
-.btn-default.active {
+.btn-default.focus {
 	color: #f0f4f7;
 	background-color: #e09002;
 	border-color: black;
 }
 
+.btn-default:hover,
+.btn-default:active,
+.btn-default.active,
 .btn-default:active:hover,
 .btn-default:active:focus,
 .btn-default:active.focus,
@@ -47,7 +56,7 @@
 .btn-default.active:focus,
 .btn-default.active.focus {
 	color: #f0f4f7;
-	background-color: #bd7902;
+	background-color: #fdaa18;
 	border-color: black;
 }
 

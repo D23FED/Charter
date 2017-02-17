@@ -1,12 +1,12 @@
 <?php
 $document = array(
-	'title' => '',
+	'title' => 'Button-style links',
 	'body'  => array(
 		'id'    => '',
 		'class' => ''
 	),
 	'component' => array(
-		'name' => '',
+		'name' => 'Link',
 		'lob'  => 'business', //common, residental, business, or enterprise
 		'lob_switch' => false //enable switching between several lines of business for a single component
 	),
