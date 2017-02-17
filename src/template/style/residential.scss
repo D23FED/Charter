@@ -1,7 +1,8 @@
 @import 'initialize';
 /* All Residental Styles */
 // Import order matches: https://github.webapps.rr.com/CharterCMS/residential/blob/master/content/src/main/content/jcr_root/etc/clientlibs/spectrum/residential/core/css.txts
-@import '../../res/style/core',
+@import
+	'../../res/style/core',
 	'../../res/style/typography',
 	'../../res/style/helpers',
 	'../../res/style/buttons',
@@ -12,4 +13,9 @@
 	'../../res/style/localization',
 	'../../res/style/overhang',
 	'../../res/style/price',
-	'../../res/style/search-form';
+	'../../res/style/search-form',
+	'../../res/style/disclaimer',
+	'../../res/style/terms',
+	'components-res',
+	'sandbox-res'
+;

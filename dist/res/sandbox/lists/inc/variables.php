@@ -7,7 +7,7 @@ $document = array(
 	),
 	'component' => array(
 		'name' => '',
-		'lob'  => '',
+		'lob'  => 'residental', //common, residental, business, or enterprise
 		'lob_switch' => true
 	),
 	'site_header'    => false,
