@@ -1,0 +1,49 @@
+// Utilities
+// CSS image replacement
+@mixin text-hide {
+	font-size: 0;
+	line-height: 0;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin hover-focus {
+	&:focus,
+	&:hover {
+		@content;
+	}
+}
+
+// Using a pseudo element to contain an image
+@mixin pseudo-img($pos: absolute) {
+	content: '';
+	background-repeat: no-repeat;
+	display: block;
+	position: $pos;
+}
+
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	padding-bottom: $height / $width * 100%;
+	img,
+	video,
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}

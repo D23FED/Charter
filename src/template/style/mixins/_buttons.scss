@@ -1,0 +1,166 @@
+// Modfied button mixin from Bootstrap
+// Accepts additional colors instead of assuming variations
+// Remove support for dropdowns and badges
+// Accepts a map with this format:
+
+// $btn-colors: (
+// 	color: #000000,
+// 	background: #111111,
+// 	border: #222222,
+// 	hover: #333333,
+// 	focus: #444444,
+// 	active: #555555,
+// 	active-hover: #666666
+// );
+
+@mixin spe_button-variant($color-map) {
+	// Default
+	$btn-color: map-get($color-map, color);
+	$btn-bg-color: map-get($color-map, background);
+	$btn-bd-color: map-get($color-map, border);
+	// Hover
+	$btn-color-hover: $btn-color;
+	$btn-bg-color-hover: darken($btn-bg-color, 10%);
+	$btn-bd-color-hover: darken($btn-bd-color, 12%);
+	// Focus
+	$btn-color-focus: $btn-color;
+	$btn-bg-color-focus: $btn-bg-color-hover;
+	$btn-bd-color-focus: darken($btn-bd-color, 25%);
+	// Active
+	$btn-color-active: $btn-color;
+	$btn-bg-color-active: $btn-bg-color-hover;
+	$btn-bd-color-active: $btn-bd-color-hover;
+	// Active and hover
+	$btn-color-active-hover: $btn-color;
+	$btn-bg-color-active-hover: darken($btn-bg-color, 17%);
+	$btn-bd-color-active-hover: $btn-bd-color-focus;
+	// Check for hover color
+	@if map-has-key($color-map, hover) {
+		$btn-color-hover: map-get($color-map, hover);
+		$btn-bg-color-hover: darken($btn-color-hover, 10%);
+		$btn-bd-color-hover: darken($btn-color-hover, 12%);
+	}
+	// Check for focus color
+	@if map-has-key($color-map, focus) {
+		$btn-color-focus: map-get($color-map, focus);
+		$btn-bg-color-focus: darken($btn-color-focus, 10%);
+		$btn-bd-color-focus: darken($btn-color-focus, 25%);
+	}
+	// Check for active color
+	@if map-has-key($color-map, active) {
+		$btn-color-active: map-get($color-map, active);
+		$btn-bg-color-active: darken($btn-color-active, 10%);
+		$btn-bd-color-active: darken($btn-color-active, 12%);
+	}
+	// Check for active + hover color
+	@if map-has-key($color-map, active-hover) {
+		$btn-color-active-hover: map-get($color-map, active-hover);
+		$btn-bg-color-active-hover: darken($btn-color-active-hover, 17%);
+		$btn-bd-color-active-hover: darken($btn-color-active, 25%);
+	}
+
+	// Check for
+	// @if map-has-key($color-map, ) {
+	// };
+	// @else {
+	// };
+
+  color: $btn-color;
+  background-color: $btn-bg-color;
+  border-color: $btn-bd-color;
+
+	// Focus
+  &:focus,
+  &.focus {
+    color: $btn-color-focus;
+    background-color: $btn-bg-color-focus;
+        border-color: $btn-bd-color-focus;
+  }
+	// Hover
+  &:hover {
+    color: $btn-color-hover;
+    background-color: $btn-bg-color-hover;
+        border-color: $btn-bd-color-hover;
+  }
+	// Active
+	// .open > &.dropdown-toggle,
+  &:active,
+  &.active  {
+    color: $btn-color-active;
+    background-color: $btn-bg-color-active;
+        border-color: $btn-bd-color-active;
+
+		// Active & hover/focus
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $btn-color-active-hover;
+      background-color: $btn-bg-color-active-hover;
+          border-color: $btn-bd-color-active-hover;
+    }
+  }
+	// .open > &.dropdown-toggle,
+  &:active,
+  &.active
+  {
+    // background-image: none;
+  }
+
+	// Disabled
+	// fieldset[disabled] &,
+  &.disabled,
+  &[disabled] {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $btn-bg-color;
+          border-color: $btn-bd-color;
+    }
+  }
+
+  // .badge {
+  //   color: $btn-bg-color;
+  //   background-color: $btn-color;
+  // }
+}
+
+@mixin btn-default {
+	background-color: $lt-blue;
+	background-image: none;
+	border: 0;
+	border-radius: $btn-border-radius-base;
+	color: #fff;
+	font-size: 1.9rem;
+	text-transform: uppercase;
+	color: #fff;
+	&:hover,
+	&:active,
+	&:focus,
+	&:active:focus,
+	&:active:hover {
+		background-color: $md-blue;
+		color: #fff;
+	}
+	&:active {
+		color: #fff;
+		&:focus,
+		&:hover {
+			color: #fff;
+		}
+	}
+	&:focus {
+		outline-color: $yellow;
+	}
+}
+
+@mixin btn-primary {
+	// $color, $background, $border
+	@include button-variant(#fff, $bright-orange, $tangerine);
+	background-image: linear-gradient(to bottom, $lt-orange, $bright-orange);
+	border-width: 0.1rem;
+	border-radius: $btn-border-radius-base;
+	text-shadow: 0.1rem 0.1rem 0.3rem #888;
+	font-weight: bold;
+	font-size: 1.9rem;
+	text-transform: uppercase;
+}

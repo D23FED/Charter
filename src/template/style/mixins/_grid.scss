@@ -1,0 +1,48 @@
+@mixin bs-column-padding($padding: $grid-gutter-width / 2) {
+	padding: {
+		left: $padding;
+		right: $padding;
+	}
+}
+
+@mixin bs-column($pos: relative) {
+	position: $pos;
+	min-height: .1rem;
+	@include bs-column-padding;
+}
+
+@mixin bs-row($clearfix: true) {
+	margin-left: -$grid-gutter-width / 2;
+	margin-right: -$grid-gutter-width / 2;
+	@if $clearfix==true {
+		@include clearfix;
+	}
+}
+
+@mixin bs-row-reset {
+	margin: 0;
+	&::before,
+	&::after {
+		display: none;
+	}
+}
+
+@mixin container-w() {
+	@include breakpoint('sm') {
+		max-width: map-get($breakpoints, 'sm');
+	}
+	@include breakpoint('md') {
+		max-width: map-get($breakpoints, 'md');
+	}
+	@include breakpoint('lg') {
+		max-width: map-get($breakpoints, 'lg');
+	}
+}
+
+@mixin container-spacing(: $grid-gutter-width) {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: floor(($gutter / 2));
+	padding-right: ceil(($gutter / 2));
+	@include clearfix;
+}
