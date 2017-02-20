@@ -35,7 +35,7 @@ var
 		lobResidential: 'res/',
 		lobBusiness: 'bus/',
 		lobEnterprise: 'ent/',
-		lobCommom: 'com/'
+		lobCommon: 'com/'
 	},
 	globs = {
 		css: '**/*.css',
@@ -139,11 +139,11 @@ var
 		$.stylefmt()
 	],
 	sassIncludePaths = [
-		'src/template/style/',
-		'src/res/style/',
-		'src/bus/style/',
-		// 'src/ent/style/',
-		'style/'
+		paths.source,
+		paths.source + 'template/style/',
+		paths.source + paths.lobCommon + 'style/',
+		paths.source + paths.lobResidential + 'style/',
+		paths.source + paths.lobBusiness + 'style/'
 	];
 // Sass => CSS
 gulp.task('style', function() {
