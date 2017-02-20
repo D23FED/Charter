@@ -1,4 +1,4 @@
-// Colors from Brand Guide
+// Residential
 // Primary
 $blue: #003057;
 // Secondary
@@ -12,7 +12,28 @@ $yellow: #faa41a;
 $pink: #96004d;
 $purple: #500778;
 
+
+// Business
+// Primary
+$bus-blue: #00629b;
+$bus-lt-gray: #919191;
+// "charcoal"
+$bus-gray: #333;
+$bus-blue-teal: #0672A1;
+$bus-md-blue: #428bca;
+$bus-gold: #fdaa18;
+// Secondary
+$bus-teal: #18b9a0;
+// "brushed gold"
+$bus-yellow: #ffbc00;
+$bus-md-gray: #535353;
+// Tertiary
+// "mustard"
+$bus-dk-yellow: #daa000;
+
+
 // Not from style guide
+$white: #fff;
 $md-blue-fill: #004e7d;
 $lt-orange: #feb533;
 $lt-orange-2: #ffb229;
@@ -34,9 +55,3 @@ $gray-ef: #efefef;
 $link-default: $md-blue;
 $link-hover-default: $blue;
 
-
-// Mismatches from style guides
-// Medium Blue:
-// #004E7D
-// Light blue:
-// #0B77BB

@@ -23,8 +23,18 @@ if (file_exists($site['files']['page_vars'])) {
 	// Site CSS
 	html_comment('Global Style');
 	stylesheet($site['assets']['site_css']);
-	// LOB CSS
-	stylesheet('','lob-style');
+	// LoB CSS
+	if ( isset($document['component']['lob']) ) {
+		if ( $document['component']['lob'] === 'residental') {
+			// Residental CSS
+			html_comment('Residential Style');
+			stylesheet($site['assets']['residential_css']);
+		} else if ( $document['component']['lob'] === 'business') {
+			// Business CSS
+			html_comment('Business Style');
+			stylesheet($site['assets']['business_css']);
+		}
+	}
 	// Page-specific style
 	html_comment('Page-specific style');
 	stylesheet('style/style.css');

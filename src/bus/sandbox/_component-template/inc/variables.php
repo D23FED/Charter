@@ -7,7 +7,7 @@ $document = array(
 	),
 	'component' => array(
 		'name' => '',
-		'lob'  => 'common', //common, residental, business, or enterprise
+		'lob'  => 'business', //common, residental, business, or enterprise
 		'lob_switch' => false //enable switching between several lines of business for a single component
 	),
 	'site_header'    => true,

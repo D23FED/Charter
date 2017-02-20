@@ -21,7 +21,9 @@ $breakpoint-lg-max: (map-get($breakpoints,'lg') - 1px);
 $font-sans-default: Helvetica, Arial, sans-serif;
 $font-open-sans: "Open Sans";
 $font-font-awesome: FontAwesome;
+$font-charter-icons: "Charter Icons";
 $font-stack-sans: unquote($font-open-sans+ ', ' + $font-sans-default);
+$font-stack-icon: $font-font-awesome;
 $font-stack-icon: $font-font-awesome;
 
 // Global
@@ -46,3 +48,7 @@ $zi-primary-nav-sm: 1000;
 $zi-popover: 100;
 $zi-megamenu: 150;
 $zi-icon-map-marker: 10;
+// Business z-indexes
+$z-layer-bus : (
+	btn-icon: 10
+)
