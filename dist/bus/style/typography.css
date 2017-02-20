@@ -1,0 +1,174 @@
+/* Typography: Common */
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #333;
+}
+
+/* Typography: Business */
+
+/* Headings: Business */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	margin: 0.5rem 0;
+}
+
+h1,
+.h1 {
+	font-size: 2.8rem;
+	font-weight: 400;
+	color: #00629b;
+}
+
+h2,
+.h2 {
+	font-size: 2.3rem;
+	color: #00629b;
+	font-weight: 400;
+}
+
+h3,
+.h3 {
+	color: #00629b;
+	font-weight: 600;
+	font-weight: 1.8rem;
+}
+
+h4,
+.h4 {
+	font-size: 1.7rem;
+	font-weight: 400;
+	color: #333;
+}
+
+h5,
+.h5 {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: #333;
+}
+
+h6,
+.h6 {
+	font-size: 1.6rem;
+	color: #333;
+}
+
+h6,
+.h6,
+a {
+	font-weight: 600;
+}
+
+a {
+	color: #00629b;
+	cursor: pointer;
+	font-style: normal;
+	margin: 0;
+	text-decoration: underline;
+	vertical-align: baseline;
+}
+
+a:focus,
+a:hover {
+	color: #003057;
+}
+
+.lead {
+	color: #333;
+	margin-bottom: 0.5rem;
+	font-weight: 400;
+}
+
+.small,
+ul,
+ol,
+dl {
+	color: #333;
+}
+
+ul,
+ol,
+dl {
+	line-height: 1.57;
+}
+
+.caption,
+figcaption {
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+
+.disclaimer {
+	font-size: 1.1rem;
+	color: #808285;
+}
+
+@media (min-width: 768px) {
+	h1,
+	.h1 {
+		font-size: 3.2rem;
+	}
+
+	h2,
+	.h2 {
+		font-size: 2.6rem;
+	}
+
+	h3,
+	.h3 {
+		font-size: 2.1rem;
+	}
+
+	.lead {
+		font-size: 1.6rem;
+	}
+}
+
+@media (min-width: 992px) {
+	h1,
+	.h1 {
+		font-size: 4rem;
+	}
+
+	h2,
+	.h2 {
+		font-size: 3rem;
+	}
+
+	h3,
+	.h3 {
+		font-size: 2.4rem;
+	}
+
+	h4,
+	.h4 {
+		font-size: 2rem;
+	}
+
+	h5,
+	.h5 {
+		font-size: 1.8rem;
+	}
+
+	.lead {
+		font-size: 1.8rem;
+	}
+}
+
+/*# sourceMappingURL=typography.css.map */
