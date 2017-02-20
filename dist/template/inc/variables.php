@@ -1,4 +1,4 @@
-<!-- Global vars loaded --><?php
+<?php
 // Global site variables
 $site = array(
 	'title' => 'Charter Spectrum',
