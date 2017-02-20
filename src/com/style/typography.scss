@@ -1,0 +1,13 @@
+@import 'initialize';
+
+/* Typography: Common */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-stack-sans;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}

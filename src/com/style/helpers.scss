@@ -1,0 +1,12 @@
+@import 'initialize';
+
+$colors: (
+	white: #fff,
+	black: #000
+);
+@each $name,
+$color in $colors {
+	.text-#{$name} {
+		color: $color;
+	}
+}

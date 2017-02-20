@@ -1,0 +1,100 @@
+@at-root {
+	/* Text helpers: Common */
+}
+
+// Weights
+.font-light {
+	font-weight: 300;
+}
+
+.font-medium {
+	font-weight: 400;
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+.font-bold,
+.text-bold {
+	font-weight: 700;
+}
+
+.font-extra-bold {
+	font-weight: 900;
+}
+
+// Styles
+.font-italic {
+	font-style: italic;
+}
+
+// Decoration
+.font-underline {
+	text-decoration: underline;
+}
+
+.font-underline-none {
+	&,
+	& a {
+		text-decoration: none;
+	}
+}
+
+//  Font size helpers
+@for $i from 8 through 36 {
+	$size: $i * 0.1rem;
+	.fs-#{$i} {
+		font-size: $size;
+	}
+}
+
+.text-no-wrap {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+// Alignment
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+//  Responsive text alignment
+@each $position in (left, center, right) {
+	@each $bp-name,
+	$bp-width in $breakpoints {
+		@if $bp-name !='xxs' {
+			@media (min-width: $bp-width) {
+				.text-#{$position}-#{$bp-name} {
+					text-align: $position;
+				}
+			}
+		}
+	}
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+// Horizontal rules
+hr {
+	&.spacer {
+		margin-top: 2.0rem;
+		margin-bottom: 2.0rem;
+		border: 0;
+		border-top: none;
+	}
+	&.inset {
+		width: 60%;
+	}
+	&.black {
+		border-top: 0.1rem solid $dk-gray;
+	}
+}
