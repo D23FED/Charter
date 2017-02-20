@@ -140,8 +140,8 @@ var
 	],
 	sassIncludePaths = [
 		paths.source,
-		paths.source + 'template/style/',
 		paths.source + paths.lobCommon + 'style/',
+		paths.source + 'template/style/',
 		paths.source + paths.lobResidential + 'style/',
 		paths.source + paths.lobBusiness + 'style/'
 	];
