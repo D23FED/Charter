@@ -1,9 +1,9 @@
 /* Common styles */
 // This file is primarily for loading the proper styles on the prototype site (this) itself. The compiled CSS doesn't get released/ingested in this form.
 // Variables & Mixins
-@import 'variables';
-@import 'functions';
+@import '../../com/style/variables';
+@import '../../com/style/functions';
 @import 'lib/bootstrap/mixins';
-@import 'mixins';
+@import '../../com/style/mixins';
 @import 'typefaces';
 @import 'base';

@@ -1,0 +1,63 @@
+@import 'initialize';
+@import 'com/style/typography';
+
+/* Typography: Business */
+
+body {
+	color: $dk-gray;
+}
+
+@import 'typography/headings';
+// Links
+a {
+	color: $md-blue;
+	cursor: pointer;
+	font-style: normal;
+	font-weight: 600;
+	margin: 0;
+	text-decoration: underline;
+	vertical-align: baseline;
+	@include hover-focus {
+		color: $blue;
+	}
+}
+
+// Subheading copy
+.lead {
+	color: $dk-gray;
+	margin-bottom: 0.5rem;
+	font-weight: normal;
+	@include breakpoint('sm') {
+		font-size: 1.6rem;
+	}
+	@include breakpoint('md') {
+		font-size: 1.8rem;
+	}
+}
+
+// Secondary body copy, lists, and disclaimers
+.small {
+	color: $dk-gray;
+}
+
+// Lists
+ul,
+ol,
+dl {
+	color: $dk-gray;
+	line-height: 1.57;
+}
+
+// Image captions
+.caption,
+figcaption {
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+
+// Disclaimers
+.disclaimer {
+	font-size: 1.1rem;
+	color: $gray;
+}
+

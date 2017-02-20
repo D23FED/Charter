@@ -106,4 +106,466 @@
 	z-index: 10;
 }
 
+.text-white {
+	color: #fff;
+}
+
+.text-black {
+	color: #000;
+}
+
+/* Text helpers: Common */
+.font-light {
+	font-weight: 300;
+}
+
+.font-medium {
+	font-weight: 400;
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+.font-bold,
+.text-bold {
+	font-weight: 700;
+}
+
+.font-extra-bold {
+	font-weight: 900;
+}
+
+.font-italic {
+	font-style: italic;
+}
+
+.font-underline {
+	text-decoration: underline;
+}
+
+.font-underline-none,
+.font-underline-none a {
+	text-decoration: none;
+}
+
+.fs-8 {
+	font-size: 0.8rem;
+}
+
+.fs-9 {
+	font-size: 0.9rem;
+}
+
+.fs-10 {
+	font-size: 1rem;
+}
+
+.fs-11 {
+	font-size: 1.1rem;
+}
+
+.fs-12 {
+	font-size: 1.2rem;
+}
+
+.fs-13 {
+	font-size: 1.3rem;
+}
+
+.fs-14 {
+	font-size: 1.4rem;
+}
+
+.fs-15 {
+	font-size: 1.5rem;
+}
+
+.fs-16 {
+	font-size: 1.6rem;
+}
+
+.fs-17 {
+	font-size: 1.7rem;
+}
+
+.fs-18 {
+	font-size: 1.8rem;
+}
+
+.fs-19 {
+	font-size: 1.9rem;
+}
+
+.fs-20 {
+	font-size: 2rem;
+}
+
+.fs-21 {
+	font-size: 2.1rem;
+}
+
+.fs-22 {
+	font-size: 2.2rem;
+}
+
+.fs-23 {
+	font-size: 2.3rem;
+}
+
+.fs-24 {
+	font-size: 2.4rem;
+}
+
+.fs-25 {
+	font-size: 2.5rem;
+}
+
+.fs-26 {
+	font-size: 2.6rem;
+}
+
+.fs-27 {
+	font-size: 2.7rem;
+}
+
+.fs-28 {
+	font-size: 2.8rem;
+}
+
+.fs-29 {
+	font-size: 2.9rem;
+}
+
+.fs-30 {
+	font-size: 3rem;
+}
+
+.fs-31 {
+	font-size: 3.1rem;
+}
+
+.fs-32 {
+	font-size: 3.2rem;
+}
+
+.fs-33 {
+	font-size: 3.3rem;
+}
+
+.fs-34 {
+	font-size: 3.4rem;
+}
+
+.fs-35 {
+	font-size: 3.5rem;
+}
+
+.fs-36 {
+	font-size: 3.6rem;
+}
+
+.text-no-wrap {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+hr.spacer {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	border: 0;
+	border-top: none;
+}
+
+hr.inset {
+	width: 60%;
+}
+
+hr.black {
+	border-top: 0.1rem solid #333;
+}
+
+.text-teal {
+	color: #18b9a0;
+}
+
+.bg-teal {
+	background-color: #18b9a0;
+}
+
+.bullets-teal {
+	color: #18b9a0;
+}
+
+.text-blue {
+	color: #00629b;
+}
+
+.bg-blue {
+	background-color: #00629b;
+}
+
+.bullets-blue {
+	color: #00629b;
+}
+
+.bullets-blue,
+.bullets-black,
+.bullets-white {
+	list-style: none;
+	padding-left: 1em;
+}
+
+.bullets-blue li::before,
+.bullets-black li::before,
+.bullets-white li::before {
+	content: '\2022';
+	display: block;
+	position: relative;
+	max-height: 0;
+	left: -1em;
+	font-size: 1em;
+}
+
+/* Typography: Common */
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: Open Sans,Helvetica,Arial,sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #333;
+}
+
+/* Typography: Business */
+
+/* Headings: Business */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	margin: 0.5rem 0;
+}
+
+h1,
+.h1 {
+	font-size: 2.8rem;
+	font-weight: 400;
+	color: #00629b;
+}
+
+h2,
+.h2 {
+	font-size: 2.3rem;
+	color: #00629b;
+	font-weight: 400;
+}
+
+h3,
+.h3 {
+	color: #00629b;
+	font-weight: 600;
+	font-weight: 1.8rem;
+}
+
+h4,
+.h4 {
+	font-size: 1.7rem;
+	font-weight: 400;
+	color: #333;
+}
+
+h5,
+.h5 {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: #333;
+}
+
+h6,
+.h6 {
+	font-size: 1.6rem;
+	color: #333;
+}
+
+h6,
+.h6,
+a {
+	font-weight: 600;
+}
+
+a {
+	color: #00629b;
+	cursor: pointer;
+	font-style: normal;
+	margin: 0;
+	text-decoration: underline;
+	vertical-align: baseline;
+}
+
+a:focus,
+a:hover {
+	color: #003057;
+}
+
+.lead {
+	color: #333;
+	margin-bottom: 0.5rem;
+	font-weight: 400;
+}
+
+.small,
+ul,
+ol,
+dl {
+	color: #333;
+}
+
+ul,
+ol,
+dl {
+	line-height: 1.57;
+}
+
+.caption,
+figcaption {
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+
+.disclaimer {
+	font-size: 1.1rem;
+	color: #808285;
+}
+
+@media (min-width: 544px) {
+	.text-left-xs {
+		text-align: left;
+	}
+
+	.text-center-xs {
+		text-align: center;
+	}
+
+	.text-right-xs {
+		text-align: right;
+	}
+}
+
+@media (min-width: 768px) {
+	.text-left-sm {
+		text-align: left;
+	}
+
+	.text-center-sm {
+		text-align: center;
+	}
+
+	.text-right-sm {
+		text-align: right;
+	}
+
+	h1,
+	.h1 {
+		font-size: 3.2rem;
+	}
+
+	h2,
+	.h2 {
+		font-size: 2.6rem;
+	}
+
+	h3,
+	.h3 {
+		font-size: 2.1rem;
+	}
+
+	.lead {
+		font-size: 1.6rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.text-left-md {
+		text-align: left;
+	}
+
+	.text-center-md {
+		text-align: center;
+	}
+
+	.text-right-md {
+		text-align: right;
+	}
+
+	h1,
+	.h1 {
+		font-size: 4rem;
+	}
+
+	h2,
+	.h2 {
+		font-size: 3rem;
+	}
+
+	h3,
+	.h3 {
+		font-size: 2.4rem;
+	}
+
+	h4,
+	.h4 {
+		font-size: 2rem;
+	}
+
+	h5,
+	.h5 {
+		font-size: 1.8rem;
+	}
+
+	.lead {
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.text-left-lg {
+		text-align: left;
+	}
+
+	.text-center-lg {
+		text-align: center;
+	}
+
+	.text-right-lg {
+		text-align: right;
+	}
+}
+
 /*# sourceMappingURL=business.css.map */

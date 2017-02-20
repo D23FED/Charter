@@ -22,6 +22,10 @@
 	src: url(../../res/fonts/bootstrap-icons/glyphicons-halflings-regular.eot?iefix) format("eot"), url(../../res/fonts/bootstrap-icons/glyphicons-halflings-regular.woff) format("woff"), url(../../res/fonts/bootstrap-icons/glyphicons-halflings-regular.ttf) format("truetype"), url(../../res/fonts/bootstrap-icons/glyphicons-halflings-regular.svg#webfont) format("svg");
 }
 
+main {
+	margin-bottom: 5rem;
+}
+
 .container-fixed {
 	max-width: 1200px;
 	display: block;

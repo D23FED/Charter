@@ -1,0 +1,33 @@
+@import 'initialize';
+@import 'com/style/helpers';
+@import 'com/style/helpers/text';
+$colors: ( teal: $bus-teal, blue: $md-blue);
+@each $name,
+$color in $colors {
+	.text-#{$name} {
+		color: $color;
+	}
+	.bg-#{$name} {
+		background-color: $color;
+	}
+	.bullets-#{$name} {
+		color: $color;
+	}
+}
+
+// Lists
+.bullets-blue,
+.bullets-black,
+.bullets-white {
+	list-style: none;
+	padding-left: 1em;
+	li::before {
+		content: '\2022';
+		display: block;
+		position: relative;
+		max-height: 0;
+		left: -1em;
+		font-size: 1em;
+	}
+}
+

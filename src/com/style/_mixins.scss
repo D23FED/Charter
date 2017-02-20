@@ -35,3 +35,10 @@
 @mixin bg-white($percent: 100) {
 	background-color: rgba(255, 255, 255, ($percent * .01));
 }
+
+@mixin heading($tag) {
+	#{$tag},
+	.#{$tag} {
+		@content;
+	}
+}
