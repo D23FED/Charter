@@ -1,4 +1,9 @@
 /* Business style */
-@import 'buttons';
-@import 'helpers';
-@import 'typography';
+@import 'initialize';
+@import
+	'typography',
+	'helpers',
+	'header',
+	'footer',
+	'buttons'
+;
