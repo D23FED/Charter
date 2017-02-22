@@ -1,0 +1,48 @@
+@import 'initialize';
+
+/* Site header 02 */
+
+// Packages header w/logo, support menu, and ZIP Code dropdown form
+.site-header-top-02 {
+	padding-top: $site-header-padding-top;
+	padding-bottom: $site-header-padding-bottom;
+	// Container + Layout Container = double padding
+	.aem-Grid {
+		#{$grid-column} {
+			&:first-child {
+				padding-left: 0;
+			}
+			&+#{$grid-column} {
+				padding-right: 0;
+			}
+		}
+	}
+	.site-header-aside {
+		.link-phone {
+			a {
+				color: $md-blue;
+				display: inline-block;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+					color: $bus-teal;
+					& path {
+						fill: $bus-teal;
+					}
+				}
+			}
+			svg {
+				width: 30px;
+				display: block;
+				margin: 0 auto;
+			}
+			path {
+				fill: $md-blue;
+			}
+			a, path {
+				transition: all $transition-time-default ease-out;
+				transition-property: color, fill;
+			}
+		}
+	}
+}

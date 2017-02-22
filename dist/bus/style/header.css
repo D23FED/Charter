@@ -1,2 +1,48 @@
+/* Site header 01 */
+.site-header-01 {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.site-header-01 .aem-Grid [class*="aem-GridColumn"]:first-child {
+	padding-left: 0;
+}
+
+.site-header-01 .aem-Grid [class*="aem-GridColumn"] + [class*="aem-GridColumn"] {
+	padding-right: 0;
+}
+
+.site-header-01 .site-header-aside .link-phone a {
+	color: #00629b;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.site-header-01 .site-header-aside .link-phone a:hover {
+	text-decoration: underline;
+	color: #18b9a0;
+}
+
+.site-header-01 .site-header-aside .link-phone a:hover path {
+	fill: #18b9a0;
+}
+
+.site-header-01 .site-header-aside .link-phone svg {
+	width: 30px;
+	display: block;
+	margin: 0 auto;
+}
+
+.site-header-01 .site-header-aside .link-phone path {
+	fill: #00629b;
+}
+
+.site-header-01 .site-header-aside .link-phone a,
+.site-header-01 .site-header-aside .link-phone path {
+	-webkit-transition: all 150ms ease-out;
+	transition: all 150ms ease-out;
+	-webkit-transition-property: color, fill;
+	transition-property: color, fill;
+}
 
 /*# sourceMappingURL=header.css.map */
