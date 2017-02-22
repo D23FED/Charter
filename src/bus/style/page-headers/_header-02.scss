@@ -3,46 +3,87 @@
 /* Site header 02 */
 
 // Packages header w/logo, support menu, and ZIP Code dropdown form
-.site-header-top-02 {
-	padding-top: $site-header-padding-top;
-	padding-bottom: $site-header-padding-bottom;
+.site-header-02 {
 	// Container + Layout Container = double padding
 	.aem-Grid {
 		#{$grid-column} {
 			&:first-child {
 				padding-left: 0;
+				padding-right: 0;
+				@include breakpoint('sm') {
+					padding-right: $column-padding;
+				}
 			}
 			&+#{$grid-column} {
 				padding-right: 0;
 			}
 		}
 	}
+	// Menu row containing primary nav
+	.menu-row-nav {
+		padding-top: $site-header-padding-top;
+		padding-bottom: $site-header-padding-bottom;
+		background-color: $bus-md-blue;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		@include breakpoint('sm') {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	// Menu row containing message and forms (such as Search or ZIP)
+	.menu-row-message {
+		padding-top: $site-header-padding-top;
+		padding-bottom: $site-header-padding-bottom;
+	}
 	.site-header-aside {
-		.link-phone {
-			a {
-				color: $md-blue;
-				display: inline-block;
-				text-decoration: none;
-				&:hover {
-					text-decoration: underline;
-					color: $bus-teal;
-					& path {
-						fill: $bus-teal;
-					}
+		ul,
+		ol {
+			margin-bottom: 0;
+			text-align: right;
+			font-size: 0;
+		}
+		li {
+			padding-left: 0.2rem;
+			padding-right: 0.2rem;
+			@include breakpoint('sm') {
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+			}
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			font-size: 1.2rem;
+			font-weight: normal;
+			@include hover-focus {
+				text-decoration: underline;
+				color: $bus-brt-blue;
+				path {
+					fill: $bus-brt-blue;
 				}
 			}
-			svg {
-				width: 30px;
-				display: block;
-				margin: 0 auto;
+			@include breakpoint('sm') {
+				font-weight: 600;
+				font-size: $font-size-default;
 			}
-			path {
-				fill: $md-blue;
+		}
+		path {
+			fill: white;
+		}
+		svg {
+			max-width: 2rem;
+			display: block;
+			margin: 0 auto;
+						@include breakpoint('sm') {
+			max-width: 3rem;
 			}
-			a, path {
-				transition: all $transition-time-default ease-out;
-				transition-property: color, fill;
-			}
+
+		}
+		a,
+		path {
+			transition: all $transition-time-default ease-out;
+			transition-property: color, fill;
 		}
 	}
 }
