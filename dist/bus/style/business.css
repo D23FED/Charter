@@ -421,8 +421,77 @@ hr.black {
 }
 
 .site-header-02 .menu-row-message {
+	padding: 1rem 0.5rem;
+	/* 1rem */
+}
+
+.site-header-02 .menu-row-message .container .container {
+	padding: 0;
+	width: auto;
+}
+
+.site-header-02 .spectrum-customerLocation,
+.site-header-02 .spectrum-customerLocation .aem-Grid .aem-GridColumn:first-child {
+	position: relative;
+}
+
+.site-header-02 .spectrum-customerLocation .aem-Grid .aem-GridColumn:first-child::before {
+	top: 1px;
+	display: inline-block;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	font-family: FontAwesome;
+	content: '\f041';
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	color: #03a8e0;
+	font-size: 2rem;
+}
+
+.site-header-02 .spectrum-customerLocation .glyphicon-map-marker {
+	display: none;
+}
+
+.site-header-02 .spectrum-customerLocation p {
+	font-size: 1.2rem;
+	line-height: 1.3;
+	margin-bottom: 0;
+	padding-left: 3rem;
+	color: #666;
+}
+
+.site-header-02 .geoLoc {
 	padding-top: 1rem;
-	padding-bottom: 1rem;
+	margin-left: -1.5rem;
+}
+
+.site-header-02 .geoLoc input,
+.site-header-02 .geoLoc button {
+	float: left;
+}
+
+.site-header-02 .geoLoc input {
+	width: 64%;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	border-color: #7ce5ff;
+	border-style: solid;
+	border-radius: 0.5rem;
+	margin-right: 1%;
+}
+
+.site-header-02 .geoLoc button {
+	width: 35%;
+	padding: 0.2rem 0.6rem;
+	line-height: inherit;
+}
+
+.site-header-02 .geoLoc button::after {
+	display: none;
 }
 
 .site-header-02 .site-header-aside ul,
@@ -437,11 +506,19 @@ hr.black {
 	padding-right: 0.2rem;
 }
 
+.site-header-02 .site-header-aside a,
+.site-header-02 .site-header-aside path {
+	-webkit-transition: all 150ms ease-out;
+	transition: all 150ms ease-out;
+}
+
 .site-header-02 .site-header-aside a {
 	color: white;
 	text-decoration: none;
 	font-size: 1.2rem;
 	font-weight: 400;
+	-webkit-transition-property: color;
+	transition-property: color;
 }
 
 .site-header-02 .site-header-aside a:focus,
@@ -457,6 +534,8 @@ hr.black {
 
 .site-header-02 .site-header-aside path {
 	fill: white;
+	-webkit-transition-property: fill;
+	transition-property: fill;
 }
 
 .site-header-02 .site-header-aside svg {
@@ -465,24 +544,16 @@ hr.black {
 	margin: 0 auto;
 }
 
-.site-header-02 .site-header-aside a,
-.site-header-02 .site-header-aside path {
-	-webkit-transition: all 150ms ease-out;
-	transition: all 150ms ease-out;
-	-webkit-transition-property: color, fill;
-	transition-property: color, fill;
-}
-
 .btn {
 	font-weight: 500;
 	font-size: 1.7rem;
 }
 
-.btn.btn-fw {
+.btn-fw {
 	width: 100%;
 }
 
-.btn.btn-no-wrap {
+.btn-no-wrap {
 	white-space: nowrap;
 }
 
@@ -632,6 +703,28 @@ hr.black {
 	.site-header-02 .menu-row-nav {
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	.site-header-02 .menu-row-message {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.site-header-02 .spectrum-customerLocation p {
+		font-size: 1.6rem;
+		line-height: 1.42857;
+	}
+
+	.site-header-02 .geoLoc {
+		padding-top: 0;
+	}
+
+	.site-header-02 .geoLoc input {
+		width: 79%;
+	}
+
+	.site-header-02 .geoLoc button {
+		width: 20%;
 	}
 
 	.site-header-02 .site-header-aside li {

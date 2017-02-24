@@ -3,11 +3,11 @@
 	font-size: 1.7rem;
 }
 
-.btn.btn-fw {
+.btn-fw {
 	width: 100%;
 }
 
-.btn.btn-no-wrap {
+.btn-no-wrap {
 	white-space: nowrap;
 }
 
