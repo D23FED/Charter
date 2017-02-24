@@ -1,0 +1,260 @@
+@import 'initialize';
+$file-title: 'Site header 03';
+
+/* #{$file-title} */
+
+$map-marker-icon-size: 2rem;
+$zip-input-m-size: 1%;
+$zip-input-size: 65% - $zip-input-m-size;
+$zip-sm-input-size: 80% - $zip-input-m-size;
+$zip-btn-size: 100% - ($zip-input-size + $zip-input-m-size);
+$zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
+$menu-top-font-size-scale-factor: .8;
+// Packages header w/logo, support menu, and ZIP Code dropdown form
+.site-header-03 {
+	// Container + Layout Container = double padding
+	.aem-Grid {
+		#{$grid-column} {
+			&:first-child {
+				padding-left: 0;
+				padding-right: 0;
+				@include breakpoint('sm') {
+					padding-right: $column-padding;
+				}
+			}
+			&+#{$grid-column} {
+				padding-right: 0;
+			}
+		}
+	}
+	.menu-row {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		@include breakpoint('sm') {
+			display: block;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	// Top menu row
+	.menu-row-top {
+		padding-top: $site-header-padding-top * $menu-top-font-size-scale-factor;
+		padding-bottom: $site-header-padding-bottom * $menu-top-font-size-scale-factor;
+		background-color: white;
+		display: none;
+		font-size: 1.2rem;
+		color: $md-blue;
+		@include breakpoint('sm') {
+			display: block;
+		}
+		ol, ul{
+			margin-bottom: 0;
+		}
+		a {
+			text-decoration: none;
+			@include hover-focus {
+				color: $bus-teal;
+				text-decoration: underline;
+				path {
+					fill: $bus-teal;
+				}
+			}
+		}
+		.menu-support {
+			text-align: right;
+			svg {
+				width: 1.5rem;
+				fill: $md-blue;
+				float: left;
+				margin-right: 0.2rem;
+			}
+		}
+	}
+	// Primary menu row; site logo, link to phone, MUI form
+	.menu-row-main {
+		padding-top: $site-header-padding-top;
+		padding-bottom: $site-header-padding-bottom;
+		background-color: $bus-md-blue;
+		.customWrapper {
+			display: inline-block;
+			overflow: hidden;
+			vertical-align: middle;
+		}
+		// Contains link to phone and MUI form
+		.site-header-aside {
+			text-align: right;
+		}
+		// link to phone
+		.menu-support {
+			display: inline-block;
+		}
+		// , MUI form
+		.mui-wrapper {
+			// Fix for button class applied to wrapper
+			[class*='btn'].zipAction {
+				background: none;
+				&:focus {
+					outline: none;
+				}
+			}
+			button {
+				vertical-align: middle;
+				// @include spe_button-variant($btn-default-colors);
+			}
+			.description {
+				color: white;
+				font-size: 1.4rem;
+				margin-bottom: 0.3rem;
+				text-align: center;
+			}
+		}
+		.site-header-aside {
+			ul,
+			ol {
+				margin-bottom: 0;
+				text-align: right;
+				font-size: 0;
+			}
+			li {
+				padding-left: 0.2rem;
+				padding-right: 0.2rem;
+				@include breakpoint('sm') {
+					padding-left: 0.5rem;
+					padding-right: 0.5rem;
+				}
+			}
+			a,
+			path {
+				transition: all $transition-time-default ease-out;
+			}
+			a {
+				color: white;
+				text-decoration: none;
+				font-size: 1.2rem;
+				font-weight: normal;
+				transition-property: color;
+				@include hover-focus {
+					text-decoration: underline;
+					color: $bus-brt-blue;
+					path {
+						fill: $bus-brt-blue;
+					}
+				}
+				@include breakpoint('sm') {
+					font-weight: 600;
+					font-size: $font-size-default;
+				}
+			}
+			path {
+				fill: white;
+				transition-property: fill;
+			}
+			svg {
+				max-width: 2rem;
+				display: block;
+				margin: 0 auto;
+				@include breakpoint('sm') {
+					max-width: 3rem;
+				}
+			}
+		}
+		// ZIP Code <form>
+		.geoLoc {
+			margin-left: 0;
+		}
+	}
+	// Links to Charter, Reach and Enterprise
+	.menu-sister-sites {
+		ol,
+		ul {
+			line-height: 0;
+		}
+		li {
+			border-color: $md-blue;
+			line-height: 1;
+		}
+	}
+	// Contains ZIP Code and Search forms
+	.menu-row-message {
+		padding-top: $site-header-padding-top;
+		padding-bottom: $site-header-padding-bottom;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		@include breakpoint('sm') {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.container .container {
+			padding: 0;
+			width: auto;
+		}
+	}
+	// Menu row containing message and forms (such as Search or ZIP)
+	// ZIP Code form group beneath header
+	.spectrum-customerLocation {
+		position: relative;
+		.aem-Grid .aem-GridColumn {
+			&:first-child {
+				position: relative;
+				&::before {
+					top: 1px;
+					display: inline-block;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 1;
+					font-awesome: map-marker;
+					@include vertical-center();
+					color: #03a8e0;
+					font-size: $map-marker-icon-size;
+				}
+			}
+		}
+		// Map marker icon div
+		.glyphicon-map-marker {
+			display: none;
+		}
+		// User instructions
+		p {
+			font-size: 1.2rem;
+			line-height: 1.3;
+			@include breakpoint('sm') {
+				font-size: $font-size-default;
+				line-height: $line-height-base;
+			}
+			margin-bottom: 0;
+			padding-left: $map-marker-icon-size+1rem;
+			color: #666;
+		}
+	}
+	// ZIP Code <form>
+	.geoLoc {
+		padding-top: 1rem;
+		margin-left: -$column-padding;
+		@include breakpoint('sm') {
+			padding-top: 0;
+		}
+		input,
+		button {
+			float: left;
+		}
+		input {
+			width: $zip-input-size;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+			// border-color: $bus-brt-blue;
+			// border-style: solid;
+			// border-radius: 0.5rem;
+			margin-right: $zip-input-m-size;
+			@include breakpoint('sm') {
+				width: $zip-sm-input-size;
+			}
+		}
+		button {
+			width: $zip-btn-size;
+			line-height: inherit;
+			@include breakpoint('sm') {
+				width: $zip-sm-btn-size;
+			}
+		}
+	}
+}

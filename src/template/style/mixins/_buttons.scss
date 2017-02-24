@@ -20,7 +20,6 @@
 // 	active-hover-bg: #000000,
 // 	active-hover-bd: #000000
 // );
-
 @mixin spe_button-variant($color-map) {
 	// Default
 	$btn-color: map-get($color-map, color);
@@ -70,7 +69,6 @@
 	@if map-has-key($color-map, hover-bg) {
 		$btn-bg-color-hover: map-get($color-map, hover-bg);
 	}
-
 	@if map-has-key($color-map, hover-bd) {
 		$btn-bd-color-hover: map-get($color-map, hover-bd);
 	}
@@ -78,7 +76,6 @@
 	@if map-has-key($color-map, focus-bg) {
 		$btn-bg-color-focus: map-get($color-map, focus-bg);
 	}
-
 	@if map-has-key($color-map, focus-bd) {
 		$btn-bd-color-focus: map-get($color-map, focus-bd);
 	}
@@ -86,7 +83,6 @@
 	@if map-has-key($color-map, active-bg) {
 		$btn-bg-color-active: map-get($color-map, active-bg);
 	}
-
 	@if map-has-key($color-map, active-bd) {
 		$btn-bd-color-active: map-get($color-map, active-bd);
 	}
@@ -94,68 +90,62 @@
 	@if map-has-key($color-map, active-hover-bg) {
 		$btn-bg-color-active-hover: map-get($color-map, active-hover-bg);
 	}
-
 	@if map-has-key($color-map, active-hover-bd) {
 		$btn-bd-color-active-hover: map-get($color-map, active-hover-bd);
 	}
-
-  color: $btn-color;
-  background-color: $btn-bg-color;
-  border-color: $btn-bd-color;
-
+	color: $btn-color;
+	background-color: $btn-bg-color;
+	border-color: $btn-bd-color;
 	// Focus
-  &:focus,
-  &.focus {
-    color: $btn-color-focus;
-    background-color: $btn-bg-color-focus;
-        border-color: $btn-bd-color-focus;
-  }
+	&:focus,
+	&.focus {
+		color: $btn-color-focus;
+		background-color: $btn-bg-color-focus;
+		border-color: $btn-bd-color-focus;
+		outline-color: invert($btn-bg-color-focus);
+	}
 	// Hover
-  &:hover {
-    color: $btn-color-hover;
-    background-color: $btn-bg-color-hover;
-        border-color: $btn-bd-color-hover;
-  }
+	&:hover {
+		color: $btn-color-hover;
+		background-color: $btn-bg-color-hover;
+		border-color: $btn-bd-color-hover;
+	}
 	// Active
 	// .open > &.dropdown-toggle,
-  &:active,
-  &.active  {
-    color: $btn-color-active;
-    background-color: $btn-bg-color-active;
-        border-color: $btn-bd-color-active;
-
+	&:active,
+	&.active {
+		color: $btn-color-active;
+		background-color: $btn-bg-color-active;
+		border-color: $btn-bd-color-active;
 		// Active & hover/focus
-    &:hover,
-    &:focus,
-    &.focus {
-      color: $btn-color-active-hover;
-      background-color: $btn-bg-color-active-hover;
-          border-color: $btn-bd-color-active-hover;
-    }
-  }
+		&:hover,
+		&:focus,
+		&.focus {
+			color: $btn-color-active-hover;
+			background-color: $btn-bg-color-active-hover;
+			border-color: $btn-bd-color-active-hover;
+		}
+	}
 	// .open > &.dropdown-toggle,
-  &:active,
-  &.active
-  {
-    // background-image: none;
-  }
-
+	&:active,
+	&.active {
+		// background-image: none;
+	}
 	// Disabled
 	// fieldset[disabled] &,
-  &.disabled,
-  &[disabled] {
-    &:hover,
-    &:focus,
-    &.focus {
-      background-color: $btn-bg-color;
-          border-color: $btn-bd-color;
-    }
-  }
-
-  // .badge {
-  //   color: $btn-bg-color;
-  //   background-color: $btn-color;
-  // }
+	&.disabled,
+	&[disabled] {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: $btn-bg-color;
+			border-color: $btn-bd-color;
+		}
+	}
+	// .badge {
+	//   color: $btn-bg-color;
+	//   background-color: $btn-color;
+	// }
 }
 
 @mixin btn-default {
@@ -197,4 +187,49 @@
 	font-weight: bold;
 	font-size: 1.9rem;
 	text-transform: uppercase;
+}
+
+// Default buttons for business
+@mixin spe_btn-default-bus() {
+	@include spe_button-variant($btn-default-colors);
+	text-shadow: 0 0.1rem 0.2rem #d36b24;
+	background-image: linear-gradient(to bottom, #fdaa18 0%, #fdaa18 59%, #ffa300 60%, #ffa300 100%);
+	border-width: 0;
+	border-style: none;
+	padding-left: 1.25em;
+	padding-right: 3.05em;
+	position: relative;
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 2.1;
+	box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
+	@include hover-focus {
+		background-image: none;
+		background-color: map-get($btn-default-colors, bg-gradient-hover-start);
+	}
+	&:focus,
+	&.focus {
+		outline-color: invert(map-get($btn-default-colors, bg-gradient-hover-start));
+	}
+	&:active,
+	&.active {
+		box-shadow: inset 0 0.3rem 0.5rem rgba(0, 0, 0, 0.125);
+	}
+	&::after {
+		background: rgba(0, 0, 0, .15);
+		position: absolute;
+		display: inline-block;
+		right: 0;
+		font-size: 1em;
+		border-radius: 0 0.5rem 0.5rem 0;
+		padding: 0 0.5em;
+		font-family: $font-charter-icons;
+		font-style: normal;
+		font-weight: normal;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: "\e601";
+		z-index: map-get($z-layer-bus, btn-icon);
+	}
 }

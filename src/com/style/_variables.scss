@@ -1,6 +1,6 @@
 @import 'colors';
 @import 'variables-bs';
-
+@import '../../bus/style/_variables.scss';
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }

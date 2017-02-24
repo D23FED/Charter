@@ -1,4 +1,27 @@
 @import 'initialize';
+$file-title: 'Site Header';
+
+/* #{$file-title} */
+
 $grid-column: '[class*="aem-GridColumn"]';
+.site-header {
+	.geoloc-btn button {
+		@include spe_btn-default-bus;
+		line-height: inherit;
+		border-width: 0;
+	}
+	a,
+	path {
+		transition: all $transition-time-default ease-out;
+	}
+	a {
+		transition-property: color;
+	}
+	path {
+		transition-property: fill;
+	}
+}
+
 @import 'page-headers/header-01';
 @import 'page-headers/header-02';
+@import 'page-headers/header-03';
