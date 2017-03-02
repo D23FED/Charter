@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-
-@font-face {
-  // font-family: charter-icons;
-  font-family: "Charter Icons";
-  src: url(../../res/fonts/charter-icons/charter-icons.eot);
-  src: url(../../res/fonts/charter-icons/charter-icons.eot?iefix) format("eot"), url(../../res/fonts/charter-icons/charter-icons.woff) format("woff"), url(../../res/fonts/charter-icons/charter-icons.ttf) format("truetype"), url(../../res/fonts/charter-icons/charter-icons.svg#webfont) format("svg");
-}
-
+@import 'fonts/charter-icons';
 @font-face {
   font-family: "Channel Logos";
   src: url(../../res/fonts/channel-logos/channel-logos.eot);

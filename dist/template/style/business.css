@@ -1,5 +1,12 @@
 /* All Business Styles */
 /* Business style */
+
+@font-face {
+	font-family: Charter Icons;
+	src: url(/content/dam/spectrum/common/en/fonts/charter-icons.eot);
+	src: url(/content/dam/spectrum/common/en/fonts/charter-icons.eot?iefix) format("eot"), url(/content/dam/spectrum/common/en/fonts/charter-icons.woff) format("woff"), url(/content/dam/spectrum/common/en/fonts/charter-icons.ttf) format("truetype"), url(/content/dam/spectrum/common/en/fonts/charter-icons.svg#webfont) format("svg");
+}
+
 /* Typography: Common */
 html {
 	font-size: 62.5%;
@@ -428,6 +435,7 @@ hr.black {
 	position: absolute;
 	display: inline-block;
 	right: 0;
+	top: 0;
 	font-size: 1em;
 	border-radius: 0 0.5rem 0.5rem 0;
 	padding: 0 0.5em;
@@ -964,6 +972,7 @@ hr.black {
 	position: absolute;
 	display: inline-block;
 	right: 0;
+	top: 0;
 	font-size: 1em;
 	border-radius: 0 0.5rem 0.5rem 0;
 	padding: 0 0.5em;

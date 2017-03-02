@@ -4,8 +4,8 @@
 
 @font-face {
 	font-family: Charter Icons;
-	src: url(../../res/fonts/charter-icons/charter-icons.eot);
-	src: url(../../res/fonts/charter-icons/charter-icons.eot?iefix) format("eot"), url(../../res/fonts/charter-icons/charter-icons.woff) format("woff"), url(../../res/fonts/charter-icons/charter-icons.ttf) format("truetype"), url(../../res/fonts/charter-icons/charter-icons.svg#webfont) format("svg");
+	src: url(/content/dam/spectrum/common/en/fonts/charter-icons.eot);
+	src: url(/content/dam/spectrum/common/en/fonts/charter-icons.eot?iefix) format("eot"), url(/content/dam/spectrum/common/en/fonts/charter-icons.woff) format("woff"), url(/content/dam/spectrum/common/en/fonts/charter-icons.ttf) format("truetype"), url(/content/dam/spectrum/common/en/fonts/charter-icons.svg#webfont) format("svg");
 }
 
 @font-face {

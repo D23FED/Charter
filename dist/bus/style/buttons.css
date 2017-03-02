@@ -97,6 +97,7 @@
 	position: absolute;
 	display: inline-block;
 	right: 0;
+	top: 0;
 	font-size: 1em;
 	border-radius: 0 0.5rem 0.5rem 0;
 	padding: 0 0.5em;
