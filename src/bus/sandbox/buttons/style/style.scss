@@ -1,5 +1,5 @@
 @import 'initialize';
-// Link button styles
+/* Business: Button-style links */
 // Buttons
 // --------------------------------------------------
 // Base styles
@@ -7,12 +7,6 @@
 .btn {
 	font-weight: 500;
 	font-size: 1.7rem;
-	&:focus,
-	&.focus {
-		outline-offset: 0.2rem;
-		outline-width: 0.1rem;
-		outline-style: dotted;
-	}
 }
 
 .btn-fw {
@@ -38,4 +32,11 @@
 // Variants
 .btn-default {
 	@include spe_btn-default-bus;
+	&:focus,
+	&.focus {
+		outline-offset: 0.2rem;
+		outline-width: 0.1rem;
+		outline-style: dotted;
+		outline-color: #1f6ffd;
+	}
 }

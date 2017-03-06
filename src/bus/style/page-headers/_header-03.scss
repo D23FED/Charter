@@ -10,6 +10,7 @@ $zip-sm-input-size: 80% - $zip-input-m-size;
 $zip-btn-size: 100% - ($zip-input-size + $zip-input-m-size);
 $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 $menu-top-font-size-scale-factor: .8;
+$row-mega-menu-height: 4rem;
 // Packages header w/logo, support menu, and ZIP Code dropdown form
 .site-header-03 {
 	// Container + Layout Container = double padding
@@ -47,7 +48,8 @@ $menu-top-font-size-scale-factor: .8;
 		@include breakpoint('sm') {
 			display: block;
 		}
-		ol, ul{
+		ol,
+		ul {
 			margin-bottom: 0;
 		}
 		a {
@@ -173,6 +175,73 @@ $menu-top-font-size-scale-factor: .8;
 			border-color: $md-blue;
 			line-height: 1;
 		}
+	}
+	// primary nav and subnav, 3rd row
+	.menu-row-mega-menu {
+		background-color: $bus-blue;
+		background: linear-gradient(to bottom, #083e62 0%, #00629b 100%);
+		.container {
+			position: relative;
+		}
+	}
+	// Primary and secondary nav menus
+	.business-navigation {
+		.link-default,
+		.desktopLink a {
+			line-height: $row-mega-menu-height;
+			text-decoration: none;
+			display: block;
+			padding-left: $column-padding;
+			padding-right: $column-padding;
+			font-size: 1.6rem;
+			transition: all $transition-time-default ease-out;
+			transition-property: color, background-color;
+			@include hover-focus {
+				background-color: $bus-teal;
+			}
+		}
+		.list-inline {
+			margin-left: 0;
+			> li {
+				border-bottom: none;
+				border-right: 0.1rem solid $bus-lt-blue;
+				padding-left: 0;
+				padding-right: 0;
+				&.spectrum-first {}
+				// LI containing secondary nav
+				&.spectrum-last {
+					border-width: 0;
+					float: right;
+				}
+			}
+		}
+		.desktopLink a {
+			color: #fff;
+		}
+		ul {
+			margin-bottom: 0;
+			font-size: 0;
+		}
+		// Secondary nav; Insights, Support, Partners
+		.nav-secondary {
+			.mega-menu-item {
+				display: inline-block;
+			}
+			.desktopLink a {
+				font-size: 1.2rem;
+				@include hover-focus {
+					color: $bus-brt-blue;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+	// mega menu submenus
+	.sub-menu-item {
+			position: absolute;
+	background-color: white;
+	border: 1px solid grey;
+	width: 100%;
 	}
 	// Contains ZIP Code and Search forms
 	.menu-row-message {

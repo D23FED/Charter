@@ -522,7 +522,7 @@ hr.black {
 }
 
 .site-header-02 .menu-row-nav {
-	background-color: #0073ae;
+	background-color: #1693c3;
 	padding: 1rem 0.5rem;
 }
 
@@ -708,7 +708,7 @@ hr.black {
 .site-header-03 .menu-row-main {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	background-color: #0073ae;
+	background-color: #1693c3;
 }
 
 .site-header-03 .menu-row-main .customWrapper {
@@ -808,6 +808,83 @@ hr.black {
 	line-height: 1;
 }
 
+.site-header-03 .menu-row-mega-menu {
+	background-color: #00629b;
+	background: -webkit-linear-gradient(top, #083e62, #00629b);
+	background: linear-gradient(180deg, #083e62 0%, #00629b);
+}
+
+.site-header-03 .menu-row-mega-menu .container {
+	position: relative;
+}
+
+.site-header-03 .business-navigation .link-default,
+.site-header-03 .business-navigation .desktopLink a {
+	line-height: 4rem;
+	text-decoration: none;
+	display: block;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	font-size: 1.6rem;
+	-webkit-transition: all 150ms ease-out;
+	transition: all 150ms ease-out;
+	-webkit-transition-property: color, background-color;
+	transition-property: color, background-color;
+}
+
+.site-header-03 .business-navigation .link-default:focus,
+.site-header-03 .business-navigation .link-default:hover,
+.site-header-03 .business-navigation .desktopLink a:focus,
+.site-header-03 .business-navigation .desktopLink a:hover {
+	background-color: #18b9a0;
+}
+
+.site-header-03 .business-navigation .list-inline {
+	margin-left: 0;
+}
+
+.site-header-03 .business-navigation .list-inline > li {
+	border-bottom: none;
+	border-right: 0.1rem solid #d5f6ff;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.site-header-03 .business-navigation .list-inline > li.spectrum-last {
+	border-width: 0;
+	float: right;
+}
+
+.site-header-03 .business-navigation .desktopLink a {
+	color: #fff;
+}
+
+.site-header-03 .business-navigation ul {
+	margin-bottom: 0;
+	font-size: 0;
+}
+
+.site-header-03 .business-navigation .nav-secondary .mega-menu-item {
+	display: inline-block;
+}
+
+.site-header-03 .business-navigation .nav-secondary .desktopLink a {
+	font-size: 1.2rem;
+}
+
+.site-header-03 .business-navigation .nav-secondary .desktopLink a:focus,
+.site-header-03 .business-navigation .nav-secondary .desktopLink a:hover {
+	color: #7ce5ff;
+	background-color: transparent;
+}
+
+.site-header-03 .sub-menu-item {
+	position: absolute;
+	background-color: white;
+	border: 1px solid grey;
+	width: 100%;
+}
+
 .site-header-03 .menu-row-message {
 	padding: 1rem 0.5rem;
 }
@@ -873,16 +950,10 @@ hr.black {
 	line-height: inherit;
 }
 
+/* Business: Button-style links */
 .btn {
 	font-weight: 500;
 	font-size: 1.7rem;
-}
-
-.btn:focus,
-.btn.focus {
-	outline-offset: 0.2rem;
-	outline-width: 0.1rem;
-	outline-style: dotted;
 }
 
 .btn-fw {
@@ -983,6 +1054,14 @@ hr.black {
 	-moz-osx-font-smoothing: grayscale;
 	content: "\e601";
 	z-index: 10;
+}
+
+.btn-default:focus,
+.btn-default.focus {
+	outline-offset: 0.2rem;
+	outline-width: 0.1rem;
+	outline-style: dotted;
+	outline-color: #1f6ffd;
 }
 
 @media (min-width: 544px) {
