@@ -148,6 +148,7 @@
 	// }
 }
 
+// Residential
 @mixin btn-default {
 	background-color: $lt-blue;
 	background-image: none;
@@ -177,6 +178,7 @@
 	}
 }
 
+// Residential
 @mixin btn-primary {
 	// $color, $background, $border
 	@include button-variant(#fff, $bright-orange, $tangerine);
@@ -189,22 +191,26 @@
 	text-transform: uppercase;
 }
 
-// Default buttons for business
+// Business: Default buttons
 // Todo: split up mixin files by LoB
 @mixin spe_btn-default-bus() {
 	@include spe_button-variant($btn-default-colors);
-	text-shadow: 0 0.1rem 0.2rem #d36b24;
+	text-shadow: 0.1rem 0.1rem 0.3rem #888;
 	background-image: linear-gradient(to bottom, #fdaa18 0%, #fdaa18 59%, #ffa300 60%, #ffa300 100%);
 	border-width: 0;
 	border-style: none;
-	padding-left: 1.25em;
-	padding-right: 3.05em;
 	position: relative;
 	padding-top: 0;
 	padding-bottom: 0;
+	font-weight: 500;
+	white-space: nowrap;
+	text-transform: uppercase;
+	text-decoration: none;
+	// Old?
+	padding-right: 1.25em;
+	padding-left: 1.25em;
 	line-height: 2.1;
 	box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.2);
-	text-transform: uppercase;
 	@include hover-focus {
 		background-image: none;
 		background-color: map-get($btn-default-colors, bg-gradient-hover-start);
@@ -217,21 +223,24 @@
 	&.active {
 		box-shadow: inset 0 0.3rem 0.5rem rgba(0, 0, 0, 0.125);
 	}
+}
+
+@mixin pseudo-double-angle-right() {
 	&::after {
-		background: rgba(0, 0, 0, .15);
-		position: absolute;
+		content: "\e601";
+		font-family: $font-charter-icons;
 		display: inline-block;
-		right: 0;
+		position: absolute;
 		top: 0;
+		right: 0;
+		font-style: normal;
+		font-weight: normal;
+		background: rgba(0, 0, 0, .15);
 		font-size: 1em;
 		border-radius: 0 0.5rem 0.5rem 0;
 		padding: 0 0.5em;
-		font-family: $font-charter-icons;
-		font-style: normal;
-		font-weight: normal;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		content: "\e601";
 		z-index: map-get($z-layer-bus, btn-icon);
 	}
 }
