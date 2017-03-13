@@ -235,6 +235,75 @@ hr.black {
 	font-size: 1em;
 }
 
+/* Colored bars at head of containers */
+.business-blue-head {
+	border-top: 0.8rem solid #00629b;
+}
+
+.gold-head {
+	border-top: 0.8rem solid #fdaa18;
+}
+
+.teal-head {
+	border-top: 0.8rem solid #18b9a0;
+}
+
+.charcoal-head {
+	border-top: 0.8rem solid #333;
+}
+
+.dust-head {
+	border-top: 0.8rem solid #f1f5f8;
+}
+
+.yellow-head {
+	border-top: 0.8rem solid #ffbc00;
+}
+
+.blue-head {
+	border-top: 0.8rem solid #0073ae;
+}
+
+.gray-head {
+	border-top: 0.8rem solid #535353;
+}
+
+.med-gray-head {
+	border-top: 0.8rem solid #919191;
+}
+
+.bright-blue-head {
+	border-top: 0.8rem solid #7ce5ff;
+}
+
+.deep-blue-head {
+	border-top: 0.8rem solid #083e62;
+}
+
+.lt-blue-head {
+	border-top: 0.8rem solid #d5f6ff;
+}
+
+.mustard-head {
+	border-top: 0.8rem solid #da8d00;
+}
+
+.orange-head {
+	border-top: 0.8rem solid #f66200;
+}
+
+.lt-gray-head {
+	border-top: 0.8rem solid #eee;
+}
+
+.burnt-orange-head {
+	border-top: 0.8rem solid #dd5800;
+}
+
+.med-blue-head {
+	border-top: 0.8rem solid #1693c3;
+}
+
 @media (min-width: 544px) {
 	.text-left-xs {
 		text-align: left;

@@ -5,10 +5,80 @@ $file-title: 'Site Header';
 
 $grid-column: '[class*="aem-GridColumn"]';
 .site-header {
+	.site-logo {
+		p {
+			margin: 0;
+		}
+	}
+	.menu-sm {
+		@include breakpoint('sm') {
+			display: none;
+			@include aem-authoring {
+				display: block;
+			}
+		}
+	}
+	.menu-lg {
+		display: none;
+		@include breakpoint('sm') {
+			display: block;
+		}
+		@include aem-authoring {
+			display: block;
+		}
+	}
+	// "Navbar" that creates the hamburger nav toggle button and menu
+	.navbar-sm {
+		background-color: transparent;
+		border-width: 0;
+		.navbar-nav,
+		.navbar-form {
+			background-color: $cool-grey;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		// Nav menu
+		.navbar-nav {
+			background-color: $cool-grey;
+			margin-top: 0;
+			margin-bottom: 0;
+			.nav-item {
+				&+.nav-item {
+					.nav-link {
+						border-top-width: 0.1rem;
+						border-top-style: solid;
+						border-top-color: $bus-md-gray;
+					}
+				}
+			}
+			.nav-link {
+				font-size: 1.6rem;
+				color: #fff;
+				text-decoration: none;
+				transition: all $transition-time-default ease-out;
+				transition-property: color, background;
+				@include hover-focus() {
+					background-color: $bus-md-blue;
+				}
+			}
+		}
+		.navbar-form {
+			border-top-width: 0.1rem;
+			border-top-style: solid;
+			border-top-color: $bus-md-gray;
+		}
+	}
+	// Collapsing content
+	.navbar-collapse {
+		border-width: 0;
+	}
 	.geoloc-btn button {
 		@include spe_btn-default-bus;
 		line-height: inherit;
 		border-width: 0;
+	}
+	.list-inline {
+		margin-left: auto;
 	}
 	a,
 	path {

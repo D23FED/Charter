@@ -48,6 +48,9 @@ $row-mega-menu-height: 4rem;
 		@include breakpoint('sm') {
 			display: block;
 		}
+		@include aem-authoring {
+			display: block;
+		}
 		ol,
 		ul {
 			margin-bottom: 0;
@@ -89,9 +92,21 @@ $row-mega-menu-height: 4rem;
 		// link to phone
 		.menu-support {
 			display: inline-block;
+			@include breakpoint('sm') {
+				border-right: 0.1rem solid white;
+				padding-right: 2.5rem;
+				margin-right: 2.5rem;
+			}
 		}
 		// , MUI form
 		.mui-wrapper {
+			display: none;
+			@include breakpoint('sm') {
+				display: block;
+			}
+			@include aem-authoring {
+				display: block;
+			}
 			// Fix for button class applied to wrapper
 			[class*='btn'].zipAction {
 				background: none;
@@ -132,7 +147,7 @@ $row-mega-menu-height: 4rem;
 			a {
 				color: white;
 				text-decoration: none;
-				font-size: 1.2rem;
+				font-size: $font-size-default;
 				font-weight: normal;
 				transition-property: color;
 				@include hover-focus {
@@ -152,7 +167,7 @@ $row-mega-menu-height: 4rem;
 				transition-property: fill;
 			}
 			svg {
-				max-width: 2rem;
+				max-width: 3.5rem;
 				display: block;
 				margin: 0 auto;
 				@include breakpoint('sm') {
@@ -184,6 +199,14 @@ $row-mega-menu-height: 4rem;
 			position: relative;
 		}
 	}
+	.site-logo {
+		.spacer {
+			display: none;
+			@include aem-authoring {
+				display: block;
+			}
+		}
+	}
 	// Primary and secondary nav menus
 	.business-navigation {
 		.link-default,
@@ -193,27 +216,8 @@ $row-mega-menu-height: 4rem;
 			display: block;
 			padding-left: $column-padding;
 			padding-right: $column-padding;
-			font-size: 1.6rem;
 			transition: all $transition-time-default ease-out;
 			transition-property: color, background-color;
-			@include hover-focus {
-				background-color: $bus-teal;
-			}
-		}
-		.list-inline {
-			margin-left: 0;
-			> li {
-				border-bottom: none;
-				border-right: 0.1rem solid $bus-lt-blue;
-				padding-left: 0;
-				padding-right: 0;
-				&.spectrum-first {}
-				// LI containing secondary nav
-				&.spectrum-last {
-					border-width: 0;
-					float: right;
-				}
-			}
 		}
 		.desktopLink a {
 			color: #fff;
@@ -222,8 +226,30 @@ $row-mega-menu-height: 4rem;
 			margin-bottom: 0;
 			font-size: 0;
 		}
+		// Primary nav: Products, Solutions, Offers
+		.nav-primary {
+			.list-inline {
+				margin-left: 0;
+				>li {
+					border-bottom: none;
+					border-right: 0.1rem solid $bus-lt-blue;
+					padding-left: 0;
+					padding-right: 0;
+					&.spectrum-first {}
+					&.spectrum-last {}
+				}
+			}
+			.link-default,
+			.desktopLink a {
+				font-size: 1.6rem;
+				@include hover-focus {
+					background-color: $bus-teal;
+				}
+			}
+		}
 		// Secondary nav; Insights, Support, Partners
 		.nav-secondary {
+			float: right;
 			.mega-menu-item {
 				display: inline-block;
 			}
@@ -238,10 +264,16 @@ $row-mega-menu-height: 4rem;
 	}
 	// mega menu submenus
 	.sub-menu-item {
-			position: absolute;
-	background-color: white;
-	border: 1px solid grey;
-	width: 100%;
+		position: absolute;
+		background-color: white;
+		border: 1px solid grey;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		// display: none;
+		@include aem-authoring {
+			display: block;
+		}
 	}
 	// Contains ZIP Code and Search forms
 	.menu-row-message {
@@ -281,6 +313,9 @@ $row-mega-menu-height: 4rem;
 		// Map marker icon div
 		.glyphicon-map-marker {
 			display: none;
+			@include aem-authoring {
+				display: block;
+			}
 		}
 		// User instructions
 		p {
@@ -303,7 +338,7 @@ $row-mega-menu-height: 4rem;
 			padding-top: 0;
 		}
 		input,
-		button {
+		.geoloc-btn {
 			float: left;
 		}
 		input {
@@ -311,18 +346,23 @@ $row-mega-menu-height: 4rem;
 			padding-left: 0.5rem;
 			padding-right: 0.5rem;
 			// border-color: $bus-brt-blue;
-			// border-style: solid;
-			// border-radius: 0.5rem;
+			border-style: none;
 			margin-right: $zip-input-m-size;
 			@include breakpoint('sm') {
 				width: $zip-sm-input-size;
 			}
 		}
-		button {
+		// Submit <button> wrapper <div>
+		.geoloc-btn {
 			width: $zip-btn-size;
-			line-height: inherit;
 			@include breakpoint('sm') {
 				width: $zip-sm-btn-size;
+			}
+			button {
+				border-radius: $btn-border-radius-base;
+				padding: 0;
+				width: 100%;
+				line-height: 1.7;
 			}
 		}
 	}

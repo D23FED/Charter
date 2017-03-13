@@ -6,6 +6,12 @@
 .site-header-01 {
 	padding-top: $site-header-padding-top;
 	padding-bottom: $site-header-padding-bottom;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	@include breakpoint('sm') {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	// Container + Layout Container = double padding
 	.aem-Grid {
 		#{$grid-column} {
@@ -39,7 +45,8 @@
 			path {
 				fill: $md-blue;
 			}
-			a, path {
+			a,
+			path {
 				transition: all $transition-time-default ease-out;
 				transition-property: color, fill;
 			}
