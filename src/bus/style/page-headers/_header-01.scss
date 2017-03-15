@@ -1,0 +1,55 @@
+@import 'initialize';
+
+/* Site header 01 */
+
+// Simple header w/logo & phone #
+.site-header-01 {
+	padding-top: $site-header-padding-top;
+	padding-bottom: $site-header-padding-bottom;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	@include breakpoint('sm') {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	// Container + Layout Container = double padding
+	.aem-Grid {
+		#{$grid-column} {
+			&:first-child {
+				padding-left: 0;
+			}
+			&+#{$grid-column} {
+				padding-right: 0;
+			}
+		}
+	}
+	.site-header-aside {
+		.link-phone {
+			a {
+				color: $md-blue;
+				display: inline-block;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+					color: $bus-teal;
+					& path {
+						fill: $bus-teal;
+					}
+				}
+			}
+			svg {
+				width: 30px;
+				display: block;
+				margin: 0 auto;
+			}
+			path {
+				fill: $md-blue;
+			}
+			a,
+			path {
+				transition: all $transition-time-default ease-out;
+				transition-property: color, fill;
+			}
+		}
+	}
+}

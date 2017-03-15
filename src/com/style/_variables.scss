@@ -1,6 +1,6 @@
 @import 'colors';
 @import 'variables-bs';
-
+@import '../../bus/style/_variables.scss';
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
@@ -41,6 +41,9 @@ $btn-padding-default-x: 4.0rem;
 $btn-padding-default: $btn-padding-default-y $btn-padding-default-x;
 $site-header-min-height: 8rem;
 
+// Business
+$site-header-padding-top: 1rem;
+$site-header-padding-bottom: $site-header-padding-top;
 // z-indexes
 $zi-modal: 1050;
 $zi-modal-bg: 1040;
@@ -50,5 +53,6 @@ $zi-megamenu: 150;
 $zi-icon-map-marker: 10;
 // Business z-indexes
 $z-layer-bus : (
-	btn-icon: 10
+	btn-icon: 10,
+	navbar-sm: 101
 )

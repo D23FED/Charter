@@ -7,14 +7,14 @@
 @import 'mixins/buttons';
 @mixin aem-authoring {
 	@at-root {
-		/* Temporary styles for display while authoring, remove for prod */
+		/* Begin author-only style */
 	}
 	.aem-AuthorLayer-Layouting &,
 	.aem-AuthorLayer-Edit & {
 		@content;
 	}
 	@at-root {
-		/* End authoring-only styles */
+		/* End author-only styles */
 	}
 }
 

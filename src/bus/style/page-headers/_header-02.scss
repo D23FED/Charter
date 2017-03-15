@@ -1,0 +1,185 @@
+@import 'initialize';
+$file-title: 'Site header 02';
+
+/* #{$file-title} */
+
+$map-marker-icon-size: 2rem;
+$zip-input-m-size: 1%;
+$zip-input-size: 65% - $zip-input-m-size;
+$zip-sm-input-size: 80% - $zip-input-m-size;
+$zip-btn-size: 100% - ($zip-input-size + $zip-input-m-size);
+$zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
+// Packages header w/logo, support menu, and ZIP Code dropdown form
+.site-header-02 {
+	// Container + Layout Container = double padding
+	.aem-Grid {
+		#{$grid-column} {
+			&:first-child {
+				padding-left: 0;
+				padding-right: 0;
+				@include breakpoint('sm') {
+					padding-right: $column-padding;
+				}
+			}
+			&+#{$grid-column} {
+				padding-right: 0;
+			}
+		}
+	}
+	// Menu row containing primary nav
+	.menu-row-nav {
+		padding-top: $site-header-padding-top;
+		padding-bottom: $site-header-padding-bottom;
+		background-color: $bus-md-blue;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		@include breakpoint('sm') {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	// Menu row containing message and forms (such as Search or ZIP)
+	.menu-row-message {
+		padding-top: $site-header-padding-top;
+		padding-bottom: $site-header-padding-bottom;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		@include breakpoint('sm') {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		// Fix nested containers
+		/* #{$site-header-padding-top} */
+		.container .container {
+			padding: 0;
+			width: auto;
+		}
+	}
+	// ZIP Code form group beneath header
+	.spectrum-customerLocation {
+		position: relative;
+		.aem-Grid .aem-GridColumn {
+			&:first-child {
+				position: relative;
+				&::before {
+					top: 1px;
+					display: inline-block;
+					// font-family: 'Glyphicons Halflings';
+					font-style: normal;
+					font-weight: 400;
+					line-height: 1;
+					// content: "\e062";
+					// content: "\f041";
+					font-awesome: map-marker;
+					@include vertical-center();
+					color: #03a8e0;
+					font-size: $map-marker-icon-size;
+					// @include breakpoint('sm') {
+					// 	@include vertical-center();
+					// }
+				}
+			}
+		}
+		// Map marker icon div
+		.glyphicon-map-marker {
+			display: none;
+		}
+		// User instructions
+		p {
+			font-size: 1.2rem;
+			line-height: 1.3;
+			@include breakpoint('sm') {
+				font-size: $font-size-default;
+				line-height: $line-height-base;
+			}
+			margin-bottom: 0;
+			padding-left: $map-marker-icon-size+1rem;
+			color: #666;
+		}
+	}
+	// ZIP Code <form>
+	.geoLoc {
+		padding-top: 1rem;
+		margin-left: -$column-padding;
+		@include breakpoint('sm') {
+			padding-top: 0;
+		}
+		input,
+		button {
+			float: left;
+		}
+		input {
+			width: $zip-input-size;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+			border-color: $bus-brt-blue;
+			border-style: solid;
+			border-radius: 0.5rem;
+			margin-right: $zip-input-m-size;
+			@include breakpoint('sm') {
+				width: $zip-sm-input-size;
+			}
+		}
+		button {
+			width: $zip-btn-size;
+			padding: 0.2rem 0.6rem;
+			line-height: inherit;
+			@include breakpoint('sm') {
+				width: $zip-sm-btn-size;
+			}
+			&::after {
+				display: none;
+			}
+		}
+	}
+	.site-header-aside {
+		ul,
+		ol {
+			margin-bottom: 0;
+			text-align: right;
+			font-size: 0;
+		}
+		li {
+			padding-left: 0.2rem;
+			padding-right: 0.2rem;
+			@include breakpoint('sm') {
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+			}
+		}
+		a,
+		path {
+			transition: all $transition-time-default ease-out;
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			font-size: 1.2rem;
+			font-weight: normal;
+			transition-property: color;
+			@include hover-focus {
+				text-decoration: underline;
+				color: $bus-brt-blue;
+				path {
+					fill: $bus-brt-blue;
+				}
+			}
+			@include breakpoint('sm') {
+				font-weight: 600;
+				font-size: $font-size-default;
+			}
+		}
+		path {
+			fill: white;
+			transition-property: fill;
+		}
+		svg {
+			max-width: 2rem;
+			display: block;
+			margin: 0 auto;
+			@include breakpoint('sm') {
+				max-width: 3rem;
+			}
+		}
+	}
+}
