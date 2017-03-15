@@ -28,6 +28,7 @@ $grid-column: '[class*="aem-GridColumn"]';
 		}
 	}
 	// "Navbar" that creates the hamburger nav toggle button and menu
+	.navbar-sm-wrapper {}
 	.navbar-sm {
 		background-color: transparent;
 		border-width: 0;
@@ -43,6 +44,8 @@ $grid-column: '[class*="aem-GridColumn"]';
 			margin-top: 0;
 			margin-bottom: 0;
 			.nav-item {
+				padding-left: 0;
+				padding-right: 0;
 				&+.nav-item {
 					.nav-link {
 						border-top-width: 0.1rem;
@@ -57,6 +60,11 @@ $grid-column: '[class*="aem-GridColumn"]';
 				text-decoration: none;
 				transition: all $transition-time-default ease-out;
 				transition-property: color, background;
+				@include pseudo-double-angle-right;
+				&::after {
+					right: $column-padding;
+					position: absolute;
+				}
 				@include hover-focus() {
 					background-color: $bus-md-blue;
 				}
@@ -66,30 +74,98 @@ $grid-column: '[class*="aem-GridColumn"]';
 			border-top-width: 0.1rem;
 			border-top-style: solid;
 			border-top-color: $bus-md-gray;
+			padding-bottom: 2rem;
+			.form-row {
+				display: flex;
+				@include aem-authoring {
+					display: block;
+				}
+			}
+			// <label> and <input>
+			.form-group {
+				width: 100%;
+				padding-right: $column-padding;
+				margin-bottom: 0;
+			}
+			.form-label {
+				color: #fff;
+				font-size: 1.4rem;
+				font-weight: normal;
+			}
+			// Submit button
+			.btn-submit {
+				margin-left: auto;
+			}
+		}
+		// Toggle button
+		$toggle-color: $bus-lt-gray;
+		.navbar-toggle {
+			border-color: $toggle-color;
+			transition: all $transition-time-default ease-out;
+			transition-property: background-color;
+			& .icon-bar {
+				background-color: $toggle-color;
+			}
 		}
 	}
-	// Collapsing content
-	.navbar-collapse {
-		border-width: 0;
+	.navbar {
+		position: static;
+		.navbar-collapse {
+			.nav {
+				text-align: left;
+			}
+		}
 	}
-	.geoloc-btn button {
-		@include spe_btn-default-bus;
-		line-height: inherit;
-		border-width: 0;
+	.container,
+	.container-fluid {
+		&>.navbar-header,
+		&>.navbar-collapse {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
-	.list-inline {
-		margin-left: auto;
+}
+
+.navbar-toggle {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+// Collapsing content
+.navbar-collapse {
+	border-width: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: map-get($z-layer-bus, navbar-sm);
+	text-align: left;
+	@include aem-authoring {
+		position: static;
 	}
-	a,
-	path {
-		transition: all $transition-time-default ease-out;
-	}
-	a {
-		transition-property: color;
-	}
-	path {
-		transition-property: fill;
-	}
+}
+
+.geoloc-btn button {
+	@include spe_btn-default-bus;
+	line-height: inherit;
+	border-width: 0;
+}
+
+.list-inline {
+	margin-left: auto;
+}
+
+a,
+path {
+	transition: all $transition-time-default ease-out;
+}
+
+a {
+	transition-property: color;
+}
+
+path {
+	transition-property: fill;
 }
 
 @import 'page-headers/header-01';

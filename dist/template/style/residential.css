@@ -1829,13 +1829,13 @@ hr.black {
 	display: none;
 }
 
-/* Temporary styles for display while authoring, remove for prod */
+/* Begin author-only style */
 .aem-AuthorLayer-Layouting .site-footer .footer-states-list,
 .aem-AuthorLayer-Edit .site-footer .footer-states-list {
 	display: block;
 }
 
-/* End authoring-only styles */
+/* End author-only styles */
 
 .site-footer .footer-states-list .list-inline.list-separated {
 	font-size: 0;

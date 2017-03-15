@@ -144,6 +144,25 @@ $row-mega-menu-height: 4rem;
 			path {
 				transition: all $transition-time-default ease-out;
 			}
+			path {
+				fill: white;
+				transition-property: fill;
+			}
+			svg {
+				max-width: 3.5rem;
+				display: block;
+				margin: 0 auto;
+				@include breakpoint('sm') {
+					max-width: 3rem;
+				}
+			}
+		}
+		// ZIP Code <form>
+		.geoLoc {
+			margin-left: 0;
+		}
+		// Phone link
+		.linkComponent {
 			a {
 				color: white;
 				text-decoration: none;
@@ -162,22 +181,6 @@ $row-mega-menu-height: 4rem;
 					font-size: $font-size-default;
 				}
 			}
-			path {
-				fill: white;
-				transition-property: fill;
-			}
-			svg {
-				max-width: 3.5rem;
-				display: block;
-				margin: 0 auto;
-				@include breakpoint('sm') {
-					max-width: 3rem;
-				}
-			}
-		}
-		// ZIP Code <form>
-		.geoLoc {
-			margin-left: 0;
 		}
 	}
 	// Links to Charter, Reach and Enterprise
@@ -209,22 +212,27 @@ $row-mega-menu-height: 4rem;
 	}
 	// Primary and secondary nav menus
 	.business-navigation {
+		ul {
+			margin-bottom: 0;
+			font-size: 0;
+		}
+		// Primary nav items
 		.link-default,
 		.desktopLink a {
 			line-height: $row-mega-menu-height;
 			text-decoration: none;
 			display: block;
-			padding-left: $column-padding;
-			padding-right: $column-padding;
+			padding-left: 2rem;
+			padding-right: 2rem;
 			transition: all $transition-time-default ease-out;
 			transition-property: color, background-color;
+			font-size: 1.4rem;
+			@include hover-focus {
+				background-color: $bus-teal;
+			}
 		}
 		.desktopLink a {
 			color: #fff;
-		}
-		ul {
-			margin-bottom: 0;
-			font-size: 0;
 		}
 		// Primary nav: Products, Solutions, Offers
 		.nav-primary {
@@ -235,15 +243,6 @@ $row-mega-menu-height: 4rem;
 					border-right: 0.1rem solid $bus-lt-blue;
 					padding-left: 0;
 					padding-right: 0;
-					&.spectrum-first {}
-					&.spectrum-last {}
-				}
-			}
-			.link-default,
-			.desktopLink a {
-				font-size: 1.6rem;
-				@include hover-focus {
-					background-color: $bus-teal;
 				}
 			}
 		}
@@ -254,6 +253,8 @@ $row-mega-menu-height: 4rem;
 				display: inline-block;
 			}
 			.desktopLink a {
+				padding-left: $column-padding;
+				padding-right: $column-padding;
 				font-size: 1.2rem;
 				@include hover-focus {
 					color: $bus-brt-blue;
@@ -266,13 +267,94 @@ $row-mega-menu-height: 4rem;
 	.sub-menu-item {
 		position: absolute;
 		background-color: white;
-		border: 1px solid grey;
+		border: 0.1rem solid $bus-lt-gray;
 		width: 100%;
 		margin: 0;
 		padding: 0;
-		// display: none;
+		padding-bottom: 2.5rem;
+		display: none;
+		@include breakpoint('sm') {
+			display: block;
+		}
 		@include aem-authoring {
 			display: block;
+			position: static;
+		}
+		.aem-Grid {
+			display: flex;
+			@include aem-authoring {
+				display: block;
+			}
+			>.aem-GridColumn {
+				border-left: 0.1rem solid $bus-lt-gray;
+				&:first-child {
+					border-left-width: 0;
+					// First list item inside first column-count:
+					.spectrum-first {
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		// Fix for nested columns
+		.aem-GridColumn .aem-GridColumn {
+			padding: 0;
+		}
+		ul {
+			padding-left: 0;
+		}
+		li {
+			border-width: 0;
+		}
+		.list-component {
+			li {
+				padding-left: $column-padding;
+			}
+		}
+		// Temp fix
+		>li>div {
+			width: auto !important;
+		}
+		.link-default {
+			font-size: 1.4rem;
+			line-height: (3 / 1.4);
+			padding-left: 0;
+			@include hover-focus {
+				background-color: transparent;
+				color: $bus-teal;
+			}
+		}
+		$white-cover-block-offset: 1.6rem;
+		.spectrum-first {
+			position: relative;
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: $white-cover-block-offset;
+				height: 4rem;
+				background-color: white;
+				left: -$white-cover-block-offset;
+			}
+			.link-default {
+				color: $bus-dk-gray;
+				font-size: 1.8rem;
+				font-weight: 300;
+				border-bottom-color: $bus-lt-gray;
+				border-bottom-width: 0.1rem;
+				border-bottom-style: solid;
+			}
+			.linkLabel {
+				&::after {
+					display: none;
+				}
+			}
+		}
+		.linkLabel {
+			@include pseudo-double-angle-right;
+			display: inline;
 		}
 	}
 	// Contains ZIP Code and Search forms
