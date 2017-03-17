@@ -193,6 +193,7 @@ hr.black {
 	border-top: 0.1rem solid #333;
 }
 
+/* Business: Color Helpers */
 .text-teal {
 	color: #18b9a0;
 }
@@ -213,26 +214,102 @@ hr.black {
 	background-color: #00629b;
 }
 
-.bullets-blue {
-	color: #00629b;
+.business-blue-bg {
+	background: #00629b;
 }
 
-.bullets-blue,
-.bullets-black,
-.bullets-white {
-	list-style: none;
-	padding-left: 1em;
+.gold-bg {
+	background-color: #fdaa18;
 }
 
-.bullets-blue li::before,
-.bullets-black li::before,
-.bullets-white li::before {
-	content: '\2022';
-	display: block;
-	position: relative;
-	max-height: 0;
-	left: -1em;
-	font-size: 1em;
+.teal-bg {
+	background-color: #18b9a0;
+}
+
+.charcoal-bg {
+	background-color: #333;
+}
+
+.dust-bg {
+	background-color: #f1f5f8;
+}
+
+.yellow-bg {
+	background-color: #ffbc00;
+}
+
+.blue-bg {
+	background-color: #0073ae;
+}
+
+.gray-bg {
+	background-color: #535353;
+}
+
+.med-gray-bg {
+	background-color: #919191;
+}
+
+.bright-blue-bg {
+	background-color: #7ce5ff;
+}
+
+.deep-blue-bg {
+	background-color: #083e62;
+}
+
+.light-blue-bg {
+	background-color: #d5f6ff;
+}
+
+.mustard-bg {
+	background-color: #da8d00;
+}
+
+.orange-bg {
+	background-color: #dd5800;
+}
+
+.light-gray-bg {
+	background-color: #eee;
+}
+
+.burnt-orange-bg {
+	background-color: #dd5800;
+}
+
+.med-blue-bg {
+	background-color: #1693c3;
+}
+
+.blue-gradient-1 {
+	background: #2783b3;
+	background: -webkit-linear-gradient(top, #2783b3 1%, #1693c3);
+	background: linear-gradient(180deg, #2783b3 1%, #1693c3);
+}
+
+.blue-gradient-2 {
+	background: #0072ae;
+	background: -webkit-linear-gradient(top, #0072ae, #0d84b9);
+	background: linear-gradient(180deg, #0072ae 0%, #0d84b9);
+}
+
+.gray-gradient {
+	background: #f1f5f8;
+	background: -webkit-linear-gradient(top, #f1f5f8, #eaeff3);
+	background: linear-gradient(180deg, #f1f5f8 0%, #eaeff3);
+}
+
+.teal-gradient {
+	background: #3b7f75;
+	background: -webkit-linear-gradient(top, #3b7f75, #3b6563);
+	background: linear-gradient(180deg, #3b7f75 0%, #3b6563);
+}
+
+.lt-blue-gradient {
+	background: #eaeff3;
+	background: -webkit-linear-gradient(top, #eaeff3, #e5eff5);
+	background: linear-gradient(180deg, #eaeff3 0%, #e5eff5);
 }
 
 /* Colored bars at head of containers */
@@ -261,7 +338,7 @@ hr.black {
 }
 
 .blue-head {
-	border-top: 0.8rem solid #0073ae;
+	border-top: 0.8rem solid #00629b;
 }
 
 .gray-head {
@@ -302,6 +379,31 @@ hr.black {
 
 .med-blue-head {
 	border-top: 0.8rem solid #1693c3;
+}
+
+/* Business: Type variants */
+.bullets-blue {
+	color: #00629b;
+}
+
+.bullets-color,
+.bullets-blue,
+.bullets-black,
+.bullets-white {
+	list-style: none;
+	padding-left: 1em;
+}
+
+.bullets-color li::before,
+.bullets-blue li::before,
+.bullets-black li::before,
+.bullets-white li::before {
+	content: '\2022';
+	display: block;
+	position: relative;
+	max-height: 0;
+	left: -1em;
+	font-size: 1em;
 }
 
 @media (min-width: 544px) {

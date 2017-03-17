@@ -31,4 +31,9 @@
 	font-size: 1.3rem;
 }
 
+.site-footer .link-alternate a {
+	color: #7ce5ff;
+	text-decoration: underline;
+}
+
 /*# sourceMappingURL=footer.css.map */

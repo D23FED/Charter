@@ -1,0 +1,24 @@
+@at-root {
+	/* Business: Type variants */
+}
+
+// Lists
+.bullets-blue {
+	color: $bus-blue;
+}
+
+.bullets-color,
+.bullets-blue,
+.bullets-black,
+.bullets-white {
+	list-style: none;
+	padding-left: 1em;
+	li::before {
+		content: '\2022';
+		display: block;
+		position: relative;
+		max-height: 0;
+		left: -1em;
+		font-size: 1em;
+	}
+}

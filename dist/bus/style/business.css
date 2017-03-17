@@ -6,6 +6,7 @@
   src: url(/content/dam/spectrum/common/en/fonts/charter-icons.eot?iefix) format("eot"),url(/content/dam/spectrum/common/en/fonts/charter-icons.woff) format("woff"),url(/content/dam/spectrum/common/en/fonts/charter-icons.ttf) format("truetype"),url(/content/dam/spectrum/common/en/fonts/charter-icons.svg#webfont) format("svg");
 }
 
+/* Typography: Business */
 /* Typography: Common */
 html {
   font-size: 62.5%;
@@ -16,9 +17,9 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
-
-/* Typography: Business */
 
 /* Headings: Business */
 h1,
@@ -70,14 +71,42 @@ h6,
 .h6 {
   font-size: 1.6rem;
   color: #333;
-}
-
-h6,
-.h6,a {
   font-weight: 600;
 }
 
-a {
+.text-sm, .link-packages a, .link-packages-alternate a,
+.small {
+  font-size: 1.2rem;
+}
+
+.text-subhead {
+  font-size: 1.6rem;
+}
+
+.text-color-default {
+  color: #333;
+}
+
+.text-size-default {
+  font-size: 1.4rem;
+}
+
+.pseudo-double-angle-right::after, .link-header a::after, .link-strong a::after, .link-list a::after {
+  content: "\00a0\e601";
+  font-family: Charter Icons;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 10;
+  vertical-align: baseline;
+}
+
+a,
+.link-default a {
   color: #00629b;
   cursor: pointer;
   font-style: normal;
@@ -86,25 +115,73 @@ a {
   vertical-align: baseline;
 }
 
-a:focus, a:hover {
+a:focus, a:hover,
+.link-default a:focus,
+.link-default a:hover {
   color: #003057;
 }
 
-.lead {
-  color: #333;
-  margin-bottom: 0.5rem;
-  font-weight: 400;
+.link-alternate a, .link-light a {
+  color: #18b9a0;
 }
 
-.small,ul,
-ol,
-dl {
-  color: #333;
+.link-alternate a:focus, .link-light a:focus, .link-alternate a:hover, .link-light a:hover {
+  color: #0f7565;
+}
+
+.link-light a:focus, .link-light a:hover {
+  color: #38e5ca;
+}
+
+.link-packages a {
+  color: #fff;
+}
+
+.link-packages a:focus, .link-packages a:hover {
+  color: #d9d9d9;
+}
+
+.link-packages-alternate a {
+  color: #7ce5ff;
+}
+
+.link-packages-alternate a:focus, .link-packages-alternate a:hover {
+  color: #30d6ff;
+}
+
+.link-header {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.link-header a::after {
+  font-size: .8em;
+}
+
+.link-strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.link-strong a::after {
+  content: "\00a0\00bb";
+  font-family: inherit;
+}
+
+.link-list {
+  font-weight: 700;
+}
+
+.link-list a::after {
+  content: "\00a0\00bb";
+  font-family: inherit;
 }
 
 ul,
 ol,
 dl {
+  color: #333;
   line-height: 1.57;
 }
 
@@ -117,6 +194,11 @@ figcaption {
 .disclaimer {
   font-size: 1.1rem;
   color: #808285;
+}
+
+.disclaimer-sm {
+  color: #919191;
+  font-size: .9rem;
 }
 
 .text-white {
@@ -314,6 +396,7 @@ hr.black {
   border-top: 0.1rem solid #333;
 }
 
+/* Business: Color Helpers */
 .text-teal {
   color: #18b9a0;
 }
@@ -334,26 +417,102 @@ hr.black {
   background-color: #00629b;
 }
 
-.bullets-blue {
-  color: #00629b;
+.business-blue-bg {
+  background: #00629b;
 }
 
-.bullets-blue,
-.bullets-black,
-.bullets-white {
-  list-style: none;
-  padding-left: 1em;
+.gold-bg {
+  background-color: #fdaa18;
 }
 
-.bullets-blue li::before,
-.bullets-black li::before,
-.bullets-white li::before {
-  content: '\2022';
-  display: block;
-  position: relative;
-  max-height: 0;
-  left: -1em;
-  font-size: 1em;
+.teal-bg {
+  background-color: #18b9a0;
+}
+
+.charcoal-bg {
+  background-color: #333;
+}
+
+.dust-bg {
+  background-color: #F1F5F8;
+}
+
+.yellow-bg {
+  background-color: #FFBC00;
+}
+
+.blue-bg {
+  background-color: #0073ae;
+}
+
+.gray-bg {
+  background-color: #535353;
+}
+
+.med-gray-bg {
+  background-color: #919191;
+}
+
+.bright-blue-bg {
+  background-color: #7ce5ff;
+}
+
+.deep-blue-bg {
+  background-color: #083e62;
+}
+
+.light-blue-bg {
+  background-color: #d5f6ff;
+}
+
+.mustard-bg {
+  background-color: #da8D00;
+}
+
+.orange-bg {
+  background-color: #dd5800;
+}
+
+.light-gray-bg {
+  background-color: #eee;
+}
+
+.burnt-orange-bg {
+  background-color: #dd5800;
+}
+
+.med-blue-bg {
+  background-color: #1693c3;
+}
+
+.blue-gradient-1 {
+  background: #2783b3;
+  background: -webkit-linear-gradient(top,#2783b3 1%,#1693c3);
+  background: linear-gradient(180deg,#2783b3 1%,#1693c3);
+}
+
+.blue-gradient-2 {
+  background: #0072ae;
+  background: -webkit-linear-gradient(top,#0072ae,#0d84b9);
+  background: linear-gradient(180deg,#0072ae 0%,#0d84b9);
+}
+
+.gray-gradient {
+  background: #F1F5F8;
+  background: -webkit-linear-gradient(top,#F1F5F8,#eaeff3);
+  background: linear-gradient(180deg,#F1F5F8 0%,#eaeff3);
+}
+
+.teal-gradient {
+  background: #3b7f75;
+  background: -webkit-linear-gradient(top,#3b7f75,#3b6563);
+  background: linear-gradient(180deg,#3b7f75 0%,#3b6563);
+}
+
+.lt-blue-gradient {
+  background: #eaeff3;
+  background: -webkit-linear-gradient(top,#eaeff3,#e5eff5);
+  background: linear-gradient(180deg,#eaeff3 0%,#e5eff5);
 }
 
 /* Colored bars at head of containers */
@@ -382,7 +541,7 @@ hr.black {
 }
 
 .blue-head {
-  border-top: 0.8rem solid #0073ae;
+  border-top: 0.8rem solid #00629b;
 }
 
 .gray-head {
@@ -423,6 +582,31 @@ hr.black {
 
 .med-blue-head {
   border-top: 0.8rem solid #1693c3;
+}
+
+/* Business: Type variants */
+.bullets-blue {
+  color: #00629b;
+}
+
+.bullets-color,
+.bullets-blue,
+.bullets-black,
+.bullets-white {
+  list-style: none;
+  padding-left: 1em;
+}
+
+.bullets-color li::before,
+.bullets-blue li::before,
+.bullets-black li::before,
+.bullets-white li::before {
+  content: '\2022';
+  display: block;
+  position: relative;
+  max-height: 0;
+  left: -1em;
+  font-size: 1em;
 }
 
 /* Site Header */
@@ -485,6 +669,7 @@ hr.black {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   z-index: 10;
+  vertical-align: baseline;
   right: 1.5rem;
   position: absolute;
 }
@@ -1209,6 +1394,7 @@ path {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   z-index: 10;
+  vertical-align: baseline;
 }
 
 .site-header-03 .menu-row-message {
@@ -1320,6 +1506,11 @@ path {
 .site-footer .linkComponent span {
   text-decoration: none;
   font-size: 1.3rem;
+}
+
+.site-footer .link-alternate a, .site-footer .link-light a {
+  color: #7ce5ff;
+  text-decoration: underline;
 }
 
 /* Business: Button-style links */
@@ -1480,9 +1671,6 @@ path {
   .h3 {
     font-size: 2.1rem;
   }
-  .lead {
-    font-size: 1.6rem;
-  }
   .text-left-sm {
     text-align: left;
   }
@@ -1614,7 +1802,10 @@ path {
   .h5 {
     font-size: 1.8rem;
   }
-  .lead {
+  .text-subhead {
+    font-size: 1.8rem;
+  }
+  .link-header {
     font-size: 1.8rem;
   }
   .text-left-md {
