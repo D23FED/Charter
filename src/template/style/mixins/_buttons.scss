@@ -1,4 +1,4 @@
-// Modfied button mixin from Bootstrap
+ // Modfied button mixin from Bootstrap
 // Accepts additional colors instead of assuming variations
 // Removed support for dropdowns and badges
 // Requires only text, bg and border color, all other states will be generated. Optionally you may pass overrides for any state's color.
@@ -237,5 +237,6 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		z-index: map-get($z-layer-bus, btn-icon);
+		vertical-align: baseline;
 	}
 }

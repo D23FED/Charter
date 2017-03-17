@@ -1,3 +1,4 @@
+/* Typography: Business */
 /* Typography: Common */
 html {
 	font-size: 62.5%;
@@ -8,9 +9,9 @@ body {
 	font-size: 1.6rem;
 	line-height: 1.5;
 	color: #333;
+	font-size: 1.4rem;
+	font-weight: 400;
 }
-
-/* Typography: Business */
 
 /* Headings: Business */
 h1,
@@ -67,15 +68,47 @@ h6,
 .h6 {
 	font-size: 1.6rem;
 	color: #333;
-}
-
-h6,
-.h6,
-a {
 	font-weight: 600;
 }
 
-a {
+.text-sm,
+.link-packages a,
+.link-packages-alternate a,
+.small {
+	font-size: 1.2rem;
+}
+
+.text-subhead {
+	font-size: 1.6rem;
+}
+
+.text-color-default {
+	color: #333;
+}
+
+.text-size-default {
+	font-size: 1.4rem;
+}
+
+.pseudo-double-angle-right::after,
+.link-header a::after,
+.link-strong a::after,
+.link-list a::after {
+	content: "\00a0\e601";
+	font-family: Charter Icons;
+	display: inline-block;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1em;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	z-index: 10;
+	vertical-align: baseline;
+}
+
+a,
+.link-default a {
 	color: #00629b;
 	cursor: pointer;
 	font-style: normal;
@@ -85,26 +118,80 @@ a {
 }
 
 a:focus,
-a:hover {
+a:hover,
+.link-default a:focus,
+.link-default a:hover {
 	color: #003057;
 }
 
-.lead {
-	color: #333;
-	margin-bottom: 0.5rem;
-	font-weight: 400;
+.link-alternate a,
+.link-light a {
+	color: #18b9a0;
 }
 
-.small,
+.link-alternate a:focus,
+.link-light a:focus,
+.link-alternate a:hover,
+.link-light a:hover {
+	color: #0f7565;
+}
+
+.link-light a:focus,
+.link-light a:hover {
+	color: #38e5ca;
+}
+
+.link-packages a {
+	color: #fff;
+}
+
+.link-packages a:focus,
+.link-packages a:hover {
+	color: #d9d9d9;
+}
+
+.link-packages-alternate a {
+	color: #7ce5ff;
+}
+
+.link-packages-alternate a:focus,
+.link-packages-alternate a:hover {
+	color: #30d6ff;
+}
+
+.link-header {
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.link-header a::after {
+	font-size: .8em;
+}
+
+.link-strong {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.link-strong a::after {
+	content: "\00a0\00bb";
+	font-family: inherit;
+}
+
+.link-list {
+	font-weight: 700;
+}
+
+.link-list a::after {
+	content: "\00a0\00bb";
+	font-family: inherit;
+}
+
 ul,
 ol,
 dl {
 	color: #333;
-}
-
-ul,
-ol,
-dl {
 	line-height: 1.57;
 }
 
@@ -117,6 +204,15 @@ figcaption {
 .disclaimer {
 	font-size: 1.1rem;
 	color: #808285;
+}
+
+.disclaimer-sm {
+	color: #919191;
+	font-size: .9rem;
+}
+
+.text-teal {
+	color: #18b9a0;
 }
 
 @media (min-width: 768px) {
@@ -133,10 +229,6 @@ figcaption {
 	h3,
 	.h3 {
 		font-size: 2.1rem;
-	}
-
-	.lead {
-		font-size: 1.6rem;
 	}
 }
 
@@ -166,7 +258,11 @@ figcaption {
 		font-size: 1.8rem;
 	}
 
-	.lead {
+	.text-subhead {
+		font-size: 1.8rem;
+	}
+
+	.link-header {
 		font-size: 1.8rem;
 	}
 }

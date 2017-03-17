@@ -58,6 +58,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   z-index: 10;
+  vertical-align: baseline;
   right: 1.5rem;
   position: absolute;
 }
@@ -782,6 +783,7 @@ path {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   z-index: 10;
+  vertical-align: baseline;
 }
 
 .site-header-03 .menu-row-message {
