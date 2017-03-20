@@ -1,16 +1,38 @@
 {
-  "rules": {
-    "color-no-invalid-hex": true,
-    "declaration-colon-space-after": "always",
-    "max-empty-lines": 2,
-    "indentation": ["tab", {
-      "except": ["value"]
-    }],
-    "selector-list-comma-newline-after": "always",
-    "number-no-trailing-zeros": true,
-    "length-zero-no-unit": true,
-    "color-hex-case": "lower",
-    "block-opening-brace-space-before": "always",
-    "at-rule-empty-line-before": "always"
-  }
+	"rules": {
+		"at-rule-empty-line-before": "always",
+		"at-rule-semicolon-newline-after":"always",
+		"block-closing-brace-newline-after":"always",
+		"block-closing-brace-newline-before":"always-multi-line",
+		"block-opening-brace-space-after":"always-single-line",
+		"block-opening-brace-space-before": "always",
+		"color-hex-case": "lower",
+		"color-no-invalid-hex": true,
+		"declaration-colon-space-after": "always",
+		"declaration-colon-space-before": "never",
+		"declaration-empty-line-before":"never",
+		"indentation": ["tab", {
+			"except": ["value"]
+		}],
+		"length-zero-no-unit": true,
+		"number-leading-zero": "always",
+		"number-no-trailing-zeros": true,
+		"max-empty-lines": 2,
+		"selector-combinator-space-after": "always",
+		"selector-combinator-space-before": "always",
+		"selector-list-comma-newline-after": "always",
+		"selector-list-comma-space-before":"never",
+		"order/order": [
+			"dollar-variables",
+			"custom-properties",
+			"declarations",
+			"rules"
+		],
+		"order/properties-order": [
+			"display"
+		]
+	},
+	"plugins": [
+		"stylelint-order"
+	]
 }

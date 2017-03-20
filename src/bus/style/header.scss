@@ -5,6 +5,10 @@ $file-title: 'Site Header';
 
 $grid-column: '[class*="aem-GridColumn"]';
 .site-header {
+	.container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 	.site-logo {
 		p {
 			margin: 0;
@@ -28,7 +32,6 @@ $grid-column: '[class*="aem-GridColumn"]';
 		}
 	}
 	// "Navbar" that creates the hamburger nav toggle button and menu
-	.navbar-sm-wrapper {}
 	.navbar-sm {
 		background-color: transparent;
 		border-width: 0;
@@ -123,6 +126,42 @@ $grid-column: '[class*="aem-GridColumn"]';
 			margin-left: 0;
 			margin-right: 0;
 		}
+	}
+	// Prevent white text in <input>
+	.messagebox-wrapper,
+	.mui-wrapper {
+		input {
+			color: $text-color-default;
+		}
+	}
+	// Search and ZIP forms in header
+	.messageBox {
+		position: relative;
+		padding-right: 1.5rem;
+		@include breakpoint('sm') {
+			padding-right: 2.5rem;
+		}
+		// Close button
+		.close-message {
+			position: absolute;
+			z-index: map-get($z-layer-bus, 'close-button');
+			font-size: 0;
+			line-height: 1;
+			right: -$container-padding-sm;
+			@include breakpoint('sm') {
+				right: 0;
+			}
+			&::after {
+				font-size: $font-size-default-bus;
+				line-height: 1;
+				color: $text-color-default;
+			}
+		}
+	}
+	// Class bug
+	.aem-GridColumn.btn-primary {
+		background-color: transparent;
+		border-style: none;
 	}
 }
 

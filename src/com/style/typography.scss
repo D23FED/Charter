@@ -2,12 +2,11 @@
 
 /* Typography: Common */
 
+// Set 1rem = 10px
 html {
 	font-size: 62.5%;
 }
 
 body {
 	font-family: $font-stack-sans;
-	font-size: $font-size-default;
-	line-height: 1.5;
 }

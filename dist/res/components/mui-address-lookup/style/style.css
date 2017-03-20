@@ -142,7 +142,7 @@ fieldset[disabled] .muiAddressLookup .localization--horizontal-1 .localization__
 	right: 0;
 	width: auto;
 	margin: 0;
-	line-height: .9;
+	line-height: 0.9;
 }
 
 .muiAddressLookup .localization--horizontal-1 .localization__info-pop .localization__tooltip-icon {

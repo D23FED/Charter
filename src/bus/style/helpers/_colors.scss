@@ -16,73 +16,101 @@ $color in $colors {
 	}
 }
 
+$bus-colors: ( teal: $bus-teal);
+@each $name,
+$color in $bus-colors {
+	.text-#{$name} {
+		color: $color;
+	}
+}
+
 // Background colors
+.bg-business-blue,
 .business-blue-bg {
 	background: $bus-blue;
 }
 
-.gold-bg {
-	background-color: $bus-gold;
-}
-
-.teal-bg {
-	background-color: $bus-teal;
-}
-
-.charcoal-bg {
-	background-color: $bus-dk-gray;
-}
-
-.dust-bg {
-	background-color: $bus-off-white;
-}
-
-.yellow-bg {
-	background-color: $bus-yellow;
-}
-
+.bg-blue,
 .blue-bg {
 	background-color: $bus-blue-secondary;
 }
 
-.gray-bg {
-	background-color: $bus-gray;
-}
-
-.med-gray-bg {
-	background-color: $bus-md-gray;
-}
-
+.bg-brt-blue,
 .bright-blue-bg {
 	background-color: $bus-brt-blue;
 }
 
-.deep-blue-bg {
-	background-color: $bus-dk-blue;
-}
-
+.bg-lt-blue,
 .light-blue-bg {
 	background-color: $bus-lt-blue;
 }
 
-.mustard-bg {
-	background-color: $bus-dk-yellow;
+.bg-md-blue,
+.med-blue-bg {
+	background-color: $bus-md-blue;
 }
 
-.orange-bg {
-	background-color: $bus-dk-orange;
+.bg-dp-blue,
+.deep-blue-bg {
+	background-color: $bus-dk-blue;
 }
 
+.bg-gray,
+.gray-bg {
+	background-color: $bus-gray;
+}
+
+.bg-lt-gray,
 .light-gray-bg {
 	background-color: $bus-lt-gray;
 }
 
-.burnt-orange-bg {
+.bg-md-gray,
+.med-gray-bg {
+	background-color: $bus-md-gray;
+}
+
+.bg-dk-gray,
+.bg-charcoal,
+.charcoal-bg {
+	background-color: $bus-dk-gray;
+}
+
+.bg-dust,
+.bg-off-white,
+.dust-bg {
+	background-color: $bus-off-white;
+}
+
+.bg-gold,
+.gold-bg {
+	background-color: $bus-gold;
+}
+
+.bg-teal,
+.teal-bg {
+	background-color: $bus-teal;
+}
+
+.bg-yellow,
+.yellow-bg {
+	background-color: $bus-yellow;
+}
+
+.bg-mustard,
+.bg-dk-yellow,
+.mustard-bg {
+	background-color: $bus-dk-yellow;
+}
+
+.bg-orange,
+.orange-bg {
 	background-color: $bus-dk-orange;
 }
 
-.med-blue-bg {
-	background-color: $bus-md-blue;
+.bg-dk-orange,
+.burnt-orange-bg {
+	background-color: $bus-dk-orange;
 }
 
 // Gradients

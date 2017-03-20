@@ -229,24 +229,8 @@ a {
 }
 
 /* Position */
-.relative {
-	position: relative;
-}
-
-.absolute {
-	position: absolute;
-}
 
 /* .left and .right are Legacy classes combining float and abs positioning. To be removed following authoring update */
-.left {
-	float: left;
-	left: 0;
-}
-
-.right {
-	float: right;
-	right: 0;
-}
 
 .float-left {
 	float: left;
@@ -275,22 +259,6 @@ a {
 .centered {
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.vertical-center {
-	position: "relative";
-}
-
-.vertical-center,
-.vertical-center-abs {
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.vertical-center-abs {
-	position: absolute;
 }
 
 .vertical-center-flex {
@@ -347,10 +315,6 @@ a {
 	align-items: center;
 }
 
-.full {
-	width: 100%;
-}
-
 .vertical-top {
 	vertical-align: top;
 }
@@ -367,7 +331,7 @@ a {
 	vertical-align: baseline;
 }
 
-/* Margin and Padding */
+/* SPacing: Margin and Padding */
 .m-0 {
 	margin: 0;
 }
@@ -761,6 +725,99 @@ a {
 /* Legacy: To be removed following authoring */
 
 /* End Legacy */
+/* Borders */
+
+.border-solid,
+.border-dotted {
+	padding: 1.5rem;
+}
+
+.border-dotted {
+	border-style: dotted;
+}
+
+.border-left,
+.border-right {
+	border: 0 solid #e1e1e1;
+}
+
+.border-left {
+	border-left-width: 0.1rem;
+	padding-left: 1rem;
+}
+
+.border-right {
+	border-right-width: 0.1rem;
+	padding-right: 1rem;
+}
+
+.box {
+	margin: 1.5rem 0;
+	padding: 1.5rem;
+}
+
+/* Border width only */
+
+/* Border color only */
+
+/* Images */
+.image-left {
+	float: left;
+	margin-right: 1.5rem;
+}
+
+.image-center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: block;
+}
+
+.image-right {
+	float: right;
+	margin-left: 1.5rem;
+}
+
+/* Position */
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/* .left and .right are Legacy classes combining float and abs positioning. To be removed following authoring update */
+.left {
+	float: left;
+	left: 0;
+}
+
+.right {
+	float: right;
+	right: 0;
+}
+
+.vertical-center {
+	position: "relative";
+}
+
+.vertical-center,
+.vertical-center-abs {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.vertical-center-abs {
+	position: absolute;
+}
+
+.full {
+	width: 100%;
+}
+
 /* Borders */
 .border-bottom {
 	border-bottom: 0.1rem solid #eeeeee;
@@ -1586,24 +1643,6 @@ hr.black {
 /* Sizing */
 /* Full width elements, child links, and child buttons at Small */
 
-/* Images */
-.image-left {
-	float: left;
-	margin-right: 1.5rem;
-}
-
-.image-center {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	display: block;
-}
-
-.image-right {
-	float: right;
-	margin-left: 1.5rem;
-}
-
 /* Dark orange button, used on Access page | ECTP-951 */
 
 .channel-logo::before {
@@ -1842,7 +1881,7 @@ hr.black {
 }
 
 .site-footer .footer-states-list .list-inline.list-separated li {
-	border-right: .1rem solid #fff;
+	border-right: 0.1rem solid #fff;
 	margin-top: 0;
 	margin-bottom: 1rem;
 }
@@ -2076,7 +2115,7 @@ hr.black {
 	list-style-type: none;
 	display: table-cell;
 	margin: 0;
-	padding-left: .5rem;
+	padding-left: 0.5rem;
 	padding-right: 0;
 	vertical-align: top;
 	position: relative;
@@ -2105,7 +2144,7 @@ hr.black {
 
 .site-header .nav-user a {
 	display: inline-block;
-	padding: 1.5rem .8rem .8rem;
+	padding: 1.5rem 0.8rem 0.8rem;
 	background-color: #00629b;
 	border-bottom-left-radius: 0.3rem;
 	border-bottom-right-radius: 0.3rem;
@@ -2163,7 +2202,7 @@ hr.black {
 
 .site-header .messageBox .close-message {
 	position: absolute;
-	right: .5rem;
+	right: 0.5rem;
 }
 
 /* Form: ZIP code/Localization */
@@ -2235,7 +2274,7 @@ hr.black {
 }
 
 .site-header .zipAction .geoloc-btn button::after {
-	padding-left: .4rem;
+	padding-left: 0.4rem;
 }
 
 .site-header .userLocation {
@@ -2257,8 +2296,8 @@ hr.black {
 .site-header .muiAddressLookup .localization--horizontal-1 .localization__input-submit,
 x:-moz-any-link,
 x:default {
-	padding-top: .8rem;
-	padding-bottom: .8rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
 }
 
 /* ZIP Map marker icon/link */
@@ -2304,7 +2343,7 @@ x:default {
 	text-align: left;
 	top: auto;
 	z-index: 150;
-	box-shadow: 0 .4rem .5rem -.1rem #333;
+	box-shadow: 0 0.4rem 0.5rem -0.1rem #333;
 }
 
 .site-header .my-services-menu .aem-GridColumn,
@@ -2441,7 +2480,7 @@ x:default {
 .phone-main {
 	position: absolute;
 	line-height: 1;
-	margin-right: .5rem;
+	margin-right: 0.5rem;
 	top: 2.7rem;
 	width: 100%;
 	width: -webkit-calc(100% - 1.5rem);
@@ -2512,7 +2551,7 @@ x:default {
 .site-header-top-05 .navbar-sm .navbar-toggle {
 	position: absolute;
 	right: 1.5rem;
-	top: .8rem;
+	top: 0.8rem;
 	margin-top: 0;
 }
 
@@ -2845,7 +2884,7 @@ x:default {
 }
 
 .price-style-02 .whole {
-	line-height: .9;
+	line-height: 0.9;
 }
 
 .price-style-02 .super {
@@ -2997,7 +3036,7 @@ x:default {
 
 /* Disclaimer */
 .disclaimerWrapper {
-	border-top: .1rem solid #ccc;
+	border-top: 0.1rem solid #ccc;
 	padding: 2rem;
 }
 
@@ -3090,7 +3129,7 @@ a.text-danger:focus {
 
 .btn {
 	display: inline-block;
-	box-shadow: .0rem .1rem .3rem #666;
+	box-shadow: 0rem 0.1rem 0.3rem #666;
 	padding: 0.7rem 4rem;
 	font-size: 1.9rem;
 	font-weight: 700;
@@ -3112,7 +3151,7 @@ a.text-danger:focus {
 	border: 0.1rem solid #e69300;
 	border-radius: 0.4rem;
 	color: #fff;
-	text-shadow: .1rem .1rem .3rem #888;
+	text-shadow: 0.1rem 0.1rem 0.3rem #888;
 	font-weight: 700;
 	font-size: 1.9rem;
 	text-transform: uppercase;
@@ -3291,7 +3330,7 @@ a.text-danger:focus {
 	list-style: none;
 	color: #51565c;
 	padding: 0 1.5rem;
-	margin-left: .5rem;
+	margin-left: 0.5rem;
 }
 
 .list-component .list-bullets-blue li::before {
@@ -3948,7 +3987,7 @@ a.text-danger:focus {
 
 	.site-header-top-05 .mui-wrapper.menu-lg .btn {
 		white-space: nowrap;
-		padding-right: .3rem;
+		padding-right: 0.3rem;
 	}
 
 	.price-style-03.price-block {

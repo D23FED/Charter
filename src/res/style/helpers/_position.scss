@@ -2,7 +2,6 @@
 	/* Position */
 }
 
-$vertical-aligns: (top, middle, bottom, baseline);
 .relative {
 	position: relative;
 }
@@ -25,35 +24,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	right: 0;
 }
 
-.float-left {
-	float: left;
-}
-
-.float-right {
-	float: right;
-}
-
-.bottom-justified {
-	bottom: 0;
-}
-
-.top-justified {
-	top: 0;
-}
-
-.left-justified {
-	left: 0;
-}
-
-.right-justified {
-	right: 0;
-}
-
-.centered {
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .vertical-center {
 	@include vertical-center('relative');
 }
@@ -62,36 +32,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	@include vertical-center;
 }
 
-.vertical-center-flex {
-	display: flex;
-	align-items: center;
-}
-
-.horizontal-center {
-	@include horizontal-center;
-}
-
-.horizontal-center-flex {
-	display: flex;
-	justify-content: center;
-}
-
-.absolute-center {
-	@include absolute-center;
-}
-
-.absolute-center-flex {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .full {
 	width: 100%;
-}
-
-@each $alignment in $vertical-aligns {
-	.vertical-#{$alignment} {
-		vertical-align: $alignment;
-	}
 }

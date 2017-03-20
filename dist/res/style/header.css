@@ -209,7 +209,7 @@
 	list-style-type: none;
 	display: table-cell;
 	margin: 0;
-	padding-left: .5rem;
+	padding-left: 0.5rem;
 	padding-right: 0;
 	vertical-align: top;
 	position: relative;
@@ -238,7 +238,7 @@
 
 .site-header .nav-user a {
 	display: inline-block;
-	padding: 1.5rem .8rem .8rem;
+	padding: 1.5rem 0.8rem 0.8rem;
 	background-color: #00629b;
 	border-bottom-left-radius: 0.3rem;
 	border-bottom-right-radius: 0.3rem;
@@ -296,7 +296,7 @@
 
 .site-header .messageBox .close-message {
 	position: absolute;
-	right: .5rem;
+	right: 0.5rem;
 }
 
 /* Form: ZIP code/Localization */
@@ -368,7 +368,7 @@
 }
 
 .site-header .zipAction .geoloc-btn button::after {
-	padding-left: .4rem;
+	padding-left: 0.4rem;
 }
 
 .site-header .userLocation {
@@ -390,8 +390,8 @@
 .site-header .muiAddressLookup .localization--horizontal-1 .localization__input-submit,
 x:-moz-any-link,
 x:default {
-	padding-top: .8rem;
-	padding-bottom: .8rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
 }
 
 /* ZIP Map marker icon/link */
@@ -437,7 +437,7 @@ x:default {
 	text-align: left;
 	top: auto;
 	z-index: 150;
-	box-shadow: 0 .4rem .5rem -.1rem #333;
+	box-shadow: 0 0.4rem 0.5rem -0.1rem #333;
 }
 
 .site-header .my-services-menu .aem-GridColumn,
@@ -574,7 +574,7 @@ x:default {
 .phone-main {
 	position: absolute;
 	line-height: 1;
-	margin-right: .5rem;
+	margin-right: 0.5rem;
 	top: 2.7rem;
 	width: 100%;
 	width: -webkit-calc(100% - 1.5rem);
@@ -645,7 +645,7 @@ x:default {
 .site-header-top-05 .navbar-sm .navbar-toggle {
 	position: absolute;
 	right: 1.5rem;
-	top: .8rem;
+	top: 0.8rem;
 	margin-top: 0;
 }
 
@@ -735,7 +735,7 @@ x:default {
 
 	.site-header-top-05 .mui-wrapper.menu-lg .btn {
 		white-space: nowrap;
-		padding-right: .3rem;
+		padding-right: 0.3rem;
 	}
 }
 

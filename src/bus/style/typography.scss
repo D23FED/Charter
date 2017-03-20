@@ -97,7 +97,7 @@ a {
 	a {
 		@extend .pseudo-double-angle-right;
 		&::after {
-			font-size: .8em;
+			font-size: 0.8em;
 		}
 	}
 }
@@ -108,7 +108,7 @@ a {
 	a {
 		@extend .pseudo-double-angle-right;
 		&::after {
-			content: "\00a0\00bb";
+			content: '\00a0\00bb';
 			font-family: inherit;
 		}
 	}
@@ -119,7 +119,7 @@ a {
 	a {
 		@extend .pseudo-double-angle-right;
 		&::after {
-			content: "\00a0\00bb";
+			content: '\00a0\00bb';
 			font-family: inherit;
 		}
 	}
@@ -148,13 +148,5 @@ figcaption {
 
 .disclaimer-sm {
 	color: $bus-md-gray;
-	font-size: .9rem;
-}
-
-$bus-colors: ( teal: $bus-teal);
-@each $name,
-$color in $bus-colors {
-	.text-#{$name} {
-		color: $color;
-	}
+	font-size: 0.9rem;
 }

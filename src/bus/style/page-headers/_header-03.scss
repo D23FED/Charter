@@ -9,7 +9,7 @@ $zip-input-size: 65% - $zip-input-m-size;
 $zip-sm-input-size: 80% - $zip-input-m-size;
 $zip-btn-size: 100% - ($zip-input-size + $zip-input-m-size);
 $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
-$menu-top-font-size-scale-factor: .8;
+$menu-top-font-size-scale-factor: 0.8;
 $row-mega-menu-height: 4rem;
 // Packages header w/logo, support menu, and ZIP Code dropdown form
 .site-header-03 {
@@ -39,17 +39,15 @@ $row-mega-menu-height: 4rem;
 	}
 	// Top menu row
 	.menu-row-top {
+		display: none;
 		padding-top: $site-header-padding-top * $menu-top-font-size-scale-factor;
 		padding-bottom: $site-header-padding-bottom * $menu-top-font-size-scale-factor;
 		background-color: white;
-		display: none;
 		font-size: 1.2rem;
 		color: $md-blue;
-		@include breakpoint('sm') {
-			display: block;
-		}
-		@include aem-authoring {
-			display: block;
+		.aem-Grid {
+			display: flex;
+			align-items: center;
 		}
 		ol,
 		ul {
@@ -67,12 +65,21 @@ $row-mega-menu-height: 4rem;
 		}
 		.menu-support {
 			text-align: right;
+			li {
+				border-color: $md-blue;
+			}
 			svg {
 				width: 1.5rem;
 				fill: $md-blue;
 				float: left;
 				margin-right: 0.2rem;
 			}
+		}
+		@include breakpoint('sm') {
+			display: block;
+		}
+		@include aem-authoring {
+			display: block;
 		}
 	}
 	// Primary menu row; site logo, link to phone, MUI form
@@ -101,12 +108,6 @@ $row-mega-menu-height: 4rem;
 		// , MUI form
 		.mui-wrapper {
 			display: none;
-			@include breakpoint('sm') {
-				display: block;
-			}
-			@include aem-authoring {
-				display: block;
-			}
 			// Fix for button class applied to wrapper
 			[class*='btn'].zipAction {
 				background: none;
@@ -124,6 +125,12 @@ $row-mega-menu-height: 4rem;
 				margin-bottom: 0.3rem;
 				text-align: center;
 			}
+			@include breakpoint('sm') {
+				display: block;
+			}
+			@include aem-authoring {
+				display: block;
+			}
 		}
 		.site-header-aside {
 			ul,
@@ -131,6 +138,7 @@ $row-mega-menu-height: 4rem;
 				margin-bottom: 0;
 				text-align: right;
 				font-size: 0;
+				line-height: 1;
 			}
 			li {
 				padding-left: 0.2rem;
@@ -149,9 +157,9 @@ $row-mega-menu-height: 4rem;
 				transition-property: fill;
 			}
 			svg {
-				max-width: 3.5rem;
 				display: block;
-				margin: 0 auto;
+				max-width: 3.5rem;
+				margin: 0 auto 0.4rem;
 				@include breakpoint('sm') {
 					max-width: 3rem;
 				}
@@ -166,9 +174,10 @@ $row-mega-menu-height: 4rem;
 			a {
 				color: white;
 				text-decoration: none;
-				font-size: $font-size-default;
+				font-size: 1.6rem;
 				font-weight: normal;
 				transition-property: color;
+				display: inline-block;
 				@include hover-focus {
 					text-decoration: underline;
 					color: $bus-brt-blue;
@@ -178,7 +187,7 @@ $row-mega-menu-height: 4rem;
 				}
 				@include breakpoint('sm') {
 					font-weight: 600;
-					font-size: $font-size-default;
+					font-size: 1.6rem;
 				}
 			}
 		}
@@ -217,22 +226,24 @@ $row-mega-menu-height: 4rem;
 			font-size: 0;
 		}
 		// Primary nav items
-		.link-default,
-		.desktopLink a {
-			line-height: $row-mega-menu-height;
-			text-decoration: none;
-			display: block;
-			padding-left: 2rem;
-			padding-right: 2rem;
-			transition: all $transition-time-default ease-out;
-			transition-property: color, background-color;
-			font-size: 1.4rem;
-			@include hover-focus {
-				background-color: $bus-teal;
+		.desktopLink,
+		.linkComponent {
+			a {
+				display: block;
+				line-height: $row-mega-menu-height;
+				text-decoration: none;
+				padding-left: 2rem;
+				padding-right: 2rem;
+				transition: all $transition-time-default ease-out;
+				transition-property: color, background-color;
+				font-size: 1.4rem;
 			}
 		}
 		.desktopLink a {
 			color: #fff;
+			@include hover-focus {
+				background-color: $bus-teal;
+			}
 		}
 		// Primary nav: Products, Solutions, Offers
 		.nav-primary {
@@ -265,6 +276,8 @@ $row-mega-menu-height: 4rem;
 	}
 	// mega menu submenus
 	.sub-menu-item {
+		$white-cover-block-offset: 1.6rem;
+		display: none;
 		position: absolute;
 		background-color: white;
 		border: 0.1rem solid $bus-lt-gray;
@@ -272,19 +285,8 @@ $row-mega-menu-height: 4rem;
 		margin: 0;
 		padding: 0;
 		padding-bottom: 2.5rem;
-		display: none;
-		@include breakpoint('sm') {
-			display: block;
-		}
-		@include aem-authoring {
-			display: block;
-			position: static;
-		}
 		.aem-Grid {
 			display: flex;
-			@include aem-authoring {
-				display: block;
-			}
 			>.aem-GridColumn {
 				border-left: 0.1rem solid $bus-lt-gray;
 				&:first-child {
@@ -296,6 +298,9 @@ $row-mega-menu-height: 4rem;
 						}
 					}
 				}
+			}
+			@include aem-authoring {
+				display: block;
 			}
 		}
 		// Fix for nested columns
@@ -317,28 +322,28 @@ $row-mega-menu-height: 4rem;
 		>li>div {
 			width: auto !important;
 		}
-		.link-default {
+		a {
 			font-size: 1.4rem;
 			line-height: (3 / 1.4);
 			padding-left: 0;
+			text-decoration: none;
 			@include hover-focus {
 				background-color: transparent;
 				color: $bus-teal;
 			}
 		}
-		$white-cover-block-offset: 1.6rem;
 		.spectrum-first {
 			position: relative;
 			&::before {
-				content: '';
 				display: block;
+				content: '';
 				position: absolute;
 				width: $white-cover-block-offset;
 				height: 4rem;
 				background-color: white;
 				left: -$white-cover-block-offset;
 			}
-			.link-default {
+			a {
 				color: $bus-dk-gray;
 				font-size: 1.8rem;
 				font-weight: 300;
@@ -353,8 +358,15 @@ $row-mega-menu-height: 4rem;
 			}
 		}
 		.linkLabel {
-			@include pseudo-double-angle-right;
 			display: inline;
+			@include pseudo-double-angle-right;
+		}
+		@include breakpoint('sm') {
+			display: block;
+		}
+		@include aem-authoring {
+			display: block;
+			position: static;
 		}
 	}
 	// Contains ZIP Code and Search forms
@@ -363,13 +375,13 @@ $row-mega-menu-height: 4rem;
 		padding-bottom: $site-header-padding-bottom;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
-		@include breakpoint('sm') {
-			padding-left: 0;
-			padding-right: 0;
-		}
 		.container .container {
 			padding: 0;
 			width: auto;
+		}
+		@include breakpoint('sm') {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 	// Menu row containing message and forms (such as Search or ZIP)
@@ -380,15 +392,15 @@ $row-mega-menu-height: 4rem;
 			&:first-child {
 				position: relative;
 				&::before {
-					top: 1px;
 					display: inline-block;
+					top: 1px;
 					font-style: normal;
 					font-weight: 400;
 					line-height: 1;
 					font-awesome: map-marker;
-					@include vertical-center();
 					color: #03a8e0;
 					font-size: $map-marker-icon-size;
+					@include vertical-center();
 				}
 			}
 		}
@@ -403,22 +415,19 @@ $row-mega-menu-height: 4rem;
 		p {
 			font-size: 1.2rem;
 			line-height: 1.3;
-			@include breakpoint('sm') {
-				font-size: $font-size-default;
-				line-height: $line-height-base;
-			}
 			margin-bottom: 0;
 			padding-left: $map-marker-icon-size+1rem;
 			color: #666;
+			@include breakpoint('sm') {
+				font-size: 1.6rem;
+				line-height: $line-height-base;
+			}
 		}
 	}
 	// ZIP Code <form>
 	.geoLoc {
 		padding-top: 1rem;
 		margin-left: -$column-padding;
-		@include breakpoint('sm') {
-			padding-top: 0;
-		}
 		input,
 		.geoloc-btn {
 			float: left;
@@ -437,15 +446,18 @@ $row-mega-menu-height: 4rem;
 		// Submit <button> wrapper <div>
 		.geoloc-btn {
 			width: $zip-btn-size;
-			@include breakpoint('sm') {
-				width: $zip-sm-btn-size;
-			}
 			button {
 				border-radius: $btn-border-radius-base;
 				padding: 0;
 				width: 100%;
 				line-height: 1.7;
 			}
+			@include breakpoint('sm') {
+				width: $zip-sm-btn-size;
+			}
+		}
+		@include breakpoint('sm') {
+			padding-top: 0;
 		}
 	}
 }

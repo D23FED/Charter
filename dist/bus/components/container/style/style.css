@@ -1,0 +1,14 @@
+/* Container Component */
+.container {
+	max-width: 100%;
+	padding: 0.5rem;
+}
+
+.boxed {
+	padding: 2.5rem;
+	background-color: #fff;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	border-radius: 5px 5px 0 0;
+}
+
+/*# sourceMappingURL=style.css.map */

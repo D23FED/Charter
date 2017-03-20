@@ -24,3 +24,11 @@ $btn-default-colors: (
 );
 
 $text-color-default: $bus-dk-gray;
+$font-size-default-bus: 1.4rem;
+$container-padding-sm: 0.5rem;
+// Business z-indexes
+$z-layer-bus : (
+	btn-icon: 10,
+	navbar-sm: 101,
+	close-button: 20
+)

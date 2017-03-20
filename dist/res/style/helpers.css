@@ -60,24 +60,8 @@
 }
 
 /* Position */
-.relative {
-	position: relative;
-}
-
-.absolute {
-	position: absolute;
-}
 
 /* .left and .right are Legacy classes combining float and abs positioning. To be removed following authoring update */
-.left {
-	float: left;
-	left: 0;
-}
-
-.right {
-	float: right;
-	right: 0;
-}
 
 .float-left {
 	float: left;
@@ -106,22 +90,6 @@
 .centered {
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.vertical-center {
-	position: "relative";
-}
-
-.vertical-center,
-.vertical-center-abs {
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.vertical-center-abs {
-	position: absolute;
 }
 
 .vertical-center-flex {
@@ -178,10 +146,6 @@
 	align-items: center;
 }
 
-.full {
-	width: 100%;
-}
-
 .vertical-top {
 	vertical-align: top;
 }
@@ -198,7 +162,7 @@
 	vertical-align: baseline;
 }
 
-/* Margin and Padding */
+/* SPacing: Margin and Padding */
 .m-0 {
 	margin: 0;
 }
@@ -592,6 +556,99 @@
 /* Legacy: To be removed following authoring */
 
 /* End Legacy */
+/* Borders */
+
+.border-solid,
+.border-dotted {
+	padding: 1.5rem;
+}
+
+.border-dotted {
+	border-style: dotted;
+}
+
+.border-left,
+.border-right {
+	border: 0 solid #e1e1e1;
+}
+
+.border-left {
+	border-left-width: 0.1rem;
+	padding-left: 1rem;
+}
+
+.border-right {
+	border-right-width: 0.1rem;
+	padding-right: 1rem;
+}
+
+.box {
+	margin: 1.5rem 0;
+	padding: 1.5rem;
+}
+
+/* Border width only */
+
+/* Border color only */
+
+/* Images */
+.image-left {
+	float: left;
+	margin-right: 1.5rem;
+}
+
+.image-center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: block;
+}
+
+.image-right {
+	float: right;
+	margin-left: 1.5rem;
+}
+
+/* Position */
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/* .left and .right are Legacy classes combining float and abs positioning. To be removed following authoring update */
+.left {
+	float: left;
+	left: 0;
+}
+
+.right {
+	float: right;
+	right: 0;
+}
+
+.vertical-center {
+	position: "relative";
+}
+
+.vertical-center,
+.vertical-center-abs {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.vertical-center-abs {
+	position: absolute;
+}
+
+.full {
+	width: 100%;
+}
+
 /* Borders */
 .border-bottom {
 	border-bottom: 0.1rem solid #eeeeee;
@@ -1416,24 +1473,6 @@ hr.black {
 
 /* Sizing */
 /* Full width elements, child links, and child buttons at Small */
-
-/* Images */
-.image-left {
-	float: left;
-	margin-right: 1.5rem;
-}
-
-.image-center {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	display: block;
-}
-
-.image-right {
-	float: right;
-	margin-left: 1.5rem;
-}
 
 @media (min-width: 544px) {
 	.text-left-xs {

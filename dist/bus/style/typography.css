@@ -6,8 +6,6 @@ html {
 
 body {
 	font-family: Open Sans,Helvetica,Arial,sans-serif;
-	font-size: 1.6rem;
-	line-height: 1.5;
 	color: #333;
 	font-size: 1.4rem;
 	font-weight: 400;
@@ -166,7 +164,7 @@ a:hover,
 }
 
 .link-header a::after {
-	font-size: .8em;
+	font-size: 0.8em;
 }
 
 .link-strong {
@@ -175,7 +173,7 @@ a:hover,
 }
 
 .link-strong a::after {
-	content: "\00a0\00bb";
+	content: '\00a0\00bb';
 	font-family: inherit;
 }
 
@@ -184,7 +182,7 @@ a:hover,
 }
 
 .link-list a::after {
-	content: "\00a0\00bb";
+	content: '\00a0\00bb';
 	font-family: inherit;
 }
 
@@ -208,11 +206,7 @@ figcaption {
 
 .disclaimer-sm {
 	color: #919191;
-	font-size: .9rem;
-}
-
-.text-teal {
-	color: #18b9a0;
+	font-size: 0.9rem;
 }
 
 @media (min-width: 768px) {

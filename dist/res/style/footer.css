@@ -147,7 +147,7 @@
 }
 
 .site-footer .footer-states-list .list-inline.list-separated li {
-	border-right: .1rem solid #fff;
+	border-right: 0.1rem solid #fff;
 	margin-top: 0;
 	margin-bottom: 1rem;
 }
