@@ -10,7 +10,7 @@ $zip-sm-input-size: 80% - $zip-input-m-size;
 $zip-btn-size: 100% - ($zip-input-size + $zip-input-m-size);
 $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 $menu-top-font-size-scale-factor: 0.8;
-$row-mega-menu-height: 4rem;
+$row-megamenu-height: 4rem;
 // Packages header w/logo, support menu, and ZIP Code dropdown form
 .site-header-03 {
 	// Container + Layout Container = double padding
@@ -23,7 +23,7 @@ $row-mega-menu-height: 4rem;
 					padding-right: $column-padding;
 				}
 			}
-			&+#{$grid-column} {
+			& + #{$grid-column} {
 				padding-right: 0;
 			}
 		}
@@ -105,10 +105,9 @@ $row-mega-menu-height: 4rem;
 				margin-right: 2.5rem;
 			}
 		}
-		// , MUI form
+		// MUI form
 		.mui-wrapper {
-			display: none;
-			// Fix for button class applied to wrapper
+			display: none; // Fix for button class applied to wrapper
 			[class*='btn'].zipAction {
 				background: none;
 				&:focus {
@@ -116,8 +115,7 @@ $row-mega-menu-height: 4rem;
 				}
 			}
 			button {
-				vertical-align: middle;
-				// @include spe_button-variant($btn-default-colors);
+				vertical-align: middle; // @include spe_button-variant($btn-default-colors);
 			}
 			.description {
 				color: white;
@@ -230,26 +228,27 @@ $row-mega-menu-height: 4rem;
 		.linkComponent {
 			a {
 				display: block;
-				line-height: $row-mega-menu-height;
+				line-height: $row-megamenu-height;
+				line-height: $row-megamenu-height;
 				text-decoration: none;
 				padding-left: 2rem;
 				padding-right: 2rem;
 				transition: all $transition-time-default ease-out;
 				transition-property: color, background-color;
 				font-size: 1.4rem;
+				color: #fff;
+				@include hover-focus {
+					background-color: $bus-teal;
+				}
 			}
 		}
-		.desktopLink a {
-			color: #fff;
-			@include hover-focus {
-				background-color: $bus-teal;
-			}
-		}
+		// Links inside megamenu dropdown menus
+		.desktopLink a {}
 		// Primary nav: Products, Solutions, Offers
 		.nav-primary {
 			.list-inline {
 				margin-left: 0;
-				>li {
+				> li {
 					border-bottom: none;
 					border-right: 0.1rem solid $bus-lt-blue;
 					padding-left: 0;
@@ -275,23 +274,17 @@ $row-mega-menu-height: 4rem;
 		}
 	}
 	// mega menu submenus
-	.sub-menu-item {
+	#{$megamenu-menu} {
 		$white-cover-block-offset: 1.6rem;
-		display: none;
-		position: absolute;
 		background-color: white;
 		border: 0.1rem solid $bus-lt-gray;
-		width: 100%;
-		margin: 0;
-		padding: 0;
 		padding-bottom: 2.5rem;
 		.aem-Grid {
 			display: flex;
-			>.aem-GridColumn {
+			> .aem-GridColumn {
 				border-left: 0.1rem solid $bus-lt-gray;
 				&:first-child {
-					border-left-width: 0;
-					// First list item inside first column-count:
+					border-left-width: 0; // First list item inside first column-count:
 					.spectrum-first {
 						&::before {
 							display: none;
@@ -319,17 +312,21 @@ $row-mega-menu-height: 4rem;
 			}
 		}
 		// Temp fix
-		>li>div {
+		> li > div {
 			width: auto !important;
 		}
-		a {
-			font-size: 1.4rem;
-			line-height: (3 / 1.4);
-			padding-left: 0;
-			text-decoration: none;
-			@include hover-focus {
-				background-color: transparent;
-				color: $bus-teal;
+		.desktopLink,
+		.linkComponent {
+			a {
+				font-size: 1.4rem;
+				line-height: (3 / 1.4);
+				padding-left: 0;
+				text-decoration: none;
+				color: $link-color-default-bus;
+				@include hover-focus {
+					background-color: transparent;
+					color: $bus-teal;
+				}
 			}
 		}
 		.spectrum-first {
@@ -362,7 +359,7 @@ $row-mega-menu-height: 4rem;
 			@include pseudo-double-angle-right;
 		}
 		@include breakpoint('sm') {
-			display: block;
+			// display: block;
 		}
 		@include aem-authoring {
 			display: block;
@@ -371,10 +368,6 @@ $row-mega-menu-height: 4rem;
 	}
 	// Contains ZIP Code and Search forms
 	.menu-row-message {
-		padding-top: $site-header-padding-top;
-		padding-bottom: $site-header-padding-bottom;
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
 		.container .container {
 			padding: 0;
 			width: auto;
@@ -383,6 +376,12 @@ $row-mega-menu-height: 4rem;
 			padding-left: 0;
 			padding-right: 0;
 		}
+	}
+	.messagebox-wrapper {
+		padding-top: $site-header-padding-top;
+		padding-bottom: $site-header-padding-bottom;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
 	}
 	// Menu row containing message and forms (such as Search or ZIP)
 	// ZIP Code form group beneath header
@@ -435,8 +434,7 @@ $row-mega-menu-height: 4rem;
 		input {
 			width: $zip-input-size;
 			padding-left: 0.5rem;
-			padding-right: 0.5rem;
-			// border-color: $bus-brt-blue;
+			padding-right: 0.5rem; // border-color: $bus-brt-blue;
 			border-style: none;
 			margin-right: $zip-input-m-size;
 			@include breakpoint('sm') {

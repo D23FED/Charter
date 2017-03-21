@@ -1,4 +1,5 @@
 /* All Residental Styles */
+
 /* Banner below hero */
 .banner-offer {
 	color: #000;
@@ -168,6 +169,7 @@ a {
 }
 
 /* Helpers */
+
 /* Display */
 .clear {
 	clear: both;
@@ -757,6 +759,46 @@ a {
 }
 
 /* Border width only */
+
+.bd-r5 {
+	border-radius: 0.5rem;
+}
+
+.bdt-r5 {
+	border-top-left-radius: 0.5rem;
+}
+
+.bdt-r5,
+.bdr-r5 {
+	border-top-right-radius: 0.5rem;
+}
+
+.bdr-r5,
+.bdb-r5 {
+	border-bottom-right-radius: 0.5rem;
+}
+
+.bdb-r5,
+.bdl-r5 {
+	border-bottom-left-radius: 0.5rem;
+}
+
+.bdl-r5,
+.bdtl-r5 {
+	border-top-left-radius: 0.5rem;
+}
+
+.bdtr-r5 {
+	border-top-right-radius: 0.5rem;
+}
+
+.bdbl-r5 {
+	border-bottom-left-radius: 0.5rem;
+}
+
+.bdbr-r5 {
+	border-bottom-right-radius: 0.5rem;
+}
 
 /* Border color only */
 
@@ -2727,6 +2769,7 @@ x:default {
 }
 
 /* Pricing Component */
+
 /* Dev only, not for prod */
 .price-block {
 	-webkit-margin-after: 4rem;
@@ -3392,6 +3435,10 @@ a.text-danger:focus {
 	margin-left: -3rem;
 	vertical-align: middle;
 	vertical-align: -webkit-baseline-middle;
+}
+
+.test {
+	color: #000;
 }
 
 .list-component .list-bullets-white {

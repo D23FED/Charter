@@ -4,6 +4,9 @@ $file-title: 'Site Header';
 /* #{$file-title} */
 
 $grid-column: '[class*="aem-GridColumn"]';
+$megamenu-menu: '.sub-menu-item';
+
+
 .site-header {
 	.container {
 		padding-top: 0;
@@ -134,6 +137,12 @@ $grid-column: '[class*="aem-GridColumn"]';
 			color: $text-color-default;
 		}
 	}
+	// Element that gets shown/hidden when ZIP action or Search is clicked
+	.messagebox-wrapper {
+		padding-top: $site-header-padding-top;
+		padding-bottom: $site-header-padding-bottom;
+		display: none;
+	}
 	// Search and ZIP forms in header
 	.messageBox {
 		position: relative;
@@ -162,6 +171,20 @@ $grid-column: '[class*="aem-GridColumn"]';
 	.aem-GridColumn.btn-primary {
 		background-color: transparent;
 		border-style: none;
+	}
+	// Mega Menus
+	.mega-menu-item {
+		// Megamenu activated
+		&.js-active .sub-menu-item {
+			display: block;
+		}
+	}
+	.sub-menu-item {
+		display: none;
+		position: absolute;
+		width: 100%;
+		margin: 0;
+		padding: 0;
 	}
 }
 

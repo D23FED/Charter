@@ -1,12 +1,12 @@
-/* Business style */
+/* All Spectrum Business Styles */
 @import 'initialize';
-@import '../../com/style/fonts/charter-icons';
 @import
-	'variables',
-	'typography',
-	'helpers',
-	'header',
-	'footer',
-	'buttons',
+	'bus/style/variables-business',
+	'../../com/style/fonts/charter-icons',
+	'bus/style/typography',
+	'bus/style/helpers',
+	'bus/style/header',
+	'bus/style/footer',
+	'bus/style/buttons',
 	'../components/container/style/style'
 ;

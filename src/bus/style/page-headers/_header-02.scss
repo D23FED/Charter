@@ -40,8 +40,8 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 	}
 	// Menu row containing message and forms (such as Search or ZIP)
 	.menu-row-message {
-		padding-top: $site-header-padding-top;
-		padding-bottom: $site-header-padding-bottom;
+		padding-top: 0;
+		padding-bottom: 0;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
 		@include breakpoint('sm') {

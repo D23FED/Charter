@@ -1,6 +1,6 @@
 <?php
 $document = array(
-	'title' => 'Typography: Spectrum Business',
+	'title' => 'Borders: Spectrum Business',
 	'body'  => array(
 		'id'    => '',
 		'class' => ''

@@ -124,7 +124,7 @@ $bd-colors: ( 'gray': $gray, 'dkgray':$dk-gray, 'ltgray': #eee);
 	}
 	// Top Right
 	.bdtr-r#{$radius} {
-		border-top-left-radius: $remRadius;
+		border-top-right-radius: $remRadius;
 	}
 	// Bottom Left
 	.bdbl-r#{$radius} {
@@ -132,7 +132,7 @@ $bd-colors: ( 'gray': $gray, 'dkgray':$dk-gray, 'ltgray': #eee);
 	}
 	// Bottom Right
 	.bdbr-r#{$radius} {
-		border-bottom-left-radius: $remRadius;
+		border-bottom-right-radius: $remRadius;
 	}
 }
 

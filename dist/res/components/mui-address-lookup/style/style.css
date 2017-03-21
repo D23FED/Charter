@@ -155,6 +155,10 @@ fieldset[disabled] .muiAddressLookup .localization--horizontal-1 .localization__
 	width: 40rem;
 }
 
+.test {
+	color: #000;
+}
+
 .form-header {
 	color: #003057;
 	font-size: 1.4rem;

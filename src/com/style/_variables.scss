@@ -1,6 +1,6 @@
 @import 'variables-color';
 @import 'variables-bootstrap';
-@import '../../bus/style/_variables.scss';
+@import '../../bus/style/variables-business';
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
@@ -51,8 +51,4 @@ $zi-primary-nav-sm: 1000;
 $zi-popover: 100;
 $zi-megamenu: 150;
 $zi-icon-map-marker: 10;
-// Business z-indexes
-$z-layer-bus : (
-	btn-icon: 10,
-	navbar-sm: 101
-)
+
