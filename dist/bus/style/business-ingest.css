@@ -971,6 +971,18 @@ hr.black {
   border-top: 0.1rem solid #333;
 }
 
+.ff-charter {
+  font-family: Charter Icons;
+}
+
+.ff-sans {
+  font-family: Open Sans,Arial,Helvetica,sans-serif;
+}
+
+.ff-icon {
+  font-family: Font Awesome;
+}
+
 /* Borders */
 .border-radius {
   border-radius: 0.3rem;
@@ -3182,6 +3194,25 @@ path {
   }
 }
 
+@media (min-width:768px) and (max-width:991px) {
+
+  .sm-only-text-left {
+    text-align: left;
+  }
+
+  .sm-only-float-left {
+    float: left;
+  }
+
+  .sm-only-text-right {
+    text-align: right;
+  }
+
+  .sm-only-float-right {
+    float: right;
+  }
+}
+
 @media (min-width:992px) {
 
   h1,
@@ -3619,7 +3650,42 @@ path {
   }
 }
 
+@media (min-width:992px) and (max-width:1199px) {
+
+  .md-only-text-left {
+    text-align: left;
+  }
+
+  .md-only-float-left {
+    float: left;
+  }
+
+  .md-only-text-right {
+    text-align: right;
+  }
+
+  .md-only-float-right {
+    float: right;
+  }
+}
+
 @media (min-width:1200px) {
+
+  .lg-only-text-left {
+    text-align: left;
+  }
+
+  .lg-only-float-left {
+    float: left;
+  }
+
+  .lg-only-text-right {
+    text-align: right;
+  }
+
+  .lg-only-float-right {
+    float: right;
+  }
 
   .m-lg-0 {
     margin: 0;
@@ -4020,6 +4086,25 @@ path {
 
   .text-right-lg {
     text-align: right;
+  }
+}
+
+@media (max-width:767px) {
+
+  .xs-only-text-left {
+    text-align: left;
+  }
+
+  .xs-only-float-left {
+    float: left;
+  }
+
+  .xs-only-text-right {
+    text-align: right;
+  }
+
+  .xs-only-float-right {
+    float: right;
   }
 }
 

@@ -95,3 +95,72 @@ $vertical-aligns: (top, middle, bottom, baseline);
 		vertical-align: $alignment;
 	}
 }
+
+// Responsive alignments
+@include breakpoint-bt('xxs', 'xs') {
+	.xs-only {
+		&-text-left {
+			text-align: left;
+		}
+		&-float-left {
+			float: left;
+		}
+		&-text-right {
+			text-align: right;
+		}
+		&-float-right {
+			float: right;
+		}
+	}
+}
+
+@include breakpoint-only('sm') {
+	.sm-only {
+		&-text-left {
+			text-align: left;
+		}
+		&-float-left {
+			float: left;
+		}
+		&-text-right {
+			text-align: right;
+		}
+		&-float-right {
+			float: right;
+		}
+	}
+}
+
+@include breakpoint-only('md') {
+	.md-only {
+		&-text-left {
+			text-align: left;
+		}
+		&-float-left {
+			float: left;
+		}
+		&-text-right {
+			text-align: right;
+		}
+		&-float-right {
+			float: right;
+		}
+	}
+}
+
+@include breakpoint('lg') {
+	.lg-only {
+		&-text-left {
+			text-align: left;
+		}
+		&-float-left {
+			float: left;
+		}
+		&-text-right {
+			text-align: right;
+		}
+		&-float-right {
+			float: right;
+		}
+	}
+}

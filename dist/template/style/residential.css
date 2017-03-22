@@ -4043,6 +4043,22 @@ a.text-danger:focus {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+	.sm-only-text-left {
+		text-align: left;
+	}
+
+	.sm-only-float-left {
+		float: left;
+	}
+
+	.sm-only-text-right {
+		text-align: right;
+	}
+
+	.sm-only-float-right {
+		float: right;
+	}
+
 	.bg-transparent-white-sm-only {
 		background-color: rgba(255, 255, 255, 0.65);
 	}
@@ -4676,12 +4692,44 @@ a.text-danger:focus {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+	.md-only-text-left {
+		text-align: left;
+	}
+
+	.md-only-float-left {
+		float: left;
+	}
+
+	.md-only-text-right {
+		text-align: right;
+	}
+
+	.md-only-float-right {
+		float: right;
+	}
+
 	.bg-transparent-white-md-only {
 		background-color: rgba(255, 255, 255, 0.65);
 	}
 }
 
 @media (min-width: 1200px) {
+	.lg-only-text-left {
+		text-align: left;
+	}
+
+	.lg-only-float-left {
+		float: left;
+	}
+
+	.lg-only-text-right {
+		text-align: right;
+	}
+
+	.lg-only-float-right {
+		float: right;
+	}
+
 	.m-lg-0 {
 		margin: 0;
 	}
@@ -5123,6 +5171,22 @@ a.text-danger:focus {
 	main.container {
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	.xs-only-text-left {
+		text-align: left;
+	}
+
+	.xs-only-float-left {
+		float: left;
+	}
+
+	.xs-only-text-right {
+		text-align: right;
+	}
+
+	.xs-only-float-right {
+		float: right;
 	}
 
 	.bg-transparent-white-xs-only {
