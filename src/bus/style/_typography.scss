@@ -98,6 +98,7 @@ a {
 		@extend .pseudo-double-angle-right;
 		&::after {
 			font-size: 0.8em;
+			display: contents;
 		}
 	}
 }

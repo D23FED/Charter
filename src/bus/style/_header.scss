@@ -5,8 +5,6 @@ $file-title: 'Site Header';
 
 $grid-column: '[class*="aem-GridColumn"]';
 $megamenu-menu: '.sub-menu-item';
-
-
 .site-header {
 	.container {
 		padding-top: 0;
@@ -52,7 +50,7 @@ $megamenu-menu: '.sub-menu-item';
 			.nav-item {
 				padding-left: 0;
 				padding-right: 0;
-				&+.nav-item {
+				& + .nav-item {
 					.nav-link {
 						border-top-width: 0.1rem;
 						border-top-style: solid;
@@ -70,6 +68,7 @@ $megamenu-menu: '.sub-menu-item';
 				&::after {
 					right: $column-padding;
 					position: absolute;
+					display: contents;
 				}
 				@include hover-focus() {
 					background-color: $bus-md-blue;
@@ -124,8 +123,8 @@ $megamenu-menu: '.sub-menu-item';
 	}
 	.container,
 	.container-fluid {
-		&>.navbar-header,
-		&>.navbar-collapse {
+		& > .navbar-header,
+		& > .navbar-collapse {
 			margin-left: 0;
 			margin-right: 0;
 		}
@@ -164,6 +163,7 @@ $megamenu-menu: '.sub-menu-item';
 				font-size: $font-size-default-bus;
 				line-height: 1;
 				color: $text-color-default;
+				display: contents;
 			}
 		}
 	}

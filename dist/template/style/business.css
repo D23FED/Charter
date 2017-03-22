@@ -157,6 +157,7 @@ a:focus, a:hover,
 
 .link-header a::after {
   font-size: 0.8em;
+  display: contents;
 }
 
 .link-strong {
@@ -1558,6 +1559,7 @@ hr.black {
   vertical-align: baseline;
   right: 1.5rem;
   position: absolute;
+  display: contents;
 }
 
 .site-header .navbar-sm .navbar-nav .nav-link:focus, .site-header .navbar-sm .navbar-nav .nav-link:hover {
@@ -1657,6 +1659,7 @@ hr.black {
   font-size: 1.4rem;
   line-height: 1;
   color: #333;
+  display: contents;
 }
 
 .site-header .aem-GridColumn.btn-primary {
