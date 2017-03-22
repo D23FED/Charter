@@ -1,0 +1,29 @@
+// Positioning
+@mixin center-block($dis: block) {
+	display: $dis;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin horizontal-center($pos: absolute) {
+	position: $pos;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin vertical-center($pos: absolute) {
+	position: $pos;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin absolute-center($pos: absolute) {
+	position: $pos;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.test {
+	color: #000;
+}

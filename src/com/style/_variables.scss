@@ -1,6 +1,6 @@
-@import 'colors';
-@import 'variables-bs';
-@import '../../bus/style/_variables.scss';
+@import 'variables-color';
+@import 'variables-bootstrap';
+@import '../../bus/style/variables-business';
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
@@ -30,7 +30,7 @@ $font-stack-icon: $font-font-awesome;
 $column-padding: $grid-gutter-width/2;
 $site-max-width: map-get($breakpoints, 'lg') - (strip-unit($column-padding * 2) * 1px);
 $container-class: 'container';
-$font-size-default: 1.6rem;
+$font-size-default-residential: 1.6rem;
 $site-header-class: 'site-header';
 $site-footer-class: 'site-footer';
 
@@ -51,8 +51,4 @@ $zi-primary-nav-sm: 1000;
 $zi-popover: 100;
 $zi-megamenu: 150;
 $zi-icon-map-marker: 10;
-// Business z-indexes
-$z-layer-bus : (
-	btn-icon: 10,
-	navbar-sm: 101
-)
+

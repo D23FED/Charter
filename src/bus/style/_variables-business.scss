@@ -1,0 +1,35 @@
+// Business variables
+
+// Color scheme for default buttons
+$btn-default-colors: (
+	color: #fff,
+	background: #fdaa18,
+	border: $tangerine,
+	hover: #f0f4f7,
+	// hover-bg: #f0f4f7,
+	active: #f0f4f7,
+	// active-bg: #f0f4f7,
+	focus: #f0f4f7,
+	focus-bg: #e09002,
+	focus-bd: #000,
+	active-hover: #f0f4f7,
+	hover-bg: #FDBA29,
+	active-bg: #fdaa18,
+	active-hover-bg: #fdaa18,
+	// hover-bd: #000000,
+	bg-gradient-start: #fdaa18,
+	bg-gradient-end: $bright-orange,
+	bg-gradient-hover-start: #fdaa18,
+	bg-gradient-hover-end: #fdaa18
+);
+
+$text-color-default: $bus-dk-gray;
+$font-size-default-bus: 1.4rem;
+$container-padding-sm: 0.5rem;
+$link-color-default-bus: $bus-blue;
+// Business z-indexes
+$z-layer-bus : (
+	btn-icon: 10,
+	navbar-sm: 101,
+	close-button: 20
+)

@@ -1,0 +1,71 @@
+@at-root {
+	/* Color Helpers */
+}
+
+
+/* Background colors */
+
+.bg-white {
+	background: #fff;
+}
+
+.bg-success {
+	background: #dff0d8;
+}
+
+.bg-info {
+	background: #d9edf7;
+}
+
+.bg-warning {
+	background: #fcf8e3;
+}
+
+.bg-danger {
+	background: #f2dede;
+}
+
+.bg-gray {
+	background: $gray;
+}
+
+.bg-gray-f8 {
+	background: #f8f8f8;
+}
+
+.bg-dark-gray {
+	background: $dk-gray;
+}
+
+/* Added in Helpers*/
+
+// Font colors
+.text-white {
+	color: #fff;
+}
+
+.text-black {
+	color: #000;
+}
+
+.text-gray {
+	color: $gray;
+}
+
+.text-dark-gray {
+	color: $dk-gray;
+}
+
+.text-muted {
+	color: #777;
+}
+$colors: (
+	white: #fff,
+	black: #000
+);
+@each $name,
+$color in $colors {
+	.text-#{$name} {
+		color: $color;
+	}
+}

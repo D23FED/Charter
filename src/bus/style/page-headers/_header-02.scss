@@ -40,8 +40,8 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 	}
 	// Menu row containing message and forms (such as Search or ZIP)
 	.menu-row-message {
-		padding-top: $site-header-padding-top;
-		padding-bottom: $site-header-padding-bottom;
+		padding-top: 0;
+		padding-bottom: 0;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
 		@include breakpoint('sm') {
@@ -89,17 +89,17 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 			font-size: 1.2rem;
 			line-height: 1.3;
 			@include breakpoint('sm') {
-				font-size: $font-size-default;
+				font-size: 1.6rem;
 				line-height: $line-height-base;
 			}
 			margin-bottom: 0;
-			padding-left: $map-marker-icon-size+1rem;
+			padding-left: $map-marker-icon-size;
 			color: #666;
 		}
 	}
 	// ZIP Code <form>
 	.geoLoc {
-		padding-top: 1rem;
+		// padding-top: 1rem;
 		margin-left: -$column-padding;
 		@include breakpoint('sm') {
 			padding-top: 0;
@@ -166,7 +166,7 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 			}
 			@include breakpoint('sm') {
 				font-weight: 600;
-				font-size: $font-size-default;
+				font-size: 1.6rem;
 			}
 		}
 		path {
