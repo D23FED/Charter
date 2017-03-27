@@ -19,6 +19,7 @@ var
 		]
 	}),
 	// cssnano = require('cssnano'),
+	// filter = require('gulp-filter'),
 	//browserSync = require('browser-sync').create(),
 	// path = require('path'),
 	paths = {
@@ -132,11 +133,11 @@ var
 			],
 			relative: paths.dist
 		}),
-		$.cssMqpacker({ sort: true }),
+		$.cssMqpacker({ sort: true })
 		// $.perfectionist({
 		// 	indentSize: 4
 		// }),
-		$.stylefmt()
+		// $.stylefmt()
 	],
 	sassIncludePaths = [
 		paths.source,
@@ -147,36 +148,40 @@ var
 	];
 // Sass => CSS
 gulp.task('style', function() {
-	return gulp.src([
+	return gulp
+		.src([
 			paths.source + globs.sass,
-			'!'+paths.source + '**/_component-template/**'
+			'!' + paths.source + '**/_component-template/**'
 		])
 		// Begin recording sourcemaps
-		.pipe($.sourcemaps.init())
+		// .pipe($.sourcemaps.init())
 		// Compile Sass
 		.pipe($.sass({
 			includePaths: sassIncludePaths,
-			outputStyle: 'expanded'
-		})).on('error', $.sass.logError)
+			outputStyle: 'compressed'
+		}))
+		.on('error', $.sass.logError)
 		// CSS post-processing
-		// .pipe($.stylefmt)
 		.pipe($.postcss(postCssProcessors))
+		// Replace 'content' unicode with hex code, after sass compile
 		.pipe($.sassUnicode())
-		.pipe($.sourcemaps.write('.'))
+		// .pipe($.stylefmt)
+		// Create sourcemaps
+		// .pipe($.sourcemaps.write('.'))
 		// Write CSS to disk
 		.pipe(gulp.dest(paths.dist))
+		// Ignore maps
 		.pipe($.filter([
 			'**',
 			'!**/*.map'
 			// '!dist/sandbox/**'
 		]))
-		// .pipe(filter)
 		.pipe($.debug({
 			title: 'Output:',
 			minimal: true
 		}))
 		.on('end', function() {
-			$.util.log('CSS Processed');
+			$.util.log('Sass processing complete');
 		});
 });
 // Concatenate and Uglify Global Template JS
@@ -355,6 +360,54 @@ gulp.task('watch', function() {
 		paths.source + globs.html
 	], gulp.parallel(['markup']));
 });
+// Dev
+// Sass => CSS
+gulp.task('s', function() {
+	var f = $.filter(['**', '!**/*.map']);
+	return gulp
+		.src([
+			paths.source + globs.sass,
+			'!' + paths.source + '**/_component-template/**'
+		])
+		// Begin recording sourcemaps
+		.pipe($.sourcemaps.init())
+		// Compile Sass
+		.pipe($.sass({
+			includePaths: sassIncludePaths,
+			outputStyle: 'expanded'
+		}))
+		.on('error', $.sass.logError)
+		.pipe($.postcss(postCssProcessors))
+		.pipe($.sassUnicode())
+		.pipe($.sourcemaps.write())
+		.pipe(gulp.dest(paths.dist))
+		.pipe(f)
+		.pipe($.debug({
+			title: 'Dev Sass | ',
+			minimal: true
+		}))
+		.on('end', function() {
+			$.util.log('==> C S S  G O <==');
+		});
+});
+
+gulp.task('devwatch', function() {
+	// JS
+	gulp.watch([
+		paths.source + globs.scripts
+	], gulp.parallel(['js']));
+	// Sass
+	gulp.watch(paths.source + globs.sass, gulp.parallel(['s']));
+	// Images
+	gulp.watch(paths.source + paths.images + globs.img, gulp.parallel(['img']));
+	// PHP & HTML
+	gulp.watch([
+		paths.source + globs.php,
+		paths.source + globs.html
+	], gulp.parallel(['markup']));
+});
+
+
 // Default
 gulp.task('default',
 	gulp.parallel('style', 'js', 'markup'));

@@ -1,0 +1,265 @@
+// primary nav and subnav, 3rd row
+@mixin primary-nav-menu-item {
+	border-bottom: none;
+	border-right: 0.1rem solid $bus-lt-blue;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+@mixin primary-nav-link {
+	display: block;
+	color: #fff;
+	font-size: 1.4rem;
+	line-height: $row-megamenu-height;
+	text-decoration: none;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	transition: all $transition-time-default ease-out;
+	transition-property: color, background-color;
+	@include hover-focus {
+		background-color: $bus-teal;
+	}
+}
+
+@mixin megamenu-menu-item-header {
+	position: relative;
+	&::before {
+		display: block;
+		content: '';
+		position: absolute;
+		left: -$white-cover-block-offset;
+		width: $white-cover-block-offset;
+		height: 4rem;
+		background-color: white;
+	}
+}
+
+@mixin megamenu-link-header {
+	color: $bus-dk-gray;
+	font-size: 1.8rem;
+	font-weight: 300;
+	border-bottom-color: $bus-lt-gray;
+	border-bottom-width: 0.1rem;
+	border-bottom-style: solid;
+	.linkLabel {
+		&::after {
+			display: none;
+		}
+	}
+	.ff-charter,
+	.ff-icon {
+		display: none;
+	}
+}
+
+@mixin megamenu-link {
+	font-size: 1.4rem;
+	line-height: (3 / 1.4);
+	padding-left: 0;
+	text-decoration: none;
+	color: $link-color-default-bus;
+	@include hover-focus {
+		background-color: transparent;
+		color: $bus-teal;
+	}
+	.linkLabel {
+		display: inline;
+		@include pseudo-double-angle-right;
+	}
+}
+
+// Row with primary and secondary nav, primary dropdown/mega menu
+.menu-row-mega-menu {
+	background-color: $bus-blue;
+	background: linear-gradient(to bottom, #083e62 0%, #00629b 100%);
+	.container {
+		position: relative;
+	}
+}
+
+// Wrapper for primary and secondary nav
+.business-navigation {
+	display: none;
+	@include breakpoint('sm') {
+		display: block;
+	}
+	.aem-Grid {
+		line-height: 0;
+		font-size: 0;
+		// At small sizes, secondary nav is hidden, make column containing primary nav fill width
+		.aem-GridColumn--default--6 {
+			width: 100%;
+			@include breakpoint('sm') {
+				width: 50%;
+			}
+		}
+	}
+	// Primary nav: Products, Solutions, Offers
+	.nav-primary {
+		.list-inline {
+			margin-left: 0;
+			>li {
+				border-bottom: none;
+				border-right: 0.1rem solid $bus-lt-blue;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+	// Secondary nav; Insights, Support, Partners
+	.nav-secondary {
+		float: right;
+		.mega-menu-item {
+			display: inline-block;
+		}
+		.desktopLink a {
+			padding-left: $column-padding;
+			padding-right: $column-padding;
+			@include hover-focus {
+				color: $bus-brt-blue;
+				background-color: transparent;
+			}
+			.linkLabel {
+				font-size: 1.2rem;
+			}
+		}
+		// remove padding from last menu item, to right-align flush with container
+		.mega-menu-item:last-child a {
+			// padding-right: 0;
+		}
+	}
+	ul {
+		margin-bottom: 0;
+		font-size: 0;
+	}
+	// Primary nav items
+	.desktopLink,
+	.linkComponent {
+		a:not(.btn) {
+			display: block;
+			line-height: $row-megamenu-height;
+			text-decoration: none;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			transition: all $transition-time-default ease-out;
+			transition-property: color, background-color;
+			font-size: 1.5rem;
+			color: #fff;
+			@include hover-focus {
+				background-color: $bus-teal;
+			}
+		}
+	}
+}
+
+// mega menu submenus
+#{$megamenu-menu} {
+	$white-cover-block-offset: 1.6rem;
+	background-color: white;
+	border: 0.1rem solid $bus-lt-gray;
+	padding-bottom: 2.5rem;
+	.aem-Grid {
+		display: flex;
+		>.aem-GridColumn {
+			border-left: 0.1rem solid $bus-lt-gray;
+			&:first-child {
+				border-left-width: 0; // First list item inside first column-count:
+				.spectrum-first {
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+		@include aem-authoring {
+			display: block;
+		}
+	}
+	// Fix for nested columns
+	.aem-GridColumn .aem-GridColumn {
+		padding: 0;
+	}
+	// Wraps <ul>
+	.list-component {
+		li {
+			padding-left: $column-padding;
+		}
+	}
+	ul {
+		padding-left: 0;
+	}
+	li {
+		border-width: 0;
+	}
+	// Temp fix
+	>li>div {
+		width: auto !important;
+	}
+	.desktopLink a,
+	.linkComponent .link-default,
+	.linkComponent a:not(.btn) {
+		font-size: 1.3rem;
+		font-weight: 600;
+		line-height: (3 / 1.4);
+		padding-left: 0;
+		text-decoration: none;
+		color: $link-color-default-bus;
+		@include hover-focus {
+			background-color: transparent;
+			color: $bus-teal;
+		}
+	}
+	.spectrum-first {
+		position: relative;
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			left: -$white-cover-block-offset;
+			width: $white-cover-block-offset;
+			height: 4rem;
+			background-color: white;
+		}
+		a:not(.btn) {
+			color: $bus-dk-gray;
+			font-size: 1.8rem;
+			font-weight: 300;
+			border-bottom-color: $bus-lt-gray;
+			border-bottom-width: 0.1rem;
+			border-bottom-style: solid;
+			@include hover-focus {
+				color: $bus-dk-gray;
+			}
+			.linkLabel {
+				&::after {
+					display: none;
+				}
+			}
+			.ff-charter,
+			.ff-icon {
+				display: none;
+			}
+		}
+	}
+	a:not(.btn) .linkLabel {
+		display: inline;
+		// @include pseudo-double-angle-right;
+	}
+	@include aem-authoring {
+		display: block;
+		position: static;
+	}
+	// Temp override for arrows on button text
+	.btn .ff-charter {
+		display: none;
+	}
+	.ff-charter {
+		font-size: .7em;
+		// padding-left: .5rem;
+	}
+}
+
+// Primary nav at small breakpoints
+.navbar {
+	margin-bottom: 0;
+}

@@ -21,7 +21,7 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 					padding-right: $column-padding;
 				}
 			}
-			&+#{$grid-column} {
+			& + #{$grid-column} {
 				padding-right: 0;
 			}
 		}
@@ -30,7 +30,7 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 	.menu-row-nav {
 		padding-top: $site-header-padding-top;
 		padding-bottom: $site-header-padding-bottom;
-		background-color: $bus-md-blue;
+		background-color: $bus-blue-secondary;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
 		@include breakpoint('sm') {
@@ -174,11 +174,13 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 			transition-property: fill;
 		}
 		svg {
-			max-width: 2rem;
+			width: 2rem;
+			max-height: 2rem;
 			display: block;
 			margin: 0 auto;
 			@include breakpoint('sm') {
-				max-width: 3rem;
+				width: 3rem;
+				max-height: 3rem;
 			}
 		}
 	}

@@ -96,71 +96,52 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	}
 }
 
+@mixin text-align-helper() {
+	&-text-left {
+		text-align: left;
+	}
+	&-text-center {
+		text-align: center;
+	}
+	&-text-right {
+		text-align: right;
+	}
+}
+
+@mixin float-helper() {
+	&-float-left {
+		float: left;
+	}
+	&-float-right {
+		float: right;
+	}
+}
+
 // Responsive alignments
 @include breakpoint-bt('xxs', 'xs') {
 	.xs-only {
-		&-text-left {
-			text-align: left;
-		}
-		&-float-left {
-			float: left;
-		}
-		&-text-right {
-			text-align: right;
-		}
-		&-float-right {
-			float: right;
-		}
+		@include text-align-helper;
+		@include float-helper;
 	}
 }
 
 @include breakpoint-only('sm') {
 	.sm-only {
-		&-text-left {
-			text-align: left;
-		}
-		&-float-left {
-			float: left;
-		}
-		&-text-right {
-			text-align: right;
-		}
-		&-float-right {
-			float: right;
-		}
+		@include text-align-helper;
+		@include float-helper;
 	}
 }
 
 @include breakpoint-only('md') {
 	.md-only {
-		&-text-left {
-			text-align: left;
-		}
-		&-float-left {
-			float: left;
-		}
-		&-text-right {
-			text-align: right;
-		}
-		&-float-right {
-			float: right;
-		}
+		@include text-align-helper;
+		@include float-helper;
 	}
 }
 
 @include breakpoint('lg') {
 	.lg-only {
-		&-text-left {
-			text-align: left;
-		}
-		&-float-left {
-			float: left;
-		}
-		&-text-right {
-			text-align: right;
-		}
-		&-float-right {
-			float: right;
-		}
+		@include text-align-helper;
+		@include float-helper;
 	}
 }

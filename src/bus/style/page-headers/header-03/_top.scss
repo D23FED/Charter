@@ -1,0 +1,61 @@
+// Top menu row
+$icon-svg-top-w: 1.5rem;
+.menu-row-top {
+	display: none;
+	padding-top: $site-header-padding-top * $menu-top-font-size-scale-factor;
+	padding-bottom: $site-header-padding-bottom * $menu-top-font-size-scale-factor;
+	background-color: white;
+	font-size: 1.2rem;
+	color: $md-blue;
+	.aem-Grid {
+		display: flex;
+		align-items: center;
+	}
+	ol,
+	ul {
+		margin-bottom: 0;
+	}
+	a {
+		color: $bus-dk-blue;
+		text-decoration: none;
+		font-weight: 600;
+		@include hover-focus {
+			color: $bus-teal;
+			text-decoration: underline;
+			path {
+				fill: $bus-teal;
+			}
+		}
+	}
+	.menu-support {
+		text-align: right;
+		li {
+			border-color: $md-blue;
+		}
+		svg {
+			width: $icon-svg-top-w;
+			max-height: $icon-svg-top-w;
+			fill: $bus-dk-blue;
+			float: left;
+			margin-right: 0.2rem;
+		}
+	}
+	@include breakpoint('sm') {
+		display: block;
+	}
+	@include aem-authoring {
+		display: block;
+	}
+}
+
+// Links to Charter, Reach and Enterprise
+.menu-sister-sites {
+	ol,
+	ul {
+		line-height: 0;
+	}
+	li {
+		border-color: $md-blue;
+		line-height: 1;
+	}
+}

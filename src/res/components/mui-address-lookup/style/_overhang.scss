@@ -127,7 +127,7 @@
 	@at-root {
 		/* MUI form */
 	}
-	.muiAddressLookup {
+	.#{$mui-wrapper-legacy} {
 		margin: 0 2.5rem;
 		label {
 			display: none;

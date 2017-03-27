@@ -1,3 +1,5 @@
+/* MUI Component injection */
+
 /* Multiple address form */
 .muiMultipleAddressForm .buyflow-multiple-address {
   box-sizing: border-box;
@@ -636,4 +638,4 @@ fieldset[disabled]
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=mui.css.map */

@@ -112,3 +112,8 @@ hr {
 .ff-icon {
 	font-family: Font Awesome;
 }
+
+// Fix for safari
+.list-inline>li {
+	list-style-type: none;
+}
