@@ -113,6 +113,9 @@ $color in $bus-colors {
 	background-color: $bus-dk-orange;
 }
 
+.bg-transparent-deep-blue {
+	background: rgba(1, 57, 99, 0.8);
+}
 // Gradients
 .blue-gradient-1 {
 	background: #2783b3;
@@ -208,4 +211,80 @@ $color in $bus-colors {
 
 .med-blue-head {
 	border-top: 0.8rem solid $bus-md-blue;
+}
+
+/* Legacy */
+/* Text colors */
+.white-bg {
+	background: #ffffff;
+}
+.text-white,
+.white-text {
+	color: #ffffff;
+}
+.text-business-blue,
+.business-blue-text {
+	color: #00629b;
+}
+.gold-text {
+	color: #FDAA18;
+}
+.teal-text {
+	color: #18B9A0;
+}
+.charcoal-text {
+	color: #333333;
+}
+.dust-text {
+	color: #F1F5F8;
+}
+
+.yellow-text {
+	color: #FFBC00;
+}
+// .blue-text {
+// 	color: #0073AE;
+// }
+
+.text-gray,
+.gray-text {
+	color: #535353;
+}
+.text-med-gray,
+.med-gray-text {
+	color: #919194;
+}
+.text-bright-blue,
+.bright-blue-text {
+	color: #7CE5FF;
+}
+.text-deep-blue,
+.deep-blue-text {
+	color: #083E62;
+}
+.text-lt-blue,
+.lt-blue-text {
+	color: #D5F6FF;
+}
+.text-dk-yellow,
+.text-mustard,
+.mustard-text {
+	color: #DA8D00;
+}
+.text-orange,
+.orange-text {
+	color: #f66200;
+}
+.text-lt-gray,
+.lt-gray-text {
+	color: #EEEEEE;
+}
+.text-dk-orange,
+.text-burnt-orange,
+.burnt-orange-text {
+	color: #DD5800;
+}
+.text-med-blue,
+.med-blue-text {
+	color: #1693C3;
 }

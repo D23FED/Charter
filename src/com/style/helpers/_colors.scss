@@ -2,6 +2,35 @@
 	/* Color Helpers */
 }
 
+// Text colors
+.text-white {
+	color: #fff;
+}
+
+.text-black {
+	color: $black;
+}
+
+.text-gray {
+	color: $gray;
+}
+
+.text-dark-gray {
+	color: $dk-gray;
+}
+
+.text-muted {
+	color: #777;
+}
+
+$colors: ( white: $white, black: $black);
+@each $name,
+$color in $colors {
+	.text-#{$name} {
+		color: $color;
+	}
+}
+
 
 /* Background colors */
 
@@ -37,35 +66,56 @@
 	background: $dk-gray;
 }
 
-/* Added in Helpers*/
 
-// Font colors
-.text-white {
-	color: #fff;
+/* Translucent backgrounds */
+
+.bg-transparent-white {
+	@include bg-white(65);
 }
 
-.text-black {
-	color: $black;
-}
-
-.text-gray {
-	color: $gray;
-}
-
-.text-dark-gray {
-	color: $dk-gray;
-}
-
-.text-muted {
-	color: #777;
-}
-$colors: (
-	white: $white,
-	black: $black
-);
-@each $name,
-$color in $colors {
-	.text-#{$name} {
-		color: $color;
+.bg-transparent-white-xs-only {
+	@media (max-width: $breakpoint-sm-max) {
+		@include bg-white(65);
 	}
+}
+
+.bg-transparent-white-sm-only {
+	@media (min-width: map-get($breakpoints, 'sm')) and (max-width: (map-get($breakpoints, 'md') - 1px)) {
+		@include bg-white(65);
+	}
+}
+
+.bg-transparent-white-md-only {
+	@media (min-width: map-get($breakpoints, 'md')) and (max-width: (map-get($breakpoints, 'lg') - 1px)) {
+		@include bg-white(65);
+	}
+}
+
+// Responsive translucent white backgrounds
+@each $bp-name,
+$bp-width in $breakpoints {
+	@if $bp-name !='xxs' and $bp-name !='xs' {
+		.bg-transparent-white-#{$bp-name} {
+			@include breakpoint($bp-name) {
+				@include bg-white(65);
+			}
+		}
+	}
+}
+
+.bg-transparent-deep-blue {
+	background: rgba(1, 57, 99, 0.8);
+}
+
+
+/* Gradients */
+
+.gradient-lt-gray,
+.lt-gray-gradient {
+	background: linear-gradient(to right, #d4d4d4 0, #fafafa 8%, #fff 50%, #fafafa 92%, #d4d4d4 100%);
+}
+
+.gradient-x-lt-gray,
+.extra-lt-gray-gradient {
+	background: linear-gradient(to right, #fff 0, #fafafa 25%, #efefef 50%, #fafafa 75%, #fff 100%);
 }

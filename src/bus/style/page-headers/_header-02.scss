@@ -184,4 +184,15 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 			}
 		}
 	}
+	// Contains menu with links to Phone and ZIP
+	.menu-support {
+		li {
+			vertical-align: top;
+		}
+		// If ZIP Code is empty, spacing issues occur. Add a non-breaking space inside links to ensure they are never empty
+		// Our component does not strip whitespace, so we cannot use :empty
+		// .linkLabel::after {
+		// 	content: "\00a0";
+		// }
+	}
 }

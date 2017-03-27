@@ -2,13 +2,3 @@
 	/* Sizing */
 }
 
-/* Full width elements, child links, and child buttons at Small */
-.fw-sm-only {
-	&,
-	& .btn,
-	& a {
-		@media (max-width: $breakpoint-sm-max) {
-			width: 100%;
-		}
-	}
-}

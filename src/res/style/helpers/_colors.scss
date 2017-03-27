@@ -74,45 +74,7 @@
 }
 
 
-/* Translucent backgrounds */
 
-.bg-transparent-white {
-	@include bg-white(65);
-}
-
-.bg-transparent-white-xs-only {
-	@media (max-width: $breakpoint-sm-max) {
-		@include bg-white(65);
-	}
-}
-
-.bg-transparent-white-sm-only {
-	@media (min-width: map-get($breakpoints, 'sm')) and (max-width: (map-get($breakpoints, 'md') - 1px)) {
-		@include bg-white(65);
-	}
-}
-
-.bg-transparent-white-md-only {
-	@media (min-width: map-get($breakpoints, 'md')) and (max-width: (map-get($breakpoints, 'lg') - 1px)) {
-		@include bg-white(65);
-	}
-}
-
-// Responsive translucent white backgrounds
-@each $bp-name,
-$bp-width in $breakpoints {
-	@if $bp-name !='xxs' and $bp-name !='xs' {
-		.bg-transparent-white-#{$bp-name} {
-			@include breakpoint($bp-name) {
-				@include bg-white(65);
-			}
-		}
-	}
-}
-
-.bg-transparent-deep-blue {
-	background: rgba(1, 57, 99, 0.8);
-}
 
 
 /* Gradient backgrounds */

@@ -86,9 +86,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	align-items: center;
 }
 
-.full {
-	width: 100%;
-}
 
 @each $alignment in $vertical-aligns {
 	.vertical-#{$alignment} {
@@ -117,11 +114,29 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	}
 }
 
+@mixin legacy-helper() {
+	@at-root {
+		/* Legacy */
+	}
+	&-left {
+		text-align: left;
+		float: left;
+	}
+	&-right {
+		text-align: right;
+		float: right;
+	}
+	@at-root {
+		/* End Legacy */
+	}
+}
+
 // Responsive alignments
 @include breakpoint-bt('xxs', 'xs') {
 	.xs-only {
 		@include text-align-helper;
 		@include float-helper;
+		@include legacy-helper;
 	}
 }
 
@@ -129,6 +144,7 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.sm-only {
 		@include text-align-helper;
 		@include float-helper;
+		@include legacy-helper;
 	}
 }
 
@@ -136,6 +152,7 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.md-only {
 		@include text-align-helper;
 		@include float-helper;
+		@include legacy-helper;
 	}
 }
 
@@ -143,5 +160,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.lg-only {
 		@include text-align-helper;
 		@include float-helper;
+		@include legacy-helper;
 	}
 }
