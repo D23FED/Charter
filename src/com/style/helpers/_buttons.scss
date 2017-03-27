@@ -1,0 +1,27 @@
+@at-root {
+	/* Business Button Helpers */
+}
+// Most button styles should remain as part of the Link Component
+.clickable {
+	cursor: pointer;
+}
+
+// Icon for close button
+.icon-remove-sign {
+	&:after {
+		font-family: FontAwesome;
+		content: '\F057';
+		color: $dk-gray;
+		cursor: pointer;
+		transition: color $transition-time-default ease-out;
+	}
+	@include hover-focus {
+		&:after {
+			color: $gray;
+		}
+	}
+}
+
+// Moved to sandbox/buttons
+// .spectrum-icon-after
+// .icon-double-angle-right

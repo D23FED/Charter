@@ -18,7 +18,7 @@
 			&:first-child {
 				padding-left: 0;
 			}
-			&+#{$grid-column} {
+			& + #{$grid-column} {
 				padding-right: 0;
 			}
 		}
@@ -41,6 +41,7 @@
 				width: 30px;
 				display: block;
 				margin: 0 auto;
+				max-height: 3rem;
 			}
 			path {
 				fill: $md-blue;

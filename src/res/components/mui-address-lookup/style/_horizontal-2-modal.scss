@@ -9,7 +9,7 @@ $mui-col-zip-w-default: 100px;
 // Submit button
 $mui-btn-submit-w-default: 108px;
 // Horizontal 2 inside modal
-.muiAddressLookup .localization--horizontal-2 {
+.#{$mui-wrapper-legacy} .localization--horizontal-2 {
 	@at-root {
 		/* Fix for MUI Modal form's input fields stretching beyond container width */
 	}

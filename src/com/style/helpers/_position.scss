@@ -86,9 +86,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	align-items: center;
 }
 
-.full {
-	width: 100%;
-}
 
 @each $alignment in $vertical-aligns {
 	.vertical-#{$alignment} {
@@ -96,71 +93,73 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	}
 }
 
+@mixin text-align-helper() {
+	&-text-left {
+		text-align: left;
+	}
+	&-text-center {
+		text-align: center;
+	}
+	&-text-right {
+		text-align: right;
+	}
+}
+
+@mixin float-helper() {
+	&-float-left {
+		float: left;
+	}
+	&-float-right {
+		float: right;
+	}
+}
+
+@mixin legacy-helper() {
+	@at-root {
+		/* Legacy */
+	}
+	&-left {
+		text-align: left;
+		float: left;
+	}
+	&-right {
+		text-align: right;
+		float: right;
+	}
+	@at-root {
+		/* End Legacy */
+	}
+}
+
 // Responsive alignments
 @include breakpoint-bt('xxs', 'xs') {
 	.xs-only {
-		&-text-left {
-			text-align: left;
-		}
-		&-float-left {
-			float: left;
-		}
-		&-text-right {
-			text-align: right;
-		}
-		&-float-right {
-			float: right;
-		}
+		@include text-align-helper;
+		@include float-helper;
+		@include legacy-helper;
 	}
 }
 
 @include breakpoint-only('sm') {
 	.sm-only {
-		&-text-left {
-			text-align: left;
-		}
-		&-float-left {
-			float: left;
-		}
-		&-text-right {
-			text-align: right;
-		}
-		&-float-right {
-			float: right;
-		}
+		@include text-align-helper;
+		@include float-helper;
+		@include legacy-helper;
 	}
 }
 
 @include breakpoint-only('md') {
 	.md-only {
-		&-text-left {
-			text-align: left;
-		}
-		&-float-left {
-			float: left;
-		}
-		&-text-right {
-			text-align: right;
-		}
-		&-float-right {
-			float: right;
-		}
+		@include text-align-helper;
+		@include float-helper;
+		@include legacy-helper;
 	}
 }
 
 @include breakpoint('lg') {
 	.lg-only {
-		&-text-left {
-			text-align: left;
-		}
-		&-float-left {
-			float: left;
-		}
-		&-text-right {
-			text-align: right;
-		}
-		&-float-right {
-			float: right;
-		}
+		@include text-align-helper;
+		@include float-helper;
+		@include legacy-helper;
 	}
 }

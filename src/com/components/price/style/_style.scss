@@ -8,11 +8,11 @@ $column: 'p-col';
 $text-gradient-fallback-color: $lt-blue;
 $text-gradient-start-color: #4ab3f1;
 $text-gradient-end-color: $md-blue;
-/* Dev only, not for prod */
-.price-block {
-	margin-block-end: 4rem;
-}
-/* End dev only */
+//  Dev only, not for prod
+// .price-block {
+// 	margin-bottom: 4rem;
+// }
+//  End dev only
 @import 'base';
 @import 'double';
 @import 'style-01';

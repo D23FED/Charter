@@ -2,43 +2,55 @@
 	/* Text helpers: Common */
 }
 
-// Weights
-.font-light {
-	font-weight: 300;
+.font {
+	&-light {
+		font-weight: 300;
+	}
+	&-medium {
+		font-weight: 400;
+	}
+	&-semibold {
+		font-weight: 600;
+	}
+	&-bold {
+		font-weight: 700;
+	}
+	&-extra-bold {
+		font-weight: 900;
+	}
+	// Styles
+	&-italic {
+		font-style: italic;
+	}
+	// Decoration
+	&-underline {
+		text-decoration: underline;
+	}
+	&-underline-none {
+		&,
+		& a {
+			text-decoration: none;
+		}
+	}
 }
 
-.font-medium {
-	font-weight: 400;
-}
-
-.font-semibold {
-	font-weight: 600;
-}
-
-.font-bold,
-.text-bold {
-	font-weight: 700;
-}
-
-.font-extra-bold {
-	font-weight: 900;
-}
-
-// Styles
-.font-italic {
-	font-style: italic;
-}
-
-// Decoration
-.underline,
-.font-underline {
-	text-decoration: underline;
-}
-
-.font-underline-none {
-	&,
-	& a {
-		text-decoration: none;
+.text {
+	&-uppercase {
+		text-transform: uppercase;
+	}
+	&-no-wrap {
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	// Alignment
+	&-left {
+		text-align: left;
+	}
+	&-center {
+		text-align: center;
+	}
+	&-right {
+		text-align: right;
 	}
 }
 
@@ -48,24 +60,6 @@
 	.fs-#{$i} {
 		font-size: $size;
 	}
-}
-
-.text-no-wrap {
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-// Alignment
-.text-left {
-	text-align: left;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.text-right {
-	text-align: right;
 }
 
 //  Responsive text alignment
@@ -80,10 +74,6 @@
 			}
 		}
 	}
-}
-
-.text-uppercase {
-	text-transform: uppercase;
 }
 
 // Horizontal rules
@@ -102,13 +92,44 @@ hr {
 	}
 }
 
-.ff-charter {
-	font-family: Charter Icons;
+// Font families
+.ff {
+	&-charter {
+		font-family: Charter Icons;
+	}
+	&-sans {
+		font-family: Open Sans, Arial, Helvetica, sans-serif;
+	}
+	&-icon {
+		font-family: Font Awesome;
+	}
 }
 
-.ff-sans {
-	font-family: Open Sans, Arial, Helvetica, sans-serif;
+// Fix for safari
+.list-inline > li {
+	list-style-type: none;
 }
-.ff-icon {
-	font-family: Font Awesome;
+
+
+/* Legacy */
+
+.underline {
+	text-decoration: underline;
+}
+
+.underline-none {
+	&,
+	& a {
+		text-decoration: none;
+	}
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.no-wrap,
+.nowrap {
+	overflow: hidden;
+	white-space: nowrap;
 }
