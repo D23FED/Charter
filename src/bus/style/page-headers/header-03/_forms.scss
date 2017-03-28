@@ -31,7 +31,7 @@
 		line-height: 1.3;
 		margin-bottom: 0;
 		padding-left: $map-marker-icon-size+1rem;
-		color: #666;
+		color: $dk-gray;
 		@include breakpoint('sm') {
 			font-size: 1.6rem;
 			line-height: $line-height-base;
@@ -95,9 +95,7 @@
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 	input {
-		border-color: $bus-teal;
-		border-style: solid;
-		border-radius: 2px;
+		@include form-input-header;
 	}
 }
 
@@ -114,14 +112,22 @@
 		}
 	}
 	// Fix component bug
-	.zipAction.btn-success {
+	.zipAction.btn-success,
+	.zipAction.btn-default,
+	.zipAction.btn-primary {
 		background-color: transparent;
 		border-style: none;
+		background-image: none;
 	}
 	.geoLoc {
 		padding-top: 0;
 	}
 	input {
 		color: $black;
+	}
+	// Button class on columns bugfix
+	.aem-GridColumn.btn-primary {
+		background-color: none;
+		background-image: none;
 	}
 }

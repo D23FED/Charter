@@ -4,17 +4,37 @@ $file-title: 'Site Header';
 /* #{$file-title} */
 
 $grid-column: '[class*="aem-GridColumn"]';
+$grid-container: 'aem-Grid';
 $megamenu-menu: '.sub-menu-item';
+$user-support-menu: 'menu-support';
+@mixin form-input-header {
+	border-color: $bus-teal;
+	border-style: solid;
+	border-radius: 2px;
+	vertical-align: middle;
+}
+
 .site-header {
+	// header containers
 	.container {
 		padding-top: 0;
 		padding-bottom: 0;
 	}
+	.container,
+	.container-fluid {
+		& > .navbar-header,
+		& > .navbar-collapse {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	// Logo
 	.site-logo {
 		p {
 			margin: 0;
 		}
 	}
+	// Small-breakpoint-only menus
 	.menu-sm {
 		@include breakpoint('sm') {
 			display: none;
@@ -23,6 +43,7 @@ $megamenu-menu: '.sub-menu-item';
 			}
 		}
 	}
+	// Large-breakpoint-only menus
 	.menu-lg {
 		display: none;
 		@include breakpoint('sm') {
@@ -36,6 +57,7 @@ $megamenu-menu: '.sub-menu-item';
 	.navbar-sm {
 		background-color: transparent;
 		border-width: 0;
+		// Menu, menu form
 		.navbar-nav,
 		.navbar-form {
 			background-color: $cool-grey;
@@ -47,10 +69,12 @@ $megamenu-menu: '.sub-menu-item';
 			background-color: $cool-grey;
 			margin-top: 0;
 			margin-bottom: 0;
+			// Menu items
 			.nav-item {
 				padding-left: 0;
 				padding-right: 0;
-				&+.nav-item {
+				& + .nav-item {
+					// Menu links
 					.nav-link {
 						border-top-width: 0.1rem;
 						border-top-style: solid;
@@ -58,6 +82,7 @@ $megamenu-menu: '.sub-menu-item';
 					}
 				}
 			}
+			// Menu Links
 			.nav-link {
 				font-size: 1.6rem;
 				color: #fff;
@@ -77,6 +102,7 @@ $megamenu-menu: '.sub-menu-item';
 				}
 			}
 		}
+		// Search form in small primary header
 		.navbar-form {
 			border-top-width: 0.1rem;
 			border-top-style: solid;
@@ -104,7 +130,7 @@ $megamenu-menu: '.sub-menu-item';
 				margin-left: auto;
 			}
 		}
-		// Toggle button
+		// Toggle/hamburger button
 		$toggle-color: $bus-lt-gray;
 		.navbar-toggle {
 			border-color: $toggle-color;
@@ -121,14 +147,6 @@ $megamenu-menu: '.sub-menu-item';
 			.nav {
 				text-align: left;
 			}
-		}
-	}
-	.container,
-	.container-fluid {
-		&>.navbar-header,
-		&>.navbar-collapse {
-			margin-left: 0;
-			margin-right: 0;
 		}
 	}
 	// Prevent white text in <input>
@@ -169,12 +187,7 @@ $megamenu-menu: '.sub-menu-item';
 			}
 		}
 	}
-	// Class bug
-	.aem-GridColumn.btn-primary {
-		background-color: transparent;
-		border-style: none;
-	}
-	// Mega Menus
+	// Megamenu wrapper wrapper
 	.mega-menu-item {
 		// Megamenu activated
 		&.js-active #{$megamenu-menu} {
@@ -185,6 +198,7 @@ $megamenu-menu: '.sub-menu-item';
 			display: none;
 		}
 	}
+	// Megamenu wrapper
 	#{$megamenu-menu} {
 		display: none;
 		position: absolute;
@@ -193,21 +207,39 @@ $megamenu-menu: '.sub-menu-item';
 		margin: 0;
 		padding: 0;
 	}
-	.menu-support {
+	// Top row (large breakpoint only) menu with links to My Account, Search, and Zip
+	// Main row (small breakpoint only) menu with links to phone and ZIP
+	.#{$user-support-menu} {
 		// Add space before menu to align with hamburger button
 		margin-top: $navbar-toggle-spacing-y;
 		@include breakpoint('sm') {
 			margin-top: 0;
 		}
-		.linkLabel {
-			font-size: 1rem;
-			@include breakpoint('xs') {
-				font-size: 1.2rem;
-			}
+	}
+	// Search form
+	.searchForm {
+		text-align: center;
+		.search-text,
+		.btn {
+			vertical-align: middle;
+		}
+		// <input>
+		.search-text {
+			@include form-input-header;
+			width: 60%;
+			padding-left: 20%;
+		}
+		// Submit button
+		.btn {}
+		// Class bug
+		.aem-GridColumn.btn-primary {
+			background-color: transparent;
+			border-style: none;
 		}
 	}
 }
 
+// Toggle/hamburger button
 .navbar-toggle {
 	margin-left: 0;
 	margin-right: 0;

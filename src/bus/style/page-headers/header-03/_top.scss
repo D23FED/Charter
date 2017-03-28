@@ -1,13 +1,29 @@
 // Top menu row
-$icon-svg-top-w: 1.5rem;
+$icon-svg-top-w: 1.8rem;
+$menu-row-top-link-size: 1.2rem;
+// Link spec
+@mixin menu-row-top-link {
+	color: $bus-dk-blue;
+	text-decoration: none;
+	font-weight: 600;
+	// font-size: $menu-row-top-link-size;
+	@include hover-focus {
+		color: $bus-teal;
+		text-decoration: underline;
+		path {
+			fill: $bus-teal;
+		}
+	}
+}
+
 .menu-row-top {
 	display: none;
 	padding-top: $site-header-padding-top * $menu-top-font-size-scale-factor;
 	padding-bottom: $site-header-padding-bottom * $menu-top-font-size-scale-factor;
 	background-color: white;
-	font-size: 1.2rem;
+	font-size: $menu-row-top-link-size;
 	color: $md-blue;
-	.aem-Grid {
+	.#{$grid-container} {
 		display: flex;
 		align-items: center;
 	}
@@ -15,23 +31,20 @@ $icon-svg-top-w: 1.5rem;
 	ul {
 		margin-bottom: 0;
 	}
-	a {
-		color: $bus-dk-blue;
-		text-decoration: none;
-		font-weight: 600;
-		@include hover-focus {
-			color: $bus-teal;
-			text-decoration: underline;
-			path {
-				fill: $bus-teal;
-			}
-		}
+	li {
+		border-color: $md-blue;
 	}
-	.menu-support {
+	a {
+		@include menu-row-top-link;
+	}
+	// Menu with links to My Account, Search, and Zip (right)
+	.#{$user-support-menu} {
 		text-align: right;
+		// Dividers
 		li {
-			border-color: $md-blue;
+			// border-color: $md-blue;
 		}
+		// Link icons
 		svg {
 			width: $icon-svg-top-w;
 			max-height: $icon-svg-top-w;
@@ -54,8 +67,8 @@ $icon-svg-top-w: 1.5rem;
 	ul {
 		line-height: 0;
 	}
+	// Dividers
 	li {
-		border-color: $md-blue;
 		line-height: 1;
 	}
 }

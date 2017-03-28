@@ -8,7 +8,7 @@ $social-link-size: 34px;
 $social-link-size-sm: 24px;
 .site-footer {
 	padding-top: 3rem;
-	padding-bottom: 2rem;
+	padding-bottom: 0;
 	background-color: $site-footer-bg-color;
 	border-top-style: none;
 	.container {
@@ -82,7 +82,7 @@ $social-link-size-sm: 24px;
 		transition: all $transition-time-default ease-out;
 		transition-property: color;
 		text-decoration: none;
-		font-size: 1rem;
+		font-size: 1.1rem;
 		font-weight: 600;
 		@include hover-focus {
 			color: $site-footer-link-hover-color;
@@ -116,8 +116,8 @@ $social-link-size-sm: 24px;
 			}
 		}
 		a {
-			position   : relative;
-			display    : inline-block;
+			position: relative;
+			display: inline-block;
 			line-height: 0;
 			padding-top: $social-link-size-sm;
 			width: $social-link-size-sm;

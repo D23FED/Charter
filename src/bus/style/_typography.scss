@@ -31,6 +31,8 @@
 
 $link-color-default: $md-blue;
 $link-color-alternate: $bus-teal;
+$link-color-light: $white;
+$link-color-light-alternate: $bus-lt-blue;
 // Links
 a {
 	&,
@@ -59,10 +61,19 @@ a {
 
 // Used on dark BG
 .link-light {
-	@extend .link-alternate;
 	a {
+		color: $link-color-light;
 		@include hover-focus {
-			color: lighten($link-color-alternate, 15%);
+			color: $bus-brt-blue;
+		}
+	}
+}
+
+.link-light-alternate {
+	a {
+		color: $link-color-light-alternate;
+		@include hover-focus {
+			color: $bus-brt-blue;
 		}
 	}
 }
