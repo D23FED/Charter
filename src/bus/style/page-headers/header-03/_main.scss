@@ -100,8 +100,8 @@ $svg-icon-w-sm: 2rem;
 		}
 		// Account for empty ZIP code
 		.linkLabel {
-			min-width: 5ch;
 			min-width: 3.5rem;
+			min-width: 5ch;
 		}
 	}
 	// MUI/ZIP code entry form, "Check Availability & Offers"

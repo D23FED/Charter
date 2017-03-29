@@ -7,12 +7,9 @@ $link-inner: 'linkLabel';
 $link-wrapper: 'linkComponent';
 // All nav menu item link
 @mixin nav-link {
-	color: #fff;
+	// color: #fff;
 	display: block;
-	line-height: $row-megamenu-height;
 	text-decoration: none;
-	padding-left: 2rem;
-	padding-right: 2rem;
 	transition: all $transition-time-default ease-out;
 	transition-property: color, background-color;
 	// font-size: 1.4rem;
@@ -31,17 +28,27 @@ $link-wrapper: 'linkComponent';
 
 // Primary nav menu item link
 @mixin primary-nav-link {
+	color: #fff;
+	display: block;
 	font-size: 1.5rem;
+	line-height: $row-megamenu-height;
+	text-decoration: none;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	@include hover-focus {
 		background-color: $bus-teal;
 	}
 }
 
-// Primary nav menu item link
+// Secondary nav menu item link
 @mixin secondary-nav-link {
+	display: block;
+	color: #fff;
 	padding-left: $column-padding;
 	padding-right: $column-padding;
 	font-size: 1.2rem;
+	line-height: $row-megamenu-height;
+	text-decoration: none;
 	@include hover-focus {
 		color: $bus-brt-blue;
 		background-color: transparent;
@@ -149,8 +156,10 @@ $link-wrapper: 'linkComponent';
 			@include primary-nav-menu-item;
 		}
 	}
+	// Links
 	.#{$link-wrapper} {
-		a[data-linktype="global_nav"]:not(.btn) {
+		// a[data-linktype="global_nav"]
+		a:not(.btn) {
 			@include primary-nav-link;
 		}
 	}
@@ -196,11 +205,13 @@ $link-wrapper: 'linkComponent';
 	// Grid container
 	.aem-Grid {
 		display: flex;
+		// Column dividers
 		> .aem-GridColumn {
 			border-left: 0.1rem solid $bus-lt-gray;
 			&:first-child {
-				border-left-width: 0; // First list item inside first column-count:
+				border-left-width: 0; // First list item inside first column
 				.spectrum-first {
+					// Remove caret icons from first/header-style links
 					&::before {
 						display: none;
 					}
@@ -216,7 +227,7 @@ $link-wrapper: 'linkComponent';
 	.aem-GridColumn .aem-GridColumn {
 		padding: 0;
 	}
-	// Component wrapper, separates inner lists/menus/columns from Megamenu-wrapping <ul> parent
+	// Component wrapper, separates inner lists/menus/columns from parent <ul> (which wraps entire Megamenu)
 	.list-component {
 		// Wraps each submenu/column
 		ul {

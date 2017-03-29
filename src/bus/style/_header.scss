@@ -172,12 +172,15 @@ $user-support-menu: 'menu-support';
 		// Close button
 		.close-message {
 			position: absolute;
-			z-index: map-get($z-layer-bus, 'close-button');
+			top: 20%;
+			right: 0;
 			font-size: 0;
 			line-height: 1;
-			right: -$container-padding-sm;
+			// right: -$container-padding-sm;
+			padding-left: 1rem;
+			z-index: map-get($z-layer-bus, 'close-button');
 			@include breakpoint('sm') {
-				right: 0;
+				@include vertical-center;
 			}
 			&::after {
 				font-size: $font-size-default-bus;
@@ -185,6 +188,10 @@ $user-support-menu: 'menu-support';
 				color: $text-color-default;
 				display: contents;
 			}
+		}
+		.geoLoc {
+			@include vertical-center;
+			padding-top: 0;
 		}
 	}
 	// Megamenu wrapper wrapper
@@ -207,8 +214,8 @@ $user-support-menu: 'menu-support';
 		margin: 0;
 		padding: 0;
 	}
-	// Top row (large breakpoint only) menu with links to My Account, Search, and Zip
-	// Main row (small breakpoint only) menu with links to phone and ZIP
+	// Top row menu with links to My Account, Search, and Zip (large breakpoint only)
+	// Main row menu with links to phone and ZIP (small breakpoint only)
 	.#{$user-support-menu} {
 		// Add space before menu to align with hamburger button
 		margin-top: $navbar-toggle-spacing-y;
@@ -227,7 +234,8 @@ $user-support-menu: 'menu-support';
 		.search-text {
 			@include form-input-header;
 			width: 60%;
-			padding-left: 20%;
+			// padding-left: 20%;
+			padding-left: 1rem
 		}
 		// Submit button
 		.btn {}

@@ -2,6 +2,8 @@
 
 /* Business: Button-style links */
 
+// BG color for icons in default style buttons
+$btn-default-icon-bg-color: $bus-dk-yellow;
 // Base styles
 .btn {
 	font-weight: 500;
@@ -30,6 +32,12 @@
 // Variants
 .btn-default {
 	@include spe_btn-default-bus;
+	&:hover {
+		// Button icon
+		span::after {
+			background-color: #d49b22;
+		}
+	}
 	&:focus,
 	&.focus {
 		outline-offset: 0.2rem;
@@ -41,8 +49,9 @@
 	&.active {
 		box-shadow: inset 0 0.3rem 0.5rem rgba(0, 0, 0, 0.125);
 	}
-	&:hover span::after {
-		background-color: #D49B22;
+	// Button icons
+	span::after {
+		background: $btn-default-icon-bg-color;
 	}
 }
 
@@ -53,8 +62,7 @@ $icon-spacing-x: .5em;
 	.btn {
 		padding-right: $icon-size + $icon-spacing-x;
 	}
-	span:after {
-		background: $bus-dk-yellow;
+	span::after {
 		position: absolute;
 		display: inline-block;
 		right: 0;
@@ -75,13 +83,7 @@ $icon-spacing-x: .5em;
 // Double angle right
 .icon-double-angle-right {
 	.btn span:after {
-		content: "\e601";
-		font-family: $font-charter-icons;
-		padding: 0;
-		line-height: 2;
-		font-style: normal;
-		font-weight: normal;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
+		@include btn-icon--double-angle-right;
+		@include pseudo-icon;
 	}
 }

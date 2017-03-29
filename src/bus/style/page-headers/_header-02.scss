@@ -157,6 +157,7 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 			font-size: 1.2rem;
 			font-weight: normal;
 			transition-property: color;
+			display: inline-block;
 			@include hover-focus {
 				text-decoration: underline;
 				color: $bus-brt-blue;
@@ -175,11 +176,16 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 		}
 		svg {
 			width: 2rem;
+			min-height: 1px;
+			height: 100%;
 			max-height: 2rem;
 			display: block;
 			margin: 0 auto;
+			margin-bottom: 0.6rem;
 			@include breakpoint('sm') {
+				margin-bottom: 0.1rem;
 				width: 3rem;
+				// min-height: 3rem;
 				max-height: 3rem;
 			}
 		}
@@ -188,6 +194,16 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 	.menu-support {
 		li {
 			vertical-align: top;
+		}
+		.spacer {
+			display: none;
+			@include breakpoint('sm') {
+				display: block;
+			}
+		}
+		.linkLabel {
+			min-width: 3.5rem;
+			min-width: 5ch;
 		}
 		// If ZIP Code is empty, spacing issues occur. Add a non-breaking space inside links to ensure they are never empty
 		// Our component does not strip whitespace, so we cannot use :empty
