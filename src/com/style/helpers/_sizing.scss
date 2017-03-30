@@ -1,9 +1,7 @@
 @at-root {
-	/* Sizing */
+	/* Sizing Helpers */
 }
-.full {
-	width: 100%;
-}
+
 .width {
 	&-full {
 		width: 100%;
@@ -12,14 +10,17 @@
 		width: 50%;
 	}
 	&-third {
-		width: 33%;
+		width: percentage(1 / 3);
 	}
 	&-quarter {
 		width: 25%;
 	}
 }
 
-/* Full width elements, child links, and child buttons at Small */
+@at-root {
+	/* Full width elements, child links, and child buttons at Small */
+}
+
 .fw-sm-only {
 	&,
 	& .btn,
@@ -28,4 +29,12 @@
 			width: 100%;
 		}
 	}
+}
+
+@at-root {
+	/* Legacy */
+}
+
+.full {
+	width: 100%;
 }

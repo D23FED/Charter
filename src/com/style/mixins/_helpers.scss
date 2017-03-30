@@ -1,0 +1,69 @@
+// Helpers
+// Text colors
+@mixin helper-text-color($name, $color) {
+	.text-#{$name},
+	.#{$name}-text {
+		color: $color;
+	}
+	a.text-#{$name},
+	a.#{$name}-text {
+		@include hover-focus-darken($color);
+		@include active-darken($color);
+	}
+}
+
+// Background colors
+@mixin helper-bg-color($name, $color) {
+	.bg-#{$name},
+	.#{$name}-bg {
+		background-color: $color;
+	}
+}
+
+// List bullet text colors
+@mixin helper-bullet-color($name, $color) {
+	.bullets-#{$name} {
+		color: $color;
+	}
+}
+
+// Text alignment
+@mixin text-align-helper() {
+	&-text-left {
+		text-align: left;
+	}
+	&-text-center {
+		text-align: center;
+	}
+	&-text-right {
+		text-align: right;
+	}
+}
+
+// Floats
+@mixin float-helper() {
+	&-float-left {
+		float: left;
+	}
+	&-float-right {
+		float: right;
+	}
+}
+
+// Legacy positioning classes
+@mixin legacy-helper() {
+	@at-root {
+		/* Legacy */
+	}
+	&-left {
+		text-align: left;
+		float: left;
+	}
+	&-right {
+		text-align: right;
+		float: right;
+	}
+	@at-root {
+		/* End Legacy */
+	}
+}

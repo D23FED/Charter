@@ -2,92 +2,66 @@
 	/* Color Helpers */
 }
 
-// Text colors
-.text-white {
-	color: #fff;
+$common-colors: ( white: $white, black: $black, gray: $gray, dk-gray: $dk-gray, muted: #777);
+@at-root {
+	/* Text colors */
 }
 
-.text-black {
-	color: $black;
-}
-
-.text-gray {
-	color: $gray;
-}
-
-.text-dark-gray {
-	color: $dk-gray;
-}
-
-.text-muted {
-	color: #777;
-}
-
-$colors: ( white: $white, black: $black);
 @each $name,
-$color in $colors {
-	.text-#{$name} {
-		color: $color;
+$color in $common-colors {
+	@include helper-text-color($name, $color);
+}
+
+@at-root {
+	/* Background colors */
+}
+
+.bg {
+	&-white {
+		background: #fff;
 	}
-}
-
-
-/* Background colors */
-
-.bg-white {
-	background: #fff;
-}
-
-.bg-success {
-	background: #dff0d8;
-}
-
-.bg-info {
-	background: #d9edf7;
-}
-
-.bg-warning {
-	background: #fcf8e3;
-}
-
-.bg-danger {
-	background: #f2dede;
-}
-
-.bg-gray {
-	background: $gray;
-}
-
-.bg-gray-f8 {
-	background: #f8f8f8;
-}
-
-.bg-dark-gray {
-	background: $dk-gray;
-}
-
-
-/* Translucent backgrounds */
-
-.bg-transparent-white {
-	@include bg-white(65);
-}
-
-.bg-transparent-white-xs-only {
-	@media (max-width: $breakpoint-sm-max) {
+	&-success {
+		background: #dff0d8;
+	}
+	&-info {
+		background: #d9edf7;
+	}
+	&-warning {
+		background: #fcf8e3;
+	}
+	&-danger {
+		background: #f2dede;
+	}
+	&-gray {
+		background: $gray;
+	}
+	&-gray-f8 {
+		background: #f8f8f8;
+	}
+	&-dark-gray {
+		background: $dk-gray;
+	}
+	/* Translucent backgrounds */
+	&-transparent-white {
 		@include bg-white(65);
 	}
-}
-
-.bg-transparent-white-sm-only {
-	@media (min-width: map-get($breakpoints, 'sm')) and (max-width: (map-get($breakpoints, 'md') - 1px)) {
-		@include bg-white(65);
+	&-transparent-white-xs-only {
+		@media (max-width: $breakpoint-sm-max) {
+			@include bg-white(65);
+		}
 	}
-}
-
-.bg-transparent-white-md-only {
-	@media (min-width: map-get($breakpoints, 'md')) and (max-width: (map-get($breakpoints, 'lg') - 1px)) {
-		@include bg-white(65);
+	&-transparent-white-sm-only {
+		@media (min-width: map-get($breakpoints, 'sm')) and (max-width: (map-get($breakpoints, 'md') - 1px)) {
+			@include bg-white(65);
+		}
+	}
+	&-transparent-white-md-only {
+		@media (min-width: map-get($breakpoints, 'md')) and (max-width: (map-get($breakpoints, 'lg') - 1px)) {
+			@include bg-white(65);
+		}
+	}
+	&-transparent-deep-blue {
+		background: rgba(1, 57, 99, 0.8);
 	}
 }
 
@@ -103,12 +77,9 @@ $bp-width in $breakpoints {
 	}
 }
 
-.bg-transparent-deep-blue {
-	background: rgba(1, 57, 99, 0.8);
+@at-root {
+	/* Gradients */
 }
-
-
-/* Gradients */
 
 .gradient-lt-gray,
 .lt-gray-gradient {

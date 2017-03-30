@@ -5,11 +5,8 @@
 @import 'bus/style/variables-business',
 'bus/style/typography',
 'bus/style/helpers',
-'bus/style/header',
-'bus/style/footer',
-'bus/style/buttons',
+'bus/style/page-header',
+'bus/style/page-footer',
+'bus/sandbox/buttons/style/buttons',
 // Components
-'bus/components/accordion-table/style/style',
-'bus/components/container/style/style',
-// 'bus/components/mui/style/style',
-'bus/sandbox/subnav/style/style';
+'bus/style/business-components';

@@ -1,38 +1,7 @@
 @import 'initialize';
 
-/* Typography: Business */
+/* Typography: Business Links */
 
-@import 'com/style/typography';
-@import 'bus/style/typography/base';
-@import 'typography/headings';
-.text-sm,
-.small {
-	font-size: 1.2rem;
-}
-
-.text-subhead {
-	font-size: 1.6rem;
-	@include breakpoint('md') {
-		font-size: 1.8rem;
-	}
-}
-
-.text-color-default {
-	color: $text-color-default;
-}
-
-.text-size-default {
-	font-size: 1.4rem;
-}
-
-.pseudo-double-angle-right {
-	@include pseudo-double-angle-right;
-}
-
-$link-color-default: $md-blue;
-$link-color-alternate: $bus-teal;
-$link-color-light: $white;
-$link-color-light-alternate: $bus-lt-blue;
 // Links
 a {
 	&,
@@ -45,16 +14,22 @@ a {
 		text-decoration: underline;
 		vertical-align: baseline;
 		@include hover-focus {
-			color: $bus-teal;
+			color: $link-color-default-bus-hover;
+		}
+		&:active {
+			color: $link-color-default-bus-active;
 		}
 	}
 }
 
 .link-alternate {
 	a {
-		color: $link-color-alternate;
+		color: $link-color-alternate-bus;
 		@include hover-focus {
-			color: darken($link-color-alternate, 15%);
+			color: $link-color-alternate-bus-hover;
+		}
+		&:active {
+			color: $link-color-alternate-bus-active;
 		}
 	}
 }
@@ -135,30 +110,4 @@ a {
 			font-family: inherit;
 		}
 	}
-}
-
-// Lists
-ul,
-ol,
-dl {
-	color: $dk-gray;
-	line-height: 1.57; //~22px @ 14px font-size
-}
-
-// Image captions
-.caption,
-figcaption {
-	font-weight: 600;
-	font-size: 1.3rem;
-}
-
-// Disclaimers
-.disclaimer {
-	font-size: 1.1rem;
-	color: $gray;
-}
-
-.disclaimer-sm {
-	color: $bus-md-gray;
-	font-size: 0.9rem;
 }

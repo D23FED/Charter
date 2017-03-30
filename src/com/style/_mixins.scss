@@ -1,22 +1,10 @@
 @import 'lib/bootstrap/mixins';
-// Custom Spectrum namespace prefix = spe_
 @import 'mixins/media-queries';
-@import 'mixins/position';
+@import 'mixins/helpers';
 @import 'mixins/utilities';
+@import 'mixins/position';
 @import 'mixins/grid';
 @import 'mixins/buttons';
-@mixin aem-authoring {
-	@at-root {
-		/* Begin author-only style */
-	}
-	.aem-AuthorLayer-Layouting &,
-	.aem-AuthorLayer-Edit & {
-		@content;
-	}
-	@at-root {
-		/* End author-only styles */
-	}
-}
 
 @mixin gradient-text-blue($fallback-color: $lt-blue, $start-color: #4ab3f1, $end-color: $md-blue) {
 	color: $fallback-color;

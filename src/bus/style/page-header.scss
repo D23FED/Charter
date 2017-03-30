@@ -60,13 +60,12 @@ $user-support-menu: 'menu-support';
 		// Menu, menu form
 		.navbar-nav,
 		.navbar-form {
-			background-color: $cool-grey;
+			background-color: $bus-gray;
 			margin-top: 0;
 			margin-bottom: 0;
 		}
 		// Nav menu
 		.navbar-nav {
-			background-color: $cool-grey;
 			margin-top: 0;
 			margin-bottom: 0;
 			// Menu items
@@ -91,14 +90,15 @@ $user-support-menu: 'menu-support';
 				transition-property: color, background;
 				@include pseudo-double-angle-right;
 				&::after {
+					@include vertical-center;
 					right: $column-padding;
-					position: absolute;
+					// position: absolute;
 					// display: contents;
-					display: initial;
-					vertical-align: initial;
+					// display: initial;
+					// vertical-align: initial;
 				}
 				@include hover-focus() {
-					background-color: $bus-md-blue;
+					background-color: $bus-brt-blue;
 				}
 			}
 		}
@@ -136,6 +136,9 @@ $user-support-menu: 'menu-support';
 			border-color: $toggle-color;
 			transition: all $transition-time-default ease-out;
 			transition-property: background-color;
+			@include hover-focus {
+				background-color: $bus-lt-gray;
+			}
 			& .icon-bar {
 				background-color: $toggle-color;
 			}

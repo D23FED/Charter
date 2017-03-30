@@ -2,12 +2,12 @@
 
 /* Multiple address form */
 
-$med-grey: rgb(145, 145, 148); //#919194
-$line-height-default: 1.428125; //#919194
+// .muiMultipleAddressForm
+// .multipleAddressesForm
 @mixin mui-font-default {
 	font-family: Open Sans, Helvetica, Arial, sans-serif;
 	font-size: 1.6rem;
-	line-height: $line-height-default;
+	line-height: $form-ma-line-height-default;
 }
 
 .muiMultipleAddressForm {
@@ -59,7 +59,7 @@ $line-height-default: 1.428125; //#919194
 		color: $dk-gray;
 		font-family: Open Sans, Helvetica, Arial, sans-serif;
 		font-size: 1.6rem;
-		line-height: $line-height-default;
+		line-height: $form-ma-line-height-default;
 		margin-bottom: 45px;
 		padding-bottom: 15px;
 		padding-left: 15px;
@@ -243,7 +243,7 @@ $line-height-default: 1.428125; //#919194
 		cursor: pointer;
 		font-family: Open Sans, Helvetica, Arial, sans-serif;
 		font-size: 1.92rem;
-		line-height: $line-height-default;
+		line-height: $form-ma-line-height-default;
 		font-weight: 100;
 		text-shadow: none;
 	}
@@ -267,7 +267,7 @@ $line-height-default: 1.428125; //#919194
 		cursor: pointer;
 		font-family: Open Sans, Helvetica, Arial, sans-serif;
 		font-size: 13.6px;
-		line-height: $line-height-default;
+		line-height: $form-ma-line-height-default;
 		font-weight: 100;
 		font-style: normal;
 		margin-bottom: 22px;
@@ -280,7 +280,7 @@ $line-height-default: 1.428125; //#919194
 		cursor: pointer;
 		font-family: Open Sans, Helvetica, Arial, sans-serif;
 		font-size: 13.6px;
-		line-height: $line-height-default;
+		line-height: $form-ma-line-height-default;
 		font-weight: 100;
 		font-style: normal;
 		text-shadow: none;

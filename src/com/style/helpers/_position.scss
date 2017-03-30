@@ -1,5 +1,5 @@
 @at-root {
-	/* Position */
+	/* Position Helpers */
 }
 
 $vertical-aligns: (top, middle, bottom, baseline);
@@ -9,20 +9,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 
 .absolute {
 	position: absolute;
-}
-
-@at-root {
-	/* .left and .right are Legacy classes combining float and abs positioning. To be removed following authoring update */
-}
-
-.left {
-	float: left;
-	left: 0;
-}
-
-.right {
-	float: right;
-	right: 0;
 }
 
 .float-left {
@@ -46,6 +32,20 @@ $vertical-aligns: (top, middle, bottom, baseline);
 }
 
 .right-justified {
+	right: 0;
+}
+
+@at-root {
+	/* .left and .right are Legacy classes combining float and abs positioning */
+}
+
+.left {
+	float: left;
+	left: 0;
+}
+
+.right {
+	float: right;
 	right: 0;
 }
 
@@ -86,48 +86,9 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	align-items: center;
 }
 
-
 @each $alignment in $vertical-aligns {
 	.vertical-#{$alignment} {
 		vertical-align: $alignment;
-	}
-}
-
-@mixin text-align-helper() {
-	&-text-left {
-		text-align: left;
-	}
-	&-text-center {
-		text-align: center;
-	}
-	&-text-right {
-		text-align: right;
-	}
-}
-
-@mixin float-helper() {
-	&-float-left {
-		float: left;
-	}
-	&-float-right {
-		float: right;
-	}
-}
-
-@mixin legacy-helper() {
-	@at-root {
-		/* Legacy */
-	}
-	&-left {
-		text-align: left;
-		float: left;
-	}
-	&-right {
-		text-align: right;
-		float: right;
-	}
-	@at-root {
-		/* End Legacy */
 	}
 }
 

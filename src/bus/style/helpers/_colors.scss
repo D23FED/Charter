@@ -2,120 +2,260 @@
 	/* Business: Color Helpers */
 }
 
-$colors: ( teal: $bus-teal, blue: $bus-blue);
-@each $name,
-$color in $colors {
-	.text-#{$name} {
-		color: $color;
-	}
-	.bg-#{$name} {
-		background-color: $color;
-	}
-	.bullets-#{$name} {
-		color: $color;
-	}
-}
-
-$bus-colors: ( teal: $bus-teal);
+$bus-colors:    ( //
+off-white:      $bus-off-white, //
+dust:           $bus-off-white, //
+lt-gray:        $bus-lt-gray, //
+med-gray:       $bus-md-gray, //
+gray:           $bus-gray, //
+dk-gray:        $bus-dk-gray, //
+charcoal:       $bus-dk-gray, //
+blue-secondary: $bus-blue-secondary, //
+business-blue:  $bus-blue, //
+blue:           $bus-blue, //
+lt-blue:        $bus-lt-blue, //
+bright-blue:    $bus-brt-blue, //
+med-blue:       $bus-md-blue, //
+deep-blue:      $bus-dk-blue, //
+teal:           $bus-teal, //
+yellow:         $bus-yellow, //
+dk-yellow:      $bus-dk-yellow, //
+mustard:        $bus-dk-yellow, //
+gold:           $bus-gold, //
+orange:         $bus-orange, //
+dk-orange:      $bus-dk-orange, //
+burnt-orange:   $bus-dk-orange //
+); //
+// Text colors
 @each $name,
 $color in $bus-colors {
-	.text-#{$name} {
-		color: $color;
+	@include helper-text-color($name, $color);
+}
+
+// Override
+a {
+	&.text-teal,
+	&.teal-text {
+		@include hover-focus {
+			color: $link-color-alternate-bus-hover;
+		}
+		&:active {
+			color: $link-color-alternate-bus-active;
+		}
 	}
 }
 
+// Bg colors
+@each $name,
+$color in $bus-colors {
+	@include helper-bg-color($name, $color);
+}
+
+// Bullet colors
+@each $name,
+$color in $bus-colors {
+	@include helper-bullet-color($name, $color);
+}
+
+// .text-white,
+// .white-text {
+// 	color: #ffffff;
+// }
+// .text-business-blue,
+// .business-blue-text {
+// 	color: #00629b;
+// }
+// .text-gold,
+// .gold-text {
+// 	color: $bus-gold;
+// 	@at-root a#{&} {
+// 		@include hover-focus {
+// 			color: darken($bus-gold, 15%);
+// 		}
+// 	}
+// }
+// .text-teal,
+// .teal-text {
+// 	color: $bus-teal;
+// 	@at-root a#{&} {
+// 		@include hover-focus {
+// 			color: darken($bus-teal, 15%);
+// 		}
+// 	}
+// }
+// .text-dk-gray,
+// .text-charcoal,
+// .charcoal-text {
+// 	color: #333333;
+// 	@at-root a#{&} {
+// 		@include hover-focus {
+// 			color: black;
+// 		}
+// 	}
+// }
+// .text-off-white,
+// .text-dust,
+// .dust-text {
+// 	color: $bus-off-white;
+// 	@at-root a#{&} {
+// 		@include hover-focus {
+// 			color: darken($bus-off-white, 15%);
+// 		}
+// 	}
+// }
+// .text-yellow,
+// .yellow-text {
+// 	color: $bus-yellow;
+// 	@at-root a#{&} {
+// 		@include hover-focus {
+// 			color: darken($bus-yellow, 15%);
+// 		}
+// 	}
+// }
+// .blue-text {
+// 	color: #0073AE;
+// }
+// .text-gray,
+// .gray-text {
+// 	color: #535353;
+// }
+// .text-med-gray,
+// .med-gray-text {
+// 	color: #919194;
+// }
+// .text-bright-blue,
+// .bright-blue-text {
+// 	color: $bus-brt-blue;
+// 	@at-root a#{&} {
+// 		@include hover-focus {
+// 			color: darken($bus-brt-blue, 15%);
+// 		}
+// 	}
+// }
+// .text-deep-blue,
+// .deep-blue-text {
+// 	color: $bus-dk-blue;
+// 	@at-root a#{&} {
+// 		@include hover-focus {
+// 			color: darken($bus-dk-blue, 15%);
+// 		}
+// 	}
+// }
+// .text-lt-blue,
+// .lt-blue-text {
+// 	color: $bus-lt-blue;
+// 	@at-root a#{&} {
+// 		@include hover-focus {
+// 			color: darken($bus-lt-blue, 15%);
+// 		}
+// 	}
+// }
+// .text-dk-yellow,
+// .text-mustard,
+// .mustard-text {
+// 	color: #DA8D00;
+// }
+// .text-orange,
+// .orange-text {
+// 	color: #f66200;
+// }
+// .text-lt-gray,
+// .lt-gray-text {
+// 	color: #EEEEEE;
+// }
+// .text-dk-orange,
+// .text-burnt-orange,
+// .burnt-orange-text {
+// 	color: #DD5800;
+// }
+// .text-med-blue,
+// .med-blue-text {
+// 	color: $bus-md-blue;
+// 	@at-root a#{&} {
+// 		@include hover-focus {
+// 			color: darken($bus-md-blue, 15%);
+// 		}
+// 	}
+// }
 // Background colors
-.bg-business-blue,
-.business-blue-bg {
-	background: $bus-blue;
-}
-
-.bg-blue,
-.blue-bg {
-	background-color: $bus-blue-secondary;
-}
-
-.bg-brt-blue,
-.bright-blue-bg {
-	background-color: $bus-brt-blue;
-}
-
-.bg-lt-blue,
-.light-blue-bg {
-	background-color: $bus-lt-blue;
-}
-
-.bg-md-blue,
-.med-blue-bg {
-	background-color: $bus-md-blue;
-}
-
-.bg-dp-blue,
-.deep-blue-bg {
-	background-color: $bus-dk-blue;
-}
-
-.bg-gray,
-.gray-bg {
-	background-color: $bus-gray;
-}
-
-.bg-lt-gray,
-.light-gray-bg {
-	background-color: $bus-lt-gray;
-}
-
-.bg-md-gray,
-.med-gray-bg {
-	background-color: $bus-md-gray;
-}
-
-.bg-dk-gray,
-.bg-charcoal,
-.charcoal-bg {
-	background-color: $bus-dk-gray;
-}
-
-.bg-dust,
-.bg-off-white,
-.dust-bg {
-	background-color: $bus-off-white;
-}
-
-.bg-gold,
-.gold-bg {
-	background-color: $bus-gold;
-}
-
-.bg-teal,
-.teal-bg {
-	background-color: $bus-teal;
-}
-
-.bg-yellow,
-.yellow-bg {
-	background-color: $bus-yellow;
-}
-
-.bg-mustard,
-.bg-dk-yellow,
-.mustard-bg {
-	background-color: $bus-dk-yellow;
-}
-
-.bg-orange,
-.orange-bg {
-	background-color: $bus-dk-orange;
-}
-
-.bg-dk-orange,
-.burnt-orange-bg {
-	background-color: $bus-dk-orange;
-}
-
+// .white-bg {
+// 	background: #ffffff;
+// }
+// .bg-business-blue,
+// .business-blue-bg {
+// 	background: $bus-blue;
+// }
+// .bg-blue,
+// .blue-bg {
+// 	background-color: $bus-blue-secondary;
+// }
+// .bg-brt-blue,
+// .bright-blue-bg {
+// 	background-color: $bus-brt-blue;
+// }
+// .bg-lt-blue,
+// .light-blue-bg {
+// 	background-color: $bus-lt-blue;
+// }
+// .bg-md-blue,
+// .med-blue-bg {
+// 	background-color: $bus-md-blue;
+// }
+// .bg-dp-blue,
+// .deep-blue-bg {
+// 	background-color: $bus-dk-blue;
+// }
+// .bg-gray,
+// .gray-bg {
+// 	background-color: $bus-gray;
+// }
+// .bg-lt-gray,
+// .light-gray-bg {
+// 	background-color: $bus-lt-gray;
+// }
+// .bg-md-gray,
+// .med-gray-bg {
+// 	background-color: $bus-md-gray;
+// }
+// .bg-dk-gray,
+// .bg-charcoal,
+// .charcoal-bg {
+// 	background-color: $bus-dk-gray;
+// }
+// .bg-dust,
+// .bg-off-white,
+// .dust-bg {
+// 	background-color: $bus-off-white;
+// }
+// .bg-gold,
+// .gold-bg {
+// 	background-color: $bus-gold;
+// }
+// .bg-teal,
+// .teal-bg {
+// 	background-color: $bus-teal;
+// }
+// .bg-yellow,
+// .yellow-bg {
+// 	background-color: $bus-yellow;
+// }
+// .bg-mustard,
+// .bg-dk-yellow,
+// .mustard-bg {
+// 	background-color: $bus-dk-yellow;
+// }
+// .bg-orange,
+// .orange-bg {
+// 	background-color: $bus-dk-orange;
+// }
+// .bg-dk-orange,
+// .burnt-orange-bg {
+// 	background-color: $bus-dk-orange;
+// }
 .bg-transparent-deep-blue {
 	background: rgba(1, 57, 99, 0.8);
 }
+
 // Gradients
 .blue-gradient-1 {
 	background: #2783b3;
@@ -213,78 +353,5 @@ $color in $bus-colors {
 	border-top: 0.8rem solid $bus-md-blue;
 }
 
+
 /* Legacy */
-/* Text colors */
-.white-bg {
-	background: #ffffff;
-}
-.text-white,
-.white-text {
-	color: #ffffff;
-}
-.text-business-blue,
-.business-blue-text {
-	color: #00629b;
-}
-.gold-text {
-	color: #FDAA18;
-}
-.teal-text {
-	color: #18B9A0;
-}
-.charcoal-text {
-	color: #333333;
-}
-.dust-text {
-	color: #F1F5F8;
-}
-
-.yellow-text {
-	color: #FFBC00;
-}
-// .blue-text {
-// 	color: #0073AE;
-// }
-
-.text-gray,
-.gray-text {
-	color: #535353;
-}
-.text-med-gray,
-.med-gray-text {
-	color: #919194;
-}
-.text-bright-blue,
-.bright-blue-text {
-	color: #7CE5FF;
-}
-.text-deep-blue,
-.deep-blue-text {
-	color: #083E62;
-}
-.text-lt-blue,
-.lt-blue-text {
-	color: #D5F6FF;
-}
-.text-dk-yellow,
-.text-mustard,
-.mustard-text {
-	color: #DA8D00;
-}
-.text-orange,
-.orange-text {
-	color: #f66200;
-}
-.text-lt-gray,
-.lt-gray-text {
-	color: #EEEEEE;
-}
-.text-dk-orange,
-.text-burnt-orange,
-.burnt-orange-text {
-	color: #DD5800;
-}
-.text-med-blue,
-.med-blue-text {
-	color: #1693C3;
-}

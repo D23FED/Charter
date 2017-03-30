@@ -1,31 +1,36 @@
 @import 'variables-color';
 @import 'variables-bootstrap';
-@import '../../bus/style/variables-business';
+@import 'bus/style/variables-business';
 @function strip-unit($num) {
-  @return $num / ($num * 0 + 1);
+	@return $num / ($num * 0 + 1);
 }
+
 // Breakpoints
 // 544px  = 34em
 // 768px  = 48em
 // 992px  = 62em
 // 1200px = 75em
-$breakpoints: (
-	xxs: 0, xs: 544px, sm: 768px, md: 992px, lg: 1200px
-) !default;
-
-$breakpoint-xs-max: (map-get($breakpoints,'xs') - 1px);
-$breakpoint-sm-max: (map-get($breakpoints,'sm') - 1px);
-$breakpoint-md-max: (map-get($breakpoints,'md') - 1px);
-$breakpoint-lg-max: (map-get($breakpoints,'lg') - 1px);
+$breakpoints: ( //
+xxs: 0,     //
+xs:  544px, //
+sm:  768px, //
+md:  992px, //
+lg:  1200px //
+);
+$breakpoint-xs-max: (map-get($breakpoints, 'xs') - 1px);
+$breakpoint-sm-max: (map-get($breakpoints, 'sm') - 1px);
+$breakpoint-md-max: (map-get($breakpoints, 'md') - 1px);
+$breakpoint-lg-max: (map-get($breakpoints, 'lg') - 1px);
 // Typefaces
-$font-sans-default: Helvetica, Arial, sans-serif;
+$font-sans-default: Helvetica,
+Arial,
+sans-serif;
 $font-open-sans: "Open Sans";
 $font-font-awesome: FontAwesome;
 $font-charter-icons: "Charter Icons";
 $font-stack-sans: unquote($font-open-sans+ ', ' + $font-sans-default);
 $font-stack-icon: $font-font-awesome;
 $font-stack-icon: $font-font-awesome;
-
 // Global
 $column-padding: $grid-gutter-width/2;
 $site-max-width: map-get($breakpoints, 'lg') - (strip-unit($column-padding * 2) * 1px);
@@ -33,25 +38,22 @@ $container-class: 'container';
 $font-size-default-residential: 1.6rem;
 $site-header-class: 'site-header';
 $site-footer-class: 'site-footer';
-
 $transition-time-default: 150ms;
 $btn-font-size-default: 1.9rem;
-$btn-padding-default-y: .7rem;
-$btn-padding-default-x: 4.0rem;
+$btn-padding-default-y: 0.7rem;
+$btn-padding-default-x: 4rem;
 $btn-padding-default: $btn-padding-default-y $btn-padding-default-x;
 $site-header-min-height: 8rem;
-
 // Business
 $site-header-padding-top: 1rem;
 $site-header-padding-bottom: $site-header-padding-top;
-// z-indexes
+// Residential z-indexes
 $zi-modal: 1050;
 $zi-modal-bg: 1040;
 $zi-primary-nav-sm: 1000;
 $zi-popover: 100;
 $zi-megamenu: 150;
 $zi-icon-map-marker: 10;
-
 // MUI Components
 $mui-wrapper: 'muiServiceability';
 $mui-wrapper-legacy: 'muiAddressLookup';
