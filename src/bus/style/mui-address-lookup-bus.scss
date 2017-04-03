@@ -1,0 +1,68 @@
+@import 'initialize';
+@at-root {
+	/* Business-specfic MUI Serviceability component styles */
+	/* MUI form in header */
+}
+
+.site-header {
+	.#{$mui-wrapper} {
+		.#{$mui--wrapper-horizontal-2} {
+			label,
+			.localization__tooltip-text,
+			.#{$mui--help-button-wrapper} {
+				display: none;
+			}
+			.#{$mui--form} {
+				width: auto;
+			}
+			.#{$mui--form-input} {
+				border: 1px solid #666;
+				border-radius: 4px;
+				color: $bus-blue;
+				font-size: 1.2rem;
+				font-weight: 400;
+				height: 28px;
+				line-height: 1.7857;
+				padding: 0 5px;
+			}
+			.#{$mui--submit-button} {
+				background-image: linear-gradient($lt-orange, $bright-orange);
+				border: 0 none;
+				border-radius: 4px;
+				box-shadow: 0 0 3px #491270;
+				color: #fff;
+				cursor: pointer;
+				display: table-cell;
+				float: left;
+				font-size: 1.4rem;
+				font-weight: 700;
+				height: 26px;
+				position: relative;
+				text-align: center;
+				text-decoration: none;
+			}
+			.#{$mui--form-input-container} {
+				padding: 0;
+			}
+		}
+	}
+	.#{$mui--form-input-container} {
+		display: inline-flex;
+		display: -webkit-inline-flex;
+		padding: 0;
+	}
+	.localization__line1 {
+		padding-right: 0.5rem;
+	}
+	.localization__col1,
+	.localization__col2 {
+		display: inline;
+		padding: 0 0.5rem 0 0;
+		.#{$mui--form-input} {
+			width: 72px;
+		}
+	}
+	.localization__col2 {
+		margin-right: 0;
+	}
+}

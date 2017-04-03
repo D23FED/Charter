@@ -15,14 +15,14 @@
 	border-top-left-radius: 0;
 }
 
-.#{$form-input-container} {
+.#{$mui--form-input-container} {
 	display: table;
 	padding: 0;
 	position: relative;
 }
 
-.#{$form-input},
-.#{$submit-button} {
+.#{$mui--form-input},
+.#{$mui--submit-button} {
 	box-shadow: none;
 	padding: $input-padding-base ($input-padding-base * 2);
 	line-height: 1;
@@ -34,13 +34,13 @@
 	font-family: $font-open-sans;
 }
 
-.#{$form-inner} {
+.#{$mui--form-inner} {
 	position: relative;
 	display: inline-block;
 	padding-right: $help-button-width;
 }
 
-.#{$form-input} {
+.#{$mui--form-input} {
 	color: $form-text-color;
 	border-radius: 0;
 	border-color: $input-border-color;
@@ -54,16 +54,16 @@
 [class*='localization__col'] {
 	margin-left: 0;
 	max-width: $col-small-w;
-	.#{$form-input} {
+	.#{$mui--form-input} {
 		border-left-width: 0;
 	}
 }
 
-.#{$form-input-address-wrapper} {
+.#{$mui--form-input-address-wrapper} {
 	float: left;
 }
 
-.#{$form-input-address} {
+.#{$mui--form-input-address} {
 	@include input-rounded-left;
 	padding-left: 3rem;
 	background-repeat: no-repeat;
@@ -72,7 +72,7 @@
 }
 
 // Increase line-height here vs <input>s to make them equal height
-.#{$submit-button} {
+.#{$mui--submit-button} {
 	@include btn-primary;
 	@include form-btn-rounded-right;
 	padding: $input-padding-base 1.8rem;
@@ -82,13 +82,13 @@
 	line-height: 1.4;
 }
 
-.#{$help-button-wrapper} {
+.#{$mui--help-button-wrapper} {
 	@include vertical-center;
 	right: 0;
 	width: auto;
 	margin: 0;
 	line-height: .9;
-	.#{$help-button-icon} {
+	.#{$mui--help-button-icon} {
 		color: $help-button-icon-color;
 		font-size: 2rem;
 	}

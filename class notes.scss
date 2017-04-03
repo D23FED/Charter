@@ -1,0 +1,42 @@
+// Top row
+// Menu with links to My Account, Search, and Zip
+.menu-row-top .site-header-aside  .menu-support .list-inline.list-separated .#{$link-wrapper} a[data-linktype="header"] .#{$link-inner}
+// Links to Spectrum.com, Reach and Enterprise
+.menu-row-top .menu-sister-sites .list-inline.list-separated .#{$link-wrapper} a[data-linktype="header"] .#{$link-inner}
+
+
+// Main row
+// Logo
+.menu-row-main .site-logo a[data-linktype="global_nav"] img
+// Support menu with link to phone and ZIP
+.menu-row-main .site-header-aside .menu-support .list-inline .#{$link-wrapper} a .#{$link-inner}
+// Support menu: phone link
+.menu-row-main .site-header-aside .menu-support .list-inline .campaign .#{$link-wrapper} a[data-linktype="tclick_header"] .#{$link-inner}
+// Support menu: ZIP link mobile
+.menu-row-main .site-header-aside .menu-support .list-inline .zip-mobile .#{$link-wrapper} a[data-linktype="header"] .#{$link-inner}
+// "Check Availability & Offers" ZIP form
+.menu-row-main .site-header-aside .mui-wrapper
+	.description
+	.zipAction
+		form.geoLoc
+			fieldset.spectrum-search
+				.geoloc-btn
+					button[type="submit"]
+						span
+
+
+// Megamenu row
+// Top-level primary nav <a>, no .mega-menu-item
+// Possible
+.menu-row-mega-menu .business-navigation .nav-primary .mega-menu .list-inline .#{$link-wrapper} a[data-linktype="global_nav"] .#{$link-inner}
+// Current
+.site-header-03 .business-navigation .nav-primary .linkComponent a[data-linktype="global_nav"]:not(.btn)
+
+// Top-level primary nav item/link w/megamenu <a>
+.menu-row-mega-menu .business-navigation .nav-primary .mega-menu .list-inline .mega-menu-item .#{$link-wrapper}.desktopLink a .#{$link-inner}
+// Megamenu item/link <a>
+.menu-row-mega-menu .business-navigation .nav-primary .mega-menu .list-inline .mega-menu-item .sub-menu-item .#{$link-wrapper} a .#{$link-inner}
+// Megamenu header (first) item/link <a>
+.menu-row-mega-menu .business-navigation .nav-primary .mega-menu .list-inline .mega-menu-item .sub-menu-item .spectrum-first .#{$link-wrapper} a .#{$link-inner}
+// Secondary nav
+.menu-row-mega-menu .business-navigation .nav-secondary .#{$link-wrapper}.desktopLink.disableSubMenu a[data-linktype="header"] .#{$link-inner}

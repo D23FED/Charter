@@ -2,6 +2,7 @@
 $file-title: 'Business Site Headers';
 
 /* #{$file-title} */
+
 // Site header-wrappers
 $site-header--landing: 'site-header-01';
 $site-header--packages: 'site-header-02';
@@ -143,11 +144,21 @@ $form--navbar-search: 'navbar-form';
 			border-color: $toggle-color;
 			transition: all $transition-time-default ease-out;
 			transition-property: background-color;
-			@include hover-focus {
+			&:hover {
+				background-color: $bus-lt-gray;
+			}
+			&:focus {
+				background-color: transparent;
+			}
+			&:hover:focus {
 				background-color: $bus-lt-gray;
 			}
 			& .icon-bar {
 				background-color: $toggle-color;
+			}
+			// Button state when menu is closed
+			&.collapsed {
+				// background-color: transparent;
 			}
 		}
 	}

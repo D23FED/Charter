@@ -85,6 +85,8 @@ a {
 		&::after {
 			font-size: 0.8em;
 			display: contents;
+			margin-left: -0.5em;
+			line-height: inherit;
 		}
 	}
 }
