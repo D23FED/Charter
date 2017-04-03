@@ -1,5 +1,5 @@
 @import 'initialize';
-$file-title: 'Site header 02';
+$file-title: 'Site header 02: Packages';
 
 /* #{$file-title} */
 
@@ -10,7 +10,7 @@ $zip-sm-input-size: 80% - $zip-input-m-size;
 $zip-btn-size: 100% - ($zip-input-size + $zip-input-m-size);
 $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 // Packages header w/logo, support menu, and ZIP Code dropdown form
-.site-header-02 {
+.#{$site-header--packages} {
 	// Container + Layout Container = double padding
 	.aem-Grid {
 		#{$grid-column} {
@@ -64,19 +64,13 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 				&::before {
 					top: 1px;
 					display: inline-block;
-					// font-family: 'Glyphicons Halflings';
 					font-style: normal;
 					font-weight: 400;
 					line-height: 1;
-					// content: "\e062";
-					// content: "\f041";
 					font-awesome: map-marker;
 					@include vertical-center();
 					color: #03a8e0;
 					font-size: $map-marker-icon-size;
-					// @include breakpoint('sm') {
-					// 	@include vertical-center();
-					// }
 				}
 			}
 		}
@@ -98,7 +92,7 @@ $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 		}
 	}
 	// ZIP Code <form>
-	.geoLoc {
+	.#{$form--zip} {
 		// padding-top: 1rem;
 		margin-left: -$column-padding;
 		@include breakpoint('sm') {

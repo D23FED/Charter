@@ -1,12 +1,19 @@
 @import 'initialize';
-$file-title: 'Site Header';
+$file-title: 'Business Site Headers';
 
 /* #{$file-title} */
-
+// Site header-wrappers
+$site-header--landing: 'site-header-01';
+$site-header--packages: 'site-header-02';
+$site-header--primary: 'site-header-03';
+// Grids
 $grid-column: '[class*="aem-GridColumn"]';
 $grid-container: 'aem-Grid';
 $megamenu-menu: '.sub-menu-item';
 $user-support-menu: 'menu-support';
+// <form>s
+$form--zip: 'geoLoc';
+$form--navbar-search: 'navbar-form';
 @mixin form-input-header {
 	border-color: $bus-teal;
 	border-style: solid;
@@ -59,7 +66,7 @@ $user-support-menu: 'menu-support';
 		border-width: 0;
 		// Menu, menu form
 		.navbar-nav,
-		.navbar-form {
+		.#{$form--navbar-search} {
 			background-color: $bus-gray;
 			margin-top: 0;
 			margin-bottom: 0;
@@ -103,7 +110,7 @@ $user-support-menu: 'menu-support';
 			}
 		}
 		// Search form in small primary header
-		.navbar-form {
+		.#{$form--navbar-search} {
 			border-top-width: 0.1rem;
 			border-top-style: solid;
 			border-top-color: $bus-md-gray;
@@ -192,7 +199,7 @@ $user-support-menu: 'menu-support';
 				display: contents;
 			}
 		}
-		.geoLoc {
+		.#{$form--zip} {
 			@include vertical-center;
 			padding-top: 0;
 		}

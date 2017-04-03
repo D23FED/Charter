@@ -5,7 +5,7 @@
 	.aem-Grid .aem-GridColumn {
 		&:first-child {
 			position: relative;
-			// Map marker next to horizontal ZIP form
+			// Map marker icon next to horizontal ZIP form
 			&::before {
 				display: inline-block;
 				top: 1px;
@@ -40,8 +40,11 @@
 	}
 }
 
-// ZIP Code <form>, in main header row and ZIP form below
-.geoLoc {
+// ZIP Code <form>. Appears in:
+// - Main header row at large breakpoints (vertical form layout)
+// - Third/dark blue header row at small breakpoints (horizontal form layout)
+// - Dropdown form to enter user ZIP (horizontal form layout)
+.#{$form--zip} {
 	padding-top: 1rem;
 	margin-left: -$column-padding;
 	input,
@@ -52,7 +55,6 @@
 		width: $zip-input-size;
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
-		border-style: none;
 		margin-right: $zip-input-m-size;
 		font-size: 1.2rem;
 		line-height: 1.8;
@@ -63,6 +65,7 @@
 	// Submit <button> wrapper <div>
 	.geoloc-btn {
 		width: $zip-btn-size;
+		// Submit button
 		button {
 			border-radius: $btn-border-radius-base;
 			padding: 0;
@@ -80,6 +83,7 @@
 
 // Contains ZIP Code and Search forms
 .menu-row-message {
+	// Remove padding from nested containers
 	.container .container {
 		padding: 0;
 		width: auto;
@@ -90,13 +94,16 @@
 	}
 }
 
+// ZIP and Search dropdown messages and forms in header
 .messagebox-wrapper {
 	padding-top: $site-header-padding-top;
 	padding-bottom: $site-header-padding-bottom;
 	padding-left: 0.5rem;
 	padding-right: 2rem;
 	position: relative;
-	.geoLoc {
+	// ZIP Code <form>
+	.#{$form--zip} {
+		// Wraps <input> and <button>
 		.spectrum-search-input-wrap {
 			display: flex;
 			align-items: center;
@@ -111,16 +118,17 @@
 .mui-mobile {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
+	// "Label" next to form, "Check Availability & Offers"
 	.description {
 		margin-bottom: 0;
 		padding: 0;
 		font-size: 1.2rem;
-		line-height: (12 / 23);
+		line-height: (23 / 12);
 		@include breakpoint('xs') {
 			font-size: $font-size-default-bus;
 		}
 	}
-	// Fix component bug
+	// Bugfix: button class applied to wrapper
 	.zipAction.btn-success,
 	.zipAction.btn-default,
 	.zipAction.btn-primary {
@@ -128,13 +136,15 @@
 		border-style: none;
 		background-image: none;
 	}
-	.geoLoc {
+	// ZIP Code <fo33rm>
+	.#{$form--zip} {
 		padding-top: 0;
 	}
 	input {
 		color: $black;
+		@include border-none;
 	}
-	// Button class on columns bugfix
+	// Bugfix: Button class is applied to columns
 	.aem-GridColumn.btn-primary {
 		background-color: none;
 		background-image: none;

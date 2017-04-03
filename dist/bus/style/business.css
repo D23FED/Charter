@@ -13,6 +13,6 @@
 @import url('components/link.css');
 @import url('components/price.css');
 /* Bugfixes */
-@import url('bugfix.css');
+/*@import url('bugfix.css');*/
 /* Helpers and global styles */
 @import url('business-ingest.css');

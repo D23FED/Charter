@@ -59,6 +59,7 @@
 		bottom: 0;
 	}
 }
+
 @mixin aem-authoring {
 	@at-root {
 		/* Begin author-only style */
@@ -70,4 +71,10 @@
 	@at-root {
 		/* End author-only styles */
 	}
+}
+
+// Proper border reset
+@mixin border-none {
+	border-width: 0;
+	border-style: none;
 }

@@ -13,6 +13,7 @@
 
 @mixin vertical-center($pos: absolute) {
 	position: $pos;
+	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 }

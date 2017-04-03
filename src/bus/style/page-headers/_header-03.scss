@@ -1,5 +1,5 @@
 @import 'initialize';
-$file-title: 'Site header 03';
+$file-title: 'Site header 03: Primary';
 
 /* #{$file-title} */
 
@@ -11,9 +11,8 @@ $zip-btn-size: 100% - ($zip-input-size + $zip-input-m-size);
 $zip-sm-btn-size: 100% - ($zip-sm-input-size + $zip-input-m-size);
 $menu-top-font-size-scale-factor: 0.8;
 $row-megamenu-height: 4rem;
-$site-header-3-class: 'site-header-03';
 // Packages header w/logo, support menu, and ZIP Code dropdown form
-.#{$site-header-3-class} {
+.#{$site-header--primary} {
 	// Container + Layout Container = double padding
 	.#{$grid-container} {
 		// position: relative;

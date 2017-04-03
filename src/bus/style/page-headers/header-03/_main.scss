@@ -1,6 +1,9 @@
 // Primary menu row; site logo, link to phone, MUI form
+// Link icon sizing
 $svg-icon-w: 3rem;
+// Link icon sizing: small breakpoints
 $svg-icon-w-sm: 2rem;
+// User support links such as phone and localization in the primary header bar
 @mixin user-support-menu-item-link {
 	display: inline-block;
 	color: white;
@@ -21,11 +24,47 @@ $svg-icon-w-sm: 2rem;
 	}
 }
 
+// Primary header row
 .menu-row-main {
 	padding-top: $site-header-padding-top;
 	padding-bottom: $site-header-padding-bottom;
 	background-color: $bus-blue-secondary;
 	position: relative;
+	ul,
+	ol {
+		margin-bottom: 0;
+		text-align: right;
+		font-size: 0;
+		line-height: 1;
+		padding: 0;
+	}
+	// Space menu items
+	li {
+		padding-right: 0.5rem;
+		& + li {
+			padding-left: 0.5rem;
+		}
+	}
+	// Links
+	a,
+	path {
+		transition: all $transition-time-default ease-out;
+	}
+	// Link icons
+	path {
+		transition-property: fill;
+		fill: white;
+	}
+	svg {
+		display: block;
+		margin: 0 auto 0.4rem;
+		max-height: $svg-icon-w-sm;
+		width: $svg-icon-w-sm;
+		@include breakpoint('xs') {
+			max-height: $svg-icon-w;
+			width: $svg-icon-w;
+		}
+	}
 	// Vertically center custom wrapper divs
 	.customWrapper {
 		display: inline-block;
@@ -43,45 +82,11 @@ $svg-icon-w-sm: 2rem;
 	.aem-GridColumn + .aem-GridColumn {
 		float: right;
 	}
-	// Side column
-	//   -menu with links to phone and ZIP buttons
-	//   -small "Check Availability & Offers" MUI ZIP inputform
+	// Side column. Contents:
+	//   - Menu with links to phone and ZIP buttons
+	//   - Small "Check Availability & Offers" MUI ZIP inputform
 	.site-header-aside {
 		text-align: right;
-		ul,
-		ol {
-			margin-bottom: 0;
-			text-align: right;
-			font-size: 0;
-			line-height: 1;
-			padding: 0;
-		}
-		// Space menu items
-		li {
-			padding-right: 0.5rem;
-			& + li {
-				padding-left: 0.5rem;
-			}
-		}
-		// Links
-		a,
-		path {
-			transition: all $transition-time-default ease-out;
-		}
-		path {
-			transition-property: fill;
-			fill: white;
-		}
-		svg {
-			display: block;
-			margin: 0 auto 0.4rem;
-			max-height: $svg-icon-w-sm;
-			width: $svg-icon-w-sm;
-			@include breakpoint('xs') {
-				max-height: $svg-icon-w;
-				width: $svg-icon-w;
-			}
-		}
 	}
 	// Menu with links to Phone and ZIP
 	.#{$user-support-menu} {
@@ -111,29 +116,33 @@ $svg-icon-w-sm: 2rem;
 		@include breakpoint('sm') {
 			display: block;
 		}
+		// Authoring-only
 		@include aem-authoring {
 			display: block;
 		}
-		// Component bugfix
+		// Bugfix: button class applied to wrapper
 		[class*='btn'].zipAction {
 			background: none;
 			&:focus {
 				outline: none;
 			}
 		}
-		button {
-			vertical-align: middle;
-		}
-		// Form title
+		// Form title. "We were unable to detect your location."
 		.description {
 			margin-bottom: 0.3rem;
 			color: white;
 			text-align: center;
 			font-size: 1.4rem;
 		}
+		button {
+			vertical-align: middle;
+		}
+		input {
+			@include border-none;
+		}
 	}
 	// ZIP Code <form>
-	.geoLoc {
+	.#{$form--zip} {
 		margin-left: 0;
 	}
 	// All links in main row (site logo lacks .linkComponent and is not selected)
