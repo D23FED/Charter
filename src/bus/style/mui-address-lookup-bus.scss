@@ -4,6 +4,7 @@
 	/* MUI form in header */
 }
 
+$shadow-purple: #491270;
 .site-header {
 	.#{$mui-wrapper} {
 		.#{$mui--wrapper-horizontal-2} {
@@ -26,20 +27,27 @@
 				padding: 0 5px;
 			}
 			.#{$mui--submit-button} {
-				background-image: linear-gradient($lt-orange, $bright-orange);
-				border: 0 none;
-				border-radius: 4px;
-				box-shadow: 0 0 3px #491270;
-				color: #fff;
-				cursor: pointer;
+				position: relative;
 				display: table-cell;
 				float: left;
-				font-size: 1.4rem;
-				font-weight: 700;
 				height: 26px;
-				position: relative;
+				border-width: 0;
+				border-style: none;
+				border-color: map-get($btn-default-colors, 'border');
+				border-radius: $border-radius-base;
+				background-color: map-get($btn-default-colors, 'background');
+				box-shadow: 0 0 3px $shadow-purple;
+				background-image: none;
+				color: map-get($btn-default-colors, 'color');
 				text-align: center;
 				text-decoration: none;
+				font-weight: $btn-font-weight-default;
+				font-size: 1.4rem;
+				cursor: pointer;
+				@include hover-focus {
+					color: map-get($btn-default-colors, 'hover');
+					background-color: map-get($btn-default-colors, 'hover-bg');
+				}
 			}
 			.#{$mui--form-input-container} {
 				padding: 0;

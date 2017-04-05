@@ -1,5 +1,7 @@
-// Button mixin
-// Modfied from Bootstrap, removed support for dropdowns and badges
+// Business
+// ========
+// Spectrum Button Variant mixin
+// Removed support for Bootstrap dropdowns and badges
 // Spectrum namespaced (spe_)
 // ---
 // Required arguments:
@@ -154,48 +156,7 @@
 	// }
 }
 
-// Residential
-@mixin btn-default {
-	background-color: $lt-blue;
-	background-image: none;
-	border: 0;
-	border-radius: $btn-border-radius-base;
-	color: #fff;
-	font-size: 1.9rem;
-	text-transform: uppercase;
-	color: #fff;
-	&:hover,
-	&:active,
-	&:focus,
-	&:active:focus,
-	&:active:hover {
-		background-color: $md-blue;
-		color: #fff;
-	}
-	&:active {
-		color: #fff;
-		&:focus,
-		&:hover {
-			color: #fff;
-		}
-	}
-	&:focus {
-		outline-color: $yellow;
-	}
-}
 
-// Residential
-@mixin btn-primary {
-	// $color, $background, $border
-	@include button-variant(#fff, $bright-orange, $tangerine);
-	background-image: linear-gradient(to bottom, $lt-orange, $bright-orange);
-	border-width: 0.1rem;
-	border-radius: $btn-border-radius-base;
-	text-shadow: 0.1rem 0.1rem 0.3rem #888;
-	font-weight: bold;
-	font-size: 1.9rem;
-	text-transform: uppercase;
-}
 
 // Spectrum Business: Default buttons
 // Todo: split up mixin files by LoB
@@ -260,4 +221,48 @@
 		@include text-icon--double-angle-right;
 		@include pseudo-icon;
 	}
+}
+
+// Residential
+@mixin btn-default {
+	background-color: $lt-blue;
+	background-image: none;
+	border: 0;
+	border-radius: $btn-border-radius-base;
+	color: #fff;
+	font-size: 1.9rem;
+	text-transform: uppercase;
+	color: #fff;
+	&:hover,
+	&:active,
+	&:focus,
+	&:active:focus,
+	&:active:hover {
+		background-color: $md-blue;
+		color: #fff;
+	}
+	&:active {
+		color: #fff;
+		&:focus,
+		&:hover {
+			color: #fff;
+		}
+	}
+	&:focus {
+		outline-color: $yellow;
+	}
+}
+
+// Residential
+// ===========
+@mixin btn-primary {
+	// $color, $background, $border
+	@include button-variant(#fff, $bright-orange, $tangerine);
+	background-image: linear-gradient(to bottom, $lt-orange, $bright-orange);
+	border-width: 0.1rem;
+	border-radius: $btn-border-radius-base;
+	text-shadow: 0.1rem 0.1rem 0.3rem #888;
+	font-weight: bold;
+	font-size: 1.9rem;
+	text-transform: uppercase;
 }
