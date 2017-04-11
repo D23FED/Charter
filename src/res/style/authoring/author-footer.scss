@@ -1,0 +1,10 @@
+@import 'initialize';
+
+/* Site footer authoring */
+
+@import 'page-footer/variables';
+#{$page-footer} {
+	.footer-states-list {
+		display: block;
+	}
+}
