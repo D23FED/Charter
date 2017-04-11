@@ -1,0 +1,20 @@
+@import 'initialize';
+// Horizontal
+
+@import 'horizontal/2';
+
+.#{$mui-wrapper},
+.#{$mui-wrapper-legacy} {
+	// <form> inner for horizontal layout 1
+	.localization {
+		&--horizontal-1 {
+			@import 'horizontal/1';
+		}
+		&--horizontal-2 {
+			// @import 'horizontal/2';
+		}
+		.modal &--horizontal-2 {
+			@import 'horizontal/2';
+		}
+	}
+}

@@ -24,6 +24,18 @@
 	}
 }
 
+@mixin hover-focus-darken($color) {
+	@include hover-focus {
+		color: darken($color, 15%)
+	}
+}
+
+@mixin active-darken($color) {
+	&:active {
+		color: darken($color, 25%)
+	}
+}
+
 // Using a pseudo element to contain an image
 @mixin pseudo-img($pos: absolute) {
 	content: '';
@@ -46,4 +58,23 @@
 		right: 0;
 		bottom: 0;
 	}
+}
+
+@mixin aem-authoring {
+	@at-root {
+		/* Begin author-only style */
+	}
+	.aem-AuthorLayer-Layouting &,
+	.aem-AuthorLayer-Edit & {
+		@content;
+	}
+	@at-root {
+		/* End author-only styles */
+	}
+}
+
+// Proper border reset
+@mixin border-none {
+	border-width: 0;
+	border-style: none;
 }

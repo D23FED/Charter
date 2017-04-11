@@ -1,0 +1,318 @@
+@import 'initialize';
+$file-title: 'Business Site Headers';
+
+/* #{$file-title} */
+
+// Site header-wrappers
+$site-header--landing: 'site-header-01';
+$site-header--packages: 'site-header-02';
+$site-header--primary: 'site-header-03';
+// Grids
+$grid-column: '[class*="aem-GridColumn"]';
+$grid-container: 'aem-Grid';
+$megamenu-menu: '.sub-menu-item';
+$user-support-menu: 'menu-support';
+// <form>s
+$form--zip: 'geoLoc';
+$form--navbar-search: 'navbar-form';
+@mixin form-input-header {
+	border-color: $bus-teal;
+	border-style: solid;
+	border-radius: 2px;
+	vertical-align: middle;
+}
+
+.site-header {
+	// header containers
+	.container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.container,
+	.container-fluid {
+		& > .navbar-header,
+		& > .navbar-collapse {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	// Logo
+	.site-logo {
+		p {
+			margin: 0;
+		}
+	}
+	// Small-breakpoint-only menus
+	.menu-sm {
+		@include breakpoint('sm') {
+			display: none;
+			@include aem-authoring {
+				display: block;
+			}
+		}
+	}
+	// Large-breakpoint-only menus
+	.menu-lg {
+		display: none;
+		@include breakpoint('sm') {
+			display: block;
+		}
+		@include aem-authoring {
+			display: block;
+		}
+	}
+	// "Navbar" that creates the hamburger nav toggle button and menu
+	.navbar-sm {
+		background-color: transparent;
+		border-width: 0;
+		// Menu, menu form
+		.navbar-nav,
+		.#{$form--navbar-search} {
+			background-color: $bus-gray;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		// Nav menu
+		.navbar-nav {
+			margin-top: 0;
+			margin-bottom: 0;
+			// Menu items
+			.nav-item {
+				padding-left: 0;
+				padding-right: 0;
+				& + .nav-item {
+					// Menu links
+					.nav-link {
+						border-top-width: 0.1rem;
+						border-top-style: solid;
+						border-top-color: $bus-md-gray;
+					}
+				}
+			}
+			// Menu Links
+			.nav-link {
+				font-size: 1.6rem;
+				color: #fff;
+				text-decoration: none;
+				transition: all $transition-time-default ease-out;
+				transition-property: color, background;
+				@include pseudo-double-angle-right;
+				&::after {
+					@include vertical-center;
+					right: $column-padding;
+					// position: absolute;
+					// display: contents;
+					// display: initial;
+					// vertical-align: initial;
+				}
+				@include hover-focus() {
+					background-color: $bus-brt-blue;
+				}
+			}
+		}
+		// Search form in small primary header
+		.#{$form--navbar-search} {
+			border-top-width: 0.1rem;
+			border-top-style: solid;
+			border-top-color: $bus-md-gray;
+			padding-bottom: 2rem;
+			.form-row {
+				display: flex;
+				@include aem-authoring {
+					display: block;
+				}
+			}
+			// <label> and <input>
+			.form-group {
+				width: 100%;
+				padding-right: $column-padding;
+				margin-bottom: 0;
+			}
+			.form-label {
+				color: #fff;
+				font-size: 1.4rem;
+				font-weight: normal;
+			}
+			// Submit button
+			.btn-submit {
+				margin-left: auto;
+			}
+		}
+		// Toggle/hamburger button
+		$toggle-color: $bus-lt-gray;
+		.navbar-toggle {
+			border-color: $toggle-color;
+			transition: all $transition-time-default ease-out;
+			transition-property: background-color;
+			&:hover {
+				background-color: $bus-lt-gray;
+			}
+			&:focus {
+				background-color: transparent;
+			}
+			&:hover:focus {
+				background-color: $bus-lt-gray;
+			}
+			& .icon-bar {
+				background-color: $toggle-color;
+			}
+			// Button state when menu is closed
+			&.collapsed {
+				// background-color: transparent;
+			}
+		}
+	}
+	.navbar {
+		position: static;
+		.navbar-collapse {
+			.nav {
+				text-align: left;
+			}
+		}
+	}
+	// Prevent white text in <input>
+	.messagebox-wrapper,
+	.mui-wrapper {
+		input {
+			color: $text-color-default;
+		}
+	}
+	// Element that gets shown/hidden when ZIP action or Search is clicked
+	.messagebox-wrapper {
+		padding-top: $site-header-padding-top;
+		padding-bottom: $site-header-padding-bottom;
+		display: none;
+	}
+	// Search and ZIP forms in header
+	.messageBox {
+		position: relative;
+		padding-right: 1.5rem;
+		@include breakpoint('sm') {
+			padding-right: 2.5rem;
+		}
+		// Close button
+		.close-message {
+			position: absolute;
+			top: 20%;
+			right: 0;
+			font-size: 0;
+			line-height: 1;
+			// right: -$container-padding-sm;
+			padding-left: 1rem;
+			z-index: map-get($z-layer-bus, 'close-button');
+			@include breakpoint('sm') {
+				@include vertical-center;
+			}
+			&::after {
+				font-size: $font-size-default-bus;
+				line-height: 1;
+				color: $text-color-default;
+				display: contents;
+			}
+		}
+		.#{$form--zip} {
+			@include vertical-center;
+			padding-top: 0;
+		}
+	}
+	// Megamenu wrapper wrapper
+	.mega-menu-item {
+		// Megamenu activated
+		&.js-active #{$megamenu-menu} {
+			display: block;
+		}
+		// Fix for IE
+		img[src=''] {
+			display: none;
+		}
+	}
+	// Megamenu wrapper
+	#{$megamenu-menu} {
+		display: none;
+		position: absolute;
+		z-index: map-get($z-layer-bus, 'megamenu');
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	// Top row menu with links to My Account, Search, and Zip (large breakpoint only)
+	// Main row menu with links to phone and ZIP (small breakpoint only)
+	.#{$user-support-menu} {
+		// Add space before menu to align with hamburger button
+		margin-top: $navbar-toggle-spacing-y;
+		@include breakpoint('sm') {
+			margin-top: 0;
+		}
+	}
+	// Search form
+	.searchForm {
+		text-align: center;
+		.search-text,
+		.btn {
+			vertical-align: middle;
+		}
+		// <input>
+		.search-text {
+			@include form-input-header;
+			width: 60%;
+			// padding-left: 20%;
+			padding-left: 1rem
+		}
+		// Submit button
+		.btn {}
+		// Class bug
+		.aem-GridColumn.btn-primary {
+			background-color: transparent;
+			border-style: none;
+		}
+	}
+}
+
+// Toggle/hamburger button
+.navbar-toggle {
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: $navbar-toggle-spacing-y;
+	margin-bottom: $navbar-toggle-spacing-y;
+}
+
+// Collapsing content
+.navbar-collapse {
+	border-width: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: map-get($z-layer-bus, navbar-sm);
+	text-align: left;
+	@include aem-authoring {
+		position: static;
+	}
+}
+
+.geoloc-btn button {
+	@include spe_btn-default-bus;
+	line-height: inherit;
+	border-width: 0;
+}
+
+.list-inline {
+	margin-left: auto;
+}
+
+a,
+path {
+	transition: all $transition-time-default ease-out;
+}
+
+a {
+	transition-property: color;
+}
+
+path {
+	transition-property: fill;
+}
+
+@import 'page-headers/header-01';
+@import 'page-headers/header-02';
+@import 'page-headers/header-03';

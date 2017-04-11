@@ -1,0 +1,100 @@
+@import 'initialize';
+// Horizontal 1
+// width of apt/unit and zip columns
+@mixin input-rounded-left {
+	border-bottom-left-radius: $form-part-border-radius;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: $form-part-border-radius;
+	border-top-right-radius: 0;
+}
+
+@mixin form-btn-rounded-right {
+	border-bottom-right-radius: $form-part-border-radius;
+	border-top-right-radius: $form-part-border-radius;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.#{$mui--form-input-container} {
+	display: table;
+	padding: 0;
+	position: relative;
+}
+
+.#{$mui--form-input},
+.#{$mui--submit-button} {
+	box-shadow: none;
+	padding: $input-padding-base ($input-padding-base * 2);
+	line-height: 1;
+	border-width: 1;
+	margin: 0;
+	font-size: $form-font-size;
+	height: auto;
+	font-weight: normal;
+	font-family: $font-open-sans;
+}
+
+.#{$mui--form-inner} {
+	position: relative;
+	display: inline-block;
+	padding-right: $help-button-width;
+}
+
+.#{$mui--form-input} {
+	color: $form-text-color;
+	border-radius: 0;
+	border-color: $input-border-color;
+	background-color: $input-bg-color;
+	font-size: $form-font-size;
+	margin: 0;
+	font-size: $form-font-size;
+}
+
+// columns in the row of form elements
+[class*='localization__col'] {
+	margin-left: 0;
+	max-width: $col-small-w;
+	.#{$mui--form-input} {
+		border-left-width: 0;
+	}
+}
+
+.#{$mui--form-input-address-wrapper} {
+	float: left;
+}
+
+.#{$mui--form-input-address} {
+	@include input-rounded-left;
+	padding-left: 3rem;
+	background-repeat: no-repeat;
+	background-image: url($location-icon-url);
+	background-position: 10px 50%;
+}
+
+// Increase line-height here vs <input>s to make them equal height
+.#{$mui--submit-button} {
+	@include btn-primary;
+	@include form-btn-rounded-right;
+	padding: $input-padding-base 1.8rem;
+	text-shadow: none;
+	top: auto;
+	font-size: $form-font-size;
+	line-height: 1.4;
+}
+
+.#{$mui--help-button-wrapper} {
+	@include vertical-center;
+	right: 0;
+	width: auto;
+	margin: 0;
+	line-height: .9;
+	.#{$mui--help-button-icon} {
+		color: $help-button-icon-color;
+		font-size: 2rem;
+	}
+}
+
+.popover {
+	max-width: none;
+	width: $popover-width;
+}

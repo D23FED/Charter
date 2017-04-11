@@ -1,4 +1,24 @@
-// primary nav and subnav, 3rd row
+// Megamenu Row
+// - Primary nav
+// - Secondary nav
+// - Megamenu
+$white-cover-block-offset: 1.6rem;
+$link-inner: 'linkLabel';
+$link-wrapper: 'linkComponent';
+// All nav menu item link
+@mixin nav-link {
+	// color: #fff;
+	display: block;
+	text-decoration: none;
+	transition: all $transition-time-default ease-out;
+	transition-property: color, background-color;
+	// font-size: 1.4rem;
+	// @include hover-focus {
+	// 	background-color: $bus-teal;
+	// }
+}
+
+// Primary nav menu item
 @mixin primary-nav-menu-item {
 	border-bottom: none;
 	border-right: 0.1rem solid $bus-lt-blue;
@@ -6,21 +26,37 @@
 	padding-right: 0;
 }
 
+// Primary nav menu item link
 @mixin primary-nav-link {
-	display: block;
 	color: #fff;
-	font-size: 1.4rem;
+	display: block;
+	font-size: 1.5rem;
 	line-height: $row-megamenu-height;
 	text-decoration: none;
 	padding-left: 2rem;
 	padding-right: 2rem;
-	transition: all $transition-time-default ease-out;
-	transition-property: color, background-color;
 	@include hover-focus {
 		background-color: $bus-teal;
 	}
 }
 
+// Secondary nav menu item link
+@mixin secondary-nav-link {
+	display: block;
+	color: #fff;
+	padding-left: $column-padding;
+	padding-right: $column-padding;
+	font-size: 1.2rem;
+	line-height: $row-megamenu-height;
+	text-decoration: none;
+	@include hover-focus {
+		color: $bus-brt-blue;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+}
+
+// Header-style meagmenu menu items
 @mixin megamenu-menu-item-header {
 	position: relative;
 	&::before {
@@ -34,6 +70,7 @@
 	}
 }
 
+// Link inside header-style Megamenu item
 @mixin megamenu-link-header {
 	color: $bus-dk-gray;
 	font-size: 1.8rem;
@@ -41,19 +78,25 @@
 	border-bottom-color: $bus-lt-gray;
 	border-bottom-width: 0.1rem;
 	border-bottom-style: solid;
-	.linkLabel {
+	@include hover-focus {
+		color: $bus-dk-gray;
+	}
+	.#{$link-inner} {
 		&::after {
 			display: none;
 		}
 	}
 	.ff-charter,
+	.text-icon,
 	.ff-icon {
 		display: none;
 	}
 }
 
+// Megamenu link
 @mixin megamenu-link {
-	font-size: 1.4rem;
+	font-size: 1.3rem;
+	font-weight: 600;
 	line-height: (3 / 1.4);
 	padding-left: 0;
 	text-decoration: none;
@@ -62,13 +105,9 @@
 		background-color: transparent;
 		color: $bus-teal;
 	}
-	.linkLabel {
-		display: inline;
-		@include pseudo-double-angle-right;
-	}
 }
 
-// Row with primary and secondary nav, primary dropdown/mega menu
+// Row with primary secondary and megamenu nav
 .menu-row-mega-menu {
 	background-color: $bus-blue;
 	background: linear-gradient(to bottom, #083e62 0%, #00629b 100%);
@@ -77,7 +116,7 @@
 	}
 }
 
-// Wrapper for primary and secondary nav
+// Wrapper for primary, secondary and megamenu nav
 .business-navigation {
 	display: none;
 	@include breakpoint('sm') {
@@ -94,168 +133,148 @@
 			}
 		}
 	}
-	// Primary nav: Products, Solutions, Offers
-	.nav-primary {
-		.list-inline {
-			margin-left: 0;
-			>li {
-				border-bottom: none;
-				border-right: 0.1rem solid $bus-lt-blue;
-				padding-left: 0;
-				padding-right: 0;
-			}
-		}
-	}
-	// Secondary nav; Insights, Support, Partners
-	.nav-secondary {
-		float: right;
-		.mega-menu-item {
-			display: inline-block;
-		}
-		.desktopLink a {
-			padding-left: $column-padding;
-			padding-right: $column-padding;
-			@include hover-focus {
-				color: $bus-brt-blue;
-				background-color: transparent;
-			}
-			.linkLabel {
-				font-size: 1.2rem;
-			}
-		}
-		// remove padding from last menu item, to right-align flush with container
-		.mega-menu-item:last-child a {
-			// padding-right: 0;
-		}
-	}
 	ul {
 		margin-bottom: 0;
 		font-size: 0;
 	}
-	// Primary nav items
-	.desktopLink,
-	.linkComponent {
+	// All nav links
+	// - Primary nav
+	// - Secondary nav
+	// - Megamenu
+	.#{$link-wrapper} {
 		a:not(.btn) {
-			display: block;
-			line-height: $row-megamenu-height;
-			text-decoration: none;
-			padding-left: 2rem;
-			padding-right: 2rem;
-			transition: all $transition-time-default ease-out;
-			transition-property: color, background-color;
-			font-size: 1.5rem;
-			color: #fff;
-			@include hover-focus {
-				background-color: $bus-teal;
-			}
+			@include nav-link;
 		}
 	}
 }
 
-// mega menu submenus
+// Primary nav: Products, Solutions, Offers
+.nav-primary {
+	.list-inline {
+		margin-left: 0;
+		> li {
+			@include primary-nav-menu-item;
+		}
+	}
+	// Links
+	.#{$link-wrapper} {
+		// a[data-linktype="global_nav"]
+		a:not(.btn) {
+			@include primary-nav-link;
+		}
+	}
+}
+
+// Secondary nav; Insights, Support, Partners
+.nav-secondary {
+	float: right;
+	// Nav item/Link component wrapper (has nothing to do with megamenu)
+	.mega-menu-item {
+		display: inline-block;
+		&:first-child {
+			position: relative;
+			// Divider between menu items
+			&::after {
+				@include vertical-center;
+				content: '';
+				background-color: #fff;
+				height: 1rem;
+				width: 1px;
+				right: 0;
+			}
+		}
+		// bugfix
+		> .hidden-sm {
+			display: inherit;
+		}
+	}
+	// Links
+	.#{$link-wrapper} {
+		a:not(.btn) {
+			@include secondary-nav-link;
+		}
+	}
+}
+
+// Megamenu/submenu wrapper
+// <ul> containing a single <li> containing the megamenu
 #{$megamenu-menu} {
-	$white-cover-block-offset: 1.6rem;
 	background-color: white;
 	border: 0.1rem solid $bus-lt-gray;
 	padding-bottom: 2.5rem;
+	// Grid container
 	.aem-Grid {
 		display: flex;
-		>.aem-GridColumn {
+		// Column dividers
+		> .aem-GridColumn {
 			border-left: 0.1rem solid $bus-lt-gray;
 			&:first-child {
-				border-left-width: 0; // First list item inside first column-count:
+				border-left-width: 0; // First list item inside first column
 				.spectrum-first {
+					// Remove caret icons from first/header-style links
 					&::before {
 						display: none;
 					}
 				}
 			}
 		}
+		// Authoring only
 		@include aem-authoring {
 			display: block;
 		}
 	}
-	// Fix for nested columns
+	// Fix for nested columns bug
 	.aem-GridColumn .aem-GridColumn {
 		padding: 0;
 	}
-	// Wraps <ul>
+	// Component wrapper, separates inner lists/menus/columns from parent <ul> (which wraps entire Megamenu)
 	.list-component {
+		// Wraps each submenu/column
+		ul {
+			padding-left: 0;
+			list-style: none;
+		}
+		// Menu/column spacing
 		li {
 			padding-left: $column-padding;
+			border-width: 0;
 		}
 	}
-	ul {
-		padding-left: 0;
-	}
-	li {
-		border-width: 0;
-	}
-	// Temp fix
-	>li>div {
-		width: auto !important;
-	}
-	.desktopLink a,
-	.linkComponent .link-default,
-	.linkComponent a:not(.btn) {
-		font-size: 1.3rem;
-		font-weight: 600;
-		line-height: (3 / 1.4);
-		padding-left: 0;
-		text-decoration: none;
-		color: $link-color-default-bus;
-		@include hover-focus {
-			background-color: transparent;
-			color: $bus-teal;
-		}
-	}
-	.spectrum-first {
-		position: relative;
-		&::before {
-			display: block;
-			content: '';
-			position: absolute;
-			left: -$white-cover-block-offset;
-			width: $white-cover-block-offset;
-			height: 4rem;
-			background-color: white;
-		}
+	// Megamenu Links
+	.#{$link-wrapper} {
 		a:not(.btn) {
-			color: $bus-dk-gray;
-			font-size: 1.8rem;
-			font-weight: 300;
-			border-bottom-color: $bus-lt-gray;
-			border-bottom-width: 0.1rem;
-			border-bottom-style: solid;
-			@include hover-focus {
-				color: $bus-dk-gray;
-			}
-			.linkLabel {
-				&::after {
-					display: none;
-				}
-			}
-			.ff-charter,
-			.ff-icon {
-				display: none;
+			@include megamenu-link;
+			.#{$link-inner} {
+				display: inline;
 			}
 		}
 	}
-	a:not(.btn) .linkLabel {
-		display: inline;
-		// @include pseudo-double-angle-right;
+	// Megamenu Column header-style menu-items
+	.spectrum-first {
+		@include megamenu-menu-item-header;
+		// Megamenu Column header-style links
+		.#{$link-wrapper} {
+			a:not(.btn) {
+				@include megamenu-link-header;
+			}
+		}
 	}
-	@include aem-authoring {
-		display: block;
-		position: static;
+	// Icons after links
+	.ff-charter {
+		font-size: .7em;
 	}
 	// Temp override for arrows on button text
 	.btn .ff-charter {
 		display: none;
 	}
-	.ff-charter {
-		font-size: .7em;
-		// padding-left: .5rem;
+	// Temp fix
+	> li > div {
+		width: auto !important;
+	}
+	// Authoring only
+	@include aem-authoring {
+		display: block;
+		position: static;
 	}
 }
 

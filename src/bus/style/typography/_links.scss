@@ -1,0 +1,115 @@
+@import 'initialize';
+
+/* Typography: Business Links */
+
+// Links
+a {
+	&,
+	.link-default & {
+		color: $link-color-default;
+		cursor: pointer;
+		font-style: normal;
+		// font-weight: 600;
+		margin: 0;
+		text-decoration: underline;
+		vertical-align: baseline;
+		@include hover-focus {
+			color: $link-color-default-bus-hover;
+		}
+		&:active {
+			color: $link-color-default-bus-active;
+		}
+	}
+}
+
+.link-alternate {
+	a {
+		color: $link-color-alternate-bus;
+		@include hover-focus {
+			color: $link-color-alternate-bus-hover;
+		}
+		&:active {
+			color: $link-color-alternate-bus-active;
+		}
+	}
+}
+
+// Used on dark BG
+.link-light {
+	a {
+		color: $link-color-light;
+		@include hover-focus {
+			color: $bus-brt-blue;
+		}
+	}
+}
+
+.link-light-alternate {
+	a {
+		color: $link-color-light-alternate;
+		@include hover-focus {
+			color: $bus-brt-blue;
+		}
+	}
+}
+
+.link-packages {
+	a {
+		@extend .text-sm;
+		color: #fff;
+		@include hover-focus {
+			color: darken(#fff, 15%);
+		}
+	}
+}
+
+.link-packages-alternate {
+	a {
+		@extend .text-sm;
+		color: $bus-brt-blue;
+		@include hover-focus {
+			color: darken($bus-brt-blue, 15%);
+		}
+	}
+}
+
+.link-header {
+	font-size: 1.6rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	@include breakpoint('md') {
+		font-size: 1.8rem;
+	}
+	a {
+		@extend .pseudo-double-angle-right;
+		&::after {
+			font-size: 0.8em;
+			display: contents;
+			margin-left: -0.5em;
+			line-height: inherit;
+		}
+	}
+}
+
+.link-strong {
+	font-size: 1.5rem;
+	font-weight: bold;
+	a {
+		@extend .pseudo-double-angle-right;
+		&::after {
+			content: '\00a0\00bb';
+			font-family: inherit;
+		}
+	}
+}
+
+.link-list {
+	font-weight: bold;
+	a {
+		@extend .pseudo-double-angle-right;
+		&::after {
+			content: '\00a0\00bb';
+			font-family: inherit;
+		}
+	}
+}

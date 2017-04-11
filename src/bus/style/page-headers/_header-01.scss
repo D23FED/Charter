@@ -1,9 +1,9 @@
 @import 'initialize';
 
-/* Site header 01 */
+/* Site header 01: Landing pages */
 
 // Simple header w/logo & phone #
-.site-header-01 {
+.#{$site-header--landing} {
 	padding-top: $site-header-padding-top;
 	padding-bottom: $site-header-padding-bottom;
 	padding-left: 0.5rem;

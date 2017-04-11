@@ -1,14 +1,25 @@
 @import url('temp.css');
-/* If temp is broken */
-/*@import url('temp-backup.css');*/
 @import url('font-charter-icons.css');
+/* Modules */
+/* ======= */
 @import url('borders-legacy.css');
-/* Components */
-@import url('accordion-table.css');
-@import url('mui.css');
-@import url('price.css');
+@import url('page-header.css');
+@import url('page-footer.css');
 @import url('subnav.css');
 @import url('terms.css');
-@import url('bugfix.css');
+/* Components */
+/* ========== */
+@import url('components/accordion-table.css');
+/* MUI: Common */
+@import url('components/mui-address-lookup.css');
+/* MUI: Business only */
+@import url('components/mui-address-lookup-bus.css');
+@import url('components/container.css');
+@import url('components/link.css');
+@import url('components/price.css');
+/* Bugfixes */
+/* ======== */
+/*@import url('bugfix.css');*/
 /* Helpers and global styles */
+/* ========================= */
 @import url('business-ingest.css');

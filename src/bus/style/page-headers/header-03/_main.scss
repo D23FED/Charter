@@ -1,10 +1,71 @@
 // Primary menu row; site logo, link to phone, MUI form
+// Link icon sizing
 $svg-icon-w: 3rem;
+// Link icon sizing: small breakpoints
 $svg-icon-w-sm: 2rem;
+// User support links such as phone and localization in the primary header bar
+@mixin user-support-menu-item-link {
+	display: inline-block;
+	color: white;
+	font-size: 1.6rem;
+	font-weight: normal;
+	text-decoration: none;
+	transition-property: color;
+	@include hover-focus {
+		color: $bus-brt-blue;
+		text-decoration: underline;
+		path {
+			fill: $bus-brt-blue;
+		}
+	}
+	@include breakpoint('sm') {
+		font-weight: 600;
+		font-size: 1.6rem;
+	}
+}
+
+// Primary header row
 .menu-row-main {
 	padding-top: $site-header-padding-top;
 	padding-bottom: $site-header-padding-bottom;
 	background-color: $bus-blue-secondary;
+	position: relative;
+	ul,
+	ol {
+		margin-bottom: 0;
+		text-align: right;
+		font-size: 0;
+		line-height: 1;
+		padding: 0;
+	}
+	// Space menu items
+	li {
+		padding-right: 0.5rem;
+		& + li {
+			padding-left: 0.5rem;
+		}
+	}
+	// Links
+	a,
+	path {
+		transition: all $transition-time-default ease-out;
+	}
+	// Link icons
+	path {
+		transition-property: fill;
+		fill: white;
+	}
+	svg {
+		display: block;
+		margin: 0 auto 0.4rem;
+		max-height: $svg-icon-w-sm;
+		width: $svg-icon-w-sm;
+		@include breakpoint('xs') {
+			max-height: $svg-icon-w;
+			width: $svg-icon-w;
+		}
+	}
+	// Vertically center custom wrapper divs
 	.customWrapper {
 		display: inline-block;
 		overflow: hidden;
@@ -13,47 +74,22 @@ $svg-icon-w-sm: 2rem;
 			vertical-align: middle;
 		}
 	}
+	// reduce padding on second column
 	.aem-GridColumn--sm--6 + .aem-GridColumn--sm--6 {
 		padding-left: 0.2rem;
 	}
-	// Contains menu with links to phone and ZIP buttons, small MUI form
+	// float second column while first column is vertically centered and taken out of flow
+	.aem-GridColumn + .aem-GridColumn {
+		float: right;
+	}
+	// Side column. Contents:
+	//   - Menu with links to phone and ZIP buttons
+	//   - Small "Check Availability & Offers" MUI ZIP inputform
 	.site-header-aside {
 		text-align: right;
-		ul,
-		ol {
-			margin-bottom: 0;
-			text-align: right;
-			font-size: 0;
-			line-height: 1;
-			padding: 0;
-		}
-		li {
-			padding-right: 0.5rem;
-			& + li {
-				padding-left: 0.5rem;
-			}
-		}
-		a,
-		path {
-			transition: all $transition-time-default ease-out;
-		}
-		path {
-			transition-property: fill;
-			fill: white;
-		}
-		svg {
-			display: block;
-			margin: 0 auto 0.4rem;
-			max-height: $svg-icon-w-sm;
-			width: $svg-icon-w-sm;
-			@include breakpoint('xs') {
-				max-height: $svg-icon-w;
-				width: $svg-icon-w;
-			}
-		}
 	}
-	// link to phone, Zip
-	.menu-support {
+	// Menu with links to Phone and ZIP
+	.#{$user-support-menu} {
 		display: inline-block;
 		@include breakpoint('sm') {
 			margin-right: 2.5rem;
@@ -63,69 +99,56 @@ $svg-icon-w-sm: 2rem;
 		li {
 			float: left;
 		}
+		// Links
 		.linkComponent a {
-			font-size: 1.4rem;
+			font-size: 1.3rem;
+		}
+		// Account for empty ZIP code
+		.linkLabel {
+			min-width: 3.5rem;
+			min-width: 5ch;
 		}
 	}
-	// MUI form
+	// MUI/ZIP code entry form, "Check Availability & Offers"
 	.mui-wrapper {
 		display: none;
 		// Fix for button class applied to wrapper
 		@include breakpoint('sm') {
 			display: block;
 		}
+		// Authoring-only
 		@include aem-authoring {
 			display: block;
 		}
+		// Bugfix: button class applied to wrapper
 		[class*='btn'].zipAction {
 			background: none;
 			&:focus {
 				outline: none;
 			}
 		}
-		button {
-			vertical-align: middle;
-			// @include spe_button-variant($btn-default-colors);
-		}
+		// Form title. "We were unable to detect your location."
 		.description {
 			margin-bottom: 0.3rem;
 			color: white;
 			text-align: center;
 			font-size: 1.4rem;
 		}
-	}
-	// ZIP Code <form>
-	.geoLoc {
-		margin-left: 0;
-	} // Phone link
-	.linkComponent {
-		a {
-			display: inline-block;
-			color: white;
-			text-decoration: none;
-			font-weight: normal;
-			font-size: 1.6rem;
-			transition-property: color;
-			@include hover-focus {
-				color: $bus-brt-blue;
-				text-decoration: underline;
-				path {
-					fill: $bus-brt-blue;
-				}
-			}
-			@include breakpoint('sm') {
-				font-weight: 600;
-				font-size: 1.6rem;
-			}
+		button {
+			vertical-align: middle;
+		}
+		input {
+			@include border-none;
 		}
 	}
-}
-
-.site-logo {
-	.spacer {
-		display: none;
-		@include aem-authoring {
-			display: block;
+	// ZIP Code <form>
+	.#{$form--zip} {
+		margin-left: 0;
+	}
+	// All links in main row (site logo lacks .linkComponent and is not selected)
+	.linkComponent {
+		a {
+			@include user-support-menu-item-link;
 		}
 	}
 }

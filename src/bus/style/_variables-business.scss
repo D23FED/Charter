@@ -1,40 +1,48 @@
 // Business variables
-
-// Color scheme for default buttons
-$btn-default-colors: (
-	color:           #fff,
-	background:      #fdaa18,
-	border:          $tangerine,
-	hover:           #f0f4f7,
-	// hover-bg:     #f0f4f7,
-	active:          #f0f4f7,
-	// active-bg:    #f0f4f7,
-	focus:           #f0f4f7,
-	focus-bg:        #e09002,
-	focus-bd:        #000,
-	active-hover:    #f0f4f7,
-	hover-bg:        #FDBA29,
-	active-bg:       #fdaa18,
-	active-hover-bg: #fdaa18,
-	// hover-bd:     #000000,
-	bg-gradient-start: #fdaa18,
-	bg-gradient-end: $bright-orange,
-	bg-gradient-hover-start: #fdaa18,
-	bg-gradient-hover-end: #fdaa18
-);
-
-$text-color-default: $bus-dk-gray;
-$font-size-default-bus: 1.4rem;
+// Containers
 $container-padding: 0.5rem;
 $container-padding-sm: 0.5rem;
+// Text
+$text-color-default: $bus-dk-gray;
+$font-size-default-bus: 1.4rem;
+// Links
+// Default links
 $link-color-default-bus: $bus-blue;
-// Business z-indexes
-$z-layer-bus : (
-	btn-icon:     10, // icons inside of buttons
-	close-button: 20, // Close button in header forms
-	navbar-sm:    101, // Nav toggled with hamburger button
-	megamenu:     1000 // Dropdown meny for primary nav
+$link-color-default-bus-hover: $bus-teal;
+$link-color-default-bus-active: darken($bus-teal, 15%);
+// Alternate links
+$link-color-alternate-bus: $bus-teal;
+$link-color-alternate-bus-hover: $bus-blue;
+$link-color-alternate-bus-active: darken($bus-blue, 15%);
+// Legacy links
+$link-color-default: $link-color-default-bus;
+$link-color-alternate: $link-color-alternate-bus;
+$link-color-light: $white;
+$link-color-light-alternate: $bus-lt-blue;
+// Default button color scheme
+$btn-default-colors: ( //defaults
+color:                      #fff, //link color
+background:                 $bus-gold, //bg color
+border:                     transparent, //border color
+hover:                      #f0f4f7, //hover color
+hover-bg:                   $bus-yellow //    #f0f4f7,
+// focus:                   #f0f4f7,
+// active-hover:            #f0f4f7,
+// active-hover-bg:         #fdaa18
+// bg-gradient-start:       #fdaa18,
+// bg-gradient-end:         $bright-orange,
+// bg-gradient-hover-start: #fdaa18,
+// bg-gradient-hover-end:   #fdaa18
 );
-$site-footer-bg-color:    $bus-gray;
+// Business z-indexes
+$z-layer-bus: ( btn-icon: 10, // icons inside of buttons
+close-button: 20, // Close button in header forms
+navbar-sm: 101, // Nav toggled with hamburger button
+megamenu: 1000 // Dropdown meny for primary nav
+);
+// Nav
 $navbar-toggle-spacing-x: 10px;
 $navbar-toggle-spacing-y: 8px;
+// Footer
+$site-footer-bg-color: $bus-gray;
+$btn-font-weight-default: 500;

@@ -1,33 +1,33 @@
 @at-root {
-	/* Display */
+	/* Display Helpers */
 }
 
 .clear {
 	clear: both;
 }
 
-.block,
-.display-block {
+.display-block,
+.block {
 	display: block;
 }
 
-.inline,
-.display-inline {
+.display-inline,
+.inline {
 	display: inline;
 }
 
-.inline-block,
-.display-inline-block {
+.display-inline-block,
+.inline-block {
 	display: inline-block;
 }
 
-.table,
-.display-table {
+.display-table,
+.table {
 	display: table;
 }
 
-.table-cell,
-.display-table-cell {
+.display-table-cell,
+.table-cell {
 	display: table-cell;
 }
 

@@ -1,0 +1,83 @@
+@import 'initialize';
+// Horizontal 2
+// Defaults from third-party CSS
+@at-root {
+	/* Fix for MUI Modal form's input fields stretching beyond container width */
+}
+
+// Inside Modal.modal & {
+// <form>
+.localization__form {
+	width: $mui-form-w-default;
+	max-width: 100%;
+	width: auto;
+}
+
+// Form inputs
+.localization__inputs {
+	position: relative;
+}
+
+// Address input and errors
+.localization__input-container-address {
+	position: relative;
+}
+
+// Apt/Unit # and ZIP inputs
+.localization__line2 {
+	// All columns
+	[class*="__col"] {
+		width: 50%;
+		margin-right: 0;
+		margin-left: 0;
+		@include breakpoint('sm') {}
+	}
+	// Apt/Unit # column
+	.localization__col1 {
+		padding-right: $column-padding;
+		@include breakpoint('sm') {
+			width: $mui-col-apt-w-default;
+		}
+	}
+	// ZIP
+	.localization__col2 {
+		padding-left: $column-padding;
+		@include breakpoint('sm') {
+			width: $mui-col-zip-w-default;
+			margin-right: 2rem;
+		}
+	}
+}
+
+//  All errors
+.localization__bubble {
+	max-width: 100%;
+}
+
+//  Address error message
+.localization__bubble-address1--error {
+	margin-top: 0;
+	top: 7.1rem;
+	.localization__bubble-pointer-address1 {
+		transform: translateX(-50%);
+		left: 50%;
+		@include breakpoint('sm') {
+			left: 10px;
+			transform: none;
+		}
+	}
+}
+
+// Zip Error
+.localization__bubble-zip--error {
+	margin-top: 0;
+	top: 19rem;
+	// "Arrow" atop error message bubble
+	.localization__bubble-pointer {
+		left: 75%;
+		transform: translateX(-50%);
+		@include breakpoint('sm') {
+			left: 50%;
+		}
+	}
+}

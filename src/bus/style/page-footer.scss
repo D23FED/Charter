@@ -1,0 +1,191 @@
+@import 'initialize';
+$social-url-globs: ( 'facebook.com', 'twitter.com', 'linkedin.com', 'youtube.com');
+$site-footer-link-color: $bus-lt-blue;
+$site-footer-link-font-size: 1rem;
+$site-footer-link-hover-color: $bus-brt-blue;
+$site-footer-h-list-spacing: 2.5rem;
+$social-link-size: 34px;
+$social-link-size-sm: 24px;
+.site-footer {
+	padding-top: 3rem;
+	padding-bottom: 0;
+	background-color: $site-footer-bg-color;
+	border-top-style: none;
+	.container {
+		padding-top: 0;
+		padding-right: 0;
+		padding-left: $column-padding;
+		padding-right: $column-padding;
+		@include breakpoint('sm') {
+			padding-left: $container-padding;
+			padding-right: $container-padding;
+		}
+	}
+	.footer-body {
+		padding-bottom: 2rem;
+	}
+	// Column titles
+	h3,
+	h4 {
+		font-weight: 300;
+	}
+	h3,
+	h4,
+	li,
+	p {
+		color: #fff;
+	}
+	ul,
+	ol {
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	.list-inline.list-separated,
+	.list-footer-links-general {
+		li {
+			font-size: $site-footer-link-font-size;
+			border-color: $site-footer-link-color;
+			line-height: 1;
+		}
+	}
+	.list-footer-links-general {
+		// class error in component js
+		margin-right: -15px;
+		padding-left: 15px;
+		li {
+			padding-left: 0;
+			margin-left: 0;
+			padding-right: 0.6rem;
+			margin-right: 0.6rem;
+			@include breakpoint('xs') {
+				padding-right: 1rem;
+				margin-right: 1rem;
+			}
+			@include breakpoint('sm') {
+				padding-left: $site-footer-h-list-spacing;
+				padding-right: $site-footer-h-list-spacing;
+				margin-right: 0;
+			}
+			&.spectrum-first {
+				padding-left: 0;
+			}
+			&.spectrum-last {
+				padding-right: 0;
+			}
+		}
+	}
+	// Footer links, default
+	a {
+		color: $site-footer-link-color;
+		transition: all $transition-time-default ease-out;
+		transition-property: color;
+		text-decoration: none;
+		font-size: 1.1rem;
+		font-weight: 600;
+		@include hover-focus {
+			color: $site-footer-link-hover-color;
+			text-decoration: underline;
+		}
+	}
+	.link-alternate {
+		a {
+			color: $bus-brt-blue;
+			text-decoration: underline;
+		}
+	}
+	// Social links
+	.list-social-links {
+		li {
+			padding-left: 0.2rem;
+			padding-right: 0.2rem;
+			@include breakpoint('sm') {
+				padding-left: 0.3rem;
+				padding-right: 0.3rem;
+			}
+			@include breakpoint('sm') {
+				padding-left: 1.3rem;
+				padding-right: 1.3rem;
+			}
+			&.spectrum-first {
+				padding-left: 0;
+			}
+			&.spectrum-last {
+				padding-right: 0;
+			}
+		}
+		a {
+			position: relative;
+			display: inline-block;
+			line-height: 0;
+			padding-top: $social-link-size-sm;
+			width: $social-link-size-sm;
+			@include breakpoint('xs') {
+				padding-top: $social-link-size;
+				width: $social-link-size;
+			}
+			@include breakpoint('sm') {}
+			// Hide actual link text (replaced with icons)
+			.linkLabel {
+				font-size: 0;
+			}
+			&::before,
+			&::after {
+				@include absolute-center;
+				display: block;
+			}
+			&::before {
+				font-family: FontAwesome;
+				content: "\f230";
+				font-size: 1.6rem;
+				color: $site-footer-bg-color;
+				z-index: 20;
+				@include breakpoint('xs') {
+					font-size: 2rem;
+				}
+			}
+			&::after {
+				content: "";
+				border-width: $social-link-size-sm * 0.5;
+				border-style: solid;
+				border-color: white;
+				border-radius: 500px;
+				width: 0;
+				height: 0;
+				z-index: 1;
+				transition: all $transition-time-default ease-out;
+				transition-property: border-color;
+				@include breakpoint('xs') {
+					border-width: $social-link-size * 0.5;
+				}
+			}
+			@include hover-focus {
+				&::after {
+					border-color: $site-footer-link-hover-color;
+				}
+			}
+		}
+		a[href*="facebook.com"]::before {
+			content: "\f230";
+		}
+		a[href*="twitter.com"]::before {
+			content: "\f099";
+		}
+		a[href*="linkedin.com"]::before {
+			content: "\f0e1";
+		}
+		a[href*="youtube.com"]::before {
+			content: "\f167";
+		}
+	}
+	// Disclaimer
+	.disclaimer {
+		color: #fff;
+	}
+	// Temporary fix
+	.site-footer {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}

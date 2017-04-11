@@ -1,13 +1,19 @@
+@import 'initialize';
 @at-root {
 	/* Business Bugfixes */
 }
+
 .container-fluid .imageArtDirection {
 	margin-left: 0;
 	margin-right: 0;
 }
-@include breakpoint('sm') {
-		.muiAddressLookup .localization--horizontal-2 .localization__form {
-		width: 450px;
-	}
 
+@include breakpoint('sm') {
+	.#{$mui-wrapper} {
+		.#{$mui--wrapper-horizontal-2} {
+			.#{$mui--form} {
+				width: 450px;
+			}
+		}
+	}
 }

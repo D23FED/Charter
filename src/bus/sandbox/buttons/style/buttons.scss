@@ -1,0 +1,89 @@
+@import 'initialize';
+
+/* Business: Button-style links */
+
+// BG color for icons in default style buttons
+$btn-default-icon-bg-color: $bus-dk-yellow;
+// Base styles
+.btn {
+	font-weight: 500;
+	font-size: 1.7rem;
+	position: relative;
+	&-fw {
+		width: 100%;
+	}
+	&-no-wrap {
+		white-space: nowrap;
+	}
+	&-wrap {
+		white-space: normal;
+	}
+	&-lg {
+		font-size: 1.9rem;
+	}
+	&-sm {
+		font-size: 1.4rem;
+	}
+	&-xs {
+		font-size: 1.3rem;
+	}
+}
+
+// Variants
+.btn-default {
+	@include spe_btn-default-bus;
+	&:hover {
+		// Button icon
+		span::after {
+			background-color: #d49b22;
+		}
+	}
+	&:focus,
+	&.focus {
+		outline-offset: 0.2rem;
+		outline-width: 0.1rem;
+		outline-style: dotted;
+		outline-color: #0255e7;
+	}
+	&:active,
+	&.active {
+		box-shadow: inset 0 0.3rem 0.5rem rgba(0, 0, 0, 0.125);
+	}
+	// Button icons
+	span::after {
+		background: $btn-default-icon-bg-color;
+	}
+}
+
+$icon-size: 2em;
+$icon-spacing-x: .5em;
+// Button Icons
+.spectrum-icon-after {
+	.btn {
+		padding-right: $icon-size + $icon-spacing-x;
+	}
+	span::after {
+		position: absolute;
+		display: inline-block;
+		right: 0;
+		font-size: 1em;
+		border-radius: 0 0.5rem 0.5rem 0;
+		height: 100%;
+		width: $icon-size;
+		top: 0;
+	}
+	.btn-sm {
+		padding-right: $icon-size + $icon-spacing-x;
+		span:after {
+			line-height: 2.25;
+		}
+	}
+}
+
+// Double angle right
+.icon-double-angle-right {
+	.btn span:after {
+		@include btn-icon--double-angle-right;
+		@include pseudo-icon;
+	}
+}

@@ -61,6 +61,12 @@
 		@content;
 	}
 }
+// Mobile-last query
+@mixin breakpoint-down($name, $breakpoints-list: $breakpoints) {
+	@include media-breakpoint-down($name, $breakpoints-list) {
+		@content;
+	}
+}
 
 // One breakpoint only
 @mixin breakpoint-only($name, $breakpoints-list: $breakpoints) {

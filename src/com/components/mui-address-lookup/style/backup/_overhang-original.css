@@ -1,0 +1,246 @@
+/*
+Raymond Heredia (c-raymond.heredia@charter.com)
+1-16-17
+Update to overhang responsiveness.
+*/
+
+#mui-wrapper h2 {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 20px;
+}
+
+#mui-wrapper h2.prod-offer {
+	font-size: 22px;
+	font-weight: 400;
+}
+
+#mui-wrapper .muiAddressLookup .localization--vertical-1 .localization__inputs, .muiAddressLookup .localization--vertical-2 .localization__inputs, .muiAddressLookup .localization--vertical-3 .localization__inputs {
+	padding-bottom: 10px;
+	margin: 0 auto;
+}
+
+#mui-wrapper .muiAddressLookup .mui-loader-container {
+	height: 185px;
+	width: 245px;
+	margin: 0 auto;
+}
+
+#mui-wrapper .muiAddressLookup .mui-loader-container img {
+	position: relative;
+	top: 50px;
+	left: 88px;
+}
+
+.combine-wrapper {
+	color: #000;
+	margin: 20px 0 30px 0;
+}
+
+.combine-wrapper p {
+	font-size: 30px;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.combine-wrapper p strong, .combine-wrapper p b {
+	/*font-size: 30px;*/
+	color: #03629c;
+}
+
+.adaptive-image-wrapper {
+	float: left;
+}
+
+.adaptive-image-wrapper .adaptiveimage {
+	float: left;
+	margin-right: 30px;
+}
+
+#mui-wrapper {
+	padding: 15px 15px 20px;
+	color: #fff;
+	background: #0072cb;
+	background: -moz-linear-gradient(top, #0072cb 0%, #005598 100%);
+	background: -webkit-linear-gradient(top, #0072cb 0%, #005598 100%);
+	background: linear-gradient(to bottom, #0072cb 0%, #005598 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0072cb', endColorstr='#005598', GradientType=0);
+}
+
+.combine-wrapper {
+	color: #000;
+	margin: 2rem 0 3rem;
+}
+
+.combine-wrapper p {
+	font-size: 3rem;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.combine-wrapper p strong, .combine-wrapper p b {
+	/*font-size: 3rem;*/
+	color: #03629c;
+}
+
+.adaptive-image-wrapper {
+	float: left;
+}
+
+.adaptive-image-wrapper .adaptiveimage {
+	float: left;
+	margin-right: 3rem;
+}
+
+header .customWrapper .muiAddressLookup {
+	margin: 0;
+}
+
+header .imageArtDirection .background-image {
+	padding: 0 !important;
+}
+
+#mui-wrapper .price-block {
+	color: #fff !important;
+	background: none !important;
+	display: table;
+}
+
+#mui-wrapper .price-style-01 .currency, #mui-wrapper .price-style-01 .whole, #mui-wrapper .price-style-01 .super, .price-style-01 .separator {
+	color: #fff !important;
+	-webkit-text-fill-color: #FFF;
+	background-image: none;
+	background: none;
+}
+
+#mui-wrapper .price-style-01 .before, .price-style-01 .after, #mui-wrapper .price-style-01 .term {
+	color: #fff;
+}
+
+#mui-wrapper .price-block {
+	font-size: 6rem;
+}
+
+#mui-wrapper .offer-bottom {
+	margin-left: 15px;
+	margin-bottom: 20px;
+}
+
+@media (min-width:320px) {
+	#image-art-mui-wrapper > div > div > div > div > div > .background-image {
+		/* RAH: This is not a permanent solution. But there seems to be no other way to target this selector. */
+		width: 100%;
+		min-height: 200px !important;
+		background-size: contain;
+	}
+	#image-art-mui-wrapper {
+		/*background:url("/content/dam/spectrum/residential/en/images/home/hp_hero_d_bg.jpg");*/
+		width: 100%;
+		height: 100%;
+	}
+	#mui-wrapper div .container.section div .customWrapper .offer-price div .richtext.section .price-block .price.p-row .details.p-col .inner .super {
+		font-weight: normal;
+	}
+	#mui-wrapper div .container.section div .customWrapper .offer-price div .richtext.section .price-block .price.p-row .whole.p-col {
+		font-size: 80px;
+	}
+	#mui-wrapper div .container.section div .customWrapper .offer-price div .richtext.section .price-block .price.p-row .currency.p-col {
+		font-size: 24px;
+		vertical-align: middle;
+	}
+	#mui-wrapper div .container.section div .customWrapper .offer-price div .richtext.section .price-block .price.p-row .details.p-col .inner .super {
+		font-size: 20px;
+		margin-top: 12px;
+	}
+	#mui-wrapper div .container.section div .customWrapper .offer-price div .richtext.section .price-block .before.p-row {
+		margin-bottom: -10px;
+		/* I know, I hate negative margins too... */
+	}
+	#mui-wrapper div .container.section div .customWrapper .offer-price div .richtext.section .price-block.price-style-01 .before.p-row .inner, #mui-wrapper div .container.section div .customWrapper .offer-price div .richtext.section .price-block.price-style-01 .price.p-row .details.p-col .inner .term {
+		font-size: 1rem;
+		text-align: left;
+	}
+	#image-art-mui-wrapper #mui-wrapper div .container.section {
+		width: auto !important;
+		/* forcing BS override*/
+	}
+	#mui-wrapper h3 {
+		margin: 0;
+		font-weight: 700;
+		text-align: center;
+	}
+	#mui-wrapper .offer-price .details.p-col .inner .super {
+		text-align: left;
+	}
+	#mui-wrapper .price-block {
+		margin: 10px auto;
+	}
+	#mui-wrapper .price-block .price.price-block .price {
+		margin: 0 auto;
+	}
+	#mui-wrapper {
+		width: 100%;
+		height: auto;
+		float: right;
+	}
+	#mui-wrapper > div > .container.section {
+		width: auto !important;
+		/* overriding from grid.less */
+	}
+	#mui-wrapper h2 {
+		text-align: center !important;
+		margin: 0 20px;
+	}
+	#mui-wrapper .muiAddressLookup {
+		margin: 0 25px;
+	}
+	#mui-wrapper .price-style-01 .separator {
+		background-image: none;
+		background-color: none;
+		background: none;
+	}
+	#mui-wrapper .price-block {
+		width: 212px;
+		/* made up number*/
+		margin: 10px auto;
+	}
+	#mui-wrapper .offer-bottom {
+		text-align: center;
+	}
+	#mui-wrapper .muiAddressLookup label {
+		display: none;
+	}
+}
+
+@media (min-width:600px) {
+	#image-art-mui-wrapper > div > div > div > div > div > .background-image {
+		/* RAH: This is not a permanent solution. But there seems to be no other way to target this selector. */
+		min-height: 300px !important;
+	}
+}
+
+@media (min-width:992px) {
+	#image-art-mui-wrapper > div > div > div > div > .image.imageArtDirection.image-focus-3.parbase.mob-image-focus-3 {
+		width: 60%;
+		float: left;
+	}
+	#image-art-mui-wrapper > div > div > div > div > div > .background-image {
+		/* RAH: This is not a permanent solution. But there seems to be no other way to target this selector. */
+		/*width:59%;*/
+		float: left;
+		min-height: 400px !important;
+		background-size: cover;
+	}
+	#image-art-mui-wrapper > div:after {
+		content: ".";
+		visibility: hidden;
+		display: block;
+		height: 0;
+		clear: both;
+	}
+	#mui-wrapper {
+		width: 40%;
+		text-align: center;
+		float: right;
+	}
+}
