@@ -1,0 +1,245 @@
+/* From resi core.css */
+
+$bubble-padding: 1rem;
+@mixin error-bubble {
+	border: 1px solid #d60000;
+	color: #e71313;
+}
+
+@mixin bubble {
+	background: #fff;
+	border-radius: 5px;
+	display: block;
+}
+
+%bubble {
+	@include bubble;
+}
+%error-bubble {
+	@include error-bubble;
+}
+
+.muiServiceability {
+	.localization__bubble {
+		@extend %bubble;
+		margin-top: 45px;
+		padding: 1rem;
+		position: absolute;
+	}
+	/* 5478 */
+	.localization--horizontal-1 {
+
+		.localization__bubble-account--error {
+			@extend %error-bubble;
+			margin-top: 45px;
+		}
+		.localization__bubble-zip--error {
+			@extend %error-bubble;
+			margin-left: 365px;
+		}
+	}
+	/* 5560 */
+	.localization--horizontal-2 {
+		.localization__bubble {
+			width: 450px;
+			max-width: 100%;
+		}
+		.localization__bubble-address1--error,
+		.localization__bubble-zip--error {
+			@extend %error-bubble;
+		}
+
+		.localization__bubble-address1--error {
+			margin-top: 44px;
+		}
+	}
+	/* 5701 */
+	.localization--horizontal-1 {
+		.localization__bubble-address1--error {
+			@extend %error-bubble;
+		}
+	}
+	.localization--horizontal-2 {
+
+		.localization__bubble-account--error {
+			@extend %error-bubble;
+		}
+	}
+
+	.localization--vertical-1,
+	.localization--vertical-2,
+	.localization--vertical-3 {
+		.localization__bubble {
+			&-account--error,
+			&-address1--error,
+			&-zip--error {
+				@extend %error-bubble;
+			}
+		}
+	}
+
+	/* 5857 */
+	.localization--vertical-1,
+	.localization--vertical-2,
+	.localization--vertical-3 {
+		.localization__bubble {
+			@extend %bubble;
+			margin-top: 7px;
+			padding: 1rem;
+			position: relative;
+		}
+	}
+	/* 5886 */
+	.localization--vertical-2 {
+		.localization__bubble-pointer-zip {
+			left: 130px;
+		}
+	}
+	.localization--vertical-3 {
+
+		.localization__bubble-pointer-zip {
+			left: 130px;
+		}
+	}
+	/* 5942 */
+	.localization--horizontal-1 {
+		&.accountFieldShown {
+			.localization__bubble-address1--error {
+				margin-left: 276px;
+				z-index: 1;
+			}
+			.localization__bubble-zip--error {
+				margin-left: 640px;
+			}
+		}
+		.localization__bubble {
+			@extend %bubble;
+			margin-top: 45px;
+			padding: 1rem;
+			position: absolute;
+		}
+		.localization__bubble-account--error {
+			@extend %error-bubble;
+			margin-top: 45px;
+		}
+		.localization__bubble-zip--error {
+			@extend %error-bubble;
+			margin-left: 365px;
+		}
+		.localization__bubble-address1--error {
+			@extend %error-bubble;
+		}
+	}
+	/* 6556 */
+	/* 6757 */
+	.localization--horizontal-2 {
+		.localization__bubble-account--error {
+			@extend %error-bubble;
+		}
+	}
+
+	.localization--vertical-1 {
+		.localization__bubble-account--error,
+		.localization__bubble-address1--error,
+		.localization__bubble-zip--error {
+			@extend %error-bubble;
+		}
+	}
+
+	.localization--vertical-2 {
+		.localization__bubble-account--error,
+		.localization__bubble-address1--error,
+		.localization__bubble-zip--error {
+			@extend %error-bubble;
+		}
+	}
+
+	.localization--vertical-3 {
+		.localization__bubble-account--error,
+		.localization__bubble-address1--error,
+		.localization__bubble-zip--error {
+			@extend %error-bubble;
+		}
+	}
+	/* 6913 */
+	.localization--vertical-1,
+	.localization--vertical-2,
+	.localization--vertical-3 {
+		.localization__bubble {
+			@extend %bubble;
+			margin-top: 7px;
+			padding: 1rem;
+			position: relative;
+		}
+	}
+	/* 6942 */
+	.localization--vertical-2,
+	.localization--vertical-3 {
+		.localization__bubble-pointer-zip {
+			left: 130px;
+		}
+	}
+	/* 6980 */
+	.localization--horizontal-1 {
+		&.accountFieldShown {
+			.localization__bubble {
+				&-address1--error {
+					margin-left: 276px;
+					z-index: 1;
+				}
+				&-zip--error {
+					margin-left: 640px;
+				}
+			}
+		}
+	}
+}
+
+
+// Main row of Primary Header
+.menu-row-main {
+	.muiServiceability {
+		/* 5560 */
+		.localization--horizontal-2 {
+			// Primary Header MUI error bubbles
+			.localization__bubble {
+				&-address--error,
+				&-address1--error {
+					margin-top: 0;
+					top: 3rem;
+					width: calc(100% - 5px);
+					text-align: center;
+				}
+				&-zip--error {
+					margin-top: 0;
+					top: 3rem;
+					width: calc(100%);
+					text-align: center;
+					max-width: 50%;
+					right: 0;
+				}
+				&-pointer-zip {
+					// left: 230px;
+				}
+			}
+		}
+		/* 6757 partial */
+		// Street Address error bubble
+		.localization--horizontal-1,
+		.localization--horizontal-2,
+		.localization--vertical-1,
+		.localization--vertical-2,
+		.localization--vertical-3 {
+			.localization__bubble-pointer {
+				background: url("//www.spectrum.com/etc/clientlibs/spectrum/common/core/imgs/bubble-error-pointer.gif");
+				display: block;
+				height: 8px; // left: 10px;
+				position: absolute;
+				top: -8px;
+				width: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}

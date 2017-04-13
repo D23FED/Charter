@@ -1,0 +1,123 @@
+/* CSS copied from residential for temp fixes while SB MUI is styled */
+.site-header-03 .mui-wrapper .muiServiceability .react-autosuggest__suggestions {
+    background: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.2rem;
+    width: 200%;
+}
+
+ul#react-autosuggest-address1 li {
+    padding: 1rem;
+}
+
+ul#react-autosuggest-address1 li:hover {
+    background-color: #0073AE;
+    color: #fff;
+}
+
+header .muiServiceability .localization--horizontal-1 .localization__street-line-suggestion,
+header .muiServiceability .localization--horizontal-2 .localization__street-line-suggestion,
+header .muiServiceability .localization--vertical-1 .localization__street-line-suggestion,
+header .muiServiceability .localization--vertical-2 .localization__street-line-suggestion,
+header .muiServiceability .localization--vertical-3 .localization__street-line-suggestion {
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+
+header .muiServiceability .localization {
+    font-family: sans-serif;
+}
+header .muiServiceability .react-autosuggest {
+    width: 100%;
+}
+header .muiServiceability .localization--horizontal-1 .react-autosuggest__suggestions,
+header .muiServiceability .localization--horizontal-2 .react-autosuggest__suggestions,
+header .muiServiceability .localization--vertical-1 .react-autosuggest__suggestions,
+header .muiServiceability .localization--vertical-2 .react-autosuggest__suggestions,
+header .muiServiceability .localization--vertical-3 .react-autosuggest__suggestions {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 5px 0;
+    position: absolute;
+    /*z-index: 99;*/
+    z-index: 99999;
+}
+header .muiServiceability .localization--horizontal-1 .react-autosuggest__suggestion,
+header .muiServiceability .localization--horizontal-2 .react-autosuggest__suggestion,
+header .muiServiceability .localization--vertical-1 .react-autosuggest__suggestion,
+header .muiServiceability .localization--vertical-2 .react-autosuggest__suggestion,
+header .muiServiceability .localization--vertical-3 .react-autosuggest__suggestion {
+    color: #6c6c70;
+    list-style: outside none none;
+    padding: 3px 20px;
+}
+header .muiServiceability .localization--horizontal-1 .react-autosuggest__suggestion--focused,
+header .muiServiceability .localization--horizontal-2 .react-autosuggest__suggestion--focused,
+header .muiServiceability .localization--vertical-1 .react-autosuggest__suggestion--focused,
+header .muiServiceability .localization--vertical-2 .react-autosuggest__suggestion--focused,
+header .muiServiceability .localization--vertical-3 .react-autosuggest__suggestion--focused {
+    background-color: #428bca;
+    color: #fff;
+}
+
+header .muiServiceability .hideLocalizationOnMobile .react-autosuggest__suggestions {
+    display: none;
+}
+
+header .muiServiceability #react-autosuggest-address1 {
+    text-align: left;
+}
+@media (min-width: 768px) {
+header .muiServiceability .hideLocalizationOnMobile .react-autosuggest__suggestions {
+    display: block;
+}
+}
+
+header .muiAddressLookup .react-autosuggest {
+    width: 100%;
+}
+
+header .muiAddressLookup .localization--horizontal-1 .react-autosuggest__suggestions,
+header .muiAddressLookup .localization--horizontal-2 .react-autosuggest__suggestions,
+header .muiAddressLookup .localization--vertical-1 .react-autosuggest__suggestions,
+header .muiAddressLookup .localization--vertical-2 .react-autosuggest__suggestions,
+header .muiAddressLookup .localization--vertical-3 .react-autosuggest__suggestions {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 5px 0;
+    position: absolute;
+    z-index: 99;
+}
+header .muiAddressLookup .localization--horizontal-1 .react-autosuggest__suggestion,
+header .muiAddressLookup .localization--horizontal-2 .react-autosuggest__suggestion,
+header .muiAddressLookup .localization--vertical-1 .react-autosuggest__suggestion,
+header .muiAddressLookup .localization--vertical-2 .react-autosuggest__suggestion,
+header .muiAddressLookup .localization--vertical-3 .react-autosuggest__suggestion {
+    color: #6c6c70;
+    list-style: outside none none;
+    padding: 3px 20px;
+    text-decoration: underline;
+}
+header .muiAddressLookup .localization--horizontal-1 .react-autosuggest__suggestion--focused,
+header .muiAddressLookup .localization--horizontal-2 .react-autosuggest__suggestion--focused,
+header .muiAddressLookup .localization--vertical-1 .react-autosuggest__suggestion--focused,
+header .muiAddressLookup .localization--vertical-2 .react-autosuggest__suggestion--focused,
+header .muiAddressLookup .localization--vertical-3 .react-autosuggest__suggestion--focused {
+    background-color: #428bca;
+    color: #fff;
+}
+
+header .muiAddressLookup .hideLocalizationOnMobile .react-autosuggest__suggestions {
+    display: none;
+}
+
+header .muiAddressLookup #react-autosuggest-address1 {
+    text-align: left;
+}
+@media (min-width: 768px) {
+    header .muiAddressLookup .hideLocalizationOnMobile .react-autosuggest__suggestions {
+        display: block;
+    }
+}
