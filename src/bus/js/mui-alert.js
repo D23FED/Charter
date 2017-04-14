@@ -1,24 +1,22 @@
 /* global moment, Cookies */
 // MUI Reminder Alert Modal/Pushdown
-var MUIAlert = {};
-// Get current date
-MUIAlert.now = moment();
-// Set inital state
-MUIAlert.active = false;
-// Check for cookie
-MUIAlert.lastVisit = Cookies.get('date_last_visit');
-// Max hours since last visit until we show modal to same user again
-MUIAlert.MAX_HOURS = 24;
-// Visited recently?
-MUIAlert.isRecentVisitor = false;
-// Counter for the number of times we wait and look for the xref
-MUIAlert.xrefCheckCounter = 0;
+var MUIAlert = {
+	// Get current date
+	'now': moment(),
+	// Set inital state
+	'active': false,
+	// Check for cookie
+	'lastVisit': Cookies.get('date_last_visit'),
+	// Max hours since last visit until we show modal to same user again
+	'MAX_HOURS': 24,
+	// Visited recently?
+	'isRecentVisitor': false,
+	// Counter for the number of times we wait and look for the xref
+	'xrefCheckCounter': 0
+};
 // Activate modal
 MUIAlert.activate = function() {
 	if (!MUIAlert.active) {
-		// Count existing elements for debug
-		// var zipButtons = $('.menu-row-top a[data-linkname="zip_location"]').length;
-		// var xrefs = $('.menu-row-top .menu-row-message .simpleXref .userLocation').length;
 		// Activate messagebox by clicking button
 		$('.menu-row-top a[data-linkname="zip_location"]').trigger('tap');
 		// Activate modal by clicking link
@@ -27,10 +25,9 @@ MUIAlert.activate = function() {
 		Cookies.set('date_last_visit', MUIAlert.now);
 		// Set state
 		MUIAlert.active = true;
-		// Debug
-		// $('.modal').html('<span style="color:green">Activated</span>');
-		// console.info('%cSpectrum: MUI Alert Activated, ' + zipButtons + ' buttons found, ' + xrefs + ' xrefs found', 'color: green; font-weight: bold');
 		$('body').addClass('js-modal-alert-active');
+		// Debug
+		// console.info('%cSpectrum: MUI Alert Activated, ' + zipButtons + ' buttons found, ' + xrefs + ' xrefs found', 'color: green; font-weight: bold');
 	}
 };
 // Xref loads after docready, wait for it to load before triggering MUI alert
@@ -67,51 +64,34 @@ MUIAlert.removeCookies = function() {
 };
 // Docready
 $(function() {
-	// console.log('Spectrum: Initialize MUI Alert script');
 	// Determine if data on last visit exists
 	if (MUIAlert.lastVisit === undefined) {
-		// New visitor, No previous visit stored
-		// Store current date of visit as cookie
+		// New visitor, No previous visit stored, store current date of visit as cookie
 		Cookies.set('date_last_visit', MUIAlert.now);
 		MUIAlert.isRecentVisitor = false;
 		// Debug
-		// $('.message').text('New visitor/no cookie found.');
-		// $('.result').text('Current date: ' + MUIAlert.now.format('YYYY-MM-DD, HH:mm'));
-		// console.log('Spectrum: New visitor/no cookie found.');
-		// console.info('Spectrum: Current date: ' + MUIAlert.now.format('YYYY-MM-DD, HH:mm'));
+		// console.info('Spectrum: New visitor/no cookie found. Date set to: ' + MUIAlert.now.format('YYYY-MM-DD, HH:mm'));
 	} else {
-		// 	Return visitor, date cookie found
-		// 	Compare last visit vs current date
+		// 	Return visitor, date cookie found. Compare last visit to current date.
 		var diffSinceLastVisit = MUIAlert.now.diff(MUIAlert.lastVisit, 'hours');
 		// If it's been longer than the max, not recent visitor
 		if (diffSinceLastVisit > MUIAlert.MAX_HOURS) {
 			MUIAlert.isRecentVisitor = false;
 		} else {
-			// Last visit was below maximum time elapsed
 			MUIAlert.isRecentVisitor = true;
 		}
 		// Debug
 		// var diffSinceLastVisitMins = MUIAlert.now.diff(MUIAlert.lastVisit, 'seconds');
-		// $('.message').text('Return visitor/cookie found. Visited ' + diffSinceLastVisit + ' hours (' + diffSinceLastVisitMins + ' seconds) ago.');
-		// $('.result').text('Recent visitor: ' + MUIAlert.isRecentVisitor);
 		// console.log('Spectrum: Return visitor/cookie found. Visited ' + diffSinceLastVisit + ' hours (' + diffSinceLastVisitMins + ' seconds) ago.');
 		// console.info('Spectrum: Recent visitor: ' + MUIAlert.isRecentVisitor);
 	}
 	// If not recent visitor, show modal
 	if (MUIAlert.isRecentVisitor) {
+		$('body').addClass('js-modal-alert-inactive');
 		// Debug
 		// $('.modal').html('<span style="color:red">Hidden</span>');
 		// console.info('%cSpectrum: MUI Alert Not Activated', 'color: red; font-weight: bold');
-		$('body').addClass('js-modal-alert-inactive');
 	} else {
-		// MUIAlert.activate();
 		MUIAlert.whenAvailable('.simpleXref .userLocation', MUIAlert.activate);
 	}
-	// Testing-only buttons
-	$('button.clear').on('click', function() {
-		MUIAlert.removeCookies();
-	});
-	$('button.old').on('click', function() {
-		MUIAlert.setOutdatedCookie();
-	});
-})
+});
