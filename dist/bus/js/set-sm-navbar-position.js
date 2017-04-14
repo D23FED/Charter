@@ -19,7 +19,6 @@
 		// Call on resize
 		$(window).on('resize', function() {
 			_.debounce(setMenuTop, 150);
-			console.log('blarbity');
 		});
 	});
 })(jQuery);
