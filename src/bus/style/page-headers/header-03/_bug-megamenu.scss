@@ -1,0 +1,4 @@
+/* Fix for megamenu items that are set to be hidden at too large a breakpoint */
+.mega-menu-item > .hidden-sm {
+  display: inherit !important;
+}

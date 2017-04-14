@@ -1,0 +1,190 @@
+@import 'initialize';
+@at-root {
+	/***** Bugfix
+	CSS copied from residential for temp fixes while SB MUI is styled
+	Jira EPB-478
+	Originally from Dan/head_mui_temp.css
+	Style theme for list items in list of suggested addresses
+	Hide list on small breakpoints
+	 */
+}
+
+// .site-header-03 .mui-wrapper .muiServiceability .react-autosuggest__suggestions {
+//   background: #fff;
+//   padding-top: 0;
+//   padding-bottom: 0;
+//   font-size: 1.2rem;
+//   width: 200%;
+// }
+.muiServiceability,
+.muiAddressLookup {
+	.react-autosuggest__suggestions {
+		.react-autosuggest__suggestion {
+			padding: 1rem;
+			&:hover {
+				background-color: $bus-blue-secondary;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.site-header {
+	.hideLocalizationOnMobile {
+		.react-autosuggest__suggestions {
+			display: none;
+			@include breakpoint('sm') {
+				display: block;
+			}
+		}
+	}
+	.muiServiceability {
+		.localization {
+			font-family: sans-serif;
+		}
+		.react-autosuggest {
+			width: 100%;
+		}
+		.react-autosuggest__suggestions {
+			background: #fff;
+			padding-top: 0;
+			padding-bottom: 0;
+			font-size: 1.2rem;
+			width: 200%;
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			padding: 5px 0;
+			position: absolute;
+			z-index: map-get($z-layer-bus, 'address-list');
+		}
+		.react-autosuggest__suggestion {
+			color: #6c6c70;
+			list-style: outside none none;
+			padding: 3px 20px;
+			cursor: pointer;
+		}
+		.react-autosuggest__suggestion--focused {
+			background-color: #428bca;
+			color: #fff;
+		}
+		.hideLocalizationOnMobile {
+			.react-autosuggest__suggestions {
+				display: none;
+				@include breakpoint('sm') {
+					display: block;
+				}
+			}
+		}
+		#react-autosuggest-address1 {
+			text-align: left;
+		}
+
+		.localization__street-line-suggestion {
+			font-weight: 700;
+			margin-right: 4px;
+		}
+		.localization--horizontal-1 .localization__street-line-suggestion,
+		.localization--horizontal-2 .localization__street-line-suggestion,
+		.localization--vertical-1 .localization__street-line-suggestion,
+		.localization--vertical-2 .localization__street-line-suggestion,
+		.localization--vertical-3 .localization__street-line-suggestion {
+			font-weight: 700;
+			margin-right: 4px;
+		}
+
+		.localization--horizontal-1 .react-autosuggest__suggestions,
+		.localization--horizontal-2 .react-autosuggest__suggestions,
+		.localization--vertical-1 .react-autosuggest__suggestions,
+		.localization--vertical-2 .react-autosuggest__suggestions,
+		.localization--vertical-3 .react-autosuggest__suggestions {
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			padding: 5px 0;
+			position: absolute;
+			z-index: map-get($z-layer-bus, 'address-list');
+		}
+		.localization--horizontal-1 .react-autosuggest__suggestion,
+		.localization--horizontal-2 .react-autosuggest__suggestion,
+		.localization--vertical-1 .react-autosuggest__suggestion,
+		.localization--vertical-2 .react-autosuggest__suggestion,
+		.localization--vertical-3 .react-autosuggest__suggestion {
+			color: #6c6c70;
+			list-style: outside none none;
+			padding: 3px 20px;
+			cursor: pointer;
+		}
+		.localization--horizontal-1 .react-autosuggest__suggestion--focused,
+		.localization--horizontal-2 .react-autosuggest__suggestion--focused,
+		.localization--vertical-1 .react-autosuggest__suggestion--focused,
+		.localization--vertical-2 .react-autosuggest__suggestion--focused,
+		.localization--vertical-3 .react-autosuggest__suggestion--focused {
+			background-color: #428bca;
+			color: #fff;
+		}
+	}
+	.muiAddressLookup {
+		.react-autosuggest {
+			width: 100%;
+		}
+		.react-autosuggest__suggestions {
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			padding: 5px 0;
+			position: absolute;
+			z-index: 99;
+		}
+
+		.react-autosuggest__suggestion {
+			color: #6c6c70;
+			list-style: outside none none;
+			padding: 3px 20px;
+			text-decoration: underline;
+		}
+
+		.react-autosuggest__suggestion--focused {
+			background-color: #428bca;
+			color: #fff;
+		}
+		.hideLocalizationOnMobile {
+
+			.react-autosuggest__suggestions {
+				display: none;
+				@include breakpoint('sm') {
+					display: block;
+				}
+			}
+		}
+		#react-autosuggest-address1 {
+			text-align: left;
+		}
+		.localization--horizontal-1 .react-autosuggest__suggestions,
+		.localization--horizontal-2 .react-autosuggest__suggestions,
+		.localization--vertical-1 .react-autosuggest__suggestions,
+		.localization--vertical-2 .react-autosuggest__suggestions,
+		.localization--vertical-3 .react-autosuggest__suggestions {
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			padding: 5px 0;
+			position: absolute;
+			z-index: 99;
+		}
+		.localization--horizontal-1 .react-autosuggest__suggestion,
+		.localization--horizontal-2 .react-autosuggest__suggestion,
+		.localization--vertical-1 .react-autosuggest__suggestion,
+		.localization--vertical-2 .react-autosuggest__suggestion,
+		.localization--vertical-3 .react-autosuggest__suggestion {
+			color: #6c6c70;
+			list-style: outside none none;
+			padding: 3px 20px;
+			text-decoration: underline;
+		}
+		.localization--horizontal-1 .react-autosuggest__suggestion--focused,
+		.localization--horizontal-2 .react-autosuggest__suggestion--focused,
+		.localization--vertical-1 .react-autosuggest__suggestion--focused,
+		.localization--vertical-2 .react-autosuggest__suggestion--focused,
+		.localization--vertical-3 .react-autosuggest__suggestion--focused {
+			background-color: #428bca;
+			color: #fff;
+		}
+	}
+}

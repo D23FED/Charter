@@ -1,0 +1,78 @@
+@at-root {
+	/***** Bugfix
+	MUI style
+	Adjust MUI form appearance
+	Ingested from injection container
+	*/
+}
+
+.mui-wrapper .muiServiceability {
+	.localization--horizontal-2 {
+		label,
+		.localization__tooltip-text,
+		.localization__info-pop {
+			display: none;
+		}
+	}
+	.localization__inputs {
+		display: inline-flex;
+		display: -webkit-inline-flex;
+	}
+	.localization__line1 {
+		padding-right: 0.5rem;
+	}
+	.localization__col1 {
+		display: inline;
+		padding: 0 0.5rem 0 0;
+	}
+	.localization__col2 {
+		display: inline;
+		padding: 0 0.5rem 0 0;
+		margin-right: 0;
+	}
+	.localization__col1,
+	.localization__col2 {
+		.localization__input {
+			width: 72px;
+		}
+	}
+	.localization--horizontal-2 {
+		.localization__input {
+			border: 1px solid #666;
+			border-radius: 4px;
+			color: #00629b;
+			font-size: 12px;
+			font-weight: 400;
+			height: 28px;
+			line-height: 1.7857;
+			padding: 0 5px;
+		}
+		.localization__input-submit {
+			// background-image: linear-gradient(#feb533, #ffa300);
+			// border: 0 none;
+			// border-radius: 4px;
+			// box-shadow: 0 0 3px #491270;
+			// color: #fff;
+			cursor: pointer;
+			display: table-cell;
+			float: left;
+			font-size: 14px;
+			font-weight: 700;
+			height: 26px;
+			position: relative;
+			text-align: center;
+			text-decoration: none;
+		}
+		.localization__form {
+			width: auto;
+		}
+	}
+}
+
+.muiServiceability .localization--horizontal-2 .localization__inputs {
+	padding: 0;
+}
+
+.mui-mobile .localization__input-address1 {
+	max-width: 112px;
+}

@@ -1,0 +1,27 @@
+@at-root {
+	/*
+	MUI form inside modal
+	set to display by default
+	*/
+}
+
+// messagebox-wrapper spectrum-container
+// 	.message-content
+//	  .link-messagebox
+.modal-dialog .messagebox-wrapper,
+.modal-dialog .link-messagebox,
+.modal-dialog #message_box_modal {
+	display: block !important;
+}
+.modal-dialog .link-messagebox + .link-messagebox {
+	display: none !important;
+}
+.modal-dialog .btn-primary,
+.modal-dialog .btn-primary:hover,
+.modal-dialog .btn-primary:active {
+	background-color: transparent;
+}
+.modal-dialog .close-message,
+.modal-dialog .searchForm {
+	display: none;
+}

@@ -1,4 +1,11 @@
-/* From resi core.css */
+@at-root {
+	/***** Bugfix
+	JIRA EPB-478
+	MUI form error messages, bubble-style
+	Import generic styles from resi core.css
+	Update bubble styles for Business page header
+	*/
+}
 
 $bubble-padding: 1rem;
 @mixin error-bubble {
@@ -15,6 +22,7 @@ $bubble-padding: 1rem;
 %bubble {
 	@include bubble;
 }
+
 %error-bubble {
 	@include error-bubble;
 }

@@ -38,7 +38,8 @@ hover-bg:                   $bus-yellow //    #f0f4f7,
 $z-layer-bus: ( btn-icon: 10, // icons inside of buttons
 close-button: 20, // Close button in header forms
 navbar-sm: 101, // Nav toggled with hamburger button
-megamenu: 1000 // Dropdown meny for primary nav
+megamenu: 1000, // Dropdown meny for primary nav
+address-list: 1100 // Smarty Streets address list
 );
 // Nav
 $navbar-toggle-spacing-x: 10px;

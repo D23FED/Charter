@@ -1,0 +1,41 @@
+@at-root {
+	/***** Bugfix
+	Fix Smarty Streets/list of suggested addresses not appearing in homepage header MUI Component
+	Jira EPB-478
+	Fix dropdown list of address suggestions being invisible: set font-size on <ul> and overflow on parent containers
+	*/
+}
+
+// Containers wrapping the autosuggest menu
+%suggest-menu-wrapper {
+	overflow: visible;
+}
+
+.site-header-03 {
+	.mui-wrapper {
+		.muiServiceability {
+			.react-autosuggest {
+				// List of suggested addresses
+				&__suggestions {
+					font-size: 1.2rem;
+				} // Individual suggested addresses
+				&__suggestion {
+					// padding-top: 0.4rem;
+					// padding-bottom: 0.4rem;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.menu-row-main {
+		.site-header-aside {
+			// Allow address dropdown menu to escape
+			.customWrapper {
+				@extend %suggest-menu-wrapper;
+			}
+		} // Allow address dropdown menu
+		.aem-GridColumn {
+			@extend %suggest-menu-wrapper;
+		}
+	}
+}

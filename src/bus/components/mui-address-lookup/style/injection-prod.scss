@@ -1,0 +1,102 @@
+/* Backup of Injection Contents */
+
+@import url('/content/dam/spectrum/business/en/css/business.css');
+
+@import url('/content/dam/spectrum/business/en/css/head_mui_temp.css');
+
+.mega-menu-item > .hidden-sm {
+  display: inherit !important;
+}
+
+/* MUI style edits */
+
+.mui-wrapper .muiServiceability {
+  .localization--horizontal-2 {
+    label, .localization__tooltip-text, .localization__info-pop {
+      display: none;
+    }
+  }
+  .localization__inputs {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+  }
+  .localization__line1 {
+    padding-right: 0.5rem;
+  }
+  .localization__col1 {
+    display: inline;
+    padding: 0 0.5rem 0 0;
+  }
+  .localization__col2 {
+    display: inline;
+    padding: 0 0.5rem 0 0;
+    margin-right: 0;
+  }
+  .localization__col1 .localization__input, .localization__col2 .localization__input {
+    width: 72px;
+  }
+  .localization--horizontal-2 {
+    .localization__input {
+      border: 1px solid #666;
+      border-radius: 4px;
+      color: #00629b;
+      font-size: 12px;
+      font-weight: 400;
+      height: 28px;
+      line-height: 1.7857;
+      padding: 0 5px;
+    }
+    .localization__input-submit {
+      background-image: linear-gradient(#feb533, #ffa300);
+      border: 0 none;
+      border-radius: 4px;
+      box-shadow: 0 0 3px #491270;
+      color: #fff;
+      cursor: pointer;
+      display: table-cell;
+      float: left;
+      font-size: 14px;
+      font-weight: 700;
+      height: 26px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+    }
+    .localization__form {
+      width: auto;
+    }
+  }
+}
+
+.muiServiceability .localization--horizontal-2 .localization__inputs {
+  padding: 0;
+}
+
+.mui-mobile .localization__input-address1 {
+  max-width: 112px;
+}
+
+/* Fix Smarty Streets not appearing in homepage header MUI Component */
+
+/* Jira EPB-478 */
+
+.site-header-03 {
+  .menu-row-main {
+    .site-header-aside .customWrapper, .aem-GridColumn {
+      overflow: visible;
+    }
+  }
+  .mui-wrapper .muiServiceability {
+    .react-autosuggest__suggestions {
+      background: #fff;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 1.2rem;
+    }
+    .react-autosuggest__suggestion {
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
+      cursor: pointer;
+    }
+  }
+}
