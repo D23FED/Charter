@@ -1,0 +1,306 @@
+body > main {
+	background-color: #d1d1d1;
+}
+
+.additional-packages .row-details {
+	display: none !important;
+}
+
+.accordionTableRow .row-header .at-column {
+	vertical-align: middle
+}
+
+.btn-link {
+	width: 100%;
+	padding: 0;
+	box-shadow: none;
+}
+
+.btn-link span {
+	font-size: 4.2rem;
+	font-weight: 700
+}
+
+.btn.btn-default,
+.localization__input-submit {
+	background-image: none;
+	background-color: #f66200;
+	margin-top: 20px;
+	position: relative;
+	text-transform: uppercase;
+	font-family: "open_sansbold", "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+	border-color: #f66200;
+}
+
+.btn.btn-default:hover,
+.btn.btn-defauly:active {
+	background: #dd5800;
+}
+
+.expander .btn-info {
+	background-color: #fff;
+}
+
+.expander a,
+a.btn.btn-info {
+	text-decoration: none;
+}
+
+.desc-text {
+	margin-top: -0.5em;
+}
+
+.channel-logo {
+	color: #00629b;
+}
+
+.accordionTableRow .row-header .linkComponent.accordionTableExpander {
+	margin-bottom: 0;
+}
+
+.offer-head-link a {
+	font-weight: 300;
+}
+
+.package-columns .btn-primary {
+	width: 100%;
+}
+
+.price-block .details > .inner {
+	text-align: left;
+}
+
+h5.text-right.mt-30 {
+	margin-right: -25px;
+	margin-top: 30px;
+}
+
+.bg-inset-gradient-green {
+	position: relative;
+	box-shadow: inset 0.5vw 0vw 1vw 0 #294f4b, inset -0.5vw 0 1vw 0 #294f4b;
+	background: #3b6f6a;
+	padding: 3px 10px;
+	color: #fff;
+}
+
+.text-dark-gray {
+	color: #333;
+}
+
+a.text-white:hover {
+	color: #7ce5ff;
+}
+
+a.btn.btn-info.btn-lg {
+	background-color: #fff;
+}
+
+.disclaimer {
+	color: #535353;
+}
+
+.localization__info-pop {
+	float: right;
+}
+
+.site-footer #product-offer-disclaimer p {
+	color: #000;
+}
+
+.accordionTableRow .row-header .linkComponent:not(.accordionTableExpander) .btn {
+	border-radius: 0.4rem;
+}
+
+.internetPhonePlus {
+	font-size: 17px;
+	position: relative;
+	left: -5px;
+	top: 10px;
+}
+
+h6.internetPhoneBundle {
+	font-size: 1.35rem;
+	margin: 0.05rem 0;
+}
+
+@media (min-width: 992px) {
+	.small-pricing .price-block.price-style-01 {
+		font-size: 2.9rem;
+	}
+	.price-block .bundlesPricePoint {
+		font-size: 3.25rem;
+	}
+}
+
+@media (max-width: 992px) {
+	.customspacer {
+		display: none;
+	}
+	.price-style-02.price-block {
+		font-size: 6.4rem;
+	}
+}
+
+.modal-body .popover.bottom {
+	width: 100%;
+	left: 12px !important;
+}
+
+.bgLimitOffer {
+	background-color: #007cc4;
+	padding: 7px;
+	width: 20%;
+	position: relative;
+	top: 20px;
+	left: 450px;
+	font-size: 18px;
+	color: #efefef;
+}
+
+.mbtm-15 {
+	margin-bottom: 0.15rem;
+}
+
+.h13 {
+	height: 13px;
+}
+
+.modal-body .popover.bottom {
+	width: 100%;
+	left: 12px !important;
+}
+
+.popover-content {
+	padding: 6px;
+}
+
+
+/* MUI form inside alert modal not displaying */
+
+.modal-dialog .messagebox-wrapper,
+.modal-dialog .link-messagebox,
+.modal-dialog #message_box_modal {
+	display: block !important;
+}
+
+.modal-dialog .link-messagebox + .link-messagebox {
+	display: none !important;
+}
+
+.modal-dialog .btn-primary,
+.modal-dialog .btn-primary:hover,
+.modal-dialog .btn-primary:active {
+	background-color: transparent;
+}
+
+.modal-dialog .close-message,
+.modal-dialog .searchForm {
+	display: none;
+}
+
+
+/* small breakpoint MUI form's submit button misaligned */
+
+.site-header .mui-mobile .muiServiceability .localization--horizontal-2 .localization__input-submit {
+	margin-top: 0;
+}
+
+
+
+
+
+/* Begin new */
+
+/* Header ZIP form input button */
+.site-header-aside .localization__input-submit {
+  margin-top: 0;
+}
+
+/* MUI Alert modal */
+.modal-dialog .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--7 {
+  width: 100%;
+  padding: 0 5%;
+}
+
+.modal-dialog .aem-Grid.aem-Grid--12 > .aem-GridColumn {
+  width: 100%;
+  padding: 0;
+}
+
+.modal-dialog .modal-body {
+  padding: 20px;
+}
+
+.modal-dialog .modal-header .close {
+  width: 7%;
+}
+
+.modal-dialog .input {
+  width: 100%;
+  padding: 0;
+}
+
+.modal-dialog input {
+  width: 100%;
+}
+
+.modal-dialog .geoloc-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+.modal-dialog button {
+  padding: 3px 20px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* MUI Alert pushdown */
+.menu-row-top .menu-row-message .aem-Grid.aem-Grid--12 > .aem-GridColumn.aem-GridColumn--default--9 {
+  width: 100%;
+  padding: 0;
+}
+
+.menu-row-top .userLocation .aem-Grid.aem-Grid--12 > .aem-GridColumn {
+  width: 100%;
+  float: none;
+  padding: 0;
+}
+
+.menu-row-top .userLocation .aem-Grid {
+  display: block;
+}
+
+.menu-row-top .messageBox .geoLoc {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  position: static;
+  margin-top: 1.5rem;
+  top: auto;
+  margin-left: 0;
+}
+
+.menu-row-top .zipAction.btn-primary {
+  background-color: transparent;
+  border-width: 0;
+}
+
+.menu-row-top .geoLoc .geoloc-btn button {
+  padding: 3px 20px;
+}
+
+@media (min-width:768px) {
+  .modal-dialog input {
+    width: 25%;
+  }
+  .modal-dialog .geoloc-btn {
+    display: inline;
+    margin-left: 0.4rem;
+  }
+  .modal-dialog button {
+    width: 25%;
+  }
+}

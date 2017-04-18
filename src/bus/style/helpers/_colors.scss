@@ -2,30 +2,31 @@
 	/* Business: Color Helpers */
 }
 
-$bus-colors:    ( //
-off-white:      $bus-off-white, //
-dust:           $bus-off-white, //
-lt-gray:        $bus-lt-gray, //
-med-gray:       $bus-md-gray, //
-gray:           $bus-gray, //
-dk-gray:        $bus-dk-gray, //
-charcoal:       $bus-dk-gray, //
+// Color names for text color helpers
+$bus-colors: ( //
+off-white: $bus-off-white, //
+dust: $bus-off-white, //
+lt-gray: $bus-lt-gray, //
+med-gray: $bus-md-gray, //
+gray: $bus-gray, //
+dk-gray: $bus-dk-gray, //
+charcoal: $bus-dk-gray, //
 blue-secondary: $bus-blue-secondary, //
-business-blue:  $bus-blue, //
-blue:           $bus-blue, //
-lt-blue:        $bus-lt-blue, //
-bright-blue:    $bus-brt-blue, //
-med-blue:       $bus-md-blue, //
-deep-blue:      $bus-dk-blue, //
-teal:           $bus-teal, //
-yellow:         $bus-yellow, //
-dk-yellow:      $bus-dk-yellow, //
-mustard:        $bus-dk-yellow, //
-gold:           $bus-gold, //
-orange:         $bus-orange, //
-dk-orange:      $bus-dk-orange, //
-burnt-orange:   $bus-dk-orange //
-); //
+business-blue: $bus-blue, //
+blue: $bus-blue, //
+lt-blue: $bus-lt-blue, //
+bright-blue: $bus-brt-blue, //
+med-blue: $bus-md-blue, //
+deep-blue: $bus-dk-blue, //
+teal: $bus-teal, //
+yellow: $bus-yellow, //
+dk-yellow: $bus-dk-yellow, //
+mustard: $bus-dk-yellow, //
+gold: $bus-gold, //
+orange: $bus-orange, //
+dk-orange: $bus-dk-orange, //
+burnt-orange: $bus-dk-orange //
+);
 // Text colors
 @each $name,
 $color in $bus-colors {
@@ -57,201 +58,11 @@ $color in $bus-colors {
 	@include helper-bullet-color($name, $color);
 }
 
-// .text-white,
-// .white-text {
-// 	color: #ffffff;
-// }
-// .text-business-blue,
-// .business-blue-text {
-// 	color: #00629b;
-// }
-// .text-gold,
-// .gold-text {
-// 	color: $bus-gold;
-// 	@at-root a#{&} {
-// 		@include hover-focus {
-// 			color: darken($bus-gold, 15%);
-// 		}
-// 	}
-// }
-// .text-teal,
-// .teal-text {
-// 	color: $bus-teal;
-// 	@at-root a#{&} {
-// 		@include hover-focus {
-// 			color: darken($bus-teal, 15%);
-// 		}
-// 	}
-// }
-// .text-dk-gray,
-// .text-charcoal,
-// .charcoal-text {
-// 	color: #333333;
-// 	@at-root a#{&} {
-// 		@include hover-focus {
-// 			color: black;
-// 		}
-// 	}
-// }
-// .text-off-white,
-// .text-dust,
-// .dust-text {
-// 	color: $bus-off-white;
-// 	@at-root a#{&} {
-// 		@include hover-focus {
-// 			color: darken($bus-off-white, 15%);
-// 		}
-// 	}
-// }
-// .text-yellow,
-// .yellow-text {
-// 	color: $bus-yellow;
-// 	@at-root a#{&} {
-// 		@include hover-focus {
-// 			color: darken($bus-yellow, 15%);
-// 		}
-// 	}
-// }
-// .blue-text {
-// 	color: #0073AE;
-// }
-// .text-gray,
-// .gray-text {
-// 	color: #535353;
-// }
-// .text-med-gray,
-// .med-gray-text {
-// 	color: #919194;
-// }
-// .text-bright-blue,
-// .bright-blue-text {
-// 	color: $bus-brt-blue;
-// 	@at-root a#{&} {
-// 		@include hover-focus {
-// 			color: darken($bus-brt-blue, 15%);
-// 		}
-// 	}
-// }
-// .text-deep-blue,
-// .deep-blue-text {
-// 	color: $bus-dk-blue;
-// 	@at-root a#{&} {
-// 		@include hover-focus {
-// 			color: darken($bus-dk-blue, 15%);
-// 		}
-// 	}
-// }
-// .text-lt-blue,
-// .lt-blue-text {
-// 	color: $bus-lt-blue;
-// 	@at-root a#{&} {
-// 		@include hover-focus {
-// 			color: darken($bus-lt-blue, 15%);
-// 		}
-// 	}
-// }
-// .text-dk-yellow,
-// .text-mustard,
-// .mustard-text {
-// 	color: #DA8D00;
-// }
-// .text-orange,
-// .orange-text {
-// 	color: #f66200;
-// }
-// .text-lt-gray,
-// .lt-gray-text {
-// 	color: #EEEEEE;
-// }
-// .text-dk-orange,
-// .text-burnt-orange,
-// .burnt-orange-text {
-// 	color: #DD5800;
-// }
-// .text-med-blue,
-// .med-blue-text {
-// 	color: $bus-md-blue;
-// 	@at-root a#{&} {
-// 		@include hover-focus {
-// 			color: darken($bus-md-blue, 15%);
-// 		}
-// 	}
-// }
-// Background colors
-// .white-bg {
-// 	background: #ffffff;
-// }
-// .bg-business-blue,
-// .business-blue-bg {
-// 	background: $bus-blue;
-// }
-// .bg-blue,
-// .blue-bg {
-// 	background-color: $bus-blue-secondary;
-// }
-// .bg-brt-blue,
-// .bright-blue-bg {
-// 	background-color: $bus-brt-blue;
-// }
-// .bg-lt-blue,
-// .light-blue-bg {
-// 	background-color: $bus-lt-blue;
-// }
-// .bg-md-blue,
-// .med-blue-bg {
-// 	background-color: $bus-md-blue;
-// }
-// .bg-dp-blue,
-// .deep-blue-bg {
-// 	background-color: $bus-dk-blue;
-// }
-// .bg-gray,
-// .gray-bg {
-// 	background-color: $bus-gray;
-// }
-// .bg-lt-gray,
-// .light-gray-bg {
-// 	background-color: $bus-lt-gray;
-// }
-// .bg-md-gray,
-// .med-gray-bg {
-// 	background-color: $bus-md-gray;
-// }
-// .bg-dk-gray,
-// .bg-charcoal,
-// .charcoal-bg {
-// 	background-color: $bus-dk-gray;
-// }
-// .bg-dust,
-// .bg-off-white,
-// .dust-bg {
-// 	background-color: $bus-off-white;
-// }
-// .bg-gold,
-// .gold-bg {
-// 	background-color: $bus-gold;
-// }
-// .bg-teal,
-// .teal-bg {
-// 	background-color: $bus-teal;
-// }
-// .bg-yellow,
-// .yellow-bg {
-// 	background-color: $bus-yellow;
-// }
-// .bg-mustard,
-// .bg-dk-yellow,
-// .mustard-bg {
-// 	background-color: $bus-dk-yellow;
-// }
-// .bg-orange,
-// .orange-bg {
-// 	background-color: $bus-dk-orange;
-// }
-// .bg-dk-orange,
-// .burnt-orange-bg {
-// 	background-color: $bus-dk-orange;
-// }
+.bullets-blue {
+	color: $bus-blue;
+}
+
+// Translucent backgrounds
 .bg-transparent-deep-blue {
 	background: rgba(1, 57, 99, 0.8);
 }
@@ -282,8 +93,9 @@ $color in $bus-colors {
 	background: linear-gradient(to bottom, #eaeff3 0%, #e5eff5 100%);
 }
 
-
-/* Colored bars at head of containers */
+@at-root {
+	/* Colored bars at head of containers */
+}
 
 .business-blue-head {
 	border-top: 0.8rem solid $bus-blue;
@@ -352,6 +164,8 @@ $color in $bus-colors {
 .med-blue-head {
 	border-top: 0.8rem solid $bus-md-blue;
 }
+
+
 
 
 /* Legacy */

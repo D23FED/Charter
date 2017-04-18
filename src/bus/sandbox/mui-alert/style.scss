@@ -1,0 +1,129 @@
+@import 'initialize';
+// https://spectrumbusiness.omega.mcportals.webapps.rr.com/content/spectrum/business/fed/message-box-modal.html
+
+/* Header ZIP form input button */
+
+.site-header-aside .localization__input-submit {
+	margin-top: 0;
+}
+
+
+
+
+/* MUI Alert modal */
+
+.modal-dialog {
+	.aem-Grid.aem-Grid--12 {
+		& > .aem-GridColumn.aem-GridColumn--default--7 {
+			width: 100%;
+			padding: 0 5%;
+		}
+		& > .aem-GridColumn {
+			width: 100%;
+			padding: 0;
+		}
+	}
+	.modal-body {
+		padding: 20px;
+	}
+
+
+
+	.modal-header .close {
+		width: 7%;
+	}
+
+	.input {
+		width: 100%;
+		padding: 0;
+	}
+	input {
+		width: 100%;
+		@include breakpoint ('sm') {
+			width: 25%;
+		}
+	}
+
+	.geoloc-btn {
+		width: 100%;
+		margin-top: 1.5rem;
+		padding: 0;
+		@include breakpoint ('sm') {
+			display: inline;
+			margin-left: 0.4rem;
+		}
+	}
+	button {
+		padding: 3px 20px;
+		width: 100%;
+		border-radius: 4px;
+		@include breakpoint ('sm') {
+			width: 25%;
+		}
+	}
+}
+
+
+
+
+/* MUI Alert pushdown */
+
+.menu-row-top {
+	.menu-row-message {
+		.aem-Grid.aem-Grid--12 {
+			// & > .aem-GridColumn.aem-GridColumn--default--9 {
+			// 	width: 100%;
+			// 	padding: 0;
+			// 	@include breakpoint('sm') {
+			// 		width: percentage(9 / 12);
+			// 		float: left;
+			// 	}
+			// }
+			.aem-GridColumn--default--6.messageBox {
+				display: none;
+			}
+		}
+	} // Form inside modal
+	.userLocation {
+		.aem-Grid.aem-Grid--12 {
+			& > .aem-GridColumn {
+				width: 100%;
+				float: none;
+				padding: 0;
+			}
+			& > .aem-GridColumn--default--9 {
+				@include breakpoint('sm') {
+					width: percentage(9 / 12);
+					float: left;
+				}
+			}
+			& > .aem-GridColumn--default--3 {
+				@include breakpoint('sm') {
+					width: percentage(3 / 12);
+					float: left;
+				}
+			}
+		}
+		.aem-Grid {
+			display: block;
+		}
+	}
+	// <form>
+	.geoLoc {
+
+	}
+	.messageBox .geoLoc {
+		transform: none;
+		position: static;
+		margin-top: 1.5rem;
+		top: auto;
+		margin-left: 0;
+	}
+	.zipAction.btn-primary {
+		background-color: transparent;
+		border-width: 0;
+	}
+	.geoLoc .geoloc-btn button {
+		padding: 3px 20px;
+	}
+}

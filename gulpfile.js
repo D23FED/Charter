@@ -194,7 +194,7 @@ gulp.task('js-global', function() {
 		.pipe($.debug({
 			title: 'Processing:'
 		}))
-		.pipe($.sourcemaps.init())
+		// .pipe($.sourcemaps.init())
 		// Concat
 		.pipe($.concat('script.js', {
 			newLine: ';\r\n'
@@ -204,7 +204,7 @@ gulp.task('js-global', function() {
 		.pipe($.rename({
 			suffix: '.min'
 		}))
-		.pipe($.sourcemaps.write('.'))
+		// .pipe($.sourcemaps.write('.'))
 		.pipe(gulp.dest(paths.dist + paths.siteTemplate + 'js/'))
 		.pipe($.debug({
 			title: 'Output:',
@@ -370,7 +370,7 @@ gulp.task('s', function() {
 			'!' + paths.source + '**/_component-template/**'
 		])
 		// Begin recording sourcemaps
-		.pipe($.sourcemaps.init())
+		// .pipe($.sourcemaps.init())
 		// Compile Sass
 		.pipe($.sass({
 			includePaths: sassIncludePaths,
@@ -379,7 +379,7 @@ gulp.task('s', function() {
 		.on('error', $.sass.logError)
 		.pipe($.postcss(postCssProcessors))
 		.pipe($.sassUnicode())
-		.pipe($.sourcemaps.write())
+		// .pipe($.sourcemaps.write())
 		.pipe(gulp.dest(paths.dist))
 		.pipe(f)
 		.pipe($.debug({
