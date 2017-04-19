@@ -1,1 +1,56 @@
-.subNav{margin-top:-0.35em;background:#fff;border:1px solid #7d7d7d;border-top:none;border-radius:0 0 5px 5px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.1)}.subNav .list-component ul{list-style:none;margin-bottom:0;-webkit-padding-start:0}.subNav .list-component ul li{display:inline-block;border-right:1px solid #b8c6cf}.subNav .list-component ul li a.btn{padding:1em;text-decoration:none}.subNav .list-component ul li a.btn span{margin-right:2rem}.subNav .list-component ul li a.btn span:after{background:none;top:20%}.subNav .list-component ul li.spectrum-last{border-right:none}
+/* Sub nav styles */
+.subNav {
+  margin-top: -0.35em;
+  background: #fff;
+  border: 1px solid #7d7d7d;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.subNav .list-component ul {
+  list-style: none;
+  margin-bottom: 0;
+  -webkit-padding-start: 0;
+}
+
+.subNav .list-component ul li {
+  display: inline-block;
+  border-right: 1px solid #b8c6cf;
+}
+
+.subNav .list-component ul li a.btn {
+  padding: 1em;
+  text-decoration: none;
+}
+
+.subNav .list-component ul li a.btn span {
+  margin-right: 2rem;
+}
+
+.subNav .list-component ul li a.btn span:after {
+  background: none;
+  top: 20%;
+}
+
+.subNav .list-component ul li.spectrum-last {
+  border-right: none;
+}
+
+@media (max-width:768px) {
+  .sub-nav-container .subNav .list-component ul {
+    padding: 0.5rem;
+  }
+  .sub-nav-container .subNav .list-component li {
+    border-right: none;
+  }
+  .sub-nav-container .subNav .list-component ul li a.btn {
+    padding: 0.5rem 0.25rem;
+  }
+  .sub-nav-container .subNav .list-component li .linkComponent .noIcon a span {
+    margin-right: 0.25rem;
+  }
+  .sub-nav-container .subNav .list-component li .linkComponent a span {
+    font-size: 1.2rem;
+  }
+}

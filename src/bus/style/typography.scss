@@ -1,15 +1,14 @@
 @import 'initialize';
+@import 'com/style/typography';
+@import 'com/style/terms';
 @at-root {
 	/* Typography: Business */
 }
 
-@import 'com/style/typography';
-@import 'com/style/terms';
 @import 'bus/style/typography/base';
 @import 'bus/style/typography/headings';
 @import 'bus/style/typography/links';
 @import 'bus/style/typography/buttons';
-
 .text-sm,
 .small {
 	font-size: 1.2rem;
@@ -58,4 +57,18 @@ figcaption {
 .disclaimer-sm {
 	color: $bus-md-gray;
 	font-size: 0.9rem;
+}
+
+.disclaimerWrapper {
+	border-top: .1rem solid #ccc;
+	padding: 2rem;
+}
+
+// Channel logos
+.channel-logo::before {
+	font-weight: 400;
+}
+
+.logo-tmc::before {
+	font-size: 3rem;
 }

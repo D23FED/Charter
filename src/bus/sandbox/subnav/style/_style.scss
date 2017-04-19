@@ -33,3 +33,21 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.sub-nav-container .subNav .list-component ul {
+		padding: 0.5rem;
+	}
+	.sub-nav-container .subNav .list-component li {
+		border-right: none;
+	}
+	.sub-nav-container .subNav .list-component ul li a.btn {
+		padding: 0.5rem 0.25rem;
+	}
+	.sub-nav-container .subNav .list-component li .linkComponent .noIcon a span {
+		margin-right: 0.25rem;
+	}
+	.sub-nav-container .subNav .list-component li .linkComponent a span {
+		font-size: 1.2rem;
+	}
+}

@@ -1,1 +1,97 @@
-@import url("/content/dam/spectrum/business/en/css/business.css");@import url("/content/dam/spectrum/business/en/css/head_mui_temp.css");.mega-menu-item>.hidden-sm{display:inherit !important}.mui-wrapper .muiServiceability .localization--horizontal-2 label,.mui-wrapper .muiServiceability .localization--horizontal-2 .localization__tooltip-text,.mui-wrapper .muiServiceability .localization--horizontal-2 .localization__info-pop{display:none}.mui-wrapper .muiServiceability .localization__inputs{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;display:-webkit-inline-flex}.mui-wrapper .muiServiceability .localization__line1{padding-right:0.5rem}.mui-wrapper .muiServiceability .localization__col1{display:inline;padding:0 0.5rem 0 0}.mui-wrapper .muiServiceability .localization__col2{display:inline;padding:0 0.5rem 0 0;margin-right:0}.mui-wrapper .muiServiceability .localization__col1 .localization__input,.mui-wrapper .muiServiceability .localization__col2 .localization__input{width:72px}.mui-wrapper .muiServiceability .localization--horizontal-2 .localization__input{border:1px solid #666;border-radius:4px;color:#00629b;font-size:12px;font-weight:400;height:28px;line-height:1.7857;padding:0 5px}.mui-wrapper .muiServiceability .localization--horizontal-2 .localization__input-submit{background-image:-webkit-linear-gradient(#feb533,#ffa300);background-image:linear-gradient(#feb533,#ffa300);border:0 none;border-radius:4px;box-shadow:0 0 3px #491270;color:#fff;cursor:pointer;display:table-cell;float:left;font-size:14px;font-weight:700;height:26px;position:relative;text-align:center;text-decoration:none}.mui-wrapper .muiServiceability .localization--horizontal-2 .localization__form{width:auto}.muiServiceability .localization--horizontal-2 .localization__inputs{padding:0}.mui-mobile .localization__input-address1{max-width:112px}.site-header-03 .menu-row-main .site-header-aside .customWrapper,.site-header-03 .menu-row-main .aem-GridColumn{overflow:visible}.site-header-03 .mui-wrapper .muiServiceability .react-autosuggest__suggestions{background:#fff;padding-top:0;padding-bottom:0;font-size:1.2rem}.site-header-03 .mui-wrapper .muiServiceability .react-autosuggest__suggestion{padding-top:0.4rem;padding-bottom:0.4rem;cursor:pointer}
+/* Backup of Injection Contents */
+@import url("/content/dam/spectrum/business/en/css/business.css");
+@import url("/content/dam/spectrum/business/en/css/head_mui_temp.css");
+.mega-menu-item > .hidden-sm {
+  display: inherit !important;
+}
+
+/* MUI style edits */
+.mui-wrapper .muiServiceability .localization--horizontal-2 label, .mui-wrapper .muiServiceability .localization--horizontal-2 .localization__tooltip-text, .mui-wrapper .muiServiceability .localization--horizontal-2 .localization__info-pop {
+  display: none;
+}
+
+.mui-wrapper .muiServiceability .localization__inputs {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+}
+
+.mui-wrapper .muiServiceability .localization__line1 {
+  padding-right: 0.5rem;
+}
+
+.mui-wrapper .muiServiceability .localization__col1 {
+  display: inline;
+  padding: 0 0.5rem 0 0;
+}
+
+.mui-wrapper .muiServiceability .localization__col2 {
+  display: inline;
+  padding: 0 0.5rem 0 0;
+  margin-right: 0;
+}
+
+.mui-wrapper .muiServiceability .localization__col1 .localization__input, .mui-wrapper .muiServiceability .localization__col2 .localization__input {
+  width: 72px;
+}
+
+.mui-wrapper .muiServiceability .localization--horizontal-2 .localization__input {
+  border: 1px solid #666;
+  border-radius: 4px;
+  color: #00629b;
+  font-size: 12px;
+  font-weight: 400;
+  height: 28px;
+  line-height: 1.7857;
+  padding: 0 5px;
+}
+
+.mui-wrapper .muiServiceability .localization--horizontal-2 .localization__input-submit {
+  background-image: -webkit-linear-gradient(#feb533,#ffa300);
+  background-image: linear-gradient(#feb533,#ffa300);
+  border: 0 none;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #491270;
+  color: #fff;
+  cursor: pointer;
+  display: table-cell;
+  float: left;
+  font-size: 14px;
+  font-weight: 700;
+  height: 26px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+
+.mui-wrapper .muiServiceability .localization--horizontal-2 .localization__form {
+  width: auto;
+}
+
+.muiServiceability .localization--horizontal-2 .localization__inputs {
+  padding: 0;
+}
+
+.mui-mobile .localization__input-address1 {
+  max-width: 112px;
+}
+
+/* Fix Smarty Streets not appearing in homepage header MUI Component */
+/* Jira EPB-478 */
+.site-header-03 .menu-row-main .site-header-aside .customWrapper, .site-header-03 .menu-row-main .aem-GridColumn {
+  overflow: visible;
+}
+
+.site-header-03 .mui-wrapper .muiServiceability .react-autosuggest__suggestions {
+  background: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.site-header-03 .mui-wrapper .muiServiceability .react-autosuggest__suggestion {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  cursor: pointer;
+}

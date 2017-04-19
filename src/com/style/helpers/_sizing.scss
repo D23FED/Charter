@@ -17,10 +17,7 @@
 	}
 }
 
-@at-root {
-	/* Full width elements, child links, and child buttons at Small */
-}
-
+//  Full width elements, child links, and child buttons at Small
 .fw-sm-only {
 	&,
 	& .btn,
@@ -29,12 +26,4 @@
 			width: 100%;
 		}
 	}
-}
-
-@at-root {
-	/* Legacy */
-}
-
-.full {
-	width: 100%;
 }
