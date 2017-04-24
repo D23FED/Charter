@@ -83,7 +83,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.xs-only {
 		@include text-align-helper;
 		@include float-helper;
-		@include legacy-helper;
 	}
 }
 
@@ -91,7 +90,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.sm-only {
 		@include text-align-helper;
 		@include float-helper;
-		@include legacy-helper;
 	}
 }
 
@@ -99,7 +97,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.md-only {
 		@include text-align-helper;
 		@include float-helper;
-		@include legacy-helper;
 	}
 }
 
@@ -107,6 +104,5 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.lg-only {
 		@include text-align-helper;
 		@include float-helper;
-		@include legacy-helper;
 	}
 }

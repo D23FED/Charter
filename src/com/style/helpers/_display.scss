@@ -6,32 +6,35 @@
 	clear: both;
 }
 
-.display-block {
-	display: block;
-}
+.display {
 
-.display-inline {
-	display: inline;
-}
+	&-block {
+		display: block;
+	}
 
-.display-inline-block {
-	display: inline-block;
-}
+	&-inline {
+		display: inline;
+	}
 
-.display-table {
-	display: table;
-}
+	&-inline-block {
+		display: inline-block;
+	}
 
-.display-table-cell {
-	display: table-cell;
-}
+	&-table {
+		display: table;
+	}
 
-.display-flex {
-	display: flex
-}
+	&-table-cell {
+		display: table-cell;
+	}
 
-.display-inline-flex {
-	display: inline-flex;
+	&-flex {
+		display: flex
+	}
+
+	&-inline-flex {
+		display: inline-flex;
+	}
 }
 
 .flex-1 {

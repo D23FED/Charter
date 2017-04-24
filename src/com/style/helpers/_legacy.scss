@@ -83,6 +83,31 @@
 	right: 0;
 }
 
+// Responsive alignments
+@include breakpoint-bt('xxs', 'xs') {
+	.xs-only {
+		@include legacy-helper;
+	}
+}
+
+@include breakpoint-only('sm') {
+	.sm-only {
+		@include legacy-helper;
+	}
+}
+
+@include breakpoint-only('md') {
+	.md-only {
+		@include legacy-helper;
+	}
+}
+
+@include breakpoint('lg') {
+	.lg-only {
+		@include legacy-helper;
+	}
+}
+
 @at-root {
 	/* Legacy Sizing */
 }

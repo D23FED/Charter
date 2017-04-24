@@ -20,6 +20,7 @@ $color in $common-colors {
 	&-white {
 		background: #fff;
 	}
+	// Bootstrap default color values
 	&-success {
 		background: #dff0d8;
 	}
@@ -32,6 +33,7 @@ $color in $common-colors {
 	&-danger {
 		background: #f2dede;
 	}
+	// Grayscale
 	&-gray {
 		background: $gray;
 	}
