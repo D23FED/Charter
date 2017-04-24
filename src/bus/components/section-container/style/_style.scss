@@ -1,0 +1,9 @@
+@import 'initialize';
+@at-root {
+	/* Section Container Component */
+}
+@media (min-width:768px) {
+  .sectionContainer section {
+    padding: 0 1em;
+  }
+}

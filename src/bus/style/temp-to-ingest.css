@@ -1,0 +1,39 @@
+/* Classes from temp.css not yet ingested intpo codebase */
+
+.btn {
+	position: relative;
+}
+
+.btn-default {
+	background: #fdaa18;
+	border-radius: 0.4rem;
+	text-shadow: 0.1rem 0.1rem 0.3rem #888;
+	font-weight: 500;
+	font-size: 1.8rem;
+	white-space: nowrap;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #ffa300;
+	border-color: #e69300;
+	text-decoration: none;
+}
+
+a.btn-link {
+	color: #00629b;
+}
+
+a.btn-link:hover {
+	color: #18b9a0;
+}
+
+.btn-sm {
+	font-size: 1.4rem;
+}
+
+.btn-default:hover {
+	background: #FDBA29;
+}
+
+.btn-default:hover span:after {
+	background: #D49B22;
+}

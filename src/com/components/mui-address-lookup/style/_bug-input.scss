@@ -1,0 +1,15 @@
+@at-root {
+	/*
+	MUI form input width
+	*/
+}
+
+@include breakpoint('sm') {
+	.#{$mui-wrapper} {
+		.#{$mui--wrapper-horizontal-2} {
+			.#{$mui--form} {
+				width: 450px;
+			}
+		}
+	}
+}

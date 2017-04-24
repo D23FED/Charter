@@ -18,11 +18,9 @@
 	&-extra-bold {
 		font-weight: 900;
 	}
-	// Styles
 	&-italic {
 		font-style: italic;
 	}
-	// Decoration
 	&-underline {
 		text-decoration: underline;
 	}
@@ -42,7 +40,6 @@
 		overflow: hidden;
 		white-space: nowrap;
 	}
-	// Alignment
 	&-left {
 		text-align: left;
 	}
@@ -101,35 +98,11 @@ hr {
 		font-family: Open Sans, Arial, Helvetica, sans-serif;
 	}
 	&-icon {
-		font-family: Font Awesome;
+		font-family: FontAwesome;
 	}
 }
 
 // Fix for safari
 .list-inline > li {
 	list-style-type: none;
-}
-
-
-/* Legacy */
-
-.underline {
-	text-decoration: underline;
-}
-
-.underline-none {
-	&,
-	& a {
-		text-decoration: none;
-	}
-}
-
-.text-bold {
-	font-weight: 700;
-}
-
-.no-wrap,
-.nowrap {
-	overflow: hidden;
-	white-space: nowrap;
 }

@@ -2,7 +2,6 @@
 	/* Position Helpers */
 }
 
-$vertical-aligns: (top, middle, bottom, baseline);
 .relative {
 	position: relative;
 }
@@ -35,27 +34,13 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	right: 0;
 }
 
-@at-root {
-	/* .left and .right are Legacy classes combining float and abs positioning */
-}
-
-.left {
-	float: left;
-	left: 0;
-}
-
-.right {
-	float: right;
-	right: 0;
-}
-
 .centered {
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .vertical-center {
-	@include vertical-center('relative');
+	@include vertical-center(relative);
 }
 
 .vertical-center-abs {
@@ -86,6 +71,7 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	align-items: center;
 }
 
+$vertical-aligns: (top, middle, bottom, baseline);
 @each $alignment in $vertical-aligns {
 	.vertical-#{$alignment} {
 		vertical-align: $alignment;
@@ -97,7 +83,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.xs-only {
 		@include text-align-helper;
 		@include float-helper;
-		@include legacy-helper;
 	}
 }
 
@@ -105,7 +90,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.sm-only {
 		@include text-align-helper;
 		@include float-helper;
-		@include legacy-helper;
 	}
 }
 
@@ -113,7 +97,6 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.md-only {
 		@include text-align-helper;
 		@include float-helper;
-		@include legacy-helper;
 	}
 }
 
@@ -121,6 +104,5 @@ $vertical-aligns: (top, middle, bottom, baseline);
 	.lg-only {
 		@include text-align-helper;
 		@include float-helper;
-		@include legacy-helper;
 	}
 }
