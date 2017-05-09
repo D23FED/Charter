@@ -1,0 +1,5 @@
+/* Bugfix: WEBCMS-23143 */
+/* "pointer"/hand-type cursor does not appear when hovering over close button on IE11 */
+.messagebox-wrapper .close-message {
+	cursor: pointer;
+}
